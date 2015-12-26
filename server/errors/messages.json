@@ -1,0 +1,31 @@
+{
+  "account.missing": "The account could not be found.",
+  "account.name.invalid": "The name supplied is not a valid account name.",
+  "account.name.exists": "An account with this name already exists.",
+
+  "device.group.missing": "The device group could not be found.",
+  "device.group.name.invalid": "The name supplied is not a valid device group name.",
+  "device.group.name.exists": "A device group with this name already exists.",
+  "device.group.parent.invalid": "The device group UUID cannot match the parent.",
+  "device.group.parent.missing": "The parent device group could not be found.",
+
+  "device.player.missing": "The player could not be found.",
+  "device.player.name.invalid": "The name supplied is not a valid player name.",
+  "device.player.name.exists": "A player with this name already exists.",
+
+  "device.thing.missing": "The thing could not be found.",
+  "device.thing.name.invalid": "The name supplied is not a valid thing name.",
+  "device.thing.name.exists": "A thing with this name already exists.",
+
+  "device.subtype.unsupported": "The subtype supplied is not supported.",
+
+  "schedule.missing": "The schedule could not be found.",
+  "schedule.name.exists": "A schedule with this name already exists",
+  "schedule.parent.missing": "The parent schedule could not be found.",
+  "schedule.detail.missing": "The schedule detail could not be found.",
+  "schedule.detail.name.exists": "A schedule detail with this name already exists.",
+  "schedule.detail.details.invalid": "The details supplied is not a valid JSON.",
+  "schedule.detail.schedule.invalid": "The schedule supplied is not a valid schedule.",
+
+  "user.missing": "The user could not be found."
+}

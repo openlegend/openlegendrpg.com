@@ -1,0 +1,1 @@
+module.exports = require("npm:is-nan@1.0.1/index");

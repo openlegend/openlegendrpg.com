@@ -1,0 +1,62 @@
+[
+  {
+    "stateName": "login",
+    "urlPrefix": "/login",
+    "type": "load",
+    "src": "app/login/login"
+  }
+  ,{
+    "stateName": "signup",
+    "urlPrefix": "/signup",
+    "type": "load",
+    "src": "app/signup/signup"
+  }
+  ,{
+    "stateName": "content",
+    "urlPrefix": "/content",
+    "type": "load",
+    "src": "app/content/content"
+  }
+  ,{
+    "stateName": "dashboards",
+    "urlPrefix": "/dashboards",
+    "type": "load",
+    "src": "app/dashboard/dashboard"
+  }
+  ,{
+    "stateName": "admin",
+    "urlPrefix": "/admin",
+    "type": "load",
+    "src": "app/admin/admin"
+  }
+  ,{
+    "stateName": "forms",
+    "urlPrefix": "/forms",
+    "type": "load",
+    "src": "app/forms/forms"
+  }
+  ,{
+    "stateName": "cardkit",
+    "urlPrefix": "/cardkit",
+    "type": "load",
+    "src": "app/cardkit/cardkit"
+  }
+  ,{
+    "stateName": "home",
+    "urlPrefix": "/home",
+    "type": "load",
+    "src": "app/home/home"
+  }
+  ,{
+    "stateName": "banes",
+    "urlPrefix": "/banes",
+    "type": "load",
+    "src": "app/banes/banes"
+  }
+  ,{
+    "stateName": "boons",
+    "urlPrefix": "/boons",
+    "type": "load",
+    "src": "app/boons/boons"
+  }
+]

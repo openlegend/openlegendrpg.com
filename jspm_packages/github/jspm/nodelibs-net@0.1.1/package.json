@@ -1,0 +1,6 @@
+{
+  "registry": "npm",
+  "dependencies": {
+    "net-browserify": "^0.1.6"
+  }
+}

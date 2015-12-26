@@ -1,0 +1,65 @@
+resourcePath: /api/auth
+description: Security - Authentication API
+apis:
+  - path: /api/auth/local
+    operations:
+      -  httpMethod: POST
+         summary: Login with user email and password
+         notes: Returns JWT token
+         nickname: post
+         consumes:
+           - application/json
+         parameters:
+           - name: login
+             paramType: body
+             dataType: Login
+             required: true
+         errorResponses:
+           - code: 400
+             reason: Bad Request
+             responseModel: Error
+           - code: 500
+             reason: Internal Server Error
+             responseModel: Error
+  - path: /api/auth/stormpath
+    operations:
+      -  httpMethod: POST
+         summary: Login with stormpath username and password
+         notes: Returns JWT token
+         nickname: post
+         consumes:
+           - application/json
+         parameters:
+           - name: login
+             paramType: body
+             dataType: StormpathLogin
+             required: true
+         errorResponses:
+           - code: 400
+             reason: Bad Request
+             responseModel: Error
+           - code: 500
+             reason: Internal Server Error
+             responseModel: Error
+models:
+  Login:
+    id: Login
+    properties:
+      email:
+        type: String
+      password:
+        type: String
+  StormpathLogin:
+    id: StormpathLogin
+    properties:
+      username:
+        type: String
+      password:
+        type: String
+  Error:
+    id: Error
+    properties:
+      error:
+        type: String
+      message:
+        type: String

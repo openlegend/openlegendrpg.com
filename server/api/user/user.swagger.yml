@@ -1,0 +1,181 @@
+resourcePath: /api/users
+description: Security - Users API
+apis:
+  - path: /api/users
+    operations:
+      -  httpMethod: GET
+         summary: Get a list of users.
+         notes: Returns list of user details
+         responseClass: [User]
+         nickname: get
+         consumes:
+           - application/json
+         errorResponses:
+           - code: 400
+             reason: Bad Request
+             responseModel: Error
+           - code: 500
+             reason: Internal Server Error
+             responseModel: Error
+  - path: /api/users/{id}
+    operations:
+      -  httpMethod: GET
+         summary: Get the details of a user by id.
+         notes: Returns user details
+         responseClass: User
+         nickname: get
+         consumes:
+           - application/json
+         parameters:
+           - name: id
+             description: The UUID of the user
+             paramType: path
+             required: true
+             dataType: string
+         errorResponses:
+           - code: 400
+             reason: Bad Request
+             responseModel: Error
+           - code: 404
+             reason: Folder Not Found
+             responseModel: Error
+           - code: 500
+             reason: Internal Server Error
+             responseModel: Error
+  - path: /api/users/me
+    operations:
+      -  httpMethod: GET
+         summary: Get the details of the current user.
+         notes: Returns user details
+         responseClass: User
+         nickname: get
+         consumes:
+           - application/json
+         errorResponses:
+           - code: 400
+             reason: Bad Request
+             responseModel: Error
+           - code: 500
+             reason: Internal Server Error
+             responseModel: Error
+  - path: /api/users
+    operations:
+      -  httpMethod: POST
+         summary: Create a new user.
+         notes: Returns user details
+         responseClass: User
+         nickname: post
+         consumes:
+           - application/json
+         parameters:
+           - name: user
+             paramType: body
+             dataType: UserInput
+             required: true
+         errorResponses:
+           - code: 400
+             reason: Bad Request
+             responseModel: Error
+           - code: 500
+             reason: Internal Server Error
+             responseModel: Error
+  - path: /api/users/{id}/password
+    operations:
+      -  httpMethod: PUT
+         summary: Change the password of a user.
+         notes: Returns 204 on success
+         nickname: put
+         consumes:
+           - application/json
+         parameters:
+           - name: id
+             description: The UUID of the user
+             paramType: path
+             required: true
+             dataType: string
+           - name: password
+             paramType: body
+             dataType: PasswordInput
+             required: true
+         errorResponses:
+           - code: 400
+             reason: Bad Request
+             responseModel: Error
+           - code: 404
+             reason: User Not Found
+             responseModel: Error
+           - code: 500
+             reason: Internal Server Error
+             responseModel: Error
+  - path: /api/users/{id}
+    operations:
+      -  httpMethod: DELETE
+         summary: Delete a user by id.
+         notes: Returns 204 on success
+         nickname: delete
+         parameters:
+           - name: id
+             description: The UUID of the user
+             paramType: path
+             required: true
+             dataType: string
+         errorResponses:
+           - code: 400
+             reason: Bad Request
+             responseModel: Error
+           - code: 403
+             reason: Forbidden
+             responseModel: Error
+           - code: 404
+             reason: Folder Not Found
+             responseModel: Error
+           - code: 500
+             reason: Internal Server Error
+             responseModel: Error
+models:
+  User:
+    id: User
+    properties:
+      uuid:
+        type: String
+      provider:
+        type: String
+      firstName:
+        type: String
+      lastName:
+        type: String
+      email:
+        type: String
+      role:
+        type: String
+  PasswordInput:
+    id: PasswordInput
+    properties:
+      oldPassword:
+        type: String
+        required: true
+      newPassword:
+        type: String
+        required: true
+  UserInput:
+    id: UserInput
+    properties:
+      firstName:
+        type: String
+        required: true
+      lastName:
+        type: String
+        required: true
+      email:
+        type: String
+        required: true
+      password:
+        type: String
+        required: true
+  Error:
+    id: Error
+    properties:
+      error:
+        type: String
+      message:
+        type: String
