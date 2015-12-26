@@ -28,7 +28,7 @@ if(config.seedDB) { require('./config/seed'); }
 // setTimeout(require.bind(null, __base + 'lib/interface/test'), 3000);
 
 // require('./config/socketio')(socketio);
-// require('./config/restify')(server);
+require('./config/restify')(server);
 
 // @TODO API requires some work to get running, uncomment and fix
 // openshift issues if using API

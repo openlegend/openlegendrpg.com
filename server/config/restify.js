@@ -21,7 +21,8 @@ module.exports = function(api) {
   //   store: new mongoStore({ mongoose_connection: mongoose.connection })
   // }));
 
-  api.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
+  // @TODO - add a favicon and uncomment this
+  // api.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
   // if ('production' === env) {
   //   // api.use(express.static(path.join(config.root, 'public')));
   //   // api.set('appPath', path.join(config.root, 'public'));
