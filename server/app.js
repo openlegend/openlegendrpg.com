@@ -35,7 +35,7 @@ require('./config/restify')(server);
 // require('./routes')(server);
 
 // Start API server
-server.listen(config.port, function () {
+server.listen(config.port, config.ip, function () {
   server.log.info('Restify API server listening on %d, in %s mode', config.port, config.env);
 });
 
