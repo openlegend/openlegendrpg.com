@@ -157,7 +157,6 @@
     }
   },
   "scripts": {
-    "postinstall": "jspm install",
     "start": "node server/app.js",
     "test": "gulp test",
     "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
