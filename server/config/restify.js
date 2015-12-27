@@ -35,10 +35,9 @@ module.exports = function(api) {
 
   // if ('development' === env || 'test' === env) {
     api.get(/.*/, restify.serveStatic({
-      'directory': '.',
+      'directory': config.root,
       'default': 'index.html'
     }));
-
 
   // }
 

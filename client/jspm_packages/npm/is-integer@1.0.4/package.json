@@ -1,0 +1,30 @@
+{
+  "name": "is-integer",
+  "version": "1.0.4",
+  "description": "Polyfill for ES6 Number.isInteger",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:parshap/js-is-integer"
+  },
+  "keywords": [
+    "es6",
+    "is",
+    "safe",
+    "integer",
+    "isInteger",
+    "isSafeInteger"
+  ],
+  "author": "Parsha Pourkhomami",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^3.5.0"
+  },
+  "dependencies": {
+    "is-finite": "^1.0.0",
+    "is-nan": "^1.0.1"
+  }
+}

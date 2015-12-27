@@ -1,0 +1,42 @@
+{
+  "name": "indent-string",
+  "version": "1.2.1",
+  "description": "Indent each line in a string",
+  "license": "MIT",
+  "repository": "sindresorhus/indent-string",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "bin": {
+    "indent-string": "cli.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli",
+    "bin",
+    "indent",
+    "string",
+    "str",
+    "pad",
+    "line"
+  ],
+  "dependencies": {
+    "get-stdin": "^4.0.1",
+    "minimist": "^1.1.0",
+    "repeating": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}

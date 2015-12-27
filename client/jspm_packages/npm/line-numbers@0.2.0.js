@@ -1,0 +1,1 @@
+module.exports = require("npm:line-numbers@0.2.0/index");

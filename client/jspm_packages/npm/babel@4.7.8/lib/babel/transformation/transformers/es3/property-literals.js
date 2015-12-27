@@ -1,0 +1,17 @@
+/* */ 
+"use strict";
+var _interopRequireWildcard = function(obj) {
+  return obj && obj.__esModule ? obj : {"default": obj};
+};
+exports.Property = Property;
+var t = _interopRequireWildcard(require('../../../types/index'));
+function Property(node) {
+  var key = node.key;
+  if (t.isLiteral(key) && t.isValidIdentifier(key.value)) {
+    node.key = t.identifier(key.value);
+    node.computed = false;
+  } else if (!node.computed && t.isIdentifier(key) && !t.isValidIdentifier(key.name)) {
+    node.key = t.literal(key.name);
+  }
+}
+exports.__esModule = true;
