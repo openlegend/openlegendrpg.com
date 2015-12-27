@@ -1,6 +1,6 @@
 /* */ 
-var baseToString = require("../internal/baseToString"),
-    escapeHtmlChar = require("../internal/escapeHtmlChar");
+var baseToString = require('../internal/baseToString'),
+    escapeHtmlChar = require('../internal/escapeHtmlChar');
 var reUnescapedHtml = /[&<>"'`]/g,
     reHasUnescapedHtml = RegExp(reUnescapedHtml.source);
 function escape(string) {

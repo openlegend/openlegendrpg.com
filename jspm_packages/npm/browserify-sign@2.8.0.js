@@ -1,1 +1,1 @@
-module.exports = require("npm:browserify-sign@2.8.0/index");
+module.exports = require("npm:browserify-sign@2.8.0/index.js");

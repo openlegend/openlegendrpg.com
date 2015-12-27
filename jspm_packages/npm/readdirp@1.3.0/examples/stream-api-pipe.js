@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
-  var readdirp = require("../readdirp"),
-      path = require("path"),
-      through = require("through2");
+  var readdirp = require('../readdirp'),
+      path = require('path'),
+      through = require('through2');
   readdirp({
     root: path.join(__dirname),
     fileFilter: '*.js'
@@ -20,4 +20,4 @@
     this.push(JSON.stringify(res) + '\n');
     cb();
   })).pipe(process.stdout);
-})(require("process"));
+})(require('process'));

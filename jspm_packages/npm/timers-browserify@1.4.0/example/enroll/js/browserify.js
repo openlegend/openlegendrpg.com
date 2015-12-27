@@ -175,7 +175,7 @@
   if (!process.binding)
     process.binding = function(name) {
       if (name === 'evals')
-        return require("vm");
+        return require('vm');
       else
         throw new Error('No such module');
     };
@@ -192,5 +192,5 @@
   require.define("/node_modules/timers-browserify/package.json", Function(['require', 'module', 'exports', '__dirname', '__filename'], "module.exports = {\"main\":\"main.js\"}\n//@ sourceURL=/node_modules/timers-browserify/package.json"));
   require.define("/node_modules/timers-browserify/main.js", Function(['require', 'module', 'exports', '__dirname', '__filename'], "// DOM APIs, for completeness\n\nexports.setTimeout = setTimeout;\nexports.clearTimeout = clearTimeout;\nexports.setInterval = setInterval;\nexports.clearInterval = clearInterval;\n\n// TODO: Change to more effiecient list approach used in Node.js\n// For now, we just implement the APIs using the primitives above.\n\nexports.enroll = function(item, delay) {\n  item._timeoutID = setTimeout(item._onTimeout, delay);\n};\n\nexports.unenroll = function(item) {\n  clearTimeout(item._timeoutID);\n};\n\nexports.active = function(item) {\n  // our naive impl doesn't care (correctness is still preserved)\n};\n\n//@ sourceURL=/node_modules/timers-browserify/main.js"));
   require.define("/main.js", Function(['require', 'module', 'exports', '__dirname', '__filename'], "var timers = require('timers');\n\nvar obj = {\n  _onTimeout: function() {\n    console.log('Timer ran for: ' + (new Date().getTime() - obj.now) + ' ms');\n  },\n  start: function() {\n    console.log('Timer should run for 100 ms');\n    this.now = new Date().getTime();\n    timers.enroll(this, 100);\n  }\n};\n\nobj.start();\n\n//@ sourceURL=/main.js"));
-  require("/main");
-})(require("process"));
+  require('/main');
+})(require('process'));

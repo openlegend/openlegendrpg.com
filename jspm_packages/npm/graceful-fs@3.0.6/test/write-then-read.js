@@ -1,10 +1,10 @@
 /* */ 
 (function(process) {
-  var fs = require("../graceful-fs");
-  var rimraf = require("rimraf");
-  var mkdirp = require("mkdirp");
-  var test = require("tap").test;
-  var p = require("path").resolve(__dirname, 'files');
+  var fs = require('../graceful-fs');
+  var rimraf = require('rimraf');
+  var mkdirp = require('mkdirp');
+  var test = require('tap').test;
+  var p = require('path').resolve(__dirname, 'files');
   process.stderr.write('');
   var num = 4097;
   var paths = new Array(num);
@@ -35,4 +35,4 @@
     rimraf.sync(p);
     t.end();
   });
-})(require("process"));
+})(require('process'));

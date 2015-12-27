@@ -1,10 +1,10 @@
 /* */ 
 "format cjs";
 if (typeof define !== 'function') {
-  var define = require("amdefine")(module, require);
+  var define = require('amdefine')(module, require);
 }
 define(function(require, exports, module) {
-  var libUtil = require("../../lib/source-map/util");
+  var libUtil = require('../../lib/source-map/util');
   exports['test urls'] = function(assert, util) {
     var assertUrl = function(url) {
       assert.equal(url, libUtil.urlGenerate(libUtil.urlParse(url)));

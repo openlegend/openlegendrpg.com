@@ -9,8 +9,8 @@ var _interopRequireWildcard = function(obj) {
 exports.AssignmentExpression = AssignmentExpression;
 exports.ExpressionStatement = ExpressionStatement;
 exports.ObjectExpression = ObjectExpression;
-var t = _interopRequireWildcard(require("../../../types/index"));
-var pull = _interopRequire(require("lodash/array/pull"));
+var t = _interopRequireWildcard(require('../../../types/index'));
+var pull = _interopRequire(require('lodash/array/pull'));
 function isProtoKey(node) {
   return t.isLiteral(t.toComputedKey(node, node.key), {value: "__proto__"});
 }
@@ -25,7 +25,7 @@ var secondPass = exports.secondPass = true;
 var optional = exports.optional = true;
 function AssignmentExpression(node, parent, scope, file) {
   if (!isProtoAssignmentExpression(node))
-    return ;
+    return;
   var nodes = [];
   var left = node.left.object;
   var temp = scope.generateTempBasedOnNode(node.left.object);
@@ -38,7 +38,7 @@ function AssignmentExpression(node, parent, scope, file) {
 function ExpressionStatement(node, parent, scope, file) {
   var expr = node.expression;
   if (!t.isAssignmentExpression(expr, {operator: "="}))
-    return ;
+    return;
   if (isProtoAssignmentExpression(expr)) {
     return buildDefaultsCallExpression(expr, expr.left.object, file);
   }

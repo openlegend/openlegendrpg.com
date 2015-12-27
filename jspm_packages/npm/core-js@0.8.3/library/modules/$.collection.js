@@ -1,9 +1,9 @@
 /* */ 
 'use strict';
-var $ = require("./$"),
-    $def = require("./$.def"),
-    $iter = require("./$.iter"),
-    assertInstance = require("./$.assert").inst;
+var $ = require('./$'),
+    $def = require('./$.def'),
+    $iter = require('./$.iter'),
+    assertInstance = require('./$.assert').inst;
 module.exports = function(NAME, methods, common, IS_MAP, isWeak) {
   var Base = $.g[NAME],
       C = Base,
@@ -25,7 +25,7 @@ module.exports = function(NAME, methods, common, IS_MAP, isWeak) {
     var inst = new C,
         chain = inst[ADDER](isWeak ? {} : -0, 1),
         buggyZero;
-    if (!require("./$.iter-detect")(function(iter) {
+    if (!require('./$.iter-detect')(function(iter) {
       new C(iter);
     })) {
       C = function(iterable) {
@@ -50,8 +50,8 @@ module.exports = function(NAME, methods, common, IS_MAP, isWeak) {
     if (buggyZero || chain !== inst)
       fixMethod(ADDER, true);
   }
-  require("./$.cof").set(C, NAME);
-  require("./$.species")(C);
+  require('./$.cof').set(C, NAME);
+  require('./$.species')(C);
   O[NAME] = C;
   $def($def.G + $def.W + $def.F * (C != Base), O);
   if (!isWeak)

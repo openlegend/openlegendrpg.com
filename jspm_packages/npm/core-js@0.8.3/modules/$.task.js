@@ -1,10 +1,10 @@
 /* */ 
 (function(process) {
   'use strict';
-  var $ = require("./$"),
-      ctx = require("./$.ctx"),
-      cof = require("./$.cof"),
-      invoke = require("./$.invoke"),
+  var $ = require('./$'),
+      ctx = require('./$.ctx'),
+      cof = require('./$.cof'),
+      invoke = require('./$.invoke'),
       global = $.g,
       isFunction = $.isFunction,
       html = $.html,
@@ -78,4 +78,4 @@
     set: setTask,
     clear: clearTask
   };
-})(require("process"));
+})(require('process'));

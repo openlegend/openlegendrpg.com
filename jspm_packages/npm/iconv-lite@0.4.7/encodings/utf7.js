@@ -210,4 +210,4 @@
     this.base64Accum = '';
     return res;
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
-  var B = require("../index").Buffer;
-  var test = require("tape");
+  var B = require('../index').Buffer;
+  var test = require('tape');
   if (process.env.OBJECT_IMPL)
     B.TYPED_ARRAY_SUPPORT = false;
   test('new buffer from array', function(t) {
@@ -120,7 +120,7 @@
   test('new buffer from buffer.toJSON() output', function(t) {
     if (typeof JSON === 'undefined') {
       t.end();
-      return ;
+      return;
     }
     var buf = new B('test');
     var json = JSON.stringify(buf);
@@ -129,4 +129,4 @@
     t.ok(buf.equals(copy));
     t.end();
   });
-})(require("process"));
+})(require('process'));

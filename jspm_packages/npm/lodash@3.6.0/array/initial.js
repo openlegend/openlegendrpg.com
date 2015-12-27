@@ -1,5 +1,5 @@
 /* */ 
-var dropRight = require("./dropRight");
+var dropRight = require('./dropRight');
 function initial(array) {
   return dropRight(array, 1);
 }

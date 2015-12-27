@@ -1,8 +1,8 @@
 /* */ 
-var curve = require("./index");
-var elliptic = require("../../elliptic");
-var bn = require("bn.js");
-var inherits = require("inherits");
+var curve = require('./index');
+var elliptic = require('../../elliptic');
+var bn = require('bn.js');
+var inherits = require('inherits');
 var Base = curve.base;
 var getNAF = elliptic.utils.getNAF;
 var assert = elliptic.utils.assert;

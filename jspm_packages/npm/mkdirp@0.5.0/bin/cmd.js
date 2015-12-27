@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
-  var mkdirp = require("../../mkdirp@0.5.0");
-  var minimist = require("minimist");
-  var fs = require("fs");
+  var mkdirp = require('../index');
+  var minimist = require('minimist');
+  var fs = require('fs');
   var argv = minimist(process.argv.slice(2), {
     alias: {
       m: 'mode',
@@ -12,13 +12,13 @@
   });
   if (argv.help) {
     fs.createReadStream(__dirname + '/usage.txt').pipe(process.stdout);
-    return ;
+    return;
   }
   var paths = argv._.slice();
   var mode = argv.mode ? parseInt(argv.mode, 8) : undefined;
   (function next() {
     if (paths.length === 0)
-      return ;
+      return;
     var p = paths.shift();
     if (mode === undefined)
       mkdirp(p, cb);
@@ -32,4 +32,4 @@
         next();
     }
   })();
-})(require("process"));
+})(require('process'));

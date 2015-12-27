@@ -1,10 +1,10 @@
 /* */ 
 (function(process) {
-  var mkdirp = require("../../mkdirp@0.5.0");
-  var path = require("path");
-  var fs = require("fs");
+  var mkdirp = require('../index');
+  var path = require('path');
+  var fs = require('fs');
   var exists = fs.exists || path.exists;
-  var test = require("tap").test;
+  var test = require('tap').test;
   test('umask sync modes', function(t) {
     t.plan(4);
     var x = Math.floor(Math.random() * Math.pow(16, 4)).toString(16);
@@ -26,4 +26,4 @@
       });
     });
   });
-})(require("process"));
+})(require('process'));

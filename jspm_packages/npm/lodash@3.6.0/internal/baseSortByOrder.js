@@ -1,8 +1,8 @@
 /* */ 
-var baseEach = require("./baseEach"),
-    baseSortBy = require("./baseSortBy"),
-    compareMultiple = require("./compareMultiple"),
-    isLength = require("./isLength");
+var baseEach = require('./baseEach'),
+    baseSortBy = require('./baseSortBy'),
+    compareMultiple = require('./compareMultiple'),
+    isLength = require('./isLength');
 function baseSortByOrder(collection, props, orders) {
   var index = -1,
       length = collection.length,

@@ -1,2 +1,2 @@
 /* */ 
-module.exports = require("./some");
+module.exports = require('./some');

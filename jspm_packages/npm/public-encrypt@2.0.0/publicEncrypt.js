@@ -1,13 +1,13 @@
 /* */ 
 (function(Buffer) {
-  var parseKeys = require("parse-asn1");
-  var randomBytes = require("randombytes");
-  var createHash = require("create-hash");
-  var mgf = require("./mgf");
-  var xor = require("./xor");
-  var bn = require("bn.js");
-  var withPublic = require("./withPublic");
-  var crt = require("browserify-rsa");
+  var parseKeys = require('parse-asn1');
+  var randomBytes = require('randombytes');
+  var createHash = require('create-hash');
+  var mgf = require('./mgf');
+  var xor = require('./xor');
+  var bn = require('bn.js');
+  var withPublic = require('./withPublic');
+  var crt = require('browserify-rsa');
   var constants = {
     RSA_PKCS1_OAEP_PADDING: 4,
     RSA_PKCS1_PADDIN: 1,
@@ -92,4 +92,4 @@
     }
     return out;
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

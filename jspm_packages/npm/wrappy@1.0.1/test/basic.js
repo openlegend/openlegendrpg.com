@@ -1,12 +1,12 @@
 /* */ 
-var test = require("tap").test;
-var wrappy = require("../wrappy");
+var test = require('tap').test;
+var wrappy = require('../wrappy');
 test('basic', function(t) {
   function onceifier(cb) {
     var called = false;
     return function() {
       if (called)
-        return ;
+        return;
       called = true;
       return cb.apply(this, arguments);
     };

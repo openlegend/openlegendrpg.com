@@ -1,6 +1,6 @@
 /* */ 
 (function(Buffer) {
-  var Buffer = require("buffer").Buffer;
+  var Buffer = require('buffer').Buffer;
   var isBufferEncoding = Buffer.isEncoding || function(encoding) {
     switch (encoding && encoding.toLowerCase()) {
       case 'hex':
@@ -42,7 +42,7 @@
         break;
       default:
         this.write = passThroughWrite;
-        return ;
+        return;
     }
     this.charBuffer = new Buffer(6);
     this.charReceived = 0;
@@ -132,4 +132,4 @@
     this.charReceived = buffer.length % 3;
     this.charLength = this.charReceived ? 3 : 0;
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

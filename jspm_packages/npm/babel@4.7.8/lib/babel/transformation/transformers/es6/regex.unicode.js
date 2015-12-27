@@ -8,14 +8,14 @@ var _interopRequire = function(obj) {
 };
 exports.check = check;
 exports.Literal = Literal;
-var rewritePattern = _interopRequire(require("regexpu/rewrite-pattern"));
-var regex = _interopRequireWildcard(require("../../helpers/regex"));
+var rewritePattern = _interopRequire(require('regexpu/rewrite-pattern'));
+var regex = _interopRequireWildcard(require('../../helpers/regex'));
 function check(node) {
   return regex.is(node, "u");
 }
 function Literal(node) {
   if (!regex.is(node, "u"))
-    return ;
+    return;
   regex.pullFlag(node, "y");
   node.regex.pattern = rewritePattern(node.regex.pattern, node.regex.flags);
 }

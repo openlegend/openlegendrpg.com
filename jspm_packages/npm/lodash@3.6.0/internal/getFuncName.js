@@ -1,8 +1,8 @@
 /* */ 
-var baseProperty = require("./baseProperty"),
-    constant = require("../utility/constant"),
-    realNames = require("./realNames"),
-    support = require("../support");
+var baseProperty = require('./baseProperty'),
+    constant = require('../utility/constant'),
+    realNames = require('./realNames'),
+    support = require('../support');
 var getFuncName = (function() {
   if (!support.funcNames) {
     return constant('');

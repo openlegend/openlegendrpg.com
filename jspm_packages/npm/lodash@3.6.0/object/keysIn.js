@@ -1,10 +1,10 @@
 /* */ 
-var isArguments = require("../lang/isArguments"),
-    isArray = require("../lang/isArray"),
-    isIndex = require("../internal/isIndex"),
-    isLength = require("../internal/isLength"),
-    isObject = require("../lang/isObject"),
-    support = require("../support");
+var isArguments = require('../lang/isArguments'),
+    isArray = require('../lang/isArray'),
+    isIndex = require('../internal/isIndex'),
+    isLength = require('../internal/isLength'),
+    isObject = require('../lang/isObject'),
+    support = require('../support');
 var objectProto = Object.prototype;
 var hasOwnProperty = objectProto.hasOwnProperty;
 function keysIn(object) {

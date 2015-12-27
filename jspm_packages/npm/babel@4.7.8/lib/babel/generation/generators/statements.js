@@ -21,8 +21,8 @@ exports.DebuggerStatement = DebuggerStatement;
 exports.VariableDeclaration = VariableDeclaration;
 exports.PrivateDeclaration = PrivateDeclaration;
 exports.VariableDeclarator = VariableDeclarator;
-var repeating = _interopRequire(require("repeating"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var repeating = _interopRequire(require('repeating'));
+var t = _interopRequireWildcard(require('../../types/index'));
 function WithStatement(node, print) {
   this.keyword("with");
   this.push("(");

@@ -100,11 +100,11 @@
       $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams) {
         var cfg = getConfig(toState);
         if (ignoreDsr || (computeDeepStateStatus(toState) !== REDIRECT) && !cfg.default)
-          return ;
+          return;
         var key = getParamsString(toParams, cfg.params);
         var redirect = lastSubstate[toState.name][key] || cfg.default;
         if (!redirect)
-          return ;
+          return;
         var $dsr$ = {
           redirect: {
             state: redirect.state,
@@ -117,7 +117,7 @@
         };
         var result = $injector.invoke(cfg.fn, toState, {$dsr$: $dsr$});
         if (!result)
-          return ;
+          return;
         if (result.state)
           redirect = result;
         event.preventDefault();
@@ -162,4 +162,4 @@
     }]);
     angular.module('ct.ui.router.extras.dsr').run(['$deepStateRedirect', function($deepStateRedirect) {}]);
   })(angular);
-})(require("process"));
+})(require('process'));

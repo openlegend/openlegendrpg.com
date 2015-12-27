@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var crypto = require("crypto");
-  var tape = require("tape");
-  var Sha1 = require("../../sha.js@2.3.6").sha1;
+  var crypto = require('crypto');
+  var tape = require('tape');
+  var Sha1 = require('../index').sha1;
   var Uint32toHex = Sha1.Uint32toHex;
   function generateCount(m) {
     var s = '';
@@ -70,4 +70,4 @@
     });
     t.end();
   });
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

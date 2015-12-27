@@ -1,5 +1,5 @@
 /* */ 
-var types = require("./types");
+var types = require('./types');
 var Type = types.Type;
 var builtin = types.builtInTypes;
 var isNumber = builtin.number;

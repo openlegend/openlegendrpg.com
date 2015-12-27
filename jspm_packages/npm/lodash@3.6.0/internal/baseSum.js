@@ -1,5 +1,5 @@
 /* */ 
-var baseEach = require("./baseEach");
+var baseEach = require('./baseEach');
 function baseSum(collection, iteratee) {
   var result = 0;
   baseEach(collection, function(value, index, collection) {

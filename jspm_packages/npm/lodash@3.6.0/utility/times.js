@@ -1,5 +1,5 @@
 /* */ 
-var bindCallback = require("../internal/bindCallback");
+var bindCallback = require('../internal/bindCallback');
 var nativeIsFinite = global.isFinite,
     nativeMin = Math.min;
 var MAX_ARRAY_LENGTH = Math.pow(2, 32) - 1;

@@ -1,12 +1,12 @@
 /* */ 
 (function(Buffer) {
-  var parseKeys = require("parse-asn1");
-  var mgf = require("./mgf");
-  var xor = require("./xor");
-  var bn = require("bn.js");
-  var crt = require("browserify-rsa");
-  var createHash = require("create-hash");
-  var withPublic = require("./withPublic");
+  var parseKeys = require('parse-asn1');
+  var mgf = require('./mgf');
+  var xor = require('./xor');
+  var bn = require('bn.js');
+  var crt = require('browserify-rsa');
+  var createHash = require('create-hash');
+  var withPublic = require('./withPublic');
   module.exports = function privateDecrypt(private_key, enc, reverse) {
     var padding;
     if (private_key.padding) {
@@ -104,4 +104,4 @@
     }
     return dif;
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

@@ -1,8 +1,8 @@
 /* */ 
-var baseFlatten = require("../internal/baseFlatten"),
-    createWrapper = require("../internal/createWrapper"),
-    functions = require("../object/functions"),
-    restParam = require("./restParam");
+var baseFlatten = require('../internal/baseFlatten'),
+    createWrapper = require('../internal/createWrapper'),
+    functions = require('../object/functions'),
+    restParam = require('./restParam');
 var BIND_FLAG = 1;
 var bindAll = restParam(function(object, methodNames) {
   methodNames = methodNames.length ? baseFlatten(methodNames) : functions(object);

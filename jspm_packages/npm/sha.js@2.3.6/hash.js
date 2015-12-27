@@ -47,4 +47,4 @@
     throw new Error('_update must be implemented by subclass');
   };
   module.exports = Hash;
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

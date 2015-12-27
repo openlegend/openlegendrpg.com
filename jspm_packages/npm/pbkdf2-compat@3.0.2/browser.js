@@ -1,6 +1,6 @@
 /* */ 
 (function(Buffer) {
-  var createHmac = require("create-hmac");
+  var createHmac = require('create-hmac');
   exports.pbkdf2 = pbkdf2;
   function pbkdf2(password, salt, iterations, keylen, digest, callback) {
     if (typeof digest === 'function') {
@@ -61,4 +61,4 @@
     }
     return DK;
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

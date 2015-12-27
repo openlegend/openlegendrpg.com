@@ -17,8 +17,8 @@ exports.ClassExpression = ClassExpression;
 exports.UnaryLike = UnaryLike;
 exports.FunctionExpression = FunctionExpression;
 exports.ConditionalExpression = ConditionalExpression;
-var each = _interopRequire(require("lodash/collection/each"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var each = _interopRequire(require('lodash/collection/each'));
+var t = _interopRequireWildcard(require('../../types/index'));
 var PRECEDENCE = {};
 each([["||"], ["&&"], ["|"], ["^"], ["&"], ["==", "===", "!=", "!=="], ["<", ">", "<=", ">=", "in", "instanceof"], [">>", "<<", ">>>"], ["+", "-"], ["*", "/", "%"], ["**"]], function(tier, i) {
   each(tier, function(op) {

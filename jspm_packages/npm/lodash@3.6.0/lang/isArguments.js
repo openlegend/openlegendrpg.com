@@ -1,6 +1,6 @@
 /* */ 
-var isLength = require("../internal/isLength"),
-    isObjectLike = require("../internal/isObjectLike");
+var isLength = require('../internal/isLength'),
+    isObjectLike = require('../internal/isObjectLike');
 var argsTag = '[object Arguments]';
 var objectProto = Object.prototype;
 var objToString = objectProto.toString;

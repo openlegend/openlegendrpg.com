@@ -1,9 +1,9 @@
 /* */ 
 (function(process) {
   'use strict';
-  var fs = require("graceful-fs"),
-      path = require("path"),
-      minimatch = require("minimatch"),
+  var fs = require('graceful-fs'),
+      path = require('path'),
+      minimatch = require('minimatch'),
       toString = Object.prototype.toString;
   ;
   function isFunction(obj) {
@@ -34,7 +34,7 @@
         aborted = false;
     ;
     if (isUndefined(callback1)) {
-      var api = require("./stream-api")();
+      var api = require('./stream-api')();
       stream = api.stream;
       callback1 = api.processEntry;
       callback2 = api.done;
@@ -115,18 +115,18 @@
     }
     function processDir(currentDir, entries, callProcessed) {
       if (aborted)
-        return ;
+        return;
       var total = entries.length,
           processed = 0,
           entryInfos = [];
       ;
       fs.realpath(currentDir, function(err, realCurrentDir) {
         if (aborted)
-          return ;
+          return;
         if (err) {
           handleError(err);
           callProcessed(entryInfos);
-          return ;
+          return;
         }
         var relDir = path.relative(realRoot, realCurrentDir);
         if (entries.length === 0) {
@@ -158,12 +158,12 @@
     }
     function readdirRec(currentDir, depth, callCurrentDirProcessed) {
       if (aborted)
-        return ;
+        return;
       fs.readdir(currentDir, function(err, entries) {
         if (err) {
           handleError(err);
           callCurrentDirProcessed();
-          return ;
+          return;
         }
         processDir(currentDir, entries, function(entryInfos) {
           var subdirs = entryInfos.filter(function(ei) {
@@ -224,4 +224,4 @@
     return stream;
   }
   module.exports = readdir;
-})(require("process"));
+})(require('process'));

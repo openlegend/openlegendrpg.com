@@ -1,1 +1,1 @@
-module.exports = require("github:angular/bower-angular-resource@1.4.5/index");
+module.exports = require("github:angular/bower-angular-resource@1.4.5/index.js");

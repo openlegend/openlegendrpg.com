@@ -1,2 +1,2 @@
 /* */ 
-module.exports = require("./find");
+module.exports = require('./find');

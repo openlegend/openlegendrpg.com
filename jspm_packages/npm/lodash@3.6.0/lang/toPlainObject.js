@@ -1,6 +1,6 @@
 /* */ 
-var baseCopy = require("../internal/baseCopy"),
-    keysIn = require("../object/keysIn");
+var baseCopy = require('../internal/baseCopy'),
+    keysIn = require('../object/keysIn');
 function toPlainObject(value) {
   return baseCopy(value, keysIn(value));
 }

@@ -1,7 +1,7 @@
 /* */ 
-var assert = require("assert");
-var types = require("./types");
-var NodePath = require("./node-path");
+var assert = require('assert');
+var types = require('./types');
+var NodePath = require('./node-path');
 var Printable = types.namedTypes.Printable;
 var isArray = types.builtInTypes.array;
 var isObject = types.builtInTypes.object;

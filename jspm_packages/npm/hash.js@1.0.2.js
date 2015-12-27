@@ -1,1 +1,1 @@
-module.exports = require("npm:hash.js@1.0.2/lib/hash");
+module.exports = require("npm:hash.js@1.0.2/lib/hash.js");

@@ -6,8 +6,8 @@ var _interopRequireWildcard = function(obj) {
 exports.check = check;
 exports.Scopable = Scopable;
 exports.VariableDeclaration = VariableDeclaration;
-var messages = _interopRequireWildcard(require("../../../messages"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var messages = _interopRequireWildcard(require('../../../messages'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function check(node) {
   return t.isVariableDeclaration(node, {kind: "const"});
 }

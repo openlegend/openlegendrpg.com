@@ -1,13 +1,13 @@
 /* */ 
 (function(Buffer) {
-  var inherits = require("inherits");
-  var Reporter = require("./index").Reporter;
-  var Buffer = require("buffer").Buffer;
+  var inherits = require('inherits');
+  var Reporter = require('./index').Reporter;
+  var Buffer = require('buffer').Buffer;
   function DecoderBuffer(base, options) {
     Reporter.call(this, options);
     if (!Buffer.isBuffer(base)) {
       this.error('Input not Buffer');
-      return ;
+      return;
     }
     this.base = base;
     this.offset = 0;
@@ -95,4 +95,4 @@
     }
     return out;
   };
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

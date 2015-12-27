@@ -57,4 +57,4 @@
     }
     return newBuf.toString('ucs2');
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

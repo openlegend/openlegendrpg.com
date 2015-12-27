@@ -1,12 +1,12 @@
 /* */ 
-var assert = require("assert");
-var types = require("./types");
+var assert = require('assert');
+var types = require('./types');
 var isString = types.builtInTypes.string;
 var isNumber = types.builtInTypes.number;
 var SourceLocation = types.namedTypes.SourceLocation;
 var Position = types.namedTypes.Position;
-var linesModule = require("./lines");
-var comparePos = require("./util").comparePos;
+var linesModule = require('./lines');
+var comparePos = require('./util').comparePos;
 function Mapping(sourceLines, sourceLoc, targetLoc) {
   assert.ok(this instanceof Mapping);
   assert.ok(sourceLines instanceof linesModule.Lines);

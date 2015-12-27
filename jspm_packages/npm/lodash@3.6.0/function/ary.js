@@ -1,6 +1,6 @@
 /* */ 
-var createWrapper = require("../internal/createWrapper"),
-    isIterateeCall = require("../internal/isIterateeCall");
+var createWrapper = require('../internal/createWrapper'),
+    isIterateeCall = require('../internal/isIterateeCall');
 var ARY_FLAG = 128;
 var nativeMax = Math.max;
 function ary(func, n, guard) {

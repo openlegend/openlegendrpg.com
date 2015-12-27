@@ -1,2 +1,2 @@
 /* */ 
-module.exports = require("../math/min");
+module.exports = require('../math/min');

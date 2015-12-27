@@ -4,7 +4,7 @@ var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
 exports.Property = Property;
-var t = _interopRequireWildcard(require("../../../types/index"));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function Property(node) {
   var key = node.key;
   if (t.isLiteral(key) && t.isValidIdentifier(key.value)) {

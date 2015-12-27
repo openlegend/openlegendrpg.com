@@ -1,8 +1,8 @@
 /* */ 
-var baseCallback = require("./baseCallback"),
-    baseFind = require("./baseFind"),
-    baseFindIndex = require("./baseFindIndex"),
-    isArray = require("../lang/isArray");
+var baseCallback = require('./baseCallback'),
+    baseFind = require('./baseFind'),
+    baseFindIndex = require('./baseFindIndex'),
+    isArray = require('../lang/isArray');
 function createFind(eachFunc, fromRight) {
   return function(collection, predicate, thisArg) {
     predicate = baseCallback(predicate, thisArg, 3);

@@ -1,11 +1,11 @@
 /* */ 
 'use strict';
-var $ = require("./$"),
-    ctx = require("./$.ctx"),
-    cof = require("./$.cof"),
-    $def = require("./$.def"),
-    assertObject = require("./$.assert").obj,
-    SYMBOL_ITERATOR = require("./$.wks")('iterator'),
+var $ = require('./$'),
+    ctx = require('./$.ctx'),
+    cof = require('./$.cof'),
+    $def = require('./$.def'),
+    assertObject = require('./$.assert').obj,
+    SYMBOL_ITERATOR = require('./$.wks')('iterator'),
     FF_ITERATOR = '@@iterator',
     Iterators = {},
     IteratorPrototype = {};

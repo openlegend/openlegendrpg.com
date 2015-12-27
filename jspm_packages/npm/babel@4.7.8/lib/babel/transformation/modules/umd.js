@@ -24,10 +24,10 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var AMDFormatter = _interopRequire(require("./amd"));
-var values = _interopRequire(require("lodash/object/values"));
-var util = _interopRequireWildcard(require("../../util"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var AMDFormatter = _interopRequire(require('./amd'));
+var values = _interopRequire(require('lodash/object/values'));
+var util = _interopRequireWildcard(require('../../util'));
+var t = _interopRequireWildcard(require('../../types/index'));
 var UMDFormatter = (function(AMDFormatter) {
   function UMDFormatter() {
     _classCallCheck(this, UMDFormatter);

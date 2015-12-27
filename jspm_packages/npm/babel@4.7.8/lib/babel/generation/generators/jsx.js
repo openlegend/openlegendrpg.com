@@ -16,8 +16,8 @@ exports.JSXElement = JSXElement;
 exports.JSXOpeningElement = JSXOpeningElement;
 exports.JSXClosingElement = JSXClosingElement;
 exports.JSXEmptyExpression = JSXEmptyExpression;
-var each = _interopRequire(require("lodash/collection/each"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var each = _interopRequire(require('lodash/collection/each'));
+var t = _interopRequireWildcard(require('../../types/index'));
 function JSXAttribute(node, print) {
   print(node.name);
   if (node.value) {
@@ -53,7 +53,7 @@ function JSXElement(node, print) {
   var open = node.openingElement;
   print(open);
   if (open.selfClosing)
-    return ;
+    return;
   this.indent();
   each(node.children, function(child) {
     if (t.isLiteral(child)) {

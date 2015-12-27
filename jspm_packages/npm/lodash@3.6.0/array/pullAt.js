@@ -1,9 +1,9 @@
 /* */ 
-var baseAt = require("../internal/baseAt"),
-    baseCompareAscending = require("../internal/baseCompareAscending"),
-    baseFlatten = require("../internal/baseFlatten"),
-    isIndex = require("../internal/isIndex"),
-    restParam = require("../function/restParam");
+var baseAt = require('../internal/baseAt'),
+    baseCompareAscending = require('../internal/baseCompareAscending'),
+    baseFlatten = require('../internal/baseFlatten'),
+    isIndex = require('../internal/isIndex'),
+    restParam = require('../function/restParam');
 var arrayProto = Array.prototype;
 var splice = arrayProto.splice;
 var pullAt = restParam(function(array, indexes) {

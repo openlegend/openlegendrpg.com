@@ -1,10 +1,10 @@
 /* */ 
 (function(process) {
   'use strict';
-  var Native = require("./build/Release/fse");
-  var EventEmitter = require("events").EventEmitter;
-  var fs = require("fs");
-  var inherits = require("util").inherits;
+  var Native = require('./build/Release/fse');
+  var EventEmitter = require('events').EventEmitter;
+  var fs = require('fs');
+  var inherits = require('util').inherits;
   function FSEvents(path, handler) {
     EventEmitter.call(this);
     Object.defineProperty(this, '_impl', {
@@ -90,4 +90,4 @@
       flags: flags
     };
   }
-})(require("process"));
+})(require('process'));

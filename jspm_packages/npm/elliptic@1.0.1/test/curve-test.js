@@ -1,7 +1,7 @@
 /* */ 
-var assert = require("assert");
-var bn = require("bn.js");
-var elliptic = require("../lib/elliptic");
+var assert = require('assert');
+var bn = require('bn.js');
+var elliptic = require('../lib/elliptic');
 describe('Curve', function() {
   it('should work with example curve', function() {
     var curve = new elliptic.curve.short({

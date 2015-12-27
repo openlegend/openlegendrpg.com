@@ -8,7 +8,7 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var t = _interopRequireWildcard(require("../../types/index"));
+var t = _interopRequireWildcard(require('../../types/index'));
 var IgnoreFormatter = (function() {
   function IgnoreFormatter() {
     _classCallCheck(this, IgnoreFormatter);

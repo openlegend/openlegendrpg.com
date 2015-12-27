@@ -1,5 +1,5 @@
 /* */ 
-var bindCallback = require("./bindCallback");
+var bindCallback = require('./bindCallback');
 function createForOwn(objectFunc) {
   return function(object, iteratee, thisArg) {
     if (typeof iteratee != 'function' || typeof thisArg != 'undefined') {

@@ -1,5 +1,5 @@
 /* */ 
-var toObject = require("./toObject");
+var toObject = require('./toObject');
 function pickByArray(object, props) {
   object = toObject(object);
   var index = -1,

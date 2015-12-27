@@ -1,5 +1,5 @@
 /* */ 
-var LazyWrapper = require("./LazyWrapper");
+var LazyWrapper = require('./LazyWrapper');
 function lazyReverse() {
   if (this.__filtered__) {
     var result = new LazyWrapper(this);

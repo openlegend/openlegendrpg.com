@@ -1,14 +1,14 @@
 /* */ 
 (function(process) {
-  var assert = require("assert");
-  var path = require("path");
-  var fs = require("fs");
-  var Q = require("q");
-  var iconv = require("iconv-lite");
-  var createHash = require("crypto").createHash;
-  var getRequiredIDs = require("install").getRequiredIDs;
-  var util = require("./util");
-  var BuildContext = require("./context").BuildContext;
+  var assert = require('assert');
+  var path = require('path');
+  var fs = require('fs');
+  var Q = require('q');
+  var iconv = require('iconv-lite');
+  var createHash = require('crypto').createHash;
+  var getRequiredIDs = require('install').getRequiredIDs;
+  var util = require('./util');
+  var BuildContext = require('./context').BuildContext;
   var slice = Array.prototype.slice;
   function ModuleReader(context, resolvers, processors) {
     var self = this;
@@ -29,7 +29,7 @@
     resolvers = hashCallbacks("resolvers", resolvers, warnMissingModule);
     var procArgs = [processors];
     if (context.relativize && !context.ignoreDependencies)
-      procArgs.push(require("./relative").getProcessor(self));
+      procArgs.push(require('./relative').getProcessor(self));
     processors = hashCallbacks("processors", procArgs);
     Object.defineProperties(self, {
       context: {value: context},
@@ -224,4 +224,4 @@
       return util.absolutize(this.id, id);
     }
   };
-})(require("process"));
+})(require('process'));

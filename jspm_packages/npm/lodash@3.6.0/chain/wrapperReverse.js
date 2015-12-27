@@ -1,7 +1,7 @@
 /* */ 
-var LazyWrapper = require("../internal/LazyWrapper"),
-    LodashWrapper = require("../internal/LodashWrapper"),
-    thru = require("./thru");
+var LazyWrapper = require('../internal/LazyWrapper'),
+    LodashWrapper = require('../internal/LodashWrapper'),
+    thru = require('./thru');
 function wrapperReverse() {
   var value = this.__wrapped__;
   if (value instanceof LazyWrapper) {

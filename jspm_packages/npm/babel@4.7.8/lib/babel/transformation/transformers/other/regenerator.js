@@ -7,8 +7,8 @@ var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
 exports.check = check;
-var regenerator = _interopRequire(require("regenerator-babel"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var regenerator = _interopRequire(require('regenerator-babel'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function check(node) {
   return t.isFunction(node) && (node.async || node.generator);
 }

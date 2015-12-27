@@ -6,10 +6,10 @@ var _interopRequireWildcard = function(obj) {
 var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
-var estraverse = _interopRequire(require("estraverse"));
-var extend = _interopRequire(require("lodash/object/extend"));
-var types = _interopRequire(require("ast-types"));
-var t = _interopRequireWildcard(require("./types/index"));
+var estraverse = _interopRequire(require('estraverse'));
+var extend = _interopRequire(require('lodash/object/extend'));
+var types = _interopRequire(require('ast-types'));
+var t = _interopRequireWildcard(require('./types/index'));
 extend(estraverse.VisitorKeys, t.VISITOR_KEYS);
 var def = types.Type.def;
 var or = types.Type.or;

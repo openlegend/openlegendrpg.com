@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var crypto = require("../browser");
-  var test = require("tape");
-  var fs = require("fs");
+  var crypto = require('../browser');
+  var test = require('tape');
+  var fs = require('fs');
   test('node tests', function(t) {
     var certPem = fs.readFileSync(__dirname + '/test_cert.pem', 'ascii');
     var keyPem = fs.readFileSync(__dirname + '/test_key.pem', 'ascii');
@@ -33,4 +33,4 @@
     });
     t.end();
   });
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

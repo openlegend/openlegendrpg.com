@@ -4,11 +4,11 @@ var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
 module.exports = build;
-var t = _interopRequireWildcard(require("../../types/index"));
+var t = _interopRequireWildcard(require('../../types/index'));
 function build(node, buildBody) {
   var self = node.blocks.shift();
   if (!self)
-    return ;
+    return;
   var child = build(node, buildBody);
   if (!child) {
     child = buildBody();

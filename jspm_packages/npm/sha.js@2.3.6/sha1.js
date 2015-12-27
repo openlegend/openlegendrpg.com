@@ -1,7 +1,7 @@
 /* */ 
 (function(Buffer) {
-  var inherits = require("inherits");
-  var Hash = require("./hash");
+  var inherits = require('inherits');
+  var Hash = require('./hash');
   var W = new Array(80);
   function Sha1() {
     this.init();
@@ -72,4 +72,4 @@
     return H;
   };
   module.exports = Sha1;
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

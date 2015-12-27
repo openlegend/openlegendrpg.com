@@ -4,11 +4,11 @@ var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
 module.exports = transform;
-var normalizeAst = _interopRequire(require("../helpers/normalize-ast"));
-var Transformer = _interopRequire(require("./transformer"));
-var object = _interopRequire(require("../helpers/object"));
-var File = _interopRequire(require("./file"));
-var each = _interopRequire(require("lodash/collection/each"));
+var normalizeAst = _interopRequire(require('../helpers/normalize-ast'));
+var Transformer = _interopRequire(require('./transformer'));
+var object = _interopRequire(require('../helpers/object'));
+var File = _interopRequire(require('./file'));
+var each = _interopRequire(require('lodash/collection/each'));
 function transform(code, opts) {
   var file = new File(opts);
   return file.parse(code);
@@ -44,10 +44,10 @@ transform._ensureTransformerNames = function(type, rawKeys) {
 transform.transformerNamespaces = object();
 transform.transformers = object();
 transform.namespaces = object();
-transform.deprecatedTransformerMap = require("./transformers/deprecated.json!systemjs-json");
-transform.aliasTransformerMap = require("./transformers/aliases.json!systemjs-json");
-transform.moduleFormatters = require("./modules/index");
-var rawTransformers = _interopRequire(require("./transformers/index"));
+transform.deprecatedTransformerMap = require('./transformers/deprecated.json!systemjs-json');
+transform.aliasTransformerMap = require('./transformers/aliases.json!systemjs-json');
+transform.moduleFormatters = require('./modules/index');
+var rawTransformers = _interopRequire(require('./transformers/index'));
 each(rawTransformers, function(transformer, key) {
   var namespace = key.split(".")[0];
   var _transform$namespaces = transform.namespaces;

@@ -9,7 +9,7 @@ exports.Class = Class;
 exports.TypeCastExpression = TypeCastExpression;
 exports.ImportDeclaration = ImportDeclaration;
 exports.ExportDeclaration = ExportDeclaration;
-var t = _interopRequireWildcard(require("../../../types/index"));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function Flow(node) {
   this.remove();
 }

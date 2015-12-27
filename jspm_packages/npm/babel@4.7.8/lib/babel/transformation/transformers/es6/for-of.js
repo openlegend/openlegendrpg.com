@@ -4,9 +4,9 @@ var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
 exports.ForOfStatement = ForOfStatement;
-var messages = _interopRequireWildcard(require("../../../messages"));
-var util = _interopRequireWildcard(require("../../../util"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var messages = _interopRequireWildcard(require('../../../messages'));
+var util = _interopRequireWildcard(require('../../../util'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var check = exports.check = t.isForOfStatement;
 function ForOfStatement(node, parent, scope, file) {
   var callback = spec;

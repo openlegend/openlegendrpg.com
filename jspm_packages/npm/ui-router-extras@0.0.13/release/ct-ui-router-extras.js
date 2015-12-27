@@ -244,11 +244,11 @@
       $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams) {
         var cfg = getConfig(toState);
         if (ignoreDsr || (computeDeepStateStatus(toState) !== REDIRECT) && !cfg.default)
-          return ;
+          return;
         var key = getParamsString(toParams, cfg.params);
         var redirect = lastSubstate[toState.name][key] || cfg.default;
         if (!redirect)
-          return ;
+          return;
         var $dsr$ = {
           redirect: {
             state: redirect.state,
@@ -261,7 +261,7 @@
         };
         var result = $injector.invoke(cfg.fn, toState, {$dsr$: $dsr$});
         if (!result)
-          return ;
+          return;
         if (result.state)
           redirect = result;
         event.preventDefault();
@@ -999,7 +999,7 @@
             if (!initDone) {
               initPromise().then(resync);
               initDone = true;
-              return ;
+              return;
             }
             var futureState = findFutureState($state, {url: $location.path()});
             if (!futureState) {
@@ -1018,7 +1018,7 @@
             });
           }];
           if (lazyloadInProgress)
-            return ;
+            return;
           var nextFn = resyncing ? otherwiseFunc : lazyLoadMissingState;
           return $injector.invoke(nextFn);
         }
@@ -1041,11 +1041,11 @@
           function init() {
             $rootScope.$on("$stateNotFound", function futureState_notFound(event, unfoundState, fromState, fromParams) {
               if (lazyloadInProgress)
-                return ;
+                return;
               $log.debug("event, unfoundState, fromState, fromParams", event, unfoundState, fromState, fromParams);
               var futureState = findFutureState($state, {name: unfoundState.to});
               if (!futureState)
-                return ;
+                return;
               event.preventDefault();
               var promise = lazyLoadState($injector, futureState);
               promise.then(function(states) {
@@ -1385,4 +1385,4 @@
     })();
     angular.module("ct.ui.router.extras", ['ct.ui.router.extras.core', 'ct.ui.router.extras.dsr', 'ct.ui.router.extras.future', 'ct.ui.router.extras.previous', 'ct.ui.router.extras.statevis', 'ct.ui.router.extras.sticky', 'ct.ui.router.extras.transition']);
   })(angular);
-})(require("process"));
+})(require('process'));

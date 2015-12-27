@@ -1,5 +1,5 @@
 /* */ 
-var baseIsEqualDeep = require("./baseIsEqualDeep");
+var baseIsEqualDeep = require('./baseIsEqualDeep');
 function baseIsEqual(value, other, customizer, isLoose, stackA, stackB) {
   if (value === other) {
     return value !== 0 || (1 / value == 1 / other);

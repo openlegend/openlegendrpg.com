@@ -1,10 +1,10 @@
 /* */ 
 (function(Buffer) {
-  var test = require("tape");
-  var fs = require("fs");
-  var constants = require("constants");
-  var parseKeys = require("parse-asn1");
-  require("./nodeTests");
+  var test = require('tape');
+  var fs = require('fs');
+  var constants = require('constants');
+  var parseKeys = require('parse-asn1');
+  require('./nodeTests');
   var priv1024 = fs.readFileSync(__dirname + '/rsa.1024.priv');
   var rsa1024 = {
     private: fs.readFileSync(__dirname + '/rsa.1024.priv'),
@@ -44,8 +44,8 @@
     },
     public: fs.readFileSync(__dirname + '/rsa.pass.pub')
   };
-  var nodeCrypto = require("../../public-encrypt@2.0.0");
-  var myCrypto = require("../browser");
+  var nodeCrypto = require('../index');
+  var myCrypto = require('../browser');
   function _testIt(keys, message, t) {
     var pub = keys.public;
     var priv = keys.private;
@@ -113,4 +113,4 @@
   while (++i <= 20) {
     testRun(i);
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

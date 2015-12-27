@@ -1,9 +1,9 @@
 /* */ 
 (function(process) {
-  var child = require("child_process");
-  var fs = require("fs");
-  var util = require("util");
-  var q = require("qq");
+  var child = require('child_process');
+  var fs = require('fs');
+  var util = require('util');
+  var q = require('qq');
   var GIT_LOG_CMD = 'git log --grep="%s" -E --format=%s %s..HEAD';
   var GIT_TAG_CMD = 'git describe --tags --abbrev=0';
   var HEADER_TPL = '<a name="%s"></a>\n# %s (%s)\n\n';
@@ -59,7 +59,7 @@
     printCommitLinks = printCommitLinks === undefined ? true : printCommitLinks;
     var components = Object.getOwnPropertyNames(section).sort();
     if (!components.length || section['$$'].length <= 0)
-      return ;
+      return;
     stream.write(util.format('\n## %s\n\n', title));
     components.forEach(function(name) {
       var prefix = '-';
@@ -153,4 +153,4 @@
   if (process.argv.join('').indexOf('jasmine-node') === -1) {
     generate(process.argv[2], process.argv[3]);
   }
-})(require("process"));
+})(require('process'));

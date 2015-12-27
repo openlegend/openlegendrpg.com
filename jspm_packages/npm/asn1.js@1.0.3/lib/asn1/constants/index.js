@@ -10,4 +10,4 @@ constants._reverse = function reverse(map) {
   });
   return res;
 };
-constants.der = require("./der");
+constants.der = require('./der');

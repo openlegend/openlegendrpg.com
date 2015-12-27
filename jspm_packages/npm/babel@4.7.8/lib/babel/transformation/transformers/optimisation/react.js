@@ -7,25 +7,25 @@ var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
 exports.JSXElement = JSXElement;
-var react = _interopRequireWildcard(require("../../helpers/react"));
-var t = _interopRequire(require("../../../types/index"));
+var react = _interopRequireWildcard(require('../../helpers/react'));
+var t = _interopRequire(require('../../../types/index'));
 var optional = exports.optional = true;
 var immutabilityVisitor = {enter: function enter(node, parent, scope, state) {
     if (t.isJSXIdentifier(node) && react.isCompatTag(node.name)) {
-      return ;
+      return;
     }
     if (t.isJSXIdentifier(node) || t.isIdentifier(node)) {
       if (t.isReferenced(node, parent)) {
         state.identifiers.push(node.name);
-        return ;
+        return;
       }
     }
     if (t.isJSXClosingElement(node)) {
       this.skip();
-      return ;
+      return;
     }
     if (t.isIdentifier(node) || t.isJSXMemberExpression(node)) {
-      return ;
+      return;
     }
     state.isImmutable = t.isImmutable(node);
     if (!state.isImmutable)
@@ -39,7 +39,7 @@ function JSXElement(node, parent, scope, file) {
   this.traverse(immutabilityVisitor, state);
   this.skip();
   if (!state.isImmutable)
-    return ;
+    return;
   var lastCompatibleScope = scope;
   var checkScope = scope;
   crawl: do {
@@ -51,7 +51,7 @@ function JSXElement(node, parent, scope, file) {
     lastCompatibleScope = checkScope;
   } while (checkScope = checkScope.parent);
   if (lastCompatibleScope === scope)
-    return ;
+    return;
   var uid = scope.generateUidIdentifier("ref");
   var scopeBlock = lastCompatibleScope.block;
   if (t.isFunction(scopeBlock)) {

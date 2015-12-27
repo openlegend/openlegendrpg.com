@@ -21,7 +21,7 @@
       var node = nodes[idstr],
           id = node.id;
       if (visited[idstr])
-        return ;
+        return;
       if (!Array.isArray(ancestors))
         ancestors = [];
       ancestors.push(id);
@@ -47,7 +47,7 @@
     } catch (e) {
       console.log(e.message);
     }
-    return ;
+    return;
     var max = 100,
         iteration = 30;
     function randomInt(max) {
@@ -72,4 +72,4 @@
     if (process.argv[1] === __filename)
       tsortTest();
   }
-})(require("process"));
+})(require('process'));

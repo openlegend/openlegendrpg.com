@@ -1,8 +1,8 @@
 /* */ 
-var baseToString = require("../internal/baseToString"),
-    charsRightIndex = require("../internal/charsRightIndex"),
-    isIterateeCall = require("../internal/isIterateeCall"),
-    trimmedRightIndex = require("../internal/trimmedRightIndex");
+var baseToString = require('../internal/baseToString'),
+    charsRightIndex = require('../internal/charsRightIndex'),
+    isIterateeCall = require('../internal/isIterateeCall'),
+    trimmedRightIndex = require('../internal/trimmedRightIndex');
 function trimRight(string, chars, guard) {
   var value = string;
   string = baseToString(string);

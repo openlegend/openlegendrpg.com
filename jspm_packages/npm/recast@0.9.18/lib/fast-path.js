@@ -1,6 +1,6 @@
 /* */ 
-var assert = require("assert");
-var types = require("./types");
+var assert = require('assert');
+var types = require('./types');
 var n = types.namedTypes;
 var Node = n.Node;
 var isArray = types.builtInTypes.array;

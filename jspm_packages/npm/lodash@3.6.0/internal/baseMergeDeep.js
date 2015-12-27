@@ -1,18 +1,18 @@
 /* */ 
-var arrayCopy = require("./arrayCopy"),
-    isArguments = require("../lang/isArguments"),
-    isArray = require("../lang/isArray"),
-    isLength = require("./isLength"),
-    isPlainObject = require("../lang/isPlainObject"),
-    isTypedArray = require("../lang/isTypedArray"),
-    toPlainObject = require("../lang/toPlainObject");
+var arrayCopy = require('./arrayCopy'),
+    isArguments = require('../lang/isArguments'),
+    isArray = require('../lang/isArray'),
+    isLength = require('./isLength'),
+    isPlainObject = require('../lang/isPlainObject'),
+    isTypedArray = require('../lang/isTypedArray'),
+    toPlainObject = require('../lang/toPlainObject');
 function baseMergeDeep(object, source, key, mergeFunc, customizer, stackA, stackB) {
   var length = stackA.length,
       srcValue = source[key];
   while (length--) {
     if (stackA[length] == srcValue) {
       object[key] = stackB[length];
-      return ;
+      return;
     }
   }
   var value = object[key],

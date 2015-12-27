@@ -3,10 +3,10 @@
 var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
-var normalizeAst = _interopRequire(require("./normalize-ast"));
-var estraverse = _interopRequire(require("estraverse"));
-var codeFrame = _interopRequire(require("./code-frame"));
-var acorn = _interopRequire(require("acorn-babel"));
+var normalizeAst = _interopRequire(require('./normalize-ast'));
+var estraverse = _interopRequire(require('estraverse'));
+var codeFrame = _interopRequire(require('./code-frame'));
+var acorn = _interopRequire(require('acorn-babel'));
 module.exports = function(opts, code, callback) {
   try {
     var comments = [];

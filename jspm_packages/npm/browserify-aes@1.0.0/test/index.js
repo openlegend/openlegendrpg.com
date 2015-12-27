@@ -1,12 +1,12 @@
 /* */ 
 (function(Buffer, process) {
-  var test = require("tape");
-  var fixtures = require("./fixtures.json!systemjs-json");
-  var _crypto = require("crypto");
-  var crypto = require("../browser");
-  var modes = require("../modes");
+  var test = require('tape');
+  var fixtures = require('./fixtures.json!systemjs-json');
+  var _crypto = require('crypto');
+  var crypto = require('../browser');
+  var modes = require('../modes');
   var types = Object.keys(modes);
-  var ebtk = require("../EVP_BytesToKey");
+  var ebtk = require('../EVP_BytesToKey');
   function isGCM(cipher) {
     return modes[cipher].mode === 'GCM';
   }
@@ -16,7 +16,7 @@
   fixtures.forEach(function(fixture, i) {
     types.forEach(function(cipher) {
       if (isGCM(cipher)) {
-        return ;
+        return;
       }
       test('fixture ' + i + ' ' + cipher, function(t) {
         t.plan(1);
@@ -89,10 +89,10 @@
       });
       types.forEach(function(cipher) {
         if (modes[cipher].mode === 'ECB') {
-          return ;
+          return;
         }
         if (isGCM(cipher) && isNode10()) {
-          return ;
+          return;
         }
         test('fixture ' + i + ' ' + cipher + '-iv', function(t) {
           if (isGCM(cipher)) {
@@ -285,7 +285,7 @@
           var test = TEST_CASES[i];
           if (ciphers.indexOf(test.algo) == -1) {
             console.log('skipping unsupported ' + test.algo + ' test');
-            return ;
+            return;
           }
           (function() {
             var encrypt = crypto.createCipheriv(test.algo, new Buffer(test.key, 'hex'), new Buffer(test.iv, 'hex'));
@@ -316,7 +316,7 @@
           })();
           (function() {
             if (!test.password)
-              return ;
+              return;
             var encrypt = crypto.createCipher(test.algo, test.password);
             if (test.aad)
               encrypt.setAAD(new Buffer(test.aad, 'hex'));
@@ -330,7 +330,7 @@
           })();
           (function() {
             if (!test.password)
-              return ;
+              return;
             var decrypt = crypto.createDecipher(test.algo, test.password);
             decrypt.setAuthTag(new Buffer(test.tag, 'hex'));
             if (test.aad)
@@ -347,7 +347,7 @@
           })();
           if (i > 0) {
             t.end();
-            return ;
+            return;
           }
           (function() {
             var encrypt = crypto.createCipheriv('aes-128-cbc', 'ipxp9a6i1Mb4USb4', '6fKjEjR3Vl30EUYC');
@@ -506,4 +506,4 @@
     t.plan(1);
     t.ok(crypto.getCiphers().length, 'get some ciphers');
   });
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

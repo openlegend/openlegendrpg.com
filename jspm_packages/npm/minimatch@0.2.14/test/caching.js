@@ -1,6 +1,6 @@
 /* */ 
-var Minimatch = require("../minimatch").Minimatch;
-var tap = require("tap");
+var Minimatch = require('../minimatch').Minimatch;
+var tap = require('tap');
 tap.test("cache test", function(t) {
   var mm1 = new Minimatch("a?b");
   var mm2 = new Minimatch("a?b");

@@ -15,9 +15,9 @@ exports.isVar = isVar;
 exports.isSpecifierDefault = isSpecifierDefault;
 exports.isScope = isScope;
 exports.isImmutable = isImmutable;
-var isString = _interopRequire(require("lodash/lang/isString"));
-var esutils = _interopRequire(require("esutils"));
-var t = _interopRequireWildcard(require("./index"));
+var isString = _interopRequire(require('lodash/lang/isString'));
+var esutils = _interopRequire(require('esutils'));
+var t = _interopRequireWildcard(require('./index'));
 function isReferenced(node, parent) {
   if (t.isMemberExpression(parent)) {
     if (parent.property === node && parent.computed) {

@@ -1,5 +1,5 @@
 /* */ 
-var hash = require("../hash");
+var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
 var rotr32 = utils.rotr32;

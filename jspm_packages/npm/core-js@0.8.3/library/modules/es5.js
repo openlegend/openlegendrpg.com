@@ -1,11 +1,11 @@
 /* */ 
-var $ = require("./$"),
-    cof = require("./$.cof"),
-    $def = require("./$.def"),
-    invoke = require("./$.invoke"),
-    arrayMethod = require("./$.array-methods"),
-    IE_PROTO = require("./$.uid").safe('__proto__'),
-    assert = require("./$.assert"),
+var $ = require('./$'),
+    cof = require('./$.cof'),
+    $def = require('./$.def'),
+    invoke = require('./$.invoke'),
+    arrayMethod = require('./$.array-methods'),
+    IE_PROTO = require('./$.uid').safe('__proto__'),
+    assert = require('./$.assert'),
     assertObject = assert.obj,
     ObjectProto = Object.prototype,
     A = [],
@@ -191,7 +191,7 @@ $def($def.P, 'Array', {
   every: arrayMethod(4),
   reduce: createArrayReduce(false),
   reduceRight: createArrayReduce(true),
-  indexOf: indexOf = indexOf || require("./$.array-includes")(false),
+  indexOf: indexOf = indexOf || require('./$.array-includes')(false),
   lastIndexOf: function(el, fromIndex) {
     var O = toObject(this),
         length = toLength(O.length),
@@ -207,7 +207,7 @@ $def($def.P, 'Array', {
     return -1;
   }
 });
-$def($def.P, 'String', {trim: require("./$.replacer")(/^\s*([\s\S]*\S)?\s*$/, '$1')});
+$def($def.P, 'String', {trim: require('./$.replacer')(/^\s*([\s\S]*\S)?\s*$/, '$1')});
 $def($def.S, 'Date', {now: function() {
     return +new Date;
   }});

@@ -1,6 +1,6 @@
 /* */ 
-var baseSetData = require("./baseSetData"),
-    now = require("../date/now");
+var baseSetData = require('./baseSetData'),
+    now = require('../date/now');
 var HOT_COUNT = 150,
     HOT_SPAN = 16;
 var setData = (function() {

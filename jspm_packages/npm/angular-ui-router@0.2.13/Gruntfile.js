@@ -1,7 +1,7 @@
 /* */ 
 module.exports = function(grunt) {
-  require("load-grunt-tasks")(grunt);
-  var files = require("./files").files;
+  require('load-grunt-tasks')(grunt);
+  var files = require('./files').files;
   grunt.initConfig({
     builddir: 'build',
     pkg: grunt.file.readJSON('package.json'),
@@ -153,8 +153,8 @@ module.exports = function(grunt) {
       return system('git tag \'' + version + '\'');
     }));
   });
-  var exec = require("faithful-exec"),
-      shjs = require("shelljs");
+  var exec = require('faithful-exec'),
+      shjs = require('shelljs');
   function system(cmd) {
     grunt.log.write('% ' + cmd + '\n');
     return exec(cmd).then(function(result) {

@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
-  var test = require("tap").test;
-  var fs = require("../graceful-fs");
+  var test = require('tap').test;
+  var fs = require('../graceful-fs');
   test('open lots of stuff', function(t) {
     process.stderr.write('');
     var n = 1024;
@@ -30,7 +30,7 @@
     }, 100);
     function done() {
       if (closing)
-        return ;
+        return;
       doneCalled++;
       if (fds.length === 0) {
         t.ok(doneCalled >= 3);
@@ -51,4 +51,4 @@
       });
     }
   });
-})(require("process"));
+})(require('process'));

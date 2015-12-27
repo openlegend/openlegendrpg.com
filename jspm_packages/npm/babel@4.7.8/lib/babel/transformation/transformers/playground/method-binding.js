@@ -15,7 +15,7 @@ var _toConsumableArray = function(arr) {
 };
 exports.BindMemberExpression = BindMemberExpression;
 exports.BindFunctionExpression = BindFunctionExpression;
-var t = _interopRequireWildcard(require("../../../types/index"));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var playground = exports.playground = true;
 function BindMemberExpression(node, parent, scope) {
   var object = node.object;

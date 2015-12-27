@@ -32,4 +32,4 @@
     return toBuffer(arr, hashSize, bigEndian);
   }
   exports.hash = hash;
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

@@ -1,6 +1,6 @@
 /* */ 
-var $ = require("./$"),
-    UNSCOPABLES = require("./$.wks")('unscopables');
+var $ = require('./$'),
+    UNSCOPABLES = require('./$.wks')('unscopables');
 if ($.FW && !(UNSCOPABLES in []))
   $.hide(Array.prototype, UNSCOPABLES, {});
 module.exports = function(key) {

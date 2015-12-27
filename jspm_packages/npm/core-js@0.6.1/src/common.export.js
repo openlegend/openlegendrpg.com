@@ -61,4 +61,4 @@
     };
     global.core = core;
   }
-})(require("process"));
+})(require('process'));

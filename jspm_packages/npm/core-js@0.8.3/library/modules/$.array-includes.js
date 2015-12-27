@@ -1,6 +1,6 @@
 /* */ 
 'use strict';
-var $ = require("./$");
+var $ = require('./$');
 module.exports = function(IS_INCLUDES) {
   return function(el) {
     var O = $.toObject(this),

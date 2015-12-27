@@ -1,6 +1,6 @@
 /* */ 
-var baseCallback = require("../internal/baseCallback"),
-    baseForOwn = require("../internal/baseForOwn");
+var baseCallback = require('../internal/baseCallback'),
+    baseForOwn = require('../internal/baseForOwn');
 function mapValues(object, iteratee, thisArg) {
   var result = {};
   iteratee = baseCallback(iteratee, thisArg, 3);

@@ -1,22 +1,22 @@
 /* */ 
 (function(process) {
   module.exports = glob;
-  var fs = require("fs");
-  var minimatch = require("minimatch");
+  var fs = require('fs');
+  var minimatch = require('minimatch');
   var Minimatch = minimatch.Minimatch;
-  var inherits = require("inherits");
-  var EE = require("events").EventEmitter;
-  var path = require("path");
-  var assert = require("assert");
-  var globSync = require("./sync");
-  var common = require("./common");
+  var inherits = require('inherits');
+  var EE = require('events').EventEmitter;
+  var path = require('path');
+  var assert = require('assert');
+  var globSync = require('./sync');
+  var common = require('./common');
   var alphasort = common.alphasort;
   var isAbsolute = common.isAbsolute;
   var setopts = common.setopts;
   var ownProp = common.ownProp;
-  var inflight = require("inflight");
-  var util = require("util");
-  var once = require("once");
+  var inflight = require('inflight');
+  var util = require('util');
+  var once = require('once');
   function glob(pattern, options, cb) {
     if (typeof options === "function")
       cb = options, options = {};
@@ -92,7 +92,7 @@
   Glob.prototype._finish = function() {
     assert(this instanceof Glob);
     if (this.aborted)
-      return ;
+      return;
     common.finish(this);
     this.emit("end", this.found);
   };
@@ -139,11 +139,11 @@
     assert(this instanceof Glob);
     assert(typeof cb === 'function');
     if (this.aborted)
-      return ;
+      return;
     this._processing++;
     if (this.paused) {
       this._processQueue.push([pattern, index, inGlobStar, cb]);
-      return ;
+      return;
     }
     var n = 0;
     while (typeof pattern[n] === "string") {
@@ -153,7 +153,7 @@
     switch (n) {
       case pattern.length:
         this._processSimple(pattern.join('/'), index, cb);
-        return ;
+        return;
       case 0:
         prefix = null;
         break;
@@ -242,16 +242,16 @@
   };
   Glob.prototype._emitMatch = function(index, e) {
     if (this.aborted)
-      return ;
+      return;
     if (!this.matches[index][e]) {
       if (this.paused) {
         this._emitQueue.push([index, e]);
-        return ;
+        return;
       }
       if (this.nodir) {
         var c = this.cache[this._makeAbs(e)];
         if (c === 'DIR' || Array.isArray(c))
-          return ;
+          return;
       }
       this.matches[index][e] = true;
       if (!this.stat && !this.mark)
@@ -265,7 +265,7 @@
   };
   Glob.prototype._readdirInGlobStar = function(abs, cb) {
     if (this.aborted)
-      return ;
+      return;
     var lstatkey = "lstat\0" + abs;
     var self = this;
     var lstatcb = inflight(lstatkey, lstatcb_);
@@ -285,10 +285,10 @@
   };
   Glob.prototype._readdir = function(abs, inGlobStar, cb) {
     if (this.aborted)
-      return ;
+      return;
     cb = inflight("readdir\0" + abs + "\0" + inGlobStar, cb);
     if (!cb)
-      return ;
+      return;
     if (inGlobStar && !ownProp(this.symlinks, abs))
       return this._readdirInGlobStar(abs, cb);
     if (ownProp(this.cache, abs)) {
@@ -311,7 +311,7 @@
   }
   Glob.prototype._readdirEntries = function(abs, entries, cb) {
     if (this.aborted)
-      return ;
+      return;
     if (!this.mark && !this.stat) {
       for (var i = 0; i < entries.length; i++) {
         var e = entries[i];
@@ -327,7 +327,7 @@
   };
   Glob.prototype._readdirError = function(f, er, cb) {
     if (this.aborted)
-      return ;
+      return;
     switch (er.code) {
       case "ENOTDIR":
         this.cache[f] = 'FILE';
@@ -443,4 +443,4 @@
     this.cache[f] = this.cache[f] || c;
     return cb(null, c, stat);
   };
-})(require("process"));
+})(require('process'));

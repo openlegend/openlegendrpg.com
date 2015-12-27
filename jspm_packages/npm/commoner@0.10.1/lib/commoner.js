@@ -1,20 +1,20 @@
 /* */ 
 (function(process) {
-  var assert = require("assert");
-  var path = require("path");
-  var fs = require("fs");
-  var Q = require("q");
-  var iconv = require("iconv-lite");
-  var ReadFileCache = require("./cache").ReadFileCache;
-  var Watcher = require("./watcher").Watcher;
-  var contextModule = require("./context");
+  var assert = require('assert');
+  var path = require('path');
+  var fs = require('fs');
+  var Q = require('q');
+  var iconv = require('iconv-lite');
+  var ReadFileCache = require('./cache').ReadFileCache;
+  var Watcher = require('./watcher').Watcher;
+  var contextModule = require('./context');
   var BuildContext = contextModule.BuildContext;
   var PreferredFileExtension = contextModule.PreferredFileExtension;
-  var ModuleReader = require("./reader").ModuleReader;
-  var output = require("./output");
+  var ModuleReader = require('./reader').ModuleReader;
+  var output = require('./output');
   var DirOutput = output.DirOutput;
   var StdOutput = output.StdOutput;
-  var util = require("./util");
+  var util = require('./util');
   var log = util.log;
   var Ap = Array.prototype;
   var each = Ap.forEach;
@@ -83,7 +83,7 @@
     function rebuild() {
       if (rebuild.ing) {
         waiting += 1;
-        return ;
+        return;
       }
       rebuild.ing = true;
       var context = new BuildContext(options, readFileCache);
@@ -137,11 +137,11 @@
     });
   };
   Cp.cliBuildP = function() {
-    var version = this.customVersion || require("../package.json!systemjs-json").version;
+    var version = this.customVersion || require('../package.json!systemjs-json').version;
     return Q.spread([this, version], cliBuildP);
   };
   function cliBuildP(commoner, version) {
-    var options = require("commander");
+    var options = require('commander');
     var workingDir = process.cwd();
     var sourceDir = workingDir;
     var outputDir = null;
@@ -251,4 +251,4 @@
     return util.readJsonFileP(absolutePath(workingDir, configFile));
   }
   exports.Commoner = Commoner;
-})(require("process"));
+})(require('process'));

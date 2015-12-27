@@ -4,7 +4,7 @@ var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
 exports.UnaryExpression = UnaryExpression;
-var t = _interopRequire(require("../../../types/index"));
+var t = _interopRequire(require('../../../types/index'));
 var optional = exports.optional = true;
 function UnaryExpression(node, parent, scope, file) {
   this.skip();

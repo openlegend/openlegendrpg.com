@@ -1,14 +1,14 @@
 /* */ 
-var assert = require("assert");
-var linesModule = require("./lines");
-var types = require("./types");
+var assert = require('assert');
+var linesModule = require('./lines');
+var types = require('./types');
 var getFieldValue = types.getFieldValue;
 var Printable = types.namedTypes.Printable;
 var Expression = types.namedTypes.Expression;
 var SourceLocation = types.namedTypes.SourceLocation;
-var util = require("./util");
+var util = require('./util');
 var comparePos = util.comparePos;
-var FastPath = require("./fast-path");
+var FastPath = require('./fast-path');
 var isObject = types.builtInTypes.object;
 var isArray = types.builtInTypes.array;
 var isString = types.builtInTypes.string;
@@ -91,7 +91,7 @@ function getSurroundingComments(node) {
 }
 Pp.deleteComments = function(node) {
   if (!node.comments) {
-    return ;
+    return;
   }
   var patcher = this;
   node.comments.forEach(function(comment) {
@@ -112,13 +112,13 @@ exports.getReprinter = function(path) {
   assert.ok(path instanceof FastPath);
   var node = path.getValue();
   if (!Printable.check(node))
-    return ;
+    return;
   var orig = node.original;
   var origLoc = orig && orig.loc;
   var lines = origLoc && origLoc.lines;
   var reprints = [];
   if (!lines || !findReprints(path, reprints))
-    return ;
+    return;
   return function(print) {
     var patcher = new Patcher(lines);
     reprints.forEach(function(reprint) {

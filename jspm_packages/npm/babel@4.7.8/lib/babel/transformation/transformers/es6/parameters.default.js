@@ -4,8 +4,8 @@ var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
 exports.check = check;
-var util = _interopRequireWildcard(require("../../../util"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var util = _interopRequireWildcard(require('../../../util'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function check(node) {
   return t.isFunction(node) && hasDefaults(node);
 }
@@ -18,17 +18,17 @@ var hasDefaults = function hasDefaults(node) {
 };
 var iifeVisitor = {enter: function enter(node, parent, scope, state) {
     if (!this.isReferencedIdentifier())
-      return ;
+      return;
     if (!state.scope.hasOwnBinding(node.name))
-      return ;
+      return;
     if (state.scope.bindingIdentifierEquals(node.name, node))
-      return ;
+      return;
     state.iife = true;
     this.stop();
   }};
 exports.Function = function(node, parent, scope, file) {
   if (!hasDefaults(node))
-    return ;
+    return;
   t.ensureBlock(node);
   var body = [];
   var argsIdentifier = t.identifier("arguments");

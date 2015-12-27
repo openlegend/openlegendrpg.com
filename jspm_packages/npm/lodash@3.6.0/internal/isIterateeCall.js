@@ -1,7 +1,7 @@
 /* */ 
-var isIndex = require("./isIndex"),
-    isLength = require("./isLength"),
-    isObject = require("../lang/isObject");
+var isIndex = require('./isIndex'),
+    isLength = require('./isLength'),
+    isObject = require('../lang/isObject');
 function isIterateeCall(value, index, object) {
   if (!isObject(object)) {
     return false;

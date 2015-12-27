@@ -1,11 +1,11 @@
 /* */ 
-var isArguments = require("./isArguments"),
-    isArray = require("./isArray"),
-    isFunction = require("./isFunction"),
-    isLength = require("../internal/isLength"),
-    isObjectLike = require("../internal/isObjectLike"),
-    isString = require("./isString"),
-    keys = require("../object/keys");
+var isArguments = require('./isArguments'),
+    isArray = require('./isArray'),
+    isFunction = require('./isFunction'),
+    isLength = require('../internal/isLength'),
+    isObjectLike = require('../internal/isObjectLike'),
+    isString = require('./isString'),
+    keys = require('../object/keys');
 function isEmpty(value) {
   if (value == null) {
     return true;

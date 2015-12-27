@@ -1,2 +1,2 @@
 /* */ 
-module.exports = require("./reduce");
+module.exports = require('./reduce');

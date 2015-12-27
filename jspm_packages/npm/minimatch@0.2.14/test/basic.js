@@ -1,7 +1,7 @@
 /* */ 
-var tap = require("tap"),
+var tap = require('tap'),
     globalBefore = Object.keys(global),
-    mm = require("../minimatch"),
+    mm = require('../minimatch'),
     files = ["a", "b", "c", "d", "abc", "abd", "abe", "bb", "bcd", "ca", "cb", "dd", "de", "bdir/", "bdir/cfile"],
     next = files.concat(["a-b", "aXb", ".x", ".y"]);
 var patterns = ["http://www.bashcookbook.com/bashinfo/source/bash-1.14.7/tests/glob-test", ["a*", ["a", "abc", "abd", "abe"]], ["X*", ["X*"], {nonull: true}], ["X*", []], ["\\*", ["\\*"], {nonull: true}], ["\\**", ["\\**"], {nonull: true}], ["\\*\\*", ["\\*\\*"], {nonull: true}], ["b*/", ["bdir/"]], ["c*", ["c", "ca", "cb"]], ["**", files], ["\\.\\./*/", ["\\.\\./*/"], {nonull: true}], ["s/\\..*//", ["s/\\..*//"], {nonull: true}], "legendary larry crashes bashes", ["/^root:/{s/^[^:]*:[^:]*:\([^:]*\).*$/\\1/", ["/^root:/{s/^[^:]*:[^:]*:\([^:]*\).*$/\\1/"], {nonull: true}], ["/^root:/{s/^[^:]*:[^:]*:\([^:]*\).*$/\1/", ["/^root:/{s/^[^:]*:[^:]*:\([^:]*\).*$/\1/"], {nonull: true}], "character classes", ["[a-c]b*", ["abc", "abd", "abe", "bb", "cb"]], ["[a-y]*[^c]", ["abd", "abe", "bb", "bcd", "bdir/", "ca", "cb", "dd", "de"]], ["a*[^c]", ["abd", "abe"]], function() {

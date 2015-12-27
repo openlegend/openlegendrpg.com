@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var inherits = require("inherits");
-  var Buffer = require("buffer").Buffer;
-  var asn1 = require("../../asn1");
+  var inherits = require('inherits');
+  var Buffer = require('buffer').Buffer;
+  var asn1 = require('../../asn1');
   var base = asn1.base;
   var bignum = asn1.bignum;
   var der = asn1.constants.der;
@@ -192,4 +192,4 @@
     res |= (der.tagClassByName[cls || 'universal'] << 6);
     return res;
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

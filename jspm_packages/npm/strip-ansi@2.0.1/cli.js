@@ -1,9 +1,9 @@
 /* */ 
 (function(process) {
   'use strict';
-  var fs = require("fs");
-  var pkg = require("./package.json!systemjs-json");
-  var stripAnsi = require("../strip-ansi@2.0.1");
+  var fs = require('fs');
+  var pkg = require('./package.json!systemjs-json');
+  var stripAnsi = require('../strip-ansi@2.0.1');
   var argv = process.argv.slice(2);
   var input = argv[0];
   function help() {
@@ -14,15 +14,15 @@
   }
   if (argv.indexOf('--help') !== -1) {
     help();
-    return ;
+    return;
   }
   if (argv.indexOf('--version') !== -1) {
     console.log(pkg.version);
-    return ;
+    return;
   }
   if (!input && process.stdin.isTTY) {
     help();
-    return ;
+    return;
   }
   if (input) {
     init(fs.readFileSync(input, 'utf8'));
@@ -30,4 +30,4 @@
     process.stdin.setEncoding('utf8');
     process.stdin.on('data', init);
   }
-})(require("process"));
+})(require('process'));

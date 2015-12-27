@@ -1,6 +1,6 @@
 /* */ 
-var baseRandom = require("../internal/baseRandom"),
-    isIterateeCall = require("../internal/isIterateeCall");
+var baseRandom = require('../internal/baseRandom'),
+    isIterateeCall = require('../internal/isIterateeCall');
 var nativeMin = Math.min,
     nativeRandom = Math.random;
 function random(min, max, floating) {

@@ -1,7 +1,7 @@
 /* */ 
 (function(Buffer) {
-  var Transform = require("stream").Transform;
-  var inherits = require("inherits");
+  var Transform = require('stream').Transform;
+  var inherits = require('inherits');
   module.exports = CipherBase;
   inherits(CipherBase, Transform);
   function CipherBase() {
@@ -36,4 +36,4 @@
     }
     return outData;
   };
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

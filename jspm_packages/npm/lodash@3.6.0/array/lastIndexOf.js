@@ -1,6 +1,6 @@
 /* */ 
-var binaryIndex = require("../internal/binaryIndex"),
-    indexOfNaN = require("../internal/indexOfNaN");
+var binaryIndex = require('../internal/binaryIndex'),
+    indexOfNaN = require('../internal/indexOfNaN');
 var nativeMax = Math.max,
     nativeMin = Math.min;
 function lastIndexOf(array, value, fromIndex) {

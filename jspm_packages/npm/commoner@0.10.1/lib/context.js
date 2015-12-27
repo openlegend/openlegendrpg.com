@@ -1,13 +1,13 @@
 /* */ 
 (function(process) {
-  var assert = require("assert");
-  var path = require("path");
-  var Q = require("q");
-  var util = require("./util");
-  var spawn = require("child_process").spawn;
-  var ReadFileCache = require("./cache").ReadFileCache;
-  var grepP = require("./grep");
-  var glob = require("glob");
+  var assert = require('assert');
+  var path = require('path');
+  var Q = require('q');
+  var util = require('./util');
+  var spawn = require('child_process').spawn;
+  var ReadFileCache = require('./cache').ReadFileCache;
+  var grepP = require('./grep');
+  var glob = require('glob');
   var env = process.env;
   function BuildContext(options, readFileCache) {
     var self = this;
@@ -130,7 +130,7 @@
     return util.makePromise(function(callback) {
       if (util.isValidModuleId(idOrGlob)) {
         callback(null, [idOrGlob]);
-        return ;
+        return;
       }
       glob(idOrGlob, {cwd: context.readFileCache.sourceDir}, function(err, files) {
         if (err) {
@@ -162,7 +162,7 @@
       var idToPath = {};
       Object.keys(pathToMatch).sort().forEach(function(path) {
         if (context.isHiddenFile(path))
-          return ;
+          return;
         var id = pathToMatch[path].split(/\s+/).pop();
         if (!idToPath.hasOwnProperty(id) || context.preferredFileExtension.check(path))
           idToPath[id] = path;
@@ -176,4 +176,4 @@
     return match && match[1];
   };
   exports.BuildContext = BuildContext;
-})(require("process"));
+})(require('process'));

@@ -1,5 +1,5 @@
 /* */ 
-var createAggregator = require("../internal/createAggregator");
+var createAggregator = require('../internal/createAggregator');
 var objectProto = Object.prototype;
 var hasOwnProperty = objectProto.hasOwnProperty;
 var groupBy = createAggregator(function(result, value, key) {

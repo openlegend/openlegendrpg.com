@@ -1,9 +1,9 @@
 /* */ 
 (function(process) {
-  var fs = module.exports = require("fs");
-  var assert = require("assert");
-  require("./polyfills");
-  var util = require("util");
+  var fs = module.exports = require('fs');
+  var assert = require('assert');
+  require('./polyfills');
+  var util = require('util');
   function noop() {}
   var debug = noop;
   if (util.debuglog)
@@ -124,4 +124,4 @@
       req.process();
     }
   }
-})(require("process"));
+})(require('process'));

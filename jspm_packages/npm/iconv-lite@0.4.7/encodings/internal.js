@@ -47,7 +47,7 @@
       };
     }
   };
-  var StringDecoder = require("string_decoder").StringDecoder;
+  var StringDecoder = require('string_decoder').StringDecoder;
   if (!StringDecoder.prototype.end)
     StringDecoder.prototype.end = function() {};
   function decoderInternal() {
@@ -80,4 +80,4 @@
   function encodeBase64End() {
     return new Buffer(this.prevStr, "base64");
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

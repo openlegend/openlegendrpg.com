@@ -17,9 +17,9 @@ exports.EmptyStatement = EmptyStatement;
 exports.ExpressionStatement = ExpressionStatement;
 exports.AssignmentExpression = AssignmentExpression;
 exports.MemberExpression = MemberExpression;
-var isInteger = _interopRequire(require("is-integer"));
-var isNumber = _interopRequire(require("lodash/lang/isNumber"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var isInteger = _interopRequire(require('is-integer'));
+var isNumber = _interopRequire(require('lodash/lang/isNumber'));
+var t = _interopRequireWildcard(require('../../types/index'));
 function UnaryExpression(node, print) {
   var hasSpace = /[a-z]$/.test(node.operator);
   var arg = node.argument;

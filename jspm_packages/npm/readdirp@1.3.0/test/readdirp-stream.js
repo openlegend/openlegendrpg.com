@@ -1,15 +1,15 @@
 /* */ 
 (function(process) {
   var debug;
-  var test = debug ? function() {} : require("tap").test;
-  var test_ = !debug ? function() {} : require("tap").test,
-      path = require("path"),
-      fs = require("fs"),
-      util = require("util"),
-      TransformStream = require("readable-stream").Transform,
-      through = require("through2"),
-      streamapi = require("../stream-api"),
-      readdirp = require("../readdirp"),
+  var test = debug ? function() {} : require('tap').test;
+  var test_ = !debug ? function() {} : require('tap').test,
+      path = require('path'),
+      fs = require('fs'),
+      util = require('util'),
+      TransformStream = require('readable-stream').Transform,
+      through = require('through2'),
+      streamapi = require('../stream-api'),
+      readdirp = require('../readdirp'),
       root = path.join(__dirname, 'bed'),
       totalDirs = 6,
       totalFiles = 12,
@@ -222,4 +222,4 @@
       }, 10);
     });
   });
-})(require("process"));
+})(require('process'));

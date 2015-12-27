@@ -1,5 +1,5 @@
 /* */ 
-var isNative = require("./isNative");
+var isNative = require('./isNative');
 var nativeIsFinite = global.isFinite,
     nativeNumIsFinite = isNative(nativeNumIsFinite = Number.isFinite) && nativeNumIsFinite;
 var isFinite = nativeNumIsFinite || function(value) {

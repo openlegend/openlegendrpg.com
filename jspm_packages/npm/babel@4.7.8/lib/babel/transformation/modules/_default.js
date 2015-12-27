@@ -11,11 +11,11 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var messages = _interopRequireWildcard(require("../../messages"));
-var extend = _interopRequire(require("lodash/object/extend"));
-var object = _interopRequire(require("../../helpers/object"));
-var util = _interopRequireWildcard(require("../../util"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var messages = _interopRequireWildcard(require('../../messages'));
+var extend = _interopRequire(require('lodash/object/extend'));
+var object = _interopRequire(require('../../helpers/object'));
+var util = _interopRequireWildcard(require('../../util'));
+var t = _interopRequireWildcard(require('../../types/index'));
 var remapVisitor = {enter: function enter(node, parent, scope, formatter) {
     if (t.isUpdateExpression(node) && formatter.isLocalReference(node.argument, scope)) {
       this.skip();

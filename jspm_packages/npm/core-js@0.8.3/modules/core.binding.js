@@ -1,16 +1,16 @@
 /* */ 
 'use strict';
-var $ = require("./$"),
-    ctx = require("./$.ctx"),
-    $def = require("./$.def"),
-    invoke = require("./$.invoke"),
+var $ = require('./$'),
+    ctx = require('./$.ctx'),
+    $def = require('./$.def'),
+    invoke = require('./$.invoke'),
     hide = $.hide,
-    assertFunction = require("./$.assert").fn,
-    _ = $.DESC ? require("./$.uid")('tie') : 'toLocaleString',
+    assertFunction = require('./$.assert').fn,
+    _ = $.DESC ? require('./$.uid')('tie') : 'toLocaleString',
     toLocaleString = {}.toLocaleString;
 $.core._ = $.path._ = $.path._ || {};
 $def($def.P + $def.F, 'Function', {
-  part: require("./$.partial"),
+  part: require('./$.partial'),
   only: function(numberArguments, that) {
     var fn = assertFunction(this),
         n = $.toLength(numberArguments),

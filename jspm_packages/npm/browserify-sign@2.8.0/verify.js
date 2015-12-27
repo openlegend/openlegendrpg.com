@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var parseKeys = require("parse-asn1");
-  var elliptic = require("elliptic");
-  var bn = require("bn.js");
+  var parseKeys = require('parse-asn1');
+  var elliptic = require('elliptic');
+  var bn = require('bn.js');
   module.exports = verify;
   function verify(sig, hash, key) {
     var pub = parseKeys(key);
@@ -67,4 +67,4 @@
       throw new Error('invalid sig');
     }
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

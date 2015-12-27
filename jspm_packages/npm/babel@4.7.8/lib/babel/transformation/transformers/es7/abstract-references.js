@@ -8,8 +8,8 @@ exports.UnaryExpression = UnaryExpression;
 exports.CallExpression = CallExpression;
 exports.VirtualPropertyExpression = VirtualPropertyExpression;
 exports.PrivateDeclaration = PrivateDeclaration;
-var util = _interopRequireWildcard(require("../../../util"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var util = _interopRequireWildcard(require('../../../util'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var experimental = exports.experimental = true;
 var container = function container(parent, call, ret, file) {
   if (t.isExpressionStatement(parent) && !file.isConsequenceExpressionStatement(parent)) {
@@ -28,7 +28,7 @@ var container = function container(parent, call, ret, file) {
 function AssignmentExpression(node, parent, scope, file) {
   var left = node.left;
   if (!t.isVirtualPropertyExpression(left))
-    return ;
+    return;
   var value = node.right;
   var temp;
   if (!t.isExpressionStatement(parent)) {
@@ -55,9 +55,9 @@ function AssignmentExpression(node, parent, scope, file) {
 function UnaryExpression(node, parent, scope, file) {
   var arg = node.argument;
   if (!t.isVirtualPropertyExpression(arg))
-    return ;
+    return;
   if (node.operator !== "delete")
-    return ;
+    return;
   var call = util.template("abstract-expression-delete", {
     PROPERTY: arg.property,
     OBJECT: arg.object
@@ -67,7 +67,7 @@ function UnaryExpression(node, parent, scope, file) {
 function CallExpression(node, parent, scope) {
   var callee = node.callee;
   if (!t.isVirtualPropertyExpression(callee))
-    return ;
+    return;
   var temp = scope.generateTempBasedOnNode(callee.object);
   var call = util.template("abstract-expression-call", {
     PROPERTY: callee.property,

@@ -2,14 +2,14 @@
 (function(process) {
   module.exports = globSync;
   globSync.GlobSync = GlobSync;
-  var fs = require("fs");
-  var minimatch = require("minimatch");
+  var fs = require('fs');
+  var minimatch = require('minimatch');
   var Minimatch = minimatch.Minimatch;
-  var Glob = require("./glob").Glob;
-  var util = require("util");
-  var path = require("path");
-  var assert = require("assert");
-  var common = require("./common");
+  var Glob = require('./glob').Glob;
+  var util = require('util');
+  var path = require('path');
+  var assert = require('assert');
+  var common = require('./common');
   var alphasort = common.alphasort;
   var isAbsolute = common.isAbsolute;
   var setopts = common.setopts;
@@ -50,7 +50,7 @@
     switch (n) {
       case pattern.length:
         this._processSimple(pattern.join('/'), index);
-        return ;
+        return;
       case 0:
         prefix = null;
         break;
@@ -78,7 +78,7 @@
   GlobSync.prototype._processReaddir = function(prefix, read, abs, remain, index, inGlobStar) {
     var entries = this._readdir(abs, inGlobStar);
     if (!entries)
-      return ;
+      return;
     var pn = remain[0];
     var negate = !!this.minimatch.negate;
     var rawGlob = pn._glob;
@@ -99,7 +99,7 @@
     }
     var len = matchedEntries.length;
     if (len === 0)
-      return ;
+      return;
     if (remain.length === 1 && !this.mark && !this.stat) {
       if (!this.matches[index])
         this.matches[index] = Object.create(null);
@@ -116,7 +116,7 @@
         }
         this.matches[index][e] = true;
       }
-      return ;
+      return;
     }
     remain.shift();
     for (var i = 0; i < len; i++) {
@@ -134,7 +134,7 @@
       if (this.nodir) {
         var c = this.cache[this._makeAbs(e)];
         if (c === 'DIR' || Array.isArray(c))
-          return ;
+          return;
       }
       this.matches[index][e] = true;
       if (this.stat || this.mark)
@@ -213,7 +213,7 @@
   GlobSync.prototype._processGlobStar = function(prefix, read, abs, remain, index, inGlobStar) {
     var entries = this._readdir(abs, inGlobStar);
     if (!entries)
-      return ;
+      return;
     var remainWithoutGlobStar = remain.slice(1);
     var gspref = prefix ? [prefix] : [];
     var noGlobStar = gspref.concat(remainWithoutGlobStar);
@@ -221,7 +221,7 @@
     var len = entries.length;
     var isSym = this.symlinks[abs];
     if (isSym && inGlobStar)
-      return ;
+      return;
     for (var i = 0; i < len; i++) {
       var e = entries[i];
       if (e.charAt(0) === "." && !this.dot)
@@ -237,7 +237,7 @@
     if (!this.matches[index])
       this.matches[index] = Object.create(null);
     if (!exists)
-      return ;
+      return;
     if (prefix && isAbsolute(prefix) && !this.nomount) {
       if (prefix.charAt(0) === "/") {
         prefix = path.join(this.root, prefix);
@@ -287,4 +287,4 @@
   GlobSync.prototype._makeAbs = function(f) {
     return common.makeAbs(this, f);
   };
-})(require("process"));
+})(require('process'));

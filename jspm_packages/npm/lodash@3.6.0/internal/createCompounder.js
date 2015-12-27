@@ -1,6 +1,6 @@
 /* */ 
-var deburr = require("../string/deburr"),
-    words = require("../string/words");
+var deburr = require('../string/deburr'),
+    words = require('../string/words');
 function createCompounder(callback) {
   return function(string) {
     var index = -1,

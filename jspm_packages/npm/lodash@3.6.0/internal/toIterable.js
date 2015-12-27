@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
-  var isLength = require("./isLength"),
-      isObject = require("../lang/isObject"),
-      values = require("../object/values");
+  var isLength = require('./isLength'),
+      isObject = require('../lang/isObject'),
+      values = require('../object/values');
   function toIterable(value) {
     if (value == null) {
       return [];
@@ -13,4 +13,4 @@
     return isObject(value) ? value : Object(value);
   }
   module.exports = toIterable;
-})(require("process"));
+})(require('process'));

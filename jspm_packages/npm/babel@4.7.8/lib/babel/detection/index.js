@@ -3,9 +3,9 @@
 var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
-var SYNTAX_KEYS = _interopRequire(require("./syntax-keys.json!systemjs-json"));
-var traverse = _interopRequire(require("../traversal/index"));
-var visitors = traverse.explode(require("./visitors"));
+var SYNTAX_KEYS = _interopRequire(require('./syntax-keys.json!systemjs-json'));
+var traverse = _interopRequire(require('../traversal/index'));
+var visitors = traverse.explode(require('./visitors'));
 module.exports = function(ast) {
   var stats = {
     syntax: {},

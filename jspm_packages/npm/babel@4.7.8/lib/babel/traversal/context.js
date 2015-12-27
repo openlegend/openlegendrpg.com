@@ -11,10 +11,10 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var TraversalPath = _interopRequire(require("./path"));
-var flatten = _interopRequire(require("lodash/array/flatten"));
-var compact = _interopRequire(require("lodash/array/compact"));
-var t = _interopRequireWildcard(require("../types/index"));
+var TraversalPath = _interopRequire(require('./path'));
+var flatten = _interopRequire(require('lodash/array/flatten'));
+var compact = _interopRequire(require('lodash/array/compact'));
+var t = _interopRequireWildcard(require('../types/index'));
 var TraversalContext = (function() {
   function TraversalContext(scope, opts, state, parentPath) {
     _classCallCheck(this, TraversalContext);
@@ -34,12 +34,12 @@ var TraversalContext = (function() {
   TraversalContext.prototype.visit = function visit(node, key) {
     var nodes = node[key];
     if (!nodes)
-      return ;
+      return;
     if (!Array.isArray(nodes)) {
       return this.visitNode(node, node, key);
     }
     if (nodes.length === 0) {
-      return ;
+      return;
     }
     for (var i = 0; i < nodes.length; i++) {
       if (nodes[i] && this.visitNode(node, nodes, i)) {

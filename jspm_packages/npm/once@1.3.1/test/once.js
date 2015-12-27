@@ -1,6 +1,6 @@
 /* */ 
-var test = require("tap").test;
-var once = require("../once");
+var test = require('tap').test;
+var once = require('../once');
 test('once', function(t) {
   var f = 0;
   function fn(g) {

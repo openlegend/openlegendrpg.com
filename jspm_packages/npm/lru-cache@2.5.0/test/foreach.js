@@ -1,6 +1,6 @@
 /* */ 
-var test = require("tap").test;
-var LRU = require("../lib/lru-cache");
+var test = require('tap').test;
+var LRU = require('../lib/lru-cache');
 test('forEach', function(t) {
   var l = new LRU(5);
   for (var i = 0; i < 10; i++) {

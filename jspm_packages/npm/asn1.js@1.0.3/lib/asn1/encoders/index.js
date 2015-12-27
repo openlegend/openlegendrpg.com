@@ -1,3 +1,3 @@
 /* */ 
 var encoders = exports;
-encoders.der = require("./der");
+encoders.der = require('./der');

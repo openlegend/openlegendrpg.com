@@ -1,19 +1,19 @@
 /* */ 
 (function(process) {
   'use strict';
-  var $ = require("./$"),
-      ctx = require("./$.ctx"),
-      cof = require("./$.cof"),
-      $def = require("./$.def"),
-      assert = require("./$.assert"),
-      $iter = require("./$.iter"),
-      SPECIES = require("./$.wks")('species'),
-      RECORD = require("./$.uid").safe('record'),
+  var $ = require('./$'),
+      ctx = require('./$.ctx'),
+      cof = require('./$.cof'),
+      $def = require('./$.def'),
+      assert = require('./$.assert'),
+      $iter = require('./$.iter'),
+      SPECIES = require('./$.wks')('species'),
+      RECORD = require('./$.uid').safe('record'),
       forOf = $iter.forOf,
       PROMISE = 'Promise',
       global = $.g,
       process = global.process,
-      asap = process && process.nextTick || require("./$.task").set,
+      asap = process && process.nextTick || require('./$.task').set,
       P = global[PROMISE],
       Base = P,
       isFunction = $.isFunction,
@@ -92,7 +92,7 @@
   function $reject(value) {
     var record = this;
     if (record.d)
-      return ;
+      return;
     record.d = true;
     record = record.r || record;
     record.v = value;
@@ -104,7 +104,7 @@
         then,
         wrapper;
     if (record.d)
-      return ;
+      return;
     record.d = true;
     record = record.r || record;
     try {
@@ -167,7 +167,7 @@
   }
   $def($def.G + $def.W + $def.F * (P != Base), {Promise: P});
   cof.set(P, PROMISE);
-  require("./$.species")(P);
+  require('./$.species')(P);
   $def($def.S, PROMISE, {
     reject: function reject(r) {
       return new (getConstructor(this))(function(res, rej) {
@@ -180,7 +180,7 @@
       });
     }
   });
-  $def($def.S + $def.F * !require("./$.iter-detect")(function(iter) {
+  $def($def.S + $def.F * !require('./$.iter-detect')(function(iter) {
     P.all(iter)['catch'](function() {});
   }), PROMISE, {
     all: function all(iterable) {
@@ -210,4 +210,4 @@
       });
     }
   });
-})(require("process"));
+})(require('process'));

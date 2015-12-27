@@ -1,12 +1,12 @@
 /* */ 
-var assert = require("assert");
-var sourceMap = require("source-map");
-var normalizeOptions = require("./options").normalize;
-var secretKey = require("private").makeUniqueKey();
-var types = require("./types");
+var assert = require('assert');
+var sourceMap = require('source-map');
+var normalizeOptions = require('./options').normalize;
+var secretKey = require('private').makeUniqueKey();
+var types = require('./types');
 var isString = types.builtInTypes.string;
-var comparePos = require("./util").comparePos;
-var Mapping = require("./mapping");
+var comparePos = require('./util').comparePos;
+var Mapping = require('./mapping');
 function getSecret(lines) {
   return lines[secretKey];
 }
@@ -412,7 +412,7 @@ Lp.eachPos = function(callback, startPos, skipSpaces) {
     pos.line = startPos.line, pos.column = startPos.column;
   }
   if (skipSpaces && !this.skipSpaces(pos, false, true)) {
-    return ;
+    return;
   }
   do
     callback.call(this, pos);
@@ -552,7 +552,7 @@ Lp.join = function(elements) {
   var prevInfo;
   function appendSecret(secret) {
     if (secret === null)
-      return ;
+      return;
     if (prevInfo) {
       var info = secret.infos[0];
       var indent = new Array(info.indent + 1).join(" ");

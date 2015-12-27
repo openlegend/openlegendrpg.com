@@ -3,7 +3,7 @@
 var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
-var t = _interopRequireWildcard(require("../../types/index"));
+var t = _interopRequireWildcard(require('../../types/index'));
 var awaitVisitor = {enter: function enter(node, parent, scope, state) {
     if (t.isFunction(node))
       this.skip();

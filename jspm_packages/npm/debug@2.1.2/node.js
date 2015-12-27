@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
-  var tty = require("tty");
-  var util = require("util");
-  exports = module.exports = require("./debug");
+  var tty = require('tty');
+  var util = require('util');
+  exports = module.exports = require('./debug');
   exports.log = log;
   exports.formatArgs = formatArgs;
   exports.save = save;
@@ -64,13 +64,13 @@
         }
         break;
       case 'FILE':
-        var fs = require("fs");
+        var fs = require('fs');
         stream = new fs.SyncWriteStream(fd, {autoClose: false});
         stream._type = 'fs';
         break;
       case 'PIPE':
       case 'TCP':
-        var net = require("net");
+        var net = require('net');
         stream = new net.Socket({
           fd: fd,
           readable: false,
@@ -91,4 +91,4 @@
     return stream;
   }
   exports.enable(load());
-})(require("process"));
+})(require('process'));

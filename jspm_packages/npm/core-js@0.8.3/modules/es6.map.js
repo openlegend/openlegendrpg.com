@@ -1,7 +1,7 @@
 /* */ 
 'use strict';
-var strong = require("./$.collection-strong");
-require("./$.collection")('Map', {
+var strong = require('./$.collection-strong');
+require('./$.collection')('Map', {
   get: function get(key) {
     var entry = strong.getEntry(this, key);
     return entry && entry.v;

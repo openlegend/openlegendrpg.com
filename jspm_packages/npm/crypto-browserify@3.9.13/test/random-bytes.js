@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var test = require("tape");
-  var crypto = require("../../crypto-browserify@3.9.13");
-  var randomBytes = require("randombytes");
+  var test = require('tape');
+  var crypto = require('../index');
+  var randomBytes = require('randombytes');
   var randomBytesFunctions = {
     randomBytes: randomBytes,
     pseudoRandomBytes: crypto.pseudoRandomBytes
@@ -44,4 +44,4 @@
       t.end();
     });
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

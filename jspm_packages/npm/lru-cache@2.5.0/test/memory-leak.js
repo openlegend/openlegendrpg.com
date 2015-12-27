@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
-  var weak = require("weak");
-  var test = require("tap").test;
-  var LRU = require("../lib/lru-cache");
+  var weak = require('weak');
+  var test = require('tap').test;
+  var LRU = require('../lib/lru-cache');
   var l = new LRU({max: 10});
   var refs = 0;
   function X() {
@@ -33,4 +33,4 @@
     t.pass();
     t.end();
   });
-})(require("process"));
+})(require('process'));

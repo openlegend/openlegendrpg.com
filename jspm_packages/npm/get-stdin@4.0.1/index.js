@@ -6,7 +6,7 @@
     var ret = '';
     if (stdin.isTTY) {
       setImmediate(cb, '');
-      return ;
+      return;
     }
     stdin.setEncoding('utf8');
     stdin.on('readable', function() {
@@ -25,7 +25,7 @@
     var len = 0;
     if (stdin.isTTY) {
       setImmediate(cb, new Buffer(''));
-      return ;
+      return;
     }
     stdin.on('readable', function() {
       var chunk;
@@ -38,4 +38,4 @@
       cb(Buffer.concat(ret, len));
     });
   };
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

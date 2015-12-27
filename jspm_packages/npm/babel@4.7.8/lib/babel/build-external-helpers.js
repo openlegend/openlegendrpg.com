@@ -6,12 +6,12 @@ var _interopRequireWildcard = function(obj) {
 var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
-var generator = _interopRequire(require("./generation/index"));
-var messages = _interopRequireWildcard(require("./messages"));
-var util = _interopRequireWildcard(require("./util"));
-var File = _interopRequire(require("./transformation/file"));
-var each = _interopRequire(require("lodash/collection/each"));
-var t = _interopRequire(require("./types/index"));
+var generator = _interopRequire(require('./generation/index'));
+var messages = _interopRequireWildcard(require('./messages'));
+var util = _interopRequireWildcard(require('./util'));
+var File = _interopRequire(require('./transformation/file'));
+var each = _interopRequire(require('lodash/collection/each'));
+var t = _interopRequire(require('./types/index'));
 function buildGlobal(namespace, builder) {
   var body = [];
   var container = t.functionExpression(null, [t.identifier("global")], t.blockStatement(body));
@@ -44,7 +44,7 @@ function buildHelpers(body, namespace) {
   var whitelist = arguments[2] === undefined ? [] : arguments[2];
   each(File.helpers, function(name) {
     if (whitelist.length && whitelist.indexOf(name) === -1)
-      return ;
+      return;
     var key = t.identifier(t.toIdentifier(name));
     body.push(t.expressionStatement(t.assignmentExpression("=", t.memberExpression(namespace, key), util.template(name))));
   });

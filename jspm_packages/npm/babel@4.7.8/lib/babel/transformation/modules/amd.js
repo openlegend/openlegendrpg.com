@@ -24,12 +24,12 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var DefaultFormatter = _interopRequire(require("./_default"));
-var CommonFormatter = _interopRequire(require("./common"));
-var includes = _interopRequire(require("lodash/collection/includes"));
-var values = _interopRequire(require("lodash/object/values"));
-var util = _interopRequireWildcard(require("../../util"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var DefaultFormatter = _interopRequire(require('./_default'));
+var CommonFormatter = _interopRequire(require('./common'));
+var includes = _interopRequire(require('lodash/collection/includes'));
+var values = _interopRequire(require('lodash/object/values'));
+var util = _interopRequireWildcard(require('../../util'));
+var t = _interopRequireWildcard(require('../../types/index'));
 var AMDFormatter = (function(DefaultFormatter) {
   function AMDFormatter() {
     this.init = CommonFormatter.prototype.init;

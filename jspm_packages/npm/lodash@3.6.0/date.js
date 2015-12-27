@@ -1,2 +1,2 @@
 /* */ 
-module.exports = {'now': require("./date/now")};
+module.exports = {'now': require('./date/now')};

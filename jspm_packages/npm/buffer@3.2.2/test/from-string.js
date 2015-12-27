@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
-  var B = require("../index").Buffer;
-  var test = require("tape");
+  var B = require('../index').Buffer;
+  var test = require('tape');
   if (process.env.OBJECT_IMPL)
     B.TYPED_ARRAY_SUPPORT = false;
   test('detect utf16 surrogate pairs', function(t) {
@@ -102,4 +102,4 @@
     t.deepEqual(buf, new B([0x61]));
     t.end();
   });
-})(require("process"));
+})(require('process'));

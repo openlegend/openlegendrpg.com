@@ -10,29 +10,29 @@ exports.register = register;
 exports.polyfill = polyfill;
 exports.transformFile = transformFile;
 exports.transformFileSync = transformFileSync;
-var isFunction = _interopRequire(require("lodash/lang/isFunction"));
-var _transformation = require("../transformation/index");
+var isFunction = _interopRequire(require('lodash/lang/isFunction'));
+var _transformation = require('../transformation/index');
 var transform = _interopRequire(_transformation);
-var fs = _interopRequire(require("fs"));
-var _util2 = require("../util");
+var fs = _interopRequire(require('fs'));
+var _util2 = require('../util');
 var util = _interopRequireWildcard(_util2);
 exports._util = util;
 exports.canCompile = _util2.canCompile;
-exports.acorn = _interopRequire(require("acorn-babel"));
+exports.acorn = _interopRequire(require('acorn-babel'));
 exports.transform = _interopRequire(_transformation);
-exports.traverse = _interopRequire(require("../traversal/index"));
-exports.buildExternalHelpers = _interopRequire(require("../tools/build-external-helpers"));
-exports.version = require("../../../package.json!systemjs-json").version;
-var t = _interopRequireWildcard(require("../types/index"));
+exports.traverse = _interopRequire(require('../traversal/index'));
+exports.buildExternalHelpers = _interopRequire(require('../tools/build-external-helpers'));
+exports.version = require('../../../package.json!systemjs-json').version;
+var t = _interopRequireWildcard(require('../types/index'));
 exports.types = t;
 function register(opts) {
-  var callback = require("./register/browser");
+  var callback = require('./register/browser');
   if (opts != null)
     callback(opts);
   return callback;
 }
 function polyfill() {
-  require("../polyfill");
+  require('../polyfill');
 }
 function transformFile(filename, opts, callback) {
   if (isFunction(opts)) {

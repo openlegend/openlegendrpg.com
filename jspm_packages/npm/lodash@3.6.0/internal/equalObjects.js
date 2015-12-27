@@ -1,5 +1,5 @@
 /* */ 
-var keys = require("../object/keys");
+var keys = require('../object/keys');
 var objectProto = Object.prototype;
 var hasOwnProperty = objectProto.hasOwnProperty;
 function equalObjects(object, other, equalFunc, customizer, isLoose, stackA, stackB) {

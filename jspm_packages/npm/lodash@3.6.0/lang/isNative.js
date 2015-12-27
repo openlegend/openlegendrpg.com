@@ -1,6 +1,6 @@
 /* */ 
-var escapeRegExp = require("../string/escapeRegExp"),
-    isObjectLike = require("../internal/isObjectLike");
+var escapeRegExp = require('../string/escapeRegExp'),
+    isObjectLike = require('../internal/isObjectLike');
 var funcTag = '[object Function]';
 var reHostCtor = /^\[object .+?Constructor\]$/;
 var objectProto = Object.prototype;

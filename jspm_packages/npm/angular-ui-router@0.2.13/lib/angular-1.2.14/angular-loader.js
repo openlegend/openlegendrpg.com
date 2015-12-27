@@ -107,4 +107,4 @@
     setupModuleLoader(window);
   })(window);
   angular.Module;
-})(require("process"));
+})(require('process'));

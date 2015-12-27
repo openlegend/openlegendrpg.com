@@ -1,10 +1,10 @@
 /* */ 
-var outputFileSync = require("output-file-sync");
-var chokidar = require("chokidar");
-var path = require("path");
-var util = require("./util");
-var fs = require("fs");
-var _ = require("lodash");
+var outputFileSync = require('output-file-sync');
+var chokidar = require('chokidar');
+var path = require('path');
+var util = require('./util');
+var fs = require('fs');
+var _ = require('lodash');
 module.exports = function(commander, filenames, opts) {
   if (commander.sourceMapsInline) {
     opts.sourceMap = "inline";
@@ -30,7 +30,7 @@ module.exports = function(commander, filenames, opts) {
   };
   var handle = function(filename) {
     if (!fs.existsSync(filename))
-      return ;
+      return;
     var stat = fs.statSync(filename);
     if (stat.isDirectory(filename)) {
       var dirname = filename;

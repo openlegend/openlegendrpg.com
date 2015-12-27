@@ -1,10 +1,10 @@
 /* */ 
-var isArguments = require("../lang/isArguments"),
-    isArray = require("../lang/isArray"),
-    isIndex = require("./isIndex"),
-    isLength = require("./isLength"),
-    keysIn = require("../object/keysIn"),
-    support = require("../support");
+var isArguments = require('../lang/isArguments'),
+    isArray = require('../lang/isArray'),
+    isIndex = require('./isIndex'),
+    isLength = require('./isLength'),
+    keysIn = require('../object/keysIn'),
+    support = require('../support');
 var objectProto = Object.prototype;
 var hasOwnProperty = objectProto.hasOwnProperty;
 function shimKeys(object) {

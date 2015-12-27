@@ -1,5 +1,5 @@
 /* */ 
-var MapCache = require("../internal/MapCache");
+var MapCache = require('../internal/MapCache');
 var FUNC_ERROR_TEXT = 'Expected a function';
 function memoize(func, resolver) {
   if (typeof func != 'function' || (resolver && typeof resolver != 'function')) {

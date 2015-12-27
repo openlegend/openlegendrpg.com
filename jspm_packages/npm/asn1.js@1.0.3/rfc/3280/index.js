@@ -1,6 +1,6 @@
 /* */ 
 try {
-  var asn1 = require("../../lib/asn1");
+  var asn1 = require('../../lib/asn1');
 } catch (e) {
   var asn1 = require('../' + '..');
 }

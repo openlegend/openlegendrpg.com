@@ -1,2 +1,2 @@
 /* */ 
-require("./inject")(module.exports, require("crypto"));
+require('./inject')(module.exports, require('crypto'));

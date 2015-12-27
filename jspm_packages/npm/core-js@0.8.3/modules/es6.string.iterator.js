@@ -1,8 +1,8 @@
 /* */ 
-var set = require("./$").set,
-    at = require("./$.string-at")(true),
-    ITER = require("./$.uid").safe('iter'),
-    $iter = require("./$.iter"),
+var set = require('./$').set,
+    at = require('./$.string-at')(true),
+    ITER = require('./$.uid').safe('iter'),
+    $iter = require('./$.iter'),
     step = $iter.step;
 $iter.std(String, 'String', function(iterated) {
   set(this, ITER, {

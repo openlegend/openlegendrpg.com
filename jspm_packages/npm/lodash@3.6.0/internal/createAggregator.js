@@ -1,7 +1,7 @@
 /* */ 
-var baseCallback = require("./baseCallback"),
-    baseEach = require("./baseEach"),
-    isArray = require("../lang/isArray");
+var baseCallback = require('./baseCallback'),
+    baseEach = require('./baseEach'),
+    isArray = require('../lang/isArray');
 function createAggregator(setter, initializer) {
   return function(collection, iteratee, thisArg) {
     var result = initializer ? initializer() : {};

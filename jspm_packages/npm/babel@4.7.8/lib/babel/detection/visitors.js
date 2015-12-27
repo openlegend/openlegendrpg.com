@@ -8,8 +8,8 @@ exports.BinaryExpression = BinaryExpression;
 exports.VariableDeclaration = VariableDeclaration;
 exports.Property = Property;
 exports.AssignmentPattern = AssignmentPattern;
-var includes = _interopRequire(require("lodash/collection/includes"));
-var t = _interopRequire(require("../types/index"));
+var includes = _interopRequire(require('lodash/collection/includes'));
+var t = _interopRequire(require('../types/index'));
 function AssignmentExpression(node, parent, detected) {
   if (node.operator === "**=") {
     detected("es6.exponentation");

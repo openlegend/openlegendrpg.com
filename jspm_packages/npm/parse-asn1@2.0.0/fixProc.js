@@ -2,7 +2,7 @@
 (function(Buffer) {
   var findProc = /Proc-Type: 4,ENCRYPTED\n\r?DEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)\n\r?\n\r?([0-9A-z\n\r\+\/\=]+)\n\r?/m;
   var startRegex = /^-----BEGIN (.*)-----\n/;
-  var evp = require("./EVP_BytesToKey");
+  var evp = require('./EVP_BytesToKey');
   module.exports = function(okey, password, crypto) {
     var key = okey.toString();
     var match = key.match(findProc);
@@ -34,4 +34,4 @@
     }
     return chunks.join("\n");
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

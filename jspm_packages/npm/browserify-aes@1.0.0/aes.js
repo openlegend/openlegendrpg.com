@@ -200,4 +200,4 @@
     return [fixup_uint32(t0), fixup_uint32(t1), fixup_uint32(t2), fixup_uint32(t3)];
   };
   exports.AES = AES;
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

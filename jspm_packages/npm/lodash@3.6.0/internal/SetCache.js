@@ -1,6 +1,6 @@
 /* */ 
-var cachePush = require("./cachePush"),
-    isNative = require("../lang/isNative");
+var cachePush = require('./cachePush'),
+    isNative = require('../lang/isNative');
 var Set = isNative(Set = global.Set) && Set;
 var nativeCreate = isNative(nativeCreate = Object.create) && nativeCreate;
 function SetCache(values) {

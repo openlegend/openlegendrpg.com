@@ -1,12 +1,12 @@
 /* */ 
 (function(Buffer) {
-  var aes = require("./aes");
-  var Transform = require("./cipherBase");
-  var inherits = require("inherits");
-  var modes = require("./modes");
-  var ebtk = require("./EVP_BytesToKey");
-  var StreamCipher = require("./streamCipher");
-  var AuthCipher = require("./authCipher");
+  var aes = require('./aes');
+  var Transform = require('./cipherBase');
+  var inherits = require('inherits');
+  var modes = require('./modes');
+  var ebtk = require('./EVP_BytesToKey');
+  var StreamCipher = require('./streamCipher');
+  var AuthCipher = require('./authCipher');
   inherits(Cipher, Transform);
   function Cipher(mode, key, iv) {
     if (!(this instanceof Cipher)) {
@@ -73,14 +73,14 @@
     return out;
   };
   var modelist = {
-    ECB: require("./modes/ecb"),
-    CBC: require("./modes/cbc"),
-    CFB: require("./modes/cfb"),
-    CFB8: require("./modes/cfb8"),
-    CFB1: require("./modes/cfb1"),
-    OFB: require("./modes/ofb"),
-    CTR: require("./modes/ctr"),
-    GCM: require("./modes/ctr")
+    ECB: require('./modes/ecb'),
+    CBC: require('./modes/cbc'),
+    CFB: require('./modes/cfb'),
+    CFB8: require('./modes/cfb8'),
+    CFB1: require('./modes/cfb1'),
+    OFB: require('./modes/ofb'),
+    CTR: require('./modes/ctr'),
+    GCM: require('./modes/ctr')
   };
   function createCipheriv(suite, password, iv) {
     var config = modes[suite.toLowerCase()];
@@ -116,4 +116,4 @@
   }
   exports.createCipheriv = createCipheriv;
   exports.createCipher = createCipher;
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

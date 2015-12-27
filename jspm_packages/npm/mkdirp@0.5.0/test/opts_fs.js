@@ -1,8 +1,8 @@
 /* */ 
-var mkdirp = require("../../mkdirp@0.5.0");
-var path = require("path");
-var test = require("tap").test;
-var mockfs = require("mock-fs");
+var mkdirp = require('../index');
+var path = require('path');
+var test = require('tap').test;
+var mockfs = require('mock-fs');
 test('opts.fs', function(t) {
   t.plan(5);
   var x = Math.floor(Math.random() * Math.pow(16, 4)).toString(16);

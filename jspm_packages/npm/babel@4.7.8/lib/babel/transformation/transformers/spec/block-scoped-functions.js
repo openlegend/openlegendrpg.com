@@ -4,10 +4,10 @@ var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
 exports.BlockStatement = BlockStatement;
-var t = _interopRequireWildcard(require("../../../types/index"));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function BlockStatement(node, parent, scope, file) {
   if (t.isFunction(parent) && parent.body === node || t.isExportDeclaration(parent)) {
-    return ;
+    return;
   }
   for (var i = 0; i < node.body.length; i++) {
     var func = node.body[i];

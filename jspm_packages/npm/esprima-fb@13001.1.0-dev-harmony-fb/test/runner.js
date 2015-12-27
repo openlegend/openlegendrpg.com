@@ -115,7 +115,7 @@
       return (key === 'loc' || key === 'range') ? undefined : value;
     }
     if (options.tolerant) {
-      return ;
+      return;
     }
     options.range = false;
     options.loc = false;
@@ -230,7 +230,7 @@
       if (expected !== actual) {
         if (exception.message.indexOf('Invalid regular expression') > 0) {
           if (typeof actual === 'undefined' && !handleInvalidRegexFlag) {
-            return ;
+            return;
           }
         }
         throw new NotMatchingError(expected, actual);
@@ -366,10 +366,10 @@
   } else {
     (function() {
       'use strict';
-      var esprima = require("../esprima"),
-          vm = require("vm"),
-          fs = require("fs"),
-          diff = require("json-diff").diffString,
+      var esprima = require('../esprima'),
+          vm = require('vm'),
+          fs = require('fs'),
+          diff = require('json-diff').diffString,
           total = 0,
           failures = [],
           tick = new Date(),
@@ -415,4 +415,4 @@
       process.exit(failures.length === 0 ? 0 : 1);
     }());
   }
-})(require("process"));
+})(require('process'));

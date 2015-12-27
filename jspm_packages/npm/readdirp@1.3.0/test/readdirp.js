@@ -1,11 +1,11 @@
 /* */ 
 (function(process) {
-  var test = require("tap").test,
-      path = require("path"),
-      fs = require("fs"),
-      util = require("util"),
-      net = require("net"),
-      readdirp = require("../readdirp"),
+  var test = require('tap').test,
+      path = require('path'),
+      fs = require('fs'),
+      util = require('util'),
+      net = require('net'),
+      readdirp = require('../readdirp'),
       root = path.join(__dirname, '../test/bed'),
       totalDirs = 6,
       totalFiles = 12,
@@ -233,4 +233,4 @@
       });
     });
   });
-})(require("process"));
+})(require('process'));

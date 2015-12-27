@@ -1,6 +1,6 @@
 /* */ 
-var parse = require("../../minimist@1.1.1");
-var test = require("tape");
+var parse = require('../index');
+var test = require('tape');
 test('boolean and alias is not unknown', function(t) {
   var unknown = [];
   function unknownFn(arg) {

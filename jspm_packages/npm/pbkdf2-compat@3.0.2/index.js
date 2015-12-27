@@ -1,9 +1,9 @@
 /* */ 
 (function(Buffer) {
-  var crypto = require("crypto");
-  var fork = require("child_process").fork;
-  var path = require("path");
-  var compat = require("./browser");
+  var crypto = require('crypto');
+  var fork = require('child_process').fork;
+  var path = require('path');
+  var compat = require('./browser');
   function asyncPBKDF2(password, salt, iterations, keylen, digest, callback) {
     if (typeof iterations !== 'number') {
       throw new TypeError('Iterations not a number');
@@ -72,4 +72,4 @@
     }
     return isNode10Result;
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

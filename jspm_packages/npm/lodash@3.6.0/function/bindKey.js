@@ -1,7 +1,7 @@
 /* */ 
-var createWrapper = require("../internal/createWrapper"),
-    replaceHolders = require("../internal/replaceHolders"),
-    restParam = require("./restParam");
+var createWrapper = require('../internal/createWrapper'),
+    replaceHolders = require('../internal/replaceHolders'),
+    restParam = require('./restParam');
 var BIND_FLAG = 1,
     BIND_KEY_FLAG = 2,
     PARTIAL_FLAG = 32;

@@ -1,1 +1,0 @@
-module.exports = require("npm:angular-mocks@1.3.14/angular-mocks");

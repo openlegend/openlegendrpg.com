@@ -1,7 +1,7 @@
 /* */ 
-var assert = require("assert");
-var elliptic = require("../lib/elliptic");
-var hash = require("hash.js");
+var assert = require('assert');
+var elliptic = require('../lib/elliptic');
+var hash = require('hash.js');
 describe('ECDSA', function() {
   function test(name) {
     it('should work with ' + name + ' curve', function() {

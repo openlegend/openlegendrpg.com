@@ -5,8 +5,8 @@ var _interopRequireWildcard = function(obj) {
 };
 exports.CallExpression = CallExpression;
 exports.ModuleDeclaration = ModuleDeclaration;
-var messages = _interopRequireWildcard(require("../../../messages"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var messages = _interopRequireWildcard(require('../../../messages'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function check(source, file) {
   if (t.isLiteral(source)) {
     var name = source.value;

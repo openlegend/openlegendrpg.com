@@ -293,7 +293,7 @@
   }
   function encoderDBCSEnd() {
     if (this.leadSurrogate === -1 && this.seqObj === undefined)
-      return ;
+      return;
     var newBuf = new Buffer(10),
         j = 0;
     if (this.seqObj) {
@@ -391,4 +391,4 @@
     }
     return l;
   }
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

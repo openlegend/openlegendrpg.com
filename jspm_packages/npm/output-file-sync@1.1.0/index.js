@@ -1,9 +1,9 @@
 /* */ 
 'use strict';
-var dirname = require("path").dirname;
-var writeFileSync = require("fs").writeFileSync;
-var xtend = require("xtend");
-var mkdirpSync = require("mkdirp").sync;
+var dirname = require('path').dirname;
+var writeFileSync = require('fs').writeFileSync;
+var xtend = require('xtend');
+var mkdirpSync = require('mkdirp').sync;
 module.exports = function outputFileSync(filePath, data, options) {
   options = options || {};
   var mkdirpOptions;

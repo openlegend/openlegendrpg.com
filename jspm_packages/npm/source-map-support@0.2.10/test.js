@@ -1,10 +1,10 @@
 /* */ 
 (function(Buffer, process) {
-  require("./source-map-support").install({emptyCacheBetweenOperations: true});
-  var SourceMapGenerator = require("source-map").SourceMapGenerator;
-  var child_process = require("child_process");
-  var assert = require("assert");
-  var fs = require("fs");
+  require('./source-map-support').install({emptyCacheBetweenOperations: true});
+  var SourceMapGenerator = require('source-map').SourceMapGenerator;
+  var child_process = require('child_process');
+  var assert = require('assert');
+  var fs = require('fs');
   function compareLines(actual, expected) {
     assert(actual.length >= expected.length, 'got ' + actual.length + ' lines but expected at least ' + expected.length + ' lines');
     for (var i = 0; i < expected.length; i++) {
@@ -93,7 +93,7 @@
     fs.writeFileSync('.generated.js', 'exports.test = function() {' + source.join('\n') + '};//@ sourceMappingURL=.generated.js.map');
     try {
       delete require.cache[require.resolve('./.generated')];
-      require("./.generated").test();
+      require('./.generated').test();
     } catch (e) {
       compareLines(e.stack.split('\n'), expected);
     }
@@ -102,7 +102,7 @@
     fs.writeFileSync('.generated.js', 'exports.test = function() {' + source.join('\n') + '};//@ sourceMappingURL=data:application/json;base64,' + new Buffer(sourceMap.toString()).toString('base64'));
     try {
       delete require.cache[require.resolve('./.generated')];
-      require("./.generated").test();
+      require('./.generated').test();
     } catch (e) {
       compareLines(e.stack.split('\n'), expected);
     }
@@ -184,4 +184,4 @@
   it('missing source maps should also be cached', function(done) {
     compareStdout(done, createSingleLineSourceMap(), ['', 'var count = 0;', 'function foo() {', '  console.log(new Error("this is the error").stack.split("\\n").slice(0, 2).join("\\n"));', '}', 'require("./source-map-support").install({', '  retrieveSourceMap: function(name) {', '    if (/\\.generated.js$/.test(name)) count++;', '    return null;', '  }', '});', 'process.nextTick(foo);', 'process.nextTick(foo);', 'process.nextTick(function() { console.log(count); });'], ['Error: this is the error', /^    at foo \(.*\/.generated.js:4:15\)$/, 'Error: this is the error', /^    at foo \(.*\/.generated.js:4:15\)$/, '1']);
   });
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

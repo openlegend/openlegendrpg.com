@@ -1,5 +1,5 @@
 /* */ 
-var constants = require("./index");
+var constants = require('./index');
 exports.tagClass = {
   0: 'universal',
   1: 'application',

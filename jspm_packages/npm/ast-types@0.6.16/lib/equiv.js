@@ -1,6 +1,6 @@
 /* */ 
-var assert = require("assert");
-var types = require("../main");
+var assert = require('assert');
+var types = require('../main');
 var getFieldNames = types.getFieldNames;
 var getFieldValue = types.getFieldValue;
 var isArray = types.builtInTypes.array;

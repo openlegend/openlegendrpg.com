@@ -1,6 +1,6 @@
 /* */ 
-var parse = require("../../minimist@1.1.1");
-var test = require("tape");
+var parse = require('../index');
+var test = require('tape');
 test('flag boolean default false', function(t) {
   var argv = parse(['moo'], {
     boolean: ['t', 'verbose'],

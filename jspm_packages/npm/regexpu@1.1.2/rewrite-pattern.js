@@ -1,10 +1,10 @@
 /* */ 
 (function(process) {
-  var generate = require("regjsgen").generate;
-  var parse = require("regjsparser").parse;
-  var regenerate = require("regenerate");
-  var iuMappings = require("./data/iu-mappings.json!systemjs-json");
-  var ESCAPE_SETS = require("./data/character-class-escape-sets");
+  var generate = require('regjsgen').generate;
+  var parse = require('regjsparser').parse;
+  var regenerate = require('regenerate');
+  var iuMappings = require('./data/iu-mappings.json!systemjs-json');
+  var ESCAPE_SETS = require('./data/character-class-escape-sets');
   function getCharacterClassEscapeSet(character) {
     if (unicode) {
       if (ignoreCase) {
@@ -40,7 +40,7 @@
   }
   function update(item, pattern) {
     if (!pattern) {
-      return ;
+      return;
     }
     var tree = parse(pattern, '');
     switch (tree.type) {
@@ -146,4 +146,4 @@
     assign(tree, processTerm(tree));
     return generate(tree);
   };
-})(require("process"));
+})(require('process'));

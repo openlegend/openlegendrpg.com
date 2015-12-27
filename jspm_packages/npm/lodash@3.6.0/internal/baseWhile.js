@@ -1,5 +1,5 @@
 /* */ 
-var baseSlice = require("./baseSlice");
+var baseSlice = require('./baseSlice');
 function baseWhile(array, predicate, isDrop, fromRight) {
   var length = array.length,
       index = fromRight ? length : -1;

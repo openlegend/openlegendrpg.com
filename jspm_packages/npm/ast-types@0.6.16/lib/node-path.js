@@ -1,17 +1,17 @@
 /* */ 
-var assert = require("assert");
-var types = require("./types");
+var assert = require('assert');
+var types = require('./types');
 var n = types.namedTypes;
 var b = types.builders;
 var isNumber = types.builtInTypes.number;
 var isArray = types.builtInTypes.array;
-var Path = require("./path");
-var Scope = require("./scope");
+var Path = require('./path');
+var Scope = require('./scope');
 function NodePath(value, parentPath, name) {
   assert.ok(this instanceof NodePath);
   Path.call(this, value, parentPath, name);
 }
-require("util").inherits(NodePath, Path);
+require('util').inherits(NodePath, Path);
 var NPp = NodePath.prototype;
 Object.defineProperties(NPp, {
   node: {get: function() {

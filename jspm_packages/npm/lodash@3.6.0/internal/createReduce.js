@@ -1,7 +1,7 @@
 /* */ 
-var baseCallback = require("./baseCallback"),
-    baseReduce = require("./baseReduce"),
-    isArray = require("../lang/isArray");
+var baseCallback = require('./baseCallback'),
+    baseReduce = require('./baseReduce'),
+    isArray = require('../lang/isArray');
 function createReduce(arrayFunc, eachFunc) {
   return function(collection, iteratee, accumulator, thisArg) {
     var initFromArray = arguments.length < 3;

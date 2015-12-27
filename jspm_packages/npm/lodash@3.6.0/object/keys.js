@@ -1,8 +1,8 @@
 /* */ 
-var isLength = require("../internal/isLength"),
-    isNative = require("../lang/isNative"),
-    isObject = require("../lang/isObject"),
-    shimKeys = require("../internal/shimKeys");
+var isLength = require('../internal/isLength'),
+    isNative = require('../lang/isNative'),
+    isObject = require('../lang/isObject'),
+    shimKeys = require('../internal/shimKeys');
 var nativeKeys = isNative(nativeKeys = Object.keys) && nativeKeys;
 var keys = !nativeKeys ? shimKeys : function(object) {
   if (object) {

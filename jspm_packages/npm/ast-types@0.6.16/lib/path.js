@@ -1,8 +1,8 @@
 /* */ 
-var assert = require("assert");
+var assert = require('assert');
 var Op = Object.prototype;
 var hasOwn = Op.hasOwnProperty;
-var types = require("./types");
+var types = require('./types');
 var isArray = types.builtInTypes.array;
 var isNumber = types.builtInTypes.number;
 var Ap = Array.prototype;

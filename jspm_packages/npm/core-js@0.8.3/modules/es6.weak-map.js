@@ -1,7 +1,7 @@
 /* */ 
 'use strict';
-var $ = require("./$"),
-    weak = require("./$.collection-weak"),
+var $ = require('./$'),
+    weak = require('./$.collection-weak'),
     leakStore = weak.leakStore,
     ID = weak.ID,
     WEAK = weak.WEAK,
@@ -9,7 +9,7 @@ var $ = require("./$"),
     isObject = $.isObject,
     isFrozen = Object.isFrozen || $.core.Object.isFrozen,
     tmp = {};
-var WeakMap = require("./$.collection")('WeakMap', {
+var WeakMap = require('./$.collection')('WeakMap', {
   get: function get(key) {
     if (isObject(key)) {
       if (isFrozen(key))

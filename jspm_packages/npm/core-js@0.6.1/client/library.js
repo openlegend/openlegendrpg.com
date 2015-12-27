@@ -1331,7 +1331,7 @@
               then,
               wrapper;
           if (record.d)
-            return ;
+            return;
           record.d = true;
           record = record.r || record;
           try {
@@ -1356,7 +1356,7 @@
         function reject(value) {
           var record = this;
           if (record.d)
-            return ;
+            return;
           record.d = true;
           record = record.r || record;
           record.v = value;
@@ -2316,4 +2316,4 @@
         })});
     }({}, true);
   }(typeof self != 'undefined' && self.Math === Math ? self : Function('return this')(), false);
-})(require("process"));
+})(require('process'));

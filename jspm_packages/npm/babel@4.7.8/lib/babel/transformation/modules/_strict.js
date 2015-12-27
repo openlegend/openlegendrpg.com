@@ -3,7 +3,7 @@
 var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
-var util = _interopRequireWildcard(require("../../util"));
+var util = _interopRequireWildcard(require('../../util'));
 module.exports = function(Parent) {
   var Constructor = function Constructor() {
     this.noInteropRequireImport = true;

@@ -1,1 +1,1 @@
-module.exports = require("npm:angular-mocks@1.4.5/angular-mocks");
+module.exports = require("npm:angular-mocks@1.4.5/angular-mocks.js");

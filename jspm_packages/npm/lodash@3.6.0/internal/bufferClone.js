@@ -1,6 +1,6 @@
 /* */ 
-var constant = require("../utility/constant"),
-    isNative = require("../lang/isNative");
+var constant = require('../utility/constant'),
+    isNative = require('../lang/isNative');
 var ArrayBuffer = isNative(ArrayBuffer = global.ArrayBuffer) && ArrayBuffer,
     bufferSlice = isNative(bufferSlice = ArrayBuffer && new ArrayBuffer(0).slice) && bufferSlice,
     floor = Math.floor,

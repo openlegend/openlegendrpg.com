@@ -1,6 +1,6 @@
 /* */ 
 "use strict";
-var _Symbol = require("../core-js/symbol")["default"];
+var _Symbol = require('../core-js/symbol')["default"];
 exports["default"] = function(obj, key, value) {
   return Object.defineProperty(obj, key, {
     value: value,

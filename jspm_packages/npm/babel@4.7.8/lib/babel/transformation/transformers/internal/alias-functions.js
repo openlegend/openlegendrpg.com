@@ -5,7 +5,7 @@ var _interopRequireWildcard = function(obj) {
 };
 exports.Program = Program;
 exports.FunctionDeclaration = FunctionDeclaration;
-var t = _interopRequireWildcard(require("../../../types/index"));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var functionChildrenVisitor = {enter: function enter(node, parent, scope, state) {
     if (this.isFunction() && !node._aliasFunction) {
       return this.skip();
@@ -18,7 +18,7 @@ var functionChildrenVisitor = {enter: function enter(node, parent, scope, state)
     } else if (this.isThisExpression()) {
       getId = state.getThisId;
     } else {
-      return ;
+      return;
     }
     if (this.isReferenced())
       return getId();
@@ -28,7 +28,7 @@ var functionVisitor = {enter: function enter(node, parent, scope, state) {
       if (this.isFunction()) {
         return this.skip();
       } else {
-        return ;
+        return;
       }
     }
     scope.traverse(node, functionChildrenVisitor, state);

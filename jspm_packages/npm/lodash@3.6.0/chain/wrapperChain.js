@@ -1,5 +1,5 @@
 /* */ 
-var chain = require("./chain");
+var chain = require('./chain');
 function wrapperChain() {
   return chain(this);
 }

@@ -92,10 +92,10 @@
   define.globalDomain = new Domain();
   var require = define.globalDomain.require.bind(define.globalDomain);
   define('source-map/source-map-generator', ['require', 'exports', 'module', 'source-map/base64-vlq', 'source-map/util', 'source-map/array-set', 'source-map/mapping-list'], function(require, exports, module) {
-    var base64VLQ = require("./base64-vlq");
-    var util = require("./util");
-    var ArraySet = require("./array-set").ArraySet;
-    var MappingList = require("./mapping-list").MappingList;
+    var base64VLQ = require('./base64-vlq');
+    var util = require('./util');
+    var ArraySet = require('./array-set').ArraySet;
+    var MappingList = require('./mapping-list').MappingList;
     function SourceMapGenerator(aArgs) {
       if (!aArgs) {
         aArgs = {};
@@ -244,9 +244,9 @@
     };
     SourceMapGenerator.prototype._validateMapping = function SourceMapGenerator_validateMapping(aGenerated, aOriginal, aSource, aName) {
       if (aGenerated && 'line' in aGenerated && 'column' in aGenerated && aGenerated.line > 0 && aGenerated.column >= 0 && !aOriginal && !aSource && !aName) {
-        return ;
+        return;
       } else if (aGenerated && 'line' in aGenerated && 'column' in aGenerated && aOriginal && 'line' in aOriginal && 'column' in aOriginal && aGenerated.line > 0 && aGenerated.column >= 0 && aOriginal.line > 0 && aOriginal.column >= 0 && aSource) {
-        return ;
+        return;
       } else {
         throw new Error('Invalid mapping: ' + JSON.stringify({
           generated: aGenerated,
@@ -336,7 +336,7 @@
     exports.SourceMapGenerator = SourceMapGenerator;
   });
   define('source-map/base64-vlq', ['require', 'exports', 'module', 'source-map/base64'], function(require, exports, module) {
-    var base64 = require("./base64");
+    var base64 = require('./base64');
     var VLQ_BASE_SHIFT = 5;
     var VLQ_BASE = 1 << VLQ_BASE_SHIFT;
     var VLQ_BASE_MASK = VLQ_BASE - 1;
@@ -603,7 +603,7 @@
     exports.compareByGeneratedPositions = compareByGeneratedPositions;
   });
   define('source-map/array-set', ['require', 'exports', 'module', 'source-map/util'], function(require, exports, module) {
-    var util = require("./util");
+    var util = require('./util');
     function ArraySet() {
       this._array = [];
       this._set = {};
@@ -647,7 +647,7 @@
     exports.ArraySet = ArraySet;
   });
   define('source-map/mapping-list', ['require', 'exports', 'module', 'source-map/util'], function(require, exports, module) {
-    var util = require("./util");
+    var util = require('./util');
     function generatedPositionAfter(mappingA, mappingB) {
       var lineA = mappingA.generatedLine;
       var lineB = mappingB.generatedLine;
@@ -686,11 +686,11 @@
     exports.MappingList = MappingList;
   });
   define('source-map/source-map-consumer', ['require', 'exports', 'module', 'source-map/util', 'source-map/asm-parser', 'source-map/binary-search', 'source-map/array-set', 'source-map/base64-vlq'], function(require, exports, module) {
-    var util = require("./util");
-    var asmParser = require("./asm-parser");
-    var binarySearch = require("./binary-search");
-    var ArraySet = require("./array-set").ArraySet;
-    var base64VLQ = require("./base64-vlq");
+    var util = require('./util');
+    var asmParser = require('./asm-parser');
+    var binarySearch = require('./binary-search');
+    var ArraySet = require('./array-set').ArraySet;
+    var base64VLQ = require('./base64-vlq');
     function SourceMapConsumer(aSourceMap) {
       var sourceMap = aSourceMap;
       if (typeof aSourceMap === 'string') {
@@ -1072,7 +1072,7 @@
     exports.IndexedSourceMapConsumer = IndexedSourceMapConsumer;
   });
   define('source-map/asm-parser', ['require', 'exports', 'module', 'source-map/util'], function(require, exports, module) {
-    var util = require("./util");
+    var util = require('./util');
     function stringToArray(string, reserved) {
       var reservedSize = reserved * 4;
       var length = string.length + reservedSize;
@@ -1112,7 +1112,7 @@
       function setIdx(val) {
         val = val | 0;
         HEAPU32[(slotIdx << 2) >> 2] = val;
-        return ;
+        return;
       }
       function incIdx() {
         var idx = 0;
@@ -1120,7 +1120,7 @@
         idx = getIdx() | 0;
         newIdx = (idx + 1) | 0;
         setIdx(newIdx);
-        return ;
+        return;
       }
       function getEndIdx() {
         return HEAPU32[(slotEndIdx << 2) >> 2] | 0;
@@ -1128,7 +1128,7 @@
       function setEndIdx(val) {
         val = val | 0;
         HEAPU32[(slotEndIdx << 2) >> 2] = val;
-        return ;
+        return;
       }
       function getVlq() {
         return HEAP32[(slotVlq << 2) >> 2] | 0;
@@ -1136,7 +1136,7 @@
       function setVlq(val) {
         val = val | 0;
         HEAP32[(slotVlq << 2) >> 2] = val;
-        return ;
+        return;
       }
       function decodeBase64(ch) {
         ch = ch | 0;
@@ -1387,8 +1387,8 @@
     };
   });
   define('source-map/source-node', ['require', 'exports', 'module', 'source-map/source-map-generator', 'source-map/util'], function(require, exports, module) {
-    var SourceMapGenerator = require("./source-map-generator").SourceMapGenerator;
-    var util = require("./util");
+    var SourceMapGenerator = require('./source-map-generator').SourceMapGenerator;
+    var util = require('./util');
     var REGEX_NEWLINE = /(\r?\n)/;
     var NEWLINE_CODE = 10;
     var isSourceNode = "$$$isSourceNode$$$";
@@ -1428,7 +1428,7 @@
             lastGeneratedColumn = mapping.generatedColumn;
             addMappingWithCode(lastMapping, code);
             lastMapping = mapping;
-            return ;
+            return;
           }
         }
         while (lastGeneratedLine < mapping.generatedLine) {
@@ -1642,8 +1642,8 @@
     exports.SourceNode = SourceNode;
   });
   this.sourceMap = {
-    SourceMapConsumer: require("../source-map-consumer").SourceMapConsumer,
-    SourceMapGenerator: require("../source-map-generator").SourceMapGenerator,
-    SourceNode: require("../source-node").SourceNode
+    SourceMapConsumer: require('../source-map-consumer').SourceMapConsumer,
+    SourceMapGenerator: require('../source-map-generator').SourceMapGenerator,
+    SourceNode: require('../source-node').SourceNode
   };
-})(require("process"));
+})(require('process'));

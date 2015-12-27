@@ -30,61 +30,61 @@
       return s;
     })({
       1: [function(require, module, exports) {
-        require("./es5");
-        require("./es6.symbol");
-        require("./es6.object.assign");
-        require("./es6.object.is");
-        require("./es6.object.set-prototype-of");
-        require("./es6.object.to-string");
-        require("./es6.object.statics-accept-primitives");
-        require("./es6.function.name");
-        require("./es6.number.statics");
-        require("./es6.math");
-        require("./es6.string.from-code-point");
-        require("./es6.string.raw");
-        require("./es6.string.iterator");
-        require("./es6.string.code-point-at");
-        require("./es6.string.ends-with");
-        require("./es6.string.includes");
-        require("./es6.string.repeat");
-        require("./es6.string.starts-with");
-        require("./es6.array.from");
-        require("./es6.array.of");
-        require("./es6.array.iterator");
-        require("./es6.array.species");
-        require("./es6.array.copy-within");
-        require("./es6.array.fill");
-        require("./es6.array.find");
-        require("./es6.array.find-index");
-        require("./es6.promise");
-        require("./es6.map");
-        require("./es6.set");
-        require("./es6.weak-map");
-        require("./es6.weak-set");
-        require("./es6.reflect");
-        require("./es7.array.includes");
-        require("./es7.string.at");
-        require("./es7.regexp.escape");
-        require("./es7.object.get-own-property-descriptors");
-        require("./es7.object.to-array");
-        require("./es7.set.to-json");
-        require("./web.immediate");
-        require("./web.dom.iterable");
-        require("./web.timers");
-        require("./core.dict");
-        require("./core.iter-helpers");
-        require("./core.$for");
-        require("./core.delay");
-        require("./core.binding");
-        require("./core.object");
-        require("./core.array.turn");
-        require("./core.number.iterator");
-        require("./core.number.math");
-        require("./core.string.escape-html");
-        require("./core.date");
-        require("./core.global");
-        require("./core.log");
-        require("./js.array.statics");
+        require('./es5');
+        require('./es6.symbol');
+        require('./es6.object.assign');
+        require('./es6.object.is');
+        require('./es6.object.set-prototype-of');
+        require('./es6.object.to-string');
+        require('./es6.object.statics-accept-primitives');
+        require('./es6.function.name');
+        require('./es6.number.statics');
+        require('./es6.math');
+        require('./es6.string.from-code-point');
+        require('./es6.string.raw');
+        require('./es6.string.iterator');
+        require('./es6.string.code-point-at');
+        require('./es6.string.ends-with');
+        require('./es6.string.includes');
+        require('./es6.string.repeat');
+        require('./es6.string.starts-with');
+        require('./es6.array.from');
+        require('./es6.array.of');
+        require('./es6.array.iterator');
+        require('./es6.array.species');
+        require('./es6.array.copy-within');
+        require('./es6.array.fill');
+        require('./es6.array.find');
+        require('./es6.array.find-index');
+        require('./es6.promise');
+        require('./es6.map');
+        require('./es6.set');
+        require('./es6.weak-map');
+        require('./es6.weak-set');
+        require('./es6.reflect');
+        require('./es7.array.includes');
+        require('./es7.string.at');
+        require('./es7.regexp.escape');
+        require('./es7.object.get-own-property-descriptors');
+        require('./es7.object.to-array');
+        require('./es7.set.to-json');
+        require('./web.immediate');
+        require('./web.dom.iterable');
+        require('./web.timers');
+        require('./core.dict');
+        require('./core.iter-helpers');
+        require('./core.$for');
+        require('./core.delay');
+        require('./core.binding');
+        require('./core.object');
+        require('./core.array.turn');
+        require('./core.number.iterator');
+        require('./core.number.math');
+        require('./core.string.escape-html');
+        require('./core.date');
+        require('./core.global');
+        require('./core.log');
+        require('./js.array.statics');
       }, {
         "./core.$for": 28,
         "./core.array.turn": 29,
@@ -144,7 +144,7 @@
       }],
       2: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$");
+        var $ = require('./$');
         module.exports = function(IS_INCLUDES) {
           return function(el) {
             var O = $.toObject(this),
@@ -169,8 +169,8 @@
       }, {"./$": 16}],
       3: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            ctx = require("./$.ctx");
+        var $ = require('./$'),
+            ctx = require('./$.ctx');
         module.exports = function(TYPE) {
           var IS_MAP = TYPE == 1,
               IS_FILTER = TYPE == 2,
@@ -217,7 +217,7 @@
         "./$.ctx": 10
       }],
       4: [function(require, module, exports) {
-        var $ = require("./$");
+        var $ = require('./$');
         function assert(condition, msg1, msg2) {
           if (!condition)
             throw TypeError(msg2 ? msg1 + msg2 : msg1);
@@ -241,7 +241,7 @@
         module.exports = assert;
       }, {"./$": 16}],
       5: [function(require, module, exports) {
-        var $ = require("./$");
+        var $ = require('./$');
         module.exports = Object.assign || function assign(target, source) {
           var T = Object($.assertDefined(target)),
               l = arguments.length,
@@ -259,8 +259,8 @@
         };
       }, {"./$": 16}],
       6: [function(require, module, exports) {
-        var $ = require("./$"),
-            TAG = require("./$.wks")('toStringTag'),
+        var $ = require('./$'),
+            TAG = require('./$.wks')('toStringTag'),
             toString = {}.toString;
         function cof(it) {
           return toString.call(it).slice(8, -1);
@@ -281,11 +281,11 @@
       }],
       7: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            ctx = require("./$.ctx"),
-            safe = require("./$.uid").safe,
-            assert = require("./$.assert"),
-            $iter = require("./$.iter"),
+        var $ = require('./$'),
+            ctx = require('./$.ctx'),
+            safe = require('./$.uid').safe,
+            assert = require('./$.assert'),
+            $iter = require('./$.iter'),
             has = $.has,
             set = $.set,
             isObject = $.isObject,
@@ -444,10 +444,10 @@
       }],
       8: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            safe = require("./$.uid").safe,
-            assert = require("./$.assert"),
-            forOf = require("./$.iter").forOf,
+        var $ = require('./$'),
+            safe = require('./$.uid').safe,
+            assert = require('./$.assert'),
+            forOf = require('./$.iter').forOf,
             _has = $.has,
             isObject = $.isObject,
             hide = $.hide,
@@ -456,7 +456,7 @@
             ID = safe('id'),
             WEAK = safe('weak'),
             LEAK = safe('leak'),
-            method = require("./$.array-methods"),
+            method = require('./$.array-methods'),
             find = method(5),
             findIndex = method(6);
         function findFrozen(store, key) {
@@ -539,10 +539,10 @@
       }],
       9: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            $def = require("./$.def"),
-            $iter = require("./$.iter"),
-            assertInstance = require("./$.assert").inst;
+        var $ = require('./$'),
+            $def = require('./$.def'),
+            $iter = require('./$.iter'),
+            assertInstance = require('./$.assert').inst;
         module.exports = function(NAME, methods, common, IS_MAP, isWeak) {
           var Base = $.g[NAME],
               C = Base,
@@ -564,7 +564,7 @@
             var inst = new C,
                 chain = inst[ADDER](isWeak ? {} : -0, 1),
                 buggyZero;
-            if (!require("./$.iter-detect")(function(iter) {
+            if (!require('./$.iter-detect')(function(iter) {
               new C(iter);
             })) {
               C = function(iterable) {
@@ -589,8 +589,8 @@
             if (buggyZero || chain !== inst)
               fixMethod(ADDER, true);
           }
-          require("./$.cof").set(C, NAME);
-          require("./$.species")(C);
+          require('./$.cof').set(C, NAME);
+          require('./$.species')(C);
           O[NAME] = C;
           $def($def.G + $def.W + $def.F * (C != Base), O);
           if (!isWeak)
@@ -607,7 +607,7 @@
         "./$.species": 22
       }],
       10: [function(require, module, exports) {
-        var assertFunction = require("./$.assert").fn;
+        var assertFunction = require('./$.assert').fn;
         module.exports = function(fn, that, length) {
           assertFunction(fn);
           if (~length && that === undefined)
@@ -632,7 +632,7 @@
         };
       }, {"./$.assert": 4}],
       11: [function(require, module, exports) {
-        var $ = require("./$"),
+        var $ = require('./$'),
             global = $.g,
             core = $.core,
             isFunction = $.isFunction;
@@ -708,7 +708,7 @@
         };
       }, {}],
       14: [function(require, module, exports) {
-        var SYMBOL_ITERATOR = require("./$.wks")('iterator'),
+        var SYMBOL_ITERATOR = require('./$.wks')('iterator'),
             SAFE_CLOSING = false;
         try {
           var riter = [7][SYMBOL_ITERATOR]();
@@ -739,12 +739,12 @@
       }, {"./$.wks": 27}],
       15: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            ctx = require("./$.ctx"),
-            cof = require("./$.cof"),
-            $def = require("./$.def"),
-            assertObject = require("./$.assert").obj,
-            SYMBOL_ITERATOR = require("./$.wks")('iterator'),
+        var $ = require('./$'),
+            ctx = require('./$.ctx'),
+            cof = require('./$.cof'),
+            $def = require('./$.def'),
+            assertObject = require('./$.assert').obj,
+            SYMBOL_ITERATOR = require('./$.wks')('iterator'),
             FF_ITERATOR = '@@iterator',
             Iterators = {},
             IteratorPrototype = {};
@@ -912,7 +912,7 @@
             throw TypeError("Can't call method on  " + it);
           return it;
         }
-        var $ = module.exports = require("./$.fw")({
+        var $ = module.exports = require('./$.fw')({
           g: global,
           core: core,
           html: global.document && document.documentElement,
@@ -965,7 +965,7 @@
           __g = global;
       }, {"./$.fw": 12}],
       17: [function(require, module, exports) {
-        var $ = require("./$");
+        var $ = require('./$');
         module.exports = function(object, el) {
           var O = $.toObject(object),
               keys = $.getKeys(O),
@@ -978,8 +978,8 @@
         };
       }, {"./$": 16}],
       18: [function(require, module, exports) {
-        var $ = require("./$"),
-            assertObject = require("./$.assert").obj;
+        var $ = require('./$'),
+            assertObject = require('./$.assert').obj;
         module.exports = function ownKeys(it) {
           assertObject(it);
           return $.getSymbols ? $.getNames(it).concat($.getSymbols(it)) : $.getNames(it);
@@ -990,9 +990,9 @@
       }],
       19: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            invoke = require("./$.invoke"),
-            assertFunction = require("./$.assert").fn;
+        var $ = require('./$'),
+            invoke = require('./$.invoke'),
+            assertFunction = require('./$.assert').fn;
         module.exports = function() {
           var fn = assertFunction(this),
               length = arguments.length,
@@ -1038,8 +1038,8 @@
         };
       }, {}],
       21: [function(require, module, exports) {
-        var $ = require("./$"),
-            assert = require("./$.assert");
+        var $ = require('./$'),
+            assert = require('./$.assert');
         function check(O, proto) {
           assert.obj(O);
           assert(proto === null || $.isObject(proto), proto, ": can't set as prototype!");
@@ -1047,7 +1047,7 @@
         module.exports = {
           set: Object.setPrototypeOf || ('__proto__' in {} ? function(buggy, set) {
             try {
-              set = require("./$.ctx")(Function.call, $.getDesc(Object.prototype, '__proto__').set, 2);
+              set = require('./$.ctx')(Function.call, $.getDesc(Object.prototype, '__proto__').set, 2);
               set({}, []);
             } catch (e) {
               buggy = true;
@@ -1069,10 +1069,10 @@
         "./$.ctx": 10
       }],
       22: [function(require, module, exports) {
-        var $ = require("./$");
+        var $ = require('./$');
         module.exports = function(C) {
           if ($.DESC && $.FW)
-            $.setDesc(C, require("./$.wks")('species'), {
+            $.setDesc(C, require('./$.wks')('species'), {
               configurable: true,
               get: $.that
             });
@@ -1083,7 +1083,7 @@
       }],
       23: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$");
+        var $ = require('./$');
         module.exports = function(TO_STRING) {
           return function(pos) {
             var s = String($.assertDefined(this)),
@@ -1100,10 +1100,10 @@
       }, {"./$": 16}],
       24: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            ctx = require("./$.ctx"),
-            cof = require("./$.cof"),
-            invoke = require("./$.invoke"),
+        var $ = require('./$'),
+            ctx = require('./$.ctx'),
+            cof = require('./$.cof'),
+            invoke = require('./$.invoke'),
             global = $.g,
             isFunction = $.isFunction,
             html = $.html,
@@ -1188,12 +1188,12 @@
         function uid(key) {
           return 'Symbol(' + key + ')_' + (++sid + Math.random()).toString(36);
         }
-        uid.safe = require("./$").g.Symbol || uid;
+        uid.safe = require('./$').g.Symbol || uid;
         module.exports = uid;
       }, {"./$": 16}],
       26: [function(require, module, exports) {
-        var $ = require("./$"),
-            UNSCOPABLES = require("./$.wks")('unscopables');
+        var $ = require('./$'),
+            UNSCOPABLES = require('./$.wks')('unscopables');
         if ($.FW && !(UNSCOPABLES in []))
           $.hide(Array.prototype, UNSCOPABLES, {});
         module.exports = function(key) {
@@ -1205,10 +1205,10 @@
         "./$.wks": 27
       }],
       27: [function(require, module, exports) {
-        var global = require("./$").g,
+        var global = require('./$').g,
             store = {};
         module.exports = function(name) {
-          return store[name] || (store[name] = global.Symbol && global.Symbol[name] || require("./$.uid").safe('Symbol.' + name));
+          return store[name] || (store[name] = global.Symbol && global.Symbol[name] || require('./$.uid').safe('Symbol.' + name));
         };
       }, {
         "./$": 16,
@@ -1216,11 +1216,11 @@
       }],
       28: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            ctx = require("./$.ctx"),
-            safe = require("./$.uid").safe,
-            $def = require("./$.def"),
-            $iter = require("./$.iter"),
+        var $ = require('./$'),
+            ctx = require('./$.ctx'),
+            safe = require('./$.uid').safe,
+            $def = require('./$.def'),
+            $iter = require('./$.iter'),
             ENTRIES = safe('entries'),
             FN = safe('fn'),
             ITER = safe('iter'),
@@ -1291,9 +1291,9 @@
       }],
       29: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            $def = require("./$.def"),
-            assertFunction = require("./$.assert").fn;
+        var $ = require('./$'),
+            $def = require('./$.def'),
+            assertFunction = require('./$.assert').fn;
         $def($def.P + $def.F, 'Array', {turn: function(fn, target) {
             assertFunction(fn);
             var memo = target == undefined ? [] : Object(target),
@@ -1305,7 +1305,7 @@
                 break;
             return memo;
           }});
-        require("./$.unscope")('turn');
+        require('./$.unscope')('turn');
       }, {
         "./$": 16,
         "./$.assert": 4,
@@ -1314,17 +1314,17 @@
       }],
       30: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            ctx = require("./$.ctx"),
-            $def = require("./$.def"),
-            invoke = require("./$.invoke"),
+        var $ = require('./$'),
+            ctx = require('./$.ctx'),
+            $def = require('./$.def'),
+            invoke = require('./$.invoke'),
             hide = $.hide,
-            assertFunction = require("./$.assert").fn,
-            _ = $.DESC ? require("./$.uid")('tie') : 'toLocaleString',
+            assertFunction = require('./$.assert').fn,
+            _ = $.DESC ? require('./$.uid')('tie') : 'toLocaleString',
             toLocaleString = {}.toLocaleString;
         $.core._ = $.path._ = $.path._ || {};
         $def($def.P + $def.F, 'Function', {
-          part: require("./$.partial"),
+          part: require('./$.partial'),
           only: function(numberArguments, that) {
             var fn = assertFunction(this),
                 n = $.toLength(numberArguments),
@@ -1363,8 +1363,8 @@
         "./$.uid": 25
       }],
       31: [function(require, module, exports) {
-        var $ = require("./$"),
-            $def = require("./$.def"),
+        var $ = require('./$'),
+            $def = require('./$.def'),
             core = $.core,
             formatRegExp = /\b\w\w?\b/g,
             flexioRegExp = /:(.*)\|(.*)$/,
@@ -1455,9 +1455,9 @@
         "./$.def": 11
       }],
       32: [function(require, module, exports) {
-        var $ = require("./$"),
-            $def = require("./$.def"),
-            partial = require("./$.partial");
+        var $ = require('./$'),
+            $def = require('./$.def'),
+            partial = require('./$.partial');
         $def($def.G + $def.F, {delay: function(time) {
             return new ($.core.Promise || $.g.Promise)(function(resolve) {
               setTimeout(partial.call(resolve, true), time);
@@ -1469,14 +1469,14 @@
         "./$.partial": 19
       }],
       33: [function(require, module, exports) {
-        var $ = require("./$"),
-            ctx = require("./$.ctx"),
-            $def = require("./$.def"),
-            assign = require("./$.assign"),
-            keyOf = require("./$.keyof"),
-            ITER = require("./$.uid").safe('iter'),
-            assert = require("./$.assert"),
-            $iter = require("./$.iter"),
+        var $ = require('./$'),
+            ctx = require('./$.ctx'),
+            $def = require('./$.def'),
+            assign = require('./$.assign'),
+            keyOf = require('./$.keyof'),
+            ITER = require('./$.uid').safe('iter'),
+            assert = require('./$.assert'),
+            $iter = require('./$.iter'),
             step = $iter.step,
             getKeys = $.getKeys,
             toObject = $.toObject,
@@ -1637,15 +1637,15 @@
         "./$.uid": 25
       }],
       34: [function(require, module, exports) {
-        var $def = require("./$.def");
-        $def($def.G + $def.F, {global: require("./$").g});
+        var $def = require('./$.def');
+        $def($def.G + $def.F, {global: require('./$').g});
       }, {
         "./$": 16,
         "./$.def": 11
       }],
       35: [function(require, module, exports) {
-        var core = require("./$").core,
-            $iter = require("./$.iter");
+        var core = require('./$').core,
+            $iter = require('./$.iter');
         core.isIterable = $iter.is;
         core.getIterator = $iter.get;
       }, {
@@ -1653,8 +1653,8 @@
         "./$.iter": 15
       }],
       36: [function(require, module, exports) {
-        var $ = require("./$"),
-            $def = require("./$.def"),
+        var $ = require('./$'),
+            $def = require('./$.def'),
             log = {},
             enabled = true;
         $.each.call(('assert,clear,count,debug,dir,dirxml,error,exception,' + 'group,groupCollapsed,groupEnd,info,isIndependentlyComposed,log,' + 'markTimeline,profile,profileEnd,table,time,timeEnd,timeline,' + 'timelineEnd,timeStamp,trace,warn').split(','), function(key) {
@@ -1664,7 +1664,7 @@
             }
           };
         });
-        $def($def.G + $def.F, {log: require("./$.assign")(log.log, log, {
+        $def($def.G + $def.F, {log: require('./$.assign')(log.log, log, {
             enable: function() {
               enabled = true;
             },
@@ -1679,9 +1679,9 @@
       }],
       37: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            ITER = require("./$.uid").safe('iter'),
-            $iter = require("./$.iter"),
+        var $ = require('./$'),
+            ITER = require('./$.uid').safe('iter'),
+            $iter = require('./$.iter'),
             step = $iter.step,
             NUMBER = 'Number';
         function NumberIterator(iterated) {
@@ -1705,9 +1705,9 @@
       }],
       38: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            $def = require("./$.def"),
-            invoke = require("./$.invoke"),
+        var $ = require('./$'),
+            $def = require('./$.def'),
+            invoke = require('./$.invoke'),
             methods = {};
         methods.random = function(lim) {
           var a = +this,
@@ -1734,9 +1734,9 @@
         "./$.invoke": 13
       }],
       39: [function(require, module, exports) {
-        var $ = require("./$"),
-            $def = require("./$.def"),
-            ownKeys = require("./$.own-keys");
+        var $ = require('./$'),
+            $def = require('./$.def'),
+            ownKeys = require('./$.own-keys');
         function define(target, mixin) {
           var keys = ownKeys($.toObject(mixin)),
               length = keys.length,
@@ -1748,7 +1748,7 @@
         }
         $def($def.S + $def.F, 'Object', {
           isObject: $.isObject,
-          classof: require("./$.cof").classof,
+          classof: require('./$.cof').classof,
           define: define,
           make: function(proto, mixin) {
             return define($.create(proto), mixin);
@@ -1761,8 +1761,8 @@
         "./$.own-keys": 18
       }],
       40: [function(require, module, exports) {
-        var $def = require("./$.def"),
-            replacer = require("./$.replacer");
+        var $def = require('./$.def'),
+            replacer = require('./$.replacer');
         var escapeHTMLDict = {
           '&': '&amp;',
           '<': '&lt;',
@@ -1783,13 +1783,13 @@
         "./$.replacer": 20
       }],
       41: [function(require, module, exports) {
-        var $ = require("./$"),
-            cof = require("./$.cof"),
-            $def = require("./$.def"),
-            invoke = require("./$.invoke"),
-            arrayMethod = require("./$.array-methods"),
-            IE_PROTO = require("./$.uid").safe('__proto__'),
-            assert = require("./$.assert"),
+        var $ = require('./$'),
+            cof = require('./$.cof'),
+            $def = require('./$.def'),
+            invoke = require('./$.invoke'),
+            arrayMethod = require('./$.array-methods'),
+            IE_PROTO = require('./$.uid').safe('__proto__'),
+            assert = require('./$.assert'),
             assertObject = assert.obj,
             ObjectProto = Object.prototype,
             A = [],
@@ -1975,7 +1975,7 @@
           every: arrayMethod(4),
           reduce: createArrayReduce(false),
           reduceRight: createArrayReduce(true),
-          indexOf: indexOf = indexOf || require("./$.array-includes")(false),
+          indexOf: indexOf = indexOf || require('./$.array-includes')(false),
           lastIndexOf: function(el, fromIndex) {
             var O = toObject(this),
                 length = toLength(O.length),
@@ -1991,7 +1991,7 @@
             return -1;
           }
         });
-        $def($def.P, 'String', {trim: require("./$.replacer")(/^\s*([\s\S]*\S)?\s*$/, '$1')});
+        $def($def.P, 'String', {trim: require('./$.replacer')(/^\s*([\s\S]*\S)?\s*$/, '$1')});
         $def($def.S, 'Date', {now: function() {
             return +new Date;
           }});
@@ -2027,8 +2027,8 @@
       }],
       42: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            $def = require("./$.def"),
+        var $ = require('./$'),
+            $def = require('./$.def'),
             toIndex = $.toIndex;
         $def($def.P, 'Array', {copyWithin: function copyWithin(target, start) {
             var O = Object($.assertDefined(this)),
@@ -2054,7 +2054,7 @@
             }
             return O;
           }});
-        require("./$.unscope")('copyWithin');
+        require('./$.unscope')('copyWithin');
       }, {
         "./$": 16,
         "./$.def": 11,
@@ -2062,8 +2062,8 @@
       }],
       43: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            $def = require("./$.def"),
+        var $ = require('./$'),
+            $def = require('./$.def'),
             toIndex = $.toIndex;
         $def($def.P, 'Array', {fill: function fill(value) {
             var O = Object($.assertDefined(this)),
@@ -2075,37 +2075,37 @@
               O[index++] = value;
             return O;
           }});
-        require("./$.unscope")('fill');
+        require('./$.unscope')('fill');
       }, {
         "./$": 16,
         "./$.def": 11,
         "./$.unscope": 26
       }],
       44: [function(require, module, exports) {
-        var $def = require("./$.def");
-        $def($def.P, 'Array', {findIndex: require("./$.array-methods")(6)});
-        require("./$.unscope")('findIndex');
+        var $def = require('./$.def');
+        $def($def.P, 'Array', {findIndex: require('./$.array-methods')(6)});
+        require('./$.unscope')('findIndex');
       }, {
         "./$.array-methods": 3,
         "./$.def": 11,
         "./$.unscope": 26
       }],
       45: [function(require, module, exports) {
-        var $def = require("./$.def");
-        $def($def.P, 'Array', {find: require("./$.array-methods")(5)});
-        require("./$.unscope")('find');
+        var $def = require('./$.def');
+        $def($def.P, 'Array', {find: require('./$.array-methods')(5)});
+        require('./$.unscope')('find');
       }, {
         "./$.array-methods": 3,
         "./$.def": 11,
         "./$.unscope": 26
       }],
       46: [function(require, module, exports) {
-        var $ = require("./$"),
-            ctx = require("./$.ctx"),
-            $def = require("./$.def"),
-            $iter = require("./$.iter"),
+        var $ = require('./$'),
+            ctx = require('./$.ctx'),
+            $def = require('./$.def'),
+            $iter = require('./$.iter'),
             stepCall = $iter.stepCall;
-        $def($def.S + $def.F * !require("./$.iter-detect")(function(iter) {
+        $def($def.S + $def.F * !require('./$.iter-detect')(function(iter) {
           Array.from(iter);
         }), 'Array', {from: function from(arrayLike) {
             var O = Object($.assertDefined(arrayLike)),
@@ -2140,10 +2140,10 @@
         "./$.iter-detect": 14
       }],
       47: [function(require, module, exports) {
-        var $ = require("./$"),
-            setUnscope = require("./$.unscope"),
-            ITER = require("./$.uid").safe('iter'),
-            $iter = require("./$.iter"),
+        var $ = require('./$'),
+            setUnscope = require('./$.unscope'),
+            ITER = require('./$.uid').safe('iter'),
+            $iter = require('./$.iter'),
             step = $iter.step,
             Iterators = $iter.Iterators;
         $iter.std(Array, 'Array', function(iterated, kind) {
@@ -2178,7 +2178,7 @@
         "./$.unscope": 26
       }],
       48: [function(require, module, exports) {
-        var $def = require("./$.def");
+        var $def = require('./$.def');
         $def($def.S, 'Array', {of: function of() {
             var index = 0,
                 length = arguments.length,
@@ -2190,11 +2190,11 @@
           }});
       }, {"./$.def": 11}],
       49: [function(require, module, exports) {
-        require("./$.species")(Array);
+        require('./$.species')(Array);
       }, {"./$.species": 22}],
       50: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
+        var $ = require('./$'),
             NAME = 'name',
             setDesc = $.setDesc,
             FunctionProto = Function.prototype;
@@ -2213,8 +2213,8 @@
       }, {"./$": 16}],
       51: [function(require, module, exports) {
         'use strict';
-        var strong = require("./$.collection-strong");
-        require("./$.collection")('Map', {
+        var strong = require('./$.collection-strong');
+        require('./$.collection')('Map', {
           get: function get(key) {
             var entry = strong.getEntry(this, key);
             return entry && entry.v;
@@ -2229,7 +2229,7 @@
       }],
       52: [function(require, module, exports) {
         var Infinity = 1 / 0,
-            $def = require("./$.def"),
+            $def = require('./$.def'),
             E = Math.E,
             pow = Math.pow,
             abs = Math.abs,
@@ -2336,8 +2336,8 @@
         });
       }, {"./$.def": 11}],
       53: [function(require, module, exports) {
-        var $ = require("./$"),
-            $def = require("./$.def"),
+        var $ = require('./$'),
+            $def = require('./$.def'),
             abs = Math.abs,
             floor = Math.floor,
             _isFinite = $.g.isFinite,
@@ -2367,28 +2367,28 @@
         "./$.def": 11
       }],
       54: [function(require, module, exports) {
-        var $def = require("./$.def");
-        $def($def.S, 'Object', {assign: require("./$.assign")});
+        var $def = require('./$.def');
+        $def($def.S, 'Object', {assign: require('./$.assign')});
       }, {
         "./$.assign": 5,
         "./$.def": 11
       }],
       55: [function(require, module, exports) {
-        var $def = require("./$.def");
+        var $def = require('./$.def');
         $def($def.S, 'Object', {is: function is(x, y) {
             return x === y ? x !== 0 || 1 / x === 1 / y : x != x && y != y;
           }});
       }, {"./$.def": 11}],
       56: [function(require, module, exports) {
-        var $def = require("./$.def");
-        $def($def.S, 'Object', {setPrototypeOf: require("./$.set-proto").set});
+        var $def = require('./$.def');
+        $def($def.S, 'Object', {setPrototypeOf: require('./$.set-proto').set});
       }, {
         "./$.def": 11,
         "./$.set-proto": 21
       }],
       57: [function(require, module, exports) {
-        var $ = require("./$"),
-            $def = require("./$.def"),
+        var $ = require('./$'),
+            $def = require('./$.def'),
             isObject = $.isObject,
             toObject = $.toObject;
         function wrapObjectMethod(METHOD, MODE) {
@@ -2431,10 +2431,10 @@
       }],
       58: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            cof = require("./$.cof"),
+        var $ = require('./$'),
+            cof = require('./$.cof'),
             tmp = {};
-        tmp[require("./$.wks")('toStringTag')] = 'z';
+        tmp[require('./$.wks')('toStringTag')] = 'z';
         if ($.FW && cof(tmp) != 'z')
           $.hide(Object.prototype, 'toString', function toString() {
             return '[object ' + cof.classof(this) + ']';
@@ -2446,19 +2446,19 @@
       }],
       59: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            ctx = require("./$.ctx"),
-            cof = require("./$.cof"),
-            $def = require("./$.def"),
-            assert = require("./$.assert"),
-            $iter = require("./$.iter"),
-            SPECIES = require("./$.wks")('species'),
-            RECORD = require("./$.uid").safe('record'),
+        var $ = require('./$'),
+            ctx = require('./$.ctx'),
+            cof = require('./$.cof'),
+            $def = require('./$.def'),
+            assert = require('./$.assert'),
+            $iter = require('./$.iter'),
+            SPECIES = require('./$.wks')('species'),
+            RECORD = require('./$.uid').safe('record'),
             forOf = $iter.forOf,
             PROMISE = 'Promise',
             global = $.g,
             process = global.process,
-            asap = process && process.nextTick || require("./$.task").set,
+            asap = process && process.nextTick || require('./$.task').set,
             P = global[PROMISE],
             Base = P,
             isFunction = $.isFunction,
@@ -2537,7 +2537,7 @@
         function $reject(value) {
           var record = this;
           if (record.d)
-            return ;
+            return;
           record.d = true;
           record = record.r || record;
           record.v = value;
@@ -2549,7 +2549,7 @@
               then,
               wrapper;
           if (record.d)
-            return ;
+            return;
           record.d = true;
           record = record.r || record;
           try {
@@ -2612,7 +2612,7 @@
         }
         $def($def.G + $def.W + $def.F * (P != Base), {Promise: P});
         cof.set(P, PROMISE);
-        require("./$.species")(P);
+        require('./$.species')(P);
         $def($def.S, PROMISE, {
           reject: function reject(r) {
             return new (getConstructor(this))(function(res, rej) {
@@ -2625,7 +2625,7 @@
             });
           }
         });
-        $def($def.S + $def.F * !require("./$.iter-detect")(function(iter) {
+        $def($def.S + $def.F * !require('./$.iter-detect')(function(iter) {
           P.all(iter)['catch'](function() {});
         }), PROMISE, {
           all: function all(iterable) {
@@ -2669,13 +2669,13 @@
         "./$.wks": 27
       }],
       60: [function(require, module, exports) {
-        var $ = require("./$"),
-            $def = require("./$.def"),
-            setProto = require("./$.set-proto"),
-            $iter = require("./$.iter"),
-            ITER = require("./$.uid").safe('iter'),
+        var $ = require('./$'),
+            $def = require('./$.def'),
+            setProto = require('./$.set-proto'),
+            $iter = require('./$.iter'),
+            ITER = require('./$.uid').safe('iter'),
             step = $iter.step,
-            assert = require("./$.assert"),
+            assert = require('./$.assert'),
             isObject = $.isObject,
             getDesc = $.getDesc,
             setDesc = $.setDesc,
@@ -2745,7 +2745,7 @@
           return ownDesc.set === undefined ? false : (ownDesc.set.call(receiver, V), true);
         }
         var reflect = {
-          apply: require("./$.ctx")(Function.call, apply, 3),
+          apply: require('./$.ctx')(Function.call, apply, 3),
           construct: function construct(target, argumentsList) {
             var proto = assert.fn(arguments.length < 3 ? target : arguments[2]).prototype,
                 instance = $.create(isObject(proto) ? proto : Object.prototype),
@@ -2773,7 +2773,7 @@
           isExtensible: function isExtensible(target) {
             return !!_isExtensible(assertObject(target));
           },
-          ownKeys: require("./$.own-keys"),
+          ownKeys: require('./$.own-keys'),
           preventExtensions: wrap(Object.preventExtensions || $.it),
           set: set
         };
@@ -2801,8 +2801,8 @@
       }],
       61: [function(require, module, exports) {
         'use strict';
-        var strong = require("./$.collection-strong");
-        require("./$.collection")('Set', {add: function add(value) {
+        var strong = require('./$.collection-strong');
+        require('./$.collection')('Set', {add: function add(value) {
             return strong.def(this, value = value === 0 ? 0 : value, value);
           }}, strong);
       }, {
@@ -2810,17 +2810,17 @@
         "./$.collection-strong": 7
       }],
       62: [function(require, module, exports) {
-        var $def = require("./$.def");
-        $def($def.P, 'String', {codePointAt: require("./$.string-at")(false)});
+        var $def = require('./$.def');
+        $def($def.P, 'String', {codePointAt: require('./$.string-at')(false)});
       }, {
         "./$.def": 11,
         "./$.string-at": 23
       }],
       63: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            cof = require("./$.cof"),
-            $def = require("./$.def"),
+        var $ = require('./$'),
+            cof = require('./$.cof'),
+            $def = require('./$.def'),
             toLength = $.toLength;
         $def($def.P, 'String', {endsWith: function endsWith(searchString) {
             if (cof(searchString) == 'RegExp')
@@ -2838,8 +2838,8 @@
         "./$.def": 11
       }],
       64: [function(require, module, exports) {
-        var $def = require("./$.def"),
-            toIndex = require("./$").toIndex,
+        var $def = require('./$.def'),
+            toIndex = require('./$').toIndex,
             fromCharCode = String.fromCharCode;
         $def($def.S, 'String', {fromCodePoint: function fromCodePoint(x) {
             var res = [],
@@ -2860,9 +2860,9 @@
       }],
       65: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            cof = require("./$.cof"),
-            $def = require("./$.def");
+        var $ = require('./$'),
+            cof = require('./$.cof'),
+            $def = require('./$.def');
         $def($def.P, 'String', {includes: function includes(searchString) {
             if (cof(searchString) == 'RegExp')
               throw TypeError();
@@ -2874,10 +2874,10 @@
         "./$.def": 11
       }],
       66: [function(require, module, exports) {
-        var set = require("./$").set,
-            at = require("./$.string-at")(true),
-            ITER = require("./$.uid").safe('iter'),
-            $iter = require("./$.iter"),
+        var set = require('./$').set,
+            at = require('./$.string-at')(true),
+            ITER = require('./$.uid').safe('iter'),
+            $iter = require('./$.iter'),
             step = $iter.step;
         $iter.std(String, 'String', function(iterated) {
           set(this, ITER, {
@@ -2902,8 +2902,8 @@
         "./$.uid": 25
       }],
       67: [function(require, module, exports) {
-        var $ = require("./$"),
-            $def = require("./$.def");
+        var $ = require('./$'),
+            $def = require('./$.def');
         $def($def.S, 'String', {raw: function raw(callSite) {
             var tpl = $.toObject(callSite.raw),
                 len = $.toLength(tpl.length),
@@ -2923,8 +2923,8 @@
       }],
       68: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            $def = require("./$.def");
+        var $ = require('./$'),
+            $def = require('./$.def');
         $def($def.P, 'String', {repeat: function repeat(count) {
             var str = String($.assertDefined(this)),
                 res = '',
@@ -2942,9 +2942,9 @@
       }],
       69: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            cof = require("./$.cof"),
-            $def = require("./$.def");
+        var $ = require('./$'),
+            cof = require('./$.cof'),
+            $def = require('./$.def');
         $def($def.P, 'String', {startsWith: function startsWith(searchString) {
             if (cof(searchString) == 'RegExp')
               throw TypeError();
@@ -2960,11 +2960,11 @@
       }],
       70: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            setTag = require("./$.cof").set,
-            uid = require("./$.uid"),
-            $def = require("./$.def"),
-            keyOf = require("./$.keyof"),
+        var $ = require('./$'),
+            setTag = require('./$.cof').set,
+            uid = require('./$.uid'),
+            $def = require('./$.def'),
+            keyOf = require('./$.keyof'),
             has = $.has,
             hide = $.hide,
             getNames = $.getNames,
@@ -3013,7 +3013,7 @@
           }
         };
         $.each.call(('hasInstance,isConcatSpreadable,iterator,match,replace,search,' + 'species,split,toPrimitive,toStringTag,unscopables').split(','), function(it) {
-          var sym = require("./$.wks")(it);
+          var sym = require('./$.wks')(it);
           symbolStatics[it] = Symbol === Base ? sym : wrap(sym);
         });
         setter = true;
@@ -3051,8 +3051,8 @@
       }],
       71: [function(require, module, exports) {
         'use strict';
-        var $ = require("./$"),
-            weak = require("./$.collection-weak"),
+        var $ = require('./$'),
+            weak = require('./$.collection-weak'),
             leakStore = weak.leakStore,
             ID = weak.ID,
             WEAK = weak.WEAK,
@@ -3060,7 +3060,7 @@
             isObject = $.isObject,
             isFrozen = Object.isFrozen || $.core.Object.isFrozen,
             tmp = {};
-        var WeakMap = require("./$.collection")('WeakMap', {
+        var WeakMap = require('./$.collection')('WeakMap', {
           get: function get(key) {
             if (isObject(key)) {
               if (isFrozen(key))
@@ -3092,8 +3092,8 @@
       }],
       72: [function(require, module, exports) {
         'use strict';
-        var weak = require("./$.collection-weak");
-        require("./$.collection")('WeakSet', {add: function add(value) {
+        var weak = require('./$.collection-weak');
+        require('./$.collection')('WeakSet', {add: function add(value) {
             return weak.def(this, value, true);
           }}, weak, false, true);
       }, {
@@ -3101,18 +3101,18 @@
         "./$.collection-weak": 8
       }],
       73: [function(require, module, exports) {
-        var $def = require("./$.def");
-        $def($def.P, 'Array', {includes: require("./$.array-includes")(true)});
-        require("./$.unscope")('includes');
+        var $def = require('./$.def');
+        $def($def.P, 'Array', {includes: require('./$.array-includes')(true)});
+        require('./$.unscope')('includes');
       }, {
         "./$.array-includes": 2,
         "./$.def": 11,
         "./$.unscope": 26
       }],
       74: [function(require, module, exports) {
-        var $ = require("./$"),
-            $def = require("./$.def"),
-            ownKeys = require("./$.own-keys");
+        var $ = require('./$'),
+            $def = require('./$.def'),
+            ownKeys = require('./$.own-keys');
         $def($def.S, 'Object', {getOwnPropertyDescriptors: function getOwnPropertyDescriptors(object) {
             var O = $.toObject(object),
                 result = {};
@@ -3127,8 +3127,8 @@
         "./$.own-keys": 18
       }],
       75: [function(require, module, exports) {
-        var $ = require("./$"),
-            $def = require("./$.def");
+        var $ = require('./$'),
+            $def = require('./$.def');
         function createObjectToArray(isEntries) {
           return function(object) {
             var O = $.toObject(object),
@@ -3155,15 +3155,15 @@
         "./$.def": 11
       }],
       76: [function(require, module, exports) {
-        var $def = require("./$.def");
-        $def($def.S, 'RegExp', {escape: require("./$.replacer")(/([\\\-[\]{}()*+?.,^$|])/g, '\\$1', true)});
+        var $def = require('./$.def');
+        $def($def.S, 'RegExp', {escape: require('./$.replacer')(/([\\\-[\]{}()*+?.,^$|])/g, '\\$1', true)});
       }, {
         "./$.def": 11,
         "./$.replacer": 20
       }],
       77: [function(require, module, exports) {
-        var $def = require("./$.def"),
-            forOf = require("./$.iter").forOf;
+        var $def = require('./$.def'),
+            forOf = require('./$.iter').forOf;
         $def($def.P, 'Set', {toJSON: function() {
             var arr = [];
             forOf(this, false, arr.push, arr);
@@ -3174,15 +3174,15 @@
         "./$.iter": 15
       }],
       78: [function(require, module, exports) {
-        var $def = require("./$.def");
-        $def($def.P, 'String', {at: require("./$.string-at")(true)});
+        var $def = require('./$.def');
+        $def($def.P, 'String', {at: require('./$.string-at')(true)});
       }, {
         "./$.def": 11,
         "./$.string-at": 23
       }],
       79: [function(require, module, exports) {
-        var $ = require("./$"),
-            $def = require("./$.def"),
+        var $ = require('./$'),
+            $def = require('./$.def'),
             $Array = $.core.Array || Array,
             statics = {};
         function setStatics(keys, length) {
@@ -3190,7 +3190,7 @@
             if (length == undefined && key in $Array)
               statics[key] = $Array[key];
             else if (key in [])
-              statics[key] = require("./$.ctx")(Function.call, [][key], length);
+              statics[key] = require('./$.ctx')(Function.call, [][key], length);
           });
         }
         setStatics('pop,reverse,shift,keys,values,entries', 1);
@@ -3203,10 +3203,10 @@
         "./$.def": 11
       }],
       80: [function(require, module, exports) {
-        require("./es6.array.iterator");
-        var $ = require("./$"),
-            Iterators = require("./$.iter").Iterators,
-            ITERATOR = require("./$.wks")('iterator'),
+        require('./es6.array.iterator');
+        var $ = require('./$'),
+            Iterators = require('./$.iter').Iterators,
+            ITERATOR = require('./$.wks')('iterator'),
             NodeList = $.g.NodeList;
         if ($.FW && NodeList && !(ITERATOR in NodeList.prototype)) {
           $.hide(NodeList.prototype, ITERATOR, Iterators.Array);
@@ -3219,8 +3219,8 @@
         "./es6.array.iterator": 47
       }],
       81: [function(require, module, exports) {
-        var $def = require("./$.def"),
-            $task = require("./$.task");
+        var $def = require('./$.def'),
+            $task = require('./$.task');
         $def($def.G + $def.B, {
           setImmediate: $task.set,
           clearImmediate: $task.clear
@@ -3230,10 +3230,10 @@
         "./$.task": 24
       }],
       82: [function(require, module, exports) {
-        var $ = require("./$"),
-            $def = require("./$.def"),
-            invoke = require("./$.invoke"),
-            partial = require("./$.partial"),
+        var $ = require('./$'),
+            $def = require('./$.def'),
+            invoke = require('./$.invoke'),
+            partial = require('./$.partial'),
             MSIE = !!$.g.navigator && /MSIE .\./.test(navigator.userAgent);
         function wrap(set) {
           return MSIE ? function(fn, time) {
@@ -3260,4 +3260,4 @@
     else
       __g.core = __e;
   }();
-})(require("process"));
+})(require('process'));

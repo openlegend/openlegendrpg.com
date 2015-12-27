@@ -33,8 +33,8 @@
           throw new Error("only one instance of babel/polyfill is allowed");
         }
         global._babelPolyfill = true;
-        require("core-js/shim");
-        require("regenerator-babel/runtime");
+        require('core-js/shim');
+        require('regenerator-babel/runtime');
       }).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
     }, {
       "core-js/shim": 2,
@@ -1255,7 +1255,7 @@
                   then,
                   wrapper;
               if (record.d)
-                return ;
+                return;
               record.d = true;
               record = record.r || record;
               try {
@@ -1280,7 +1280,7 @@
             function reject(value) {
               var record = this;
               if (record.d)
-                return ;
+                return;
               record.d = true;
               record = record.r || record;
               record.v = value;
@@ -1822,7 +1822,7 @@
             if (inModule) {
               module.exports = runtime;
             }
-            return ;
+            return;
           }
           runtime = global.regeneratorRuntime = inModule ? module.exports : {};
           function wrap(innerFn, outerFn, self, tryLocsList) {
@@ -1871,7 +1871,7 @@
                 var record = tryCatch(this, null, arg);
                 if (record.type === "throw") {
                   reject(record.arg);
-                  return ;
+                  return;
                 }
                 var info = record.arg;
                 if (info.done) {
@@ -2182,4 +2182,4 @@
       }).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
     }, {}]
   }, {}, [1]);
-})(require("process"));
+})(require('process'));

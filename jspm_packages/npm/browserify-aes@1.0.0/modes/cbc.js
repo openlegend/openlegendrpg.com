@@ -1,5 +1,5 @@
 /* */ 
-var xor = require("../xor");
+var xor = require('../xor');
 exports.encrypt = function(self, block) {
   var data = xor(block, self._prev);
   self._prev = self._cipher.encryptBlock(data);

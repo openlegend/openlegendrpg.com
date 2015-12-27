@@ -39,4 +39,4 @@
     }
     return key;
   };
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

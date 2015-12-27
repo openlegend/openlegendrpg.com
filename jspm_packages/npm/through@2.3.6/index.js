@@ -1,6 +1,6 @@
 /* */ 
 (function(process) {
-  var Stream = require("stream");
+  var Stream = require('stream');
   exports = module.exports = through;
   through.through = through;
   function through(write, end, opts) {
@@ -55,7 +55,7 @@
     }
     stream.end = function(data) {
       if (ended)
-        return ;
+        return;
       ended = true;
       if (arguments.length)
         stream.write(data);
@@ -64,7 +64,7 @@
     };
     stream.destroy = function() {
       if (destroyed)
-        return ;
+        return;
       destroyed = true;
       ended = true;
       buffer.length = 0;
@@ -74,7 +74,7 @@
     };
     stream.pause = function() {
       if (stream.paused)
-        return ;
+        return;
       stream.paused = true;
       return stream;
     };
@@ -90,4 +90,4 @@
     };
     return stream;
   }
-})(require("process"));
+})(require('process'));

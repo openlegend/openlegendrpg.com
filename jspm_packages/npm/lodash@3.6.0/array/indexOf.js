@@ -1,6 +1,6 @@
 /* */ 
-var baseIndexOf = require("../internal/baseIndexOf"),
-    binaryIndex = require("../internal/binaryIndex");
+var baseIndexOf = require('../internal/baseIndexOf'),
+    binaryIndex = require('../internal/binaryIndex');
 var nativeMax = Math.max;
 function indexOf(array, value, fromIndex) {
   var length = array ? array.length : 0;

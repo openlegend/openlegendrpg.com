@@ -13,13 +13,13 @@ var _classCallCheck = function(instance, Constructor) {
 };
 exports.ClassDeclaration = ClassDeclaration;
 exports.ClassExpression = ClassExpression;
-var ReplaceSupers = _interopRequire(require("../../helpers/replace-supers"));
-var nameMethod = _interopRequireWildcard(require("../../helpers/name-method"));
-var defineMap = _interopRequireWildcard(require("../../helpers/define-map"));
-var messages = _interopRequireWildcard(require("../../../messages"));
-var util = _interopRequireWildcard(require("../../../util"));
-var traverse = _interopRequire(require("../../../traversal/index"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var ReplaceSupers = _interopRequire(require('../../helpers/replace-supers'));
+var nameMethod = _interopRequireWildcard(require('../../helpers/name-method'));
+var defineMap = _interopRequireWildcard(require('../../helpers/define-map'));
+var messages = _interopRequireWildcard(require('../../../messages'));
+var util = _interopRequireWildcard(require('../../../util'));
+var traverse = _interopRequire(require('../../../traversal/index'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var check = exports.check = t.isClass;
 function ClassDeclaration(node, parent, scope, file) {
   return t.variableDeclaration("let", [t.variableDeclarator(node.id, t.toExpression(node))]);
@@ -173,7 +173,7 @@ var ClassTransformer = (function() {
     }
   };
   ClassTransformer.prototype.verifyConstructor = function verifyConstructor(node) {
-    return ;
+    return;
     var state = {
       hasBareSuper: false,
       hasSuper: this.hasSuper,
@@ -197,7 +197,7 @@ var ClassTransformer = (function() {
         var expr = t.expressionStatement(t.assignmentExpression("=", methodName, node.value));
         t.inheritsComments(expr, node);
         this.body.push(expr);
-        return ;
+        return;
       }
       kind = "value";
     }
@@ -212,7 +212,7 @@ var ClassTransformer = (function() {
   };
   ClassTransformer.prototype.pushProperty = function pushProperty(node) {
     if (!node.value)
-      return ;
+      return;
     var key;
     if (node["static"]) {
       key = t.memberExpression(this.classRef, node.key);

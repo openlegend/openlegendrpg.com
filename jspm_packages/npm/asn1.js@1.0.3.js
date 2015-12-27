@@ -1,1 +1,1 @@
-module.exports = require("npm:asn1.js@1.0.3/lib/asn1");
+module.exports = require("npm:asn1.js@1.0.3/lib/asn1.js");

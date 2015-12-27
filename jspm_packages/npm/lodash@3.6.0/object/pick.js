@@ -1,9 +1,9 @@
 /* */ 
-var baseFlatten = require("../internal/baseFlatten"),
-    bindCallback = require("../internal/bindCallback"),
-    pickByArray = require("../internal/pickByArray"),
-    pickByCallback = require("../internal/pickByCallback"),
-    restParam = require("../function/restParam");
+var baseFlatten = require('../internal/baseFlatten'),
+    bindCallback = require('../internal/bindCallback'),
+    pickByArray = require('../internal/pickByArray'),
+    pickByCallback = require('../internal/pickByCallback'),
+    restParam = require('../function/restParam');
 var pick = restParam(function(object, props) {
   if (object == null) {
     return {};

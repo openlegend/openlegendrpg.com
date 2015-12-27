@@ -1,3 +1,3 @@
 /* */ 
-require("../modules/core.array.turn");
-module.exports = require("../modules/$").core.Array;
+require('../modules/core.array.turn');
+module.exports = require('../modules/$').core.Array;

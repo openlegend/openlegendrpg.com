@@ -1,5 +1,5 @@
 /* */ 
-var crypto = require("crypto");
+var crypto = require('crypto');
 exports.DiffieHellmanGroup = crypto.DiffieHellmanGroup;
 exports.createDiffieHellmanGroup = crypto.createDiffieHellmanGroup;
 exports.getDiffieHellman = crypto.getDiffieHellman;

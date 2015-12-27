@@ -1,9 +1,9 @@
 /* */ 
-var assert = require("assert");
-var types = require("ast-types");
+var assert = require('assert');
+var types = require('ast-types');
 var n = types.namedTypes;
 var b = types.builders;
-var inherits = require("util").inherits;
+var inherits = require('util').inherits;
 var hasOwn = Object.prototype.hasOwnProperty;
 function Entry() {
   assert.ok(this instanceof Entry);
@@ -86,7 +86,7 @@ inherits(LabeledEntry, Entry);
 exports.LabeledEntry = LabeledEntry;
 function LeapManager(emitter) {
   assert.ok(this instanceof LeapManager);
-  var Emitter = require("./emit").Emitter;
+  var Emitter = require('./emit').Emitter;
   assert.ok(emitter instanceof Emitter);
   this.emitter = emitter;
   this.entryStack = [new FunctionEntry(emitter.finalLoc)];

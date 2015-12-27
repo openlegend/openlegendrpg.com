@@ -6,8 +6,8 @@ var _interopRequireWildcard = function(obj) {
 exports.ForOfStatement = ForOfStatement;
 exports.Property = Property;
 exports.BlockStatement = BlockStatement;
-var messages = _interopRequireWildcard(require("../../../messages"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var messages = _interopRequireWildcard(require('../../../messages'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function ForOfStatement(node, parent, scope, file) {
   var left = node.left;
   if (t.isVariableDeclaration(left)) {
@@ -35,7 +35,7 @@ function BlockStatement(node) {
     if (t.isExpressionStatement(bodyNode) && t.isLiteral(bodyNode.expression)) {
       bodyNode._blockHoist = Infinity;
     } else {
-      return ;
+      return;
     }
   }
 }

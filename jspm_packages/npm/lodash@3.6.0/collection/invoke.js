@@ -1,7 +1,7 @@
 /* */ 
-var baseEach = require("../internal/baseEach"),
-    isLength = require("../internal/isLength"),
-    restParam = require("../function/restParam");
+var baseEach = require('../internal/baseEach'),
+    isLength = require('../internal/isLength'),
+    restParam = require('../function/restParam');
 var invoke = restParam(function(collection, methodName, args) {
   var index = -1,
       isFunc = typeof methodName == 'function',

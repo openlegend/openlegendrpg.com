@@ -1,10 +1,10 @@
 /* */ 
 'use strict';
-var $ = require("./$"),
-    ctx = require("./$.ctx"),
-    safe = require("./$.uid").safe,
-    assert = require("./$.assert"),
-    $iter = require("./$.iter"),
+var $ = require('./$'),
+    ctx = require('./$.ctx'),
+    safe = require('./$.uid').safe,
+    assert = require('./$.assert'),
+    $iter = require('./$.iter'),
     has = $.has,
     set = $.set,
     isObject = $.isObject,

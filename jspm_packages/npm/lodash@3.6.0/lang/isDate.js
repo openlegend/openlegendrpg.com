@@ -1,5 +1,5 @@
 /* */ 
-var isObjectLike = require("../internal/isObjectLike");
+var isObjectLike = require('../internal/isObjectLike');
 var dateTag = '[object Date]';
 var objectProto = Object.prototype;
 var objToString = objectProto.toString;

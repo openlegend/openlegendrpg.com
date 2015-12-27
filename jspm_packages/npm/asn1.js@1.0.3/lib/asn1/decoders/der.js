@@ -1,6 +1,6 @@
 /* */ 
-var inherits = require("inherits");
-var asn1 = require("../../asn1");
+var inherits = require('inherits');
+var asn1 = require('../../asn1');
 var base = asn1.base;
 var bignum = asn1.bignum;
 var der = asn1.constants.der;

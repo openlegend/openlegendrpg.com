@@ -1,6 +1,6 @@
 /* */ 
-exports.publicEncrypt = require("./publicEncrypt");
-exports.privateDecrypt = require("./privateDecrypt");
+exports.publicEncrypt = require('./publicEncrypt');
+exports.privateDecrypt = require('./privateDecrypt');
 exports.privateEncrypt = function privateEncrypt(key, buf) {
   return exports.publicEncrypt(key, buf, true);
 };

@@ -1,10 +1,10 @@
 /* */ 
 (function(Buffer) {
-  var aes = require("./aes");
-  var Transform = require("./cipherBase");
-  var inherits = require("inherits");
-  var GHASH = require("./ghash");
-  var xor = require("./xor");
+  var aes = require('./aes');
+  var Transform = require('./cipherBase');
+  var inherits = require('inherits');
+  var GHASH = require('./ghash');
+  var xor = require('./xor');
   inherits(StreamCipher, Transform);
   module.exports = StreamCipher;
   function StreamCipher(mode, key, iv, decrypt) {
@@ -96,4 +96,4 @@
     }
     return out;
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

@@ -1,5 +1,5 @@
 /* */ 
-var isArray = require("../lang/isArray");
+var isArray = require('../lang/isArray');
 function zipObject(props, values) {
   var index = -1,
       length = props ? props.length : 0,

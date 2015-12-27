@@ -6,7 +6,7 @@ var _interopRequireWildcard = function(obj) {
 exports.check = check;
 exports.ImportDeclaration = ImportDeclaration;
 exports.ExportDeclaration = ExportDeclaration;
-var t = _interopRequireWildcard(require("../../../types/index"));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function check(node) {
   return t.isImportDeclaration(node) || t.isExportDeclaration(node);
 }
@@ -19,7 +19,7 @@ function ImportDeclaration(node, parent, scope, file) {
 function ExportDeclaration(node, parent, scope) {
   ImportDeclaration.apply(this, arguments);
   if (node.isType)
-    return ;
+    return;
   var declar = node.declaration;
   var getDeclar = function getDeclar() {
     declar._ignoreUserWhitespace = true;

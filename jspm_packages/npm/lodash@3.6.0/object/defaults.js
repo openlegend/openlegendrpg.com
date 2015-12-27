@@ -1,7 +1,7 @@
 /* */ 
-var assign = require("./assign"),
-    assignDefaults = require("../internal/assignDefaults"),
-    restParam = require("../function/restParam");
+var assign = require('./assign'),
+    assignDefaults = require('../internal/assignDefaults'),
+    restParam = require('../function/restParam');
 var defaults = restParam(function(args) {
   var object = args[0];
   if (object == null) {

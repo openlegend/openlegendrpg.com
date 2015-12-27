@@ -5,7 +5,7 @@ var _interopRequire = function(obj) {
 };
 exports.has = has;
 exports.wrap = wrap;
-var t = _interopRequire(require("../../types/index"));
+var t = _interopRequire(require('../../types/index'));
 function has(node) {
   var first = node.body[0];
   return t.isExpressionStatement(first) && t.isLiteral(first.expression, {value: "use strict"});

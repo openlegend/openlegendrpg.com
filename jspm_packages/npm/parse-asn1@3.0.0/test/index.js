@@ -1,9 +1,9 @@
 /* */ 
-var test = require("tape");
-var fs = require("fs");
+var test = require('tape');
+var fs = require('fs');
 var priv1024 = fs.readFileSync(__dirname + '/rsa.1024.priv');
-var parseKey = require("../../parse-asn1@3.0.0");
-var crypto = require("crypto");
+var parseKey = require('../index');
+var crypto = require('crypto');
 var rsa1024 = {
   private: fs.readFileSync(__dirname + '/rsa.1024.priv'),
   public: fs.readFileSync(__dirname + '/rsa.1024.pub')

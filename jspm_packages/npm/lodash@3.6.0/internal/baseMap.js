@@ -1,5 +1,5 @@
 /* */ 
-var baseEach = require("./baseEach");
+var baseEach = require('./baseEach');
 function baseMap(collection, iteratee) {
   var result = [];
   baseEach(collection, function(value, key, collection) {

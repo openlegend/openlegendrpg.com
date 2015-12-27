@@ -1,10 +1,10 @@
 /* */ 
 (function(process) {
-  var assert = require("assert");
-  var path = require("path");
-  var Q = require("q");
-  var fs = require("graceful-fs");
-  var util = require("./util");
+  var assert = require('assert');
+  var path = require('path');
+  var Q = require('q');
+  var fs = require('graceful-fs');
+  var util = require('./util');
   var readdir = Q.denodeify(fs.readdir);
   var lstat = Q.denodeify(fs.lstat);
   function processDirP(pattern, dir) {
@@ -38,4 +38,4 @@
       return pathToMatch;
     });
   };
-})(require("process"));
+})(require('process'));

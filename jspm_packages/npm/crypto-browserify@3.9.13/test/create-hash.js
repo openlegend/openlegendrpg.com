@@ -1,12 +1,12 @@
 /* */ 
 (function(Buffer) {
-  var fs = require("fs");
-  var test = require("tape");
+  var fs = require('fs');
+  var test = require('tape');
   var algorithms = ['sha1', 'sha224', 'sha256', 'sha384', 'sha512', 'md5', 'rmd160'];
   var encodings = ['hex', 'base64'];
-  var vectors = require("hash-test-vectors");
-  testLib('createHash in crypto-browserify', require("../../crypto-browserify@3.9.13").createHash);
-  testLib('create-hash/browser', require("create-hash/browser"));
+  var vectors = require('hash-test-vectors');
+  testLib('createHash in crypto-browserify', require('../index').createHash);
+  testLib('create-hash/browser', require('create-hash/browser'));
   function testLib(name, createHash) {
     test(name, function(t) {
       algorithms.forEach(function(algorithm) {
@@ -38,4 +38,4 @@
       });
     });
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

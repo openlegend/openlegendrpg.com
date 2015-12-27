@@ -1,2 +1,2 @@
 /* */ 
-module.exports = require("./wrapperToString");
+module.exports = require('./wrapperToString');

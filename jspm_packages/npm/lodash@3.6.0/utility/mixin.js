@@ -1,9 +1,9 @@
 /* */ 
-var arrayCopy = require("../internal/arrayCopy"),
-    baseFunctions = require("../internal/baseFunctions"),
-    isFunction = require("../lang/isFunction"),
-    isObject = require("../lang/isObject"),
-    keys = require("../object/keys");
+var arrayCopy = require('../internal/arrayCopy'),
+    baseFunctions = require('../internal/baseFunctions'),
+    isFunction = require('../lang/isFunction'),
+    isObject = require('../lang/isObject'),
+    keys = require('../object/keys');
 var arrayProto = Array.prototype;
 var push = arrayProto.push;
 function mixin(object, source, options) {

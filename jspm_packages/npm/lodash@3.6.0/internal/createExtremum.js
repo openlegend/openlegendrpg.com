@@ -1,11 +1,11 @@
 /* */ 
-var baseCallback = require("./baseCallback"),
-    charAtCallback = require("./charAtCallback"),
-    extremumBy = require("./extremumBy"),
-    isArray = require("../lang/isArray"),
-    isIterateeCall = require("./isIterateeCall"),
-    isString = require("../lang/isString"),
-    toIterable = require("./toIterable");
+var baseCallback = require('./baseCallback'),
+    charAtCallback = require('./charAtCallback'),
+    extremumBy = require('./extremumBy'),
+    isArray = require('../lang/isArray'),
+    isIterateeCall = require('./isIterateeCall'),
+    isString = require('../lang/isString'),
+    toIterable = require('./toIterable');
 function createExtremum(arrayFunc, isMin) {
   return function(collection, iteratee, thisArg) {
     if (thisArg && isIterateeCall(collection, iteratee, thisArg)) {

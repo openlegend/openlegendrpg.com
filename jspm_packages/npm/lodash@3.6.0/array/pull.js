@@ -1,5 +1,5 @@
 /* */ 
-var baseIndexOf = require("../internal/baseIndexOf");
+var baseIndexOf = require('../internal/baseIndexOf');
 var arrayProto = Array.prototype;
 var splice = arrayProto.splice;
 function pull() {

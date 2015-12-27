@@ -51,8 +51,8 @@
       1: [function(require, module, exports) {
         (function(global) {
           "use strict";
-          var transform = module.exports = require("../transformation");
-          transform.version = require("../../../package").version;
+          var transform = module.exports = require('../transformation');
+          transform.version = require('../../../package').version;
           transform.transform = transform;
           transform.run = function(code) {
             var opts = arguments[1] === undefined ? {} : arguments[1];
@@ -70,7 +70,7 @@
               xhr.overrideMimeType("text/plain");
             xhr.onreadystatechange = function() {
               if (xhr.readyState !== 4)
-                return ;
+                return;
               var status = xhr.status;
               if (status === 0 || status === 200) {
                 var param = [xhr.responseText, opts];
@@ -147,11 +147,11 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var repeating = _interopRequire(require("repeating"));
-        var trimRight = _interopRequire(require("trim-right"));
-        var isBoolean = _interopRequire(require("lodash/lang/isBoolean"));
-        var includes = _interopRequire(require("lodash/collection/includes"));
-        var isNumber = _interopRequire(require("lodash/lang/isNumber"));
+        var repeating = _interopRequire(require('repeating'));
+        var trimRight = _interopRequire(require('trim-right'));
+        var isBoolean = _interopRequire(require('lodash/lang/isBoolean'));
+        var includes = _interopRequire(require('lodash/collection/includes'));
+        var isNumber = _interopRequire(require('lodash/lang/isNumber'));
         var Buffer = function() {
           function Buffer(position, format) {
             _classCallCheck(this, Buffer);
@@ -196,25 +196,25 @@
           };
           Buffer.prototype.space = function space() {
             if (this.format.compact)
-              return ;
+              return;
             if (this.buf && !this.isLast(" ") && !this.isLast("\n")) {
               this.push(" ");
             }
           };
           Buffer.prototype.removeLast = function removeLast(cha) {
             if (this.format.compact)
-              return ;
+              return;
             if (!this.isLast(cha))
-              return ;
+              return;
             this.buf = this.buf.substr(0, this.buf.length - 1);
             this.position.unshift(cha);
           };
           Buffer.prototype.newline = function newline(i, removeLast) {
             if (this.format.compact)
-              return ;
+              return;
             if (this.format.concise) {
               this.space();
-              return ;
+              return;
             }
             if (!removeLast)
               removeLast = false;
@@ -223,12 +223,12 @@
               if (this.endsWith("{\n") || this.endsWith(":\n"))
                 i--;
               if (i <= 0)
-                return ;
+                return;
               while (i > 0) {
                 this._newline(removeLast);
                 i--;
               }
-              return ;
+              return;
             }
             if (isBoolean(i)) {
               removeLast = i;
@@ -237,7 +237,7 @@
           };
           Buffer.prototype._newline = function _newline(removeLast) {
             if (this.endsWith("\n\n"))
-              return ;
+              return;
             if (removeLast && this.isLast("\n"))
               this.removeLast("\n");
             this.removeLast(" ");
@@ -247,7 +247,7 @@
           Buffer.prototype._removeSpacesAfterLastNewline = function _removeSpacesAfterLastNewline() {
             var lastNewlineIndex = this.buf.lastIndexOf("\n");
             if (lastNewlineIndex === -1)
-              return ;
+              return;
             var index = this.buf.length - 1;
             while (index > lastNewlineIndex) {
               if (this.buf[index] !== " ") {
@@ -412,9 +412,9 @@
         exports.ExpressionStatement = ExpressionStatement;
         exports.AssignmentExpression = AssignmentExpression;
         exports.MemberExpression = MemberExpression;
-        var isInteger = _interopRequire(require("is-integer"));
-        var isNumber = _interopRequire(require("lodash/lang/isNumber"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var isInteger = _interopRequire(require('is-integer'));
+        var isNumber = _interopRequire(require('lodash/lang/isNumber'));
+        var t = _interopRequireWildcard(require('../../types'));
         function UnaryExpression(node, print) {
           var hasSpace = /[a-z]$/.test(node.operator);
           var arg = node.argument;
@@ -576,7 +576,7 @@
         exports.UnionTypeAnnotation = UnionTypeAnnotation;
         exports.TypeCastExpression = TypeCastExpression;
         exports.VoidTypeAnnotation = VoidTypeAnnotation;
-        var t = _interopRequireWildcard(require("../../types"));
+        var t = _interopRequireWildcard(require('../../types'));
         function AnyTypeAnnotation() {
           this.push("any");
         }
@@ -795,8 +795,8 @@
         exports.JSXOpeningElement = JSXOpeningElement;
         exports.JSXClosingElement = JSXClosingElement;
         exports.JSXEmptyExpression = JSXEmptyExpression;
-        var each = _interopRequire(require("lodash/collection/each"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var each = _interopRequire(require('lodash/collection/each'));
+        var t = _interopRequireWildcard(require('../../types'));
         function JSXAttribute(node, print) {
           print(node.name);
           if (node.value) {
@@ -832,7 +832,7 @@
           var open = node.openingElement;
           print(open);
           if (open.selfClosing)
-            return ;
+            return;
           this.indent();
           each(node.children, function(child) {
             if (t.isLiteral(child)) {
@@ -873,7 +873,7 @@
         exports._method = _method;
         exports.FunctionExpression = FunctionExpression;
         exports.ArrowFunctionExpression = ArrowFunctionExpression;
-        var t = _interopRequireWildcard(require("../../types"));
+        var t = _interopRequireWildcard(require('../../types'));
         function _params(node, print) {
           var _this = this;
           print(node.typeParameters);
@@ -956,8 +956,8 @@
         exports.ExportDeclaration = ExportDeclaration;
         exports.ImportDeclaration = ImportDeclaration;
         exports.ImportBatchSpecifier = ImportBatchSpecifier;
-        var each = _interopRequire(require("lodash/collection/each"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var each = _interopRequire(require('lodash/collection/each'));
+        var t = _interopRequireWildcard(require('../../types'));
         function ImportSpecifier(node, print) {
           if (t.isSpecifierDefault(node)) {
             print(t.getSpecifierName(node));
@@ -984,7 +984,7 @@
           if (node.declaration) {
             print(node.declaration);
             if (t.isStatement(node.declaration))
-              return ;
+              return;
           } else {
             if (specifiers.length === 1 && t.isExportBatchSpecifier(specifiers[0])) {
               print(specifiers[0]);
@@ -1046,7 +1046,7 @@
         var _interopRequire = function(obj) {
           return obj && obj.__esModule ? obj["default"] : obj;
         };
-        var each = _interopRequire(require("lodash/collection/each"));
+        var each = _interopRequire(require('lodash/collection/each'));
         each(["BindMemberExpression", "BindFunctionExpression"], function(type) {
           exports[type] = function() {
             throw new ReferenceError("Trying to render non-standard playground node " + JSON.stringify(type));
@@ -1076,8 +1076,8 @@
         exports.VariableDeclaration = VariableDeclaration;
         exports.PrivateDeclaration = PrivateDeclaration;
         exports.VariableDeclarator = VariableDeclarator;
-        var repeating = _interopRequire(require("repeating"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var repeating = _interopRequire(require('repeating'));
+        var t = _interopRequireWildcard(require('../../types'));
         function WithStatement(node, print) {
           this.keyword("with");
           this.push("(");
@@ -1272,7 +1272,7 @@
         exports.TaggedTemplateExpression = TaggedTemplateExpression;
         exports.TemplateElement = TemplateElement;
         exports.TemplateLiteral = TemplateLiteral;
-        var each = _interopRequire(require("lodash/collection/each"));
+        var each = _interopRequire(require('lodash/collection/each'));
         function TaggedTemplateExpression(node, print) {
           print(node.tag);
           print(node.quasi);
@@ -1310,7 +1310,7 @@
         exports.ArrayExpression = ArrayExpression;
         exports.Literal = Literal;
         exports._stringLiteral = _stringLiteral;
-        var each = _interopRequire(require("lodash/collection/each"));
+        var each = _interopRequire(require('lodash/collection/each'));
         function Identifier(node) {
           this.push(node.name);
         }
@@ -1349,7 +1349,7 @@
             } else {
               print(node.key);
               if (node.shorthand)
-                return ;
+                return;
             }
             this.push(":");
             this.space();
@@ -1412,17 +1412,17 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var detectIndent = _interopRequire(require("detect-indent"));
-        var Whitespace = _interopRequire(require("./whitespace"));
-        var repeating = _interopRequire(require("repeating"));
-        var SourceMap = _interopRequire(require("./source-map"));
-        var Position = _interopRequire(require("./position"));
-        var messages = _interopRequireWildcard(require("../messages"));
-        var Buffer = _interopRequire(require("./buffer"));
-        var extend = _interopRequire(require("lodash/object/extend"));
-        var each = _interopRequire(require("lodash/collection/each"));
-        var n = _interopRequire(require("./node"));
-        var t = _interopRequireWildcard(require("../types"));
+        var detectIndent = _interopRequire(require('detect-indent'));
+        var Whitespace = _interopRequire(require('./whitespace'));
+        var repeating = _interopRequire(require('repeating'));
+        var SourceMap = _interopRequire(require('./source-map'));
+        var Position = _interopRequire(require('./position'));
+        var messages = _interopRequireWildcard(require('../messages'));
+        var Buffer = _interopRequire(require('./buffer'));
+        var extend = _interopRequire(require('lodash/object/extend'));
+        var each = _interopRequire(require('lodash/collection/each'));
+        var n = _interopRequire(require('./node'));
+        var t = _interopRequireWildcard(require('../types'));
         var CodeGenerator = function() {
           function CodeGenerator(ast, opts, code) {
             _classCallCheck(this, CodeGenerator);
@@ -1463,18 +1463,18 @@
             return format;
           };
           CodeGenerator.generators = {
-            templateLiterals: require("./generators/template-literals"),
-            comprehensions: require("./generators/comprehensions"),
-            expressions: require("./generators/expressions"),
-            statements: require("./generators/statements"),
-            playground: require("./generators/playground"),
-            classes: require("./generators/classes"),
-            methods: require("./generators/methods"),
-            modules: require("./generators/modules"),
-            types: require("./generators/types"),
-            flow: require("./generators/flow"),
-            base: require("./generators/base"),
-            jsx: require("./generators/jsx")
+            templateLiterals: require('./generators/template-literals'),
+            comprehensions: require('./generators/comprehensions'),
+            expressions: require('./generators/expressions'),
+            statements: require('./generators/statements'),
+            playground: require('./generators/playground'),
+            classes: require('./generators/classes'),
+            methods: require('./generators/methods'),
+            modules: require('./generators/modules'),
+            types: require('./generators/types'),
+            flow: require('./generators/flow'),
+            base: require('./generators/base'),
+            jsx: require('./generators/jsx')
           };
           CodeGenerator.prototype.generate = function generate() {
             var ast = this.ast;
@@ -1522,7 +1522,7 @@
             var _this = this;
             var opts = arguments[2] === undefined ? {} : arguments[2];
             if (!node)
-              return ;
+              return;
             if (parent && parent._compact) {
               node._compact = true;
             }
@@ -1532,7 +1532,7 @@
             }
             var newline = function(leading) {
               if (!opts.statement && !n.isUserWhitespacable(node, parent)) {
-                return ;
+                return;
               }
               var lines = 0;
               if (node.start != null && !node._ignoreUserWhitespace) {
@@ -1589,7 +1589,7 @@
             var _this = this;
             var opts = arguments[2] === undefined ? {} : arguments[2];
             if (!nodes || !nodes.length)
-              return ;
+              return;
             var len = nodes.length;
             if (opts.indent)
               this.indent();
@@ -1662,11 +1662,11 @@
           CodeGenerator.prototype._printComments = function _printComments(comments) {
             var _this = this;
             if (this.format.compact)
-              return ;
+              return;
             if (!this.format.comments)
-              return ;
+              return;
             if (!comments || !comments.length)
-              return ;
+              return;
             each(comments, function(comment) {
               var skip = false;
               each(_this.ast.comments, function(origComment) {
@@ -1678,7 +1678,7 @@
                 }
               });
               if (skip)
-                return ;
+                return;
               _this.newline(_this.whitespace.getNewlinesBefore(comment));
               var column = _this.position.column;
               var val = _this.generateComment(comment);
@@ -1755,14 +1755,14 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var whitespace = _interopRequire(require("./whitespace"));
-        var parens = _interopRequireWildcard(require("./parentheses"));
-        var each = _interopRequire(require("lodash/collection/each"));
-        var some = _interopRequire(require("lodash/collection/some"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var whitespace = _interopRequire(require('./whitespace'));
+        var parens = _interopRequireWildcard(require('./parentheses'));
+        var each = _interopRequire(require('lodash/collection/each'));
+        var some = _interopRequire(require('lodash/collection/some'));
+        var t = _interopRequireWildcard(require('../../types'));
         var find = function find(obj, node, parent) {
           if (!obj)
-            return ;
+            return;
           var result;
           var types = Object.keys(obj);
           for (var i = 0; i < types.length; i++) {
@@ -1878,8 +1878,8 @@
         exports.UnaryLike = UnaryLike;
         exports.FunctionExpression = FunctionExpression;
         exports.ConditionalExpression = ConditionalExpression;
-        var each = _interopRequire(require("lodash/collection/each"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var each = _interopRequire(require('lodash/collection/each'));
+        var t = _interopRequireWildcard(require('../../types'));
         var PRECEDENCE = {};
         each([["||"], ["&&"], ["|"], ["^"], ["&"], ["==", "===", "!=", "!=="], ["<", ">", "<=", ">=", "in", "instanceof"], [">>", "<<", ">>>"], ["+", "-"], ["*", "/", "%"], ["**"]], function(tier, i) {
           each(tier, function(op) {
@@ -2000,10 +2000,10 @@
         var _interopRequire = function(obj) {
           return obj && obj.__esModule ? obj["default"] : obj;
         };
-        var isBoolean = _interopRequire(require("lodash/lang/isBoolean"));
-        var each = _interopRequire(require("lodash/collection/each"));
-        var map = _interopRequire(require("lodash/collection/map"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var isBoolean = _interopRequire(require('lodash/lang/isBoolean'));
+        var each = _interopRequire(require('lodash/collection/each'));
+        var map = _interopRequire(require('lodash/collection/map'));
+        var t = _interopRequireWildcard(require('../../types'));
         function crawl(node) {
           var state = arguments[1] === undefined ? {} : arguments[1];
           if (t.isMemberExpression(node)) {
@@ -2188,8 +2188,8 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var sourceMap = _interopRequire(require("source-map"));
-        var t = _interopRequireWildcard(require("../types"));
+        var sourceMap = _interopRequire(require('source-map'));
+        var t = _interopRequireWildcard(require('../types'));
         var SourceMap = function() {
           function SourceMap(position, opts, code) {
             _classCallCheck(this, SourceMap);
@@ -2216,12 +2216,12 @@
           SourceMap.prototype.mark = function mark(node, type) {
             var loc = node.loc;
             if (!loc)
-              return ;
+              return;
             var map = this.map;
             if (!map)
-              return ;
+              return;
             if (t.isProgram(node) || t.isFile(node))
-              return ;
+              return;
             var position = this.position;
             var generated = {
               line: position.line,
@@ -2251,7 +2251,7 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var sortBy = _interopRequire(require("lodash/collection/sortBy"));
+        var sortBy = _interopRequire(require('lodash/collection/sortBy'));
         function getLookupIndex(i, base, max) {
           i += base;
           if (i >= max) {
@@ -2332,12 +2332,12 @@
         var _interopRequire = function(obj) {
           return obj && obj.__esModule ? obj["default"] : obj;
         };
-        var lineNumbers = _interopRequire(require("line-numbers"));
-        var repeating = _interopRequire(require("repeating"));
-        var jsTokens = _interopRequire(require("js-tokens"));
-        var esutils = _interopRequire(require("esutils"));
-        var chalk = _interopRequire(require("chalk"));
-        var ary = _interopRequire(require("lodash/function/ary"));
+        var lineNumbers = _interopRequire(require('line-numbers'));
+        var repeating = _interopRequire(require('repeating'));
+        var jsTokens = _interopRequire(require('js-tokens'));
+        var esutils = _interopRequire(require('esutils'));
+        var chalk = _interopRequire(require('chalk'));
+        var ary = _interopRequire(require('lodash/function/ary'));
         var defs = {
           string: chalk.red,
           punctuator: chalk.white.bold,
@@ -2400,7 +2400,7 @@
             after: " | ",
             transform: function transform(params) {
               if (params.number !== lineNumber) {
-                return ;
+                return;
               }
               if (colNumber) {
                 params.line += "\n" + params.before + "" + repeating(" ", params.width) + "" + params.after + "" + repeating(" ", colNumber - 1) + "^";
@@ -2422,7 +2422,7 @@
         var _interopRequireWildcard = function(obj) {
           return obj && obj.__esModule ? obj : {"default": obj};
         };
-        var t = _interopRequireWildcard(require("../types"));
+        var t = _interopRequireWildcard(require('../types'));
         module.exports = function(ast, comments, tokens) {
           if (ast && ast.type === "Program") {
             return t.file(ast, comments || [], tokens || []);
@@ -2442,10 +2442,10 @@
         var _interopRequire = function(obj) {
           return obj && obj.__esModule ? obj["default"] : obj;
         };
-        var normalizeAst = _interopRequire(require("./normalize-ast"));
-        var estraverse = _interopRequire(require("estraverse"));
-        var codeFrame = _interopRequire(require("./code-frame"));
-        var acorn = _interopRequire(require("acorn-babel"));
+        var normalizeAst = _interopRequire(require('./normalize-ast'));
+        var estraverse = _interopRequire(require('estraverse'));
+        var codeFrame = _interopRequire(require('./code-frame'));
+        var acorn = _interopRequire(require('acorn-babel'));
         module.exports = function(opts, code, callback) {
           try {
             var comments = [];
@@ -2501,7 +2501,7 @@
         };
         exports.get = get;
         exports.parseArgs = parseArgs;
-        var util = _interopRequireWildcard(require("util"));
+        var util = _interopRequireWildcard(require('util'));
         var messages = exports.messages = {
           tailCallReassignmentDeopt: "Function reference has been reassigned so it's probably be dereferenced so we can't optimise this with confidence",
           JSXNamespacedTags: "Namespace tags are not supported. ReactJSX is not XML.",
@@ -2562,10 +2562,10 @@
         var _interopRequire = function(obj) {
           return obj && obj.__esModule ? obj["default"] : obj;
         };
-        var estraverse = _interopRequire(require("estraverse"));
-        var extend = _interopRequire(require("lodash/object/extend"));
-        var types = _interopRequire(require("ast-types"));
-        var t = _interopRequireWildcard(require("./types"));
+        var estraverse = _interopRequire(require('estraverse'));
+        var extend = _interopRequire(require('lodash/object/extend'));
+        var types = _interopRequire(require('ast-types'));
+        var t = _interopRequireWildcard(require('./types'));
         extend(estraverse.VisitorKeys, t.VISITOR_KEYS);
         var def = types.Type.def;
         var or = types.Type.or;
@@ -2597,30 +2597,30 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var convertSourceMap = _interopRequire(require("convert-source-map"));
-        var shebangRegex = _interopRequire(require("shebang-regex"));
-        var isFunction = _interopRequire(require("lodash/lang/isFunction"));
-        var sourceMap = _interopRequire(require("source-map"));
-        var transform = _interopRequire(require("./index"));
-        var generate = _interopRequire(require("../generation"));
-        var defaults = _interopRequire(require("lodash/object/defaults"));
-        var includes = _interopRequire(require("lodash/collection/includes"));
-        var assign = _interopRequire(require("lodash/object/assign"));
-        var Logger = _interopRequire(require("./logger"));
-        var parse = _interopRequire(require("../helpers/parse"));
-        var Scope = _interopRequire(require("../traversal/scope"));
-        var slash = _interopRequire(require("slash"));
-        var util = _interopRequireWildcard(require("../util"));
-        var path = _interopRequire(require("path"));
-        var each = _interopRequire(require("lodash/collection/each"));
-        var t = _interopRequireWildcard(require("../types"));
+        var convertSourceMap = _interopRequire(require('convert-source-map'));
+        var shebangRegex = _interopRequire(require('shebang-regex'));
+        var isFunction = _interopRequire(require('lodash/lang/isFunction'));
+        var sourceMap = _interopRequire(require('source-map'));
+        var transform = _interopRequire(require('./index'));
+        var generate = _interopRequire(require('../generation'));
+        var defaults = _interopRequire(require('lodash/object/defaults'));
+        var includes = _interopRequire(require('lodash/collection/includes'));
+        var assign = _interopRequire(require('lodash/object/assign'));
+        var Logger = _interopRequire(require('./logger'));
+        var parse = _interopRequire(require('../helpers/parse'));
+        var Scope = _interopRequire(require('../traversal/scope'));
+        var slash = _interopRequire(require('slash'));
+        var util = _interopRequireWildcard(require('../util'));
+        var path = _interopRequire(require('path'));
+        var each = _interopRequire(require('lodash/collection/each'));
+        var t = _interopRequireWildcard(require('../types'));
         var checkTransformerVisitor = {enter: function enter(node, parent, scope, state) {
             checkNode(state.stack, node, scope);
           }};
         function checkNode(stack, node, scope) {
           each(stack, function(pass) {
             if (pass.shouldRun || pass.ran)
-              return ;
+              return;
             pass.checkNode(node, scope);
           });
         }
@@ -2926,7 +2926,7 @@
               for (var i = 0; i < node.length; i++) {
                 this.checkNode(node[i], scope);
               }
-              return ;
+              return;
             }
             var stack = this.transformerStack;
             if (!scope)
@@ -3018,8 +3018,8 @@
         var _interopRequire = function(obj) {
           return obj && obj.__esModule ? obj["default"] : obj;
         };
-        var explode = _interopRequire(require("./explode-assignable-expression"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var explode = _interopRequire(require('./explode-assignable-expression'));
+        var t = _interopRequireWildcard(require('../../types'));
         module.exports = function(exports, opts) {
           var isAssignment = function isAssignment(node) {
             return node.operator === opts.operator + "=";
@@ -3029,10 +3029,10 @@
           };
           exports.ExpressionStatement = function(node, parent, scope, file) {
             if (file.isConsequenceExpressionStatement(node))
-              return ;
+              return;
             var expr = node.expression;
             if (!isAssignment(expr))
-              return ;
+              return;
             var nodes = [];
             var exploded = explode(expr.left, nodes, file, scope, true);
             nodes.push(t.expressionStatement(buildAssignment(exploded.ref, opts.build(exploded.uid, expr.right))));
@@ -3040,7 +3040,7 @@
           };
           exports.AssignmentExpression = function(node, parent, scope, file) {
             if (!isAssignment(node))
-              return ;
+              return;
             var nodes = [];
             var exploded = explode(node.left, nodes, file, scope);
             nodes.push(buildAssignment(exploded.ref, opts.build(exploded.uid, node.right)));
@@ -3048,7 +3048,7 @@
           };
           exports.BinaryExpression = function(node) {
             if (node.operator !== opts.operator)
-              return ;
+              return;
             return opts.build(node.left, node.right);
           };
         };
@@ -3062,11 +3062,11 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         module.exports = build;
-        var t = _interopRequireWildcard(require("../../types"));
+        var t = _interopRequireWildcard(require('../../types'));
         function build(node, buildBody) {
           var self = node.blocks.shift();
           if (!self)
-            return ;
+            return;
           var child = build(node, buildBody);
           if (!child) {
             child = buildBody();
@@ -3085,18 +3085,18 @@
         var _interopRequire = function(obj) {
           return obj && obj.__esModule ? obj["default"] : obj;
         };
-        var explode = _interopRequire(require("./explode-assignable-expression"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var explode = _interopRequire(require('./explode-assignable-expression'));
+        var t = _interopRequireWildcard(require('../../types'));
         module.exports = function(exports, opts) {
           var buildAssignment = function buildAssignment(left, right) {
             return t.assignmentExpression("=", left, right);
           };
           exports.ExpressionStatement = function(node, parent, scope, file) {
             if (file.isConsequenceExpressionStatement(node))
-              return ;
+              return;
             var expr = node.expression;
             if (!opts.is(expr, file))
-              return ;
+              return;
             var nodes = [];
             var exploded = explode(expr.left, nodes, file, scope);
             nodes.push(t.ifStatement(opts.build(exploded.uid, file), t.expressionStatement(buildAssignment(exploded.ref, expr.right))));
@@ -3104,7 +3104,7 @@
           };
           exports.AssignmentExpression = function(node, parent, scope, file) {
             if (!opts.is(node, file))
-              return ;
+              return;
             var nodes = [];
             var exploded = explode(node.left, nodes, file, scope);
             nodes.push(t.logicalExpression("&&", opts.build(exploded.uid, file), buildAssignment(exploded.ref, node.right)));
@@ -3124,11 +3124,11 @@
         var _interopRequire = function(obj) {
           return obj && obj.__esModule ? obj["default"] : obj;
         };
-        var isString = _interopRequire(require("lodash/lang/isString"));
-        var messages = _interopRequireWildcard(require("../../messages"));
-        var esutils = _interopRequire(require("esutils"));
-        var react = _interopRequireWildcard(require("./react"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var isString = _interopRequire(require('lodash/lang/isString'));
+        var messages = _interopRequireWildcard(require('../../messages'));
+        var esutils = _interopRequire(require('esutils'));
+        var react = _interopRequireWildcard(require('./react'));
+        var t = _interopRequireWildcard(require('../../types'));
         module.exports = function(exports, opts) {
           exports.check = function(node) {
             if (t.isJSX(node))
@@ -3202,7 +3202,7 @@
             var objs = [];
             var pushProps = function pushProps() {
               if (!_props.length)
-                return ;
+                return;
               objs.push(t.objectExpression(_props));
               _props = [];
             };
@@ -3350,11 +3350,11 @@
         exports.toComputedObjectFromClass = toComputedObjectFromClass;
         exports.toClassObject = toClassObject;
         exports.toDefineObject = toDefineObject;
-        var cloneDeep = _interopRequire(require("lodash/lang/cloneDeep"));
-        var traverse = _interopRequire(require("../../traversal"));
-        var each = _interopRequire(require("lodash/collection/each"));
-        var has = _interopRequire(require("lodash/object/has"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var cloneDeep = _interopRequire(require('lodash/lang/cloneDeep'));
+        var traverse = _interopRequire(require('../../traversal'));
+        var each = _interopRequire(require('lodash/collection/each'));
+        var has = _interopRequire(require('lodash/object/has'));
+        var t = _interopRequireWildcard(require('../../types'));
         function push(mutatorMap, key, kind, computed, value) {
           var alias = t.toKeyAlias({computed: computed}, key);
           var map = {};
@@ -3391,7 +3391,7 @@
             var propNode = t.property("init", map._key, mapNode, map._computed);
             each(map, function(node, key) {
               if (key[0] === "_")
-                return ;
+                return;
               var inheritNode = node;
               if (t.isMethodDefinition(node))
                 node = node.value;
@@ -3426,7 +3426,7 @@
         var _interopRequireWildcard = function(obj) {
           return obj && obj.__esModule ? obj : {"default": obj};
         };
-        var t = _interopRequireWildcard(require("../../types"));
+        var t = _interopRequireWildcard(require('../../types'));
         var getObjRef = function getObjRef(node, nodes, file, scope) {
           var ref;
           if (t.isIdentifier(node)) {
@@ -3484,7 +3484,7 @@
         var _interopRequireWildcard = function(obj) {
           return obj && obj.__esModule ? obj : {"default": obj};
         };
-        var t = _interopRequireWildcard(require("../../types"));
+        var t = _interopRequireWildcard(require('../../types'));
         module.exports = function(node) {
           var lastNonDefault = 0;
           for (var i = 0; i < node.params.length; i++) {
@@ -3505,15 +3505,15 @@
         exports.custom = custom;
         exports.property = property;
         exports.bare = bare;
-        var getFunctionArity = _interopRequire(require("./get-function-arity"));
-        var util = _interopRequireWildcard(require("../../util"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var getFunctionArity = _interopRequire(require('./get-function-arity'));
+        var util = _interopRequireWildcard(require('../../util'));
+        var t = _interopRequireWildcard(require('../../types'));
         var visitor = {enter: function enter(node, parent, scope, state) {
             if (!this.isReferencedIdentifier({name: state.name}))
-              return ;
+              return;
             var localDeclar = scope.getBindingIdentifier(state.name);
             if (localDeclar !== state.outerDeclar)
-              return ;
+              return;
             state.selfReference = true;
             this.stop();
           }};
@@ -3602,7 +3602,7 @@
         };
         exports.isCreateClass = isCreateClass;
         exports.isCompatTag = isCompatTag;
-        var t = _interopRequireWildcard(require("../../types"));
+        var t = _interopRequireWildcard(require('../../types'));
         var isCreateClassCallExpression = t.buildMatchMemberExpression("React.createClass");
         function isCreateClass(node) {
           if (!node || !t.isCallExpression(node))
@@ -3633,15 +3633,15 @@
         };
         exports.is = is;
         exports.pullFlag = pullFlag;
-        var pull = _interopRequire(require("lodash/array/pull"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var pull = _interopRequire(require('lodash/array/pull'));
+        var t = _interopRequireWildcard(require('../../types'));
         function is(node, flag) {
           return t.isLiteral(node) && node.regex && node.regex.flags.indexOf(flag) >= 0;
         }
         function pullFlag(node, flag) {
           var flags = node.regex.flags.split("");
           if (node.regex.flags.indexOf("u") < 0)
-            return ;
+            return;
           pull(flags, "u");
           node.regex.flags = flags.join("");
         }
@@ -3655,7 +3655,7 @@
         var _interopRequireWildcard = function(obj) {
           return obj && obj.__esModule ? obj : {"default": obj};
         };
-        var t = _interopRequireWildcard(require("../../types"));
+        var t = _interopRequireWildcard(require('../../types'));
         var awaitVisitor = {enter: function enter(node, parent, scope, state) {
             if (t.isFunction(node))
               this.skip();
@@ -3719,8 +3719,8 @@
           }
         };
         module.exports = ReplaceSupers;
-        var messages = _interopRequireWildcard(require("../../messages"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var messages = _interopRequireWildcard(require('../../messages'));
+        var t = _interopRequireWildcard(require('../../types'));
         function isIllegalBareSuper(node, parent) {
           if (!isSuper(node, parent))
             return false;
@@ -3797,7 +3797,7 @@
             var methodName = methodNode.key;
             var superRef = this.superRef || t.identifier("Function");
             if (parent.property === id) {
-              return ;
+              return;
             } else if (t.isCallExpression(parent, {callee: id})) {
               parent.arguments.unshift(t.thisExpression());
               if (methodName.name === "constructor") {
@@ -3823,9 +3823,9 @@
             } else if (t.isCallExpression(node)) {
               var callee = node.callee;
               if (!t.isMemberExpression(callee))
-                return ;
+                return;
               if (callee.object.name !== "super")
-                return ;
+                return;
               this.hasSuper = true;
               t.appendToMemberExpression(callee, t.identifier("call"));
               node.arguments.unshift(getThisReference());
@@ -3863,7 +3863,7 @@
               return this.setSuperProperty(node.left.property, node.right, node.left.computed, getThisReference());
             }
             if (!property)
-              return ;
+              return;
             this.hasSuper = true;
             thisReference = getThisReference();
             var superProperty = this.getSuperProperty(property, computed, thisReference);
@@ -3891,7 +3891,7 @@
         };
         exports.has = has;
         exports.wrap = wrap;
-        var t = _interopRequireWildcard(require("../../types"));
+        var t = _interopRequireWildcard(require('../../types'));
         function has(node) {
           var first = node.body[0];
           return t.isExpressionStatement(first) && t.isLiteral(first.expression, {value: "use strict"});
@@ -3914,11 +3914,11 @@
           return obj && obj.__esModule ? obj["default"] : obj;
         };
         module.exports = transform;
-        var normalizeAst = _interopRequire(require("../helpers/normalize-ast"));
-        var Transformer = _interopRequire(require("./transformer"));
-        var object = _interopRequire(require("../helpers/object"));
-        var File = _interopRequire(require("./file"));
-        var each = _interopRequire(require("lodash/collection/each"));
+        var normalizeAst = _interopRequire(require('../helpers/normalize-ast'));
+        var Transformer = _interopRequire(require('./transformer'));
+        var object = _interopRequire(require('../helpers/object'));
+        var File = _interopRequire(require('./file'));
+        var each = _interopRequire(require('lodash/collection/each'));
         function transform(code, opts) {
           var file = new File(opts);
           return file.parse(code);
@@ -3954,10 +3954,10 @@
         transform.transformerNamespaces = object();
         transform.transformers = object();
         transform.namespaces = object();
-        transform.deprecatedTransformerMap = require("./transformers/deprecated");
-        transform.aliasTransformerMap = require("./transformers/aliases");
-        transform.moduleFormatters = require("./modules");
-        var rawTransformers = _interopRequire(require("./transformers"));
+        transform.deprecatedTransformerMap = require('./transformers/deprecated');
+        transform.aliasTransformerMap = require('./transformers/aliases');
+        transform.moduleFormatters = require('./modules');
+        var rawTransformers = _interopRequire(require('./transformers'));
         each(rawTransformers, function(transformer, key) {
           var namespace = key.split(".")[0];
           var _transform$namespaces = transform.namespaces;
@@ -3989,7 +3989,7 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var util = _interopRequireWildcard(require("../util"));
+        var util = _interopRequireWildcard(require('../util'));
         var Logger = function() {
           function Logger(file) {
             _classCallCheck(this, Logger);
@@ -4025,11 +4025,11 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var messages = _interopRequireWildcard(require("../../messages"));
-        var extend = _interopRequire(require("lodash/object/extend"));
-        var object = _interopRequire(require("../../helpers/object"));
-        var util = _interopRequireWildcard(require("../../util"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var messages = _interopRequireWildcard(require('../../messages'));
+        var extend = _interopRequire(require('lodash/object/extend'));
+        var object = _interopRequire(require('../../helpers/object'));
+        var util = _interopRequireWildcard(require('../../util'));
+        var t = _interopRequireWildcard(require('../../types'));
         var remapVisitor = {enter: function enter(node, parent, scope, formatter) {
             if (t.isUpdateExpression(node) && formatter.isLocalReference(node.argument, scope)) {
               this.skip();
@@ -4244,7 +4244,7 @@
         var _interopRequireWildcard = function(obj) {
           return obj && obj.__esModule ? obj : {"default": obj};
         };
-        var util = _interopRequireWildcard(require("../../util"));
+        var util = _interopRequireWildcard(require('../../util'));
         module.exports = function(Parent) {
           var Constructor = function Constructor() {
             this.noInteropRequireImport = true;
@@ -4257,7 +4257,7 @@
       }, {"../../util": 129}],
       46: [function(require, module, exports) {
         "use strict";
-        module.exports = require("./_strict")(require("./amd"));
+        module.exports = require('./_strict')(require('./amd'));
       }, {
         "./_strict": 45,
         "./amd": 47
@@ -4288,12 +4288,12 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var DefaultFormatter = _interopRequire(require("./_default"));
-        var CommonFormatter = _interopRequire(require("./common"));
-        var includes = _interopRequire(require("lodash/collection/includes"));
-        var values = _interopRequire(require("lodash/object/values"));
-        var util = _interopRequireWildcard(require("../../util"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var DefaultFormatter = _interopRequire(require('./_default'));
+        var CommonFormatter = _interopRequire(require('./common'));
+        var includes = _interopRequire(require('lodash/collection/includes'));
+        var values = _interopRequire(require('lodash/object/values'));
+        var util = _interopRequireWildcard(require('../../util'));
+        var t = _interopRequireWildcard(require('../../types'));
         var AMDFormatter = function(DefaultFormatter) {
           function AMDFormatter() {
             this.init = CommonFormatter.prototype.init;
@@ -4373,7 +4373,7 @@
       }],
       48: [function(require, module, exports) {
         "use strict";
-        module.exports = require("./_strict")(require("./common"));
+        module.exports = require('./_strict')(require('./common'));
       }, {
         "./_strict": 45,
         "./common": 49
@@ -4404,10 +4404,10 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var DefaultFormatter = _interopRequire(require("./_default"));
-        var includes = _interopRequire(require("lodash/collection/includes"));
-        var util = _interopRequireWildcard(require("../../util"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var DefaultFormatter = _interopRequire(require('./_default'));
+        var includes = _interopRequire(require('lodash/collection/includes'));
+        var util = _interopRequireWildcard(require('../../util'));
+        var t = _interopRequireWildcard(require('../../types'));
         var CommonJSFormatter = function(DefaultFormatter) {
           function CommonJSFormatter() {
             _classCallCheck(this, CommonJSFormatter);
@@ -4461,7 +4461,7 @@
                 assign._blockHoist = 3;
               }
               nodes.push(assign);
-              return ;
+              return;
             }
             DefaultFormatter.prototype.exportDeclaration.apply(this, arguments);
           };
@@ -4495,7 +4495,7 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var t = _interopRequireWildcard(require("../../types"));
+        var t = _interopRequireWildcard(require('../../types'));
         var IgnoreFormatter = function() {
           function IgnoreFormatter() {
             _classCallCheck(this, IgnoreFormatter);
@@ -4515,14 +4515,14 @@
       51: [function(require, module, exports) {
         "use strict";
         module.exports = {
-          commonStrict: require("./common-strict"),
-          amdStrict: require("./amd-strict"),
-          umdStrict: require("./umd-strict"),
-          common: require("./common"),
-          system: require("./system"),
-          ignore: require("./ignore"),
-          amd: require("./amd"),
-          umd: require("./umd")
+          commonStrict: require('./common-strict'),
+          amdStrict: require('./amd-strict'),
+          umdStrict: require('./umd-strict'),
+          common: require('./common'),
+          system: require('./system'),
+          ignore: require('./ignore'),
+          amd: require('./amd'),
+          umd: require('./umd')
         };
       }, {
         "./amd": 47,
@@ -4560,23 +4560,23 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var DefaultFormatter = _interopRequire(require("./_default"));
-        var AMDFormatter = _interopRequire(require("./amd"));
-        var util = _interopRequireWildcard(require("../../util"));
-        var last = _interopRequire(require("lodash/array/last"));
-        var each = _interopRequire(require("lodash/collection/each"));
-        var map = _interopRequire(require("lodash/collection/map"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var DefaultFormatter = _interopRequire(require('./_default'));
+        var AMDFormatter = _interopRequire(require('./amd'));
+        var util = _interopRequireWildcard(require('../../util'));
+        var last = _interopRequire(require('lodash/array/last'));
+        var each = _interopRequire(require('lodash/collection/each'));
+        var map = _interopRequire(require('lodash/collection/map'));
+        var t = _interopRequireWildcard(require('../../types'));
         var hoistVariablesVisitor = {enter: function enter(node, parent, scope, hoistDeclarators) {
             if (t.isFunction(node)) {
               return this.skip();
             }
             if (t.isVariableDeclaration(node)) {
               if (node.kind !== "var" && !t.isProgram(parent)) {
-                return ;
+                return;
               }
               if (node._blockHoist)
-                return ;
+                return;
               var nodes = [];
               for (var i = 0; i < node.declarations.length; i++) {
                 var declar = node.declarations[i];
@@ -4711,7 +4711,7 @@
       }],
       53: [function(require, module, exports) {
         "use strict";
-        module.exports = require("./_strict")(require("./umd"));
+        module.exports = require('./_strict')(require('./umd'));
       }, {
         "./_strict": 45,
         "./umd": 54
@@ -4742,10 +4742,10 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var AMDFormatter = _interopRequire(require("./amd"));
-        var values = _interopRequire(require("lodash/object/values"));
-        var util = _interopRequireWildcard(require("../../util"));
-        var t = _interopRequireWildcard(require("../../types"));
+        var AMDFormatter = _interopRequire(require('./amd'));
+        var values = _interopRequire(require('lodash/object/values'));
+        var util = _interopRequireWildcard(require('../../util'));
+        var t = _interopRequireWildcard(require('../../types'));
         var UMDFormatter = function(AMDFormatter) {
           function UMDFormatter() {
             _classCallCheck(this, UMDFormatter);
@@ -4810,7 +4810,7 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var includes = _interopRequire(require("lodash/collection/includes"));
+        var includes = _interopRequire(require('lodash/collection/includes'));
         var TransformerPass = function() {
           function TransformerPass(file, transformer) {
             _classCallCheck(this, TransformerPass);
@@ -4850,7 +4850,7 @@
           };
           TransformerPass.prototype.transform = function transform() {
             if (!this.shouldRun)
-              return ;
+              return;
             var file = this.file;
             file.log.debug("Running transformer " + this.transformer.key);
             file.scope.traverse(file.ast, this.handlers, file);
@@ -4870,12 +4870,12 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var TransformerPass = _interopRequire(require("./transformer-pass"));
-        var isFunction = _interopRequire(require("lodash/lang/isFunction"));
-        var traverse = _interopRequire(require("../traversal"));
-        var isObject = _interopRequire(require("lodash/lang/isObject"));
-        var assign = _interopRequire(require("lodash/object/assign"));
-        var each = _interopRequire(require("lodash/collection/each"));
+        var TransformerPass = _interopRequire(require('./transformer-pass'));
+        var isFunction = _interopRequire(require('lodash/lang/isFunction'));
+        var traverse = _interopRequire(require('../traversal'));
+        var isObject = _interopRequire(require('lodash/lang/isObject'));
+        var assign = _interopRequire(require('lodash/object/assign'));
+        var each = _interopRequire(require('lodash/collection/each'));
         var Transformer = function() {
           function Transformer(transformerKey, transformer, opts) {
             _classCallCheck(this, Transformer);
@@ -4908,14 +4908,14 @@
             each(transformer, function(fns, type) {
               if (type[0] === "_") {
                 _this[type] = fns;
-                return ;
+                return;
               }
               if (type === "enter" || type === "exit")
-                return ;
+                return;
               if (isFunction(fns))
                 fns = {enter: fns};
               if (!isObject(fns))
-                return ;
+                return;
               if (!fns.enter)
                 fns.enter = function() {};
               if (!fns.exit)
@@ -4957,7 +4957,7 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.MemberExpression = MemberExpression;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         function MemberExpression(node) {
           var prop = node.property;
           if (node.computed && t.isLiteral(prop) && t.isValidIdentifier(prop.value)) {
@@ -4976,7 +4976,7 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.Property = Property;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         function Property(node) {
           var key = node.key;
           if (t.isLiteral(key) && t.isValidIdentifier(key.value)) {
@@ -4995,8 +4995,8 @@
         };
         exports.check = check;
         exports.ObjectExpression = ObjectExpression;
-        var defineMap = _interopRequireWildcard(require("../../helpers/define-map"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var defineMap = _interopRequireWildcard(require('../../helpers/define-map'));
+        var t = _interopRequireWildcard(require('../../../types'));
         function check(node) {
           return t.isProperty(node) && (node.kind === "get" || node.kind === "set");
         }
@@ -5013,7 +5013,7 @@
             }
           });
           if (!hasAny)
-            return ;
+            return;
           return t.callExpression(t.memberExpression(t.identifier("Object"), t.identifier("defineProperties")), [node, defineMap.toDefineObject(mutatorMap)]);
         }
         exports.__esModule = true;
@@ -5027,7 +5027,7 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.ArrowFunctionExpression = ArrowFunctionExpression;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         var check = exports.check = t.isArrowFunctionExpression;
         function ArrowFunctionExpression(node) {
           t.ensureBlock(node);
@@ -5044,20 +5044,20 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.BlockStatement = BlockStatement;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         var visitor = {enter: function enter(node, parent, scope, state) {
             if (!this.isReferencedIdentifier())
-              return ;
+              return;
             var declared = state.letRefs[node.name];
             if (!declared)
-              return ;
+              return;
             if (scope.getBindingIdentifier(node.name) !== declared)
-              return ;
+              return;
             var assert = t.callExpression(state.file.addHelper("temporal-assert-defined"), [node, t.literal(node.name), state.file.addHelper("temporal-undefined")]);
             this.skip();
             if (t.isAssignmentExpression(parent) || t.isUpdateExpression(parent)) {
               if (parent._ignoreBlockScopingTDZ)
-                return ;
+                return;
               this.parentPath.node = t.sequenceExpression([assert, parent]);
             } else {
               return t.logicalExpression("&&", assert, node);
@@ -5067,7 +5067,7 @@
         function BlockStatement(node, parent, scope, file) {
           var letRefs = node._letReferences;
           if (!letRefs)
-            return ;
+            return;
           scope.traverse(node, visitor, {
             letRefs: letRefs,
             file: file
@@ -5094,12 +5094,12 @@
         exports.VariableDeclaration = VariableDeclaration;
         exports.Loop = Loop;
         exports.BlockStatement = BlockStatement;
-        var traverse = _interopRequire(require("../../../traversal"));
-        var object = _interopRequire(require("../../../helpers/object"));
-        var util = _interopRequireWildcard(require("../../../util"));
-        var t = _interopRequireWildcard(require("../../../types"));
-        var values = _interopRequire(require("lodash/object/values"));
-        var extend = _interopRequire(require("lodash/object/extend"));
+        var traverse = _interopRequire(require('../../../traversal'));
+        var object = _interopRequire(require('../../../helpers/object'));
+        var util = _interopRequireWildcard(require('../../../util'));
+        var t = _interopRequireWildcard(require('../../../types'));
+        var values = _interopRequire(require('lodash/object/values'));
+        var extend = _interopRequire(require('lodash/object/extend'));
         function isLet(node, parent) {
           if (!t.isVariableDeclaration(node))
             return false;
@@ -5135,7 +5135,7 @@
         }
         function VariableDeclaration(node, parent, scope, file) {
           if (!isLet(node, parent))
-            return ;
+            return;
           if (isLetInitable(node) && file.transformers["es6.blockScopingTDZ"].canRun()) {
             var nodes = [node];
             for (var i = 0; i < node.declarations.length; i++) {
@@ -5169,10 +5169,10 @@
         exports.Program = BlockStatement;
         function replace(node, parent, scope, remaps) {
           if (!t.isReferencedIdentifier(node, parent))
-            return ;
+            return;
           var remap = remaps[node.name];
           if (!remap)
-            return ;
+            return;
           var ownBinding = scope.getBindingIdentifier(node.name);
           if (ownBinding === remap.binding) {
             node.name = remap.uid;
@@ -5194,11 +5194,11 @@
           }};
         var letReferenceFunctionVisitor = {enter: function enter(node, parent, scope, state) {
             if (!this.isReferencedIdentifier())
-              return ;
+              return;
             if (scope.hasOwnBinding(node.name))
-              return ;
+              return;
             if (!state.letReferences[node.name])
-              return ;
+              return;
             state.closurify = true;
           }};
         var hoistVarDeclarationsVisitor = {enter: function enter(node, parent, scope, self) {
@@ -5242,14 +5242,14 @@
             if (loopText) {
               if (node.label) {
                 if (state.innerLabels.indexOf(node.label.name) >= 0) {
-                  return ;
+                  return;
                 }
                 loopText = "" + loopText + "|" + node.label.name;
               } else {
                 if (state.ignoreLabeless)
-                  return ;
+                  return;
                 if (t.isBreakStatement(node) && t.isSwitchCase(parent))
-                  return ;
+                  return;
               }
               state.hasBreakContinue = true;
               state.map[loopText] = node;
@@ -5280,13 +5280,13 @@
           BlockScoping.prototype.run = function run() {
             var block = this.block;
             if (block._letDone)
-              return ;
+              return;
             block._letDone = true;
             var needsClosure = this.getLetReferences();
             if (t.isFunction(this.parent) || t.isProgram(this.block))
-              return ;
+              return;
             if (!this.hasLetReferences)
-              return ;
+              return;
             if (needsClosure) {
               this.wrapClosure();
             } else {
@@ -5311,7 +5311,7 @@
               }
             }
             if (!hasRemaps)
-              return ;
+              return;
             var loopParent = this.loopParent;
             if (loopParent) {
               traverseReplace(loopParent.right, loopParent, scope, remaps);
@@ -5378,7 +5378,7 @@
               this.hasLetReferences = true;
             }
             if (!this.hasLetReferences)
-              return ;
+              return;
             standardizeLets(declarators);
             var state = {
               letReferences: this.letReferences,
@@ -5483,13 +5483,13 @@
         };
         exports.ClassDeclaration = ClassDeclaration;
         exports.ClassExpression = ClassExpression;
-        var ReplaceSupers = _interopRequire(require("../../helpers/replace-supers"));
-        var nameMethod = _interopRequireWildcard(require("../../helpers/name-method"));
-        var defineMap = _interopRequireWildcard(require("../../helpers/define-map"));
-        var messages = _interopRequireWildcard(require("../../../messages"));
-        var util = _interopRequireWildcard(require("../../../util"));
-        var traverse = _interopRequire(require("../../../traversal"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var ReplaceSupers = _interopRequire(require('../../helpers/replace-supers'));
+        var nameMethod = _interopRequireWildcard(require('../../helpers/name-method'));
+        var defineMap = _interopRequireWildcard(require('../../helpers/define-map'));
+        var messages = _interopRequireWildcard(require('../../../messages'));
+        var util = _interopRequireWildcard(require('../../../util'));
+        var traverse = _interopRequire(require('../../../traversal'));
+        var t = _interopRequireWildcard(require('../../../types'));
         var check = exports.check = t.isClass;
         function ClassDeclaration(node, parent, scope, file) {
           return t.variableDeclaration("let", [t.variableDeclarator(node.id, t.toExpression(node))]);
@@ -5643,7 +5643,7 @@
             }
           };
           ClassTransformer.prototype.verifyConstructor = function verifyConstructor(node) {
-            return ;
+            return;
             var state = {
               hasBareSuper: false,
               hasSuper: this.hasSuper,
@@ -5667,7 +5667,7 @@
                 var expr = t.expressionStatement(t.assignmentExpression("=", methodName, node.value));
                 t.inheritsComments(expr, node);
                 this.body.push(expr);
-                return ;
+                return;
               }
               kind = "value";
             }
@@ -5682,7 +5682,7 @@
           };
           ClassTransformer.prototype.pushProperty = function pushProperty(node) {
             if (!node.value)
-              return ;
+              return;
             var key;
             if (node["static"]) {
               key = t.memberExpression(this.classRef, node.key);
@@ -5726,8 +5726,8 @@
         exports.check = check;
         exports.Scopable = Scopable;
         exports.VariableDeclaration = VariableDeclaration;
-        var messages = _interopRequireWildcard(require("../../../messages"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var messages = _interopRequireWildcard(require('../../../messages'));
+        var t = _interopRequireWildcard(require('../../../types'));
         function check(node) {
           return t.isVariableDeclaration(node, {kind: "const"});
         }
@@ -5780,8 +5780,8 @@
         exports.ExpressionStatement = ExpressionStatement;
         exports.AssignmentExpression = AssignmentExpression;
         exports.VariableDeclaration = VariableDeclaration;
-        var messages = _interopRequireWildcard(require("../../../messages"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var messages = _interopRequireWildcard(require('../../../messages'));
+        var t = _interopRequireWildcard(require('../../../types'));
         var check = exports.check = t.isPattern;
         function ForOfStatement(node, parent, scope, file) {
           var left = node.left;
@@ -5790,13 +5790,13 @@
             node.left = t.variableDeclaration("var", [t.variableDeclarator(temp)]);
             t.ensureBlock(node);
             node.body.body.unshift(t.variableDeclaration("var", [t.variableDeclarator(left, temp)]));
-            return ;
+            return;
           }
           if (!t.isVariableDeclaration(left))
-            return ;
+            return;
           var pattern = left.declarations[0].id;
           if (!t.isPattern(pattern))
-            return ;
+            return;
           var key = scope.generateUidIdentifier("ref");
           node.left = t.variableDeclaration(left.kind, [t.variableDeclarator(key, null)]);
           var nodes = [];
@@ -5831,7 +5831,7 @@
             return ref;
           });
           if (!hasDestructuring)
-            return ;
+            return;
           file.checkNode(nodes);
           t.ensureBlock(node);
           var block = node.body;
@@ -5840,7 +5840,7 @@
         function CatchClause(node, parent, scope, file) {
           var pattern = node.param;
           if (!t.isPattern(pattern))
-            return ;
+            return;
           var ref = scope.generateUidIdentifier("ref");
           node.param = ref;
           var nodes = [];
@@ -5857,11 +5857,11 @@
         function ExpressionStatement(node, parent, scope, file) {
           var expr = node.expression;
           if (expr.type !== "AssignmentExpression")
-            return ;
+            return;
           if (!t.isPattern(expr.left))
-            return ;
+            return;
           if (file.isConsequenceExpressionStatement(node))
-            return ;
+            return;
           var nodes = [];
           var ref = scope.generateUidIdentifier("ref");
           nodes.push(t.variableDeclaration("var", [t.variableDeclarator(ref, expr.right)]));
@@ -5876,7 +5876,7 @@
         }
         function AssignmentExpression(node, parent, scope, file) {
           if (!t.isPattern(node.left))
-            return ;
+            return;
           var ref = scope.generateUidIdentifier("temp");
           scope.push({id: ref});
           var nodes = [];
@@ -5901,9 +5901,9 @@
         }
         function VariableDeclaration(node, parent, scope, file) {
           if (t.isForInStatement(parent) || t.isForOfStatement(parent))
-            return ;
+            return;
           if (!variableDeclarationHasPattern(node))
-            return ;
+            return;
           var nodes = [];
           var declar;
           for (var i = 0; i < node.declarations.length; i++) {
@@ -6044,7 +6044,7 @@
             if (!t.isArrayExpression(arr))
               return false;
             if (pattern.elements.length > arr.elements.length)
-              return ;
+              return;
             if (pattern.elements.length < arr.elements.length && !hasRest(pattern))
               return false;
             for (var i = 0; i < pattern.elements.length; i++) {
@@ -6065,7 +6065,7 @@
           };
           DestructuringTransformer.prototype.pushArrayPattern = function pushArrayPattern(pattern, arrayRef) {
             if (!pattern.elements)
-              return ;
+              return;
             if (this.canUnpackArrayPattern(pattern, arrayRef)) {
               return this.pushUnpackedArrayPattern(pattern, arrayRef);
             }
@@ -6116,9 +6116,9 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.ForOfStatement = ForOfStatement;
-        var messages = _interopRequireWildcard(require("../../../messages"));
-        var util = _interopRequireWildcard(require("../../../util"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var messages = _interopRequireWildcard(require('../../../messages'));
+        var util = _interopRequireWildcard(require('../../../util'));
+        var t = _interopRequireWildcard(require('../../../types'));
         var check = exports.check = t.isForOfStatement;
         function ForOfStatement(node, parent, scope, file) {
           var callback = spec;
@@ -6220,11 +6220,11 @@
         };
         exports.ImportDeclaration = ImportDeclaration;
         exports.ExportDeclaration = ExportDeclaration;
-        var t = _interopRequireWildcard(require("../../../types"));
-        exports.check = require("../internal/modules").check;
+        var t = _interopRequireWildcard(require('../../../types'));
+        exports.check = require('../internal/modules').check;
         function ImportDeclaration(node, parent, scope, file) {
           if (node.isType)
-            return ;
+            return;
           var nodes = [];
           if (node.specifiers.length) {
             for (var i = 0; i < node.specifiers.length; i++) {
@@ -6240,7 +6240,7 @@
         }
         function ExportDeclaration(node, parent, scope, file) {
           if (t.isTypeAlias(node.declaration))
-            return ;
+            return;
           var nodes = [];
           var i;
           if (node.declaration) {
@@ -6276,14 +6276,14 @@
         };
         exports.check = check;
         exports.ObjectExpression = ObjectExpression;
-        var ReplaceSupers = _interopRequire(require("../../helpers/replace-supers"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var ReplaceSupers = _interopRequire(require('../../helpers/replace-supers'));
+        var t = _interopRequireWildcard(require('../../../types'));
         function check(node) {
           return t.isIdentifier(node, {name: "super"});
         }
         function Property(node, scope, getObjectRef, file) {
           if (!node.method)
-            return ;
+            return;
           var value = node.value;
           var thisExpr = scope.generateUidIdentifier("this");
           var replaceSupers = new ReplaceSupers({
@@ -6323,8 +6323,8 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.check = check;
-        var util = _interopRequireWildcard(require("../../../util"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var util = _interopRequireWildcard(require('../../../util'));
+        var t = _interopRequireWildcard(require('../../../types'));
         function check(node) {
           return t.isFunction(node) && hasDefaults(node);
         }
@@ -6337,17 +6337,17 @@
         };
         var iifeVisitor = {enter: function enter(node, parent, scope, state) {
             if (!this.isReferencedIdentifier())
-              return ;
+              return;
             if (!state.scope.hasOwnBinding(node.name))
-              return ;
+              return;
             if (state.scope.bindingIdentifierEquals(node.name, node))
-              return ;
+              return;
             state.iife = true;
             this.stop();
           }};
         exports.Function = function(node, parent, scope, file) {
           if (!hasDefaults(node))
-            return ;
+            return;
           t.ensureBlock(node);
           var body = [];
           var argsIdentifier = t.identifier("arguments");
@@ -6419,9 +6419,9 @@
         var _interopRequire = function(obj) {
           return obj && obj.__esModule ? obj["default"] : obj;
         };
-        var isNumber = _interopRequire(require("lodash/lang/isNumber"));
-        var util = _interopRequireWildcard(require("../../../util"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var isNumber = _interopRequire(require('lodash/lang/isNumber'));
+        var util = _interopRequireWildcard(require('../../../util'));
+        var t = _interopRequireWildcard(require('../../../types'));
         var check = exports.check = t.isRestElement;
         var memberExpressionOptimisationVisitor = {enter: function enter(node, parent, scope, state) {
             if (this.isScope() && !scope.bindingIdentifierEquals(state.name, state.outerBinding)) {
@@ -6434,12 +6434,12 @@
               return this.skip();
             }
             if (!this.isReferencedIdentifier({name: state.name}))
-              return ;
+              return;
             if (!state.noOptimise && t.isMemberExpression(parent) && parent.computed) {
               var prop = parent.property;
               if (isNumber(prop.value) || t.isUnaryExpression(prop) || t.isBinaryExpression(prop)) {
                 state.candidates.push(this);
-                return ;
+                return;
               }
             }
             state.canOptimise = false;
@@ -6461,7 +6461,7 @@
         };
         exports.Function = function(node, parent, scope, file) {
           if (!hasRest(node))
-            return ;
+            return;
           var rest = node.params.pop().argument;
           var argsId = t.identifier("arguments");
           argsId._ignoreAliasFunctions = true;
@@ -6489,7 +6489,7 @@
               candidate.node = argsId;
               optimizeMemberExpression(candidate.parent, node.params.length);
             }
-            return ;
+            return;
           }
           var start = t.literal(node.params.length);
           var key = scope.generateUidIdentifier("key");
@@ -6526,7 +6526,7 @@
         };
         exports.check = check;
         exports.ObjectExpression = ObjectExpression;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         function loose(node, body, objId) {
           for (var i = 0; i < node.properties.length; i++) {
             var prop = node.properties[i];
@@ -6592,7 +6592,7 @@
               break;
           }
           if (!hasComputed)
-            return ;
+            return;
           var initProps = [];
           var objId = scope.generateUidBasedOnNode(parent);
           var body = [];
@@ -6617,7 +6617,7 @@
         };
         exports.check = check;
         exports.Property = Property;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         function check(node) {
           return t.isProperty(node) && (node.method || node.shorthand);
         }
@@ -6639,14 +6639,14 @@
         };
         exports.check = check;
         exports.Literal = Literal;
-        var regex = _interopRequireWildcard(require("../../helpers/regex"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var regex = _interopRequireWildcard(require('../../helpers/regex'));
+        var t = _interopRequireWildcard(require('../../../types'));
         function check(node) {
           return regex.is(node, "y");
         }
         function Literal(node) {
           if (!regex.is(node, "y"))
-            return ;
+            return;
           return t.newExpression(t.identifier("RegExp"), [t.literal(node.regex.pattern), t.literal(node.regex.flags)]);
         }
         exports.__esModule = true;
@@ -6664,14 +6664,14 @@
         };
         exports.check = check;
         exports.Literal = Literal;
-        var rewritePattern = _interopRequire(require("regexpu/rewrite-pattern"));
-        var regex = _interopRequireWildcard(require("../../helpers/regex"));
+        var rewritePattern = _interopRequire(require('regexpu/rewrite-pattern'));
+        var regex = _interopRequireWildcard(require('../../helpers/regex'));
         function check(node) {
           return regex.is(node, "u");
         }
         function Literal(node) {
           if (!regex.is(node, "u"))
-            return ;
+            return;
           regex.pullFlag(node, "y");
           node.regex.pattern = rewritePattern(node.regex.pattern, node.regex.flags);
         }
@@ -6691,8 +6691,8 @@
         exports.ArrayExpression = ArrayExpression;
         exports.CallExpression = CallExpression;
         exports.NewExpression = NewExpression;
-        var includes = _interopRequire(require("lodash/collection/includes"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var includes = _interopRequire(require('lodash/collection/includes'));
+        var t = _interopRequireWildcard(require('../../../types'));
         function getSpreadLiteral(spread, scope) {
           return scope.toArray(spread.argument, true);
         }
@@ -6709,7 +6709,7 @@
           var _props = [];
           var push = function push() {
             if (!_props.length)
-              return ;
+              return;
             nodes.push(t.arrayExpression(_props));
             _props = [];
           };
@@ -6729,7 +6729,7 @@
         function ArrayExpression(node, parent, scope) {
           var elements = node.elements;
           if (!hasSpread(elements))
-            return ;
+            return;
           var nodes = build(elements, scope);
           var first = nodes.shift();
           if (!t.isArrayExpression(first)) {
@@ -6741,7 +6741,7 @@
         function CallExpression(node, parent, scope) {
           var args = node.arguments;
           if (!hasSpread(args))
-            return ;
+            return;
           var contextLiteral = t.identifier("undefined");
           node.arguments = [];
           var nodes;
@@ -6774,7 +6774,7 @@
         function NewExpression(node, parent, scope, file) {
           var args = node.arguments;
           if (!hasSpread(args))
-            return ;
+            return;
           var nativeType = t.isIdentifier(node.callee) && includes(t.NATIVE_TYPE_NAMES, node.callee.name);
           var nodes = build(args, scope);
           if (nativeType) {
@@ -6803,7 +6803,7 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.UnaryExpression = UnaryExpression;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         var optional = exports.optional = true;
         function UnaryExpression(node, parent, scope, file) {
           this.skip();
@@ -6832,12 +6832,12 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var reduceRight = _interopRequire(require("lodash/collection/reduceRight"));
-        var messages = _interopRequireWildcard(require("../../../messages"));
-        var flatten = _interopRequire(require("lodash/array/flatten"));
-        var util = _interopRequireWildcard(require("../../../util"));
-        var map = _interopRequire(require("lodash/collection/map"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var reduceRight = _interopRequire(require('lodash/collection/reduceRight'));
+        var messages = _interopRequireWildcard(require('../../../messages'));
+        var flatten = _interopRequire(require('lodash/array/flatten'));
+        var util = _interopRequireWildcard(require('../../../util'));
+        var map = _interopRequire(require('lodash/collection/map'));
+        var t = _interopRequireWildcard(require('../../../types'));
         exports.Function = function(node, parent, scope, file) {
           var tailCall = new TailCallTransformer(node, scope, file);
           tailCall.run();
@@ -6887,10 +6887,10 @@
           }};
         var thirdPass = {enter: function enter(node, parent, scope, state) {
             if (!this.isExpressionStatement())
-              return ;
+              return;
             var expr = node.expression;
             if (!t.isAssignmentExpression(expr))
-              return ;
+              return;
             if (!state.needsThis && expr.left === state.getThisId()) {
               this.remove();
             } else if (!state.needsArguments && expr.left === state.getArgumentsId() && t.isArrayExpression(expr.right)) {
@@ -6955,13 +6955,13 @@
             var node = this.node;
             var ownerId = this.ownerId;
             if (!ownerId)
-              return ;
+              return;
             scope.traverse(node, firstPass, this);
             if (!this.hasTailRecursion)
-              return ;
+              return;
             if (this.hasDeopt()) {
               this.file.log.deopt(node, messages.get("tailCallReassignmentDeopt"));
-              return ;
+              return;
             }
             scope.traverse(node, secondPass, this);
             if (!this.needsThis || !this.needsArguments) {
@@ -7010,7 +7010,7 @@
           };
           TailCallTransformer.prototype.subTransform = function subTransform(node) {
             if (!node)
-              return ;
+              return;
             var handler = this["subTransform" + node.type];
             if (handler)
               return handler.call(this, node);
@@ -7019,7 +7019,7 @@
             var callConsequent = this.subTransform(node.consequent);
             var callAlternate = this.subTransform(node.alternate);
             if (!callConsequent && !callAlternate) {
-              return ;
+              return;
             }
             node.type = "IfStatement";
             node.consequent = callConsequent ? t.toBlock(callConsequent) : returnBlock(node.consequent);
@@ -7033,7 +7033,7 @@
           TailCallTransformer.prototype.subTransformLogicalExpression = function subTransformLogicalExpression(node) {
             var callRight = this.subTransform(node.right);
             if (!callRight)
-              return ;
+              return;
             var leftId = this.getLeftId();
             var testExpr = t.assignmentExpression("=", leftId, node.left);
             if (node.operator === "&&") {
@@ -7045,7 +7045,7 @@
             var seq = node.expressions;
             var lastCall = this.subTransform(seq[seq.length - 1]);
             if (!lastCall) {
-              return ;
+              return;
             }
             if (--seq.length === 1) {
               node = seq[0];
@@ -7065,17 +7065,17 @@
                   args = node.arguments[1] || t.identifier("undefined");
                   break;
                 default:
-                  return ;
+                  return;
               }
               thisBinding = node.arguments[0];
               callee = callee.object;
             }
             if (!t.isIdentifier(callee) || !this.scope.bindingIdentifierEquals(callee.name, this.ownerId)) {
-              return ;
+              return;
             }
             this.hasTailRecursion = true;
             if (this.hasDeopt())
-              return ;
+              return;
             var body = [];
             if (!t.isThisExpression(thisBinding)) {
               body.push(t.expressionStatement(t.assignmentExpression("=", this.getThisId(), thisBinding || t.identifier("undefined"))));
@@ -7128,7 +7128,7 @@
         exports.check = check;
         exports.TaggedTemplateExpression = TaggedTemplateExpression;
         exports.TemplateLiteral = TemplateLiteral;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         var buildBinaryExpression = function buildBinaryExpression(left, right) {
           return t.binaryExpression("+", left, right);
         };
@@ -7189,8 +7189,8 @@
         exports.CallExpression = CallExpression;
         exports.VirtualPropertyExpression = VirtualPropertyExpression;
         exports.PrivateDeclaration = PrivateDeclaration;
-        var util = _interopRequireWildcard(require("../../../util"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var util = _interopRequireWildcard(require('../../../util'));
+        var t = _interopRequireWildcard(require('../../../types'));
         var experimental = exports.experimental = true;
         var container = function container(parent, call, ret, file) {
           if (t.isExpressionStatement(parent) && !file.isConsequenceExpressionStatement(parent)) {
@@ -7209,7 +7209,7 @@
         function AssignmentExpression(node, parent, scope, file) {
           var left = node.left;
           if (!t.isVirtualPropertyExpression(left))
-            return ;
+            return;
           var value = node.right;
           var temp;
           if (!t.isExpressionStatement(parent)) {
@@ -7236,9 +7236,9 @@
         function UnaryExpression(node, parent, scope, file) {
           var arg = node.argument;
           if (!t.isVirtualPropertyExpression(arg))
-            return ;
+            return;
           if (node.operator !== "delete")
-            return ;
+            return;
           var call = util.template("abstract-expression-delete", {
             PROPERTY: arg.property,
             OBJECT: arg.object
@@ -7248,7 +7248,7 @@
         function CallExpression(node, parent, scope) {
           var callee = node.callee;
           if (!t.isVirtualPropertyExpression(callee))
-            return ;
+            return;
           var temp = scope.generateTempBasedOnNode(callee.object);
           var call = util.template("abstract-expression-call", {
             PROPERTY: callee.property,
@@ -7286,10 +7286,10 @@
           return obj && obj.__esModule ? obj["default"] : obj;
         };
         exports.ComprehensionExpression = ComprehensionExpression;
-        var buildComprehension = _interopRequire(require("../../helpers/build-comprehension"));
-        var traverse = _interopRequire(require("../../../traversal"));
-        var util = _interopRequireWildcard(require("../../../util"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var buildComprehension = _interopRequire(require('../../helpers/build-comprehension'));
+        var traverse = _interopRequire(require('../../../traversal'));
+        var util = _interopRequireWildcard(require('../../../util'));
+        var t = _interopRequireWildcard(require('../../../types'));
         var experimental = exports.experimental = true;
         function ComprehensionExpression(node, parent, scope, file) {
           var callback = array;
@@ -7341,8 +7341,8 @@
         var _interopRequire = function(obj) {
           return obj && obj.__esModule ? obj["default"] : obj;
         };
-        var build = _interopRequire(require("../../helpers/build-binary-assignment-operator-transformer"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var build = _interopRequire(require('../../helpers/build-binary-assignment-operator-transformer'));
+        var t = _interopRequireWildcard(require('../../../types'));
         var experimental = exports.experimental = true;
         var MATH_POW = t.memberExpression(t.identifier("Math"), t.identifier("pow"));
         build(exports, {
@@ -7363,7 +7363,7 @@
         };
         exports.manipulateOptions = manipulateOptions;
         exports.ObjectExpression = ObjectExpression;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         var experimental = exports.experimental = true;
         function manipulateOptions(opts) {
           if (opts.whitelist.length)
@@ -7379,12 +7379,12 @@
         };
         function ObjectExpression(node, parent, scope, file) {
           if (!hasSpread(node))
-            return ;
+            return;
           var args = [];
           var props = [];
           var push = function push() {
             if (!props.length)
-              return ;
+              return;
             args.push(t.objectExpression(props));
             props = [];
           };
@@ -7408,63 +7408,63 @@
       85: [function(require, module, exports) {
         "use strict";
         module.exports = {
-          strict: require("./other/strict"),
-          _validation: require("./internal/validation"),
-          "validation.undeclaredVariableCheck": require("./validation/undeclared-variable-check"),
-          "validation.react": require("./validation/react"),
-          "spec.functionName": require("./spec/function-name"),
-          "spec.blockScopedFunctions": require("./spec/block-scoped-functions"),
-          "es6.arrowFunctions": require("./es6/arrow-functions"),
-          "playground.malletOperator": require("./playground/mallet-operator"),
-          "playground.methodBinding": require("./playground/method-binding"),
-          "playground.memoizationOperator": require("./playground/memoization-operator"),
-          "playground.objectGetterMemoization": require("./playground/object-getter-memoization"),
-          reactCompat: require("./other/react-compat"),
-          flow: require("./other/flow"),
-          react: require("./other/react"),
-          _modules: require("./internal/modules"),
-          "es7.comprehensions": require("./es7/comprehensions"),
-          "es6.classes": require("./es6/classes"),
-          asyncToGenerator: require("./other/async-to-generator"),
-          bluebirdCoroutines: require("./other/bluebird-coroutines"),
-          "es6.objectSuper": require("./es6/object-super"),
-          "es7.objectRestSpread": require("./es7/object-rest-spread"),
-          "es7.exponentiationOperator": require("./es7/exponentiation-operator"),
-          "es6.templateLiterals": require("./es6/template-literals"),
-          "es5.properties.mutators": require("./es5/properties.mutators"),
-          "es6.properties.shorthand": require("./es6/properties.shorthand"),
-          "es6.properties.computed": require("./es6/properties.computed"),
-          "es6.forOf": require("./es6/for-of"),
-          "es6.regex.sticky": require("./es6/regex.sticky"),
-          "es6.regex.unicode": require("./es6/regex.unicode"),
-          "es7.abstractReferences": require("./es7/abstract-references"),
-          "es6.constants": require("./es6/constants"),
-          "es6.parameters.rest": require("./es6/parameters.rest"),
-          "es6.spread": require("./es6/spread"),
-          "es6.parameters.default": require("./es6/parameters.default"),
-          "es6.destructuring": require("./es6/destructuring"),
-          "es6.blockScoping": require("./es6/block-scoping"),
-          "es6.blockScopingTDZ": require("./es6/block-scoping-tdz"),
-          "es6.tailCall": require("./es6/tail-call"),
-          regenerator: require("./other/regenerator"),
-          runtime: require("./other/runtime"),
-          "es6.modules": require("./es6/modules"),
-          _blockHoist: require("./internal/block-hoist"),
-          "spec.protoToAssign": require("./spec/proto-to-assign"),
-          _declarations: require("./internal/declarations"),
-          _aliasFunctions: require("./internal/alias-functions"),
-          "es6.symbols": require("./es6/symbols"),
-          "spec.undefinedToVoid": require("./spec/undefined-to-void"),
-          _strict: require("./internal/strict"),
-          _moduleFormatter: require("./internal/module-formatter"),
-          "es3.propertyLiterals": require("./es3/property-literals"),
-          "es3.memberExpressionLiterals": require("./es3/member-expression-literals"),
-          "utility.removeDebugger": require("./utility/remove-debugger"),
-          "utility.removeConsole": require("./utility/remove-console"),
-          "utility.inlineEnvironmentVariables": require("./utility/inline-environment-variables"),
-          "utility.inlineExpressions": require("./utility/inline-expressions"),
-          "utility.deadCodeElimination": require("./utility/dead-code-elimination"),
-          _cleanUp: require("./internal/cleanup")
+          strict: require('./other/strict'),
+          _validation: require('./internal/validation'),
+          "validation.undeclaredVariableCheck": require('./validation/undeclared-variable-check'),
+          "validation.react": require('./validation/react'),
+          "spec.functionName": require('./spec/function-name'),
+          "spec.blockScopedFunctions": require('./spec/block-scoped-functions'),
+          "es6.arrowFunctions": require('./es6/arrow-functions'),
+          "playground.malletOperator": require('./playground/mallet-operator'),
+          "playground.methodBinding": require('./playground/method-binding'),
+          "playground.memoizationOperator": require('./playground/memoization-operator'),
+          "playground.objectGetterMemoization": require('./playground/object-getter-memoization'),
+          reactCompat: require('./other/react-compat'),
+          flow: require('./other/flow'),
+          react: require('./other/react'),
+          _modules: require('./internal/modules'),
+          "es7.comprehensions": require('./es7/comprehensions'),
+          "es6.classes": require('./es6/classes'),
+          asyncToGenerator: require('./other/async-to-generator'),
+          bluebirdCoroutines: require('./other/bluebird-coroutines'),
+          "es6.objectSuper": require('./es6/object-super'),
+          "es7.objectRestSpread": require('./es7/object-rest-spread'),
+          "es7.exponentiationOperator": require('./es7/exponentiation-operator'),
+          "es6.templateLiterals": require('./es6/template-literals'),
+          "es5.properties.mutators": require('./es5/properties.mutators'),
+          "es6.properties.shorthand": require('./es6/properties.shorthand'),
+          "es6.properties.computed": require('./es6/properties.computed'),
+          "es6.forOf": require('./es6/for-of'),
+          "es6.regex.sticky": require('./es6/regex.sticky'),
+          "es6.regex.unicode": require('./es6/regex.unicode'),
+          "es7.abstractReferences": require('./es7/abstract-references'),
+          "es6.constants": require('./es6/constants'),
+          "es6.parameters.rest": require('./es6/parameters.rest'),
+          "es6.spread": require('./es6/spread'),
+          "es6.parameters.default": require('./es6/parameters.default'),
+          "es6.destructuring": require('./es6/destructuring'),
+          "es6.blockScoping": require('./es6/block-scoping'),
+          "es6.blockScopingTDZ": require('./es6/block-scoping-tdz'),
+          "es6.tailCall": require('./es6/tail-call'),
+          regenerator: require('./other/regenerator'),
+          runtime: require('./other/runtime'),
+          "es6.modules": require('./es6/modules'),
+          _blockHoist: require('./internal/block-hoist'),
+          "spec.protoToAssign": require('./spec/proto-to-assign'),
+          _declarations: require('./internal/declarations'),
+          _aliasFunctions: require('./internal/alias-functions'),
+          "es6.symbols": require('./es6/symbols'),
+          "spec.undefinedToVoid": require('./spec/undefined-to-void'),
+          _strict: require('./internal/strict'),
+          _moduleFormatter: require('./internal/module-formatter'),
+          "es3.propertyLiterals": require('./es3/property-literals'),
+          "es3.memberExpressionLiterals": require('./es3/member-expression-literals'),
+          "utility.removeDebugger": require('./utility/remove-debugger'),
+          "utility.removeConsole": require('./utility/remove-console'),
+          "utility.inlineEnvironmentVariables": require('./utility/inline-environment-variables'),
+          "utility.inlineExpressions": require('./utility/inline-expressions'),
+          "utility.deadCodeElimination": require('./utility/dead-code-elimination'),
+          _cleanUp: require('./internal/cleanup')
         };
       }, {
         "./es3/member-expression-literals": 59,
@@ -7532,7 +7532,7 @@
         };
         exports.Program = Program;
         exports.FunctionDeclaration = FunctionDeclaration;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         var functionChildrenVisitor = {enter: function enter(node, parent, scope, state) {
             if (this.isFunction() && !node._aliasFunction) {
               return this.skip();
@@ -7545,7 +7545,7 @@
             } else if (this.isThisExpression()) {
               getId = state.getThisId;
             } else {
-              return ;
+              return;
             }
             if (this.isReferenced())
               return getId();
@@ -7555,7 +7555,7 @@
               if (this.isFunction()) {
                 return this.skip();
               } else {
-                return ;
+                return;
               }
             }
             scope.traverse(node, functionChildrenVisitor, state);
@@ -7605,9 +7605,9 @@
         var _interopRequire = function(obj) {
           return obj && obj.__esModule ? obj["default"] : obj;
         };
-        var groupBy = _interopRequire(require("lodash/collection/groupBy"));
-        var flatten = _interopRequire(require("lodash/array/flatten"));
-        var values = _interopRequire(require("lodash/object/values"));
+        var groupBy = _interopRequire(require('lodash/collection/groupBy'));
+        var flatten = _interopRequire(require('lodash/array/flatten'));
+        var values = _interopRequire(require('lodash/object/values'));
         var BlockStatement = exports.BlockStatement = {exit: function exit(node) {
             var hasChange = false;
             for (var i = 0; i < node.body.length; i++) {
@@ -7616,7 +7616,7 @@
                 hasChange = true;
             }
             if (!hasChange)
-              return ;
+              return;
             var nodePriorities = groupBy(node.body, function(bodyNode) {
               var priority = bodyNode._blockHoist;
               if (priority == null)
@@ -7666,12 +7666,12 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.BlockStatement = BlockStatement;
-        var strict = _interopRequireWildcard(require("../../helpers/strict"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var strict = _interopRequireWildcard(require('../../helpers/strict'));
+        var t = _interopRequireWildcard(require('../../../types'));
         var secondPass = exports.secondPass = true;
         function BlockStatement(node, parent, scope, file) {
           if (!node._declarations)
-            return ;
+            return;
           strict.wrap(node, function() {
             var kinds = {};
             var kind;
@@ -7707,13 +7707,13 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.Program = Program;
-        var strict = _interopRequireWildcard(require("../../helpers/strict"));
+        var strict = _interopRequireWildcard(require('../../helpers/strict'));
         function Program(program, parent, scope, file) {
           strict.wrap(program, function() {
             program.body = file.dynamicImports.concat(program.body);
           });
           if (!file.transformers["es6.modules"].canRun())
-            return ;
+            return;
           if (file.moduleFormatter.transform) {
             file.moduleFormatter.transform(program);
           }
@@ -7728,7 +7728,7 @@
         exports.check = check;
         exports.ImportDeclaration = ImportDeclaration;
         exports.ExportDeclaration = ExportDeclaration;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         function check(node) {
           return t.isImportDeclaration(node) || t.isExportDeclaration(node);
         }
@@ -7741,7 +7741,7 @@
         function ExportDeclaration(node, parent, scope) {
           ImportDeclaration.apply(this, arguments);
           if (node.isType)
-            return ;
+            return;
           var declar = node.declaration;
           var getDeclar = function getDeclar() {
             declar._ignoreUserWhitespace = true;
@@ -7786,7 +7786,7 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.Program = Program;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         function Program(program, parent, scope, file) {
           if (file.transformers.strict.canRun()) {
             program.body.unshift(t.expressionStatement(t.literal("use strict")));
@@ -7802,8 +7802,8 @@
         exports.ForOfStatement = ForOfStatement;
         exports.Property = Property;
         exports.BlockStatement = BlockStatement;
-        var messages = _interopRequireWildcard(require("../../../messages"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var messages = _interopRequireWildcard(require('../../../messages'));
+        var t = _interopRequireWildcard(require('../../../types'));
         function ForOfStatement(node, parent, scope, file) {
           var left = node.left;
           if (t.isVariableDeclaration(left)) {
@@ -7831,7 +7831,7 @@
             if (t.isExpressionStatement(bodyNode) && t.isLiteral(bodyNode.expression)) {
               bodyNode._blockHoist = Infinity;
             } else {
-              return ;
+              return;
             }
           }
         }
@@ -7846,12 +7846,12 @@
         var _interopRequire = function(obj) {
           return obj && obj.__esModule ? obj["default"] : obj;
         };
-        var remapAsyncToGenerator = _interopRequire(require("../../helpers/remap-async-to-generator"));
-        exports.manipulateOptions = require("./bluebird-coroutines").manipulateOptions;
+        var remapAsyncToGenerator = _interopRequire(require('../../helpers/remap-async-to-generator'));
+        exports.manipulateOptions = require('./bluebird-coroutines').manipulateOptions;
         var optional = exports.optional = true;
         exports.Function = function(node, parent, scope, file) {
           if (!node.async || node.generator)
-            return ;
+            return;
           return remapAsyncToGenerator(node, file.addHelper("async-to-generator"), scope);
         };
         exports.__esModule = true;
@@ -7868,8 +7868,8 @@
           return obj && obj.__esModule ? obj["default"] : obj;
         };
         exports.manipulateOptions = manipulateOptions;
-        var remapAsyncToGenerator = _interopRequire(require("../../helpers/remap-async-to-generator"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var remapAsyncToGenerator = _interopRequire(require('../../helpers/remap-async-to-generator'));
+        var t = _interopRequireWildcard(require('../../../types'));
         function manipulateOptions(opts) {
           opts.experimental = true;
           opts.blacklist.push("regenerator");
@@ -7877,7 +7877,7 @@
         var optional = exports.optional = true;
         exports.Function = function(node, parent, scope, file) {
           if (!node.async || node.generator)
-            return ;
+            return;
           return remapAsyncToGenerator(node, t.memberExpression(file.addImport("bluebird", null, true), t.identifier("coroutine")), scope);
         };
         exports.__esModule = true;
@@ -7896,7 +7896,7 @@
         exports.TypeCastExpression = TypeCastExpression;
         exports.ImportDeclaration = ImportDeclaration;
         exports.ExportDeclaration = ExportDeclaration;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         function Flow(node) {
           this.remove();
         }
@@ -7933,13 +7933,13 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.manipulateOptions = manipulateOptions;
-        var react = _interopRequireWildcard(require("../../helpers/react"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var react = _interopRequireWildcard(require('../../helpers/react'));
+        var t = _interopRequireWildcard(require('../../../types'));
         function manipulateOptions(opts) {
           opts.blacklist.push("react");
         }
         var optional = exports.optional = true;
-        require("../../helpers/build-react-transformer")(exports, {
+        require('../../helpers/build-react-transformer')(exports, {
           pre: function pre(state) {
             state.callee = state.tagExpr;
           },
@@ -7961,8 +7961,8 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.Program = Program;
-        var react = _interopRequireWildcard(require("../../helpers/react"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var react = _interopRequireWildcard(require('../../helpers/react'));
+        var t = _interopRequireWildcard(require('../../../types'));
         var JSX_ANNOTATION_REGEX = /^\*\s*@jsx\s+([^\s]+)/;
         function Program(node, parent, scope, file) {
           var id = "React.createElement";
@@ -7982,7 +7982,7 @@
             return t.memberExpression(object, property);
           }));
         }
-        require("../../helpers/build-react-transformer")(exports, {
+        require('../../helpers/build-react-transformer')(exports, {
           pre: function pre(state) {
             var tagName = state.tagName;
             var args = state.args;
@@ -8011,8 +8011,8 @@
           return obj && obj.__esModule ? obj["default"] : obj;
         };
         exports.check = check;
-        var regenerator = _interopRequire(require("regenerator-babel"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var regenerator = _interopRequire(require('regenerator-babel'));
+        var t = _interopRequireWildcard(require('../../../types'));
         function check(node) {
           return t.isFunction(node) && (node.async || node.generator);
         }
@@ -8037,11 +8037,11 @@
         exports.Program = Program;
         exports.pre = pre;
         exports.Identifier = Identifier;
-        var includes = _interopRequire(require("lodash/collection/includes"));
-        var util = _interopRequireWildcard(require("../../../util"));
-        var core = _interopRequire(require("core-js/library"));
-        var has = _interopRequire(require("lodash/object/has"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var includes = _interopRequire(require('lodash/collection/includes'));
+        var util = _interopRequireWildcard(require('../../../util'));
+        var core = _interopRequire(require('core-js/library'));
+        var has = _interopRequire(require('lodash/object/has'));
+        var t = _interopRequireWildcard(require('../../../types'));
         var isSymboliterator = t.buildMatchMemberExpression("Symbol.iterator");
         var coreHas = function coreHas(node) {
           return node.name !== "_" && has(core, node.name);
@@ -8053,7 +8053,7 @@
               var obj = node.object;
               prop = node.property;
               if (!t.isReferenced(obj, node))
-                return ;
+                return;
               if (!node.computed && coreHas(obj) && has(core[obj.name], prop.name) && !scope.getBindingIdentifier(obj.name)) {
                 this.skip();
                 return t.prependToMemberExpression(node, file.get("coreIdentifier"));
@@ -8077,10 +8077,10 @@
               });
             } else if (this.isBinaryExpression()) {
               if (node.operator !== "in")
-                return ;
+                return;
               var left = node.left;
               if (!isSymboliterator(left))
-                return ;
+                return;
               return util.template("corejs-is-iterator", {
                 CORE_ID: file.get("coreIdentifier"),
                 VALUE: node.right
@@ -8128,8 +8128,8 @@
         exports.FunctionExpression = FunctionExpression;
         exports.ThisExpression = ThisExpression;
         exports.CallExpression = CallExpression;
-        var messages = _interopRequireWildcard(require("../../../messages"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var messages = _interopRequireWildcard(require('../../../messages'));
+        var t = _interopRequireWildcard(require('../../../types'));
         function Program(program) {
           var first = program.body[0];
           if (t.isExpressionStatement(first) && t.isLiteral(first.expression, {value: "use strict"})) {
@@ -8161,9 +8161,9 @@
         var _interopRequireWildcard = function(obj) {
           return obj && obj.__esModule ? obj : {"default": obj};
         };
-        var messages = _interopRequireWildcard(require("../../../messages"));
-        var build = _interopRequire(require("../../helpers/build-conditional-assignment-operator-transformer"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var messages = _interopRequireWildcard(require('../../../messages'));
+        var build = _interopRequire(require('../../helpers/build-conditional-assignment-operator-transformer'));
+        var t = _interopRequireWildcard(require('../../../types'));
         var playground = exports.playground = true;
         build(exports, {
           is: function is(node, file) {
@@ -8193,8 +8193,8 @@
         var _interopRequire = function(obj) {
           return obj && obj.__esModule ? obj["default"] : obj;
         };
-        var build = _interopRequire(require("../../helpers/build-conditional-assignment-operator-transformer"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var build = _interopRequire(require('../../helpers/build-conditional-assignment-operator-transformer'));
+        var t = _interopRequireWildcard(require('../../../types'));
         var playground = exports.playground = true;
         build(exports, {
           is: function(_is) {
@@ -8237,7 +8237,7 @@
         };
         exports.BindMemberExpression = BindMemberExpression;
         exports.BindFunctionExpression = BindFunctionExpression;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         var playground = exports.playground = true;
         function BindMemberExpression(node, parent, scope) {
           var object = node.object;
@@ -8270,7 +8270,7 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.MethodDefinition = MethodDefinition;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         var playground = exports.playground = true;
         var visitor = {enter: function enter(node, parent, scope, state) {
             if (this.isFunction())
@@ -8281,7 +8281,7 @@
           }};
         function MethodDefinition(node, parent, scope, file) {
           if (node.kind !== "memo")
-            return ;
+            return;
           node.kind = "get";
           var value = node.value;
           t.ensureBlock(value);
@@ -8305,10 +8305,10 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.BlockStatement = BlockStatement;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         function BlockStatement(node, parent, scope, file) {
           if (t.isFunction(parent) && parent.body === node || t.isExportDeclaration(parent)) {
-            return ;
+            return;
           }
           for (var i = 0; i < node.body.length; i++) {
             var func = node.body[i];
@@ -8325,7 +8325,7 @@
       }, {"../../../types": 125}],
       107: [function(require, module, exports) {
         "use strict";
-        exports.FunctionExpression = require("../../helpers/name-method").bare;
+        exports.FunctionExpression = require('../../helpers/name-method').bare;
         exports.__esModule = true;
       }, {"../../helpers/name-method": 36}],
       108: [function(require, module, exports) {
@@ -8339,8 +8339,8 @@
         exports.AssignmentExpression = AssignmentExpression;
         exports.ExpressionStatement = ExpressionStatement;
         exports.ObjectExpression = ObjectExpression;
-        var t = _interopRequireWildcard(require("../../../types"));
-        var pull = _interopRequire(require("lodash/array/pull"));
+        var t = _interopRequireWildcard(require('../../../types'));
+        var pull = _interopRequire(require('lodash/array/pull'));
         function isProtoKey(node) {
           return t.isLiteral(t.toComputedKey(node, node.key), {value: "__proto__"});
         }
@@ -8355,7 +8355,7 @@
         var optional = exports.optional = true;
         function AssignmentExpression(node, parent, scope, file) {
           if (!isProtoAssignmentExpression(node))
-            return ;
+            return;
           var nodes = [];
           var left = node.left.object;
           var temp = scope.generateTempBasedOnNode(node.left.object);
@@ -8368,7 +8368,7 @@
         function ExpressionStatement(node, parent, scope, file) {
           var expr = node.expression;
           if (!t.isAssignmentExpression(expr, {operator: "="}))
-            return ;
+            return;
           if (isProtoAssignmentExpression(expr)) {
             return buildDefaultsCallExpression(expr, expr.left.object, file);
           }
@@ -8400,7 +8400,7 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.Identifier = Identifier;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         var optional = exports.optional = true;
         function Identifier(node, parent) {
           if (node.name === "undefined" && this.isReferenced()) {
@@ -8415,7 +8415,7 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.ConditionalExpression = ConditionalExpression;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         function toStatements(node) {
           if (t.isBlockStatement(node)) {
             var hasBlockScoped = false;
@@ -8472,7 +8472,7 @@
             return obj && obj.__esModule ? obj : {"default": obj};
           };
           exports.MemberExpression = MemberExpression;
-          var t = _interopRequireWildcard(require("../../../types"));
+          var t = _interopRequireWildcard(require('../../../types'));
           var optional = exports.optional = true;
           var match = t.buildMatchMemberExpression("process.env");
           function MemberExpression(node) {
@@ -8484,7 +8484,7 @@
             }
           }
           exports.__esModule = true;
-        }).call(this, require("_process"));
+        }).call(this, require('_process'));
       }, {
         "../../../types": 125,
         _process: 156
@@ -8496,7 +8496,7 @@
         };
         exports.Expression = Expression;
         exports.Identifier = Identifier;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         var optional = exports.optional = true;
         function Expression(node, parent, scope) {
           var res = t.evaluate(node, scope);
@@ -8512,7 +8512,7 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.CallExpression = CallExpression;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         var isConsole = t.buildMatchMemberExpression("console", true);
         var optional = exports.optional = true;
         function CallExpression(node, parent) {
@@ -8532,7 +8532,7 @@
           return obj && obj.__esModule ? obj : {"default": obj};
         };
         exports.ExpressionStatement = ExpressionStatement;
-        var t = _interopRequireWildcard(require("../../../types"));
+        var t = _interopRequireWildcard(require('../../../types'));
         var optional = exports.optional = true;
         function ExpressionStatement(node) {
           if (this.get("expression").isIdentifier({name: "debugger"})) {
@@ -8548,8 +8548,8 @@
         };
         exports.CallExpression = CallExpression;
         exports.ModuleDeclaration = ModuleDeclaration;
-        var messages = _interopRequireWildcard(require("../../../messages"));
-        var t = _interopRequireWildcard(require("../../../types"));
+        var messages = _interopRequireWildcard(require('../../../messages'));
+        var t = _interopRequireWildcard(require('../../../types'));
         function check(source, file) {
           if (t.isLiteral(source)) {
             var name = source.value;
@@ -8581,14 +8581,14 @@
           return obj && obj.__esModule ? obj["default"] : obj;
         };
         exports.Identifier = Identifier;
-        var levenshtein = _interopRequire(require("leven"));
-        var messages = _interopRequireWildcard(require("../../../messages"));
+        var levenshtein = _interopRequire(require('leven'));
+        var messages = _interopRequireWildcard(require('../../../messages'));
         var optional = exports.optional = true;
         function Identifier(node, parent, scope, file) {
           if (!this.isReferenced())
-            return ;
+            return;
           if (scope.hasBinding(node.name))
-            return ;
+            return;
           var bindings = scope.getAllBindings();
           var closest;
           var shortest = -1;
@@ -8627,10 +8627,10 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var TraversalPath = _interopRequire(require("./path"));
-        var flatten = _interopRequire(require("lodash/array/flatten"));
-        var compact = _interopRequire(require("lodash/array/compact"));
-        var t = _interopRequireWildcard(require("../types"));
+        var TraversalPath = _interopRequire(require('./path'));
+        var flatten = _interopRequire(require('lodash/array/flatten'));
+        var compact = _interopRequire(require('lodash/array/compact'));
+        var t = _interopRequireWildcard(require('../types'));
         var TraversalContext = function() {
           function TraversalContext(scope, opts, state, parentPath) {
             _classCallCheck(this, TraversalContext);
@@ -8650,12 +8650,12 @@
           TraversalContext.prototype.visit = function visit(node, key) {
             var nodes = node[key];
             if (!nodes)
-              return ;
+              return;
             if (!Array.isArray(nodes)) {
               return this.visitNode(node, node, key);
             }
             if (nodes.length === 0) {
-              return ;
+              return;
             }
             for (var i = 0; i < nodes.length; i++) {
               if (nodes[i] && this.visitNode(node, nodes, i)) {
@@ -8687,12 +8687,12 @@
           return obj && obj.__esModule ? obj["default"] : obj;
         };
         module.exports = traverse;
-        var TraversalContext = _interopRequire(require("./context"));
-        var includes = _interopRequire(require("lodash/collection/includes"));
-        var t = _interopRequireWildcard(require("../types"));
+        var TraversalContext = _interopRequire(require('./context'));
+        var includes = _interopRequire(require('lodash/collection/includes'));
+        var t = _interopRequireWildcard(require('../types'));
         function traverse(parent, opts, scope, state) {
           if (!parent)
-            return ;
+            return;
           if (!opts.noScope && !scope) {
             if (parent.type !== "Program" && parent.type !== "File") {
               throw new Error("Must pass a scope unless traversing a Program/File got a " + parent.type + " node");
@@ -8715,11 +8715,11 @@
         traverse.node = function(node, opts, scope, state, parentPath) {
           var keys = t.VISITOR_KEYS[node.type];
           if (!keys)
-            return ;
+            return;
           var context = new TraversalContext(scope, opts, state, parentPath);
           for (var i = 0; i < keys.length; i++) {
             if (context.visit(node, keys[i])) {
-              return ;
+              return;
             }
           }
         };
@@ -8821,10 +8821,10 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var traverse = _interopRequire(require("./index"));
-        var includes = _interopRequire(require("lodash/collection/includes"));
-        var Scope = _interopRequire(require("./scope"));
-        var t = _interopRequireWildcard(require("../types"));
+        var traverse = _interopRequire(require('./index'));
+        var includes = _interopRequire(require('lodash/collection/includes'));
+        var Scope = _interopRequire(require('./scope'));
+        var t = _interopRequireWildcard(require('../types'));
         var TraversalPath = function() {
           function TraversalPath(parent, container) {
             _classCallCheck(this, TraversalPath);
@@ -8902,7 +8902,7 @@
           TraversalPath.prototype.call = function call(key) {
             var node = this.node;
             if (!node)
-              return ;
+              return;
             var opts = this.opts;
             var fn = opts[key] || opts;
             if (opts[node.type])
@@ -9014,16 +9014,16 @@
             throw new TypeError("Cannot call a class as a function");
           }
         };
-        var includes = _interopRequire(require("lodash/collection/includes"));
-        var traverse = _interopRequire(require("./index"));
-        var defaults = _interopRequire(require("lodash/object/defaults"));
-        var messages = _interopRequireWildcard(require("../messages"));
-        var globals = _interopRequire(require("globals"));
-        var flatten = _interopRequire(require("lodash/array/flatten"));
-        var extend = _interopRequire(require("lodash/object/extend"));
-        var object = _interopRequire(require("../helpers/object"));
-        var each = _interopRequire(require("lodash/collection/each"));
-        var t = _interopRequireWildcard(require("../types"));
+        var includes = _interopRequire(require('lodash/collection/includes'));
+        var traverse = _interopRequire(require('./index'));
+        var defaults = _interopRequire(require('lodash/object/defaults'));
+        var messages = _interopRequireWildcard(require('../messages'));
+        var globals = _interopRequire(require('globals'));
+        var flatten = _interopRequire(require('lodash/array/flatten'));
+        var extend = _interopRequire(require('lodash/object/extend'));
+        var object = _interopRequire(require('../helpers/object'));
+        var each = _interopRequire(require('lodash/collection/each'));
+        var t = _interopRequireWildcard(require('../types'));
         var functionVariableVisitor = {enter: function enter(node, parent, scope, state) {
             if (t.isFor(node)) {
               each(t.FOR_INIT_KEYS, function(key) {
@@ -9035,11 +9035,11 @@
             if (t.isFunction(node))
               return this.skip();
             if (state.blockId && node === state.blockId)
-              return ;
+              return;
             if (t.isBlockScoped(node))
-              return ;
+              return;
             if (t.isExportDeclaration(node) && t.isDeclaration(node.declaration))
-              return ;
+              return;
             if (t.isDeclaration(node))
               state.scope.registerDeclaration(node);
           }};
@@ -9160,11 +9160,11 @@
           Scope.prototype.checkBlockScopedCollisions = function checkBlockScopedCollisions(kind, name, id) {
             var local = this.getOwnBindingInfo(name);
             if (!local)
-              return ;
+              return;
             if (kind === "param")
-              return ;
+              return;
             if (kind === "hoisted" && local.kind === "let")
-              return ;
+              return;
             if (local.kind === "let" || local.kind === "const" || local.kind === "module") {
               throw this.file.errorWithNode(id, messages.get("scopeDuplicateDeclaration", name), TypeError);
             }
@@ -9174,7 +9174,7 @@
               newName = this.generateUidIdentifier(oldName).name;
             var info = this.getBindingInfo(oldName);
             if (!info)
-              return ;
+              return;
             var binding = info.identifier;
             var scope = info.scope;
             scope.traverse(scope.block, {enter: function enter(node, parent, scope) {
@@ -9205,10 +9205,10 @@
               return t.genericTypeAnnotation(t.identifier("Array"));
             }
             if (t.isObjectExpression(target)) {
-              return ;
+              return;
             }
             if (t.isLiteral(target)) {
-              return ;
+              return;
             }
             if (t.isCallExpression(target) && t.isIdentifier(target.callee)) {
               var funcInfo = this.getBindingInfo(target.callee.name);
@@ -9218,7 +9218,7 @@
               }
             }
             if (t.isIdentifier(target)) {
-              return ;
+              return;
             }
           };
           Scope.prototype.isTypeGeneric = function isTypeGeneric(name, genericName) {
@@ -9234,7 +9234,7 @@
           Scope.prototype.assignType = function assignType(name, type) {
             var info = this.getBindingInfo(name);
             if (!info)
-              return ;
+              return;
             info.typeAnnotation = type;
           };
           Scope.prototype.getTypeAnnotation = function getTypeAnnotation(id, node) {
@@ -9354,7 +9354,7 @@
             var info = block._scopeInfo;
             if (info) {
               extend(this, info);
-              return ;
+              return;
             }
             info = block._scopeInfo = {
               bindings: object(),
@@ -9488,15 +9488,15 @@
           };
           Scope.prototype._immutableBindingInfoToValue = function _immutableBindingInfoToValue(info) {
             if (!info)
-              return ;
+              return;
             if (info.reassigned)
-              return ;
+              return;
             var node = info.node;
             if (t.isVariableDeclarator(node)) {
               if (t.isIdentifier(node.id)) {
                 node = node.init;
               } else {
-                return ;
+                return;
               }
             }
             if (t.isImmutable(node)) {
@@ -9795,13 +9795,13 @@
         exports.toExpression = toExpression;
         exports.toBlock = toBlock;
         exports.valueToNode = valueToNode;
-        var isPlainObject = _interopRequire(require("lodash/lang/isPlainObject"));
-        var isNumber = _interopRequire(require("lodash/lang/isNumber"));
-        var isRegExp = _interopRequire(require("lodash/lang/isRegExp"));
-        var isString = _interopRequire(require("lodash/lang/isString"));
-        var traverse = _interopRequire(require("../traversal"));
-        var each = _interopRequire(require("lodash/collection/each"));
-        var t = _interopRequireWildcard(require("./index"));
+        var isPlainObject = _interopRequire(require('lodash/lang/isPlainObject'));
+        var isNumber = _interopRequire(require('lodash/lang/isNumber'));
+        var isRegExp = _interopRequire(require('lodash/lang/isRegExp'));
+        var isString = _interopRequire(require('lodash/lang/isString'));
+        var traverse = _interopRequire(require('../traversal'));
+        var each = _interopRequire(require('lodash/collection/each'));
+        var t = _interopRequireWildcard(require('./index'));
         function toComputedKey(node) {
           var key = arguments[1] === undefined ? node.key : arguments[1];
           return function() {
@@ -9974,7 +9974,7 @@
         };
         exports.evaluateTruthy = evaluateTruthy;
         exports.evaluate = evaluate;
-        var t = _interopRequireWildcard(require("./index"));
+        var t = _interopRequireWildcard(require('./index'));
         function evaluateTruthy(node, scope) {
           var res = evaluate(node, scope);
           if (res.confident)
@@ -9991,7 +9991,7 @@
           };
           function evaluate(node) {
             if (!confident)
-              return ;
+              return;
             if (t.isSequenceExpression(node)) {
               return evaluate(node.expressions[node.expressions.length - 1]);
             }
@@ -10091,11 +10091,11 @@
         exports.removeComments = removeComments;
         exports.inheritsComments = inheritsComments;
         exports.inherits = inherits;
-        var toFastProperties = _interopRequire(require("to-fast-properties"));
-        var compact = _interopRequire(require("lodash/array/compact"));
-        var assign = _interopRequire(require("lodash/object/assign"));
-        var each = _interopRequire(require("lodash/collection/each"));
-        var uniq = _interopRequire(require("lodash/array/uniq"));
+        var toFastProperties = _interopRequire(require('to-fast-properties'));
+        var compact = _interopRequire(require('lodash/array/compact'));
+        var assign = _interopRequire(require('lodash/object/assign'));
+        var each = _interopRequire(require('lodash/collection/each'));
+        var uniq = _interopRequire(require('lodash/array/uniq'));
         var t = exports;
         function registerType(type, skipAliasCheck) {
           var is = t["is" + type] = function(node, opts) {
@@ -10114,9 +10114,9 @@
         var FLATTENABLE_KEYS = exports.FLATTENABLE_KEYS = ["body", "expressions"];
         var FOR_INIT_KEYS = exports.FOR_INIT_KEYS = ["left", "init"];
         var COMMENT_KEYS = exports.COMMENT_KEYS = ["leadingComments", "trailingComments"];
-        var VISITOR_KEYS = exports.VISITOR_KEYS = require("./visitor-keys");
-        var BUILDER_KEYS = exports.BUILDER_KEYS = require("./builder-keys");
-        var ALIAS_KEYS = exports.ALIAS_KEYS = require("./alias-keys");
+        var VISITOR_KEYS = exports.VISITOR_KEYS = require('./visitor-keys');
+        var BUILDER_KEYS = exports.BUILDER_KEYS = require('./builder-keys');
+        var ALIAS_KEYS = exports.ALIAS_KEYS = require('./alias-keys');
         t.FLIPPED_ALIAS_KEYS = {};
         each(t.VISITOR_KEYS, function(keys, type) {
           registerType(type, true);
@@ -10154,7 +10154,7 @@
         }
         each(t.VISITOR_KEYS, function(keys, type) {
           if (t.BUILDER_KEYS[type])
-            return ;
+            return;
           var defs = {};
           each(keys, function(key) {
             defs[key] = null;
@@ -10289,10 +10289,10 @@
         toFastProperties(t);
         toFastProperties(t.VISITOR_KEYS);
         exports.__esModule = true;
-        assign(t, require("./evaluators"));
-        assign(t, require("./retrievers"));
-        assign(t, require("./validators"));
-        assign(t, require("./converters"));
+        assign(t, require('./evaluators'));
+        assign(t, require('./retrievers'));
+        assign(t, require('./validators'));
+        assign(t, require('./converters'));
         exports.__esModule = true;
       }, {
         "./alias-keys": 121,
@@ -10320,8 +10320,8 @@
         exports.getLastStatements = getLastStatements;
         exports.getSpecifierName = getSpecifierName;
         exports.getSpecifierId = getSpecifierId;
-        var object = _interopRequire(require("../helpers/object"));
-        var t = _interopRequireWildcard(require("./index"));
+        var object = _interopRequire(require('../helpers/object'));
+        var t = _interopRequireWildcard(require('./index'));
         function getBindingIdentifiers(node) {
           var search = [].concat(node);
           var ids = object();
@@ -10419,9 +10419,9 @@
         exports.isSpecifierDefault = isSpecifierDefault;
         exports.isScope = isScope;
         exports.isImmutable = isImmutable;
-        var isString = _interopRequire(require("lodash/lang/isString"));
-        var esutils = _interopRequire(require("esutils"));
-        var t = _interopRequireWildcard(require("./index"));
+        var isString = _interopRequire(require('lodash/lang/isString'));
+        var esutils = _interopRequire(require('esutils'));
+        var t = _interopRequireWildcard(require('./index'));
         function isReferenced(node, parent) {
           if (t.isMemberExpression(parent)) {
             if (parent.property === node && parent.computed) {
@@ -10669,23 +10669,23 @@
           exports.booleanify = booleanify;
           exports.template = template;
           exports.parseTemplate = parseTemplate;
-          require("./patch");
-          var buildDebug = _interopRequire(require("debug/node"));
-          var cloneDeep = _interopRequire(require("lodash/lang/cloneDeep"));
-          var isBoolean = _interopRequire(require("lodash/lang/isBoolean"));
-          var messages = _interopRequireWildcard(require("./messages"));
-          var contains = _interopRequire(require("lodash/collection/contains"));
-          var traverse = _interopRequire(require("./traversal"));
-          var isString = _interopRequire(require("lodash/lang/isString"));
-          var isRegExp = _interopRequire(require("lodash/lang/isRegExp"));
-          var isEmpty = _interopRequire(require("lodash/lang/isEmpty"));
-          var parse = _interopRequire(require("./helpers/parse"));
-          var path = _interopRequire(require("path"));
-          var each = _interopRequire(require("lodash/collection/each"));
-          var has = _interopRequire(require("lodash/object/has"));
-          var fs = _interopRequire(require("fs"));
-          var t = _interopRequireWildcard(require("./types"));
-          var _util = require("util");
+          require('./patch');
+          var buildDebug = _interopRequire(require('debug/node'));
+          var cloneDeep = _interopRequire(require('lodash/lang/cloneDeep'));
+          var isBoolean = _interopRequire(require('lodash/lang/isBoolean'));
+          var messages = _interopRequireWildcard(require('./messages'));
+          var contains = _interopRequire(require('lodash/collection/contains'));
+          var traverse = _interopRequire(require('./traversal'));
+          var isString = _interopRequire(require('lodash/lang/isString'));
+          var isRegExp = _interopRequire(require('lodash/lang/isRegExp'));
+          var isEmpty = _interopRequire(require('lodash/lang/isEmpty'));
+          var parse = _interopRequire(require('./helpers/parse'));
+          var path = _interopRequire(require('path'));
+          var each = _interopRequire(require('lodash/collection/each'));
+          var has = _interopRequire(require('lodash/object/has'));
+          var fs = _interopRequire(require('fs'));
+          var t = _interopRequireWildcard(require('./types'));
+          var _util = require('util');
           exports.inherits = _util.inherits;
           exports.inspect = _util.inspect;
           var debug = exports.debug = buildDebug("babel");
@@ -10777,7 +10777,7 @@
             }
             each(fs.readdirSync(templatesLoc), function(name) {
               if (name[0] === ".")
-                return ;
+                return;
               var key = path.basename(name, path.extname(name));
               var loc = path.join(templatesLoc, name);
               var code = fs.readFileSync(loc, "utf8");
@@ -10786,7 +10786,7 @@
             return templates;
           }
           try {
-            exports.templates = require("../../templates.json!systemjs-json");
+            exports.templates = require('../../templates.json!systemjs-json');
           } catch (err) {
             if (err.code !== "MODULE_NOT_FOUND")
               throw err;
@@ -13115,7 +13115,7 @@
           function setStrict(strct) {
             strict = strct;
             if (tokType !== _num && tokType !== _string)
-              return ;
+              return;
             tokPos = tokStart;
             if (options.locations) {
               while (tokPos < tokLineStart) {
@@ -13394,7 +13394,7 @@
           }
           function checkPropClash(prop, propHash) {
             if (options.ecmaVersion >= 6)
-              return ;
+              return;
             var key = prop.key,
                 name;
             switch (key.type) {
@@ -13405,7 +13405,7 @@
                 name = String(key.value);
                 break;
               default:
-                return ;
+                return;
             }
             var kind = prop.kind || "init",
                 other;
@@ -14314,7 +14314,7 @@
                 prop.computed = true;
                 prop.key = parseExpression();
                 expect(_bracketR);
-                return ;
+                return;
               } else {
                 prop.computed = false;
               }
@@ -15340,7 +15340,7 @@
         });
       }, {}],
       131: [function(require, module, exports) {
-        var types = require("../lib/types");
+        var types = require('../lib/types');
         var Type = types.Type;
         var def = Type.def;
         var or = Type.or;
@@ -15349,7 +15349,7 @@
         var isNumber = builtin.number;
         var isBoolean = builtin.boolean;
         var isRegExp = builtin.RegExp;
-        var shared = require("../lib/shared");
+        var shared = require('../lib/shared');
         var defaults = shared.defaults;
         var geq = shared.geq;
         def("Printable").field("loc", or(def("SourceLocation"), null), defaults["null"], true);
@@ -15421,8 +15421,8 @@
         "../lib/types": 143
       }],
       132: [function(require, module, exports) {
-        require("./core");
-        var types = require("../lib/types");
+        require('./core');
+        var types = require('../lib/types');
         var def = types.Type.def;
         var or = types.Type.or;
         var builtin = types.builtInTypes;
@@ -15452,15 +15452,15 @@
         "./core": 131
       }],
       133: [function(require, module, exports) {
-        require("./core");
-        var types = require("../lib/types");
+        require('./core');
+        var types = require('../lib/types');
         var def = types.Type.def;
         var or = types.Type.or;
         var builtin = types.builtInTypes;
         var isBoolean = builtin.boolean;
         var isObject = builtin.object;
         var isString = builtin.string;
-        var defaults = require("../lib/shared").defaults;
+        var defaults = require('../lib/shared').defaults;
         def("Function").field("generator", isBoolean, defaults["false"]).field("expression", isBoolean, defaults["false"]).field("defaults", [or(def("Expression"), null)], defaults.emptyArray).field("rest", or(def("Identifier"), null), defaults["null"]);
         def("FunctionDeclaration").build("id", "params", "body", "generator", "expression");
         def("FunctionExpression").build("id", "params", "body", "generator", "expression");
@@ -15507,13 +15507,13 @@
         "./core": 131
       }],
       134: [function(require, module, exports) {
-        require("./core");
-        var types = require("../lib/types");
+        require('./core');
+        var types = require('../lib/types');
         var def = types.Type.def;
         var or = types.Type.or;
         var builtin = types.builtInTypes;
         var isBoolean = builtin.boolean;
-        var defaults = require("../lib/shared").defaults;
+        var defaults = require('../lib/shared').defaults;
         def("Function").field("async", isBoolean, defaults["false"]);
         def("SpreadProperty").bases("Node").build("argument").field("argument", def("Expression"));
         def("ObjectExpression").field("properties", [or(def("Property"), def("SpreadProperty"))]);
@@ -15526,14 +15526,14 @@
         "./core": 131
       }],
       135: [function(require, module, exports) {
-        require("./core");
-        var types = require("../lib/types");
+        require('./core');
+        var types = require('../lib/types');
         var def = types.Type.def;
         var or = types.Type.or;
         var builtin = types.builtInTypes;
         var isString = builtin.string;
         var isBoolean = builtin.boolean;
-        var defaults = require("../lib/shared").defaults;
+        var defaults = require('../lib/shared').defaults;
         def("JSXAttribute").bases("Node").build("name", "value").field("name", or(def("JSXIdentifier"), def("JSXNamespacedName"))).field("value", or(def("Literal"), def("JSXExpressionContainer"), null), defaults["null"]);
         def("JSXIdentifier").bases("Node").build("name").field("name", isString);
         def("JSXNamespacedName").bases("Node").build("namespace", "name").field("namespace", def("JSXIdentifier")).field("name", def("JSXIdentifier"));
@@ -15596,11 +15596,11 @@
         "./core": 131
       }],
       136: [function(require, module, exports) {
-        require("./core");
-        var types = require("../lib/types");
+        require('./core');
+        var types = require('../lib/types');
         var def = types.Type.def;
         var or = types.Type.or;
-        var geq = require("../lib/shared").geq;
+        var geq = require('../lib/shared').geq;
         def("ForOfStatement").bases("Statement").build("left", "right", "body").field("left", or(def("VariableDeclaration"), def("Expression"))).field("right", def("Expression")).field("body", def("Statement"));
         def("LetStatement").bases("Statement").build("head", "body").field("head", [def("VariableDeclarator")]).field("body", def("Statement"));
         def("LetExpression").bases("Expression").build("head", "body").field("head", [def("VariableDeclarator")]).field("body", def("Expression"));
@@ -15612,8 +15612,8 @@
         "./core": 131
       }],
       137: [function(require, module, exports) {
-        var assert = require("assert");
-        var types = require("../main");
+        var assert = require('assert');
+        var types = require('../main');
         var getFieldNames = types.getFieldNames;
         var getFieldValue = types.getFieldValue;
         var isArray = types.builtInTypes.array;
@@ -15747,19 +15747,19 @@
         assert: 146
       }],
       138: [function(require, module, exports) {
-        var assert = require("assert");
-        var types = require("./types");
+        var assert = require('assert');
+        var types = require('./types');
         var n = types.namedTypes;
         var b = types.builders;
         var isNumber = types.builtInTypes.number;
         var isArray = types.builtInTypes.array;
-        var Path = require("./path");
-        var Scope = require("./scope");
+        var Path = require('./path');
+        var Scope = require('./scope');
         function NodePath(value, parentPath, name) {
           assert.ok(this instanceof NodePath);
           Path.call(this, value, parentPath, name);
         }
-        require("util").inherits(NodePath, Path);
+        require('util').inherits(NodePath, Path);
         var NPp = NodePath.prototype;
         Object.defineProperties(NPp, {
           node: {get: function() {
@@ -16051,9 +16051,9 @@
         util: 172
       }],
       139: [function(require, module, exports) {
-        var assert = require("assert");
-        var types = require("./types");
-        var NodePath = require("./node-path");
+        var assert = require('assert');
+        var types = require('./types');
+        var NodePath = require('./node-path');
         var Printable = types.namedTypes.Printable;
         var isArray = types.builtInTypes.array;
         var isObject = types.builtInTypes.object;
@@ -16291,10 +16291,10 @@
         assert: 146
       }],
       140: [function(require, module, exports) {
-        var assert = require("assert");
+        var assert = require('assert');
         var Op = Object.prototype;
         var hasOwn = Op.hasOwnProperty;
-        var types = require("./types");
+        var types = require('./types');
         var isArray = types.builtInTypes.array;
         var isNumber = types.builtInTypes.number;
         var Ap = Array.prototype;
@@ -16546,8 +16546,8 @@
         assert: 146
       }],
       141: [function(require, module, exports) {
-        var assert = require("assert");
-        var types = require("./types");
+        var assert = require('assert');
+        var types = require('./types');
         var Type = types.Type;
         var namedTypes = types.namedTypes;
         var Node = namedTypes.Node;
@@ -16557,7 +16557,7 @@
         var b = types.builders;
         function Scope(path, parentScope) {
           assert.ok(this instanceof Scope);
-          assert.ok(path instanceof require("./node-path"));
+          assert.ok(path instanceof require('./node-path'));
           ScopeType.assert(path.value);
           var depth;
           if (parentScope) {
@@ -16736,7 +16736,7 @@
         assert: 146
       }],
       142: [function(require, module, exports) {
-        var types = require("../lib/types");
+        var types = require('../lib/types');
         var Type = types.Type;
         var builtin = types.builtInTypes;
         var isNumber = builtin.number;
@@ -16769,7 +16769,7 @@
         }, naiveIsPrimitive.toString());
       }, {"../lib/types": 143}],
       143: [function(require, module, exports) {
-        var assert = require("assert");
+        var assert = require('assert');
         var Ap = Array.prototype;
         var slice = Ap.slice;
         var map = Ap.map;
@@ -17080,7 +17080,7 @@
               assert.ok(self.finalized, "attempting to instantiate unfinalized type " + self.typeName);
               function add(param, i) {
                 if (hasOwn.call(built, param))
-                  return ;
+                  return;
                 var all = self.allFields;
                 assert.ok(hasOwn.call(all, param), param);
                 var field = all[param];
@@ -17228,13 +17228,13 @@
         };
       }, {assert: 146}],
       144: [function(require, module, exports) {
-        var types = require("./lib/types");
-        require("./def/core");
-        require("./def/es6");
-        require("./def/es7");
-        require("./def/mozilla");
-        require("./def/e4x");
-        require("./def/fb-harmony");
+        var types = require('./lib/types');
+        require('./def/core');
+        require('./def/es6');
+        require('./def/es7');
+        require('./def/mozilla');
+        require('./def/e4x');
+        require('./def/fb-harmony');
         types.finalize();
         exports.Type = types.Type;
         exports.builtInTypes = types.builtInTypes;
@@ -17246,10 +17246,10 @@
         exports.eachField = types.eachField;
         exports.someField = types.someField;
         exports.getSupertypeNames = types.getSupertypeNames;
-        exports.astNodesAreEquivalent = require("./lib/equiv");
+        exports.astNodesAreEquivalent = require('./lib/equiv');
         exports.finalize = types.finalize;
-        exports.NodePath = require("./lib/node-path");
-        exports.PathVisitor = require("./lib/path-visitor");
+        exports.NodePath = require('./lib/node-path');
+        exports.PathVisitor = require('./lib/path-visitor');
         exports.visit = exports.PathVisitor.visit;
       }, {
         "./def/core": 131,
@@ -17265,7 +17265,7 @@
       }],
       145: [function(require, module, exports) {}, {}],
       146: [function(require, module, exports) {
-        var util = require("util");
+        var util = require('util');
         var pSlice = Array.prototype.slice;
         var hasOwn = Object.prototype.hasOwnProperty;
         var assert = module.exports = ok;
@@ -17484,9 +17484,9 @@
         arguments[4][145][0].apply(exports, arguments);
       }, {dup: 145}],
       148: [function(require, module, exports) {
-        var base64 = require("base64-js");
-        var ieee754 = require("ieee754");
-        var isArray = require("is-array");
+        var base64 = require('base64-js');
+        var ieee754 = require('ieee754');
+        var isArray = require('is-array');
         exports.Buffer = Buffer;
         exports.SlowBuffer = SlowBuffer;
         exports.INSPECT_MAX_BYTES = 50;
@@ -18341,9 +18341,9 @@
           if (end < start)
             throw new RangeError("end < start");
           if (end === start)
-            return ;
+            return;
           if (this.length === 0)
-            return ;
+            return;
           if (start < 0 || start >= this.length)
             throw new RangeError("start out of bounds");
           if (end < 0 || end > this.length)
@@ -19140,7 +19140,7 @@
               start = str.length + start;
             return str.substr(start, len);
           };
-        }).call(this, require("_process"));
+        }).call(this, require('_process'));
       }, {_process: 156}],
       156: [function(require, module, exports) {
         var process = module.exports = {};
@@ -19148,7 +19148,7 @@
         var draining = false;
         function drainQueue() {
           if (draining) {
-            return ;
+            return;
           }
           draining = true;
           var currentQueue;
@@ -19198,7 +19198,7 @@
         };
       }, {}],
       157: [function(require, module, exports) {
-        module.exports = require("./lib/_stream_duplex");
+        module.exports = require('./lib/_stream_duplex');
       }, {"./lib/_stream_duplex.js": 158}],
       158: [function(require, module, exports) {
         (function(process) {
@@ -19209,10 +19209,10 @@
               keys.push(key);
             return keys;
           };
-          var util = require("core-util-is");
-          util.inherits = require("inherits");
-          var Readable = require("./_stream_readable");
-          var Writable = require("./_stream_writable");
+          var util = require('core-util-is');
+          util.inherits = require('inherits');
+          var Readable = require('./_stream_readable');
+          var Writable = require('./_stream_writable');
           util.inherits(Duplex, Readable);
           forEach(objectKeys(Writable.prototype), function(method) {
             if (!Duplex.prototype[method])
@@ -19234,7 +19234,7 @@
           }
           function onend() {
             if (this.allowHalfOpen || this._writableState.ended)
-              return ;
+              return;
             process.nextTick(this.end.bind(this));
           }
           function forEach(xs, f) {
@@ -19243,7 +19243,7 @@
               f(xs[i], i);
             }
           }
-        }).call(this, require("_process"));
+        }).call(this, require('_process'));
       }, {
         "./_stream_readable": 160,
         "./_stream_writable": 162,
@@ -19253,9 +19253,9 @@
       }],
       159: [function(require, module, exports) {
         module.exports = PassThrough;
-        var Transform = require("./_stream_transform");
-        var util = require("core-util-is");
-        util.inherits = require("inherits");
+        var Transform = require('./_stream_transform');
+        var util = require('core-util-is');
+        util.inherits = require('inherits');
         util.inherits(PassThrough, Transform);
         function PassThrough(options) {
           if (!(this instanceof PassThrough))
@@ -19273,19 +19273,19 @@
       160: [function(require, module, exports) {
         (function(process) {
           module.exports = Readable;
-          var isArray = require("isarray");
-          var Buffer = require("buffer").Buffer;
+          var isArray = require('isarray');
+          var Buffer = require('buffer').Buffer;
           Readable.ReadableState = ReadableState;
-          var EE = require("events").EventEmitter;
+          var EE = require('events').EventEmitter;
           if (!EE.listenerCount)
             EE.listenerCount = function(emitter, type) {
               return emitter.listeners(type).length;
             };
-          var Stream = require("stream");
-          var util = require("core-util-is");
-          util.inherits = require("inherits");
+          var Stream = require('stream');
+          var util = require('core-util-is');
+          util.inherits = require('inherits');
           var StringDecoder;
-          var debug = require("util");
+          var debug = require('util');
           if (debug && debug.debuglog) {
             debug = debug.debuglog("stream");
           } else {
@@ -19293,7 +19293,7 @@
           }
           util.inherits(Readable, Stream);
           function ReadableState(options, stream) {
-            var Duplex = require("./_stream_duplex");
+            var Duplex = require('./_stream_duplex');
             options = options || {};
             var hwm = options.highWaterMark;
             var defaultHwm = options.objectMode ? 16 : 16 * 1024;
@@ -19322,13 +19322,13 @@
             this.encoding = null;
             if (options.encoding) {
               if (!StringDecoder)
-                StringDecoder = require("string_decoder").StringDecoder;
+                StringDecoder = require('string_decoder').StringDecoder;
               this.decoder = new StringDecoder(options.encoding);
               this.encoding = options.encoding;
             }
           }
           function Readable(options) {
-            var Duplex = require("./_stream_duplex");
+            var Duplex = require('./_stream_duplex');
             if (!(this instanceof Readable))
               return new Readable(options);
             this._readableState = new ReadableState(options, this);
@@ -19394,7 +19394,7 @@
           }
           Readable.prototype.setEncoding = function(enc) {
             if (!StringDecoder)
-              StringDecoder = require("string_decoder").StringDecoder;
+              StringDecoder = require('string_decoder').StringDecoder;
             this._readableState.decoder = new StringDecoder(enc);
             this._readableState.encoding = enc;
             return this;
@@ -19784,7 +19784,7 @@
               if (state.decoder)
                 chunk = state.decoder.write(chunk);
               if (!chunk || !state.objectMode && !chunk.length)
-                return ;
+                return;
               var ret = self.push(chunk);
               if (!ret) {
                 paused = true;
@@ -19892,7 +19892,7 @@
             }
             return -1;
           }
-        }).call(this, require("_process"));
+        }).call(this, require('_process'));
       }, {
         "./_stream_duplex": 158,
         _process: 156,
@@ -19907,9 +19907,9 @@
       }],
       161: [function(require, module, exports) {
         module.exports = Transform;
-        var Duplex = require("./_stream_duplex");
-        var util = require("core-util-is");
-        util.inherits = require("inherits");
+        var Duplex = require('./_stream_duplex');
+        var util = require('core-util-is');
+        util.inherits = require('inherits');
         util.inherits(Transform, Duplex);
         function TransformState(options, stream) {
           this.afterTransform = function(er, data) {
@@ -20001,11 +20001,11 @@
       162: [function(require, module, exports) {
         (function(process) {
           module.exports = Writable;
-          var Buffer = require("buffer").Buffer;
+          var Buffer = require('buffer').Buffer;
           Writable.WritableState = WritableState;
-          var util = require("core-util-is");
-          util.inherits = require("inherits");
-          var Stream = require("stream");
+          var util = require('core-util-is');
+          util.inherits = require('inherits');
+          var Stream = require('stream');
           util.inherits(Writable, Stream);
           function WriteReq(chunk, encoding, cb) {
             this.chunk = chunk;
@@ -20013,7 +20013,7 @@
             this.callback = cb;
           }
           function WritableState(options, stream) {
-            var Duplex = require("./_stream_duplex");
+            var Duplex = require('./_stream_duplex');
             options = options || {};
             var hwm = options.highWaterMark;
             var defaultHwm = options.objectMode ? 16 : 16 * 1024;
@@ -20045,7 +20045,7 @@
             this.errorEmitted = false;
           }
           function Writable(options) {
-            var Duplex = require("./_stream_duplex");
+            var Duplex = require('./_stream_duplex');
             if (!(this instanceof Writable) && !(this instanceof Duplex))
               return new Writable(options);
             this._writableState = new WritableState(options, this);
@@ -20281,7 +20281,7 @@
             }
             state.ended = true;
           }
-        }).call(this, require("_process"));
+        }).call(this, require('_process'));
       }, {
         "./_stream_duplex": 158,
         _process: 156,
@@ -20355,19 +20355,19 @@
           function objectToString(o) {
             return Object.prototype.toString.call(o);
           }
-        }).call(this, require("buffer").Buffer);
+        }).call(this, require('buffer').Buffer);
       }, {buffer: 148}],
       164: [function(require, module, exports) {
-        module.exports = require("./lib/_stream_passthrough");
+        module.exports = require('./lib/_stream_passthrough');
       }, {"./lib/_stream_passthrough.js": 159}],
       165: [function(require, module, exports) {
-        exports = module.exports = require("./lib/_stream_readable");
-        exports.Stream = require("stream");
+        exports = module.exports = require('./lib/_stream_readable');
+        exports.Stream = require('stream');
         exports.Readable = exports;
-        exports.Writable = require("./lib/_stream_writable");
-        exports.Duplex = require("./lib/_stream_duplex");
-        exports.Transform = require("./lib/_stream_transform");
-        exports.PassThrough = require("./lib/_stream_passthrough");
+        exports.Writable = require('./lib/_stream_writable');
+        exports.Duplex = require('./lib/_stream_duplex');
+        exports.Transform = require('./lib/_stream_transform');
+        exports.PassThrough = require('./lib/_stream_passthrough');
       }, {
         "./lib/_stream_duplex.js": 158,
         "./lib/_stream_passthrough.js": 159,
@@ -20377,21 +20377,21 @@
         stream: 168
       }],
       166: [function(require, module, exports) {
-        module.exports = require("./lib/_stream_transform");
+        module.exports = require('./lib/_stream_transform');
       }, {"./lib/_stream_transform.js": 161}],
       167: [function(require, module, exports) {
-        module.exports = require("./lib/_stream_writable");
+        module.exports = require('./lib/_stream_writable');
       }, {"./lib/_stream_writable.js": 162}],
       168: [function(require, module, exports) {
         module.exports = Stream;
-        var EE = require("events").EventEmitter;
-        var inherits = require("inherits");
+        var EE = require('events').EventEmitter;
+        var inherits = require('inherits');
         inherits(Stream, EE);
-        Stream.Readable = require("readable-stream/readable");
-        Stream.Writable = require("readable-stream/writable");
-        Stream.Duplex = require("readable-stream/duplex");
-        Stream.Transform = require("readable-stream/transform");
-        Stream.PassThrough = require("readable-stream/passthrough");
+        Stream.Readable = require('readable-stream/readable');
+        Stream.Writable = require('readable-stream/writable');
+        Stream.Duplex = require('readable-stream/duplex');
+        Stream.Transform = require('readable-stream/transform');
+        Stream.PassThrough = require('readable-stream/passthrough');
         Stream.Stream = Stream;
         function Stream() {
           EE.call(this);
@@ -20419,13 +20419,13 @@
           var didOnEnd = false;
           function onend() {
             if (didOnEnd)
-              return ;
+              return;
             didOnEnd = true;
             dest.end();
           }
           function onclose() {
             if (didOnEnd)
-              return ;
+              return;
             didOnEnd = true;
             if (typeof dest.destroy === "function")
               dest.destroy();
@@ -20465,7 +20465,7 @@
         "readable-stream/writable.js": 167
       }],
       169: [function(require, module, exports) {
-        var Buffer = require("buffer").Buffer;
+        var Buffer = require('buffer').Buffer;
         var isBufferEncoding = Buffer.isEncoding || function(encoding) {
           switch (encoding && encoding.toLowerCase()) {
             case "hex":
@@ -20507,7 +20507,7 @@
               break;
             default:
               this.write = passThroughWrite;
-              return ;
+              return;
           }
           this.charBuffer = new Buffer(6);
           this.charReceived = 0;
@@ -21009,7 +21009,7 @@
             return arg === null || typeof arg === "boolean" || typeof arg === "number" || typeof arg === "string" || typeof arg === "symbol" || typeof arg === "undefined";
           }
           exports.isPrimitive = isPrimitive;
-          exports.isBuffer = require("./support/isBuffer");
+          exports.isBuffer = require('./support/isBuffer');
           function objectToString(o) {
             return Object.prototype.toString.call(o);
           }
@@ -21025,7 +21025,7 @@
           exports.log = function() {
             console.log("%s - %s", timestamp(), exports.format.apply(exports, arguments));
           };
-          exports.inherits = require("inherits");
+          exports.inherits = require('inherits');
           exports._extend = function(origin, add) {
             if (!add || !isObject(add))
               return origin;
@@ -21039,7 +21039,7 @@
           function hasOwnProperty(obj, prop) {
             return Object.prototype.hasOwnProperty.call(obj, prop);
           }
-        }).call(this, require("_process"), typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
+        }).call(this, require('_process'), typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
       }, {
         "./support/isBuffer": 171,
         _process: 156,
@@ -21048,11 +21048,11 @@
       173: [function(require, module, exports) {
         (function(process) {
           "use strict";
-          var escapeStringRegexp = require("escape-string-regexp");
-          var ansiStyles = require("ansi-styles");
-          var stripAnsi = require("strip-ansi");
-          var hasAnsi = require("has-ansi");
-          var supportsColor = require("supports-color");
+          var escapeStringRegexp = require('escape-string-regexp');
+          var ansiStyles = require('ansi-styles');
+          var stripAnsi = require('strip-ansi');
+          var hasAnsi = require('has-ansi');
+          var supportsColor = require('supports-color');
           var defineProps = Object.defineProperties;
           function Chalk(options) {
             this.enabled = !options || options.enabled === undefined ? supportsColor : options.enabled;
@@ -21115,7 +21115,7 @@
           module.exports.hasColor = hasAnsi;
           module.exports.stripColor = stripAnsi;
           module.exports.supportsColor = supportsColor;
-        }).call(this, require("_process"));
+        }).call(this, require('_process'));
       }, {
         _process: 156,
         "ansi-styles": 174,
@@ -21187,7 +21187,7 @@
       }, {}],
       176: [function(require, module, exports) {
         "use strict";
-        var ansiRegex = require("ansi-regex");
+        var ansiRegex = require('ansi-regex');
         var re = new RegExp(ansiRegex().source);
         module.exports = re.test.bind(re);
       }, {"ansi-regex": 177}],
@@ -21199,7 +21199,7 @@
       }, {}],
       178: [function(require, module, exports) {
         "use strict";
-        var ansiRegex = require("ansi-regex")();
+        var ansiRegex = require('ansi-regex')();
         module.exports = function(str) {
           return typeof str === "string" ? str.replace(ansiRegex, "") : str;
         };
@@ -21241,13 +21241,13 @@
             }
             return false;
           }();
-        }).call(this, require("_process"));
+        }).call(this, require('_process'));
       }, {_process: 156}],
       181: [function(require, module, exports) {
         (function(Buffer) {
           "use strict";
-          var fs = require("fs");
-          var path = require("path");
+          var fs = require('fs');
+          var path = require('path');
           var commentRx = /^\s*\/(?:\/|\*)[@#]\s+sourceMappingURL=data:(?:application|text)\/json;(?:charset:\S+;)?base64,(.*)$/gm;
           var mapFileCommentRx = /(?:\/\/[@#][ \t]+sourceMappingURL=(.+?)[ \t]*$)|(?:\/\*[@#][ \t]+sourceMappingURL=([^\*]+?)[ \t]*(?:\*\/){1}[ \t]*$)/gm;
           function decodeBase64(base64) {
@@ -21359,7 +21359,7 @@
             mapFileCommentRx.lastIndex = 0;
             return mapFileCommentRx;
           });
-        }).call(this, require("buffer").Buffer);
+        }).call(this, require('buffer').Buffer);
       }, {
         buffer: 148,
         fs: 145,
@@ -22492,7 +22492,7 @@
                     then,
                     wrapper;
                 if (record.d)
-                  return ;
+                  return;
                 record.d = true;
                 record = record.r || record;
                 try {
@@ -22517,7 +22517,7 @@
               function reject(value) {
                 var record = this;
                 if (record.d)
-                  return ;
+                  return;
                 record.d = true;
                 record = record.r || record;
                 record.v = value;
@@ -23472,7 +23472,7 @@
         exports.disable = disable;
         exports.enable = enable;
         exports.enabled = enabled;
-        exports.humanize = require("ms");
+        exports.humanize = require('ms');
         exports.names = [];
         exports.skips = [];
         exports.formatters = {};
@@ -23567,9 +23567,9 @@
       }, {ms: 185}],
       184: [function(require, module, exports) {
         (function(process) {
-          var tty = require("tty");
-          var util = require("util");
-          exports = module.exports = require("./debug");
+          var tty = require('tty');
+          var util = require('util');
+          exports = module.exports = require('./debug');
           exports.log = log;
           exports.formatArgs = formatArgs;
           exports.save = save;
@@ -23631,13 +23631,13 @@
                 }
                 break;
               case "FILE":
-                var fs = require("fs");
+                var fs = require('fs');
                 stream = new fs.SyncWriteStream(fd, {autoClose: false});
                 stream._type = "fs";
                 break;
               case "PIPE":
               case "TCP":
-                var net = require("net");
+                var net = require('net');
                 stream = new net.Socket({
                   fd: fd,
                   readable: false,
@@ -23658,7 +23658,7 @@
             return stream;
           }
           exports.enable(load());
-        }).call(this, require("_process"));
+        }).call(this, require('_process'));
       }, {
         "./debug": 183,
         _process: 156,
@@ -23682,7 +23682,7 @@
         function parse(str) {
           var match = /^((?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|years?|yrs?|y)?$/i.exec(str);
           if (!match)
-            return ;
+            return;
           var n = parseFloat(match[1]);
           var type = (match[2] || "ms").toLowerCase();
           switch (type) {
@@ -23738,7 +23738,7 @@
         }
         function plural(ms, n, name) {
           if (ms < n)
-            return ;
+            return;
           if (ms < n * 1.5)
             return Math.floor(ms / n) + " " + name;
           return Math.ceil(ms / n) + " " + name + "s";
@@ -23746,7 +23746,7 @@
       }, {}],
       186: [function(require, module, exports) {
         "use strict";
-        var repeating = require("repeating");
+        var repeating = require('repeating');
         var INDENT_RE = /^(?:( )+|\t+)/;
         function getMostUsed(indents) {
           var result = 0;
@@ -23776,7 +23776,7 @@
           var isIndent;
           str.split(/\n/g).forEach(function(line) {
             if (!line) {
-              return ;
+              return;
             }
             var indent;
             var matches = line.match(INDENT_RE);
@@ -24227,14 +24227,14 @@
                 element = leavelist.pop();
                 ret = this.__execute(visitor.leave, element);
                 if (this.__state === BREAK || ret === BREAK) {
-                  return ;
+                  return;
                 }
                 continue;
               }
               if (element.node) {
                 ret = this.__execute(visitor.enter, element);
                 if (this.__state === BREAK || ret === BREAK) {
-                  return ;
+                  return;
                 }
                 worklist.push(sentinel);
                 leavelist.push(element);
@@ -24670,7 +24670,7 @@
       190: [function(require, module, exports) {
         (function() {
           "use strict";
-          var code = require("./code");
+          var code = require('./code');
           function isStrictModeReservedWordES6(id) {
             switch (id) {
               case "implements":
@@ -24766,9 +24766,9 @@
       191: [function(require, module, exports) {
         (function() {
           "use strict";
-          exports.ast = require("./ast");
-          exports.code = require("./code");
-          exports.keyword = require("./keyword");
+          exports.ast = require('./ast');
+          exports.code = require('./code');
+          exports.keyword = require('./keyword');
         })();
       }, {
         "./ast": 188,
@@ -25510,11 +25510,11 @@
         };
       }, {}],
       193: [function(require, module, exports) {
-        module.exports = require("./globals.json!systemjs-json");
+        module.exports = require('./globals.json!systemjs-json');
       }, {"./globals.json": 192}],
       194: [function(require, module, exports) {
-        var isNaN = require("is-nan");
-        var isFinite = require("is-finite");
+        var isNaN = require('is-nan');
+        var isFinite = require('is-finite');
         module.exports = Number.isInteger || function(val) {
           return typeof val === "number" && !isNaN(val) && isFinite(val) && parseInt(val, 10) === val;
         };
@@ -25602,7 +25602,7 @@
         };
       }, {}],
       199: [function(require, module, exports) {
-        var leftPad = require("left-pad");
+        var leftPad = require('left-pad');
         function get(options, key, defaultValue) {
           return key in options ? options[key] : defaultValue;
         }
@@ -25663,8 +25663,8 @@
         module.exports = compact;
       }, {}],
       202: [function(require, module, exports) {
-        var baseFlatten = require("../internal/baseFlatten"),
-            isIterateeCall = require("../internal/isIterateeCall");
+        var baseFlatten = require('../internal/baseFlatten'),
+            isIterateeCall = require('../internal/isIterateeCall');
         function flatten(array, isDeep, guard) {
           var length = array ? array.length : 0;
           if (guard && isIterateeCall(array, isDeep, guard)) {
@@ -25685,7 +25685,7 @@
         module.exports = last;
       }, {}],
       204: [function(require, module, exports) {
-        var baseIndexOf = require("../internal/baseIndexOf");
+        var baseIndexOf = require('../internal/baseIndexOf');
         var arrayProto = Array.prototype;
         var splice = arrayProto.splice;
         function pull() {
@@ -25709,10 +25709,10 @@
         module.exports = pull;
       }, {"../internal/baseIndexOf": 238}],
       205: [function(require, module, exports) {
-        var baseCallback = require("../internal/baseCallback"),
-            baseUniq = require("../internal/baseUniq"),
-            isIterateeCall = require("../internal/isIterateeCall"),
-            sortedUniq = require("../internal/sortedUniq");
+        var baseCallback = require('../internal/baseCallback'),
+            baseUniq = require('../internal/baseUniq'),
+            isIterateeCall = require('../internal/isIterateeCall'),
+            sortedUniq = require('../internal/sortedUniq');
         function uniq(array, isSorted, iteratee, thisArg) {
           var length = array ? array.length : 0;
           if (!length) {
@@ -25734,16 +25734,16 @@
         "../internal/sortedUniq": 290
       }],
       206: [function(require, module, exports) {
-        module.exports = require("./includes");
+        module.exports = require('./includes');
       }, {"./includes": 210}],
       207: [function(require, module, exports) {
-        module.exports = require("./forEach");
+        module.exports = require('./forEach');
       }, {"./forEach": 208}],
       208: [function(require, module, exports) {
-        var arrayEach = require("../internal/arrayEach"),
-            baseEach = require("../internal/baseEach"),
-            bindCallback = require("../internal/bindCallback"),
-            isArray = require("../lang/isArray");
+        var arrayEach = require('../internal/arrayEach'),
+            baseEach = require('../internal/baseEach'),
+            bindCallback = require('../internal/bindCallback'),
+            isArray = require('../lang/isArray');
         function forEach(collection, iteratee, thisArg) {
           return typeof iteratee == "function" && typeof thisArg == "undefined" && isArray(collection) ? arrayEach(collection, iteratee) : baseEach(collection, bindCallback(iteratee, thisArg, 3));
         }
@@ -25755,7 +25755,7 @@
         "../lang/isArray": 294
       }],
       209: [function(require, module, exports) {
-        var createAggregator = require("../internal/createAggregator");
+        var createAggregator = require('../internal/createAggregator');
         var objectProto = Object.prototype;
         var hasOwnProperty = objectProto.hasOwnProperty;
         var groupBy = createAggregator(function(result, value, key) {
@@ -25768,11 +25768,11 @@
         module.exports = groupBy;
       }, {"../internal/createAggregator": 261}],
       210: [function(require, module, exports) {
-        var baseIndexOf = require("../internal/baseIndexOf"),
-            isArray = require("../lang/isArray"),
-            isLength = require("../internal/isLength"),
-            isString = require("../lang/isString"),
-            values = require("../object/values");
+        var baseIndexOf = require('../internal/baseIndexOf'),
+            isArray = require('../lang/isArray'),
+            isLength = require('../internal/isLength'),
+            isString = require('../lang/isString'),
+            values = require('../object/values');
         var nativeMax = Math.max;
         function includes(collection, target, fromIndex) {
           var length = collection ? collection.length : 0;
@@ -25799,10 +25799,10 @@
         "../object/values": 311
       }],
       211: [function(require, module, exports) {
-        var arrayMap = require("../internal/arrayMap"),
-            baseCallback = require("../internal/baseCallback"),
-            baseMap = require("../internal/baseMap"),
-            isArray = require("../lang/isArray");
+        var arrayMap = require('../internal/arrayMap'),
+            baseCallback = require('../internal/baseCallback'),
+            baseMap = require('../internal/baseMap'),
+            isArray = require('../lang/isArray');
         function map(collection, iteratee, thisArg) {
           var func = isArray(collection) ? arrayMap : baseMap;
           iteratee = baseCallback(iteratee, thisArg, 3);
@@ -25816,11 +25816,11 @@
         "../lang/isArray": 294
       }],
       212: [function(require, module, exports) {
-        var arrayReduceRight = require("../internal/arrayReduceRight"),
-            baseCallback = require("../internal/baseCallback"),
-            baseEachRight = require("../internal/baseEachRight"),
-            baseReduce = require("../internal/baseReduce"),
-            isArray = require("../lang/isArray");
+        var arrayReduceRight = require('../internal/arrayReduceRight'),
+            baseCallback = require('../internal/baseCallback'),
+            baseEachRight = require('../internal/baseEachRight'),
+            baseReduce = require('../internal/baseReduce'),
+            isArray = require('../lang/isArray');
         function reduceRight(collection, iteratee, accumulator, thisArg) {
           var func = isArray(collection) ? arrayReduceRight : baseReduce;
           return func(collection, baseCallback(iteratee, thisArg, 4), accumulator, arguments.length < 3, baseEachRight);
@@ -25834,10 +25834,10 @@
         "../lang/isArray": 294
       }],
       213: [function(require, module, exports) {
-        var arraySome = require("../internal/arraySome"),
-            baseCallback = require("../internal/baseCallback"),
-            baseSome = require("../internal/baseSome"),
-            isArray = require("../lang/isArray");
+        var arraySome = require('../internal/arraySome'),
+            baseCallback = require('../internal/baseCallback'),
+            baseSome = require('../internal/baseSome'),
+            isArray = require('../lang/isArray');
         function some(collection, predicate, thisArg) {
           var func = isArray(collection) ? arraySome : baseSome;
           if (typeof predicate != "function" || typeof thisArg != "undefined") {
@@ -25853,12 +25853,12 @@
         "../lang/isArray": 294
       }],
       214: [function(require, module, exports) {
-        var baseCallback = require("../internal/baseCallback"),
-            baseEach = require("../internal/baseEach"),
-            baseSortBy = require("../internal/baseSortBy"),
-            compareAscending = require("../internal/compareAscending"),
-            isIterateeCall = require("../internal/isIterateeCall"),
-            isLength = require("../internal/isLength");
+        var baseCallback = require('../internal/baseCallback'),
+            baseEach = require('../internal/baseEach'),
+            baseSortBy = require('../internal/baseSortBy'),
+            compareAscending = require('../internal/compareAscending'),
+            isIterateeCall = require('../internal/isIterateeCall'),
+            isLength = require('../internal/isLength');
         function sortBy(collection, iteratee, thisArg) {
           if (collection == null) {
             return [];
@@ -25889,7 +25889,7 @@
         "../internal/isLength": 280
       }],
       215: [function(require, module, exports) {
-        var isNative = require("../lang/isNative");
+        var isNative = require('../lang/isNative');
         var nativeNow = isNative(nativeNow = Date.now) && nativeNow;
         var now = nativeNow || function() {
           return (new Date).getTime();
@@ -25897,8 +25897,8 @@
         module.exports = now;
       }, {"../lang/isNative": 298}],
       216: [function(require, module, exports) {
-        var createWrapper = require("../internal/createWrapper"),
-            isIterateeCall = require("../internal/isIterateeCall");
+        var createWrapper = require('../internal/createWrapper'),
+            isIterateeCall = require('../internal/isIterateeCall');
         var ARY_FLAG = 256;
         var nativeMax = Math.max;
         function ary(func, n, guard) {
@@ -25915,8 +25915,8 @@
       }],
       217: [function(require, module, exports) {
         (function(global) {
-          var cachePush = require("./cachePush"),
-              isNative = require("../lang/isNative");
+          var cachePush = require('./cachePush'),
+              isNative = require('../lang/isNative');
           var Set = isNative(Set = global.Set) && Set;
           var nativeCreate = isNative(nativeCreate = Object.create) && nativeCreate;
           function SetCache(values) {
@@ -26006,8 +26006,8 @@
         module.exports = assignDefaults;
       }, {}],
       224: [function(require, module, exports) {
-        var baseCopy = require("./baseCopy"),
-            keys = require("../object/keys");
+        var baseCopy = require('./baseCopy'),
+            keys = require('../object/keys');
         function baseAssign(object, source, customizer) {
           var props = keys(source);
           if (!customizer) {
@@ -26031,12 +26031,12 @@
         "./baseCopy": 228
       }],
       225: [function(require, module, exports) {
-        var baseMatches = require("./baseMatches"),
-            baseMatchesProperty = require("./baseMatchesProperty"),
-            baseProperty = require("./baseProperty"),
-            bindCallback = require("./bindCallback"),
-            identity = require("../utility/identity"),
-            isBindable = require("./isBindable");
+        var baseMatches = require('./baseMatches'),
+            baseMatchesProperty = require('./baseMatchesProperty'),
+            baseProperty = require('./baseProperty'),
+            bindCallback = require('./bindCallback'),
+            identity = require('../utility/identity'),
+            isBindable = require('./isBindable');
         function baseCallback(func, thisArg, argCount) {
           var type = typeof func;
           if (type == "function") {
@@ -26060,16 +26060,16 @@
         "./isBindable": 277
       }],
       226: [function(require, module, exports) {
-        var arrayCopy = require("./arrayCopy"),
-            arrayEach = require("./arrayEach"),
-            baseCopy = require("./baseCopy"),
-            baseForOwn = require("./baseForOwn"),
-            initCloneArray = require("./initCloneArray"),
-            initCloneByTag = require("./initCloneByTag"),
-            initCloneObject = require("./initCloneObject"),
-            isArray = require("../lang/isArray"),
-            isObject = require("../lang/isObject"),
-            keys = require("../object/keys");
+        var arrayCopy = require('./arrayCopy'),
+            arrayEach = require('./arrayEach'),
+            baseCopy = require('./baseCopy'),
+            baseForOwn = require('./baseForOwn'),
+            initCloneArray = require('./initCloneArray'),
+            initCloneByTag = require('./initCloneByTag'),
+            initCloneObject = require('./initCloneObject'),
+            isArray = require('../lang/isArray'),
+            isObject = require('../lang/isObject'),
+            keys = require('../object/keys');
         var argsTag = "[object Arguments]",
             arrayTag = "[object Array]",
             boolTag = "[object Boolean]",
@@ -26189,7 +26189,7 @@
       }, {}],
       229: [function(require, module, exports) {
         (function(global) {
-          var isObject = require("../lang/isObject");
+          var isObject = require('../lang/isObject');
           var baseCreate = function() {
             function Object() {}
             return function(prototype) {
@@ -26205,9 +26205,9 @@
         }).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
       }, {"../lang/isObject": 300}],
       230: [function(require, module, exports) {
-        var baseForOwn = require("./baseForOwn"),
-            isLength = require("./isLength"),
-            toObject = require("./toObject");
+        var baseForOwn = require('./baseForOwn'),
+            isLength = require('./isLength'),
+            toObject = require('./toObject');
         function baseEach(collection, iteratee) {
           var length = collection ? collection.length : 0;
           if (!isLength(length)) {
@@ -26229,9 +26229,9 @@
         "./toObject": 291
       }],
       231: [function(require, module, exports) {
-        var baseForOwnRight = require("./baseForOwnRight"),
-            isLength = require("./isLength"),
-            toObject = require("./toObject");
+        var baseForOwnRight = require('./baseForOwnRight'),
+            isLength = require('./isLength'),
+            toObject = require('./toObject');
         function baseEachRight(collection, iteratee) {
           var length = collection ? collection.length : 0;
           if (!isLength(length)) {
@@ -26252,10 +26252,10 @@
         "./toObject": 291
       }],
       232: [function(require, module, exports) {
-        var isArguments = require("../lang/isArguments"),
-            isArray = require("../lang/isArray"),
-            isLength = require("./isLength"),
-            isObjectLike = require("./isObjectLike");
+        var isArguments = require('../lang/isArguments'),
+            isArray = require('../lang/isArray'),
+            isLength = require('./isLength'),
+            isObjectLike = require('./isObjectLike');
         function baseFlatten(array, isDeep, isStrict, fromIndex) {
           var index = fromIndex - 1,
               length = array.length,
@@ -26287,7 +26287,7 @@
         "./isObjectLike": 281
       }],
       233: [function(require, module, exports) {
-        var toObject = require("./toObject");
+        var toObject = require('./toObject');
         function baseFor(object, iteratee, keysFunc) {
           var index = -1,
               iterable = toObject(object),
@@ -26304,8 +26304,8 @@
         module.exports = baseFor;
       }, {"./toObject": 291}],
       234: [function(require, module, exports) {
-        var baseFor = require("./baseFor"),
-            keysIn = require("../object/keysIn");
+        var baseFor = require('./baseFor'),
+            keysIn = require('../object/keysIn');
         function baseForIn(object, iteratee) {
           return baseFor(object, iteratee, keysIn);
         }
@@ -26315,8 +26315,8 @@
         "./baseFor": 233
       }],
       235: [function(require, module, exports) {
-        var baseFor = require("./baseFor"),
-            keys = require("../object/keys");
+        var baseFor = require('./baseFor'),
+            keys = require('../object/keys');
         function baseForOwn(object, iteratee) {
           return baseFor(object, iteratee, keys);
         }
@@ -26326,8 +26326,8 @@
         "./baseFor": 233
       }],
       236: [function(require, module, exports) {
-        var baseForRight = require("./baseForRight"),
-            keys = require("../object/keys");
+        var baseForRight = require('./baseForRight'),
+            keys = require('../object/keys');
         function baseForOwnRight(object, iteratee) {
           return baseForRight(object, iteratee, keys);
         }
@@ -26337,7 +26337,7 @@
         "./baseForRight": 237
       }],
       237: [function(require, module, exports) {
-        var toObject = require("./toObject");
+        var toObject = require('./toObject');
         function baseForRight(object, iteratee, keysFunc) {
           var iterable = toObject(object),
               props = keysFunc(object),
@@ -26353,7 +26353,7 @@
         module.exports = baseForRight;
       }, {"./toObject": 291}],
       238: [function(require, module, exports) {
-        var indexOfNaN = require("./indexOfNaN");
+        var indexOfNaN = require('./indexOfNaN');
         function baseIndexOf(array, value, fromIndex) {
           if (value !== value) {
             return indexOfNaN(array, fromIndex);
@@ -26370,7 +26370,7 @@
         module.exports = baseIndexOf;
       }, {"./indexOfNaN": 273}],
       239: [function(require, module, exports) {
-        var baseIsEqualDeep = require("./baseIsEqualDeep");
+        var baseIsEqualDeep = require('./baseIsEqualDeep');
         function baseIsEqual(value, other, customizer, isWhere, stackA, stackB) {
           if (value === other) {
             return value !== 0 || 1 / value == 1 / other;
@@ -26385,11 +26385,11 @@
         module.exports = baseIsEqual;
       }, {"./baseIsEqualDeep": 240}],
       240: [function(require, module, exports) {
-        var equalArrays = require("./equalArrays"),
-            equalByTag = require("./equalByTag"),
-            equalObjects = require("./equalObjects"),
-            isArray = require("../lang/isArray"),
-            isTypedArray = require("../lang/isTypedArray");
+        var equalArrays = require('./equalArrays'),
+            equalByTag = require('./equalByTag'),
+            equalObjects = require('./equalObjects'),
+            isArray = require('../lang/isArray'),
+            isTypedArray = require('../lang/isTypedArray');
         var argsTag = "[object Arguments]",
             arrayTag = "[object Array]",
             objectTag = "[object Object]";
@@ -26461,7 +26461,7 @@
         module.exports = baseIsFunction;
       }, {}],
       242: [function(require, module, exports) {
-        var baseIsEqual = require("./baseIsEqual");
+        var baseIsEqual = require('./baseIsEqual');
         var objectProto = Object.prototype;
         var hasOwnProperty = objectProto.hasOwnProperty;
         function baseIsMatch(object, props, values, strictCompareFlags, customizer) {
@@ -26498,7 +26498,7 @@
         module.exports = baseIsMatch;
       }, {"./baseIsEqual": 239}],
       243: [function(require, module, exports) {
-        var baseEach = require("./baseEach");
+        var baseEach = require('./baseEach');
         function baseMap(collection, iteratee) {
           var result = [];
           baseEach(collection, function(value, key, collection) {
@@ -26509,9 +26509,9 @@
         module.exports = baseMap;
       }, {"./baseEach": 230}],
       244: [function(require, module, exports) {
-        var baseIsMatch = require("./baseIsMatch"),
-            isStrictComparable = require("./isStrictComparable"),
-            keys = require("../object/keys");
+        var baseIsMatch = require('./baseIsMatch'),
+            isStrictComparable = require('./isStrictComparable'),
+            keys = require('../object/keys');
         var objectProto = Object.prototype;
         var hasOwnProperty = objectProto.hasOwnProperty;
         function baseMatches(source) {
@@ -26544,8 +26544,8 @@
         "./isStrictComparable": 282
       }],
       245: [function(require, module, exports) {
-        var baseIsEqual = require("./baseIsEqual"),
-            isStrictComparable = require("./isStrictComparable");
+        var baseIsEqual = require('./baseIsEqual'),
+            isStrictComparable = require('./isStrictComparable');
         function baseMatchesProperty(key, value) {
           if (isStrictComparable(value)) {
             return function(object) {
@@ -26579,8 +26579,8 @@
         module.exports = baseReduce;
       }, {}],
       248: [function(require, module, exports) {
-        var identity = require("../utility/identity"),
-            metaMap = require("./metaMap");
+        var identity = require('../utility/identity'),
+            metaMap = require('./metaMap');
         var baseSetData = !metaMap ? identity : function(func, data) {
           metaMap.set(func, data);
           return func;
@@ -26591,7 +26591,7 @@
         "./metaMap": 284
       }],
       249: [function(require, module, exports) {
-        var baseEach = require("./baseEach");
+        var baseEach = require('./baseEach');
         function baseSome(collection, predicate) {
           var result;
           baseEach(collection, function(value, index, collection) {
@@ -26623,9 +26623,9 @@
         module.exports = baseToString;
       }, {}],
       252: [function(require, module, exports) {
-        var baseIndexOf = require("./baseIndexOf"),
-            cacheIndexOf = require("./cacheIndexOf"),
-            createCache = require("./createCache");
+        var baseIndexOf = require('./baseIndexOf'),
+            cacheIndexOf = require('./cacheIndexOf'),
+            createCache = require('./createCache');
         function baseUniq(array, iteratee) {
           var index = -1,
               indexOf = baseIndexOf,
@@ -26683,7 +26683,7 @@
         module.exports = baseValues;
       }, {}],
       254: [function(require, module, exports) {
-        var identity = require("../utility/identity");
+        var identity = require('../utility/identity');
         function bindCallback(func, thisArg, argCount) {
           if (typeof func != "function") {
             return identity;
@@ -26717,8 +26717,8 @@
       }, {"../utility/identity": 315}],
       255: [function(require, module, exports) {
         (function(global) {
-          var constant = require("../utility/constant"),
-              isNative = require("../lang/isNative");
+          var constant = require('../utility/constant'),
+              isNative = require('../lang/isNative');
           var ArrayBuffer = isNative(ArrayBuffer = global.ArrayBuffer) && ArrayBuffer,
               bufferSlice = isNative(bufferSlice = ArrayBuffer && new ArrayBuffer(0).slice) && bufferSlice,
               floor = Math.floor,
@@ -26758,7 +26758,7 @@
         "../utility/constant": 314
       }],
       256: [function(require, module, exports) {
-        var isObject = require("../lang/isObject");
+        var isObject = require('../lang/isObject');
         function cacheIndexOf(cache, value) {
           var data = cache.data,
               result = typeof value == "string" || isObject(value) ? data.set.has(value) : data.hash[value];
@@ -26767,7 +26767,7 @@
         module.exports = cacheIndexOf;
       }, {"../lang/isObject": 300}],
       257: [function(require, module, exports) {
-        var isObject = require("../lang/isObject");
+        var isObject = require('../lang/isObject');
         function cachePush(value) {
           var data = this.data;
           if (typeof value == "string" || isObject(value)) {
@@ -26779,7 +26779,7 @@
         module.exports = cachePush;
       }, {"../lang/isObject": 300}],
       258: [function(require, module, exports) {
-        var baseCompareAscending = require("./baseCompareAscending");
+        var baseCompareAscending = require('./baseCompareAscending');
         function compareAscending(object, other) {
           return baseCompareAscending(object.criteria, other.criteria) || object.index - other.index;
         }
@@ -26832,9 +26832,9 @@
         module.exports = composeArgsRight;
       }, {}],
       261: [function(require, module, exports) {
-        var baseCallback = require("./baseCallback"),
-            baseEach = require("./baseEach"),
-            isArray = require("../lang/isArray");
+        var baseCallback = require('./baseCallback'),
+            baseEach = require('./baseEach'),
+            isArray = require('../lang/isArray');
         function createAggregator(setter, initializer) {
           return function(collection, iteratee, thisArg) {
             var result = initializer ? initializer() : {};
@@ -26861,8 +26861,8 @@
         "./baseEach": 230
       }],
       262: [function(require, module, exports) {
-        var bindCallback = require("./bindCallback"),
-            isIterateeCall = require("./isIterateeCall");
+        var bindCallback = require('./bindCallback'),
+            isIterateeCall = require('./isIterateeCall');
         function createAssigner(assigner) {
           return function() {
             var args = arguments,
@@ -26902,7 +26902,7 @@
       }],
       263: [function(require, module, exports) {
         (function(global) {
-          var createCtorWrapper = require("./createCtorWrapper");
+          var createCtorWrapper = require('./createCtorWrapper');
           function createBindWrapper(func, thisArg) {
             var Ctor = createCtorWrapper(func);
             function wrapper() {
@@ -26916,9 +26916,9 @@
       }, {"./createCtorWrapper": 265}],
       264: [function(require, module, exports) {
         (function(global) {
-          var SetCache = require("./SetCache"),
-              constant = require("../utility/constant"),
-              isNative = require("../lang/isNative");
+          var SetCache = require('./SetCache'),
+              constant = require('../utility/constant'),
+              isNative = require('../lang/isNative');
           var Set = isNative(Set = global.Set) && Set;
           var nativeCreate = isNative(nativeCreate = Object.create) && nativeCreate;
           var createCache = !(nativeCreate && Set) ? constant(null) : function(values) {
@@ -26932,8 +26932,8 @@
         "./SetCache": 217
       }],
       265: [function(require, module, exports) {
-        var baseCreate = require("./baseCreate"),
-            isObject = require("../lang/isObject");
+        var baseCreate = require('./baseCreate'),
+            isObject = require('../lang/isObject');
         function createCtorWrapper(Ctor) {
           return function() {
             var thisBinding = baseCreate(Ctor.prototype),
@@ -26948,12 +26948,12 @@
       }],
       266: [function(require, module, exports) {
         (function(global) {
-          var arrayCopy = require("./arrayCopy"),
-              composeArgs = require("./composeArgs"),
-              composeArgsRight = require("./composeArgsRight"),
-              createCtorWrapper = require("./createCtorWrapper"),
-              reorder = require("./reorder"),
-              replaceHolders = require("./replaceHolders");
+          var arrayCopy = require('./arrayCopy'),
+              composeArgs = require('./composeArgs'),
+              composeArgsRight = require('./composeArgsRight'),
+              createCtorWrapper = require('./createCtorWrapper'),
+              reorder = require('./reorder'),
+              replaceHolders = require('./replaceHolders');
           var BIND_FLAG = 1,
               BIND_KEY_FLAG = 2,
               CURRY_BOUND_FLAG = 4,
@@ -27033,7 +27033,7 @@
       }],
       267: [function(require, module, exports) {
         (function(global) {
-          var createCtorWrapper = require("./createCtorWrapper");
+          var createCtorWrapper = require('./createCtorWrapper');
           var BIND_FLAG = 1;
           function createPartialWrapper(func, bitmask, thisArg, partials) {
             var isBind = bitmask & BIND_FLAG,
@@ -27059,13 +27059,13 @@
         }).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
       }, {"./createCtorWrapper": 265}],
       268: [function(require, module, exports) {
-        var baseSetData = require("./baseSetData"),
-            createBindWrapper = require("./createBindWrapper"),
-            createHybridWrapper = require("./createHybridWrapper"),
-            createPartialWrapper = require("./createPartialWrapper"),
-            getData = require("./getData"),
-            mergeData = require("./mergeData"),
-            setData = require("./setData");
+        var baseSetData = require('./baseSetData'),
+            createBindWrapper = require('./createBindWrapper'),
+            createHybridWrapper = require('./createHybridWrapper'),
+            createPartialWrapper = require('./createPartialWrapper'),
+            getData = require('./getData'),
+            mergeData = require('./mergeData'),
+            setData = require('./setData');
         var BIND_FLAG = 1,
             BIND_KEY_FLAG = 2,
             PARTIAL_FLAG = 32,
@@ -27176,7 +27176,7 @@
         module.exports = equalByTag;
       }, {}],
       271: [function(require, module, exports) {
-        var keys = require("../object/keys");
+        var keys = require('../object/keys');
         var objectProto = Object.prototype;
         var hasOwnProperty = objectProto.hasOwnProperty;
         function equalObjects(object, other, equalFunc, customizer, isWhere, stackA, stackB) {
@@ -27220,8 +27220,8 @@
         module.exports = equalObjects;
       }, {"../object/keys": 309}],
       272: [function(require, module, exports) {
-        var metaMap = require("./metaMap"),
-            noop = require("../utility/noop");
+        var metaMap = require('./metaMap'),
+            noop = require('../utility/noop');
         var getData = !metaMap ? noop : function(func) {
           return metaMap.get(func);
         };
@@ -27259,7 +27259,7 @@
         module.exports = initCloneArray;
       }, {}],
       275: [function(require, module, exports) {
-        var bufferClone = require("./bufferClone");
+        var bufferClone = require('./bufferClone');
         var boolTag = "[object Boolean]",
             dateTag = "[object Date]",
             numberTag = "[object Number]",
@@ -27317,9 +27317,9 @@
         module.exports = initCloneObject;
       }, {}],
       277: [function(require, module, exports) {
-        var baseSetData = require("./baseSetData"),
-            isNative = require("../lang/isNative"),
-            support = require("../support");
+        var baseSetData = require('./baseSetData'),
+            isNative = require('../lang/isNative'),
+            support = require('../support');
         var reFuncName = /^\s*function[ \n\r\t]+\w/;
         var reThis = /\bthis\b/;
         var fnToString = Function.prototype.toString;
@@ -27353,9 +27353,9 @@
         module.exports = isIndex;
       }, {}],
       279: [function(require, module, exports) {
-        var isIndex = require("./isIndex"),
-            isLength = require("./isLength"),
-            isObject = require("../lang/isObject");
+        var isIndex = require('./isIndex'),
+            isLength = require('./isLength'),
+            isObject = require('../lang/isObject');
         function isIterateeCall(value, index, object) {
           if (!isObject(object)) {
             return false;
@@ -27393,17 +27393,17 @@
         module.exports = isObjectLike;
       }, {}],
       282: [function(require, module, exports) {
-        var isObject = require("../lang/isObject");
+        var isObject = require('../lang/isObject');
         function isStrictComparable(value) {
           return value === value && (value === 0 ? 1 / value > 0 : !isObject(value));
         }
         module.exports = isStrictComparable;
       }, {"../lang/isObject": 300}],
       283: [function(require, module, exports) {
-        var arrayCopy = require("./arrayCopy"),
-            composeArgs = require("./composeArgs"),
-            composeArgsRight = require("./composeArgsRight"),
-            replaceHolders = require("./replaceHolders");
+        var arrayCopy = require('./arrayCopy'),
+            composeArgs = require('./composeArgs'),
+            composeArgsRight = require('./composeArgsRight'),
+            replaceHolders = require('./replaceHolders');
         var BIND_FLAG = 1,
             BIND_KEY_FLAG = 2,
             CURRY_BOUND_FLAG = 4,
@@ -27467,15 +27467,15 @@
       }],
       284: [function(require, module, exports) {
         (function(global) {
-          var isNative = require("../lang/isNative");
+          var isNative = require('../lang/isNative');
           var WeakMap = isNative(WeakMap = global.WeakMap) && WeakMap;
           var metaMap = WeakMap && new WeakMap;
           module.exports = metaMap;
         }).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
       }, {"../lang/isNative": 298}],
       285: [function(require, module, exports) {
-        var arrayCopy = require("./arrayCopy"),
-            isIndex = require("./isIndex");
+        var arrayCopy = require('./arrayCopy'),
+            isIndex = require('./isIndex');
         var nativeMin = Math.min;
         function reorder(array, indexes) {
           var arrLength = array.length,
@@ -27510,8 +27510,8 @@
         module.exports = replaceHolders;
       }, {}],
       287: [function(require, module, exports) {
-        var baseSetData = require("./baseSetData"),
-            now = require("../date/now");
+        var baseSetData = require('./baseSetData'),
+            now = require('../date/now');
         var HOT_COUNT = 150,
             HOT_SPAN = 16;
         var setData = function() {
@@ -27537,8 +27537,8 @@
         "./baseSetData": 248
       }],
       288: [function(require, module, exports) {
-        var baseForIn = require("./baseForIn"),
-            isObjectLike = require("./isObjectLike");
+        var baseForIn = require('./baseForIn'),
+            isObjectLike = require('./isObjectLike');
         var objectTag = "[object Object]";
         var objectProto = Object.prototype;
         var hasOwnProperty = objectProto.hasOwnProperty;
@@ -27560,12 +27560,12 @@
         "./isObjectLike": 281
       }],
       289: [function(require, module, exports) {
-        var isArguments = require("../lang/isArguments"),
-            isArray = require("../lang/isArray"),
-            isIndex = require("./isIndex"),
-            isLength = require("./isLength"),
-            keysIn = require("../object/keysIn"),
-            support = require("../support");
+        var isArguments = require('../lang/isArguments'),
+            isArray = require('../lang/isArray'),
+            isIndex = require('./isIndex'),
+            isLength = require('./isLength'),
+            keysIn = require('../object/keysIn'),
+            support = require('../support');
         var objectProto = Object.prototype;
         var hasOwnProperty = objectProto.hasOwnProperty;
         function shimKeys(object) {
@@ -27612,15 +27612,15 @@
         module.exports = sortedUniq;
       }, {}],
       291: [function(require, module, exports) {
-        var isObject = require("../lang/isObject");
+        var isObject = require('../lang/isObject');
         function toObject(value) {
           return isObject(value) ? value : Object(value);
         }
         module.exports = toObject;
       }, {"../lang/isObject": 300}],
       292: [function(require, module, exports) {
-        var baseClone = require("../internal/baseClone"),
-            bindCallback = require("../internal/bindCallback");
+        var baseClone = require('../internal/baseClone'),
+            bindCallback = require('../internal/bindCallback');
         function cloneDeep(value, customizer, thisArg) {
           customizer = typeof customizer == "function" && bindCallback(customizer, thisArg, 1);
           return baseClone(value, true, customizer);
@@ -27631,8 +27631,8 @@
         "../internal/bindCallback": 254
       }],
       293: [function(require, module, exports) {
-        var isLength = require("../internal/isLength"),
-            isObjectLike = require("../internal/isObjectLike");
+        var isLength = require('../internal/isLength'),
+            isObjectLike = require('../internal/isObjectLike');
         var argsTag = "[object Arguments]";
         var objectProto = Object.prototype;
         var objToString = objectProto.toString;
@@ -27646,9 +27646,9 @@
         "../internal/isObjectLike": 281
       }],
       294: [function(require, module, exports) {
-        var isLength = require("../internal/isLength"),
-            isNative = require("./isNative"),
-            isObjectLike = require("../internal/isObjectLike");
+        var isLength = require('../internal/isLength'),
+            isNative = require('./isNative'),
+            isObjectLike = require('../internal/isObjectLike');
         var arrayTag = "[object Array]";
         var objectProto = Object.prototype;
         var objToString = objectProto.toString;
@@ -27663,7 +27663,7 @@
         "./isNative": 298
       }],
       295: [function(require, module, exports) {
-        var isObjectLike = require("../internal/isObjectLike");
+        var isObjectLike = require('../internal/isObjectLike');
         var boolTag = "[object Boolean]";
         var objectProto = Object.prototype;
         var objToString = objectProto.toString;
@@ -27673,13 +27673,13 @@
         module.exports = isBoolean;
       }, {"../internal/isObjectLike": 281}],
       296: [function(require, module, exports) {
-        var isArguments = require("./isArguments"),
-            isArray = require("./isArray"),
-            isFunction = require("./isFunction"),
-            isLength = require("../internal/isLength"),
-            isObjectLike = require("../internal/isObjectLike"),
-            isString = require("./isString"),
-            keys = require("../object/keys");
+        var isArguments = require('./isArguments'),
+            isArray = require('./isArray'),
+            isFunction = require('./isFunction'),
+            isLength = require('../internal/isLength'),
+            isObjectLike = require('../internal/isObjectLike'),
+            isString = require('./isString'),
+            keys = require('../object/keys');
         function isEmpty(value) {
           if (value == null) {
             return true;
@@ -27702,8 +27702,8 @@
       }],
       297: [function(require, module, exports) {
         (function(global) {
-          var baseIsFunction = require("../internal/baseIsFunction"),
-              isNative = require("./isNative");
+          var baseIsFunction = require('../internal/baseIsFunction'),
+              isNative = require('./isNative');
           var funcTag = "[object Function]";
           var objectProto = Object.prototype;
           var objToString = objectProto.toString;
@@ -27718,8 +27718,8 @@
         "./isNative": 298
       }],
       298: [function(require, module, exports) {
-        var escapeRegExp = require("../string/escapeRegExp"),
-            isObjectLike = require("../internal/isObjectLike");
+        var escapeRegExp = require('../string/escapeRegExp'),
+            isObjectLike = require('../internal/isObjectLike');
         var funcTag = "[object Function]";
         var reHostCtor = /^\[object .+?Constructor\]$/;
         var objectProto = Object.prototype;
@@ -27741,7 +27741,7 @@
         "../string/escapeRegExp": 312
       }],
       299: [function(require, module, exports) {
-        var isObjectLike = require("../internal/isObjectLike");
+        var isObjectLike = require('../internal/isObjectLike');
         var numberTag = "[object Number]";
         var objectProto = Object.prototype;
         var objToString = objectProto.toString;
@@ -27758,8 +27758,8 @@
         module.exports = isObject;
       }, {}],
       301: [function(require, module, exports) {
-        var isNative = require("./isNative"),
-            shimIsPlainObject = require("../internal/shimIsPlainObject");
+        var isNative = require('./isNative'),
+            shimIsPlainObject = require('../internal/shimIsPlainObject');
         var objectTag = "[object Object]";
         var objectProto = Object.prototype;
         var objToString = objectProto.toString;
@@ -27778,7 +27778,7 @@
         "./isNative": 298
       }],
       302: [function(require, module, exports) {
-        var isObjectLike = require("../internal/isObjectLike");
+        var isObjectLike = require('../internal/isObjectLike');
         var regexpTag = "[object RegExp]";
         var objectProto = Object.prototype;
         var objToString = objectProto.toString;
@@ -27788,7 +27788,7 @@
         module.exports = isRegExp;
       }, {"../internal/isObjectLike": 281}],
       303: [function(require, module, exports) {
-        var isObjectLike = require("../internal/isObjectLike");
+        var isObjectLike = require('../internal/isObjectLike');
         var stringTag = "[object String]";
         var objectProto = Object.prototype;
         var objToString = objectProto.toString;
@@ -27798,8 +27798,8 @@
         module.exports = isString;
       }, {"../internal/isObjectLike": 281}],
       304: [function(require, module, exports) {
-        var isLength = require("../internal/isLength"),
-            isObjectLike = require("../internal/isObjectLike");
+        var isLength = require('../internal/isLength'),
+            isObjectLike = require('../internal/isObjectLike');
         var argsTag = "[object Arguments]",
             arrayTag = "[object Array]",
             boolTag = "[object Boolean]",
@@ -27837,8 +27837,8 @@
         "../internal/isObjectLike": 281
       }],
       305: [function(require, module, exports) {
-        var baseAssign = require("../internal/baseAssign"),
-            createAssigner = require("../internal/createAssigner");
+        var baseAssign = require('../internal/baseAssign'),
+            createAssigner = require('../internal/createAssigner');
         var assign = createAssigner(baseAssign);
         module.exports = assign;
       }, {
@@ -27846,9 +27846,9 @@
         "../internal/createAssigner": 262
       }],
       306: [function(require, module, exports) {
-        var arrayCopy = require("../internal/arrayCopy"),
-            assign = require("./assign"),
-            assignDefaults = require("../internal/assignDefaults");
+        var arrayCopy = require('../internal/arrayCopy'),
+            assign = require('./assign'),
+            assignDefaults = require('../internal/assignDefaults');
         function defaults(object) {
           if (object == null) {
             return object;
@@ -27864,7 +27864,7 @@
         "./assign": 305
       }],
       307: [function(require, module, exports) {
-        module.exports = require("./assign");
+        module.exports = require('./assign');
       }, {"./assign": 305}],
       308: [function(require, module, exports) {
         var objectProto = Object.prototype;
@@ -27875,10 +27875,10 @@
         module.exports = has;
       }, {}],
       309: [function(require, module, exports) {
-        var isLength = require("../internal/isLength"),
-            isNative = require("../lang/isNative"),
-            isObject = require("../lang/isObject"),
-            shimKeys = require("../internal/shimKeys");
+        var isLength = require('../internal/isLength'),
+            isNative = require('../lang/isNative'),
+            isObject = require('../lang/isObject'),
+            shimKeys = require('../internal/shimKeys');
         var nativeKeys = isNative(nativeKeys = Object.keys) && nativeKeys;
         var keys = !nativeKeys ? shimKeys : function(object) {
           if (object) {
@@ -27898,12 +27898,12 @@
         "../lang/isObject": 300
       }],
       310: [function(require, module, exports) {
-        var isArguments = require("../lang/isArguments"),
-            isArray = require("../lang/isArray"),
-            isIndex = require("../internal/isIndex"),
-            isLength = require("../internal/isLength"),
-            isObject = require("../lang/isObject"),
-            support = require("../support");
+        var isArguments = require('../lang/isArguments'),
+            isArray = require('../lang/isArray'),
+            isIndex = require('../internal/isIndex'),
+            isLength = require('../internal/isLength'),
+            isObject = require('../lang/isObject'),
+            support = require('../support');
         var objectProto = Object.prototype;
         var hasOwnProperty = objectProto.hasOwnProperty;
         function keysIn(object) {
@@ -27940,8 +27940,8 @@
         "../support": 313
       }],
       311: [function(require, module, exports) {
-        var baseValues = require("../internal/baseValues"),
-            keys = require("./keys");
+        var baseValues = require('../internal/baseValues'),
+            keys = require('./keys');
         function values(object) {
           return baseValues(object, keys(object));
         }
@@ -27951,7 +27951,7 @@
         "./keys": 309
       }],
       312: [function(require, module, exports) {
-        var baseToString = require("../internal/baseToString");
+        var baseToString = require('../internal/baseToString');
         var reRegExpChars = /[.*+?^${}()|[\]\/\\]/g,
             reHasRegExpChars = RegExp(reRegExpChars.source);
         function escapeRegExp(string) {
@@ -27962,7 +27962,7 @@
       }, {"../internal/baseToString": 251}],
       313: [function(require, module, exports) {
         (function(global) {
-          var isNative = require("./lang/isNative");
+          var isNative = require('./lang/isNative');
           var reThis = /\bthis\b/;
           var objectProto = Object.prototype;
           var document = (document = global.window) && document.document;
@@ -28101,14 +28101,14 @@
         defProp(exports, "makeAccessor", makeAccessor);
       }, {}],
       318: [function(require, module, exports) {
-        var assert = require("assert");
-        var types = require("ast-types");
+        var assert = require('assert');
+        var types = require('ast-types');
         var isArray = types.builtInTypes.array;
         var b = types.builders;
         var n = types.namedTypes;
-        var leap = require("./leap");
-        var meta = require("./meta");
-        var util = require("./util");
+        var leap = require('./leap');
+        var meta = require('./meta');
+        var util = require('./util');
         var hasOwn = Object.prototype.hasOwnProperty;
         function Emitter(contextId) {
           assert.ok(this instanceof Emitter);
@@ -28303,7 +28303,7 @@
           }
           if (!meta.containsLeap(stmt)) {
             self.emit(stmt);
-            return ;
+            return;
           }
           switch (stmt.type) {
             case "ExpressionStatement":
@@ -28676,8 +28676,8 @@
         "ast-types": 144
       }],
       319: [function(require, module, exports) {
-        var assert = require("assert");
-        var types = require("ast-types");
+        var assert = require('assert');
+        var types = require('ast-types');
         var n = types.namedTypes;
         var b = types.builders;
         var hasOwn = Object.prototype.hasOwnProperty;
@@ -28766,11 +28766,11 @@
         "ast-types": 144
       }],
       320: [function(require, module, exports) {
-        var assert = require("assert");
-        var types = require("ast-types");
+        var assert = require('assert');
+        var types = require('ast-types');
         var n = types.namedTypes;
         var b = types.builders;
-        var inherits = require("util").inherits;
+        var inherits = require('util').inherits;
         var hasOwn = Object.prototype.hasOwnProperty;
         function Entry() {
           assert.ok(this instanceof Entry);
@@ -28853,7 +28853,7 @@
         exports.LabeledEntry = LabeledEntry;
         function LeapManager(emitter) {
           assert.ok(this instanceof LeapManager);
-          var Emitter = require("./emit").Emitter;
+          var Emitter = require('./emit').Emitter;
           assert.ok(emitter instanceof Emitter);
           this.emitter = emitter;
           this.entryStack = [new FunctionEntry(emitter.finalLoc)];
@@ -28899,9 +28899,9 @@
         util: 172
       }],
       321: [function(require, module, exports) {
-        var assert = require("assert");
-        var m = require("private").makeAccessor();
-        var types = require("ast-types");
+        var assert = require('assert');
+        var m = require('private').makeAccessor();
+        var types = require('ast-types');
         var isArray = types.builtInTypes.array;
         var n = types.namedTypes;
         var hasOwn = Object.prototype.hasOwnProperty;
@@ -28967,8 +28967,8 @@
         "private": 317
       }],
       322: [function(require, module, exports) {
-        var assert = require("assert");
-        var types = require("ast-types");
+        var assert = require('assert');
+        var types = require('ast-types');
         var n = types.namedTypes;
         var b = types.builders;
         var hasOwn = Object.prototype.hasOwnProperty;
@@ -29035,17 +29035,17 @@
         "ast-types": 144
       }],
       323: [function(require, module, exports) {
-        var assert = require("assert");
-        var fs = require("fs");
-        var types = require("ast-types");
+        var assert = require('assert');
+        var fs = require('fs');
+        var types = require('ast-types');
         var n = types.namedTypes;
         var b = types.builders;
         var isArray = types.builtInTypes.array;
         var isObject = types.builtInTypes.object;
         var NodePath = types.NodePath;
-        var hoist = require("./hoist").hoist;
-        var Emitter = require("./emit").Emitter;
-        var runtimeProperty = require("./util").runtimeProperty;
+        var hoist = require('./hoist').hoist;
+        var Emitter = require('./emit').Emitter;
+        var runtimeProperty = require('./util').runtimeProperty;
         exports.transform = function transform(node, options) {
           options = options || {};
           var path = node instanceof NodePath ? node : new NodePath(node);
@@ -29063,7 +29063,7 @@
             var node = path.value;
             var shouldTransformAsync = node.async && !this.options.disableAsync;
             if (!node.generator && !shouldTransformAsync) {
-              return ;
+              return;
             }
             this.reportChanged();
             node.generator = false;
@@ -29104,7 +29104,7 @@
             node.body._declarations = bodyBlock._declarations;
             if (shouldTransformAsync) {
               node.async = false;
-              return ;
+              return;
             }
             if (n.FunctionDeclaration.check(node)) {
               var pp = path.parent;
@@ -29112,7 +29112,7 @@
                 pp = pp.parent;
               }
               if (!pp) {
-                return ;
+                return;
               }
               path.replace();
               node.type = "FunctionExpression";
@@ -29171,13 +29171,13 @@
       }],
       324: [function(require, module, exports) {
         (function(__dirname) {
-          var assert = require("assert");
-          var path = require("path");
-          var fs = require("fs");
-          var through = require("through");
-          var transform = require("./lib/visit").transform;
-          var utils = require("./lib/util");
-          var types = require("ast-types");
+          var assert = require('assert');
+          var path = require('path');
+          var fs = require('fs');
+          var through = require('through');
+          var transform = require('./lib/visit').transform;
+          var utils = require('./lib/util');
+          var types = require('ast-types');
           var genOrAsyncFunExp = /\bfunction\s*\*|\basync\b/;
           var blockBindingExp = /\b(let|const)\s+/;
           function exports(file, options) {
@@ -29193,7 +29193,7 @@
           }
           module.exports = exports;
           function runtime() {
-            require("./runtime");
+            require('./runtime');
           }
           exports.runtime = runtime;
           runtime.path = path.join(__dirname, "runtime.js");
@@ -29211,7 +29211,7 @@
       }],
       325: [function(require, module, exports) {
         (function(process) {
-          var Stream = require("stream");
+          var Stream = require('stream');
           exports = module.exports = through;
           through.through = through;
           function through(write, end, opts) {
@@ -29266,7 +29266,7 @@
             }
             stream.end = function(data) {
               if (ended)
-                return ;
+                return;
               ended = true;
               if (arguments.length)
                 stream.write(data);
@@ -29275,7 +29275,7 @@
             };
             stream.destroy = function() {
               if (destroyed)
-                return ;
+                return;
               destroyed = true;
               ended = true;
               buffer.length = 0;
@@ -29285,7 +29285,7 @@
             };
             stream.pause = function() {
               if (stream.paused)
-                return ;
+                return;
               stream.paused = true;
               return stream;
             };
@@ -29301,7 +29301,7 @@
             };
             return stream;
           }
-        }).call(this, require("_process"));
+        }).call(this, require('_process'));
       }, {
         _process: 156,
         stream: 168
@@ -29319,7 +29319,7 @@
               if (inModule) {
                 module.exports = runtime;
               }
-              return ;
+              return;
             }
             runtime = global.regeneratorRuntime = inModule ? module.exports : {};
             function wrap(innerFn, outerFn, self, tryLocsList) {
@@ -29368,7 +29368,7 @@
                   var record = tryCatch(this, null, arg);
                   if (record.type === "throw") {
                     reject(record.arg);
-                    return ;
+                    return;
                   }
                   var info = record.arg;
                   if (info.done) {
@@ -29679,7 +29679,7 @@
         }).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {});
       }, {}],
       327: [function(require, module, exports) {
-        var regenerate = require("regenerate");
+        var regenerate = require('regenerate');
         exports.REGULAR = {
           d: regenerate().addRange(48, 57),
           D: regenerate().addRange(0, 47).addRange(58, 65535),
@@ -30706,13 +30706,13 @@
             function assertType(type, expected) {
               if (expected.indexOf("|") == -1) {
                 if (type == expected) {
-                  return ;
+                  return;
                 }
                 throw Error("Invalid node type: " + type);
               }
               expected = assertType.hasOwnProperty(expected) ? assertType[expected] : assertType[expected] = RegExp("^(?:" + expected + ")$");
               if (expected.test(type)) {
-                return ;
+                return;
               }
               throw Error("Invalid node type: " + type);
             }
@@ -31498,11 +31498,11 @@
         })();
       }, {}],
       332: [function(require, module, exports) {
-        var generate = require("regjsgen").generate;
-        var parse = require("regjsparser").parse;
-        var regenerate = require("regenerate");
-        var iuMappings = require("./data/iu-mappings.json!systemjs-json");
-        var ESCAPE_SETS = require("./data/character-class-escape-sets");
+        var generate = require('regjsgen').generate;
+        var parse = require('regjsparser').parse;
+        var regenerate = require('regenerate');
+        var iuMappings = require('./data/iu-mappings.json!systemjs-json');
+        var ESCAPE_SETS = require('./data/character-class-escape-sets');
         function getCharacterClassEscapeSet(character) {
           if (unicode) {
             if (ignoreCase) {
@@ -31538,7 +31538,7 @@
         }
         function update(item, pattern) {
           if (!pattern) {
-            return ;
+            return;
           }
           var tree = parse(pattern, "");
           switch (tree.type) {
@@ -31652,7 +31652,7 @@
       }],
       333: [function(require, module, exports) {
         "use strict";
-        var isFinite = require("is-finite");
+        var isFinite = require('is-finite');
         module.exports = function(str, n) {
           if (typeof str !== "string") {
             throw new TypeError("Expected a string as the first argument");
@@ -31689,9 +31689,9 @@
         };
       }, {}],
       337: [function(require, module, exports) {
-        exports.SourceMapGenerator = require("./source-map/source-map-generator").SourceMapGenerator;
-        exports.SourceMapConsumer = require("./source-map/source-map-consumer").SourceMapConsumer;
-        exports.SourceNode = require("./source-map/source-node").SourceNode;
+        exports.SourceMapGenerator = require('./source-map/source-map-generator').SourceMapGenerator;
+        exports.SourceMapConsumer = require('./source-map/source-map-consumer').SourceMapConsumer;
+        exports.SourceNode = require('./source-map/source-node').SourceNode;
       }, {
         "./source-map/source-map-consumer": 343,
         "./source-map/source-map-generator": 344,
@@ -31699,10 +31699,10 @@
       }],
       338: [function(require, module, exports) {
         if (typeof define !== "function") {
-          var define = require("amdefine")(module, require);
+          var define = require('amdefine')(module, require);
         }
         define(function(require, exports, module) {
-          var util = require("./util");
+          var util = require('./util');
           function ArraySet() {
             this._array = [];
             this._set = {};
@@ -31751,10 +31751,10 @@
       }],
       339: [function(require, module, exports) {
         if (typeof define !== "function") {
-          var define = require("amdefine")(module, require);
+          var define = require('amdefine')(module, require);
         }
         define(function(require, exports, module) {
-          var base64 = require("./base64");
+          var base64 = require('./base64');
           var VLQ_BASE_SHIFT = 5;
           var VLQ_BASE = 1 << VLQ_BASE_SHIFT;
           var VLQ_BASE_MASK = VLQ_BASE - 1;
@@ -31807,7 +31807,7 @@
       }],
       340: [function(require, module, exports) {
         if (typeof define !== "function") {
-          var define = require("amdefine")(module, require);
+          var define = require('amdefine')(module, require);
         }
         define(function(require, exports, module) {
           var charToIntMap = {};
@@ -31832,7 +31832,7 @@
       }, {amdefine: 347}],
       341: [function(require, module, exports) {
         if (typeof define !== "function") {
-          var define = require("amdefine")(module, require);
+          var define = require('amdefine')(module, require);
         }
         define(function(require, exports, module) {
           exports.GREATEST_LOWER_BOUND = 1;
@@ -31882,10 +31882,10 @@
       }, {amdefine: 347}],
       342: [function(require, module, exports) {
         if (typeof define !== "function") {
-          var define = require("amdefine")(module, require);
+          var define = require('amdefine')(module, require);
         }
         define(function(require, exports, module) {
-          var util = require("./util");
+          var util = require('./util');
           function generatedPositionAfter(mappingA, mappingB) {
             var lineA = mappingA.generatedLine;
             var lineB = mappingB.generatedLine;
@@ -31929,13 +31929,13 @@
       }],
       343: [function(require, module, exports) {
         if (typeof define !== "function") {
-          var define = require("amdefine")(module, require);
+          var define = require('amdefine')(module, require);
         }
         define(function(require, exports, module) {
-          var util = require("./util");
-          var binarySearch = require("./binary-search");
-          var ArraySet = require("./array-set").ArraySet;
-          var base64VLQ = require("./base64-vlq");
+          var util = require('./util');
+          var binarySearch = require('./binary-search');
+          var ArraySet = require('./array-set').ArraySet;
+          var base64VLQ = require('./base64-vlq');
           function SourceMapConsumer(aSourceMap) {
             var sourceMap = aSourceMap;
             if (typeof aSourceMap === "string") {
@@ -32397,13 +32397,13 @@
       }],
       344: [function(require, module, exports) {
         if (typeof define !== "function") {
-          var define = require("amdefine")(module, require);
+          var define = require('amdefine')(module, require);
         }
         define(function(require, exports, module) {
-          var base64VLQ = require("./base64-vlq");
-          var util = require("./util");
-          var ArraySet = require("./array-set").ArraySet;
-          var MappingList = require("./mapping-list").MappingList;
+          var base64VLQ = require('./base64-vlq');
+          var util = require('./util');
+          var ArraySet = require('./array-set').ArraySet;
+          var MappingList = require('./mapping-list').MappingList;
           function SourceMapGenerator(aArgs) {
             if (!aArgs) {
               aArgs = {};
@@ -32552,9 +32552,9 @@
           };
           SourceMapGenerator.prototype._validateMapping = function SourceMapGenerator_validateMapping(aGenerated, aOriginal, aSource, aName) {
             if (aGenerated && "line" in aGenerated && "column" in aGenerated && aGenerated.line > 0 && aGenerated.column >= 0 && !aOriginal && !aSource && !aName) {
-              return ;
+              return;
             } else if (aGenerated && "line" in aGenerated && "column" in aGenerated && aOriginal && "line" in aOriginal && "column" in aOriginal && aGenerated.line > 0 && aGenerated.column >= 0 && aOriginal.line > 0 && aOriginal.column >= 0 && aSource) {
-              return ;
+              return;
             } else {
               throw new Error("Invalid mapping: " + JSON.stringify({
                 generated: aGenerated,
@@ -32652,11 +32652,11 @@
       }],
       345: [function(require, module, exports) {
         if (typeof define !== "function") {
-          var define = require("amdefine")(module, require);
+          var define = require('amdefine')(module, require);
         }
         define(function(require, exports, module) {
-          var SourceMapGenerator = require("./source-map-generator").SourceMapGenerator;
-          var util = require("./util");
+          var SourceMapGenerator = require('./source-map-generator').SourceMapGenerator;
+          var util = require('./util');
           var REGEX_NEWLINE = /(\r?\n)/;
           var NEWLINE_CODE = 10;
           var isSourceNode = "$$$isSourceNode$$$";
@@ -32696,7 +32696,7 @@
                   lastGeneratedColumn = mapping.generatedColumn;
                   addMappingWithCode(lastMapping, code);
                   lastMapping = mapping;
-                  return ;
+                  return;
                 }
               }
               while (lastGeneratedLine < mapping.generatedLine) {
@@ -32916,7 +32916,7 @@
       }],
       346: [function(require, module, exports) {
         if (typeof define !== "function") {
-          var define = require("amdefine")(module, require);
+          var define = require('amdefine')(module, require);
         }
         define(function(require, exports, module) {
           function getArg(aArgs, aName, aDefaultValue) {
@@ -33124,7 +33124,7 @@
             var defineCache = {},
                 loaderCache = {},
                 alreadyCalled = false,
-                path = require("path"),
+                path = require('path'),
                 makeRequire,
                 stringRequire;
             function trimDots(ary) {
@@ -33313,7 +33313,7 @@
             return define;
           }
           module.exports = amdefine;
-        }).call(this, require("_process"), "/node_modules/source-map/node_modules/amdefine/amdefine.js");
+        }).call(this, require('_process'), "/node_modules/source-map/node_modules/amdefine/amdefine.js");
       }, {
         _process: 156,
         path: 155
@@ -33324,7 +33324,7 @@
           function f() {}
           f.prototype = obj;
           new f;
-          return ;
+          return;
           eval(obj);
         };
       }, {}],
@@ -55466,4 +55466,4 @@
       }, {}]
     }, {}, [1])(1);
   });
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

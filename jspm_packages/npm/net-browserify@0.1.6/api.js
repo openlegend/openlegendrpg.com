@@ -1,9 +1,9 @@
 /* */ 
-var net = require("net");
-var crypto = require("crypto");
-var express = require("express");
-var expressWs = require("express-ws");
-var bodyParser = require("body-parser");
+var net = require('net');
+var crypto = require('crypto');
+var express = require('express');
+var expressWs = require('express-ws');
+var bodyParser = require('body-parser');
 function generateToken() {
   return crypto.randomBytes(32).toString('hex');
 }
@@ -37,7 +37,7 @@ module.exports = function(server, options) {
       app.use(function(req, res, next) {
         if (req.path.indexOf('/api/vm/net/') !== 0) {
           next();
-          return ;
+          return;
         }
         res.header('Access-Control-Allow-Origin', allowOrigin);
         if (req.method.toUpperCase() == 'OPTIONS') {
@@ -57,7 +57,7 @@ module.exports = function(server, options) {
         code: 400,
         error: 'No host and port specified'
       });
-      return ;
+      return;
     }
     if (options.to) {
       if (!checkTo(options.to, {
@@ -68,7 +68,7 @@ module.exports = function(server, options) {
           code: 403,
           error: 'Destination not allowed'
         });
-        return ;
+        return;
       }
     }
     var socket = net.connect({
@@ -80,7 +80,7 @@ module.exports = function(server, options) {
           code: 500,
           error: err
         });
-        return ;
+        return;
       }
       var token = generateToken();
       sockets[token] = socket;
@@ -110,7 +110,7 @@ module.exports = function(server, options) {
     if (!sockets[token]) {
       console.warn('WARN: Unknown TCP connection with token "' + token + '"');
       ws.close();
-      return ;
+      return;
     }
     var socket = sockets[token];
     console.log('Forwarding socket with token ' + token);

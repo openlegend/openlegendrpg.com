@@ -1,9 +1,9 @@
 /* */ 
 (function(Buffer) {
-  var pemstrip = require("pemstrip");
-  var asn1 = require("./asn1");
-  var aesid = require("./aesid.json!systemjs-json");
-  var fixProc = require("./fixProc");
+  var pemstrip = require('pemstrip');
+  var asn1 = require('./asn1');
+  var aesid = require('./aesid.json!systemjs-json');
+  var fixProc = require('./fixProc');
   module.exports = parseKeys;
   function parseKeys(buffer, crypto) {
     var password;
@@ -105,4 +105,4 @@
     out.push(cipher.final());
     return Buffer.concat(out);
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

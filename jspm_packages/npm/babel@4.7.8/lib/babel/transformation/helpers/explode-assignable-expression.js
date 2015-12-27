@@ -3,7 +3,7 @@
 var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
-var t = _interopRequireWildcard(require("../../types/index"));
+var t = _interopRequireWildcard(require('../../types/index'));
 var getObjRef = function getObjRef(node, nodes, file, scope) {
   var ref;
   if (t.isIdentifier(node)) {

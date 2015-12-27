@@ -1,5 +1,5 @@
 /* */ 
-var baseEach = require("./baseEach");
+var baseEach = require('./baseEach');
 function baseEvery(collection, predicate) {
   var result = true;
   baseEach(collection, function(value, index, collection) {

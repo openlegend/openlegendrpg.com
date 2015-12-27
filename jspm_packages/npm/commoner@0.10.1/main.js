@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
-  var path = require("path");
-  var Commoner = require("./lib/commoner").Commoner;
+  var path = require('path');
+  var Commoner = require('./lib/commoner').Commoner;
   exports.Commoner = Commoner;
   function defCallback(name) {
     exports[name] = function() {
@@ -14,4 +14,4 @@
   defCallback("version");
   defCallback("resolve");
   defCallback("process");
-})(require("process"));
+})(require('process'));

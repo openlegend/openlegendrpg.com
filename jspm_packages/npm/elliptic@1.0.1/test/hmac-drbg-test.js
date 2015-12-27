@@ -1,8 +1,8 @@
 /* */ 
-var assert = require("assert");
-var elliptic = require("../lib/elliptic");
+var assert = require('assert');
+var elliptic = require('../lib/elliptic');
 var utils = elliptic.utils;
-var hash = require("hash.js");
+var hash = require('hash.js');
 describe('Hmac_DRBG', function() {
   it('should support hmac-drbg-sha256', function() {
     function doDrbg(opt) {

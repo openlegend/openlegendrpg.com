@@ -7,14 +7,14 @@ var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
 exports.Identifier = Identifier;
-var levenshtein = _interopRequire(require("leven"));
-var messages = _interopRequireWildcard(require("../../../messages"));
+var levenshtein = _interopRequire(require('leven'));
+var messages = _interopRequireWildcard(require('../../../messages'));
 var optional = exports.optional = true;
 function Identifier(node, parent, scope, file) {
   if (!this.isReferenced())
-    return ;
+    return;
   if (scope.hasBinding(node.name))
-    return ;
+    return;
   var bindings = scope.getAllBindings();
   var closest;
   var shortest = -1;

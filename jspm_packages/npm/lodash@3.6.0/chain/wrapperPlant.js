@@ -1,6 +1,6 @@
 /* */ 
-var baseLodash = require("../internal/baseLodash"),
-    wrapperClone = require("../internal/wrapperClone");
+var baseLodash = require('../internal/baseLodash'),
+    wrapperClone = require('../internal/wrapperClone');
 function wrapperPlant(value) {
   var result,
       parent = this;

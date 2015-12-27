@@ -8,12 +8,12 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var TransformerPass = _interopRequire(require("./transformer-pass"));
-var isFunction = _interopRequire(require("lodash/lang/isFunction"));
-var traverse = _interopRequire(require("../traversal/index"));
-var isObject = _interopRequire(require("lodash/lang/isObject"));
-var assign = _interopRequire(require("lodash/object/assign"));
-var each = _interopRequire(require("lodash/collection/each"));
+var TransformerPass = _interopRequire(require('./transformer-pass'));
+var isFunction = _interopRequire(require('lodash/lang/isFunction'));
+var traverse = _interopRequire(require('../traversal/index'));
+var isObject = _interopRequire(require('lodash/lang/isObject'));
+var assign = _interopRequire(require('lodash/object/assign'));
+var each = _interopRequire(require('lodash/collection/each'));
 var Transformer = (function() {
   function Transformer(transformerKey, transformer, opts) {
     _classCallCheck(this, Transformer);
@@ -46,14 +46,14 @@ var Transformer = (function() {
     each(transformer, function(fns, type) {
       if (type[0] === "_") {
         _this[type] = fns;
-        return ;
+        return;
       }
       if (type === "enter" || type === "exit")
-        return ;
+        return;
       if (isFunction(fns))
         fns = {enter: fns};
       if (!isObject(fns))
-        return ;
+        return;
       if (!fns.enter)
         fns.enter = function() {};
       if (!fns.exit)

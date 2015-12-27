@@ -1,6 +1,6 @@
 /* */ 
 (function(Buffer) {
-  var xor = require("../xor");
+  var xor = require('../xor');
   function getBlock(self) {
     var out = self._cipher.encryptBlock(self._prev);
     incr32(self._prev);
@@ -28,4 +28,4 @@
       }
     }
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

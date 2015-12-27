@@ -1,6 +1,6 @@
 /* */ 
-var test = require("tap").test;
-var sigmund = require("../sigmund");
+var test = require('tap').test;
+var sigmund = require('../sigmund');
 var hash = '{abc/def/g{0h1i2{jkl';
 var obj1 = {
   a: 'b',

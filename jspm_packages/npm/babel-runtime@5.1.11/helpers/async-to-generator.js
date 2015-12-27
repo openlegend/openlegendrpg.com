@@ -1,6 +1,6 @@
 /* */ 
 "use strict";
-var _Promise = require("../core-js/promise")["default"];
+var _Promise = require('../core-js/promise')["default"];
 exports["default"] = function(fn) {
   return function() {
     var gen = fn.apply(this, arguments);
@@ -13,7 +13,7 @@ exports["default"] = function(fn) {
           var value = info.value;
         } catch (error) {
           reject(error);
-          return ;
+          return;
         }
         if (info.done) {
           resolve(value);

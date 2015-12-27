@@ -1,6 +1,6 @@
 /* */ 
 (function(Buffer) {
-  var xor = require("../xor");
+  var xor = require('../xor');
   exports.encrypt = function(self, data, decrypt) {
     var out = new Buffer('');
     var len;
@@ -27,4 +27,4 @@
     self._prev = Buffer.concat([self._prev, decrypt ? data : out]);
     return out;
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

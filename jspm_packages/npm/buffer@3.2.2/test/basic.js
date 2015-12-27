@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
-  var B = require("../index").Buffer;
-  var test = require("tape");
+  var B = require('../index').Buffer;
+  var test = require('tape');
   if (process.env.OBJECT_IMPL)
     B.TYPED_ARRAY_SUPPORT = false;
   test('convert to Uint8Array in modern browsers', function(t) {
@@ -50,4 +50,4 @@
     t.equal(buf[0], 253);
     t.end();
   });
-})(require("process"));
+})(require('process'));

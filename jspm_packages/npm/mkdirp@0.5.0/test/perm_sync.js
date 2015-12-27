@@ -1,9 +1,9 @@
 /* */ 
-var mkdirp = require("../../mkdirp@0.5.0");
-var path = require("path");
-var fs = require("fs");
+var mkdirp = require('../index');
+var path = require('path');
+var fs = require('fs');
 var exists = fs.exists || path.exists;
-var test = require("tap").test;
+var test = require('tap').test;
 test('sync perm', function(t) {
   t.plan(4);
   var file = '/tmp/' + (Math.random() * (1 << 30)).toString(16) + '.json';

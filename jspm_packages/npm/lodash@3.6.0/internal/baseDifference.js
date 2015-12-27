@@ -1,7 +1,7 @@
 /* */ 
-var baseIndexOf = require("./baseIndexOf"),
-    cacheIndexOf = require("./cacheIndexOf"),
-    createCache = require("./createCache");
+var baseIndexOf = require('./baseIndexOf'),
+    cacheIndexOf = require('./cacheIndexOf'),
+    createCache = require('./createCache');
 function baseDifference(array, values) {
   var length = array ? array.length : 0,
       result = [];

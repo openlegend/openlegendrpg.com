@@ -1,9 +1,9 @@
 /* */ 
 'use strict';
-var $ = require("./$"),
-    safe = require("./$.uid").safe,
-    assert = require("./$.assert"),
-    forOf = require("./$.iter").forOf,
+var $ = require('./$'),
+    safe = require('./$.uid').safe,
+    assert = require('./$.assert'),
+    forOf = require('./$.iter').forOf,
     _has = $.has,
     isObject = $.isObject,
     hide = $.hide,
@@ -12,7 +12,7 @@ var $ = require("./$"),
     ID = safe('id'),
     WEAK = safe('weak'),
     LEAK = safe('leak'),
-    method = require("./$.array-methods"),
+    method = require('./$.array-methods'),
     find = method(5),
     findIndex = method(6);
 function findFrozen(store, key) {

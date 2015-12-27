@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
   'use strict';
-  var fs = require("fs");
-  var path = require("path");
+  var fs = require('fs');
+  var path = require('path');
   var commentRx = /^\s*\/(?:\/|\*)[@#]\s+sourceMappingURL=data:(?:application|text)\/json;(?:charset[:=]\S+;)?base64,(.*)$/mg;
   var mapFileCommentRx = /(?:\/\/[@#][ \t]+sourceMappingURL=(.+?)[ \t]*$)|(?:\/\*[@#][ \t]+sourceMappingURL=([^\*]+?)[ \t]*(?:\*\/){1}[ \t]*$)/mg;
   function decodeBase64(base64) {
@@ -114,4 +114,4 @@
     mapFileCommentRx.lastIndex = 0;
     return mapFileCommentRx;
   });
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

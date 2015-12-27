@@ -1,5 +1,5 @@
 /* */ 
-var baseForIn = require("./baseForIn");
+var baseForIn = require('./baseForIn');
 function pickByCallback(object, predicate) {
   var result = {};
   baseForIn(object, function(value, key, object) {

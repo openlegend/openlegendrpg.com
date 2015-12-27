@@ -1,7 +1,7 @@
 /* */ 
-var baseFlatten = require("../internal/baseFlatten"),
-    baseSortByOrder = require("../internal/baseSortByOrder"),
-    isIterateeCall = require("../internal/isIterateeCall");
+var baseFlatten = require('../internal/baseFlatten'),
+    baseSortByOrder = require('../internal/baseSortByOrder'),
+    isIterateeCall = require('../internal/isIterateeCall');
 function sortByAll() {
   var args = arguments,
       collection = args[0],

@@ -6,9 +6,9 @@ var _interopRequireWildcard = function(obj) {
 var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
-var isNumber = _interopRequire(require("lodash/lang/isNumber"));
-var util = _interopRequireWildcard(require("../../../util"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var isNumber = _interopRequire(require('lodash/lang/isNumber'));
+var util = _interopRequireWildcard(require('../../../util'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var check = exports.check = t.isRestElement;
 var memberExpressionOptimisationVisitor = {enter: function enter(node, parent, scope, state) {
     if (this.isScope() && !scope.bindingIdentifierEquals(state.name, state.outerBinding)) {
@@ -21,12 +21,12 @@ var memberExpressionOptimisationVisitor = {enter: function enter(node, parent, s
       return this.skip();
     }
     if (!this.isReferencedIdentifier({name: state.name}))
-      return ;
+      return;
     if (!state.noOptimise && t.isMemberExpression(parent) && parent.computed) {
       var prop = parent.property;
       if (isNumber(prop.value) || t.isUnaryExpression(prop) || t.isBinaryExpression(prop)) {
         state.candidates.push(this);
-        return ;
+        return;
       }
     }
     state.canOptimise = false;
@@ -48,7 +48,7 @@ var hasRest = function hasRest(node) {
 };
 exports.Function = function(node, parent, scope, file) {
   if (!hasRest(node))
-    return ;
+    return;
   var rest = node.params.pop().argument;
   var argsId = t.identifier("arguments");
   argsId._ignoreAliasFunctions = true;
@@ -76,7 +76,7 @@ exports.Function = function(node, parent, scope, file) {
       candidate.node = argsId;
       optimizeMemberExpression(candidate.parent, node.params.length);
     }
-    return ;
+    return;
   }
   var start = t.literal(node.params.length);
   var key = scope.generateUidIdentifier("key");

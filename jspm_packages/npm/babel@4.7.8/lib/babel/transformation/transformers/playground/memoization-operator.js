@@ -6,8 +6,8 @@ var _interopRequireWildcard = function(obj) {
 var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
-var build = _interopRequire(require("../../helpers/build-conditional-assignment-operator-transformer"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var build = _interopRequire(require('../../helpers/build-conditional-assignment-operator-transformer'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var playground = exports.playground = true;
 build(exports, {
   is: (function(_is) {

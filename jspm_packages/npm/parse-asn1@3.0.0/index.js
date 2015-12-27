@@ -1,10 +1,10 @@
 /* */ 
 (function(Buffer) {
-  var asn1 = require("./asn1");
-  var aesid = require("./aesid.json!systemjs-json");
-  var fixProc = require("./fixProc");
-  var ciphers = require("browserify-aes");
-  var compat = require("pbkdf2-compat");
+  var asn1 = require('./asn1');
+  var aesid = require('./aesid.json!systemjs-json');
+  var fixProc = require('./fixProc');
+  var ciphers = require('browserify-aes');
+  var compat = require('pbkdf2-compat');
   module.exports = parseKeys;
   function parseKeys(buffer) {
     var password;
@@ -101,4 +101,4 @@
     out.push(cipher.final());
     return Buffer.concat(out);
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

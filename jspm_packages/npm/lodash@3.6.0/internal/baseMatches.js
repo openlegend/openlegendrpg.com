@@ -1,9 +1,9 @@
 /* */ 
-var baseIsMatch = require("./baseIsMatch"),
-    constant = require("../utility/constant"),
-    isStrictComparable = require("./isStrictComparable"),
-    keys = require("../object/keys"),
-    toObject = require("./toObject");
+var baseIsMatch = require('./baseIsMatch'),
+    constant = require('../utility/constant'),
+    isStrictComparable = require('./isStrictComparable'),
+    keys = require('../object/keys'),
+    toObject = require('./toObject');
 function baseMatches(source) {
   var props = keys(source),
       length = props.length;

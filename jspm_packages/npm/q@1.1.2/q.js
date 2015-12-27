@@ -11,7 +11,7 @@
       define(definition);
     } else if (typeof ses !== "undefined") {
       if (!ses.ok()) {
-        return ;
+        return;
       } else {
         ses.makeQ = definition;
       }
@@ -246,7 +246,7 @@
     }
     function captureLine() {
       if (!hasStacks) {
-        return ;
+        return;
       }
       try {
         throw new Error();
@@ -255,7 +255,7 @@
         var firstLine = lines[0].indexOf("@") > 0 ? lines[1] : lines[2];
         var fileNameAndLineNumber = getFileNameAndLineNumber(firstLine);
         if (!fileNameAndLineNumber) {
-          return ;
+          return;
         }
         qFileName = fileNameAndLineNumber[0];
         return fileNameAndLineNumber[1];
@@ -342,25 +342,25 @@
       deferred.promise = promise;
       deferred.resolve = function(value) {
         if (resolvedPromise) {
-          return ;
+          return;
         }
         become(Q(value));
       };
       deferred.fulfill = function(value) {
         if (resolvedPromise) {
-          return ;
+          return;
         }
         become(fulfill(value));
       };
       deferred.reject = function(reason) {
         if (resolvedPromise) {
-          return ;
+          return;
         }
         become(reject(reason));
       };
       deferred.notify = function(progress) {
         if (resolvedPromise) {
-          return ;
+          return;
         }
         array_reduce(progressListeners, function(undefined, progressListener) {
           Q.nextTick(function() {
@@ -505,13 +505,13 @@
       Q.nextTick(function() {
         self.promiseDispatch(function(value) {
           if (done) {
-            return ;
+            return;
           }
           done = true;
           deferred.resolve(_fulfilled(value));
         }, "when", [function(exception) {
           if (done) {
-            return ;
+            return;
           }
           done = true;
           deferred.resolve(_rejected(exception));
@@ -616,7 +616,7 @@
     }
     function trackRejection(promise, reason) {
       if (!trackUnhandledRejections) {
-        return ;
+        return;
       }
       unhandledRejections.push(promise);
       if (reason && typeof reason.stack !== "undefined") {
@@ -627,7 +627,7 @@
     }
     function untrackRejection(promise) {
       if (!trackUnhandledRejections) {
-        return ;
+        return;
       }
       var at = array_indexOf(unhandledRejections, promise);
       if (at !== -1) {
@@ -1097,4 +1097,4 @@
     var qEndingLine = captureLine();
     return Q;
   });
-})(require("process"));
+})(require('process'));

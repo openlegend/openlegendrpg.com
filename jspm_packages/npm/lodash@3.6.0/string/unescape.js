@@ -1,6 +1,6 @@
 /* */ 
-var baseToString = require("../internal/baseToString"),
-    unescapeHtmlChar = require("../internal/unescapeHtmlChar");
+var baseToString = require('../internal/baseToString'),
+    unescapeHtmlChar = require('../internal/unescapeHtmlChar');
 var reEscapedHtml = /&(?:amp|lt|gt|quot|#39|#96);/g,
     reHasEscapedHtml = RegExp(reEscapedHtml.source);
 function unescape(string) {

@@ -1,6 +1,6 @@
 /* */ 
 (function(Buffer) {
-  var md5 = require("create-hash/md5");
+  var md5 = require('create-hash/md5');
   module.exports = EVP_BytesToKey;
   function EVP_BytesToKey(password, keyLen, ivLen) {
     if (!Buffer.isBuffer(password)) {
@@ -62,4 +62,4 @@
       iv: iv
     };
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

@@ -39,11 +39,11 @@
       };
     }
     minimatch.Minimatch = Minimatch;
-    var LRU = require("lru-cache"),
+    var LRU = require('lru-cache'),
         cache = minimatch.cache = new LRU({max: 100}),
         GLOBSTAR = minimatch.GLOBSTAR = Minimatch.GLOBSTAR = {},
-        sigmund = require("sigmund");
-    var path = require("path"),
+        sigmund = require('sigmund');
+    var path = require('path'),
         qmark = "[^/]",
         star = qmark + "*?",
         twoStarDot = "(?:(?!(?:\\\/|^)(?:\\.{1,2})($|\\\/)).)*?",
@@ -136,16 +136,16 @@
     Minimatch.prototype.make = make;
     function make() {
       if (this._made)
-        return ;
+        return;
       var pattern = this.pattern;
       var options = this.options;
       if (!options.nocomment && pattern.charAt(0) === "#") {
         this.comment = true;
-        return ;
+        return;
       }
       if (!pattern) {
         this.empty = true;
-        return ;
+        return;
       }
       this.parseNegate();
       var set = this.globSet = this.braceExpand();
@@ -173,7 +173,7 @@
           options = this.options,
           negateOffset = 0;
       if (options.nonegate)
-        return ;
+        return;
       for (var i = 0,
           l = pattern.length; i < l && pattern.charAt(i) === "!"; i++) {
         negate = !negate;
@@ -673,4 +673,4 @@
       return s.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
     }
   })(typeof require === "function" ? require : null, this, typeof module === "object" ? module : null, typeof process === "object" ? process.platform : "win32");
-})(require("process"));
+})(require('process'));

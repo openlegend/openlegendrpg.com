@@ -37,7 +37,7 @@
   iconv._codecDataCache = {};
   iconv.getCodec = function getCodec(encoding) {
     if (!iconv.encodings)
-      iconv.encodings = require("../encodings/index");
+      iconv.encodings = require('../encodings/index');
     var enc = ('' + encoding).toLowerCase().replace(/[^0-9a-z]|:\d{4}$/g, "");
     var codecData,
         codecOptions;
@@ -80,4 +80,4 @@
     }
     require('@empty')(iconv);
   }
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

@@ -1,10 +1,10 @@
 /* */ 
-var assert = require("assert");
-var Q = require("q");
-var fs = require("fs");
-var path = require("path");
-var util = require("./util");
-var EventEmitter = require("events").EventEmitter;
+var assert = require('assert');
+var Q = require('q');
+var fs = require('fs');
+var path = require('path');
+var util = require('./util');
+var EventEmitter = require('events').EventEmitter;
 var hasOwn = Object.prototype.hasOwnProperty;
 function ReadFileCache(sourceDir, charset) {
   assert.ok(this instanceof ReadFileCache);

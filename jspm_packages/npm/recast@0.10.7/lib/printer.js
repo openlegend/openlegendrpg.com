@@ -1,18 +1,18 @@
 /* */ 
-var assert = require("assert");
-var sourceMap = require("source-map");
-var printComments = require("./comments").printComments;
-var linesModule = require("./lines");
+var assert = require('assert');
+var sourceMap = require('source-map');
+var printComments = require('./comments').printComments;
+var linesModule = require('./lines');
 var fromString = linesModule.fromString;
 var concat = linesModule.concat;
-var normalizeOptions = require("./options").normalize;
-var getReprinter = require("./patcher").getReprinter;
-var types = require("./types");
+var normalizeOptions = require('./options').normalize;
+var getReprinter = require('./patcher').getReprinter;
+var types = require('./types');
 var namedTypes = types.namedTypes;
 var isString = types.builtInTypes.string;
 var isObject = types.builtInTypes.object;
-var FastPath = require("./fast-path");
-var util = require("./util");
+var FastPath = require('./fast-path');
+var util = require('./util');
 function PrintResult(code, sourceMap) {
   assert.ok(this instanceof PrintResult);
   isString.assert(code);
@@ -662,10 +662,10 @@ function printStatementSequence(path, options, print) {
     var i = stmtPath.getName();
     var stmt = stmtPath.getValue();
     if (!stmt) {
-      return ;
+      return;
     }
     if (stmt.type === "EmptyStatement") {
-      return ;
+      return;
     }
     if (!inClassBody) {
       namedTypes.Statement.assert(stmt);

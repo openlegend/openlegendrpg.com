@@ -1,6 +1,6 @@
 /* */ 
-var bindCallback = require("./bindCallback"),
-    isIterateeCall = require("./isIterateeCall");
+var bindCallback = require('./bindCallback'),
+    isIterateeCall = require('./isIterateeCall');
 function createAssigner(assigner) {
   return function() {
     var args = arguments,

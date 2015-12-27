@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var test = require("tape");
-  var crypto = require("browserify-aes/browser");
-  var randomBytes = require("randombytes");
+  var test = require('tape');
+  var crypto = require('browserify-aes/browser');
+  var randomBytes = require('randombytes');
   test('ciphers', function(t) {
     crypto.listCiphers().forEach(function(cipher) {
       t.test(cipher, function(t) {
@@ -28,7 +28,7 @@
   });
   test('through crypto browserify works', function(t) {
     t.plan(2);
-    var crypto = require("../../crypto-browserify@3.9.13");
+    var crypto = require('../index');
     var cipher = 'aes-128-ctr';
     var data = randomBytes(562);
     var password = randomBytes(20);
@@ -41,4 +41,4 @@
     t.equals(data.toString('hex'), Buffer.concat(out).toString('hex'));
     t.ok(crypto.getCiphers().length, 'get ciphers returns an array');
   });
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

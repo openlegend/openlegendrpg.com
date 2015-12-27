@@ -24,10 +24,10 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var DefaultFormatter = _interopRequire(require("./_default"));
-var includes = _interopRequire(require("lodash/collection/includes"));
-var util = _interopRequireWildcard(require("../../util"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var DefaultFormatter = _interopRequire(require('./_default'));
+var includes = _interopRequire(require('lodash/collection/includes'));
+var util = _interopRequireWildcard(require('../../util'));
+var t = _interopRequireWildcard(require('../../types/index'));
 var CommonJSFormatter = (function(DefaultFormatter) {
   function CommonJSFormatter() {
     _classCallCheck(this, CommonJSFormatter);
@@ -81,7 +81,7 @@ var CommonJSFormatter = (function(DefaultFormatter) {
         assign._blockHoist = 3;
       }
       nodes.push(assign);
-      return ;
+      return;
     }
     DefaultFormatter.prototype.exportDeclaration.apply(this, arguments);
   };

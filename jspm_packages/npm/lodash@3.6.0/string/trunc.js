@@ -1,8 +1,8 @@
 /* */ 
-var baseToString = require("../internal/baseToString"),
-    isIterateeCall = require("../internal/isIterateeCall"),
-    isObject = require("../lang/isObject"),
-    isRegExp = require("../lang/isRegExp");
+var baseToString = require('../internal/baseToString'),
+    isIterateeCall = require('../internal/isIterateeCall'),
+    isObject = require('../lang/isObject'),
+    isRegExp = require('../lang/isRegExp');
 var DEFAULT_TRUNC_LENGTH = 30,
     DEFAULT_TRUNC_OMISSION = '...';
 var reFlags = /\w*$/;

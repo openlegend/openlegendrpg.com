@@ -1,13 +1,13 @@
 /* */ 
-var assert = require("assert");
-var Q = require("q");
-var path = require("path");
-var util = require("./util");
-var recast = require("recast");
+var assert = require('assert');
+var Q = require('q');
+var path = require('path');
+var util = require('./util');
+var recast = require('recast');
 var n = recast.types.namedTypes;
 function Relativizer(reader) {
   assert.ok(this instanceof Relativizer);
-  assert.ok(reader === null || reader instanceof require("./reader").ModuleReader);
+  assert.ok(reader === null || reader instanceof require('./reader').ModuleReader);
   Object.defineProperties(this, {reader: {value: reader}});
 }
 var Rp = Relativizer.prototype;

@@ -5,7 +5,7 @@ var _interopRequireWildcard = function(obj) {
 };
 exports.manipulateOptions = manipulateOptions;
 exports.ObjectExpression = ObjectExpression;
-var t = _interopRequireWildcard(require("../../../types/index"));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var experimental = exports.experimental = true;
 function manipulateOptions(opts) {
   if (opts.whitelist.length)
@@ -21,12 +21,12 @@ var hasSpread = function hasSpread(node) {
 };
 function ObjectExpression(node, parent, scope, file) {
   if (!hasSpread(node))
-    return ;
+    return;
   var args = [];
   var props = [];
   var push = function push() {
     if (!props.length)
-      return ;
+      return;
     args.push(t.objectExpression(props));
     props = [];
   };

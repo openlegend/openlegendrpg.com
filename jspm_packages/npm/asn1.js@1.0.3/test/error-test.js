@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var assert = require("assert");
-  var asn1 = require("../lib/asn1");
-  var Buffer = require("buffer").Buffer;
+  var assert = require('assert');
+  var asn1 = require('../lib/asn1');
+  var Buffer = require('buffer').Buffer;
   describe('asn1.js error', function() {
     describe('encoder', function() {
       function test(name, model, input, expected) {
@@ -114,4 +114,4 @@
       }, '30073005300322012e', {a: {b: {c: 46}}}, [/"int" at: \["a"\]\["d"\]/]);
     });
   });
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

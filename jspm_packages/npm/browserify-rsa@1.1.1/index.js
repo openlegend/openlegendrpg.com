@@ -1,6 +1,6 @@
 /* */ 
 (function(Buffer) {
-  var bn = require("bn.js");
+  var bn = require('bn.js');
   module.exports = crt;
   function blind(priv, crypto) {
     var r = getr(priv, crypto);
@@ -44,4 +44,4 @@
     }
     return r;
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

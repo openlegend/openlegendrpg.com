@@ -1,5 +1,5 @@
 /* */ 
-var baseCallback = require("../internal/baseCallback");
+var baseCallback = require('../internal/baseCallback');
 var arrayProto = Array.prototype;
 var splice = arrayProto.splice;
 function remove(array, predicate, thisArg) {

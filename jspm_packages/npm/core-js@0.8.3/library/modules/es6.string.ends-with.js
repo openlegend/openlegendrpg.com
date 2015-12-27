@@ -1,8 +1,8 @@
 /* */ 
 'use strict';
-var $ = require("./$"),
-    cof = require("./$.cof"),
-    $def = require("./$.def"),
+var $ = require('./$'),
+    cof = require('./$.cof'),
+    $def = require('./$.def'),
     toLength = $.toLength;
 $def($def.P, 'String', {endsWith: function endsWith(searchString) {
     if (cof(searchString) == 'RegExp')

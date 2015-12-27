@@ -1,1 +1,1 @@
-module.exports = require("npm:iconv-lite@0.4.7/lib/index");
+module.exports = require("npm:iconv-lite@0.4.7/lib/index.js");

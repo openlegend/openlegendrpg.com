@@ -1,2 +1,2 @@
 /* */ 
-module.exports = require("./globals.json!systemjs-json");
+module.exports = require('./globals.json!systemjs-json');

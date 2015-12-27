@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
-  var EventEmitter = require("events").EventEmitter;
-  var spawn = require("child_process").spawn;
-  var path = require("path");
+  var EventEmitter = require('events').EventEmitter;
+  var spawn = require('child_process').spawn;
+  var path = require('path');
   var dirname = path.dirname;
   var basename = path.basename;
   exports = module.exports = new Command();
@@ -53,7 +53,7 @@
   };
   Command.prototype.parseExpectedArgs = function(args) {
     if (!args.length)
-      return ;
+      return;
     var self = this;
     args.forEach(function(arg) {
       var argDetails = {
@@ -425,4 +425,4 @@
     var nameOutput = arg.name + (arg.variadic === true ? '...' : '');
     return arg.required ? '<' + nameOutput + '>' : '[' + nameOutput + ']';
   }
-})(require("process"));
+})(require('process'));

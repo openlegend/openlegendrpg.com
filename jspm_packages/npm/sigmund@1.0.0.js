@@ -1,1 +1,1 @@
-module.exports = require("npm:sigmund@1.0.0/sigmund");
+module.exports = require("npm:sigmund@1.0.0/sigmund.js");

@@ -1,7 +1,7 @@
 /* */ 
 (function() {
   'use strict';
-  var code = require("./code");
+  var code = require('./code');
   function isStrictModeReservedWordES6(id) {
     switch (id) {
       case 'implements':

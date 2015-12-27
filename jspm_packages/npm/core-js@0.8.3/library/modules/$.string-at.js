@@ -1,6 +1,6 @@
 /* */ 
 'use strict';
-var $ = require("./$");
+var $ = require('./$');
 module.exports = function(TO_STRING) {
   return function(pos) {
     var s = String($.assertDefined(this)),

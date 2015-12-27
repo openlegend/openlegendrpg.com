@@ -1,1 +1,1 @@
-module.exports = require("npm:ast-types@0.6.16/main");
+module.exports = require("npm:ast-types@0.6.16/main.js");

@@ -14,23 +14,23 @@ exports.arrayify = arrayify;
 exports.booleanify = booleanify;
 exports.template = template;
 exports.parseTemplate = parseTemplate;
-require("./patch");
-var buildDebug = _interopRequire(require("debug/node"));
-var cloneDeep = _interopRequire(require("lodash/lang/cloneDeep"));
-var isBoolean = _interopRequire(require("lodash/lang/isBoolean"));
-var messages = _interopRequireWildcard(require("./messages"));
-var contains = _interopRequire(require("lodash/collection/contains"));
-var traverse = _interopRequire(require("./traversal/index"));
-var isString = _interopRequire(require("lodash/lang/isString"));
-var isRegExp = _interopRequire(require("lodash/lang/isRegExp"));
-var isEmpty = _interopRequire(require("lodash/lang/isEmpty"));
-var parse = _interopRequire(require("./helpers/parse"));
-var path = _interopRequire(require("path"));
-var each = _interopRequire(require("lodash/collection/each"));
-var has = _interopRequire(require("lodash/object/has"));
-var fs = _interopRequire(require("fs"));
-var t = _interopRequireWildcard(require("./types/index"));
-var _util = require("util");
+require('./patch');
+var buildDebug = _interopRequire(require('debug/node'));
+var cloneDeep = _interopRequire(require('lodash/lang/cloneDeep'));
+var isBoolean = _interopRequire(require('lodash/lang/isBoolean'));
+var messages = _interopRequireWildcard(require('./messages'));
+var contains = _interopRequire(require('lodash/collection/contains'));
+var traverse = _interopRequire(require('./traversal/index'));
+var isString = _interopRequire(require('lodash/lang/isString'));
+var isRegExp = _interopRequire(require('lodash/lang/isRegExp'));
+var isEmpty = _interopRequire(require('lodash/lang/isEmpty'));
+var parse = _interopRequire(require('./helpers/parse'));
+var path = _interopRequire(require('path'));
+var each = _interopRequire(require('lodash/collection/each'));
+var has = _interopRequire(require('lodash/object/has'));
+var fs = _interopRequire(require('fs'));
+var t = _interopRequireWildcard(require('./types/index'));
+var _util = require('util');
 exports.inherits = _util.inherits;
 exports.inspect = _util.inspect;
 var debug = exports.debug = buildDebug("babel");
@@ -122,7 +122,7 @@ function loadTemplates() {
   }
   each(fs.readdirSync(templatesLoc), function(name) {
     if (name[0] === ".")
-      return ;
+      return;
     var key = path.basename(name, path.extname(name));
     var loc = path.join(templatesLoc, name);
     var code = fs.readFileSync(loc, "utf8");
@@ -131,7 +131,7 @@ function loadTemplates() {
   return templates;
 }
 try {
-  exports.templates = require("../../templates.json!systemjs-json");
+  exports.templates = require('../../templates.json!systemjs-json');
 } catch (err) {
   if (err.code !== "MODULE_NOT_FOUND")
     throw err;

@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
-  var B = require("../index").Buffer;
-  var test = require("tape");
+  var B = require('../index').Buffer;
+  var test = require('tape');
   if (process.env.OBJECT_IMPL)
     B.TYPED_ARRAY_SUPPORT = false;
   test('.get (deprecated)', function(t) {
@@ -18,4 +18,4 @@
     t.equal(b[1], 42);
     t.end();
   });
-})(require("process"));
+})(require('process'));

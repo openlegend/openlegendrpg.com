@@ -1,9 +1,9 @@
 /* */ 
-var baseIsMatch = require("../internal/baseIsMatch"),
-    bindCallback = require("../internal/bindCallback"),
-    isStrictComparable = require("../internal/isStrictComparable"),
-    keys = require("../object/keys"),
-    toObject = require("../internal/toObject");
+var baseIsMatch = require('../internal/baseIsMatch'),
+    bindCallback = require('../internal/bindCallback'),
+    isStrictComparable = require('../internal/isStrictComparable'),
+    keys = require('../object/keys'),
+    toObject = require('../internal/toObject');
 function isMatch(object, source, customizer, thisArg) {
   var props = keys(source),
       length = props.length;

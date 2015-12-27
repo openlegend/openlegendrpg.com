@@ -1,9 +1,9 @@
 /* */ 
 (function(Buffer, process) {
-  var test = require("tape");
-  var fs = require("fs");
+  var test = require('tape');
+  var fs = require('fs');
   var priv1024 = fs.readFileSync(__dirname + '/rsa.1024.priv');
-  var asn1 = require("parse-asn1/asn1");
+  var asn1 = require('parse-asn1/asn1');
   var rsa1024 = {
     private: fs.readFileSync(__dirname + '/rsa.1024.priv'),
     public: fs.readFileSync(__dirname + '/rsa.1024.pub')
@@ -75,8 +75,8 @@
   function isNode10() {
     return process.version && process.version.split('.').length === 3 && parseInt(process.version.split('.')[1], 10) <= 10;
   }
-  var nodeCrypto = require("crypto");
-  var myCrypto = require("../../browserify-sign@2.8.0");
+  var nodeCrypto = require('crypto');
+  var myCrypto = require('../index');
   function testIt(keys, message, scheme) {
     var pub = keys.public;
     var priv = keys.private;
@@ -296,4 +296,4 @@
       });
     });
   });
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

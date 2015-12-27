@@ -1,7 +1,7 @@
 /* */ 
 'use strict';
-var $ = require("./$"),
-    $def = require("./$.def");
+var $ = require('./$'),
+    $def = require('./$.def');
 $def($def.P, 'String', {repeat: function repeat(count) {
     var str = String($.assertDefined(this)),
         res = '',

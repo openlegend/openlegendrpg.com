@@ -1,2 +1,2 @@
 /* */ 
-module.exports = require("crypto").createHmac;
+module.exports = require('crypto').createHmac;

@@ -1,8 +1,8 @@
 /* */ 
-var $ = require("./$"),
-    setUnscope = require("./$.unscope"),
-    ITER = require("./$.uid").safe('iter'),
-    $iter = require("./$.iter"),
+var $ = require('./$'),
+    setUnscope = require('./$.unscope'),
+    ITER = require('./$.uid').safe('iter'),
+    $iter = require('./$.iter'),
     step = $iter.step,
     Iterators = $iter.Iterators;
 $iter.std(Array, 'Array', function(iterated, kind) {

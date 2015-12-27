@@ -1,9 +1,9 @@
 /* */ 
-var assert = require("assert");
-var types = require("./types");
+var assert = require('assert');
+var types = require('./types');
 var getFieldValue = types.getFieldValue;
 var n = types.namedTypes;
-var sourceMap = require("source-map");
+var sourceMap = require('source-map');
 var SourceMapConsumer = sourceMap.SourceMapConsumer;
 var SourceMapGenerator = sourceMap.SourceMapGenerator;
 var hasOwn = Object.prototype.hasOwnProperty;
@@ -46,7 +46,7 @@ exports.composeSourceMaps = function(formerMap, latterMap) {
     });
     var sourceName = origPos.source;
     if (sourceName === null) {
-      return ;
+      return;
     }
     smg.addMapping({
       source: sourceName,

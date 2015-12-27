@@ -1,8 +1,8 @@
 /* */ 
-var mkdirp = require("../../mkdirp@0.5.0");
-var path = require("path");
-var fs = require("fs");
-var test = require("tap").test;
+var mkdirp = require('../index');
+var path = require('path');
+var fs = require('fs');
+var test = require('tap').test;
 test('return value', function(t) {
   t.plan(4);
   var x = Math.floor(Math.random() * Math.pow(16, 4)).toString(16);

@@ -5,7 +5,7 @@ var _interopRequireWildcard = function(obj) {
 };
 exports.Expression = Expression;
 exports.Identifier = Identifier;
-var t = _interopRequireWildcard(require("../../../types/index"));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var optional = exports.optional = true;
 function Expression(node, parent, scope) {
   var res = t.evaluate(node, scope);

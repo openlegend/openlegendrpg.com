@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
-  var test = require("tap").test;
-  var inf = require("./inflight");
+  var test = require('tap').test;
+  var inf = require('./inflight');
   function req(key, cb) {
     cb = inf(key, cb);
     if (cb)
@@ -79,4 +79,4 @@
       a(1, 2, 3);
     });
   });
-})(require("process"));
+})(require('process'));

@@ -1,8 +1,8 @@
 /* */ 
 var curves = exports;
-var hash = require("hash.js");
-var bn = require("bn.js");
-var elliptic = require("../elliptic");
+var hash = require('hash.js');
+var bn = require('bn.js');
+var elliptic = require('../elliptic');
 var assert = elliptic.utils.assert;
 function PresetCurve(options) {
   if (options.type === 'short')

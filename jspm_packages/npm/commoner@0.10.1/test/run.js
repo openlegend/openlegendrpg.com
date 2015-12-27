@@ -1,15 +1,15 @@
 /* */ 
 (function(process) {
-  var assert = require("assert");
-  var Watcher = require("../lib/watcher").Watcher;
-  var BuildContext = require("../lib/context").BuildContext;
-  var ModuleReader = require("../lib/reader").ModuleReader;
-  var ReadFileCache = require("../lib/cache").ReadFileCache;
-  var grepP = require("../lib/grep");
-  var util = require("../lib/util");
-  var fs = require("fs");
-  var Q = require("q");
-  var path = require("path");
+  var assert = require('assert');
+  var Watcher = require('../lib/watcher').Watcher;
+  var BuildContext = require('../lib/context').BuildContext;
+  var ModuleReader = require('../lib/reader').ModuleReader;
+  var ReadFileCache = require('../lib/cache').ReadFileCache;
+  var grepP = require('../lib/grep');
+  var util = require('../lib/util');
+  var fs = require('fs');
+  var Q = require('q');
+  var path = require('path');
   var sourceDir = path.resolve(__dirname, "source");
   var outputDir = path.resolve(__dirname, "output");
   try {
@@ -113,7 +113,7 @@
     });
     it("should allow multiple file output", function(done) {
       var mfSource = ["function multiFile(foo) {", "  console.log(foo);", "}"].join("\n");
-      var pkg = require("../package.json!systemjs-json");
+      var pkg = require('../package.json!systemjs-json');
       function getSourceP(id) {
         assert.strictEqual(id, "multi-file");
         return Q(mfSource);
@@ -216,7 +216,7 @@
   describe("util.relativize", function() {
     it("should resolve correct relative module identifiers", function(done) {
       var moduleId = "some/deeply/nested/module";
-      var processor = require("../lib/relative").getProcessor(null);
+      var processor = require('../lib/relative').getProcessor(null);
       function makeSource(id) {
         var str = JSON.stringify(id);
         return "require(" + str + ");\n" + "require(function(){require(" + str + ")}())";
@@ -288,7 +288,7 @@
       check([[[[[[]]]]]], []);
       check([[1, [[[[2]]], 3]]], [1, 2, 3]);
       check([[1], [[2]], [[[3]]]], [1, 2, 3]);
-      check([, , ], []);
+      check([, , , ], []);
     });
   });
   describe("util.testWriteFd", function() {
@@ -378,4 +378,4 @@
       });
     });
   });
-})(require("process"));
+})(require('process'));

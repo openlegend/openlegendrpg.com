@@ -1,11 +1,11 @@
 /* */ 
 (function(process) {
   'use strict';
-  var readdirp = require("../readdirp"),
-      util = require("util"),
-      fs = require("fs"),
-      path = require("path"),
-      es = require("event-stream");
+  var readdirp = require('../readdirp'),
+      util = require('util'),
+      fs = require('fs'),
+      path = require('path'),
+      es = require('event-stream');
   ;
   function findLinesMatching(searchTerm) {
     return es.through(function(entry) {
@@ -44,4 +44,4 @@
     return '\n\n' + res.file.path + '\n\t' + res.lines.join('\n\t');
   })).pipe(process.stdout);
   ;
-})(require("process"));
+})(require('process'));

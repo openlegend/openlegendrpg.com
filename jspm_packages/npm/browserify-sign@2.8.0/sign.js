@@ -1,9 +1,9 @@
 /* */ 
 (function(Buffer) {
-  var parseKeys = require("parse-asn1");
-  var bn = require("bn.js");
-  var elliptic = require("elliptic");
-  var crt = require("browserify-rsa");
+  var parseKeys = require('parse-asn1');
+  var bn = require('bn.js');
+  var elliptic = require('elliptic');
+  var crt = require('browserify-rsa');
   module.exports = sign;
   function sign(hash, key, hashType, crypto) {
     var priv = parseKeys(key, crypto);
@@ -133,4 +133,4 @@
   function makeR(g, k, p, q) {
     return g.toRed(bn.mont(p)).redPow(k).fromRed().mod(q);
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

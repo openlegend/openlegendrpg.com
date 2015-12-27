@@ -1,6 +1,6 @@
 /* */ 
-var fs = require("fs");
-var path = require("path");
+var fs = require('fs');
+var path = require('path');
 module.exports = read;
 function read(root, filter, files, prefix) {
   prefix = prefix || '';

@@ -1,7 +1,7 @@
 /* */ 
-var isObjectLike = require("../internal/isObjectLike"),
-    isPlainObject = require("./isPlainObject"),
-    support = require("../support");
+var isObjectLike = require('../internal/isObjectLike'),
+    isPlainObject = require('./isPlainObject'),
+    support = require('../support');
 var objectProto = Object.prototype;
 var objToString = objectProto.toString;
 function isElement(value) {

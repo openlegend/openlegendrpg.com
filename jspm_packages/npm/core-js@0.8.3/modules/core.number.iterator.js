@@ -1,8 +1,8 @@
 /* */ 
 'use strict';
-var $ = require("./$"),
-    ITER = require("./$.uid").safe('iter'),
-    $iter = require("./$.iter"),
+var $ = require('./$'),
+    ITER = require('./$.uid').safe('iter'),
+    $iter = require('./$.iter'),
     step = $iter.step,
     NUMBER = 'Number';
 function NumberIterator(iterated) {

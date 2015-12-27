@@ -1,7 +1,7 @@
 /* */ 
-var test = require("tape");
-var nodeCrypto = require("./browser");
-var myCrypto = require("./browser");
+var test = require('tape');
+var nodeCrypto = require('./browser');
+var myCrypto = require('./browser');
 var mods = ['secp256k1', 'secp224r1', 'prime256v1', 'prime192v1'];
 function run(i) {
   mods.forEach(function(mod) {

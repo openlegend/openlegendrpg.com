@@ -1,9 +1,9 @@
 /* */ 
-var baseIndexOf = require("../internal/baseIndexOf"),
-    cacheIndexOf = require("../internal/cacheIndexOf"),
-    createCache = require("../internal/createCache"),
-    isArguments = require("../lang/isArguments"),
-    isArray = require("../lang/isArray");
+var baseIndexOf = require('../internal/baseIndexOf'),
+    cacheIndexOf = require('../internal/cacheIndexOf'),
+    createCache = require('../internal/createCache'),
+    isArguments = require('../lang/isArguments'),
+    isArray = require('../lang/isArray');
 function intersection() {
   var args = [],
       argsIndex = -1,

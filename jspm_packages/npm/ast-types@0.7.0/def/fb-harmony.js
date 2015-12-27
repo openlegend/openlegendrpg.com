@@ -1,12 +1,12 @@
 /* */ 
-require("./core");
-var types = require("../lib/types");
+require('./core');
+var types = require('../lib/types');
 var def = types.Type.def;
 var or = types.Type.or;
 var builtin = types.builtInTypes;
 var isString = builtin.string;
 var isBoolean = builtin.boolean;
-var defaults = require("../lib/shared").defaults;
+var defaults = require('../lib/shared').defaults;
 def("JSXAttribute").bases("Node").build("name", "value").field("name", or(def("JSXIdentifier"), def("JSXNamespacedName"))).field("value", or(def("Literal"), def("JSXExpressionContainer"), null), defaults["null"]);
 def("JSXIdentifier").bases("Node").build("name").field("name", isString);
 def("JSXNamespacedName").bases("Node").build("namespace", "name").field("namespace", def("JSXIdentifier")).field("name", def("JSXIdentifier"));

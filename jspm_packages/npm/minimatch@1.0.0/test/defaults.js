@@ -1,7 +1,7 @@
 /* */ 
-var tap = require("tap"),
+var tap = require('tap'),
     globalBefore = Object.keys(global),
-    mm = require("../minimatch"),
+    mm = require('../minimatch'),
     files = ["a", "b", "c", "d", "abc", "abd", "abe", "bb", "bcd", "ca", "cb", "dd", "de", "bdir/", "bdir/cfile"],
     next = files.concat(["a-b", "aXb", ".x", ".y"]);
 tap.test("basic tests", function(t) {

@@ -1,8 +1,8 @@
 /* */ 
 "use strict";
-var _Symbol = require("../core-js/symbol")["default"];
-var _Symbol$iterator = require("../core-js/symbol/iterator")["default"];
-var _Promise = require("../core-js/promise")["default"];
+var _Symbol = require('../core-js/symbol')["default"];
+var _Symbol$iterator = require('../core-js/symbol/iterator')["default"];
+var _Promise = require('../core-js/promise')["default"];
 !(function(global) {
   "use strict";
   var hasOwn = Object.prototype.hasOwnProperty;
@@ -14,7 +14,7 @@ var _Promise = require("../core-js/promise")["default"];
     if (inModule) {
       module.exports = runtime;
     }
-    return ;
+    return;
   }
   runtime = global.regeneratorRuntime = inModule ? module.exports : {};
   function wrap(innerFn, outerFn, self, tryLocsList) {
@@ -66,7 +66,7 @@ var _Promise = require("../core-js/promise")["default"];
         var record = tryCatch(generator[method], generator, arg);
         if (record.type === "throw") {
           reject(record.arg);
-          return ;
+          return;
         }
         var info = record.arg;
         if (info.done) {

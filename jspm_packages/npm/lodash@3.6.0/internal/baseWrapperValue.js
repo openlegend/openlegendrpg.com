@@ -1,5 +1,5 @@
 /* */ 
-var LazyWrapper = require("./LazyWrapper");
+var LazyWrapper = require('./LazyWrapper');
 var arrayProto = Array.prototype;
 var push = arrayProto.push;
 function baseWrapperValue(value, actions) {

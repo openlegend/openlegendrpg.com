@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
-  var path = require("path");
-  var fs = require("fs");
+  var path = require('path');
+  var fs = require('fs');
   module.exports = mkdirP.mkdirp = mkdirP.mkdirP = mkdirP;
   function mkdirP(p, opts, f, made) {
     if (typeof opts === 'function') {
@@ -79,4 +79,4 @@
     }
     return made;
   };
-})(require("process"));
+})(require('process'));

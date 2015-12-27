@@ -6,18 +6,18 @@ var _interopRequireWildcard = function(obj) {
 var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
-var explode = _interopRequire(require("./explode-assignable-expression"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var explode = _interopRequire(require('./explode-assignable-expression'));
+var t = _interopRequireWildcard(require('../../types/index'));
 module.exports = function(exports, opts) {
   var buildAssignment = function buildAssignment(left, right) {
     return t.assignmentExpression("=", left, right);
   };
   exports.ExpressionStatement = function(node, parent, scope, file) {
     if (file.isConsequenceExpressionStatement(node))
-      return ;
+      return;
     var expr = node.expression;
     if (!opts.is(expr, file))
-      return ;
+      return;
     var nodes = [];
     var exploded = explode(expr.left, nodes, file, scope);
     nodes.push(t.ifStatement(opts.build(exploded.uid, file), t.expressionStatement(buildAssignment(exploded.ref, expr.right))));
@@ -25,7 +25,7 @@ module.exports = function(exports, opts) {
   };
   exports.AssignmentExpression = function(node, parent, scope, file) {
     if (!opts.is(node, file))
-      return ;
+      return;
     var nodes = [];
     var exploded = explode(node.left, nodes, file, scope);
     nodes.push(t.logicalExpression("&&", opts.build(exploded.uid, file), buildAssignment(exploded.ref, node.right)));

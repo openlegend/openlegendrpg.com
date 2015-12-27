@@ -799,7 +799,7 @@
       var events = JQLiteExpandoStore(element, 'events'),
           handle = JQLiteExpandoStore(element, 'handle');
       if (!handle)
-        return ;
+        return;
       if (isUndefined(type)) {
         forEach(events, function(eventHandler, type) {
           removeEventListenerFn(element, type, eventHandler);
@@ -907,7 +907,7 @@
         var fired = false;
         function trigger() {
           if (fired)
-            return ;
+            return;
           fired = true;
           fn();
         }
@@ -1404,7 +1404,7 @@
         var runBlocks = [];
         forEach(modulesToLoad, function(module) {
           if (loadedModules.get(module))
-            return ;
+            return;
           loadedModules.put(module, true);
           if (isString(module)) {
             var moduleFn = angularModule(module);
@@ -1613,7 +1613,7 @@
                 if ((!$sniffer.transitions && !polyfillSetup && !polyfillStart) || (parent.inheritedData(NG_ANIMATE_CONTROLLER) || noop).running) {
                   beforeFn(element, parent, after);
                   afterFn(element, parent, after);
-                  return ;
+                  return;
                 }
                 var animationData = element.data(NG_ANIMATE_CONTROLLER) || {};
                 if (animationData.running) {
@@ -1776,7 +1776,7 @@
       self.url = function(url, replace) {
         if (url) {
           if (lastBrowserUrl == url)
-            return ;
+            return;
           lastBrowserUrl = url;
           if ($sniffer.history) {
             if (replace)
@@ -1800,7 +1800,7 @@
           urlChangeInit = false;
       function fireUrlChange() {
         if (lastBrowserUrl == self.url())
-          return ;
+          return;
         lastBrowserUrl = self.url();
         forEach(urlChangeListeners, function(listener) {
           listener(self.url());
@@ -1906,7 +1906,7 @@
               var lruEntry = lruHash[key] || (lruHash[key] = {key: key});
               refresh(lruEntry);
               if (isUndefined(value))
-                return ;
+                return;
               if (!(key in data))
                 size++;
               data[key] = value;
@@ -1918,14 +1918,14 @@
             get: function(key) {
               var lruEntry = lruHash[key];
               if (!lruEntry)
-                return ;
+                return;
               refresh(lruEntry);
               return data[key];
             },
             remove: function(key) {
               var lruEntry = lruHash[key];
               if (!lruEntry)
-                return ;
+                return;
               if (lruEntry == freshEnd)
                 freshEnd = lruEntry.p;
               if (lruEntry == staleEnd)
@@ -2438,7 +2438,7 @@
                   case '=':
                     {
                       if (optional && !attrs[attrName]) {
-                        return ;
+                        return;
                       }
                       parentGet = $parse(attrs[attrName]);
                       parentSet = parentGet.assign || function() {
@@ -2647,14 +2647,14 @@
         function addAttrInterpolateDirective(node, directives, value, name) {
           var interpolateFn = $interpolate(value, true);
           if (!interpolateFn)
-            return ;
+            return;
           directives.push({
             priority: 100,
             compile: valueFn(function attrInterpolateLinkFn(scope, element, attr) {
               var $$observers = (attr.$$observers || (attr.$$observers = {}));
               interpolateFn = $interpolate(attr[name], true);
               if (!interpolateFn)
-                return ;
+                return;
               attr[name] = interpolateFn(scope);
               ($$observers[name] || ($$observers[name] = [])).$$inter = true;
               (attr.$$observers && attr.$$observers[name].$$scope || scope).$watch(interpolateFn, function interpolateFnWatchAction(value) {
@@ -3036,11 +3036,11 @@
         $location.$$parse($location.$$rewrite(initialUrl));
         $rootElement.bind('click', function(event) {
           if (event.ctrlKey || event.metaKey || event.which == 2)
-            return ;
+            return;
           var elm = jqLite(event.target);
           while (lowercase(elm[0].nodeName) !== 'a') {
             if (elm[0] === $rootElement[0] || !(elm = elm.parent())[0])
-              return ;
+              return;
           }
           var absHref = elm.prop('href');
           var rewrittenUrl = $location.$$rewrite(absHref);
@@ -3060,7 +3060,7 @@
           if ($location.absUrl() != newUrl) {
             if ($rootScope.$broadcast('$locationChangeStart', newUrl, $location.absUrl()).defaultPrevented) {
               $browser.url($location.absUrl());
-              return ;
+              return;
             }
             $rootScope.$evalAsync(function() {
               var oldUrl = $location.absUrl();
@@ -3463,7 +3463,7 @@
                 return string;
               }
             });
-            return ;
+            return;
           } else {
             string += ch;
           }
@@ -4130,12 +4130,12 @@
         nextTick(function() {
           ref(value).then(function(value) {
             if (done)
-              return ;
+              return;
             done = true;
             result.resolve(ref(value).then(wrappedCallback, wrappedErrback));
           }, function(reason) {
             if (done)
-              return ;
+              return;
             done = true;
             result.resolve(wrappedErrback(reason));
           });
@@ -4156,13 +4156,13 @@
           counter++;
           ref(promise).then(function(value) {
             if (results.hasOwnProperty(key))
-              return ;
+              return;
             results[key] = value;
             if (!(--counter))
               deferred.resolve(results);
           }, function(reason) {
             if (results.hasOwnProperty(key))
-              return ;
+              return;
             deferred.reject(reason);
           });
         });
@@ -4553,7 +4553,7 @@
           },
           $destroy: function() {
             if ($rootScope == this || this.$$destroyed)
-              return ;
+              return;
             var parent = this.$parent;
             this.$broadcast('$destroy');
             this.$$destroyed = true;
@@ -5000,7 +5000,7 @@
           var parts = [];
           forEachSorted(params, function(value, key) {
             if (value == null || value == undefined)
-              return ;
+              return;
             if (!isArray(value))
               value = [value];
             forEach(value, function(v) {
@@ -5308,7 +5308,7 @@
               if (key == '$') {
                 (function() {
                   if (!expression[key])
-                    return ;
+                    return;
                   var path = key;
                   predicates.push(function(value) {
                     return search(value, expression[path]);
@@ -5317,7 +5317,7 @@
               } else {
                 (function() {
                   if (!expression[key])
-                    return ;
+                    return;
                   var path = key;
                   predicates.push(function(value) {
                     return search(getter(value, path), expression[path]);
@@ -5689,7 +5689,7 @@
           link: function(scope, element, attr) {
             attr.$observe(normalized, function(value) {
               if (!value)
-                return ;
+                return;
               attr.$set(attrName, value);
               if (msie)
                 element.prop(attrName, attr[attrName]);
@@ -5762,7 +5762,7 @@
           }
           if (queue) {
             if (includes(queue, control))
-              return ;
+              return;
           } else {
             errors[validationToken] = queue = [];
             invalidCount++;
@@ -5875,7 +5875,7 @@
         element.bind('keydown', function(event) {
           var key = event.keyCode;
           if (key === 91 || (15 < key && key < 19) || (37 <= key && key <= 40))
-            return ;
+            return;
           deferListener();
         });
         element.bind('change', listener);
@@ -6109,7 +6109,7 @@
       }
       this.$setValidity = function(validationErrorKey, isValid) {
         if ($error[validationErrorKey] === !isValid)
-          return ;
+          return;
         if (isValid) {
           if ($error[validationErrorKey])
             invalidCount--;
@@ -6200,12 +6200,12 @@
         require: '?ngModel',
         link: function(scope, elm, attr, ctrl) {
           if (!ctrl)
-            return ;
+            return;
           attr.required = true;
           var validator = function(value) {
             if (attr.required && (isEmpty(value) || value === false)) {
               ctrl.$setValidity('required', false);
-              return ;
+              return;
             } else {
               ctrl.$setValidity('required', true);
               return value;
@@ -6435,7 +6435,7 @@
               if (src) {
                 $http.get(src, {cache: $templateCache}).success(function(response) {
                   if (thisChangeId !== changeCounter)
-                    return ;
+                    return;
                   if (childScope)
                     childScope.$destroy();
                   childScope = scope.$new();
@@ -6854,7 +6854,7 @@
         }],
         link: function(scope, element, attr, ctrls) {
           if (!ctrls[1])
-            return ;
+            return;
           var selectCtrl = ctrls[0],
               ngModelCtrl = ctrls[1],
               multiple = attr.multiple,
@@ -7218,4 +7218,4 @@
     });
   })(window, document);
   angular.element(document).find('head').append('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\\:form{display:block;}</style>');
-})(require("process"));
+})(require('process'));

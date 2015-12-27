@@ -1,6 +1,6 @@
 /* */ 
-var isNative = require("./isNative"),
-    shimIsPlainObject = require("../internal/shimIsPlainObject");
+var isNative = require('./isNative'),
+    shimIsPlainObject = require('../internal/shimIsPlainObject');
 var objectTag = '[object Object]';
 var objectProto = Object.prototype;
 var objToString = objectProto.toString;

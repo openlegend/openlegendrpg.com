@@ -1,5 +1,5 @@
 /* */ 
-var identity = require("../utility/identity");
+var identity = require('../utility/identity');
 function bindCallback(func, thisArg, argCount) {
   if (typeof func != 'function') {
     return identity;

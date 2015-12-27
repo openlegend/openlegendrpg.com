@@ -1,3 +1,3 @@
 /* */ 
 "use strict";
-module.exports = require("./_strict")(require("./amd"));
+module.exports = require('./_strict')(require('./amd'));

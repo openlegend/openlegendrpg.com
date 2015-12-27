@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var inherits = require("inherits");
-  var SHA512 = require("./sha512");
-  var Hash = require("./hash");
+  var inherits = require('inherits');
+  var SHA512 = require('./sha512');
+  var Hash = require('./hash');
   var W = new Array(160);
   function Sha384() {
     this.init();
@@ -44,4 +44,4 @@
     return H;
   };
   module.exports = Sha384;
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

@@ -14,11 +14,11 @@ exports.buildMatchMemberExpression = buildMatchMemberExpression;
 exports.removeComments = removeComments;
 exports.inheritsComments = inheritsComments;
 exports.inherits = inherits;
-var toFastProperties = _interopRequire(require("to-fast-properties"));
-var compact = _interopRequire(require("lodash/array/compact"));
-var assign = _interopRequire(require("lodash/object/assign"));
-var each = _interopRequire(require("lodash/collection/each"));
-var uniq = _interopRequire(require("lodash/array/uniq"));
+var toFastProperties = _interopRequire(require('to-fast-properties'));
+var compact = _interopRequire(require('lodash/array/compact'));
+var assign = _interopRequire(require('lodash/object/assign'));
+var each = _interopRequire(require('lodash/collection/each'));
+var uniq = _interopRequire(require('lodash/array/uniq'));
 var t = exports;
 function registerType(type, skipAliasCheck) {
   var is = t["is" + type] = function(node, opts) {
@@ -37,9 +37,9 @@ var NATIVE_TYPE_NAMES = exports.NATIVE_TYPE_NAMES = ["Array", "Object", "Number"
 var FLATTENABLE_KEYS = exports.FLATTENABLE_KEYS = ["body", "expressions"];
 var FOR_INIT_KEYS = exports.FOR_INIT_KEYS = ["left", "init"];
 var COMMENT_KEYS = exports.COMMENT_KEYS = ["leadingComments", "trailingComments"];
-var VISITOR_KEYS = exports.VISITOR_KEYS = require("./visitor-keys.json!systemjs-json");
-var BUILDER_KEYS = exports.BUILDER_KEYS = require("./builder-keys.json!systemjs-json");
-var ALIAS_KEYS = exports.ALIAS_KEYS = require("./alias-keys.json!systemjs-json");
+var VISITOR_KEYS = exports.VISITOR_KEYS = require('./visitor-keys.json!systemjs-json');
+var BUILDER_KEYS = exports.BUILDER_KEYS = require('./builder-keys.json!systemjs-json');
+var ALIAS_KEYS = exports.ALIAS_KEYS = require('./alias-keys.json!systemjs-json');
 t.FLIPPED_ALIAS_KEYS = {};
 each(t.VISITOR_KEYS, function(keys, type) {
   registerType(type, true);
@@ -77,7 +77,7 @@ function is(type, node, opts, skipAliasCheck) {
 }
 each(t.VISITOR_KEYS, function(keys, type) {
   if (t.BUILDER_KEYS[type])
-    return ;
+    return;
   var defs = {};
   each(keys, function(key) {
     defs[key] = null;
@@ -212,8 +212,8 @@ function inherits(child, parent) {
 toFastProperties(t);
 toFastProperties(t.VISITOR_KEYS);
 exports.__esModule = true;
-assign(t, require("./evaluators"));
-assign(t, require("./retrievers"));
-assign(t, require("./validators"));
-assign(t, require("./converters"));
+assign(t, require('./evaluators'));
+assign(t, require('./retrievers'));
+assign(t, require('./validators'));
+assign(t, require('./converters'));
 exports.__esModule = true;

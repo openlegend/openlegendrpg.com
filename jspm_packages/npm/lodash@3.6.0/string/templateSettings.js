@@ -1,8 +1,8 @@
 /* */ 
-var escape = require("./escape"),
-    reEscape = require("../internal/reEscape"),
-    reEvaluate = require("../internal/reEvaluate"),
-    reInterpolate = require("../internal/reInterpolate");
+var escape = require('./escape'),
+    reEscape = require('../internal/reEscape'),
+    reEvaluate = require('../internal/reEvaluate'),
+    reInterpolate = require('../internal/reInterpolate');
 var templateSettings = {
   'escape': reEscape,
   'evaluate': reEvaluate,

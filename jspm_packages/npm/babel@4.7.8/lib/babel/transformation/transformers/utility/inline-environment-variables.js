@@ -5,7 +5,7 @@
     return obj && obj.__esModule ? obj : {"default": obj};
   };
   exports.MemberExpression = MemberExpression;
-  var t = _interopRequireWildcard(require("../../../types/index"));
+  var t = _interopRequireWildcard(require('../../../types/index'));
   var optional = exports.optional = true;
   var match = t.buildMatchMemberExpression("process.env");
   function MemberExpression(node) {
@@ -17,4 +17,4 @@
     }
   }
   exports.__esModule = true;
-})(require("process"));
+})(require('process'));

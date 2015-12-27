@@ -1,6 +1,6 @@
 /* */ 
-var isError = require("../lang/isError"),
-    restParam = require("../function/restParam");
+var isError = require('../lang/isError'),
+    restParam = require('../function/restParam');
 var attempt = restParam(function(func, args) {
   try {
     return func.apply(undefined, args);

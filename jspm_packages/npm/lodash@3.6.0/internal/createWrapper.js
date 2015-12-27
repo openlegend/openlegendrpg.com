@@ -1,11 +1,11 @@
 /* */ 
-var baseSetData = require("./baseSetData"),
-    createBindWrapper = require("./createBindWrapper"),
-    createHybridWrapper = require("./createHybridWrapper"),
-    createPartialWrapper = require("./createPartialWrapper"),
-    getData = require("./getData"),
-    mergeData = require("./mergeData"),
-    setData = require("./setData");
+var baseSetData = require('./baseSetData'),
+    createBindWrapper = require('./createBindWrapper'),
+    createHybridWrapper = require('./createHybridWrapper'),
+    createPartialWrapper = require('./createPartialWrapper'),
+    getData = require('./getData'),
+    mergeData = require('./mergeData'),
+    setData = require('./setData');
 var BIND_FLAG = 1,
     BIND_KEY_FLAG = 2,
     PARTIAL_FLAG = 32,

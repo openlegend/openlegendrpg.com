@@ -1,10 +1,10 @@
 /* */ 
-var baseToString = require("../internal/baseToString"),
-    charsLeftIndex = require("../internal/charsLeftIndex"),
-    charsRightIndex = require("../internal/charsRightIndex"),
-    isIterateeCall = require("../internal/isIterateeCall"),
-    trimmedLeftIndex = require("../internal/trimmedLeftIndex"),
-    trimmedRightIndex = require("../internal/trimmedRightIndex");
+var baseToString = require('../internal/baseToString'),
+    charsLeftIndex = require('../internal/charsLeftIndex'),
+    charsRightIndex = require('../internal/charsRightIndex'),
+    isIterateeCall = require('../internal/isIterateeCall'),
+    trimmedLeftIndex = require('../internal/trimmedLeftIndex'),
+    trimmedRightIndex = require('../internal/trimmedRightIndex');
 function trim(string, chars, guard) {
   var value = string;
   string = baseToString(string);

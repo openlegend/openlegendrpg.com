@@ -7,7 +7,7 @@ exports._params = _params;
 exports._method = _method;
 exports.FunctionExpression = FunctionExpression;
 exports.ArrowFunctionExpression = ArrowFunctionExpression;
-var t = _interopRequireWildcard(require("../../types/index"));
+var t = _interopRequireWildcard(require('../../types/index'));
 function _params(node, print) {
   var _this = this;
   print(node.typeParameters);

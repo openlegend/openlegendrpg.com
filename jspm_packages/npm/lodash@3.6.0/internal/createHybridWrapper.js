@@ -1,12 +1,12 @@
 /* */ 
-var arrayCopy = require("./arrayCopy"),
-    composeArgs = require("./composeArgs"),
-    composeArgsRight = require("./composeArgsRight"),
-    createCtorWrapper = require("./createCtorWrapper"),
-    isLaziable = require("./isLaziable"),
-    reorder = require("./reorder"),
-    replaceHolders = require("./replaceHolders"),
-    setData = require("./setData");
+var arrayCopy = require('./arrayCopy'),
+    composeArgs = require('./composeArgs'),
+    composeArgsRight = require('./composeArgsRight'),
+    createCtorWrapper = require('./createCtorWrapper'),
+    isLaziable = require('./isLaziable'),
+    reorder = require('./reorder'),
+    replaceHolders = require('./replaceHolders'),
+    setData = require('./setData');
 var BIND_FLAG = 1,
     BIND_KEY_FLAG = 2,
     CURRY_BOUND_FLAG = 4,

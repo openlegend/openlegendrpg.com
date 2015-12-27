@@ -1,6 +1,6 @@
 /* */ 
-var baseIsFunction = require("../internal/baseIsFunction"),
-    isNative = require("./isNative");
+var baseIsFunction = require('../internal/baseIsFunction'),
+    isNative = require('./isNative');
 var funcTag = '[object Function]';
 var objectProto = Object.prototype;
 var objToString = objectProto.toString;

@@ -1,8 +1,8 @@
 /* */ 
 'use strict';
-var test = require("tap").test,
-    generator = require("inline-source-map"),
-    convert = require("../index");
+var test = require('tap').test,
+    generator = require('inline-source-map'),
+    convert = require('../index');
 var gen = generator().addMappings('foo.js', [{
   original: {
     line: 2,

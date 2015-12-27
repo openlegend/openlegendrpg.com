@@ -1,8 +1,8 @@
 /* */ 
-var mapDelete = require("./mapDelete"),
-    mapGet = require("./mapGet"),
-    mapHas = require("./mapHas"),
-    mapSet = require("./mapSet");
+var mapDelete = require('./mapDelete'),
+    mapGet = require('./mapGet'),
+    mapHas = require('./mapHas'),
+    mapSet = require('./mapSet');
 function MapCache() {
   this.__data__ = {};
 }

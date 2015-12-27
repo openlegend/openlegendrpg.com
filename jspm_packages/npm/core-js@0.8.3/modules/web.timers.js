@@ -1,8 +1,8 @@
 /* */ 
-var $ = require("./$"),
-    $def = require("./$.def"),
-    invoke = require("./$.invoke"),
-    partial = require("./$.partial"),
+var $ = require('./$'),
+    $def = require('./$.def'),
+    invoke = require('./$.invoke'),
+    partial = require('./$.partial'),
     MSIE = !!$.g.navigator && /MSIE .\./.test(navigator.userAgent);
 function wrap(set) {
   return MSIE ? function(fn, time) {

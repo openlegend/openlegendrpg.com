@@ -3,7 +3,7 @@ module.exports = {
   'shiftjis': {
     type: '_dbcs',
     table: function() {
-      return require("./tables/shiftjis.json!systemjs-json");
+      return require('./tables/shiftjis.json!systemjs-json');
     },
     encodeAdd: {
       '\u00a5': 0x5C,
@@ -25,7 +25,7 @@ module.exports = {
   'eucjp': {
     type: '_dbcs',
     table: function() {
-      return require("./tables/eucjp.json!systemjs-json");
+      return require('./tables/eucjp.json!systemjs-json');
     },
     encodeAdd: {
       '\u00a5': 0x5C,
@@ -44,23 +44,23 @@ module.exports = {
   'cp936': {
     type: '_dbcs',
     table: function() {
-      return require("./tables/cp936.json!systemjs-json");
+      return require('./tables/cp936.json!systemjs-json');
     }
   },
   'gbk': {
     type: '_dbcs',
     table: function() {
-      return require("./tables/cp936.json!systemjs-json").concat(require("./tables/gbk-added.json!systemjs-json"));
+      return require('./tables/cp936.json!systemjs-json').concat(require('./tables/gbk-added.json!systemjs-json'));
     }
   },
   'xgbk': 'gbk',
   'gb18030': {
     type: '_dbcs',
     table: function() {
-      return require("./tables/cp936.json!systemjs-json").concat(require("./tables/gbk-added.json!systemjs-json"));
+      return require('./tables/cp936.json!systemjs-json').concat(require('./tables/gbk-added.json!systemjs-json'));
     },
     gb18030: function() {
-      return require("./tables/gb18030-ranges.json!systemjs-json");
+      return require('./tables/gb18030-ranges.json!systemjs-json');
     }
   },
   'chinese': 'gb18030',
@@ -69,7 +69,7 @@ module.exports = {
   'cp949': {
     type: '_dbcs',
     table: function() {
-      return require("./tables/cp949.json!systemjs-json");
+      return require('./tables/cp949.json!systemjs-json');
     }
   },
   'cseuckr': 'cp949',
@@ -85,14 +85,14 @@ module.exports = {
   'cp950': {
     type: '_dbcs',
     table: function() {
-      return require("./tables/cp950.json!systemjs-json");
+      return require('./tables/cp950.json!systemjs-json');
     }
   },
   'big5': 'big5hkscs',
   'big5hkscs': {
     type: '_dbcs',
     table: function() {
-      return require("./tables/cp950.json!systemjs-json").concat(require("./tables/big5-added.json!systemjs-json"));
+      return require('./tables/cp950.json!systemjs-json').concat(require('./tables/big5-added.json!systemjs-json'));
     }
   },
   'cnbig5': 'big5hkscs',

@@ -1,16 +1,16 @@
 /* */ 
-var assert = require("assert");
-var types = require("./types");
+var assert = require('assert');
+var types = require('./types');
 var n = types.namedTypes;
 var b = types.builders;
 var isObject = types.builtInTypes.object;
 var isArray = types.builtInTypes.array;
 var isFunction = types.builtInTypes.function;
-var Patcher = require("./patcher").Patcher;
-var normalizeOptions = require("./options").normalize;
-var fromString = require("./lines").fromString;
-var attachComments = require("./comments").attach;
-var util = require("./util");
+var Patcher = require('./patcher').Patcher;
+var normalizeOptions = require('./options').normalize;
+var fromString = require('./lines').fromString;
+var attachComments = require('./comments').attach;
+var util = require('./util');
 exports.parse = function parse(source, options) {
   options = normalizeOptions(options);
   var lines = fromString(source, options);

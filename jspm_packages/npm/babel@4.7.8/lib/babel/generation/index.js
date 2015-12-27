@@ -12,17 +12,17 @@
       throw new TypeError("Cannot call a class as a function");
     }
   };
-  var detectIndent = _interopRequire(require("detect-indent"));
-  var Whitespace = _interopRequire(require("./whitespace"));
-  var repeating = _interopRequire(require("repeating"));
-  var SourceMap = _interopRequire(require("./source-map"));
-  var Position = _interopRequire(require("./position"));
-  var messages = _interopRequireWildcard(require("../messages"));
-  var Buffer = _interopRequire(require("./buffer"));
-  var extend = _interopRequire(require("lodash/object/extend"));
-  var each = _interopRequire(require("lodash/collection/each"));
-  var n = _interopRequire(require("./node/index"));
-  var t = _interopRequireWildcard(require("../types/index"));
+  var detectIndent = _interopRequire(require('detect-indent'));
+  var Whitespace = _interopRequire(require('./whitespace'));
+  var repeating = _interopRequire(require('repeating'));
+  var SourceMap = _interopRequire(require('./source-map'));
+  var Position = _interopRequire(require('./position'));
+  var messages = _interopRequireWildcard(require('../messages'));
+  var Buffer = _interopRequire(require('./buffer'));
+  var extend = _interopRequire(require('lodash/object/extend'));
+  var each = _interopRequire(require('lodash/collection/each'));
+  var n = _interopRequire(require('./node/index'));
+  var t = _interopRequireWildcard(require('../types/index'));
   var CodeGenerator = (function() {
     function CodeGenerator(ast, opts, code) {
       _classCallCheck(this, CodeGenerator);
@@ -63,18 +63,18 @@
       return format;
     };
     CodeGenerator.generators = {
-      templateLiterals: require("./generators/template-literals"),
-      comprehensions: require("./generators/comprehensions"),
-      expressions: require("./generators/expressions"),
-      statements: require("./generators/statements"),
-      playground: require("./generators/playground"),
-      classes: require("./generators/classes"),
-      methods: require("./generators/methods"),
-      modules: require("./generators/modules"),
-      types: require("./generators/types"),
-      flow: require("./generators/flow"),
-      base: require("./generators/base"),
-      jsx: require("./generators/jsx")
+      templateLiterals: require('./generators/template-literals'),
+      comprehensions: require('./generators/comprehensions'),
+      expressions: require('./generators/expressions'),
+      statements: require('./generators/statements'),
+      playground: require('./generators/playground'),
+      classes: require('./generators/classes'),
+      methods: require('./generators/methods'),
+      modules: require('./generators/modules'),
+      types: require('./generators/types'),
+      flow: require('./generators/flow'),
+      base: require('./generators/base'),
+      jsx: require('./generators/jsx')
     };
     CodeGenerator.prototype.generate = function generate() {
       var ast = this.ast;
@@ -122,7 +122,7 @@
       var _this = this;
       var opts = arguments[2] === undefined ? {} : arguments[2];
       if (!node)
-        return ;
+        return;
       if (parent && parent._compact) {
         node._compact = true;
       }
@@ -132,7 +132,7 @@
       }
       var newline = function(leading) {
         if (!opts.statement && !n.isUserWhitespacable(node, parent)) {
-          return ;
+          return;
         }
         var lines = 0;
         if (node.start != null && !node._ignoreUserWhitespace) {
@@ -189,7 +189,7 @@
       var _this = this;
       var opts = arguments[2] === undefined ? {} : arguments[2];
       if (!nodes || !nodes.length)
-        return ;
+        return;
       var len = nodes.length;
       if (opts.indent)
         this.indent();
@@ -262,11 +262,11 @@
     CodeGenerator.prototype._printComments = function _printComments(comments) {
       var _this = this;
       if (this.format.compact)
-        return ;
+        return;
       if (!this.format.comments)
-        return ;
+        return;
       if (!comments || !comments.length)
-        return ;
+        return;
       each(comments, function(comment) {
         var skip = false;
         each(_this.ast.comments, function(origComment) {
@@ -278,7 +278,7 @@
           }
         });
         if (skip)
-          return ;
+          return;
         _this.newline(_this.whitespace.getNewlinesBefore(comment));
         var column = _this.position.column;
         var val = _this.generateComment(comment);
@@ -317,4 +317,4 @@
     return gen.generate();
   };
   module.exports.CodeGenerator = CodeGenerator;
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

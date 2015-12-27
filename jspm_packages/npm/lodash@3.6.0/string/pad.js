@@ -1,6 +1,6 @@
 /* */ 
-var baseToString = require("../internal/baseToString"),
-    createPadding = require("../internal/createPadding");
+var baseToString = require('../internal/baseToString'),
+    createPadding = require('../internal/createPadding');
 var ceil = Math.ceil,
     floor = Math.floor;
 var nativeIsFinite = global.isFinite;

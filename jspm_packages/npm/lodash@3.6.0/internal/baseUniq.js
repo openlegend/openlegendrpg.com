@@ -1,7 +1,7 @@
 /* */ 
-var baseIndexOf = require("./baseIndexOf"),
-    cacheIndexOf = require("./cacheIndexOf"),
-    createCache = require("./createCache");
+var baseIndexOf = require('./baseIndexOf'),
+    cacheIndexOf = require('./cacheIndexOf'),
+    createCache = require('./createCache');
 function baseUniq(array, iteratee) {
   var index = -1,
       indexOf = baseIndexOf,

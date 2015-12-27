@@ -1,1 +1,1 @@
-module.exports = require("npm:create-hash@1.1.0/browser");
+module.exports = require("npm:create-hash@1.1.0/browser.js");

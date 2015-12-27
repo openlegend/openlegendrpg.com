@@ -1,6 +1,6 @@
 /* */ 
-var baseFill = require("../internal/baseFill"),
-    isIterateeCall = require("../internal/isIterateeCall");
+var baseFill = require('../internal/baseFill'),
+    isIterateeCall = require('../internal/isIterateeCall');
 function fill(array, value, start, end) {
   var length = array ? array.length : 0;
   if (!length) {

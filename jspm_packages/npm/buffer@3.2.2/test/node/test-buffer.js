@@ -1,12 +1,12 @@
 /* */ 
 (function(process) {
-  var Buffer = require("../../index").Buffer;
+  var Buffer = require('../../../buffer@3.2.2').Buffer;
   if (process.env.OBJECT_IMPL)
     Buffer.TYPED_ARRAY_SUPPORT = false;
   var common = {};
-  var assert = require("assert");
-  var Buffer = require("../../index").Buffer;
-  var SlowBuffer = require("../../index").SlowBuffer;
+  var assert = require('assert');
+  var Buffer = require('../../../buffer@3.2.2').Buffer;
+  var SlowBuffer = require('../../../buffer@3.2.2').SlowBuffer;
   var smalloc = {kMaxLength: 0x3FFFFFFF};
   var cntr = 0;
   var b = Buffer(1024);
@@ -798,4 +798,4 @@
   assert.throws(function() {
     Buffer(10).copy();
   });
-})(require("process"));
+})(require('process'));

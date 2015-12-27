@@ -9,11 +9,11 @@
       throw new TypeError("Cannot call a class as a function");
     }
   };
-  var repeating = _interopRequire(require("repeating"));
-  var trimRight = _interopRequire(require("trim-right"));
-  var isBoolean = _interopRequire(require("lodash/lang/isBoolean"));
-  var includes = _interopRequire(require("lodash/collection/includes"));
-  var isNumber = _interopRequire(require("lodash/lang/isNumber"));
+  var repeating = _interopRequire(require('repeating'));
+  var trimRight = _interopRequire(require('trim-right'));
+  var isBoolean = _interopRequire(require('lodash/lang/isBoolean'));
+  var includes = _interopRequire(require('lodash/collection/includes'));
+  var isNumber = _interopRequire(require('lodash/lang/isNumber'));
   var Buffer = (function() {
     function Buffer(position, format) {
       _classCallCheck(this, Buffer);
@@ -58,25 +58,25 @@
     };
     Buffer.prototype.space = function space() {
       if (this.format.compact)
-        return ;
+        return;
       if (this.buf && !this.isLast(" ") && !this.isLast("\n")) {
         this.push(" ");
       }
     };
     Buffer.prototype.removeLast = function removeLast(cha) {
       if (this.format.compact)
-        return ;
+        return;
       if (!this.isLast(cha))
-        return ;
+        return;
       this.buf = this.buf.substr(0, this.buf.length - 1);
       this.position.unshift(cha);
     };
     Buffer.prototype.newline = function newline(i, removeLast) {
       if (this.format.compact)
-        return ;
+        return;
       if (this.format.concise) {
         this.space();
-        return ;
+        return;
       }
       if (!removeLast)
         removeLast = false;
@@ -85,12 +85,12 @@
         if (this.endsWith("{\n") || this.endsWith(":\n"))
           i--;
         if (i <= 0)
-          return ;
+          return;
         while (i > 0) {
           this._newline(removeLast);
           i--;
         }
-        return ;
+        return;
       }
       if (isBoolean(i)) {
         removeLast = i;
@@ -99,7 +99,7 @@
     };
     Buffer.prototype._newline = function _newline(removeLast) {
       if (this.endsWith("\n\n"))
-        return ;
+        return;
       if (removeLast && this.isLast("\n"))
         this.removeLast("\n");
       this.removeLast(" ");
@@ -109,7 +109,7 @@
     Buffer.prototype._removeSpacesAfterLastNewline = function _removeSpacesAfterLastNewline() {
       var lastNewlineIndex = this.buf.lastIndexOf("\n");
       if (lastNewlineIndex === -1)
-        return ;
+        return;
       var index = this.buf.length - 1;
       while (index > lastNewlineIndex) {
         if (this.buf[index] !== " ") {
@@ -151,4 +151,4 @@
     return Buffer;
   })();
   module.exports = Buffer;
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

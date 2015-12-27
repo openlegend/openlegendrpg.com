@@ -1,6 +1,6 @@
 /* */ 
-var assert = require("assert");
-var util = require("./util");
+var assert = require('assert');
+var util = require('./util');
 var log = util.log;
 function AbstractOutput() {
   assert.ok(this instanceof AbstractOutput);

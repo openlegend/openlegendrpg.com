@@ -17,10 +17,10 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var traverse = _interopRequire(require("./index"));
-var includes = _interopRequire(require("lodash/collection/includes"));
-var Scope = _interopRequire(require("./scope"));
-var t = _interopRequireWildcard(require("../types/index"));
+var traverse = _interopRequire(require('./index'));
+var includes = _interopRequire(require('lodash/collection/includes'));
+var Scope = _interopRequire(require('./scope'));
+var t = _interopRequireWildcard(require('../types/index'));
 var TraversalPath = (function() {
   function TraversalPath(parent, container) {
     _classCallCheck(this, TraversalPath);
@@ -98,7 +98,7 @@ var TraversalPath = (function() {
   TraversalPath.prototype.call = function call(key) {
     var node = this.node;
     if (!node)
-      return ;
+      return;
     var opts = this.opts;
     var fn = opts[key] || opts;
     if (opts[node.type])

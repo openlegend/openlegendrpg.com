@@ -1,12 +1,12 @@
 /* */ 
 (function(Buffer, process) {
-  var assert = require("assert");
-  var path = require("path");
-  var fs = require("graceful-fs");
-  var Q = require("q");
-  var createHash = require("crypto").createHash;
-  var mkdirp = require("mkdirp");
-  var iconv = require("iconv-lite");
+  var assert = require('assert');
+  var path = require('path');
+  var fs = require('graceful-fs');
+  var Q = require('q');
+  var createHash = require('crypto').createHash;
+  var mkdirp = require('mkdirp');
+  var iconv = require('iconv-lite');
   var Ap = Array.prototype;
   var slice = Ap.slice;
   var join = Ap.join;
@@ -31,7 +31,7 @@
   }
   exports.makePromise = makePromise;
   exports.cachedMethod = function(fn, keyFn) {
-    var p = require("private").makeAccessor();
+    var p = require('private').makeAccessor();
     function wrapper() {
       var priv = p(this);
       var cache = priv.cache || (priv.cache = {});
@@ -109,7 +109,7 @@
       case "object":
         Object.keys(val).sort().forEach(function(key) {
           if (typeof val[key] === "function") {
-            return ;
+            return;
           }
           hash.update(key + "\0").update(deepHash(val[key]));
         });
@@ -280,4 +280,4 @@
     });
   }
   exports.camelize = camelize;
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

@@ -1,6 +1,6 @@
 /* */ 
-var isIterateeCall = require("../internal/isIterateeCall"),
-    keys = require("./keys");
+var isIterateeCall = require('../internal/isIterateeCall'),
+    keys = require('./keys');
 var objectProto = Object.prototype;
 var hasOwnProperty = objectProto.hasOwnProperty;
 function invert(object, multiValue, guard) {

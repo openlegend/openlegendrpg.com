@@ -1,8 +1,8 @@
 /* */ 
-var Stream = require("stream");
-var Response = require("./response");
-var Base64 = require("Base64");
-var inherits = require("inherits");
+var Stream = require('stream');
+var Response = require('./response');
+var Base64 = require('Base64');
+var inherits = require('inherits');
 var Request = module.exports = function(xhr, params) {
   var self = this;
   self.writable = true;
@@ -50,7 +50,7 @@ var Request = module.exports = function(xhr, params) {
   });
   xhr.onreadystatechange = function() {
     if (xhr.__aborted)
-      return ;
+      return;
     res.handle(xhr);
   };
 };

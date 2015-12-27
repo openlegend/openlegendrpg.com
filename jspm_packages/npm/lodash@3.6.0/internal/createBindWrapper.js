@@ -1,5 +1,5 @@
 /* */ 
-var createCtorWrapper = require("./createCtorWrapper");
+var createCtorWrapper = require('./createCtorWrapper');
 function createBindWrapper(func, thisArg) {
   var Ctor = createCtorWrapper(func);
   function wrapper() {

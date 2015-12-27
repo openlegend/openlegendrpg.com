@@ -8,14 +8,14 @@ var _interopRequire = function(obj) {
 };
 exports.check = check;
 exports.ObjectExpression = ObjectExpression;
-var ReplaceSupers = _interopRequire(require("../../helpers/replace-supers"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var ReplaceSupers = _interopRequire(require('../../helpers/replace-supers'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function check(node) {
   return t.isIdentifier(node, {name: "super"});
 }
 function Property(node, scope, getObjectRef, file) {
   if (!node.method)
-    return ;
+    return;
   var value = node.value;
   var thisExpr = scope.generateUidIdentifier("this");
   var replaceSupers = new ReplaceSupers({

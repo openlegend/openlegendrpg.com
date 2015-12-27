@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var hexpp = require("../hexpp").defaults({bigendian: false});
-  var tape = require("tape");
-  var Hash = require("../hash");
+  var hexpp = require('../hexpp').defaults({bigendian: false});
+  var tape = require('tape');
+  var Hash = require('../hash');
   var hex = '0A1B2C3D4E5F6G7H',
       hexbuf;
   function equal(t, a, b) {
@@ -56,4 +56,4 @@
   makeTest('empty Hash#update', empty);
   makeTest('Hash#update 1 in 3', multi);
   makeTest('Hash#update 2 in 1', long);
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

@@ -1,5 +1,5 @@
 /* */ 
-var indexOfNaN = require("./indexOfNaN");
+var indexOfNaN = require('./indexOfNaN');
 function baseIndexOf(array, value, fromIndex) {
   if (value !== value) {
     return indexOfNaN(array, fromIndex);

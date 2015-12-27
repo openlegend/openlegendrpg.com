@@ -9,8 +9,8 @@ var _interopRequire = function(obj) {
 exports.ArrayExpression = ArrayExpression;
 exports.CallExpression = CallExpression;
 exports.NewExpression = NewExpression;
-var includes = _interopRequire(require("lodash/collection/includes"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var includes = _interopRequire(require('lodash/collection/includes'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function getSpreadLiteral(spread, scope) {
   return scope.toArray(spread.argument, true);
 }
@@ -27,7 +27,7 @@ function build(props, scope) {
   var _props = [];
   var push = function push() {
     if (!_props.length)
-      return ;
+      return;
     nodes.push(t.arrayExpression(_props));
     _props = [];
   };
@@ -47,7 +47,7 @@ var check = exports.check = t.isSpreadElement;
 function ArrayExpression(node, parent, scope) {
   var elements = node.elements;
   if (!hasSpread(elements))
-    return ;
+    return;
   var nodes = build(elements, scope);
   var first = nodes.shift();
   if (!t.isArrayExpression(first)) {
@@ -59,7 +59,7 @@ function ArrayExpression(node, parent, scope) {
 function CallExpression(node, parent, scope) {
   var args = node.arguments;
   if (!hasSpread(args))
-    return ;
+    return;
   var contextLiteral = t.identifier("undefined");
   node.arguments = [];
   var nodes;
@@ -92,7 +92,7 @@ function CallExpression(node, parent, scope) {
 function NewExpression(node, parent, scope, file) {
   var args = node.arguments;
   if (!hasSpread(args))
-    return ;
+    return;
   var nativeType = t.isIdentifier(node.callee) && includes(t.NATIVE_TYPE_NAMES, node.callee.name);
   var nodes = build(args, scope);
   if (nativeType) {

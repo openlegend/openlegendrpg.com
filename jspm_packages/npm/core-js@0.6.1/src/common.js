@@ -396,4 +396,4 @@
         get: returnThis
       });
   }
-})(require("process"));
+})(require('process'));

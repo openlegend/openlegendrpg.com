@@ -1,5 +1,5 @@
 /* */ 
-var baseCompareAscending = require("./baseCompareAscending");
+var baseCompareAscending = require('./baseCompareAscending');
 function compareMultiple(object, other, orders) {
   var index = -1,
       objCriteria = object.criteria,

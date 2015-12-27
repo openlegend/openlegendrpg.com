@@ -1,8 +1,8 @@
 /* */ 
-var baseDifference = require("../internal/baseDifference"),
-    baseUniq = require("../internal/baseUniq"),
-    isArguments = require("../lang/isArguments"),
-    isArray = require("../lang/isArray");
+var baseDifference = require('../internal/baseDifference'),
+    baseUniq = require('../internal/baseUniq'),
+    isArguments = require('../lang/isArguments'),
+    isArray = require('../lang/isArray');
 function xor() {
   var index = -1,
       length = arguments.length;

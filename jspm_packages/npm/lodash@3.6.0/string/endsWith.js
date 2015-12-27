@@ -1,5 +1,5 @@
 /* */ 
-var baseToString = require("../internal/baseToString");
+var baseToString = require('../internal/baseToString');
 var nativeMin = Math.min;
 function endsWith(string, target, position) {
   string = baseToString(string);

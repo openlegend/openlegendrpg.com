@@ -70,7 +70,7 @@
             then,
             wrapper;
         if (record.d)
-          return ;
+          return;
         record.d = true;
         record = record.r || record;
         try {
@@ -95,7 +95,7 @@
       function reject(value) {
         var record = this;
         if (record.d)
-          return ;
+          return;
         record.d = true;
         record = record.r || record;
         record.v = value;
@@ -187,4 +187,4 @@
     setSpecies(Promise);
     $define(GLOBAL + FORCED * !isNative(Promise), {Promise: Promise});
   }(global[PROMISE]);
-})(require("process"));
+})(require('process'));

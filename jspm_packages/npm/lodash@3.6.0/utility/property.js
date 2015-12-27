@@ -1,5 +1,5 @@
 /* */ 
-var baseProperty = require("../internal/baseProperty");
+var baseProperty = require('../internal/baseProperty');
 function property(key) {
   return baseProperty(key + '');
 }

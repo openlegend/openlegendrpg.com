@@ -1,5 +1,5 @@
 /* */ 
-var baseIsEqual = require("./baseIsEqual");
+var baseIsEqual = require('./baseIsEqual');
 function baseIsMatch(object, props, values, strictCompareFlags, customizer) {
   var index = -1,
       length = props.length,

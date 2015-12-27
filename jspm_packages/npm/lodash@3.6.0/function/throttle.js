@@ -1,6 +1,6 @@
 /* */ 
-var debounce = require("./debounce"),
-    isObject = require("../lang/isObject");
+var debounce = require('./debounce'),
+    isObject = require('../lang/isObject');
 var FUNC_ERROR_TEXT = 'Expected a function';
 var debounceOptions = {
   'leading': false,

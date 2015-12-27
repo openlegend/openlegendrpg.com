@@ -1,2 +1,2 @@
 /* */ 
-module.exports = require("./lib/babel/polyfill");
+module.exports = require('./lib/babel/polyfill');

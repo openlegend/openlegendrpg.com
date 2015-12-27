@@ -1,5 +1,5 @@
 /* */ 
-var isObject = require("../lang/isObject");
+var isObject = require('../lang/isObject');
 function cachePush(value) {
   var data = this.data;
   if (typeof value == 'string' || isObject(value)) {

@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var inherits = require("inherits");
-  var SHA256 = require("./sha256");
-  var Hash = require("./hash");
+  var inherits = require('inherits');
+  var SHA256 = require('./sha256');
+  var Hash = require('./hash');
   var W = new Array(64);
   function Sha224() {
     this.init();
@@ -33,4 +33,4 @@
     return H;
   };
   module.exports = Sha224;
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

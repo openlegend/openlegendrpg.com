@@ -6,10 +6,10 @@ var _interopRequireWildcard = function(obj) {
 var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
-var isBoolean = _interopRequire(require("lodash/lang/isBoolean"));
-var each = _interopRequire(require("lodash/collection/each"));
-var map = _interopRequire(require("lodash/collection/map"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var isBoolean = _interopRequire(require('lodash/lang/isBoolean'));
+var each = _interopRequire(require('lodash/collection/each'));
+var map = _interopRequire(require('lodash/collection/map'));
+var t = _interopRequireWildcard(require('../../types/index'));
 function crawl(node) {
   var state = arguments[1] === undefined ? {} : arguments[1];
   if (t.isMemberExpression(node)) {

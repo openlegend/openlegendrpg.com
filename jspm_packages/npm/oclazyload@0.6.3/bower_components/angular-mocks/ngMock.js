@@ -1,3 +1,3 @@
 /* */ 
-require("./angular-mocks");
+require('./angular-mocks');
 module.exports = 'ngMock';

@@ -1,6 +1,6 @@
 /* */ 
-var assert = require("assert");
-var types = require("./types");
+var assert = require('assert');
+var types = require('./types');
 var Type = types.Type;
 var namedTypes = types.namedTypes;
 var Node = namedTypes.Node;
@@ -10,7 +10,7 @@ var hasOwn = Object.prototype.hasOwnProperty;
 var b = types.builders;
 function Scope(path, parentScope) {
   assert.ok(this instanceof Scope);
-  assert.ok(path instanceof require("./node-path"));
+  assert.ok(path instanceof require('./node-path'));
   ScopeType.assert(path.value);
   var depth;
   if (parentScope) {

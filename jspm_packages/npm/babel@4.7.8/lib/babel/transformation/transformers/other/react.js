@@ -4,8 +4,8 @@ var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
 exports.Program = Program;
-var react = _interopRequireWildcard(require("../../helpers/react"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var react = _interopRequireWildcard(require('../../helpers/react'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var JSX_ANNOTATION_REGEX = /^\*\s*@jsx\s+([^\s]+)/;
 function Program(node, parent, scope, file) {
   var id = "React.createElement";
@@ -25,7 +25,7 @@ function Program(node, parent, scope, file) {
     return t.memberExpression(object, property);
   }));
 }
-require("../../helpers/build-react-transformer")(exports, {
+require('../../helpers/build-react-transformer')(exports, {
   pre: function pre(state) {
     var tagName = state.tagName;
     var args = state.args;

@@ -1,8 +1,8 @@
 /* */ 
-var mkdirp = require("../../mkdirp@0.5.0");
-var path = require("path");
-var fs = require("fs");
-var test = require("tap").test;
+var mkdirp = require('../index');
+var path = require('path');
+var fs = require('fs');
+var test = require('tap').test;
 test('root', function(t) {
   var file = path.resolve('/');
   mkdirp(file, 0755, function(err) {

@@ -1,6 +1,6 @@
 /* */ 
 module.exports = function(karma) {
-  var files = require("../files").files;
+  var files = require('../files').files;
   karma.set({
     basePath: '..',
     files: [].concat(files.angular('1.2.14'), files.testUtils, files.src, files.test),

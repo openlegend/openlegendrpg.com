@@ -1,6 +1,6 @@
 /* */ 
-var parse = require("../../minimist@0.0.8");
-var test = require("tape");
+var parse = require('../index');
+var test = require('tape');
 test('dotted alias', function(t) {
   var argv = parse(['--a.b', '22'], {
     default: {'a.b': 11},

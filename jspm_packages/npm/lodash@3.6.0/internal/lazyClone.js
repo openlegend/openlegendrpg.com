@@ -1,6 +1,6 @@
 /* */ 
-var LazyWrapper = require("./LazyWrapper"),
-    arrayCopy = require("./arrayCopy");
+var LazyWrapper = require('./LazyWrapper'),
+    arrayCopy = require('./arrayCopy');
 function lazyClone() {
   var actions = this.__actions__,
       iteratees = this.__iteratees__,

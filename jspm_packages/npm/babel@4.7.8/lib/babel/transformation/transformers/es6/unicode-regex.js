@@ -5,19 +5,19 @@ var _interopRequire = function(obj) {
 };
 exports.check = check;
 exports.Literal = Literal;
-var rewritePattern = _interopRequire(require("regexpu/rewrite-pattern"));
-var pull = _interopRequire(require("lodash/array/pull"));
-var t = _interopRequire(require("../../../types/index"));
+var rewritePattern = _interopRequire(require('regexpu/rewrite-pattern'));
+var pull = _interopRequire(require('lodash/array/pull'));
+var t = _interopRequire(require('../../../types/index'));
 function check(node) {
   return t.isLiteral(node) && node.regex && node.regex.flags.indexOf("u") >= 0;
 }
 function Literal(node) {
   var regex = node.regex;
   if (!regex)
-    return ;
+    return;
   var flags = regex.flags.split("");
   if (regex.flags.indexOf("u") < 0)
-    return ;
+    return;
   pull(flags, "u");
   regex.pattern = rewritePattern(regex.pattern, regex.flags);
   regex.flags = flags.join("");

@@ -1,1 +1,1 @@
-module.exports = require("npm:recast@0.10.7/main");
+module.exports = require("npm:recast@0.10.7/main.js");

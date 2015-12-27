@@ -130,4 +130,4 @@
     return new Buffer(digestbytes);
   }
   module.exports = ripemd160;
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

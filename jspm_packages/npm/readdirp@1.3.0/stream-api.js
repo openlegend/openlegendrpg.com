@@ -4,8 +4,8 @@
   var si = typeof setImmediate !== 'undefined' ? setImmediate : function(fn) {
     setTimeout(fn, 0);
   };
-  var stream = require("readable-stream");
-  var util = require("util");
+  var stream = require('readable-stream');
+  var util = require('util');
   var Readable = stream.Readable;
   module.exports = ReaddirpReadable;
   util.inherits(ReaddirpReadable, Readable);
@@ -30,7 +30,7 @@
     });
     self.on('resume', function() {
       if (self._destroyed)
-        return ;
+        return;
       self._paused = false;
       self._warnings.forEach(function(err) {
         self.emit('warn', err);
@@ -44,7 +44,7 @@
   };
   proto._processEntry = function(entry) {
     if (this._destroyed)
-      return ;
+      return;
     this.push(entry);
   };
   proto._read = function() {};
@@ -86,4 +86,4 @@
     };
   }
   module.exports = createStreamAPI;
-})(require("process"));
+})(require('process'));

@@ -1,6 +1,6 @@
 /* */ 
 'use strict';
-var $ = require("./$"),
+var $ = require('./$'),
     isObject = $.isObject,
     isFunction = $.isFunction,
     NUMBER = 'Number',

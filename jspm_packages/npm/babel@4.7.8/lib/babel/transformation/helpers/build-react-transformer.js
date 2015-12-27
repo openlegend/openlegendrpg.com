@@ -7,11 +7,11 @@
   var _interopRequire = function(obj) {
     return obj && obj.__esModule ? obj["default"] : obj;
   };
-  var isString = _interopRequire(require("lodash/lang/isString"));
-  var messages = _interopRequireWildcard(require("../../messages"));
-  var esutils = _interopRequire(require("esutils"));
-  var react = _interopRequireWildcard(require("./react"));
-  var t = _interopRequireWildcard(require("../../types/index"));
+  var isString = _interopRequire(require('lodash/lang/isString'));
+  var messages = _interopRequireWildcard(require('../../messages'));
+  var esutils = _interopRequire(require('esutils'));
+  var react = _interopRequireWildcard(require('./react'));
+  var t = _interopRequireWildcard(require('../../types/index'));
   module.exports = function(exports, opts) {
     exports.check = function(node) {
       if (t.isJSX(node))
@@ -85,7 +85,7 @@
       var objs = [];
       var pushProps = function pushProps() {
         if (!_props.length)
-          return ;
+          return;
         objs.push(t.objectExpression(_props));
         _props = [];
       };
@@ -213,4 +213,4 @@
       }
     };
   };
-})(require("process"));
+})(require('process'));

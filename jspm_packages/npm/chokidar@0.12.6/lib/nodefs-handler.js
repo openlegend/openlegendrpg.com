@@ -1,10 +1,10 @@
 /* */ 
 'use strict';
-var fs = require("fs");
-var sysPath = require("path");
-var readdirp = require("readdirp");
-var isBinaryPath = require("./is-binary");
-var isWindows = require("os").platform() === 'win32';
+var fs = require('fs');
+var sysPath = require('path');
+var readdirp = require('readdirp');
+var isBinaryPath = require('./is-binary');
+var isWindows = require('os').platform() === 'win32';
 var FsWatchInstances = Object.create(null);
 function createFsWatchInstance(item, options, callback, errHandler, emitRaw) {
   var handleEvent = function(rawEvent, path) {
@@ -22,7 +22,7 @@ function createFsWatchInstance(item, options, callback, errHandler, emitRaw) {
 }
 function fsWatchBroadcast(absPath, type, value1, value2, value3) {
   if (!FsWatchInstances[absPath])
-    return ;
+    return;
   FsWatchInstances[absPath][type].forEach(function(callback) {
     callback(value1, value2, value3);
   });
@@ -37,7 +37,7 @@ function setFsWatchListener(item, absPath, options, handlers) {
   } else if (!container) {
     var watcher = createFsWatchInstance(item, options, fsWatchBroadcast.bind(null, absPath, 'listeners'), errHandler, fsWatchBroadcast.bind(null, absPath, 'rawEmitters'));
     if (!watcher)
-      return ;
+      return;
     var broadcastErr = fsWatchBroadcast.bind(null, absPath, 'errHandlers');
     watcher.on('error', function(error) {
       if (isWindows && error.code === 'EPERM') {
@@ -125,7 +125,7 @@ NodeFsHandler.prototype._watchWithNodeFs = function(item, callback) {
   var basename = sysPath.basename(item);
   var parent = this._getWatchedDir(directory);
   if (parent.has(basename))
-    return ;
+    return;
   parent.add(basename);
   var absolutePath = sysPath.resolve(item);
   var options = {persistent: this.options.persistent};
@@ -153,10 +153,10 @@ NodeFsHandler.prototype._handleFile = function(file, stats, initialAdd, target, 
   var basename = sysPath.basename(file);
   var parent = this._getWatchedDir(dirname);
   if (parent.has(basename))
-    return ;
+    return;
   this._watchWithNodeFs(file, function(path, newStats) {
     if (!this._throttle('watch', file, 5))
-      return ;
+      return;
     if (!newStats || newStats && newStats.mtime.getTime() === 0) {
       fs.stat(file, function(error, newStats) {
         if (error) {
@@ -171,7 +171,7 @@ NodeFsHandler.prototype._handleFile = function(file, stats, initialAdd, target, 
   }.bind(this));
   if (!(initialAdd && this.options.ignoreInitial)) {
     if (!this._throttle('add', file, 0))
-      return ;
+      return;
     this._emit('add', file, stats);
   }
   if (callback)
@@ -183,7 +183,7 @@ NodeFsHandler.prototype._handleDir = function(dir, stats, initialAdd, target, ca
     directory = sysPath.join(directory, '');
     var throttler = _this._throttle('readdir', directory, 1000);
     if (!throttler)
-      return ;
+      return;
     var previous = _this._getWatchedDir(directory);
     var current = [];
     readdirp({
@@ -211,10 +211,10 @@ NodeFsHandler.prototype._handleDir = function(dir, stats, initialAdd, target, ca
             }
             _this._emitReady();
           });
-          return ;
+          return;
         }
         if (_this._symlinkPaths[entry.fullPath])
-          return ;
+          return;
         else
           _this._symlinkPaths[entry.fullPath] = true;
       }
@@ -240,7 +240,7 @@ NodeFsHandler.prototype._handleDir = function(dir, stats, initialAdd, target, ca
     read(dir, initialAdd, callback);
   this._watchWithNodeFs(dir, function(dirPath, stats) {
     if (stats && stats.mtime.getTime() === 0)
-      return ;
+      return;
     read(dirPath, false);
   });
   if (!(initialAdd && this.options.ignoreInitial) && !target) {

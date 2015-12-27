@@ -5,7 +5,7 @@ var _interopRequireWildcard = function(obj) {
 };
 exports.check = check;
 exports.Property = Property;
-var messages = _interopRequireWildcard(require("../../../messages"));
+var messages = _interopRequireWildcard(require('../../../messages'));
 function check(node) {
   return node.kind === "set";
 }

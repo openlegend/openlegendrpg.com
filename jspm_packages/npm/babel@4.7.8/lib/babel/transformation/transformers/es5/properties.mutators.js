@@ -5,8 +5,8 @@ var _interopRequireWildcard = function(obj) {
 };
 exports.check = check;
 exports.ObjectExpression = ObjectExpression;
-var defineMap = _interopRequireWildcard(require("../../helpers/define-map"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var defineMap = _interopRequireWildcard(require('../../helpers/define-map'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function check(node) {
   return t.isProperty(node) && (node.kind === "get" || node.kind === "set");
 }
@@ -23,7 +23,7 @@ function ObjectExpression(node) {
     }
   });
   if (!hasAny)
-    return ;
+    return;
   return t.callExpression(t.memberExpression(t.identifier("Object"), t.identifier("defineProperties")), [node, defineMap.toDefineObject(mutatorMap)]);
 }
 exports.__esModule = true;

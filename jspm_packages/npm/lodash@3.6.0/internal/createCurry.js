@@ -1,6 +1,6 @@
 /* */ 
-var createWrapper = require("./createWrapper"),
-    isIterateeCall = require("./isIterateeCall");
+var createWrapper = require('./createWrapper'),
+    isIterateeCall = require('./isIterateeCall');
 function createCurry(flag) {
   function curryFunc(func, arity, guard) {
     if (guard && isIterateeCall(func, arity, guard)) {

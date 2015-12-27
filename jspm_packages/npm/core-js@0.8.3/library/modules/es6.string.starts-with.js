@@ -1,8 +1,8 @@
 /* */ 
 'use strict';
-var $ = require("./$"),
-    cof = require("./$.cof"),
-    $def = require("./$.def");
+var $ = require('./$'),
+    cof = require('./$.cof'),
+    $def = require('./$.def');
 $def($def.P, 'String', {startsWith: function startsWith(searchString) {
     if (cof(searchString) == 'RegExp')
       throw TypeError();

@@ -1,2 +1,2 @@
 /* */ 
-module.exports = require("../math/max");
+module.exports = require('../math/max');

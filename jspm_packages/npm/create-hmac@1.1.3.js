@@ -1,1 +1,1 @@
-module.exports = require("npm:create-hmac@1.1.3/browser");
+module.exports = require("npm:create-hmac@1.1.3/browser.js");

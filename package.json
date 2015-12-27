@@ -7,11 +7,6 @@
     "bunyan": "^1.3.4",
     "composable-middleware": "^0.3.0",
     "compression": "~1.0.1",
-    "connect": "^3.3.4",
-    "connect-history-api-fallback": "0.0.5",
-    "connect-mongo": "^0.4.1",
-    "cookie-parser": "~1.0.1",
-    "ejs": "~0.8.4",
     "errorhandler": "~1.0.0",
     "express": "~4.9.0",
     "express-jwt": "^0.1.3",
@@ -28,14 +23,12 @@
     "passport-local": "~0.1.6",
     "passport-twitter": "latest",
     "request": "^2.53.0",
-    "request-promise": "^0.4.2",
     "restify": "^2.8.5",
     "restify-jwt": "^0.2.0",
     "serve-favicon": "~2.0.1",
     "socket.io": "^1.0.6",
     "socket.io-client": "^1.0.6",
     "socketio-jwt": "^2.0.2",
-    "swagger-restify": "^1.0.1",
     "validator": "^3.38.0",
     "fs-extra": "^0.13.0",
     "multiparty": "^4.1.0"
@@ -43,7 +36,6 @@
   "devDependencies": {
     "browser-sync": "^2.0.1",
     "chai": "^1.1.0",
-    "connect-livereload": "~0.4.0",
     "del": "^1.1.1",
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "^2.1.0",
@@ -127,10 +119,8 @@
       "angular-mocks": "npm:angular-mocks@^1.4.5",
       "angular-resource": "github:angular/bower-angular-resource@1.4.5",
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.13",
-      "angular-ui-tree/angular-ui-tree": "github:angular-ui-tree/angular-ui-tree@2.1.5",
       "babel": "npm:babel@^4.7.4",
       "css": "github:systemjs/plugin-css@^0.1.6",
-      "jquery": "npm:jquery@^2.1.3",
       "json": "github:systemjs/plugin-json@^0.1.0",
       "lodash": "github:lodash/lodash@^3.6.0",
       "oclazyload": "npm:oclazyload@^0.6.3",
@@ -140,20 +130,6 @@
       "babel": "npm:babel@^4.7.4",
       "babel-runtime": "npm:babel-runtime@^5.0.12",
       "core-js": "npm:core-js@^0.8.1"
-    },
-    "overrides": {
-      "github:adobe-webplatform/Snap.svg@0.4.1": {
-        "format": "global"
-      },
-      "github:myplanet/angular-color-picker@1.0.6": {
-        "format": "global"
-      },
-      "github:jquery/jquery@2.1.3": {
-        "format": "global"
-      },
-      "bower:polymer@1.0.3": {
-        "format": "systemjs"
-      }
     }
   },
   "scripts": {

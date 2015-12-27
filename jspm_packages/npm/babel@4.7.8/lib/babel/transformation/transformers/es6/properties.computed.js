@@ -5,7 +5,7 @@ var _interopRequireWildcard = function(obj) {
 };
 exports.check = check;
 exports.ObjectExpression = ObjectExpression;
-var t = _interopRequireWildcard(require("../../../types/index"));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function loose(node, body, objId) {
   for (var i = 0; i < node.properties.length; i++) {
     var prop = node.properties[i];
@@ -71,7 +71,7 @@ function ObjectExpression(node, parent, scope, file) {
       break;
   }
   if (!hasComputed)
-    return ;
+    return;
   var initProps = [];
   var objId = scope.generateUidBasedOnNode(parent);
   var body = [];

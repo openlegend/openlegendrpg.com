@@ -1,6 +1,6 @@
 /* */ 
-var isObject = require("../lang/isObject"),
-    now = require("../date/now");
+var isObject = require('../lang/isObject'),
+    now = require('../date/now');
 var FUNC_ERROR_TEXT = 'Expected a function';
 var nativeMax = Math.max;
 function debounce(func, wait, options) {

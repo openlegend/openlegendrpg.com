@@ -1,9 +1,9 @@
 /* */ 
 (function(process) {
   module.exports = Transform;
-  var Duplex = require("./_stream_duplex");
-  var util = require("core-util-is");
-  util.inherits = require("inherits");
+  var Duplex = require('./_stream_duplex');
+  var util = require('core-util-is');
+  util.inherits = require('inherits');
   util.inherits(Transform, Duplex);
   function TransformState(options, stream) {
     this.afterTransform = function(er, data) {
@@ -88,4 +88,4 @@
       throw new Error('calling transform done when still transforming');
     return stream.push(null);
   }
-})(require("process"));
+})(require('process'));

@@ -1,7 +1,7 @@
 /* */ 
 "use strict";
-var transform = module.exports = require("../transformation/index");
-transform.version = require("../../../package.json!systemjs-json").version;
+var transform = module.exports = require('../transformation/index');
+transform.version = require('../../../package.json!systemjs-json').version;
 transform.transform = transform;
 transform.run = function(code) {
   var opts = arguments[1] === undefined ? {} : arguments[1];
@@ -19,7 +19,7 @@ transform.load = function(url, callback, _x, hold) {
     xhr.overrideMimeType("text/plain");
   xhr.onreadystatechange = function() {
     if (xhr.readyState !== 4)
-      return ;
+      return;
     var status = xhr.status;
     if (status === 0 || status === 200) {
       var param = [xhr.responseText, opts];

@@ -34719,4 +34719,4 @@
       }
     }
   };
-})(require("process"));
+})(require('process'));

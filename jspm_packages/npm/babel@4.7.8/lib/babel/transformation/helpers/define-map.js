@@ -11,11 +11,11 @@ exports.hasComputed = hasComputed;
 exports.toComputedObjectFromClass = toComputedObjectFromClass;
 exports.toClassObject = toClassObject;
 exports.toDefineObject = toDefineObject;
-var cloneDeep = _interopRequire(require("lodash/lang/cloneDeep"));
-var traverse = _interopRequire(require("../../traversal/index"));
-var each = _interopRequire(require("lodash/collection/each"));
-var has = _interopRequire(require("lodash/object/has"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var cloneDeep = _interopRequire(require('lodash/lang/cloneDeep'));
+var traverse = _interopRequire(require('../../traversal/index'));
+var each = _interopRequire(require('lodash/collection/each'));
+var has = _interopRequire(require('lodash/object/has'));
+var t = _interopRequireWildcard(require('../../types/index'));
 function push(mutatorMap, key, kind, computed, value) {
   var alias = t.toKeyAlias({computed: computed}, key);
   var map = {};
@@ -52,7 +52,7 @@ function toClassObject(mutatorMap) {
     var propNode = t.property("init", map._key, mapNode, map._computed);
     each(map, function(node, key) {
       if (key[0] === "_")
-        return ;
+        return;
       var inheritNode = node;
       if (t.isMethodDefinition(node))
         node = node.value;

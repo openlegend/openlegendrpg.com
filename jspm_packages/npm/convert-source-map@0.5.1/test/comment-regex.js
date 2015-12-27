@@ -1,9 +1,9 @@
 /* */ 
 'use strict';
-var test = require("tap").test,
-    generator = require("inline-source-map"),
-    rx = require("../index").commentRegex,
-    mapFileRx = require("../index").mapFileCommentRegex;
+var test = require('tap').test,
+    generator = require('inline-source-map'),
+    rx = require('../index').commentRegex,
+    mapFileRx = require('../index').mapFileCommentRegex;
 function comment(prefix, suffix) {
   rx.lastIndex = 0;
   return rx.test(prefix + 'sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlcyI6WyJmdW5jdGlvbiBmb28oKSB7XG4gY29uc29sZS5sb2coXCJoZWxsbyBJIGFtIGZvb1wiKTtcbiBjb25zb2xlLmxvZyhcIndobyBhcmUgeW91XCIpO1xufVxuXG5mb28oKTtcbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSJ9' + suffix);

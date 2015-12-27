@@ -136,4 +136,4 @@
     this.internalDecoder = this.getCodec(enc).decoder(this.options);
     return this.internalDecoder.write(buf);
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

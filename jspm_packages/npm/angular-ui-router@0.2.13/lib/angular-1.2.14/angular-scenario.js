@@ -230,14 +230,14 @@
       },
       ready: function(wait) {
         if (wait === true ? --jQuery.readyWait : jQuery.isReady) {
-          return ;
+          return;
         }
         if (!document.body) {
           return setTimeout(jQuery.ready);
         }
         jQuery.isReady = true;
         if (wait !== true && --jQuery.readyWait > 0) {
-          return ;
+          return;
         }
         readyList.resolveWith(document, [jQuery]);
         if (jQuery.fn.trigger) {
@@ -2176,7 +2176,7 @@
             divReset = "padding:0;margin:0;border:0;display:block;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;",
             body = document.getElementsByTagName("body")[0];
         if (!body) {
-          return ;
+          return;
         }
         container = document.createElement("div");
         container.style.cssText = "border:0;width:0;height:0;position:absolute;top:0;left:-9999px;margin-top:1px";
@@ -2224,7 +2224,7 @@
         rmultiDash = /([A-Z])/g;
     function internalData(elem, name, data, pvt) {
       if (!jQuery.acceptData(elem)) {
-        return ;
+        return;
       }
       var ret,
           thisCache,
@@ -2233,7 +2233,7 @@
           cache = isNode ? jQuery.cache : elem,
           id = isNode ? elem[internalKey] : elem[internalKey] && internalKey;
       if ((!id || !cache[id] || (!pvt && !cache[id].data)) && data === undefined && typeof name === "string") {
-        return ;
+        return;
       }
       if (!id) {
         if (isNode) {
@@ -2274,7 +2274,7 @@
     }
     function internalRemoveData(elem, name, pvt) {
       if (!jQuery.acceptData(elem)) {
-        return ;
+        return;
       }
       var thisCache,
           i,
@@ -2282,7 +2282,7 @@
           cache = isNode ? jQuery.cache : elem,
           id = isNode ? elem[jQuery.expando] : jQuery.expando;
       if (!cache[id]) {
-        return ;
+        return;
       }
       if (name) {
         thisCache = pvt ? cache[id] : cache[id].data;
@@ -2306,14 +2306,14 @@
             delete thisCache[name[i]];
           }
           if (pvt ? !isEmptyDataObject(thisCache) : !jQuery.isEmptyObject(thisCache)) {
-            return ;
+            return;
           }
         }
       }
       if (!pvt) {
         delete cache[id].data;
         if (!isEmptyDataObject(cache[id])) {
-          return ;
+          return;
         }
       }
       if (isNode) {
@@ -2683,13 +2683,13 @@
             ret = elem.value;
             return typeof ret === "string" ? ret.replace(rreturn, "") : ret == null ? "" : ret;
           }
-          return ;
+          return;
         }
         isFunction = jQuery.isFunction(value);
         return this.each(function(i) {
           var val;
           if (this.nodeType !== 1) {
-            return ;
+            return;
           }
           if (isFunction) {
             val = value.call(this, i, jQuery(this).val());
@@ -2764,7 +2764,7 @@
             ret,
             nType = elem.nodeType;
         if (!elem || nType === 3 || nType === 8 || nType === 2) {
-          return ;
+          return;
         }
         if (typeof elem.getAttribute === core_strundefined) {
           return jQuery.prop(elem, name, value);
@@ -2830,7 +2830,7 @@
             notxml,
             nType = elem.nodeType;
         if (!elem || nType === 3 || nType === 8 || nType === 2) {
-          return ;
+          return;
         }
         notxml = nType !== 1 || !jQuery.isXMLDoc(elem);
         if (notxml) {
@@ -2989,7 +2989,7 @@
             origType,
             elemData = jQuery._data(elem);
         if (!elemData) {
-          return ;
+          return;
         }
         if (handler.handler) {
           handleObjIn = handler;
@@ -3070,7 +3070,7 @@
             origType,
             elemData = jQuery.hasData(elem) && jQuery._data(elem);
         if (!elemData || !(events = elemData.events)) {
-          return ;
+          return;
         }
         types = (types || "").match(core_rnotwhite) || [""];
         t = types.length;
@@ -3126,10 +3126,10 @@
             namespaces = core_hasOwn.call(event, "namespace") ? event.namespace.split(".") : [];
         cur = tmp = elem = elem || document;
         if (elem.nodeType === 3 || elem.nodeType === 8) {
-          return ;
+          return;
         }
         if (rfocusMorph.test(type + jQuery.event.triggered)) {
-          return ;
+          return;
         }
         if (type.indexOf(".") >= 0) {
           namespaces = type.split(".");
@@ -3148,7 +3148,7 @@
         data = data == null ? [event] : jQuery.makeArray(data, [event]);
         special = jQuery.event.special[type] || {};
         if (!onlyHandlers && special.trigger && special.trigger.apply(elem, data) === false) {
-          return ;
+          return;
         }
         if (!onlyHandlers && !special.noBubble && !jQuery.isWindow(elem)) {
           bubbleType = special.delegateType || type;
@@ -3210,7 +3210,7 @@
         args[0] = event;
         event.delegateTarget = this;
         if (special.preDispatch && special.preDispatch.call(this, event) === false) {
-          return ;
+          return;
         }
         handlerQueue = jQuery.event.handlers.call(this, event, handlers);
         i = 0;
@@ -3432,7 +3432,7 @@
         var e = this.originalEvent;
         this.isDefaultPrevented = returnTrue;
         if (!e) {
-          return ;
+          return;
         }
         if (e.preventDefault) {
           e.preventDefault();
@@ -3444,7 +3444,7 @@
         var e = this.originalEvent;
         this.isPropagationStopped = returnTrue;
         if (!e) {
-          return ;
+          return;
         }
         if (e.stopPropagation) {
           e.stopPropagation();
@@ -4112,7 +4112,7 @@
     }
     function cloneCopyEvent(src, dest) {
       if (dest.nodeType !== 1 || !jQuery.hasData(src)) {
-        return ;
+        return;
       }
       var type,
           i,
@@ -4138,7 +4138,7 @@
           e,
           data;
       if (dest.nodeType !== 1) {
-        return ;
+        return;
       }
       nodeName = dest.nodeName.toLowerCase();
       if (!jQuery.support.noCloneEvent && dest[jQuery.expando]) {
@@ -4573,7 +4573,7 @@
       cssProps: {"float": jQuery.support.cssFloat ? "cssFloat" : "styleFloat"},
       style: function(elem, name, value, extra) {
         if (!elem || elem.nodeType === 3 || elem.nodeType === 8 || !elem.style) {
-          return ;
+          return;
         }
         var ret,
             type,
@@ -4589,7 +4589,7 @@
             type = "number";
           }
           if (value == null || type === "number" && isNaN(value)) {
-            return ;
+            return;
           }
           if (type === "number" && !jQuery.cssNumber[origName]) {
             value += "px";
@@ -4788,7 +4788,7 @@
           if ((value >= 1 || value === "") && jQuery.trim(filter.replace(ralpha, "")) === "" && style.removeAttribute) {
             style.removeAttribute("filter");
             if (value === "" || currentStyle && !currentStyle.filter) {
-              return ;
+              return;
             }
           }
           style.filter = ralpha.test(filter) ? filter.replace(ralpha, opacity) : filter + " " + opacity;
@@ -5262,7 +5262,7 @@
               modified,
               statusText = nativeStatusText;
           if (state === 2) {
-            return ;
+            return;
           }
           state = 2;
           if (timeoutTimer) {
@@ -6247,7 +6247,7 @@
           elem = this[0],
           doc = elem && elem.ownerDocument;
       if (!doc) {
-        return ;
+        return;
       }
       docElem = doc.documentElement;
       if (!jQuery.contains(docElem, elem)) {
@@ -6302,7 +6302,7 @@
     jQuery.fn.extend({
       position: function() {
         if (!this[0]) {
-          return ;
+          return;
         }
         var offsetParent,
             offset,
@@ -7345,7 +7345,7 @@
       var events = jqLiteExpandoStore(element, 'events'),
           handle = jqLiteExpandoStore(element, 'handle');
       if (!handle)
-        return ;
+        return;
       if (isUndefined(type)) {
         forEach(events, function(eventHandler, type) {
           removeEventListenerFn(element, type, eventHandler);
@@ -7368,7 +7368,7 @@
       if (expandoStore) {
         if (name) {
           delete jqCache[expandoId].data[name];
-          return ;
+          return;
         }
         if (expandoStore.handle) {
           expandoStore.events.$destroy && expandoStore.handle({}, '$destroy');
@@ -7477,7 +7477,7 @@
         var fired = false;
         function trigger() {
           if (fired)
-            return ;
+            return;
           fired = true;
           fn();
         }
@@ -8022,7 +8022,7 @@
             ii;
         forEach(modulesToLoad, function(module) {
           if (loadedModules.get(module))
-            return ;
+            return;
           loadedModules.put(module, true);
           try {
             if (isString(module)) {
@@ -8289,7 +8289,7 @@
           history = window.history;
         if (url) {
           if (lastBrowserUrl == url)
-            return ;
+            return;
           lastBrowserUrl = url;
           if ($sniffer.history) {
             if (replace)
@@ -8316,7 +8316,7 @@
       function fireUrlChange() {
         newLocation = null;
         if (lastBrowserUrl == self.url())
-          return ;
+          return;
         lastBrowserUrl = self.url();
         forEach(urlChangeListeners, function(listener) {
           listener(self.url());
@@ -8424,7 +8424,7 @@
                 refresh(lruEntry);
               }
               if (isUndefined(value))
-                return ;
+                return;
               if (!(key in data))
                 size++;
               data[key] = value;
@@ -8437,7 +8437,7 @@
               if (capacity < Number.MAX_VALUE) {
                 var lruEntry = lruHash[key];
                 if (!lruEntry)
-                  return ;
+                  return;
                 refresh(lruEntry);
               }
               return data[key];
@@ -8446,7 +8446,7 @@
               if (capacity < Number.MAX_VALUE) {
                 var lruEntry = lruHash[key];
                 if (!lruEntry)
-                  return ;
+                  return;
                 if (lruEntry == freshEnd)
                   freshEnd = lruEntry.p;
                 if (lruEntry == staleEnd)
@@ -9092,7 +9092,7 @@
                     break;
                   case '=':
                     if (optional && !attrs[attrName]) {
-                      return ;
+                      return;
                     }
                     parentGet = $parse(attrs[attrName]);
                     if (parentGet.literal) {
@@ -9389,7 +9389,7 @@
         function addAttrInterpolateDirective(node, directives, value, name) {
           var interpolateFn = $interpolate(value, true);
           if (!interpolateFn)
-            return ;
+            return;
           if (name === "multiple" && nodeName_(node) === "SELECT") {
             throw $compileMinErr("selmulti", "Binding to the 'multiple' attribute is not supported. Element: {0}", startingTag(node));
           }
@@ -9403,7 +9403,7 @@
                   }
                   interpolateFn = $interpolate(attr[name], true, getTrustedContext(node, name));
                   if (!interpolateFn)
-                    return ;
+                    return;
                   attr[name] = interpolateFn(scope);
                   ($$observers[name] || ($$observers[name] = [])).$$inter = true;
                   (attr.$$observers && attr.$$observers[name].$$scope || scope).$watch(interpolateFn, function interpolateFnWatchAction(newValue, oldValue) {
@@ -9803,7 +9803,7 @@
           var parts = [];
           forEachSorted(params, function(value, key) {
             if (value === null || isUndefined(value))
-              return ;
+              return;
             if (!isArray(value))
               value = [value];
             forEach(value, function(v) {
@@ -10354,11 +10354,11 @@
         $location.$$parse($location.$$rewrite(initialUrl));
         $rootElement.on('click', function(event) {
           if (event.ctrlKey || event.metaKey || event.which == 2)
-            return ;
+            return;
           var elm = jqLite(event.target);
           while (lowercase(elm[0].nodeName) !== 'a') {
             if (elm[0] === $rootElement[0] || !(elm = elm.parent())[0])
-              return ;
+              return;
           }
           var absHref = elm.prop('href');
           if (isObject(absHref) && absHref.toString() === '[object SVGAnimatedString]') {
@@ -10820,7 +10820,7 @@
                 return string;
               }
             });
-            return ;
+            return;
           } else {
             string += ch;
           }
@@ -11454,7 +11454,7 @@
         $parseOptions.csp = $sniffer.csp;
         promiseWarning = function promiseWarningFn(fullExp) {
           if (!$parseOptions.logPromiseWarnings || promiseWarningCache.hasOwnProperty(fullExp))
-            return ;
+            return;
           promiseWarningCache[fullExp] = true;
           $log.warn('[$parse] Promise found in the expression `' + fullExp + '`. ' + 'Automatic unwrapping of promises in Angular expressions is deprecated.');
         };
@@ -11660,17 +11660,17 @@
         nextTick(function() {
           ref(value).then(function(value) {
             if (done)
-              return ;
+              return;
             done = true;
             result.resolve(ref(value).then(wrappedCallback, wrappedErrback, wrappedProgressback));
           }, function(reason) {
             if (done)
-              return ;
+              return;
             done = true;
             result.resolve(wrappedErrback(reason));
           }, function(progress) {
             if (done)
-              return ;
+              return;
             result.notify(wrappedProgressback(progress));
           });
         });
@@ -11690,13 +11690,13 @@
           counter++;
           ref(promise).then(function(value) {
             if (results.hasOwnProperty(key))
-              return ;
+              return;
             results[key] = value;
             if (!(--counter))
               deferred.resolve(results);
           }, function(reason) {
             if (results.hasOwnProperty(key))
-              return ;
+              return;
             deferred.reject(reason);
           });
         });
@@ -11971,12 +11971,12 @@
           },
           $destroy: function() {
             if (this.$$destroyed)
-              return ;
+              return;
             var parent = this.$parent;
             this.$broadcast('$destroy');
             this.$$destroyed = true;
             if (this === $rootScope)
-              return ;
+              return;
             forEach(this.$$listenerCount, bind(null, decrementListenerCount, this));
             if (parent.$$childHead == this)
               parent.$$childHead = this.$$nextSibling;
@@ -12612,7 +12612,7 @@
             for (var key in expression) {
               (function(path) {
                 if (typeof expression[path] == 'undefined')
-                  return ;
+                  return;
                 predicates.push(function(value) {
                   return search(path == '$' ? value : (value && value[path]), expression[path]);
                 });
@@ -12969,7 +12969,7 @@
     var ngAttributeAliasDirectives = {};
     forEach(BOOLEAN_ATTR, function(propName, attrName) {
       if (propName == "multiple")
-        return ;
+        return;
       var normalized = directiveNormalize('ng-' + attrName);
       ngAttributeAliasDirectives[normalized] = function() {
         return {
@@ -12997,7 +12997,7 @@
             }
             attr.$observe(normalized, function(value) {
               if (!value)
-                return ;
+                return;
               attr.$set(name, value);
               if (msie && propName)
                 element.prop(propName, attr[name]);
@@ -13072,7 +13072,7 @@
           }
           if (queue) {
             if (includes(queue, control))
-              return ;
+              return;
           } else {
             errors[validationToken] = queue = [];
             invalidCount++;
@@ -13168,7 +13168,7 @@
         var validator = function(value) {
           if (!ctrl.$error[validatorName] && (validity.badInput || validity.customError || validity.typeMismatch) && !validity.valueMissing) {
             ctrl.$setValidity(validatorName, false);
-            return ;
+            return;
           }
           return value;
         };
@@ -13190,7 +13190,7 @@
       }
       var listener = function() {
         if (composing)
-          return ;
+          return;
         var value = element.val();
         if (toBoolean(attr.ngTrim || 'T')) {
           value = trim(value);
@@ -13220,7 +13220,7 @@
         element.on('keydown', function(event) {
           var key = event.keyCode;
           if (key === 91 || (15 < key && key < 19) || (37 <= key && key <= 40))
-            return ;
+            return;
           deferListener();
         });
         if ($sniffer.hasEvent('paste')) {
@@ -13414,7 +13414,7 @@
       }
       this.$setValidity = function(validationErrorKey, isValid) {
         if ($error[validationErrorKey] === !isValid)
-          return ;
+          return;
         if (isValid) {
           if ($error[validationErrorKey])
             invalidCount--;
@@ -13508,12 +13508,12 @@
         require: '?ngModel',
         link: function(scope, elm, attr, ctrl) {
           if (!ctrl)
-            return ;
+            return;
           attr.required = true;
           var validator = function(value) {
             if (attr.required && ctrl.$isEmpty(value)) {
               ctrl.$setValidity('required', false);
-              return ;
+              return;
             } else {
               ctrl.$setValidity('required', true);
               return value;
@@ -13535,7 +13535,7 @@
               separator = match && new RegExp(match[1]) || attr.ngList || ',';
           var parse = function(viewValue) {
             if (isUndefined(viewValue))
-              return ;
+              return;
             var list = [];
             if (viewValue) {
               forEach(viewValue.split(separator), function(value) {
@@ -13769,7 +13769,7 @@
               if (src) {
                 $http.get(src, {cache: $templateCache}).success(function(response) {
                   if (thisChangeId !== changeCounter)
-                    return ;
+                    return;
                   var newScope = scope.$new();
                   ctrl.template = response;
                   var clone = $transclude(newScope, function(clone) {
@@ -14194,7 +14194,7 @@
         }],
         link: function(scope, element, attr, ctrls) {
           if (!ctrls[1])
-            return ;
+            return;
           var selectCtrl = ctrls[0],
               ngModelCtrl = ctrls[1],
               multiple = attr.multiple,
@@ -14616,7 +14616,7 @@
       if (!/^http/.test(href) && !/^https/.test(href)) {
         body.append('<p id="system-error"></p>');
         body.find('#system-error').text('Scenario runner must be run using http or https. The protocol ' + href.split(':')[0] + ':// is not supported.');
-        return ;
+        return;
       }
       var appFrame = body.append('<div id="application"></div>').find('#application');
       var application = new angular.scenario.Application(appFrame);
@@ -14778,7 +14778,7 @@
         if (element && !element.nodeName)
           element = element[0];
         if (!element)
-          return ;
+          return;
         eventData = eventData || {};
         var keys = eventData.keys;
         var x = eventData.x;
@@ -14861,7 +14861,7 @@
           }
           evnt.$manualTimeStamp = eventData.timeStamp;
           if (!evnt)
-            return ;
+            return;
           var originalPreventDefault = evnt.preventDefault,
               appWindow = element.ownerDocument.defaultView,
               fakeProcessDefault = true,
@@ -15222,7 +15222,7 @@
       var args = Array.prototype.slice.call(arguments, 1);
       eventName = eventName.toLowerCase();
       if (!this.listeners[eventName])
-        return ;
+        return;
       angular.forEach(this.listeners[eventName], function(listener) {
         listener.apply(self, args);
       });
@@ -15340,7 +15340,7 @@
         this.emit('SpecError', spec, e);
         this.emit('SpecEnd', spec);
         specDone();
-        return ;
+        return;
       }
       var handleError = function(error, done) {
         if (self.error) {
@@ -15942,4 +15942,4 @@
   })(window, document);
   !angular.$$csp() && angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";\n\n[ng\\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],\n.ng-cloak, .x-ng-cloak,\n.ng-hide {\n  display: none !important;\n}\n\nng\\:form {\n  display: block;\n}\n\n.ng-animate-block-transitions {\n  transition:0s all!important;\n  -webkit-transition:0s all!important;\n}\n</style>');
   !angular.$$csp() && angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";\n/* CSS Document */\n\n/** Structure */\nbody {\n  font-family: Arial, sans-serif;\n  margin: 0;\n  font-size: 14px;\n}\n\n#system-error {\n  font-size: 1.5em;\n  text-align: center;\n}\n\n#json, #xml {\n  display: none;\n}\n\n#header {\n  position: fixed;\n  width: 100%;\n}\n\n#specs {\n  padding-top: 50px;\n}\n\n#header .angular {\n  font-family: Courier New, monospace;\n  font-weight: bold;\n}\n\n#header h1 {\n  font-weight: normal;\n  float: left;\n  font-size: 30px;\n  line-height: 30px;\n  margin: 0;\n  padding: 10px 10px;\n  height: 30px;\n}\n\n#application h2,\n#specs h2 {\n  margin: 0;\n  padding: 0.5em;\n  font-size: 1.1em;\n}\n\n#status-legend {\n  margin-top: 10px;\n  margin-right: 10px;\n}\n\n#header,\n#application,\n.test-info,\n.test-actions li {\n  overflow: hidden;\n}\n\n#application {\n  margin: 10px;\n}\n\n#application iframe {\n  width: 100%;\n  height: 758px;\n}\n\n#application .popout {\n  float: right;\n}\n\n#application iframe {\n  border: none;\n}\n\n.tests li,\n.test-actions li,\n.test-it li,\n.test-it ol,\n.status-display {\n  list-style-type: none;\n}\n\n.tests,\n.test-it ol,\n.status-display {\n  margin: 0;\n  padding: 0;\n}\n\n.test-info {\n  margin-left: 1em;\n  margin-top: 0.5em;\n  border-radius: 8px 0 0 8px;\n  -webkit-border-radius: 8px 0 0 8px;\n  -moz-border-radius: 8px 0 0 8px;\n  cursor: pointer;\n}\n\n.test-info:hover .test-name {\n  text-decoration: underline;\n}\n\n.test-info .closed:before {\n  content: \'\\25b8\\00A0\';\n}\n\n.test-info .open:before {\n  content: \'\\25be\\00A0\';\n  font-weight: bold;\n}\n\n.test-it ol {\n  margin-left: 2.5em;\n}\n\n.status-display,\n.status-display li {\n  float: right;\n}\n\n.status-display li {\n  padding: 5px 10px;\n}\n\n.timer-result,\n.test-title {\n  display: inline-block;\n  margin: 0;\n  padding: 4px;\n}\n\n.test-actions .test-title,\n.test-actions .test-result {\n  display: table-cell;\n  padding-left: 0.5em;\n  padding-right: 0.5em;\n}\n\n.test-actions {\n  display: table;\n}\n\n.test-actions li {\n  display: table-row;\n}\n\n.timer-result {\n  width: 4em;\n  padding: 0 10px;\n  text-align: right;\n  font-family: monospace;\n}\n\n.test-it pre,\n.test-actions pre {\n  clear: left;\n  color: black;\n  margin-left: 6em;\n}\n\n.test-describe {\n  padding-bottom: 0.5em;\n}\n\n.test-describe .test-describe {\n  margin: 5px 5px 10px 2em;\n}\n\n.test-actions .status-pending .test-title:before {\n  content: \'\\00bb\\00A0\';\n}\n\n.scrollpane {\n   max-height: 20em;\n   overflow: auto;\n}\n\n/** Colors */\n\n#header {\n  background-color: #F2C200;\n}\n\n#specs h2 {\n  border-top: 2px solid #BABAD1;\n}\n\n#specs h2,\n#application h2 {\n  background-color: #efefef;\n}\n\n#application {\n  border: 1px solid #BABAD1;\n}\n\n.test-describe .test-describe {\n  border-left: 1px solid #BABAD1;\n  border-right: 1px solid #BABAD1;\n  border-bottom: 1px solid #BABAD1;\n}\n\n.status-display {\n  border: 1px solid #777;\n}\n\n.status-display .status-pending,\n.status-pending .test-info {\n  background-color: #F9EEBC;\n}\n\n.status-display .status-success,\n.status-success .test-info {\n  background-color: #B1D7A1;\n}\n\n.status-display .status-failure,\n.status-failure .test-info {\n  background-color: #FF8286;\n}\n\n.status-display .status-error,\n.status-error .test-info {\n  background-color: black;\n  color: white;\n}\n\n.test-actions .status-success .test-title {\n  color: #30B30A;\n}\n\n.test-actions .status-failure .test-title {\n  color: #DF0000;\n}\n\n.test-actions .status-error .test-title {\n  color: black;\n}\n\n.test-actions .timer-result {\n  color: #888;\n}\n</style>');
-})(require("process"));
+})(require('process'));

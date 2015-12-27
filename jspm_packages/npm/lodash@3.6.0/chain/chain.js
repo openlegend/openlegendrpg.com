@@ -1,5 +1,5 @@
 /* */ 
-var lodash = require("./lodash");
+var lodash = require('./lodash');
 function chain(value) {
   var result = lodash(value);
   result.__chain__ = true;

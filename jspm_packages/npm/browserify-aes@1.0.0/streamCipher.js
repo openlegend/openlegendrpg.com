@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var aes = require("./aes");
-  var Transform = require("./cipherBase");
-  var inherits = require("inherits");
+  var aes = require('./aes');
+  var Transform = require('./cipherBase');
+  var inherits = require('inherits');
   inherits(StreamCipher, Transform);
   module.exports = StreamCipher;
   function StreamCipher(mode, key, iv, decrypt) {
@@ -24,4 +24,4 @@
   StreamCipher.prototype._final = function() {
     this._cipher.scrub();
   };
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

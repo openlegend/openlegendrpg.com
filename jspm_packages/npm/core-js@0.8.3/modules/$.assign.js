@@ -1,5 +1,5 @@
 /* */ 
-var $ = require("./$");
+var $ = require('./$');
 module.exports = Object.assign || function assign(target, source) {
   var T = Object($.assertDefined(target)),
       l = arguments.length,

@@ -1,6 +1,6 @@
 /* */ 
-var baseFlatten = require("../internal/baseFlatten"),
-    isIterateeCall = require("../internal/isIterateeCall");
+var baseFlatten = require('../internal/baseFlatten'),
+    isIterateeCall = require('../internal/isIterateeCall');
 function flatten(array, isDeep, guard) {
   var length = array ? array.length : 0;
   if (guard && isIterateeCall(array, isDeep, guard)) {

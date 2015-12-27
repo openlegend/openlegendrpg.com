@@ -482,4 +482,4 @@
     }
   }
   angular.module('ui.router.state').value('$stateParams', {}).provider('$state', $StateProvider);
-})(require("process"));
+})(require('process'));

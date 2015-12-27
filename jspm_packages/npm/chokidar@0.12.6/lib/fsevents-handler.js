@@ -1,12 +1,12 @@
 /* */ 
 (function(process) {
   'use strict';
-  var fs = require("fs");
-  var sysPath = require("path");
-  var readdirp = require("readdirp");
+  var fs = require('fs');
+  var sysPath = require('path');
+  var readdirp = require('readdirp');
   var fsevents;
   try {
-    fsevents = require("fsevents");
+    fsevents = require('fsevents');
   } catch (error) {}
   var FSEventsWatchers = Object.create(null);
   function createFSEventsInstance(path, callback) {
@@ -64,7 +64,7 @@
   function FsEventsHandler() {}
   FsEventsHandler.prototype._watchWithFsEvents = function(watchPath, realPath, processPath) {
     if (this._isIgnored(watchPath))
-      return ;
+      return;
     var watchCallback = function(fullPath, flags, info) {
       var path = processPath(sysPath.join(watchPath, sysPath.relative(watchPath, fullPath)));
       var parent = sysPath.dirname(path);
@@ -111,7 +111,7 @@
         if (typeof this.options.ignored === 'function') {
           fs.stat(path, function(error, stats) {
             if (checkIgnored(stats))
-              return ;
+              return;
             stats ? addOrChange() : handleEvent('unlink');
           });
         } else {
@@ -174,7 +174,7 @@
             var addEntry = emitAdd.bind(null, entryPath, entry.stat);
             if (followSymlinks && entry.stat.isSymbolicLink()) {
               if (this._symlinkPaths[entry.fullPath])
-                return ;
+                return;
               else
                 this._symlinkPaths[entry.fullPath] = true;
               this._handleSymlinkForFsEvents(entryPath, processPath);
@@ -203,4 +203,4 @@
   };
   module.exports = FsEventsHandler;
   module.exports.canUse = canUse;
-})(require("process"));
+})(require('process'));

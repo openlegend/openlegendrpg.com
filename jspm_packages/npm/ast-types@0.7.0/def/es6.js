@@ -1,13 +1,13 @@
 /* */ 
-require("./core");
-var types = require("../lib/types");
+require('./core');
+var types = require('../lib/types');
 var def = types.Type.def;
 var or = types.Type.or;
 var builtin = types.builtInTypes;
 var isBoolean = builtin.boolean;
 var isObject = builtin.object;
 var isString = builtin.string;
-var defaults = require("../lib/shared").defaults;
+var defaults = require('../lib/shared').defaults;
 def("Function").field("generator", isBoolean, defaults["false"]).field("expression", isBoolean, defaults["false"]).field("defaults", [or(def("Expression"), null)], defaults.emptyArray).field("rest", or(def("Identifier"), null), defaults["null"]);
 def("FunctionDeclaration").build("id", "params", "body", "generator", "expression");
 def("FunctionExpression").build("id", "params", "body", "generator", "expression");

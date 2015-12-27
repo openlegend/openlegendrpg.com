@@ -14,13 +14,13 @@ exports.toStatement = toStatement;
 exports.toExpression = toExpression;
 exports.toBlock = toBlock;
 exports.valueToNode = valueToNode;
-var isPlainObject = _interopRequire(require("lodash/lang/isPlainObject"));
-var isNumber = _interopRequire(require("lodash/lang/isNumber"));
-var isRegExp = _interopRequire(require("lodash/lang/isRegExp"));
-var isString = _interopRequire(require("lodash/lang/isString"));
-var traverse = _interopRequire(require("../traversal/index"));
-var each = _interopRequire(require("lodash/collection/each"));
-var t = _interopRequireWildcard(require("./index"));
+var isPlainObject = _interopRequire(require('lodash/lang/isPlainObject'));
+var isNumber = _interopRequire(require('lodash/lang/isNumber'));
+var isRegExp = _interopRequire(require('lodash/lang/isRegExp'));
+var isString = _interopRequire(require('lodash/lang/isString'));
+var traverse = _interopRequire(require('../traversal/index'));
+var each = _interopRequire(require('lodash/collection/each'));
+var t = _interopRequireWildcard(require('./index'));
 function toComputedKey(node) {
   var key = arguments[1] === undefined ? node.key : arguments[1];
   return (function() {

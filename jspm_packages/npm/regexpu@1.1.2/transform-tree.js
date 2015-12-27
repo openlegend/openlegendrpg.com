@@ -1,6 +1,6 @@
 /* */ 
-var recast = require("recast");
-var rewritePattern = require("./rewrite-pattern");
+var recast = require('recast');
+var rewritePattern = require('./rewrite-pattern');
 var types = recast.types;
 var visitor = types.PathVisitor.fromMethodsObject({'visitLiteral': function(path) {
     var node = path.value;

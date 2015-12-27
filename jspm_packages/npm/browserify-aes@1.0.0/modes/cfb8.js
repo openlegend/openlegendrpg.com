@@ -15,4 +15,4 @@
     }
     return out;
   };
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

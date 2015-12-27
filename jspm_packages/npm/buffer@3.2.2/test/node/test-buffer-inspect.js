@@ -1,12 +1,12 @@
 /* */ 
 (function(process) {
-  var Buffer = require("../../index").Buffer;
+  var Buffer = require('../../../buffer@3.2.2').Buffer;
   if (process.env.OBJECT_IMPL)
     Buffer.TYPED_ARRAY_SUPPORT = false;
   var common = {};
-  var assert = require("assert");
-  var util = require("util");
-  var buffer = require("../../index");
+  var assert = require('assert');
+  var util = require('util');
+  var buffer = require('../../../buffer@3.2.2');
   buffer.INSPECT_MAX_BYTES = 2;
   var b = new Buffer(4);
   b.fill('1234');
@@ -27,4 +27,4 @@
     assert.strictEqual(util.inspect(b), expected);
     assert.strictEqual(util.inspect(s), expected);
   });
-})(require("process"));
+})(require('process'));

@@ -1,8 +1,8 @@
 /* */ 
-var test = require("tap").test;
-var fs = require("../graceful-fs");
+var test = require('tap').test;
+var fs = require('../graceful-fs');
 test('graceful fs is monkeypatched fs', function(t) {
-  t.equal(fs, require("../fs"));
+  t.equal(fs, require('../fs'));
   t.end();
 });
 test('open an existing file works', function(t) {

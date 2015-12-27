@@ -1,5 +1,5 @@
 /* */ 
-var isFunction = require("../lang/isFunction");
+var isFunction = require('../lang/isFunction');
 function baseFunctions(object, props) {
   var index = -1,
       length = props.length,

@@ -1,8 +1,8 @@
 /* */ 
-var baseRandom = require("../internal/baseRandom"),
-    isIterateeCall = require("../internal/isIterateeCall"),
-    shuffle = require("./shuffle"),
-    toIterable = require("../internal/toIterable");
+var baseRandom = require('../internal/baseRandom'),
+    isIterateeCall = require('../internal/isIterateeCall'),
+    shuffle = require('./shuffle'),
+    toIterable = require('../internal/toIterable');
 var nativeMin = Math.min;
 function sample(collection, n, guard) {
   if (guard ? isIterateeCall(collection, n, guard) : n == null) {

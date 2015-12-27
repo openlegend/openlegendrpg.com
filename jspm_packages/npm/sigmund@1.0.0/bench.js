@@ -1,7 +1,7 @@
 /* */ 
-var http = require("http");
-var util = require("util");
-var sigmund = require("./sigmund");
+var http = require('http');
+var util = require('util');
+var sigmund = require('./sigmund');
 var sreq,
     sres,
     creq,
@@ -31,7 +31,7 @@ function start() {
     console.log(hash.length);
     console.log('');
   }
-  require("bench").runMain();
+  require('bench').runMain();
 }
 function customWs(obj, md, d) {
   d = d || 0;
@@ -80,23 +80,23 @@ function sparseFE2(obj, maxDepth) {
   var soFar = '';
   function ch(v, depth) {
     if (depth > maxDepth)
-      return ;
+      return;
     if (typeof v === 'function' || typeof v === 'undefined')
-      return ;
+      return;
     if (typeof v !== 'object' || !v) {
       soFar += v;
-      return ;
+      return;
     }
     if (seen.indexOf(v) !== -1 || depth === maxDepth)
-      return ;
+      return;
     seen.push(v);
     soFar += '{';
     Object.keys(v).forEach(function(k, _, __) {
       if (k.charAt(0) === '_')
-        return ;
+        return;
       var to = typeof v[k];
       if (to === 'function' || to === 'undefined')
-        return ;
+        return;
       soFar += k + ':';
       ch(v[k], depth + 1);
     });
@@ -110,23 +110,23 @@ function sparseFE(obj, maxDepth) {
   var soFar = '';
   function ch(v, depth) {
     if (depth > maxDepth)
-      return ;
+      return;
     if (typeof v === 'function' || typeof v === 'undefined')
-      return ;
+      return;
     if (typeof v !== 'object' || !v) {
       soFar += v;
-      return ;
+      return;
     }
     if (seen.indexOf(v) !== -1 || depth === maxDepth)
-      return ;
+      return;
     seen.push(v);
     soFar += '{';
     Object.keys(v).forEach(function(k, _, __) {
       if (k.charAt(0) === '_')
-        return ;
+        return;
       var to = typeof v[k];
       if (to === 'function' || to === 'undefined')
-        return ;
+        return;
       soFar += k;
       ch(v[k], depth + 1);
     });
@@ -139,15 +139,15 @@ function sparse(obj, maxDepth) {
   var soFar = '';
   function ch(v, depth) {
     if (depth > maxDepth)
-      return ;
+      return;
     if (typeof v === 'function' || typeof v === 'undefined')
-      return ;
+      return;
     if (typeof v !== 'object' || !v) {
       soFar += v;
-      return ;
+      return;
     }
     if (seen.indexOf(v) !== -1 || depth === maxDepth)
-      return ;
+      return;
     seen.push(v);
     soFar += '{';
     for (var k in v) {
@@ -168,15 +168,15 @@ function noCommas(obj, maxDepth) {
   var soFar = '';
   function ch(v, depth) {
     if (depth > maxDepth)
-      return ;
+      return;
     if (typeof v === 'function' || typeof v === 'undefined')
-      return ;
+      return;
     if (typeof v !== 'object' || !v) {
       soFar += v;
-      return ;
+      return;
     }
     if (seen.indexOf(v) !== -1 || depth === maxDepth)
-      return ;
+      return;
     seen.push(v);
     soFar += '{';
     for (var k in v) {
@@ -198,15 +198,15 @@ function flatten(obj, maxDepth) {
   var soFar = '';
   function ch(v, depth) {
     if (depth > maxDepth)
-      return ;
+      return;
     if (typeof v === 'function' || typeof v === 'undefined')
-      return ;
+      return;
     if (typeof v !== 'object' || !v) {
       soFar += v;
-      return ;
+      return;
     }
     if (seen.indexOf(v) !== -1 || depth === maxDepth)
-      return ;
+      return;
     seen.push(v);
     soFar += '{';
     for (var k in v) {

@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var assert = require("assert");
-  var BN = require("../../lib/bn").BN;
-  var fixtures = require("../fixtures");
+  var assert = require('assert');
+  var BN = require('../../lib/bn').BN;
+  var fixtures = require('../fixtures');
   describe('BN.js/Slow DH test', function() {
     var groups = fixtures.dhGroups;
     Object.keys(groups).forEach(function(name) {
@@ -18,4 +18,4 @@
       });
     });
   });
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

@@ -4,7 +4,7 @@ var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
 exports.MethodDefinition = MethodDefinition;
-var t = _interopRequireWildcard(require("../../../types/index"));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var playground = exports.playground = true;
 var visitor = {enter: function enter(node, parent, scope, state) {
     if (this.isFunction())
@@ -15,7 +15,7 @@ var visitor = {enter: function enter(node, parent, scope, state) {
   }};
 function MethodDefinition(node, parent, scope, file) {
   if (node.kind !== "memo")
-    return ;
+    return;
   node.kind = "get";
   var value = node.value;
   t.ensureBlock(value);

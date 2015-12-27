@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
-  var fs = require("./fs");
-  var constants = require("constants");
+  var fs = require('./fs');
+  var constants = require('constants');
   var origCwd = process.cwd;
   var cwd = null;
   process.cwd = function() {
@@ -20,7 +20,7 @@
       fs.open(path, constants.O_WRONLY | constants.O_SYMLINK, mode, function(err, fd) {
         if (err) {
           callback(err);
-          return ;
+          return;
         }
         fs.fchmod(fd, mode, function(err) {
           fs.close(fd, function(err2) {
@@ -197,4 +197,4 @@
       }
     }
   };
-})(require("process"));
+})(require('process'));

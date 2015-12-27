@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var generatePrime = require("./lib/generatePrime");
-  var primes = require("./lib/primes.json!systemjs-json");
-  var DH = require("./lib/dh");
+  var generatePrime = require('./lib/generatePrime');
+  var primes = require('./lib/primes.json!systemjs-json');
+  var DH = require('./lib/dh');
   function getDiffieHellman(mod) {
     var prime = new Buffer(primes[mod].prime, 'hex');
     var gen = new Buffer(primes[mod].gen, 'hex');
@@ -30,4 +30,4 @@
   }
   exports.DiffieHellmanGroup = exports.createDiffieHellmanGroup = exports.getDiffieHellman = getDiffieHellman;
   exports.createDiffieHellman = exports.DiffieHellman = createDiffieHellman;
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

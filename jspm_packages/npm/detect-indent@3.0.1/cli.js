@@ -1,11 +1,11 @@
 /* */ 
 (function(process) {
   'use strict';
-  var fs = require("fs");
-  var stdin = require("get-stdin");
-  var argv = require("minimist")(process.argv.slice(2));
-  var pkg = require("./package.json!systemjs-json");
-  var detectIndent = require("../detect-indent@3.0.1");
+  var fs = require('fs');
+  var stdin = require('get-stdin');
+  var argv = require('minimist')(process.argv.slice(2));
+  var pkg = require('./package.json!systemjs-json');
+  var detectIndent = require('../detect-indent@3.0.1');
   var input = argv._[0];
   function help() {
     console.log(['', '  ' + pkg.description, '', '  Usage', '    detect-indent <file>', '    echo <string> | detect-indent', '', '  Example', '    echo \'  foo\\n  bar\' | detect-indent | wc --chars', '    2'].join('\n'));
@@ -21,19 +21,19 @@
   }
   if (argv.help) {
     help();
-    return ;
+    return;
   }
   if (argv.version) {
     console.log(pkg.version);
-    return ;
+    return;
   }
   if (process.stdin.isTTY) {
     if (!input) {
       help();
-      return ;
+      return;
     }
     init(fs.readFileSync(input, 'utf8'));
   } else {
     stdin(init);
   }
-})(require("process"));
+})(require('process'));

@@ -1,6 +1,6 @@
 /* */ 
-var assert = require("assert");
-var elliptic = require("../lib/elliptic");
+var assert = require('assert');
+var elliptic = require('../lib/elliptic');
 describe('EC API', function() {
   it('should instantiate with valid curve (secp256k1)', function() {
     var ec = new elliptic.ec('secp256k1');

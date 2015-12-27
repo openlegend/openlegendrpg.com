@@ -51,4 +51,4 @@
     });
   })(window);
   angular.Module;
-})(require("process"));
+})(require('process'));

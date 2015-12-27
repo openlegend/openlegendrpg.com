@@ -1,11 +1,11 @@
 /* */ 
 (function(process) {
-  var commander = require("commander");
-  var transform = require("../../lib/babel/transformation/index");
-  var util = require("../../lib/babel/util");
-  var fs = require("fs");
-  var each = require("lodash/collection/each");
-  var keys = require("lodash/object/keys");
+  var commander = require('commander');
+  var transform = require('../../lib/babel/transformation/index');
+  var util = require('../../lib/babel/util');
+  var fs = require('fs');
+  var each = require('lodash/collection/each');
+  var keys = require('lodash/object/keys');
   commander.option("-t, --source-maps-inline", "Append sourceMappingURL comment to bottom of code");
   commander.option("-s, --source-maps", "Save source map alongside the compiled code");
   commander.option("-f, --filename [filename]", "Filename to use when reading from stdin - this will be used in source-maps, errors etc [stdin]", "stdin");
@@ -33,7 +33,7 @@
       console.log();
       each(keys(obj).sort(), function(key) {
         if (key[0] === "_")
-          return ;
+          return;
         if (obj[key].optional) {
           key = "[" + key + "]";
         }
@@ -44,7 +44,7 @@
     outKeys("Transformers", transform.transformers);
     outKeys("Module formatters", transform.moduleFormatters);
   });
-  var pkg = require("../../package.json!systemjs-json");
+  var pkg = require('../../package.json!systemjs-json');
   commander.version(pkg.version);
   commander.usage("[options] <files ...>");
   commander.parse(process.argv);
@@ -98,9 +98,9 @@
   };
   var fn;
   if (commander.outDir) {
-    fn = require("./dir");
+    fn = require('./dir');
   } else {
-    fn = require("./file");
+    fn = require('./file');
   }
   fn(commander, filenames, exports.opts);
-})(require("process"));
+})(require('process'));

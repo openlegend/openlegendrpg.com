@@ -2070,7 +2070,7 @@
     function setStrict(strct) {
       strict = strct;
       if (tokType !== _num && tokType !== _string)
-        return ;
+        return;
       tokPos = tokStart;
       if (options.locations) {
         while (tokPos < tokLineStart) {
@@ -2349,7 +2349,7 @@
     }
     function checkPropClash(prop, propHash) {
       if (options.ecmaVersion >= 6)
-        return ;
+        return;
       var key = prop.key,
           name;
       switch (key.type) {
@@ -2360,7 +2360,7 @@
           name = String(key.value);
           break;
         default:
-          return ;
+          return;
       }
       var kind = prop.kind || "init",
           other;
@@ -3269,7 +3269,7 @@
           prop.computed = true;
           prop.key = parseExpression();
           expect(_bracketR);
-          return ;
+          return;
         } else {
           prop.computed = false;
         }
@@ -4293,4 +4293,4 @@
       return ident;
     }
   });
-})(require("process"));
+})(require('process'));

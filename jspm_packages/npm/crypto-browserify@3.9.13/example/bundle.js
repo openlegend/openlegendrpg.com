@@ -175,7 +175,7 @@
   if (!process.binding)
     process.binding = function(name) {
       if (name === 'evals')
-        return require("vm");
+        return require('vm');
       else
         throw new Error('No such module');
     };
@@ -277,13 +277,13 @@
     };
   });
   require.define("crypto", function(require, module, exports, __dirname, __filename) {
-    module.exports = require("../index");
+    module.exports = require('../index');
   });
   require.define("/node_modules/crypto-browserify/package.json", function(require, module, exports, __dirname, __filename) {
     module.exports = {};
   });
   require.define("/node_modules/crypto-browserify/index.js", function(require, module, exports, __dirname, __filename) {
-    var sha = require("./sha");
+    var sha = require('./sha');
     var algorithms = {sha1: {
         hex: sha.hex_sha1,
         binary: sha.b64_sha1,
@@ -463,5 +463,5 @@
     var abc = crypto.createHash('sha1').update('abc').digest('hex');
     console.log(abc);
   });
-  require("/test");
-})(require("process"));
+  require('/test');
+})(require('process'));

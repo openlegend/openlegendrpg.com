@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var assert = require("assert");
-  var BN = require("../lib/bn").BN;
-  var fixtures = require("./fixtures");
+  var assert = require('assert');
+  var BN = require('../lib/bn').BN;
+  var fixtures = require('./fixtures');
   describe('BN', function() {
     it('should work with Number input', function() {
       assert.equal(new BN(12345).toString(16), '3039');
@@ -308,4 +308,4 @@
       assert.equal(new BN('101', 2).setn(2, false).toString(2), '1');
     });
   });
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

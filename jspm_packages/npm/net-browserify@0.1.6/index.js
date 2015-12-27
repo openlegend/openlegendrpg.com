@@ -1,9 +1,9 @@
 /* */ 
 (function(Buffer, process) {
-  var stream = require("stream");
-  var util = require("util");
-  var timers = require("timers");
-  var http = require("http");
+  var stream = require('stream');
+  var util = require('util');
+  var timers = require('timers');
+  var http = require('http');
   var debug = util.debuglog('net');
   var proxy = {
     hostname: window.location.hostname,
@@ -143,7 +143,7 @@
   Socket.prototype.destroy = function(exception) {
     debug('destroy', exception);
     if (this.destroyed) {
-      return ;
+      return;
     }
     self._connecting = false;
     this.readable = this.writable = false;
@@ -167,7 +167,7 @@
       this.once('connect', function() {
         this._write(data, encoding, cb);
       });
-      return ;
+      return;
     }
     this._pendingData = null;
     this._pendingEncoding = '';
@@ -223,7 +223,7 @@
         if (data.error) {
           self.emit('error', 'Cannot open TCP connection [' + res.statusCode + ']: ' + data.error);
           self.destroy();
-          return ;
+          return;
         }
         self.remoteAddress = data.remote.address;
         self.remoteFamily = data.remote.family;
@@ -231,7 +231,7 @@
         self._connectWebSocket(data.token, function(err) {
           if (err) {
             cb(err);
-            return ;
+            return;
           }
           cb();
         });
@@ -248,7 +248,7 @@
       process.nextTick(function() {
         cb();
       });
-      return ;
+      return;
     }
     this._ws = new WebSocket('ws://' + getProxyHost() + '/api/vm/net/socket?token=' + token);
     this._handleWebsocket();
@@ -309,4 +309,4 @@
   exports.isIPv6 = function(input) {
     return /^(([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))$/.test(input);
   };
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

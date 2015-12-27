@@ -1,5 +1,5 @@
 /* */ 
-var readdirp = require("../readdirp");
+var readdirp = require('../readdirp');
 readdirp({
   root: '.',
   fileFilter: '*.js'

@@ -1,1 +1,1 @@
-module.exports = require("npm:glob@4.2.2/glob");
+module.exports = require("npm:glob@4.2.2/glob.js");

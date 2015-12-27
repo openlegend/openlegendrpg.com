@@ -1,1 +1,1 @@
-module.exports = require("npm:regexpu@1.1.2/regexpu");
+module.exports = require("npm:regexpu@1.1.2/regexpu.js");

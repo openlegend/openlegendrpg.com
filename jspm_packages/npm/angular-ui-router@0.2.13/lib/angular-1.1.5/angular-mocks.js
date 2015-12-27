@@ -426,7 +426,7 @@
         expectations.shift();
         if (expectation.response) {
           responses.push(wrapResponse(expectation));
-          return ;
+          return;
         }
         wasExpected = true;
       }
@@ -440,7 +440,7 @@
             $delegate(method, url, data, callback, headers, timeout);
           } else
             throw Error('No response defined !');
-          return ;
+          return;
         }
       }
       throw wasExpected ? Error('No response defined !') : Error('Unexpected request: ' + method + ' ' + url + '\n' + (expectation ? 'Expected ' + expectation : 'No more request expected'));
@@ -721,4 +721,4 @@
       }
     };
   })(window);
-})(require("process"));
+})(require('process'));

@@ -1,6 +1,6 @@
 /* */ 
-var test = require("tape");
-var parse = require("../../minimist@1.1.1");
+var test = require('tape');
+var parse = require('../index');
 test('boolean default true', function(t) {
   var argv = parse([], {
     boolean: 'sometrue',

@@ -13,8 +13,8 @@ exports.CatchClause = CatchClause;
 exports.ExpressionStatement = ExpressionStatement;
 exports.AssignmentExpression = AssignmentExpression;
 exports.VariableDeclaration = VariableDeclaration;
-var messages = _interopRequireWildcard(require("../../../messages"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var messages = _interopRequireWildcard(require('../../../messages'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var check = exports.check = t.isPattern;
 function ForOfStatement(node, parent, scope, file) {
   var left = node.left;
@@ -23,13 +23,13 @@ function ForOfStatement(node, parent, scope, file) {
     node.left = t.variableDeclaration("var", [t.variableDeclarator(temp)]);
     t.ensureBlock(node);
     node.body.body.unshift(t.variableDeclaration("var", [t.variableDeclarator(left, temp)]));
-    return ;
+    return;
   }
   if (!t.isVariableDeclaration(left))
-    return ;
+    return;
   var pattern = left.declarations[0].id;
   if (!t.isPattern(pattern))
-    return ;
+    return;
   var key = scope.generateUidIdentifier("ref");
   node.left = t.variableDeclaration(left.kind, [t.variableDeclarator(key, null)]);
   var nodes = [];
@@ -64,7 +64,7 @@ exports.Function = function(node, parent, scope, file) {
     return ref;
   });
   if (!hasDestructuring)
-    return ;
+    return;
   file.checkNode(nodes);
   t.ensureBlock(node);
   var block = node.body;
@@ -73,7 +73,7 @@ exports.Function = function(node, parent, scope, file) {
 function CatchClause(node, parent, scope, file) {
   var pattern = node.param;
   if (!t.isPattern(pattern))
-    return ;
+    return;
   var ref = scope.generateUidIdentifier("ref");
   node.param = ref;
   var nodes = [];
@@ -90,11 +90,11 @@ function CatchClause(node, parent, scope, file) {
 function ExpressionStatement(node, parent, scope, file) {
   var expr = node.expression;
   if (expr.type !== "AssignmentExpression")
-    return ;
+    return;
   if (!t.isPattern(expr.left))
-    return ;
+    return;
   if (file.isConsequenceExpressionStatement(node))
-    return ;
+    return;
   var nodes = [];
   var ref = scope.generateUidIdentifier("ref");
   nodes.push(t.variableDeclaration("var", [t.variableDeclarator(ref, expr.right)]));
@@ -109,7 +109,7 @@ function ExpressionStatement(node, parent, scope, file) {
 }
 function AssignmentExpression(node, parent, scope, file) {
   if (!t.isPattern(node.left))
-    return ;
+    return;
   var ref = scope.generateUidIdentifier("temp");
   scope.push({id: ref});
   var nodes = [];
@@ -134,9 +134,9 @@ function variableDeclarationHasPattern(node) {
 }
 function VariableDeclaration(node, parent, scope, file) {
   if (t.isForInStatement(parent) || t.isForOfStatement(parent))
-    return ;
+    return;
   if (!variableDeclarationHasPattern(node))
-    return ;
+    return;
   var nodes = [];
   var declar;
   for (var i = 0; i < node.declarations.length; i++) {
@@ -277,7 +277,7 @@ var DestructuringTransformer = (function() {
     if (!t.isArrayExpression(arr))
       return false;
     if (pattern.elements.length > arr.elements.length)
-      return ;
+      return;
     if (pattern.elements.length < arr.elements.length && !hasRest(pattern))
       return false;
     for (var i = 0; i < pattern.elements.length; i++) {
@@ -298,7 +298,7 @@ var DestructuringTransformer = (function() {
   };
   DestructuringTransformer.prototype.pushArrayPattern = function pushArrayPattern(pattern, arrayRef) {
     if (!pattern.elements)
-      return ;
+      return;
     if (this.canUnpackArrayPattern(pattern, arrayRef)) {
       return this.pushUnpackedArrayPattern(pattern, arrayRef);
     }

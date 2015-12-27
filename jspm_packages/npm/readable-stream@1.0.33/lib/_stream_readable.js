@@ -1,17 +1,17 @@
 /* */ 
 (function(Buffer, process) {
   module.exports = Readable;
-  var isArray = require("isarray");
-  var Buffer = require("buffer").Buffer;
+  var isArray = require('isarray');
+  var Buffer = require('buffer').Buffer;
   Readable.ReadableState = ReadableState;
-  var EE = require("events").EventEmitter;
+  var EE = require('events').EventEmitter;
   if (!EE.listenerCount)
     EE.listenerCount = function(emitter, type) {
       return emitter.listeners(type).length;
     };
   var Stream = require('stream-browserify/index');
-  var util = require("core-util-is");
-  util.inherits = require("inherits");
+  var util = require('core-util-is');
+  util.inherits = require('inherits');
   var StringDecoder;
   util.inherits(Readable, Stream);
   function ReadableState(options, stream) {
@@ -41,7 +41,7 @@
     this.encoding = null;
     if (options.encoding) {
       if (!StringDecoder)
-        StringDecoder = require("string_decoder").StringDecoder;
+        StringDecoder = require('string_decoder').StringDecoder;
       this.decoder = new StringDecoder(options.encoding);
       this.encoding = options.encoding;
     }
@@ -107,7 +107,7 @@
   }
   Readable.prototype.setEncoding = function(enc) {
     if (!StringDecoder)
-      StringDecoder = require("string_decoder").StringDecoder;
+      StringDecoder = require('string_decoder').StringDecoder;
     this._readableState.decoder = new StringDecoder(enc);
     this._readableState.encoding = enc;
   };
@@ -224,7 +224,7 @@
     var state = stream._readableState;
     state.needReadable = false;
     if (state.emittedReadable)
-      return ;
+      return;
     state.emittedReadable = true;
     if (state.sync)
       process.nextTick(function() {
@@ -282,7 +282,7 @@
     dest.on('unpipe', onunpipe);
     function onunpipe(readable) {
       if (readable !== src)
-        return ;
+        return;
       cleanup();
     }
     function onend() {
@@ -362,13 +362,13 @@
         forEach(state.pipes, write);
       src.emit('data', chunk);
       if (state.awaitDrain > 0)
-        return ;
+        return;
     }
     if (state.pipesCount === 0) {
       state.flowing = false;
       if (EE.listenerCount(src, 'data') > 0)
         emitDataEvents(src);
-      return ;
+      return;
     }
     state.ranOut = true;
   }
@@ -497,9 +497,9 @@
       if (state.decoder)
         chunk = state.decoder.write(chunk);
       if (state.objectMode && (chunk === null || chunk === undefined))
-        return ;
+        return;
       else if (!state.objectMode && (!chunk || !chunk.length))
-        return ;
+        return;
       var ret = self.push(chunk);
       if (!ret) {
         paused = true;
@@ -606,4 +606,4 @@
     }
     return -1;
   }
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

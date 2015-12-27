@@ -1,8 +1,8 @@
 /* */ 
 (function(process) {
-  var arrayMap = require("../internal/arrayMap"),
-      arrayMax = require("../internal/arrayMax"),
-      baseProperty = require("../internal/baseProperty");
+  var arrayMap = require('../internal/arrayMap'),
+      arrayMax = require('../internal/arrayMax'),
+      baseProperty = require('../internal/baseProperty');
   var getLength = baseProperty('length');
   function unzip(array) {
     var index = -1,
@@ -14,4 +14,4 @@
     return result;
   }
   module.exports = unzip;
-})(require("process"));
+})(require('process'));

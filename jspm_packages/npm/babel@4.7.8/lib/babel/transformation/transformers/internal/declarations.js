@@ -4,12 +4,12 @@ var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
 exports.BlockStatement = BlockStatement;
-var strict = _interopRequireWildcard(require("../../helpers/strict"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var strict = _interopRequireWildcard(require('../../helpers/strict'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var secondPass = exports.secondPass = true;
 function BlockStatement(node, parent, scope, file) {
   if (!node._declarations)
-    return ;
+    return;
   strict.wrap(node, function() {
     var kinds = {};
     var kind;

@@ -1,10 +1,10 @@
 /* */ 
 (function(Buffer) {
-  var sign = require("./sign");
-  var verify = require("./verify");
-  var stream = require("stream");
-  var inherits = require("inherits");
-  var _algos = require("./algos");
+  var sign = require('./sign');
+  var verify = require('./verify');
+  var stream = require('stream');
+  var inherits = require('inherits');
+  var _algos = require('./algos');
   var algos = {};
   Object.keys(_algos).forEach(function(key) {
     algos[key] = algos[key.toLowerCase()] = _algos[key];
@@ -75,4 +75,4 @@
     }
     return verify(sig, Buffer.concat([this._tag, hash]), key);
   };
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

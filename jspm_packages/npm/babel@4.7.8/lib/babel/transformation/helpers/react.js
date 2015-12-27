@@ -5,7 +5,7 @@ var _interopRequireWildcard = function(obj) {
 };
 exports.isCreateClass = isCreateClass;
 exports.isCompatTag = isCompatTag;
-var t = _interopRequireWildcard(require("../../types/index"));
+var t = _interopRequireWildcard(require('../../types/index'));
 var isCreateClassCallExpression = t.buildMatchMemberExpression("React.createClass");
 function isCreateClass(node) {
   if (!node || !t.isCallExpression(node))

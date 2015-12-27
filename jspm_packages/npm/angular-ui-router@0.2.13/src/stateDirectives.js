@@ -49,7 +49,7 @@
           if (newVal)
             params = angular.copy(newVal);
           if (!nav)
-            return ;
+            return;
           newHref = $state.href(ref.state, params, options);
           var activeDirective = uiSrefActive[1] || uiSrefActive[0];
           if (activeDirective) {
@@ -70,7 +70,7 @@
         }
         update();
         if (isForm)
-          return ;
+          return;
         element.bind("click", function(e) {
           var button = e.which || e.button;
           if (!(button > 1 || e.ctrlKey || e.metaKey || e.shiftKey || element.attr('target'))) {
@@ -121,4 +121,4 @@
     };
   }
   angular.module('ui.router.state').directive('uiSref', $StateRefDirective).directive('uiSrefActive', $StateRefActiveDirective).directive('uiSrefActiveEq', $StateRefActiveDirective);
-})(require("process"));
+})(require('process'));

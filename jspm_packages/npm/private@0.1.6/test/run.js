@@ -1,6 +1,6 @@
 /* */ 
-var assert = require("assert");
-var makeAccessor = require("../private").makeAccessor;
+var assert = require('assert');
+var makeAccessor = require('../private').makeAccessor;
 var acc1 = makeAccessor();
 var obj = {};
 var hasOwn = obj.hasOwnProperty;

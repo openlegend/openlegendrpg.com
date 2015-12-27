@@ -11,14 +11,14 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var whitespace = _interopRequire(require("./whitespace"));
-var parens = _interopRequireWildcard(require("./parentheses"));
-var each = _interopRequire(require("lodash/collection/each"));
-var some = _interopRequire(require("lodash/collection/some"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var whitespace = _interopRequire(require('./whitespace'));
+var parens = _interopRequireWildcard(require('./parentheses'));
+var each = _interopRequire(require('lodash/collection/each'));
+var some = _interopRequire(require('lodash/collection/some'));
+var t = _interopRequireWildcard(require('../../types/index'));
 var find = function find(obj, node, parent) {
   if (!obj)
-    return ;
+    return;
   var result;
   var types = Object.keys(obj);
   for (var i = 0; i < types.length; i++) {

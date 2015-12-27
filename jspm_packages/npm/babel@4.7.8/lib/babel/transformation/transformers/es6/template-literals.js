@@ -6,7 +6,7 @@ var _interopRequireWildcard = function(obj) {
 exports.check = check;
 exports.TaggedTemplateExpression = TaggedTemplateExpression;
 exports.TemplateLiteral = TemplateLiteral;
-var t = _interopRequireWildcard(require("../../../types/index"));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var buildBinaryExpression = function buildBinaryExpression(left, right) {
   return t.binaryExpression("+", left, right);
 };

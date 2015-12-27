@@ -5,7 +5,7 @@ var _interopRequireWildcard = function(obj) {
 };
 exports.get = get;
 exports.parseArgs = parseArgs;
-var util = _interopRequireWildcard(require("util"));
+var util = _interopRequireWildcard(require('util'));
 var messages = exports.messages = {
   tailCallReassignmentDeopt: "Function reference has been reassigned so it's probably be dereferenced so we can't optimise this with confidence",
   JSXNamespacedTags: "Namespace tags are not supported. ReactJSX is not XML.",

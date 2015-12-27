@@ -1,6 +1,6 @@
 /* */ 
-var test = require("tape");
-var parse = require("../../minimist@0.0.8");
+var test = require('tape');
+var parse = require('../index');
 test('long opts', function(t) {
   t.deepEqual(parse(['--bool']), {
     bool: true,

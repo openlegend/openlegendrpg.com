@@ -10,8 +10,8 @@ exports.getBindingIdentifiers = getBindingIdentifiers;
 exports.getLastStatements = getLastStatements;
 exports.getSpecifierName = getSpecifierName;
 exports.getSpecifierId = getSpecifierId;
-var object = _interopRequire(require("../helpers/object"));
-var t = _interopRequireWildcard(require("./index"));
+var object = _interopRequire(require('../helpers/object'));
+var t = _interopRequireWildcard(require('./index'));
 function getBindingIdentifiers(node) {
   var search = [].concat(node);
   var ids = object();

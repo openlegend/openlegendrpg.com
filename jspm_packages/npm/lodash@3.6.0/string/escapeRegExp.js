@@ -1,5 +1,5 @@
 /* */ 
-var baseToString = require("../internal/baseToString");
+var baseToString = require('../internal/baseToString');
 var reRegExpChars = /[.*+?^${}()|[\]\/\\]/g,
     reHasRegExpChars = RegExp(reRegExpChars.source);
 function escapeRegExp(string) {

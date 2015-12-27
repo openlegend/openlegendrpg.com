@@ -1,5 +1,5 @@
 /* */ 
-var baseEach = require("./baseEach");
+var baseEach = require('./baseEach');
 var NEGATIVE_INFINITY = Number.NEGATIVE_INFINITY,
     POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
 function extremumBy(collection, iteratee, isMin) {

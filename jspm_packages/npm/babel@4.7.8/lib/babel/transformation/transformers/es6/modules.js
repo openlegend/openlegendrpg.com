@@ -5,11 +5,11 @@ var _interopRequireWildcard = function(obj) {
 };
 exports.ImportDeclaration = ImportDeclaration;
 exports.ExportDeclaration = ExportDeclaration;
-var t = _interopRequireWildcard(require("../../../types/index"));
-exports.check = require("../internal/modules").check;
+var t = _interopRequireWildcard(require('../../../types/index'));
+exports.check = require('../internal/modules').check;
 function ImportDeclaration(node, parent, scope, file) {
   if (node.isType)
-    return ;
+    return;
   var nodes = [];
   if (node.specifiers.length) {
     for (var i = 0; i < node.specifiers.length; i++) {
@@ -25,7 +25,7 @@ function ImportDeclaration(node, parent, scope, file) {
 }
 function ExportDeclaration(node, parent, scope, file) {
   if (t.isTypeAlias(node.declaration))
-    return ;
+    return;
   var nodes = [];
   var i;
   if (node.declaration) {

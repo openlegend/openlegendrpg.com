@@ -1,6 +1,6 @@
 /* */ 
-var $ = require("./$"),
-    $def = require("./$.def"),
+var $ = require('./$'),
+    $def = require('./$.def'),
     isObject = $.isObject,
     toObject = $.toObject;
 function wrapObjectMethod(METHOD, MODE) {

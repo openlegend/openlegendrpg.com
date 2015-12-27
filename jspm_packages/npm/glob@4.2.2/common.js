@@ -11,8 +11,8 @@
   function ownProp(obj, field) {
     return Object.prototype.hasOwnProperty.call(obj, field);
   }
-  var path = require("path");
-  var minimatch = require("minimatch");
+  var path = require('path');
+  var minimatch = require('minimatch');
   var Minimatch = minimatch.Minimatch;
   function absWin(p) {
     if (absUnix(p))
@@ -144,4 +144,4 @@
     }
     return abs;
   }
-})(require("process"));
+})(require('process'));

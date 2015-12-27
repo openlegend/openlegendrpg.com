@@ -1,6 +1,6 @@
 /* */ 
-var baseRandom = require("../internal/baseRandom"),
-    toIterable = require("../internal/toIterable");
+var baseRandom = require('../internal/baseRandom'),
+    toIterable = require('../internal/toIterable');
 function shuffle(collection) {
   collection = toIterable(collection);
   var index = -1,

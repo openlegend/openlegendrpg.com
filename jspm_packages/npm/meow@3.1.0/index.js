@@ -1,11 +1,11 @@
 /* */ 
 (function(process) {
   'use strict';
-  var path = require("path");
-  var minimist = require("minimist");
-  var indentString = require("indent-string");
-  var objectAssign = require("object-assign");
-  var camelcaseKeys = require("camelcase-keys");
+  var path = require('path');
+  var minimist = require('minimist');
+  var indentString = require('indent-string');
+  var objectAssign = require('object-assign');
+  var camelcaseKeys = require('camelcase-keys');
   delete require.cache[__filename];
   var parentDir = path.dirname(module.parent.filename);
   module.exports = function(opts, minimistOpts) {
@@ -37,4 +37,4 @@
       showHelp: showHelp
     };
   };
-})(require("process"));
+})(require('process'));

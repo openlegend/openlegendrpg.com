@@ -1,7 +1,7 @@
 /* */ 
-var common = require("./common");
-var assert = require("assert");
-var events = require("../events");
+var common = require('./common');
+var assert = require('assert');
+var events = require('../events');
 var count = 0;
 function listener1() {
   console.log('listener1');
@@ -46,7 +46,7 @@ assert.deepEqual([listener2], e3.listeners('hello'));
 var e4 = new events.EventEmitter();
 e4.on('removeListener', common.mustCall(function(name, cb) {
   if (cb !== remove1)
-    return ;
+    return;
   this.removeListener('quux', remove2);
   this.emit('quux');
 }, 2));

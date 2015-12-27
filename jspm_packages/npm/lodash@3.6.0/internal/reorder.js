@@ -1,6 +1,6 @@
 /* */ 
-var arrayCopy = require("./arrayCopy"),
-    isIndex = require("./isIndex");
+var arrayCopy = require('./arrayCopy'),
+    isIndex = require('./isIndex');
 var nativeMin = Math.min;
 function reorder(array, indexes) {
   var arrLength = array.length,

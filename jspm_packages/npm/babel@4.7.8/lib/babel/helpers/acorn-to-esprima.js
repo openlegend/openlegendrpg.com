@@ -5,9 +5,9 @@ var _interopRequire = function(obj) {
 };
 exports.toEsprimaToken = toEsprimaToken;
 exports.toEsprimaAST = toEsprimaAST;
-var traverse = _interopRequire(require("../traversal/index"));
-var tokTypes = require("acorn-babel").tokTypes;
-var t = _interopRequire(require("../types/index"));
+var traverse = _interopRequire(require('../traversal/index'));
+var tokTypes = require('acorn-babel').tokTypes;
+var t = _interopRequire(require('../types/index'));
 function toEsprimaToken(token) {
   var type = token.type;
   if (type === tokTypes.name) {

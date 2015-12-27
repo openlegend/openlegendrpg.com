@@ -1,7 +1,7 @@
 /* */ 
-var baseIsEqual = require("./baseIsEqual"),
-    isStrictComparable = require("./isStrictComparable"),
-    toObject = require("./toObject");
+var baseIsEqual = require('./baseIsEqual'),
+    isStrictComparable = require('./isStrictComparable'),
+    toObject = require('./toObject');
 function baseMatchesProperty(key, value) {
   if (isStrictComparable(value)) {
     return function(object) {

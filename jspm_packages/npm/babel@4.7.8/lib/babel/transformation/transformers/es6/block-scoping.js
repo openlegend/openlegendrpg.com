@@ -15,12 +15,12 @@ exports.check = check;
 exports.VariableDeclaration = VariableDeclaration;
 exports.Loop = Loop;
 exports.BlockStatement = BlockStatement;
-var traverse = _interopRequire(require("../../../traversal/index"));
-var object = _interopRequire(require("../../../helpers/object"));
-var util = _interopRequireWildcard(require("../../../util"));
-var t = _interopRequireWildcard(require("../../../types/index"));
-var values = _interopRequire(require("lodash/object/values"));
-var extend = _interopRequire(require("lodash/object/extend"));
+var traverse = _interopRequire(require('../../../traversal/index'));
+var object = _interopRequire(require('../../../helpers/object'));
+var util = _interopRequireWildcard(require('../../../util'));
+var t = _interopRequireWildcard(require('../../../types/index'));
+var values = _interopRequire(require('lodash/object/values'));
+var extend = _interopRequire(require('lodash/object/extend'));
 function isLet(node, parent) {
   if (!t.isVariableDeclaration(node))
     return false;
@@ -56,7 +56,7 @@ function check(node) {
 }
 function VariableDeclaration(node, parent, scope, file) {
   if (!isLet(node, parent))
-    return ;
+    return;
   if (isLetInitable(node) && file.transformers["es6.blockScopingTDZ"].canRun()) {
     var nodes = [node];
     for (var i = 0; i < node.declarations.length; i++) {
@@ -90,10 +90,10 @@ function BlockStatement(block, parent, scope, file) {
 exports.Program = BlockStatement;
 function replace(node, parent, scope, remaps) {
   if (!t.isReferencedIdentifier(node, parent))
-    return ;
+    return;
   var remap = remaps[node.name];
   if (!remap)
-    return ;
+    return;
   var ownBinding = scope.getBindingIdentifier(node.name);
   if (ownBinding === remap.binding) {
     node.name = remap.uid;
@@ -115,11 +115,11 @@ var letReferenceBlockVisitor = {enter: function enter(node, parent, scope, state
   }};
 var letReferenceFunctionVisitor = {enter: function enter(node, parent, scope, state) {
     if (!this.isReferencedIdentifier())
-      return ;
+      return;
     if (scope.hasOwnBinding(node.name))
-      return ;
+      return;
     if (!state.letReferences[node.name])
-      return ;
+      return;
     state.closurify = true;
   }};
 var hoistVarDeclarationsVisitor = {enter: function enter(node, parent, scope, self) {
@@ -163,14 +163,14 @@ var loopVisitor = {enter: function enter(node, parent, scope, state) {
     if (loopText) {
       if (node.label) {
         if (state.innerLabels.indexOf(node.label.name) >= 0) {
-          return ;
+          return;
         }
         loopText = "" + loopText + "|" + node.label.name;
       } else {
         if (state.ignoreLabeless)
-          return ;
+          return;
         if (t.isBreakStatement(node) && t.isSwitchCase(parent))
-          return ;
+          return;
       }
       state.hasBreakContinue = true;
       state.map[loopText] = node;
@@ -201,13 +201,13 @@ var BlockScoping = (function() {
   BlockScoping.prototype.run = function run() {
     var block = this.block;
     if (block._letDone)
-      return ;
+      return;
     block._letDone = true;
     var needsClosure = this.getLetReferences();
     if (t.isFunction(this.parent) || t.isProgram(this.block))
-      return ;
+      return;
     if (!this.hasLetReferences)
-      return ;
+      return;
     if (needsClosure) {
       this.wrapClosure();
     } else {
@@ -232,7 +232,7 @@ var BlockScoping = (function() {
       }
     }
     if (!hasRemaps)
-      return ;
+      return;
     var loopParent = this.loopParent;
     if (loopParent) {
       traverseReplace(loopParent.right, loopParent, scope, remaps);
@@ -299,7 +299,7 @@ var BlockScoping = (function() {
       this.hasLetReferences = true;
     }
     if (!this.hasLetReferences)
-      return ;
+      return;
     standardizeLets(declarators);
     var state = {
       letReferences: this.letReferences,

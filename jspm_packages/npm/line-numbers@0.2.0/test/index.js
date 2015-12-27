@@ -1,7 +1,7 @@
 /* */ 
-var fs = require("fs");
-var assert = require("assert");
-var lineNumbers = require("../../line-numbers@0.2.0");
+var fs = require('fs');
+var assert = require('assert');
+var lineNumbers = require('../index');
 var sumJS = ["/**", " * Sums two numbers.", " *", " * @param a Number", " * @param b Number", " * @returns Number", " */", "", "function sum(a, b) {", "  return a + b", "}"];
 var defaultOutput = ["  1 | /**", "  2 |  * Sums two numbers.", "  3 |  *", "  4 |  * @param a Number", "  5 |  * @param b Number", "  6 |  * @returns Number", "  7 |  */", "  8 | ", "  9 | function sum(a, b) {", " 10 |   return a + b", " 11 | }"];
 suite("lineNumbers", function() {

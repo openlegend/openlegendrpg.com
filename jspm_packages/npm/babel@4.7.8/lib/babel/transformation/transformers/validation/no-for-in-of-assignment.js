@@ -7,8 +7,8 @@ var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
 exports.ForOfStatement = ForOfStatement;
-var messages = _interopRequireWildcard(require("../../../messages"));
-var _types = require("../../../types/index");
+var messages = _interopRequireWildcard(require('../../../messages'));
+var _types = require('../../../types/index');
 var t = _interopRequire(_types);
 exports.check = _types.isFor;
 function ForOfStatement(node, parent, scope, file) {

@@ -1,5 +1,5 @@
 /* */ 
-var before = require("./before");
+var before = require('./before');
 function once(func) {
   return before(func, 2);
 }

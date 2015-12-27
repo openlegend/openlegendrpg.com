@@ -1,6 +1,6 @@
 /* */ 
-var isIndex = require("./isIndex"),
-    isLength = require("./isLength");
+var isIndex = require('./isIndex'),
+    isLength = require('./isLength');
 function baseAt(collection, props) {
   var index = -1,
       length = collection.length,

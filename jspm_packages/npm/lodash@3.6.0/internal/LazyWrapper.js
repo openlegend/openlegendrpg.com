@@ -1,6 +1,6 @@
 /* */ 
-var baseCreate = require("./baseCreate"),
-    baseLodash = require("./baseLodash");
+var baseCreate = require('./baseCreate'),
+    baseLodash = require('./baseLodash');
 var POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
 function LazyWrapper(value) {
   this.__wrapped__ = value;

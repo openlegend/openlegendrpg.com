@@ -1,6 +1,6 @@
 /* */ 
-var bn = require("bn.js");
-var elliptic = require("../../elliptic");
+var bn = require('bn.js');
+var elliptic = require('../../elliptic');
 var utils = elliptic.utils;
 var assert = utils.assert;
 function KeyPair(ec, priv, pub) {
@@ -25,7 +25,7 @@ function KeyPair(ec, priv, pub) {
   this.priv = null;
   this.pub = null;
   if (this._importPublicHex(priv, pub))
-    return ;
+    return;
   if (pub === 'hex')
     pub = null;
   if (priv)

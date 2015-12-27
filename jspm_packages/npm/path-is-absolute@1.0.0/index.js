@@ -16,4 +16,4 @@
   module.exports = process.platform === 'win32' ? win32 : posix;
   module.exports.posix = posix;
   module.exports.win32 = win32;
-})(require("process"));
+})(require('process'));

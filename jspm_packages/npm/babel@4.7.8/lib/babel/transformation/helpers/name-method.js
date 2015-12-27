@@ -9,15 +9,15 @@ var _interopRequire = function(obj) {
 exports.custom = custom;
 exports.property = property;
 exports.bare = bare;
-var getFunctionArity = _interopRequire(require("./get-function-arity"));
-var util = _interopRequireWildcard(require("../../util"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var getFunctionArity = _interopRequire(require('./get-function-arity'));
+var util = _interopRequireWildcard(require('../../util'));
+var t = _interopRequireWildcard(require('../../types/index'));
 var visitor = {enter: function enter(node, parent, scope, state) {
     if (!this.isReferencedIdentifier({name: state.name}))
-      return ;
+      return;
     var localDeclar = scope.getBindingIdentifier(state.name);
     if (localDeclar !== state.outerDeclar)
-      return ;
+      return;
     state.selfReference = true;
     this.stop();
   }};

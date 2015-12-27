@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
-  var B = require("../index").Buffer;
-  var test = require("tape");
+  var B = require('../index').Buffer;
+  var test = require('tape');
   if (process.env.OBJECT_IMPL)
     B.TYPED_ARRAY_SUPPORT = false;
   test('buffer.toJSON', function(t) {
@@ -94,4 +94,4 @@
     t.equal((new B('hallo')).slice(10, 2).toString(), '');
     t.end();
   });
-})(require("process"));
+})(require('process'));

@@ -1,5 +1,5 @@
 /* */ 
-var isFunction = require("../lang/isFunction");
+var isFunction = require('../lang/isFunction');
 function result(object, key, defaultValue) {
   var value = object == null ? undefined : object[key];
   if (typeof value == 'undefined') {

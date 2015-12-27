@@ -1,6 +1,6 @@
 /* */ 
 (function(Buffer) {
-  var createHash = require("create-hash");
+  var createHash = require('create-hash');
   module.exports = function(seed, len) {
     var t = new Buffer('');
     var i = 0,
@@ -16,4 +16,4 @@
     out.writeUInt32BE(c, 0);
     return out;
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

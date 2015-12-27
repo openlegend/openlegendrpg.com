@@ -1,7 +1,7 @@
 /* */ 
-var baseClone = require("../internal/baseClone"),
-    bindCallback = require("../internal/bindCallback"),
-    isIterateeCall = require("../internal/isIterateeCall");
+var baseClone = require('../internal/baseClone'),
+    bindCallback = require('../internal/bindCallback'),
+    isIterateeCall = require('../internal/isIterateeCall');
 function clone(value, isDeep, customizer, thisArg) {
   if (isDeep && typeof isDeep != 'boolean' && isIterateeCall(value, isDeep, customizer)) {
     isDeep = false;

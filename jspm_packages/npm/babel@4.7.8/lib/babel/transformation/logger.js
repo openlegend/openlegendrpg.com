@@ -8,7 +8,7 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var util = _interopRequireWildcard(require("../util"));
+var util = _interopRequireWildcard(require('../util'));
 var Logger = (function() {
   function Logger(file) {
     _classCallCheck(this, Logger);

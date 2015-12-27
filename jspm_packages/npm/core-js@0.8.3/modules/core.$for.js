@@ -1,10 +1,10 @@
 /* */ 
 'use strict';
-var $ = require("./$"),
-    ctx = require("./$.ctx"),
-    safe = require("./$.uid").safe,
-    $def = require("./$.def"),
-    $iter = require("./$.iter"),
+var $ = require('./$'),
+    ctx = require('./$.ctx'),
+    safe = require('./$.uid').safe,
+    $def = require('./$.def'),
+    $iter = require('./$.iter'),
     ENTRIES = safe('entries'),
     FN = safe('fn'),
     ITER = safe('iter'),

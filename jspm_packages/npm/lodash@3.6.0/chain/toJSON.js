@@ -1,2 +1,2 @@
 /* */ 
-module.exports = require("./wrapperValue");
+module.exports = require('./wrapperValue');

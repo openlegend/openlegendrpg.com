@@ -1,13 +1,13 @@
 /* */ 
 "format cjs";
 if (typeof define !== 'function') {
-  var define = require("amdefine")(module, require);
+  var define = require('amdefine')(module, require);
 }
 define(function(require, exports, module) {
-  var base64VLQ = require("./base64-vlq");
-  var util = require("./util");
-  var ArraySet = require("./array-set").ArraySet;
-  var MappingList = require("./mapping-list").MappingList;
+  var base64VLQ = require('./base64-vlq');
+  var util = require('./util');
+  var ArraySet = require('./array-set').ArraySet;
+  var MappingList = require('./mapping-list').MappingList;
   function SourceMapGenerator(aArgs) {
     if (!aArgs) {
       aArgs = {};
@@ -156,9 +156,9 @@ define(function(require, exports, module) {
   };
   SourceMapGenerator.prototype._validateMapping = function SourceMapGenerator_validateMapping(aGenerated, aOriginal, aSource, aName) {
     if (aGenerated && 'line' in aGenerated && 'column' in aGenerated && aGenerated.line > 0 && aGenerated.column >= 0 && !aOriginal && !aSource && !aName) {
-      return ;
+      return;
     } else if (aGenerated && 'line' in aGenerated && 'column' in aGenerated && aOriginal && 'line' in aOriginal && 'column' in aOriginal && aGenerated.line > 0 && aGenerated.column >= 0 && aOriginal.line > 0 && aOriginal.column >= 0 && aSource) {
-      return ;
+      return;
     } else {
       throw new Error('Invalid mapping: ' + JSON.stringify({
         generated: aGenerated,

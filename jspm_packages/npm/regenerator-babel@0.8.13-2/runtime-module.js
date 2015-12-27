@@ -4,7 +4,7 @@ var hasOwn = Object.prototype.hasOwnProperty;
 var hadRuntime = hasOwn.call(g, "regeneratorRuntime");
 var oldRuntime = hadRuntime && g.regeneratorRuntime;
 delete g.regeneratorRuntime;
-module.exports = require("./runtime");
+module.exports = require('./runtime');
 if (hadRuntime) {
   g.regeneratorRuntime = oldRuntime;
 } else {

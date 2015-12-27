@@ -1,12 +1,12 @@
 /* */ 
-var arrayMap = require("../internal/arrayMap"),
-    baseDifference = require("../internal/baseDifference"),
-    baseFlatten = require("../internal/baseFlatten"),
-    bindCallback = require("../internal/bindCallback"),
-    keysIn = require("./keysIn"),
-    pickByArray = require("../internal/pickByArray"),
-    pickByCallback = require("../internal/pickByCallback"),
-    restParam = require("../function/restParam");
+var arrayMap = require('../internal/arrayMap'),
+    baseDifference = require('../internal/baseDifference'),
+    baseFlatten = require('../internal/baseFlatten'),
+    bindCallback = require('../internal/bindCallback'),
+    keysIn = require('./keysIn'),
+    pickByArray = require('../internal/pickByArray'),
+    pickByCallback = require('../internal/pickByCallback'),
+    restParam = require('../function/restParam');
 var omit = restParam(function(object, props) {
   if (object == null) {
     return {};

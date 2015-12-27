@@ -1,8 +1,8 @@
 /* */ 
-var isArguments = require("../lang/isArguments"),
-    isArray = require("../lang/isArray"),
-    isLength = require("./isLength"),
-    isObjectLike = require("./isObjectLike");
+var isArguments = require('../lang/isArguments'),
+    isArray = require('../lang/isArray'),
+    isLength = require('./isLength'),
+    isObjectLike = require('./isObjectLike');
 function baseFlatten(array, isDeep, isStrict) {
   var index = -1,
       length = array.length,

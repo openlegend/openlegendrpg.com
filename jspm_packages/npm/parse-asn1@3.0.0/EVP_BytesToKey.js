@@ -1,6 +1,6 @@
 /* */ 
 (function(Buffer) {
-  var createHash = require("create-hash");
+  var createHash = require('create-hash');
   module.exports = function evp(password, salt, keyLen) {
     keyLen = keyLen / 8;
     var ki = 0;
@@ -40,4 +40,4 @@
     }
     return key;
   };
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

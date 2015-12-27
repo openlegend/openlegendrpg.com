@@ -7,9 +7,9 @@
   exports.save = save;
   exports.load = load;
   exports.get = get;
-  var path = _interopRequire(require("path"));
-  var os = _interopRequire(require("os"));
-  var fs = _interopRequire(require("fs"));
+  var path = _interopRequire(require('path'));
+  var os = _interopRequire(require('os'));
+  var fs = _interopRequire(require('fs'));
   var FILENAME = process.env.BABEL_CACHE_PATH || path.join(os.tmpdir(), "babel.json");
   var data = {};
   function save() {
@@ -17,7 +17,7 @@
   }
   function load() {
     if (process.env.BABEL_DISABLE_CACHE)
-      return ;
+      return;
     process.on("exit", save);
     var sigint = (function(_sigint) {
       var _sigintWrapper = function sigint() {
@@ -34,15 +34,15 @@
     });
     process.on("SIGINT", sigint);
     if (!fs.existsSync(FILENAME))
-      return ;
+      return;
     try {
       data = JSON.parse(fs.readFileSync(FILENAME));
     } catch (err) {
-      return ;
+      return;
     }
   }
   function get() {
     return data;
   }
   exports.__esModule = true;
-})(require("process"));
+})(require('process'));

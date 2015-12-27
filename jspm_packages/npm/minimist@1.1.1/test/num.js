@@ -1,6 +1,6 @@
 /* */ 
-var parse = require("../../minimist@1.1.1");
-var test = require("tape");
+var parse = require('../index');
+var test = require('tape');
 test('nums', function(t) {
   var argv = parse(['-x', '1234', '-y', '5.67', '-z', '1e7', '-w', '10f', '--hex', '0xdeadbeef', '789']);
   t.deepEqual(argv, {

@@ -5,7 +5,7 @@ var _interopRequireWildcard = function(obj) {
 };
 exports.evaluateTruthy = evaluateTruthy;
 exports.evaluate = evaluate;
-var t = _interopRequireWildcard(require("./index"));
+var t = _interopRequireWildcard(require('./index'));
 function evaluateTruthy(node, scope) {
   var res = evaluate(node, scope);
   if (res.confident)
@@ -22,7 +22,7 @@ function evaluate(node, scope) {
   };
   function evaluate(node) {
     if (!confident)
-      return ;
+      return;
     if (t.isSequenceExpression(node)) {
       return evaluate(node.expressions[node.expressions.length - 1]);
     }

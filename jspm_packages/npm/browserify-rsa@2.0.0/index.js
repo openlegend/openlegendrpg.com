@@ -1,7 +1,7 @@
 /* */ 
 (function(Buffer) {
-  var bn = require("bn.js");
-  var randomBytes = require("randombytes");
+  var bn = require('bn.js');
+  var randomBytes = require('randombytes');
   module.exports = crt;
   function blind(priv) {
     var r = getr(priv);
@@ -45,4 +45,4 @@
     }
     return r;
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

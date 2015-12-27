@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer, process) {
-  var test = require("tape");
-  var nodeCrypto = require("../diffie-hellman@3.0.1");
-  var myCrypto = require("./browser");
+  var test = require('tape');
+  var nodeCrypto = require('../diffie-hellman@3.0.1');
+  var myCrypto = require('./browser');
   var mods = ['modp1', 'modp2', 'modp5', 'modp14', 'modp15', 'modp16', 'modp17', 'modp18'];
   function isNode10() {
     return process.version && process.version.split('.').length === 3 && parseInt(process.version.split('.')[1], 10) <= 10;
@@ -121,4 +121,4 @@
       t.equals(dh1.verifyError, dh2.verifyError, 'same error for good prime non testable generator');
     });
   }
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

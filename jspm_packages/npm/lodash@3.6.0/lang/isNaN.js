@@ -1,5 +1,5 @@
 /* */ 
-var isNumber = require("./isNumber");
+var isNumber = require('./isNumber');
 function isNaN(value) {
   return isNumber(value) && value != +value;
 }

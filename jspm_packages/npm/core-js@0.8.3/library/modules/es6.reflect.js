@@ -1,11 +1,11 @@
 /* */ 
-var $ = require("./$"),
-    $def = require("./$.def"),
-    setProto = require("./$.set-proto"),
-    $iter = require("./$.iter"),
-    ITER = require("./$.uid").safe('iter'),
+var $ = require('./$'),
+    $def = require('./$.def'),
+    setProto = require('./$.set-proto'),
+    $iter = require('./$.iter'),
+    ITER = require('./$.uid').safe('iter'),
     step = $iter.step,
-    assert = require("./$.assert"),
+    assert = require('./$.assert'),
     isObject = $.isObject,
     getDesc = $.getDesc,
     setDesc = $.setDesc,
@@ -75,7 +75,7 @@ function set(target, propertyKey, V) {
   return ownDesc.set === undefined ? false : (ownDesc.set.call(receiver, V), true);
 }
 var reflect = {
-  apply: require("./$.ctx")(Function.call, apply, 3),
+  apply: require('./$.ctx')(Function.call, apply, 3),
   construct: function construct(target, argumentsList) {
     var proto = assert.fn(arguments.length < 3 ? target : arguments[2]).prototype,
         instance = $.create(isObject(proto) ? proto : Object.prototype),
@@ -103,7 +103,7 @@ var reflect = {
   isExtensible: function isExtensible(target) {
     return !!_isExtensible(assertObject(target));
   },
-  ownKeys: require("./$.own-keys"),
+  ownKeys: require('./$.own-keys'),
   preventExtensions: wrap(Object.preventExtensions || $.it),
   set: set
 };

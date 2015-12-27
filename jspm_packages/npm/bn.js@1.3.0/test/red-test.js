@@ -1,7 +1,7 @@
 /* */ 
-var assert = require("assert");
-var BN = require("../lib/bn").BN;
-var fixtures = require("./fixtures");
+var assert = require('assert');
+var BN = require('../lib/bn').BN;
+var fixtures = require('./fixtures');
 describe('BN.js/Reduction context', function() {
   function testMethod(name, fn) {
     describe(name + ' method', function() {

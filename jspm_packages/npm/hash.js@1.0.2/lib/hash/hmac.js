@@ -1,6 +1,6 @@
 /* */ 
 var hmac = exports;
-var hash = require("../hash");
+var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
 function Hmac(hash, key, enc) {

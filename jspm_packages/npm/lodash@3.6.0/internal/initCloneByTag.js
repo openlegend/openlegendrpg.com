@@ -1,5 +1,5 @@
 /* */ 
-var bufferClone = require("./bufferClone");
+var bufferClone = require('./bufferClone');
 var boolTag = '[object Boolean]',
     dateTag = '[object Date]',
     numberTag = '[object Number]',

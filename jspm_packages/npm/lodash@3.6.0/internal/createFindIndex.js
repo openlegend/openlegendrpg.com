@@ -1,6 +1,6 @@
 /* */ 
-var baseCallback = require("./baseCallback"),
-    baseFindIndex = require("./baseFindIndex");
+var baseCallback = require('./baseCallback'),
+    baseFindIndex = require('./baseFindIndex');
 function createFindIndex(fromRight) {
   return function(array, predicate, thisArg) {
     if (!(array && array.length)) {

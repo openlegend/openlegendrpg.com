@@ -1,9 +1,9 @@
 /* */ 
 'use strict';
-var test = require("tap").test,
-    rx = require("../index"),
-    fs = require("fs"),
-    convert = require("../index");
+var test = require('tap').test,
+    rx = require('../index'),
+    fs = require('fs'),
+    convert = require('../index');
 test('\nresolving a "/*# sourceMappingURL=map-file-comment.css.map*/" style comment inside a given css content', function(t) {
   var css = fs.readFileSync(__dirname + '/fixtures/map-file-comment.css', 'utf8');
   var conv = convert.fromMapFileSource(css, __dirname + '/fixtures');

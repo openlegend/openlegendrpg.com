@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer, process) {
-  var SourceMapConsumer = require("source-map").SourceMapConsumer;
-  var path = require("path");
-  var fs = require("fs");
+  var SourceMapConsumer = require('source-map').SourceMapConsumer;
+  var path = require('path');
+  var fs = require('fs');
   var alreadyInstalled = false;
   var emptyCacheBetweenOperations = false;
   var fileContentsCache = {};
@@ -286,4 +286,4 @@
       }
     }
   };
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

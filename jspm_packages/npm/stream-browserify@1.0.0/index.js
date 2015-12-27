@@ -1,13 +1,13 @@
 /* */ 
 module.exports = Stream;
-var EE = require("events").EventEmitter;
-var inherits = require("inherits");
+var EE = require('events').EventEmitter;
+var inherits = require('inherits');
 inherits(Stream, EE);
-Stream.Readable = require("readable-stream/readable");
-Stream.Writable = require("readable-stream/writable");
-Stream.Duplex = require("readable-stream/duplex");
-Stream.Transform = require("readable-stream/transform");
-Stream.PassThrough = require("readable-stream/passthrough");
+Stream.Readable = require('readable-stream/readable');
+Stream.Writable = require('readable-stream/writable');
+Stream.Duplex = require('readable-stream/duplex');
+Stream.Transform = require('readable-stream/transform');
+Stream.PassThrough = require('readable-stream/passthrough');
 Stream.Stream = Stream;
 function Stream() {
   EE.call(this);
@@ -35,13 +35,13 @@ Stream.prototype.pipe = function(dest, options) {
   var didOnEnd = false;
   function onend() {
     if (didOnEnd)
-      return ;
+      return;
     didOnEnd = true;
     dest.end();
   }
   function onclose() {
     if (didOnEnd)
-      return ;
+      return;
     didOnEnd = true;
     if (typeof dest.destroy === 'function')
       dest.destroy();

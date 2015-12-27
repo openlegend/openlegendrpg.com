@@ -19,8 +19,8 @@ var _classCallCheck = function(instance, Constructor) {
   }
 };
 module.exports = ReplaceSupers;
-var messages = _interopRequireWildcard(require("../../messages"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var messages = _interopRequireWildcard(require('../../messages'));
+var t = _interopRequireWildcard(require('../../types/index'));
 function isIllegalBareSuper(node, parent) {
   if (!isSuper(node, parent))
     return false;
@@ -97,7 +97,7 @@ var ReplaceSupers = (function() {
     var methodName = methodNode.key;
     var superRef = this.superRef || t.identifier("Function");
     if (parent.property === id) {
-      return ;
+      return;
     } else if (t.isCallExpression(parent, {callee: id})) {
       parent.arguments.unshift(t.thisExpression());
       if (methodName.name === "constructor") {
@@ -123,9 +123,9 @@ var ReplaceSupers = (function() {
     } else if (t.isCallExpression(node)) {
       var callee = node.callee;
       if (!t.isMemberExpression(callee))
-        return ;
+        return;
       if (callee.object.name !== "super")
-        return ;
+        return;
       this.hasSuper = true;
       t.appendToMemberExpression(callee, t.identifier("call"));
       node.arguments.unshift(getThisReference());
@@ -163,7 +163,7 @@ var ReplaceSupers = (function() {
       return this.setSuperProperty(node.left.property, node.right, node.left.computed, getThisReference());
     }
     if (!property)
-      return ;
+      return;
     this.hasSuper = true;
     thisReference = getThisReference();
     var superProperty = this.getSuperProperty(property, computed, thisReference);

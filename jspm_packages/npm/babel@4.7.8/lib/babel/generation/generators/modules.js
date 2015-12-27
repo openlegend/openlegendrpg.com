@@ -12,8 +12,8 @@ exports.ExportBatchSpecifier = ExportBatchSpecifier;
 exports.ExportDeclaration = ExportDeclaration;
 exports.ImportDeclaration = ImportDeclaration;
 exports.ImportBatchSpecifier = ImportBatchSpecifier;
-var each = _interopRequire(require("lodash/collection/each"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var each = _interopRequire(require('lodash/collection/each'));
+var t = _interopRequireWildcard(require('../../types/index'));
 function ImportSpecifier(node, print) {
   if (t.isSpecifierDefault(node)) {
     print(t.getSpecifierName(node));
@@ -40,7 +40,7 @@ function ExportDeclaration(node, print) {
   if (node.declaration) {
     print(node.declaration);
     if (t.isStatement(node.declaration))
-      return ;
+      return;
   } else {
     if (specifiers.length === 1 && t.isExportBatchSpecifier(specifiers[0])) {
       print(specifiers[0]);

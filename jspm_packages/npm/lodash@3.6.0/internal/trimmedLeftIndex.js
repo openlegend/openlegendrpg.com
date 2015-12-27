@@ -1,5 +1,5 @@
 /* */ 
-var isSpace = require("./isSpace");
+var isSpace = require('./isSpace');
 function trimmedLeftIndex(string) {
   var index = -1,
       length = string.length;

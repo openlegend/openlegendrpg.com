@@ -1,12 +1,12 @@
 /* */ 
 (function(process) {
-  var convertSourceMap = require("convert-source-map");
-  var sourceMap = require("source-map");
-  var chokidar = require("chokidar");
-  var path = require("path");
-  var util = require("./util");
-  var fs = require("fs");
-  var _ = require("lodash");
+  var convertSourceMap = require('convert-source-map');
+  var sourceMap = require('source-map');
+  var chokidar = require('chokidar');
+  var path = require('path');
+  var util = require('./util');
+  var fs = require('fs');
+  var _ = require('lodash');
   module.exports = function(commander, filenames) {
     var results = [];
     var buildResult = function() {
@@ -71,7 +71,7 @@
       results = [];
       _.each(filenames, function(filename) {
         if (!fs.existsSync(filename))
-          return ;
+          return;
         var stat = fs.statSync(filename);
         if (stat.isDirectory()) {
           var dirname = filename;
@@ -111,4 +111,4 @@
       stdin();
     }
   };
-})(require("process"));
+})(require('process'));

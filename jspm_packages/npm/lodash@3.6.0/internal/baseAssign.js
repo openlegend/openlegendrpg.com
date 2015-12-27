@@ -1,6 +1,6 @@
 /* */ 
-var baseCopy = require("./baseCopy"),
-    keys = require("../object/keys");
+var baseCopy = require('./baseCopy'),
+    keys = require('../object/keys');
 function baseAssign(object, source, customizer) {
   var props = keys(source);
   if (!customizer) {

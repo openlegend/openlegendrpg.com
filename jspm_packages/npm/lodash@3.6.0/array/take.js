@@ -1,6 +1,6 @@
 /* */ 
-var baseSlice = require("../internal/baseSlice"),
-    isIterateeCall = require("../internal/isIterateeCall");
+var baseSlice = require('../internal/baseSlice'),
+    isIterateeCall = require('../internal/isIterateeCall');
 function take(array, n, guard) {
   var length = array ? array.length : 0;
   if (!length) {

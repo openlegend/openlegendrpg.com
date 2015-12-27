@@ -1,2 +1,2 @@
 /* */ 
-module.exports = require("./forEach");
+module.exports = require('./forEach');

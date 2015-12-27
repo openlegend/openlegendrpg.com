@@ -20,4 +20,4 @@
   function oldBrowser() {
     throw new Error('secure random number generation not supported by this browser\n' + 'use chrome, FireFox or Internet Explorer 11');
   }
-})(require("buffer").Buffer, require("process"));
+})(require('buffer').Buffer, require('process'));

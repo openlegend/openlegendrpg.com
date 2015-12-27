@@ -7,12 +7,12 @@ var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
 module.exports = traverse;
-var TraversalContext = _interopRequire(require("./context"));
-var includes = _interopRequire(require("lodash/collection/includes"));
-var t = _interopRequireWildcard(require("../types/index"));
+var TraversalContext = _interopRequire(require('./context'));
+var includes = _interopRequire(require('lodash/collection/includes'));
+var t = _interopRequireWildcard(require('../types/index'));
 function traverse(parent, opts, scope, state) {
   if (!parent)
-    return ;
+    return;
   if (!opts.noScope && !scope) {
     if (parent.type !== "Program" && parent.type !== "File") {
       throw new Error("Must pass a scope unless traversing a Program/File got a " + parent.type + " node");
@@ -35,11 +35,11 @@ function traverse(parent, opts, scope, state) {
 traverse.node = function(node, opts, scope, state, parentPath) {
   var keys = t.VISITOR_KEYS[node.type];
   if (!keys)
-    return ;
+    return;
   var context = new TraversalContext(scope, opts, state, parentPath);
   for (var i = 0; i < keys.length; i++) {
     if (context.visit(node, keys[i])) {
-      return ;
+      return;
     }
   }
 };

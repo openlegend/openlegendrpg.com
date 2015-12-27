@@ -1,6 +1,6 @@
 /* */ 
-var test = require("tap").test,
-    LRU = require("../lib/lru-cache");
+var test = require('tap').test,
+    LRU = require('../lib/lru-cache');
 test("basic", function(t) {
   var cache = new LRU({max: 10});
   cache.set("key", "value");

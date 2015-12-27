@@ -1,5 +1,5 @@
 /* */ 
-var toObject = require("./toObject");
+var toObject = require('./toObject');
 function createBaseFor(fromRight) {
   return function(object, iteratee, keysFunc) {
     var iterable = toObject(object),

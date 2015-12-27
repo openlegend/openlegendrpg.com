@@ -1,1 +1,1 @@
-module.exports = require("npm:esutils@1.1.6/lib/utils");
+module.exports = require("npm:esutils@1.1.6/lib/utils.js");

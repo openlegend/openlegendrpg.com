@@ -1,18 +1,18 @@
 /* */ 
-var assert = require("assert");
-var types = require("./types");
+var assert = require('assert');
+var types = require('./types');
 var n = types.namedTypes;
 var isArray = types.builtInTypes.array;
 var isObject = types.builtInTypes.object;
-var linesModule = require("./lines");
+var linesModule = require('./lines');
 var fromString = linesModule.fromString;
 var Lines = linesModule.Lines;
 var concat = linesModule.concat;
-var comparePos = require("./util").comparePos;
-var childNodesCacheKey = require("private").makeUniqueKey();
+var comparePos = require('./util').comparePos;
+var childNodesCacheKey = require('private').makeUniqueKey();
 function getSortedChildNodes(node, resultArray) {
   if (!node) {
-    return ;
+    return;
   }
   if (resultArray) {
     if (n.Node.check(node) && n.SourceLocation.check(node.loc)) {
@@ -22,7 +22,7 @@ function getSortedChildNodes(node, resultArray) {
         }
       }
       resultArray.splice(i + 1, 0, node);
-      return ;
+      return;
     }
   } else if (node[childNodesCacheKey]) {
     return node[childNodesCacheKey];
@@ -33,7 +33,7 @@ function getSortedChildNodes(node, resultArray) {
   } else if (isObject.check(node)) {
     names = types.getFieldNames(node);
   } else {
-    return ;
+    return;
   }
   if (!resultArray) {
     Object.defineProperty(node, childNodesCacheKey, {
@@ -56,7 +56,7 @@ function decorateComment(node, comment) {
     var child = childNodes[middle];
     if (comparePos(child.loc.start, comment.loc.start) <= 0 && comparePos(comment.loc.end, child.loc.end) <= 0) {
       decorateComment(comment.enclosingNode = child, comment);
-      return ;
+      return;
     }
     if (comparePos(child.loc.end, comment.loc.start) <= 0) {
       var precedingNode = child;
@@ -79,7 +79,7 @@ function decorateComment(node, comment) {
 }
 exports.attach = function(comments, ast, lines) {
   if (!isArray.check(comments)) {
-    return ;
+    return;
   }
   var tiesToBreak = [];
   comments.forEach(function(comment) {
@@ -116,7 +116,7 @@ exports.attach = function(comments, ast, lines) {
 function breakTies(tiesToBreak, lines) {
   var tieCount = tiesToBreak.length;
   if (tieCount === 0) {
-    return ;
+    return;
   }
   var pn = tiesToBreak[0].precedingNode;
   var fn = tiesToBreak[0].followingNode;

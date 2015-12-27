@@ -4,7 +4,7 @@
     var original = undefined;
     iconv.extendNodeEncodings = function extendNodeEncodings() {
       if (original)
-        return ;
+        return;
       original = {};
       var nodeNativeEncodings = {
         'hex': true,
@@ -21,7 +21,7 @@
       Buffer.isNativeEncoding = function(enc) {
         return nodeNativeEncodings[enc && enc.toLowerCase()];
       };
-      var SlowBuffer = require("buffer").SlowBuffer;
+      var SlowBuffer = require('buffer').SlowBuffer;
       original.SlowBufferToString = SlowBuffer.prototype.toString;
       SlowBuffer.prototype.toString = function(encoding, start, end) {
         encoding = String(encoding || 'utf8').toLowerCase();
@@ -132,7 +132,7 @@
         return length;
       };
       if (iconv.supportsStreams) {
-        var Readable = require("stream").Readable;
+        var Readable = require('stream').Readable;
         original.ReadableSetEncoding = Readable.prototype.setEncoding;
         Readable.prototype.setEncoding = function setEncoding(enc, options) {
           if (Buffer.isNativeEncoding(enc))
@@ -147,7 +147,7 @@
       if (!original)
         throw new Error("require('iconv-lite').undoExtendNodeEncodings(): Nothing to undo; extendNodeEncodings() is not called.");
       delete Buffer.isNativeEncoding;
-      var SlowBuffer = require("buffer").SlowBuffer;
+      var SlowBuffer = require('buffer').SlowBuffer;
       SlowBuffer.prototype.toString = original.SlowBufferToString;
       SlowBuffer.prototype.write = original.SlowBufferWrite;
       Buffer.isEncoding = original.BufferIsEncoding;
@@ -155,11 +155,11 @@
       Buffer.prototype.toString = original.BufferToString;
       Buffer.prototype.write = original.BufferWrite;
       if (iconv.supportsStreams) {
-        var Readable = require("stream").Readable;
+        var Readable = require('stream').Readable;
         Readable.prototype.setEncoding = original.ReadableSetEncoding;
         delete Readable.prototype.collect;
       }
       original = undefined;
     };
   };
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

@@ -1,6 +1,6 @@
 /* */ 
-var $ = require("./$"),
-    cof = require("./$.cof"),
+var $ = require('./$'),
+    cof = require('./$.cof'),
     RegExp = $.g.RegExp,
     Base = RegExp,
     proto = RegExp.prototype;
@@ -31,7 +31,7 @@ if ($.FW && $.DESC) {
   if (/./g.flags != 'g')
     $.setDesc(proto, 'flags', {
       configurable: true,
-      get: require("./$.replacer")(/^.*\/(\w*)$/, '$1')
+      get: require('./$.replacer')(/^.*\/(\w*)$/, '$1')
     });
 }
-require("./$.species")(RegExp);
+require('./$.species')(RegExp);

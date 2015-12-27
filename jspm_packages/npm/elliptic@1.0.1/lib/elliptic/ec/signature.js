@@ -1,13 +1,13 @@
 /* */ 
-var bn = require("bn.js");
-var elliptic = require("../../elliptic");
+var bn = require('bn.js');
+var elliptic = require('../../elliptic');
 var utils = elliptic.utils;
 var assert = utils.assert;
 function Signature(r, s) {
   if (r instanceof Signature)
     return r;
   if (this._importDER(r, s))
-    return ;
+    return;
   assert(r && s, 'Signature without r or s');
   this.r = new bn(r, 16);
   this.s = new bn(s, 16);

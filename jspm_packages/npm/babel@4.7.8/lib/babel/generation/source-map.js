@@ -11,8 +11,8 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var sourceMap = _interopRequire(require("source-map"));
-var t = _interopRequireWildcard(require("../types/index"));
+var sourceMap = _interopRequire(require('source-map'));
+var t = _interopRequireWildcard(require('../types/index'));
 var SourceMap = (function() {
   function SourceMap(position, opts, code) {
     _classCallCheck(this, SourceMap);
@@ -39,12 +39,12 @@ var SourceMap = (function() {
   SourceMap.prototype.mark = function mark(node, type) {
     var loc = node.loc;
     if (!loc)
-      return ;
+      return;
     var map = this.map;
     if (!map)
-      return ;
+      return;
     if (t.isProgram(node) || t.isFile(node))
-      return ;
+      return;
     var position = this.position;
     var generated = {
       line: position.line,

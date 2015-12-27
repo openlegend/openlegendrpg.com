@@ -1,7 +1,7 @@
 /* */ 
-var test = require("tape");
-var extend = require("./immutable");
-var mutableExtend = require("./mutable");
+var test = require('tape');
+var extend = require('./immutable');
+var mutableExtend = require('./mutable');
 test("merge", function(assert) {
   var a = {a: "foo"};
   var b = {b: "bar"};

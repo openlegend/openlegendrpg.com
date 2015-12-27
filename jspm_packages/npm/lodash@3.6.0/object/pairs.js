@@ -1,5 +1,5 @@
 /* */ 
-var keys = require("./keys");
+var keys = require('./keys');
 function pairs(object) {
   var index = -1,
       props = keys(object),

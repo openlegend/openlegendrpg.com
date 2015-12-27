@@ -10,11 +10,11 @@ exports.manipulateOptions = manipulateOptions;
 exports.Program = Program;
 exports.pre = pre;
 exports.Identifier = Identifier;
-var includes = _interopRequire(require("lodash/collection/includes"));
-var util = _interopRequireWildcard(require("../../../util"));
-var core = _interopRequire(require("core-js/library"));
-var has = _interopRequire(require("lodash/object/has"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var includes = _interopRequire(require('lodash/collection/includes'));
+var util = _interopRequireWildcard(require('../../../util'));
+var core = _interopRequire(require('core-js/library'));
+var has = _interopRequire(require('lodash/object/has'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var isSymboliterator = t.buildMatchMemberExpression("Symbol.iterator");
 var coreHas = function coreHas(node) {
   return node.name !== "_" && has(core, node.name);
@@ -26,7 +26,7 @@ var astVisitor = {enter: function enter(node, parent, scope, file) {
       var obj = node.object;
       prop = node.property;
       if (!t.isReferenced(obj, node))
-        return ;
+        return;
       if (!node.computed && coreHas(obj) && has(core[obj.name], prop.name) && !scope.getBindingIdentifier(obj.name)) {
         this.skip();
         return t.prependToMemberExpression(node, file.get("coreIdentifier"));
@@ -50,10 +50,10 @@ var astVisitor = {enter: function enter(node, parent, scope, file) {
       });
     } else if (this.isBinaryExpression()) {
       if (node.operator !== "in")
-        return ;
+        return;
       var left = node.left;
       if (!isSymboliterator(left))
-        return ;
+        return;
       return util.template("corejs-is-iterator", {
         CORE_ID: file.get("coreIdentifier"),
         VALUE: node.right

@@ -1,15 +1,15 @@
 /* */ 
 (function(Buffer) {
-  var BN = require("bn.js");
-  var MillerRabin = require("miller-rabin");
+  var BN = require('bn.js');
+  var MillerRabin = require('miller-rabin');
   var millerRabin = new MillerRabin();
   var TWENTYFOUR = new BN(24);
   var ELEVEN = new BN(11);
   var TEN = new BN(10);
   var THREE = new BN(3);
   var SEVEN = new BN(7);
-  var primes = require("./generatePrime");
-  var randomBytes = require("randombytes");
+  var primes = require('./generatePrime');
+  var randomBytes = require('randombytes');
   module.exports = DH;
   function setPublicKey(pub, enc) {
     enc = enc || 'utf8';
@@ -141,4 +141,4 @@
       return buf.toString(enc);
     }
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

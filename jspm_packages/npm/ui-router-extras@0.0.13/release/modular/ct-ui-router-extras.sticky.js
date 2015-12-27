@@ -571,4 +571,4 @@
       }
     }]);
   })(angular);
-})(require("process"));
+})(require('process'));

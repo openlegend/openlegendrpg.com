@@ -1,9 +1,9 @@
 /* */ 
-var LodashWrapper = require("./LodashWrapper"),
-    getData = require("./getData"),
-    getFuncName = require("./getFuncName"),
-    isArray = require("../lang/isArray"),
-    isLaziable = require("./isLaziable");
+var LodashWrapper = require('./LodashWrapper'),
+    getData = require('./getData'),
+    getFuncName = require('./getFuncName'),
+    isArray = require('../lang/isArray'),
+    isLaziable = require('./isLaziable');
 var FUNC_ERROR_TEXT = 'Expected a function';
 function createFlow(fromRight) {
   return function() {

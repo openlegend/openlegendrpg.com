@@ -1,9 +1,9 @@
 /* */ 
-var mkdirp = require("../../mkdirp@0.5.0").mkdirp;
-var path = require("path");
-var fs = require("fs");
+var mkdirp = require('../index').mkdirp;
+var path = require('path');
+var fs = require('fs');
 var exists = fs.exists || path.exists;
-var test = require("tap").test;
+var test = require('tap').test;
 test('race', function(t) {
   t.plan(6);
   var ps = ['', 'tmp'];

@@ -1,5 +1,5 @@
 /* */ 
-var types = require("../lib/types");
+var types = require('../lib/types');
 var Type = types.Type;
 var def = Type.def;
 var or = Type.or;
@@ -8,7 +8,7 @@ var isString = builtin.string;
 var isNumber = builtin.number;
 var isBoolean = builtin.boolean;
 var isRegExp = builtin.RegExp;
-var shared = require("../lib/shared");
+var shared = require('../lib/shared');
 var defaults = shared.defaults;
 var geq = shared.geq;
 def("Printable").field("loc", or(def("SourceLocation"), null), defaults["null"], true);

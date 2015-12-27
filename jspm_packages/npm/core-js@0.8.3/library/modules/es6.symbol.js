@@ -1,10 +1,10 @@
 /* */ 
 'use strict';
-var $ = require("./$"),
-    setTag = require("./$.cof").set,
-    uid = require("./$.uid"),
-    $def = require("./$.def"),
-    keyOf = require("./$.keyof"),
+var $ = require('./$'),
+    setTag = require('./$.cof').set,
+    uid = require('./$.uid'),
+    $def = require('./$.def'),
+    keyOf = require('./$.keyof'),
     has = $.has,
     hide = $.hide,
     getNames = $.getNames,
@@ -53,7 +53,7 @@ var symbolStatics = {
   }
 };
 $.each.call(('hasInstance,isConcatSpreadable,iterator,match,replace,search,' + 'species,split,toPrimitive,toStringTag,unscopables').split(','), function(it) {
-  var sym = require("./$.wks")(it);
+  var sym = require('./$.wks')(it);
   symbolStatics[it] = Symbol === Base ? sym : wrap(sym);
 });
 setter = true;

@@ -1,5 +1,5 @@
 /* */ 
-var createCtorWrapper = require("./createCtorWrapper");
+var createCtorWrapper = require('./createCtorWrapper');
 var BIND_FLAG = 1;
 function createPartialWrapper(func, bitmask, thisArg, partials) {
   var isBind = bitmask & BIND_FLAG,

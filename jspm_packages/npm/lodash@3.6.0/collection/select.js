@@ -1,2 +1,2 @@
 /* */ 
-module.exports = require("./filter");
+module.exports = require('./filter');

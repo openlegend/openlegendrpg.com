@@ -5,7 +5,7 @@ var _interopRequireWildcard = function(obj) {
 };
 exports.check = check;
 exports.Property = Property;
-var t = _interopRequireWildcard(require("../../../types/index"));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function check(node) {
   return t.isProperty(node) && (node.method || node.shorthand);
 }

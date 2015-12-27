@@ -594,7 +594,7 @@
     function bindJQuery() {
       var originalCleanData;
       if (bindJQueryFired) {
-        return ;
+        return;
       }
       jQuery = window.jQuery;
       if (jQuery && jQuery.fn.on) {
@@ -1028,7 +1028,7 @@
       var events = expandoStore && expandoStore.events;
       var handle = expandoStore && expandoStore.handle;
       if (!handle)
-        return ;
+        return;
       if (!type) {
         for (type in events) {
           if (type !== '$destroy') {
@@ -1042,7 +1042,7 @@
             var listenerFns = events[type];
             arrayRemove(listenerFns || [], fn);
             if (listenerFns && listenerFns.length > 0) {
-              return ;
+              return;
             }
           }
           removeEventListenerFn(element, type, handle);
@@ -1056,7 +1056,7 @@
       if (expandoStore) {
         if (name) {
           delete expandoStore.data[name];
-          return ;
+          return;
         }
         if (expandoStore.handle) {
           if (expandoStore.events.$destroy) {
@@ -1188,7 +1188,7 @@
         var fired = false;
         function trigger() {
           if (fired)
-            return ;
+            return;
           fired = true;
           fn();
         }
@@ -1372,7 +1372,7 @@
         var eventFns = events[type || event.type];
         var eventFnsLength = eventFns ? eventFns.length : 0;
         if (!eventFnsLength)
-          return ;
+          return;
         if (isUndefined(event.immediatePropagationStopped)) {
           var originalStopImmediatePropagation = event.stopImmediatePropagation;
           event.stopImmediatePropagation = function() {
@@ -1406,7 +1406,7 @@
         if (isDefined(unsupported))
           throw jqLiteMinErr('onargs', 'jqLite#on() does not support the `selector` or `eventData` parameters');
         if (!jqLiteAcceptsData(element)) {
-          return ;
+          return;
         }
         var expandoStore = jqLiteExpandoStore(element, true);
         var events = expandoStore.events;
@@ -1475,7 +1475,7 @@
       append: function(element, node) {
         var nodeType = element.nodeType;
         if (nodeType !== NODE_TYPE_ELEMENT && nodeType !== NODE_TYPE_DOCUMENT_FRAGMENT)
-          return ;
+          return;
         node = new JQLite(node);
         for (var i = 0,
             ii = node.length; i < ii; i++) {
@@ -1791,7 +1791,7 @@
             moduleFn;
         forEach(modulesToLoad, function(module) {
           if (loadedModules.get(module))
-            return ;
+            return;
           loadedModules.put(module, true);
           function runInvokeQueue(queue) {
             var i,
@@ -1951,7 +1951,7 @@
             return $location.hash();
           }, function autoScrollWatchAction(newVal, oldVal) {
             if (newVal === oldVal && newVal === '')
-              return ;
+              return;
             jqLiteDocumentLoaded(function() {
               $rootScope.$evalAsync(scroll);
             });
@@ -2256,7 +2256,7 @@
       }
       function fireUrlChange() {
         if (lastBrowserUrl === self.url() && lastHistoryState === cachedState) {
-          return ;
+          return;
         }
         lastBrowserUrl = self.url();
         lastHistoryState = cachedState;
@@ -2371,7 +2371,7 @@
                 refresh(lruEntry);
               }
               if (isUndefined(value))
-                return ;
+                return;
               if (!(key in data))
                 size++;
               data[key] = value;
@@ -2384,7 +2384,7 @@
               if (capacity < Number.MAX_VALUE) {
                 var lruEntry = lruHash[key];
                 if (!lruEntry)
-                  return ;
+                  return;
                 refresh(lruEntry);
               }
               return data[key];
@@ -2393,7 +2393,7 @@
               if (capacity < Number.MAX_VALUE) {
                 var lruEntry = lruHash[key];
                 if (!lruEntry)
-                  return ;
+                  return;
                 if (lruEntry == freshEnd)
                   freshEnd = lruEntry.p;
                 if (lruEntry == staleEnd)
@@ -3218,7 +3218,7 @@
                     break;
                   case '=':
                     if (optional && !attrs[attrName]) {
-                      return ;
+                      return;
                     }
                     parentGet = $parse(attrs[attrName]);
                     if (parentGet.literal) {
@@ -3449,7 +3449,7 @@
           return function delayedNodeLinkFn(ignoreChildLinkFn, scope, node, rootElement, boundTranscludeFn) {
             var childBoundTranscludeFn = boundTranscludeFn;
             if (scope.$$destroyed)
-              return ;
+              return;
             if (linkQueue) {
               linkQueue.push(scope, node, rootElement, childBoundTranscludeFn);
             } else {
@@ -3522,7 +3522,7 @@
           allOrNothing = ALL_OR_NOTHING_ATTRS[name] || allOrNothing;
           var interpolateFn = $interpolate(value, true, trustedContext, allOrNothing);
           if (!interpolateFn)
-            return ;
+            return;
           if (name === "multiple" && nodeName_(node) === "select") {
             throw $compileMinErr("selmulti", "Binding to the 'multiple' attribute is not supported. Element: {0}", startingTag(node));
           }
@@ -3540,7 +3540,7 @@
                     value = newValue;
                   }
                   if (!interpolateFn)
-                    return ;
+                    return;
                   attr[name] = interpolateFn(scope);
                   ($$observers[name] || ($$observers[name] = [])).$$inter = true;
                   (attr.$$observers && attr.$$observers[name].$$scope || scope).$watch(interpolateFn, function interpolateFnWatchAction(newValue, oldValue) {
@@ -4026,7 +4026,7 @@
           var parts = [];
           forEachSorted(params, function(value, key) {
             if (value === null || isUndefined(value))
-              return ;
+              return;
             if (!isArray(value))
               value = [value];
             forEach(value, function(v) {
@@ -4218,7 +4218,7 @@
               for (var i = 0,
                   ii = expressions.length; i < ii; i++) {
                 if (allOrNothing && isUndefined(values[i]))
-                  return ;
+                  return;
                 concat[expressionPositions[i]] = values[i];
               }
               return concat.join('');
@@ -4709,11 +4709,11 @@
         }
         $rootElement.on('click', function(event) {
           if (!html5Mode.rewriteLinks || event.ctrlKey || event.metaKey || event.shiftKey || event.which == 2 || event.button == 2)
-            return ;
+            return;
           var elm = jqLite(event.target);
           while (nodeName_(elm[0]) !== 'a') {
             if (elm[0] === $rootElement[0] || !(elm = elm.parent())[0])
-              return ;
+              return;
           }
           var absHref = elm.prop('href');
           var relHref = elm.attr('href') || elm.attr('xlink:href');
@@ -4721,7 +4721,7 @@
             absHref = urlResolve(absHref.animVal).href;
           }
           if (IGNORE_URI_REGEXP.test(absHref))
-            return ;
+            return;
           if (absHref && !elm.attr('target') && !event.isDefaultPrevented()) {
             if ($location.$$parseLinkUrl(absHref, relHref)) {
               event.preventDefault();
@@ -4745,7 +4745,7 @@
             $location.$$state = newState;
             defaultPrevented = $rootScope.$broadcast('$locationChangeStart', newUrl, oldUrl, newState, oldState).defaultPrevented;
             if ($location.absUrl() !== newUrl)
-              return ;
+              return;
             if (defaultPrevented) {
               $location.$$parse(oldUrl);
               $location.$$state = oldState;
@@ -4770,7 +4770,7 @@
               var newUrl = $location.absUrl();
               var defaultPrevented = $rootScope.$broadcast('$locationChangeStart', newUrl, oldUrl, $location.$$state, oldState).defaultPrevented;
               if ($location.absUrl() !== newUrl)
-                return ;
+                return;
               if (defaultPrevented) {
                 $location.$$parse(oldUrl);
                 $location.$$state = oldState;
@@ -5116,7 +5116,7 @@
               constant: true,
               value: string
             });
-            return ;
+            return;
           } else {
             string += ch;
           }
@@ -5875,7 +5875,7 @@
         function wrap(fn) {
           return function(value) {
             if (called)
-              return ;
+              return;
             called = true;
             fn.call(self, value);
           };
@@ -5940,7 +5940,7 @@
       }
       function scheduleProcessQueue(state) {
         if (state.processScheduled || !state.pending)
-          return ;
+          return;
         state.processScheduled = true;
         nextTick(function() {
           processQueue(state);
@@ -5955,7 +5955,7 @@
       Deferred.prototype = {
         resolve: function(val) {
           if (this.promise.$$state.status)
-            return ;
+            return;
           if (val === this.promise) {
             this.$$reject($qMinErr('qcycle', "Expected promise to be resolved with value other than itself '{0}'", val));
           } else {
@@ -5984,7 +5984,7 @@
         },
         reject: function(reason) {
           if (this.promise.$$state.status)
-            return ;
+            return;
           this.$$reject(reason);
         },
         $$reject: function(reason) {
@@ -6057,13 +6057,13 @@
           counter++;
           when(promise).then(function(value) {
             if (results.hasOwnProperty(key))
-              return ;
+              return;
             results[key] = value;
             if (!(--counter))
               deferred.resolve(results);
           }, function(reason) {
             if (results.hasOwnProperty(key))
-              return ;
+              return;
             deferred.reject(reason);
           });
         });
@@ -6270,7 +6270,7 @@
                   newItem,
                   oldItem;
               if (isUndefined(newValue))
-                return ;
+                return;
               if (!isObject(newValue)) {
                 if (oldValue !== newValue) {
                   oldValue = newValue;
@@ -6448,12 +6448,12 @@
           },
           $destroy: function() {
             if (this.$$destroyed)
-              return ;
+              return;
             var parent = this.$parent;
             this.$broadcast('$destroy');
             this.$$destroyed = true;
             if (this === $rootScope)
-              return ;
+              return;
             for (var eventName in this.$$listenerCount) {
               decrementListenerCount(this, this.$$listenerCount[eventName], eventName);
             }
@@ -7580,7 +7580,7 @@
         if (!attr.href && !attr.xlinkHref && !attr.name) {
           return function(scope, element) {
             if (element[0].nodeName.toLowerCase() !== 'a')
-              return ;
+              return;
             var href = toString.call(element.prop('href')) === '[object SVGAnimatedString]' ? 'xlink:href' : 'href';
             element.on('click', function(event) {
               if (!element.attr(href)) {
@@ -7594,7 +7594,7 @@
     var ngAttributeAliasDirectives = {};
     forEach(BOOLEAN_ATTR, function(propName, attrName) {
       if (propName == "multiple")
-        return ;
+        return;
       var normalized = directiveNormalize('ng-' + attrName);
       ngAttributeAliasDirectives[normalized] = function() {
         return {
@@ -7617,7 +7617,7 @@
               var match = attr.ngPattern.match(REGEX_STRING_REGEXP);
               if (match) {
                 attr.$set("ngPattern", new RegExp(match[1], match[2]));
-                return ;
+                return;
               }
             }
             scope.$watch(attr[ngAttr], function ngAttrAliasWatchAction(value) {
@@ -7645,7 +7645,7 @@
                 if (attrName === 'href') {
                   attr.$set(name, null);
                 }
-                return ;
+                return;
               }
               attr.$set(name, value);
               if (msie && propName)
@@ -7740,7 +7740,7 @@
         unset: function(object, property, controller) {
           var list = object[property];
           if (!list) {
-            return ;
+            return;
           }
           arrayRemove(list, controller);
           if (list.length === 0) {
@@ -7807,7 +7807,7 @@
                   setter(scope, null, alias, controller, alias);
                   attr.$observe(attr.name ? 'name' : 'ngForm', function(newValue) {
                     if (alias === newValue)
-                      return ;
+                      return;
                     setter(scope, null, alias, undefined, alias);
                     alias = newValue;
                     setter(scope, null, alias, controller, alias);
@@ -7883,7 +7883,7 @@
           timeout = null;
         }
         if (composing)
-          return ;
+          return;
         var value = element.val(),
             event = ev && ev.type;
         if (type !== 'password' && (!attr.ngTrim || attr.ngTrim !== 'false')) {
@@ -7910,7 +7910,7 @@
         element.on('keydown', function(event) {
           var key = event.keyCode;
           if (key === 91 || (15 < key && key < 19) || (37 <= key && key <= 40))
-            return ;
+            return;
           deferListener(event, this, this.value);
         });
         if ($sniffer.hasEvent('paste')) {
@@ -8497,7 +8497,7 @@
               if (src) {
                 $templateRequest(src, true).then(function(response) {
                   if (thisChangeId !== changeCounter)
-                    return ;
+                    return;
                   var newScope = scope.$new();
                   ctrl.template = response;
                   var clone = $transclude(newScope, function(clone) {
@@ -8535,7 +8535,7 @@
             $compile(jqLiteBuildFragment(ctrl.template, document).childNodes)(scope, function namespaceAdaptedClone(clone) {
               $element.append(clone);
             }, {futureParentElement: $element});
-            return ;
+            return;
           }
           $element.html(ctrl.template);
           $compile($element.contents())(scope);
@@ -8561,7 +8561,7 @@
           var separator = trimValues ? trim(ngList) : ngList;
           var parse = function(viewValue) {
             if (isUndefined(viewValue))
-              return ;
+              return;
             var list = [];
             if (viewValue) {
               forEach(viewValue.split(separator), function(value) {
@@ -8689,7 +8689,7 @@
       };
       this.$validate = function() {
         if (isNumber(ctrl.$modelValue) && isNaN(ctrl.$modelValue)) {
-          return ;
+          return;
         }
         var viewValue = ctrl.$$lastCommittedViewValue;
         var modelValue = ctrl.$$rawModelValue;
@@ -8710,11 +8710,11 @@
         var localValidationRunId = currentValidationRunId;
         if (!processParseErrors()) {
           validationDone(false);
-          return ;
+          return;
         }
         if (!processSyncValidators()) {
           validationDone(false);
-          return ;
+          return;
         }
         processAsyncValidators();
         function processParseErrors() {
@@ -8789,7 +8789,7 @@
         var viewValue = ctrl.$viewValue;
         $timeout.cancel(pendingDebounce);
         if (ctrl.$$lastCommittedViewValue === viewValue && (viewValue !== '' || !ctrl.$$hasNativeValidators)) {
-          return ;
+          return;
         }
         ctrl.$$lastCommittedViewValue = viewValue;
         if (ctrl.$pristine) {
@@ -8927,7 +8927,7 @@
               }
               element.on('blur', function(ev) {
                 if (modelCtrl.$touched)
-                  return ;
+                  return;
                 if ($rootScope.$$phase) {
                   scope.$evalAsync(modelCtrl.$setTouched);
                 } else {
@@ -9461,7 +9461,7 @@
         }],
         link: function(scope, element, attr, ctrls) {
           if (!ctrls[1])
-            return ;
+            return;
           var selectCtrl = ctrls[0],
               ngModelCtrl = ctrls[1],
               multiple = attr.multiple,
@@ -9878,7 +9878,7 @@
         require: '?ngModel',
         link: function(scope, elm, attr, ctrl) {
           if (!ctrl)
-            return ;
+            return;
           attr.required = true;
           ctrl.$validators.required = function(modelValue, viewValue) {
             return !attr.required || !ctrl.$isEmpty(viewValue);
@@ -9895,7 +9895,7 @@
         require: '?ngModel',
         link: function(scope, elm, attr, ctrl) {
           if (!ctrl)
-            return ;
+            return;
           var regexp,
               patternExp = attr.ngPattern || attr.pattern;
           attr.$observe('pattern', function(regex) {
@@ -9920,7 +9920,7 @@
         require: '?ngModel',
         link: function(scope, elm, attr, ctrl) {
           if (!ctrl)
-            return ;
+            return;
           var maxlength = -1;
           attr.$observe('maxlength', function(value) {
             var intVal = int(value);
@@ -9939,7 +9939,7 @@
         require: '?ngModel',
         link: function(scope, elm, attr, ctrl) {
           if (!ctrl)
-            return ;
+            return;
           var minlength = 0;
           attr.$observe('minlength', function(value) {
             minlength = int(value) || 0;
@@ -9953,7 +9953,7 @@
     };
     if (window.angular.bootstrap) {
       console.log('WARNING: Tried to load angular more than once.');
-      return ;
+      return;
     }
     bindJQuery();
     publishExternalAPI(angular);
@@ -9962,4 +9962,4 @@
     });
   })(window, document);
   !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}</style>');
-})(require("process"));
+})(require('process'));

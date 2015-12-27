@@ -1,1 +1,1 @@
-module.exports = require("npm:tty-browserify@0.0.0/index");
+module.exports = require("npm:tty-browserify@0.0.0/index.js");

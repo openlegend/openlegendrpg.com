@@ -4,7 +4,7 @@ var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
 exports.ConditionalExpression = ConditionalExpression;
-var t = _interopRequireWildcard(require("../../../types/index"));
+var t = _interopRequireWildcard(require('../../../types/index'));
 function toStatements(node) {
   if (t.isBlockStatement(node)) {
     var hasBlockScoped = false;

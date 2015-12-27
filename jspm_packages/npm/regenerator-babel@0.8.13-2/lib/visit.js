@@ -1,15 +1,15 @@
 /* */ 
-var assert = require("assert");
-var fs = require("fs");
-var types = require("ast-types");
+var assert = require('assert');
+var fs = require('fs');
+var types = require('ast-types');
 var n = types.namedTypes;
 var b = types.builders;
 var isArray = types.builtInTypes.array;
 var isObject = types.builtInTypes.object;
 var NodePath = types.NodePath;
-var hoist = require("./hoist").hoist;
-var Emitter = require("./emit").Emitter;
-var runtimeProperty = require("./util").runtimeProperty;
+var hoist = require('./hoist').hoist;
+var Emitter = require('./emit').Emitter;
+var runtimeProperty = require('./util').runtimeProperty;
 exports.transform = function transform(node, options) {
   options = options || {};
   var path = node instanceof NodePath ? node : new NodePath(node);
@@ -27,7 +27,7 @@ var visitor = types.PathVisitor.fromMethodsObject({
     var node = path.value;
     var shouldTransformAsync = node.async && !this.options.disableAsync;
     if (!node.generator && !shouldTransformAsync) {
-      return ;
+      return;
     }
     this.reportChanged();
     node.generator = false;
@@ -68,7 +68,7 @@ var visitor = types.PathVisitor.fromMethodsObject({
     node.body._declarations = bodyBlock._declarations;
     if (shouldTransformAsync) {
       node.async = false;
-      return ;
+      return;
     }
     if (n.FunctionDeclaration.check(node)) {
       var pp = path.parent;
@@ -76,7 +76,7 @@ var visitor = types.PathVisitor.fromMethodsObject({
         pp = pp.parent;
       }
       if (!pp) {
-        return ;
+        return;
       }
       path.replace();
       node.type = "FunctionExpression";

@@ -34,7 +34,7 @@ exports.QualifiedTypeIdentifier = QualifiedTypeIdentifier;
 exports.UnionTypeAnnotation = UnionTypeAnnotation;
 exports.TypeCastExpression = TypeCastExpression;
 exports.VoidTypeAnnotation = VoidTypeAnnotation;
-var t = _interopRequireWildcard(require("../../types/index"));
+var t = _interopRequireWildcard(require('../../types/index'));
 function AnyTypeAnnotation() {
   this.push("any");
 }

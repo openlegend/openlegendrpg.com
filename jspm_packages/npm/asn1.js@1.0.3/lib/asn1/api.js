@@ -1,7 +1,7 @@
 /* */ 
-var asn1 = require("../asn1");
-var inherits = require("inherits");
-var vm = require("vm");
+var asn1 = require('../asn1');
+var inherits = require('inherits');
+var vm = require('vm');
 var api = exports;
 api.define = function define(name, body) {
   return new Entity(name, body);

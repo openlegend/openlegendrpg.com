@@ -1,6 +1,6 @@
 /* */ 
 (function(process) {
-  var nextTick = require("process/browser").nextTick;
+  var nextTick = require('process/browser').nextTick;
   var apply = Function.prototype.apply;
   var slice = Array.prototype.slice;
   var immediateIds = {};
@@ -59,4 +59,4 @@
   exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function(id) {
     delete immediateIds[id];
   };
-})(require("process"));
+})(require('process'));

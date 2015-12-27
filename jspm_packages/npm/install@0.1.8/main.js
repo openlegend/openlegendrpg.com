@@ -1,11 +1,11 @@
 /* */ 
 (function(process) {
-  var assert = require("assert");
-  var fs = require("fs");
-  var path = require("path");
+  var assert = require('assert');
+  var fs = require('fs');
+  var path = require('path');
   var file = path.join(__dirname, "install.js");
   exports.makeGlobal = function() {
-    require("./install");
+    require('./install');
   };
   function Reader(file) {
     var self = this;
@@ -71,4 +71,4 @@
     }
     return ids;
   };
-})(require("process"));
+})(require('process'));

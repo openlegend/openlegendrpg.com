@@ -1,13 +1,13 @@
 /* */ 
 (function(process) {
-  var assert = require("assert");
-  var path = require("path");
-  var fs = require("graceful-fs");
-  var spawn = require("child_process").spawn;
-  var Q = require("q");
-  var EventEmitter = require("events").EventEmitter;
-  var ReadFileCache = require("./cache").ReadFileCache;
-  var util = require("./util");
+  var assert = require('assert');
+  var path = require('path');
+  var fs = require('graceful-fs');
+  var spawn = require('child_process').spawn;
+  var Q = require('q');
+  var EventEmitter = require('events').EventEmitter;
+  var ReadFileCache = require('./cache').ReadFileCache;
+  var util = require('./util');
   var hasOwn = Object.prototype.hasOwnProperty;
   function Watcher(readFileCache, persistent) {
     assert.ok(this instanceof Watcher);
@@ -95,7 +95,7 @@
   DWp.add = function(absDirPath) {
     var self = this;
     if (hasOwn.call(self.watchers, absDirPath)) {
-      return ;
+      return;
     }
     self.watchers[absDirPath] = fs.watch(absDirPath, {persistent: this.persistent}).on("change", function(event, filename) {
       self.updateDirContents(absDirPath, event, filename);
@@ -158,4 +158,4 @@
     });
   };
   exports.Watcher = Watcher;
-})(require("process"));
+})(require('process'));

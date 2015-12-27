@@ -24,23 +24,23 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var DefaultFormatter = _interopRequire(require("./_default"));
-var AMDFormatter = _interopRequire(require("./amd"));
-var util = _interopRequireWildcard(require("../../util"));
-var last = _interopRequire(require("lodash/array/last"));
-var each = _interopRequire(require("lodash/collection/each"));
-var map = _interopRequire(require("lodash/collection/map"));
-var t = _interopRequireWildcard(require("../../types/index"));
+var DefaultFormatter = _interopRequire(require('./_default'));
+var AMDFormatter = _interopRequire(require('./amd'));
+var util = _interopRequireWildcard(require('../../util'));
+var last = _interopRequire(require('lodash/array/last'));
+var each = _interopRequire(require('lodash/collection/each'));
+var map = _interopRequire(require('lodash/collection/map'));
+var t = _interopRequireWildcard(require('../../types/index'));
 var hoistVariablesVisitor = {enter: function enter(node, parent, scope, hoistDeclarators) {
     if (t.isFunction(node)) {
       return this.skip();
     }
     if (t.isVariableDeclaration(node)) {
       if (node.kind !== "var" && !t.isProgram(parent)) {
-        return ;
+        return;
       }
       if (node._blockHoist)
-        return ;
+        return;
       var nodes = [];
       for (var i = 0; i < node.declarations.length; i++) {
         var declar = node.declarations[i];

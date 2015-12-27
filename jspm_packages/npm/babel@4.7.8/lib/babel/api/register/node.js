@@ -7,15 +7,15 @@
   var _interopRequire = function(obj) {
     return obj && obj.__esModule ? obj["default"] : obj;
   };
-  require("../../polyfill");
-  var sourceMapSupport = _interopRequire(require("source-map-support"));
-  var registerCache = _interopRequireWildcard(require("./cache"));
-  var resolveRc = _interopRequire(require("./resolve-rc"));
-  var extend = _interopRequire(require("lodash/object/extend"));
-  var babel = _interopRequireWildcard(require("../node"));
-  var each = _interopRequire(require("lodash/collection/each"));
-  var util = _interopRequireWildcard(require("../../util"));
-  var fs = _interopRequire(require("fs"));
+  require('../../polyfill');
+  var sourceMapSupport = _interopRequire(require('source-map-support'));
+  var registerCache = _interopRequireWildcard(require('./cache'));
+  var resolveRc = _interopRequire(require('./resolve-rc'));
+  var extend = _interopRequire(require('lodash/object/extend'));
+  var babel = _interopRequireWildcard(require('../node'));
+  var each = _interopRequire(require('lodash/collection/each'));
+  var util = _interopRequireWildcard(require('../../util'));
+  var fs = _interopRequire(require('fs'));
   sourceMapSupport.install({
     handleUncaughtExceptions: false,
     retrieveSourceMap: function retrieveSourceMap(source) {
@@ -133,8 +133,8 @@
     extend(transformOpts, opts);
   };
   try {
-    var runtimePackage = require("babel-runtime/package");
-    var version = require("../../package").version;
+    var runtimePackage = require('babel-runtime/package');
+    var version = require('../../package').version;
     if (runtimePackage.version !== version) {
       throw new ReferenceError("The verison of babel-runtime of " + runtimePackage.runtime + " that you have installed does not match the babel verison of " + version);
     }
@@ -142,4 +142,4 @@
     if (err.code !== "MODULE_NOT_FOUND")
       throw err;
   }
-})(require("process"));
+})(require('process'));

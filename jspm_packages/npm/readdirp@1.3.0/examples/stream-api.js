@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
-  var readdirp = require("../readdirp"),
-      path = require("path");
+  var readdirp = require('../readdirp'),
+      path = require('path');
   readdirp({
     root: path.join(__dirname),
     fileFilter: '*.js'
@@ -12,4 +12,4 @@
   }).on('data', function(entry) {
     console.log('%s is ready for processing', entry.path);
   });
-})(require("process"));
+})(require('process'));

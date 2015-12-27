@@ -1,10 +1,10 @@
 /* */ 
 var hash = exports;
-hash.utils = require("./hash/utils");
-hash.common = require("./hash/common");
-hash.sha = require("./hash/sha");
-hash.ripemd = require("./hash/ripemd");
-hash.hmac = require("./hash/hmac");
+hash.utils = require('./hash/utils');
+hash.common = require('./hash/common');
+hash.sha = require('./hash/sha');
+hash.ripemd = require('./hash/ripemd');
+hash.hmac = require('./hash/hmac');
 hash.sha1 = hash.sha.sha1;
 hash.sha256 = hash.sha.sha256;
 hash.sha224 = hash.sha.sha224;

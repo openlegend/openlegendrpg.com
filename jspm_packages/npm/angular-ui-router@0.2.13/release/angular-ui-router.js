@@ -175,7 +175,7 @@
             visited = {};
         function visit(value, key) {
           if (visited[key] === VISIT_DONE)
-            return ;
+            return;
           cycle.push(key);
           if (visited[key] === VISIT_IN_PROGRESS) {
             cycle.splice(0, indexOf(cycle, key));
@@ -284,7 +284,7 @@
               proceed();
             function proceed() {
               if (isDefined(result.$$failure))
-                return ;
+                return;
               try {
                 invocation.resolve($injector.invoke(invocable, self, values));
                 invocation.promise.then(function(result) {
@@ -1068,7 +1068,7 @@
         }
         function update(evt) {
           if (evt && evt.defaultPrevented)
-            return ;
+            return;
           var ignoreUpdate = lastPushedUrl && $location.url() === lastPushedUrl;
           lastPushedUrl = undefined;
           if (ignoreUpdate)
@@ -1085,7 +1085,7 @@
               i;
           for (i = 0; i < n; i++) {
             if (check(rules[i]))
-              return ;
+              return;
           }
           if (otherwise)
             check(otherwise);
@@ -1106,10 +1106,10 @@
           update: function(read) {
             if (read) {
               location = $location.url();
-              return ;
+              return;
             }
             if ($location.url() === location)
-              return ;
+              return;
             $location.url(location);
             $location.replace();
           },
@@ -1772,7 +1772,7 @@
                   name = getUiViewName(scope, attrs, $element, $interpolate),
                   previousLocals = name && $state.$current && $state.$current.locals[name];
               if (!firstTime && previousLocals === latestLocals)
-                return ;
+                return;
               newScope = scope.$new();
               latestLocals = $state.$current.locals[name];
               var clone = $transclude(newScope, function(clone) {
@@ -1808,7 +1808,7 @@
                 name = getUiViewName(scope, attrs, $element, $interpolate),
                 locals = current && current.locals[name];
             if (!locals) {
-              return ;
+              return;
             }
             $element.data('$uiView', {
               name: name,
@@ -1886,7 +1886,7 @@
             if (newVal)
               params = angular.copy(newVal);
             if (!nav)
-              return ;
+              return;
             newHref = $state.href(ref.state, params, options);
             var activeDirective = uiSrefActive[1] || uiSrefActive[0];
             if (activeDirective) {
@@ -1907,7 +1907,7 @@
           }
           update();
           if (isForm)
-            return ;
+            return;
           element.bind("click", function(e) {
             var button = e.which || e.button;
             if (!(button > 1 || e.ctrlKey || e.metaKey || e.shiftKey || element.attr('target'))) {
@@ -1976,4 +1976,4 @@
     }
     angular.module('ui.router.state').filter('isState', $IsStateFilter).filter('includedByState', $IncludedByStateFilter);
   })(window, window.angular);
-})(require("process"));
+})(require('process'));

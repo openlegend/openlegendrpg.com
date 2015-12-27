@@ -1,6 +1,6 @@
 /* */ 
 (function(Buffer) {
-  var Transform = require("stream").Transform;
+  var Transform = require('stream').Transform;
   module.exports = function(iconv) {
     iconv.encodeStream = function encodeStream(encoding, options) {
       return new IconvLiteEncoderStream(iconv.getCodec(encoding).encoder(options), options);
@@ -93,4 +93,4 @@
     });
     return this;
   };
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

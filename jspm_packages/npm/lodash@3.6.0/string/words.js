@@ -1,6 +1,6 @@
 /* */ 
-var baseToString = require("../internal/baseToString"),
-    isIterateeCall = require("../internal/isIterateeCall");
+var baseToString = require('../internal/baseToString'),
+    isIterateeCall = require('../internal/isIterateeCall');
 var reWords = (function() {
   var upper = '[A-Z\\xc0-\\xd6\\xd8-\\xde]',
       lower = '[a-z\\xdf-\\xf6\\xf8-\\xff]+';

@@ -1,13 +1,13 @@
 /* */ 
 (function(process) {
-  var assert = require("assert");
-  var types = require("ast-types");
+  var assert = require('assert');
+  var types = require('ast-types');
   var isArray = types.builtInTypes.array;
   var b = types.builders;
   var n = types.namedTypes;
-  var leap = require("./leap");
-  var meta = require("./meta");
-  var util = require("./util");
+  var leap = require('./leap');
+  var meta = require('./meta');
+  var util = require('./util');
   var hasOwn = Object.prototype.hasOwnProperty;
   function Emitter(contextId) {
     assert.ok(this instanceof Emitter);
@@ -202,7 +202,7 @@
     }
     if (!meta.containsLeap(stmt)) {
       self.emit(stmt);
-      return ;
+      return;
     }
     switch (stmt.type) {
       case "ExpressionStatement":
@@ -567,4 +567,4 @@
         throw new Error("unknown Expression of type " + JSON.stringify(expr.type));
     }
   };
-})(require("process"));
+})(require('process'));

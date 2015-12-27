@@ -7,10 +7,10 @@ var _interopRequire = function(obj) {
   return obj && obj.__esModule ? obj["default"] : obj;
 };
 exports.ComprehensionExpression = ComprehensionExpression;
-var buildComprehension = _interopRequire(require("../../helpers/build-comprehension"));
-var traverse = _interopRequire(require("../../../traversal/index"));
-var util = _interopRequireWildcard(require("../../../util"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var buildComprehension = _interopRequire(require('../../helpers/build-comprehension'));
+var traverse = _interopRequire(require('../../../traversal/index'));
+var util = _interopRequireWildcard(require('../../../util'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 var experimental = exports.experimental = true;
 function ComprehensionExpression(node, parent, scope, file) {
   var callback = array;

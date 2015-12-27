@@ -1,57 +1,39 @@
 System.config({
-  "baseURL": "",
-  "transpiler": "babel",
-  "babelOptions": {
+  baseURL: "",
+  defaultJSExtensions: true,
+  transpiler: "babel",
+  babelOptions: {
     "optional": [
       "runtime"
     ]
   },
-  "paths": {
-    "*": "*.js",
-    "github:*": "jspm_packages/github/*.js",
-    "npm:*": "jspm_packages/npm/*.js",
-    "bower:*": "jspm_packages/bower/*.js"
+  paths: {
+    "github:*": "jspm_packages/github/*",
+    "npm:*": "jspm_packages/npm/*"
   },
-  "buildCSS": true,
-  "separateCSS": false,
-  "overrides": {
-    "github:adobe-webplatform/Snap.svg@^0.4.1": {
-      "format": "global"
-    }
-  }
-});
+  buildCSS: true,
+  separateCSS: false,
 
-System.config({
-  "map": {
-    "PolymerElements/paper-header-panel": "github:PolymerElements/paper-header-panel@1.0.1",
-    "Snap.svg": "github:adobe-webplatform/Snap.svg@0.4.1",
+  map: {
     "angular": "github:angular/bower-angular@1.4.5",
     "angular-animate": "github:angular/bower-angular@1.4.5",
-    "angular-color-picker": "npm:angular-color-picker@1.0.6",
     "angular-cookies": "github:angular/bower-angular-cookies@1.4.5",
     "angular-material": "github:angular/bower-material@0.10.1",
     "angular-messages": "github:angular/bower-angular-messages@1.4.5",
     "angular-mocks": "npm:angular-mocks@1.4.5",
     "angular-resource": "github:angular/bower-angular-resource@1.4.5",
     "angular-ui-router": "npm:angular-ui-router@0.2.13",
-    "angular-ui-tree/angular-ui-tree": "github:angular-ui-tree/angular-ui-tree@2.1.5",
     "babel": "npm:babel@4.7.8",
     "babel-runtime": "npm:babel-runtime@5.1.11",
     "chai": "node_modules/chai/chai",
     "core-js": "npm:core-js@0.8.3",
     "css": "github:systemjs/plugin-css@0.1.15",
-    "jquery": "npm:jquery@2.1.3",
     "json": "github:systemjs/plugin-json@0.1.0",
     "lodash": "github:lodash/lodash@3.6.0",
     "ngreact": "npm:ngreact@0.1.4",
     "oclazyload": "npm:oclazyload@0.6.3",
-    "polymer": "bower:polymer@1.0.3",
-    "polymer-elements": "bower:polymer-elements@0.3.0",
     "skeleton": "bower:skeleton@2.0.4",
     "ui-router-extras": "npm:ui-router-extras@0.0.13",
-    "bower:polymer@1.0.3": {
-      "webcomponentsjs": "bower:webcomponentsjs@0.7.3"
-    },
     "bower:skeleton@2.0.4": {
       "css": "github:systemjs/plugin-css@0.1.15"
     },
@@ -142,9 +124,6 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "module": "github:jspm/nodelibs-module@0.1.0",
       "path": "github:jspm/nodelibs-path@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.1"
-    },
-    "npm:angular-messages@1.3.15": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:angular-ui-router@0.2.13": {
@@ -651,9 +630,6 @@ System.config({
       "stream": "github:jspm/nodelibs-stream@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:jquery@2.1.3": {
-      "process": "github:jspm/nodelibs-process@0.1.1"
-    },
     "npm:js-tokens@1.0.0": {
       "fs": "github:jspm/nodelibs-fs@0.1.2"
     },
@@ -848,7 +824,6 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "isarray": "npm:isarray@0.0.1",
       "process": "github:jspm/nodelibs-process@0.1.1",
-      "stream": "npm:stream-browserify@1.0.0",
       "stream-browserify": "npm:stream-browserify@1.0.0",
       "string_decoder": "npm:string_decoder@0.10.31"
     },
@@ -859,10 +834,8 @@ System.config({
       "inherits": "npm:inherits@2.0.1",
       "isarray": "npm:isarray@0.0.1",
       "process": "github:jspm/nodelibs-process@0.1.1",
-      "stream": "github:jspm/nodelibs-stream@0.1.0",
       "stream-browserify": "npm:stream-browserify@1.0.0",
-      "string_decoder": "npm:string_decoder@0.10.31",
-      "util": "github:jspm/nodelibs-util@0.1.0"
+      "string_decoder": "npm:string_decoder@0.10.31"
     },
     "npm:readdirp@1.3.0": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
@@ -1085,4 +1058,3 @@ System.config({
     }
   }
 });
-

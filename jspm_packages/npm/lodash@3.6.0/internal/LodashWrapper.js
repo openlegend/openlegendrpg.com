@@ -1,6 +1,6 @@
 /* */ 
-var baseCreate = require("./baseCreate"),
-    baseLodash = require("./baseLodash");
+var baseCreate = require('./baseCreate'),
+    baseLodash = require('./baseLodash');
 function LodashWrapper(value, chainAll, actions) {
   this.__wrapped__ = value;
   this.__actions__ = actions || [];

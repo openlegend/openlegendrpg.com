@@ -1,13 +1,13 @@
 /* */ 
 'use strict';
-var fs = require("fs");
-var path = require("path");
-var test = require("tap").test;
+var fs = require('fs');
+var path = require('path');
+var test = require('tap').test;
 test('functionality testing', function(t) {
   try {
     fs.mkdirSync(__dirname + '/temp');
   } catch (ex) {}
-  var evt = require("../fsevents")(__dirname + '/temp').start();
+  var evt = require('../fsevents')(__dirname + '/temp').start();
   t.on('end', function() {
     evt.stop();
   });
@@ -16,7 +16,7 @@ test('functionality testing', function(t) {
     console.error("id:\t" + id);
     console.error("flags:\t" + JSON.stringify(flags));
     if (name === __dirname + '/temp')
-      return ;
+      return;
     if (path.basename(name) === 'created-fsevent') {
       t.ok('number' === typeof flags, 'created file was caught with flags:' + flags);
       t.ok('number' === typeof id, 'id is a number ' + id);
@@ -32,7 +32,7 @@ test('functionality testing', function(t) {
     console.error("event:\t" + info.event);
     console.error("info:\t" + JSON.stringify(info));
     if (name === __dirname + '/temp')
-      return ;
+      return;
     t.ok(name === info.path, 'matched path');
     switch (info.event) {
       case 'created':

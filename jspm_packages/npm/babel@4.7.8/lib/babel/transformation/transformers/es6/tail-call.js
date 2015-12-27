@@ -11,12 +11,12 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var reduceRight = _interopRequire(require("lodash/collection/reduceRight"));
-var messages = _interopRequireWildcard(require("../../../messages"));
-var flatten = _interopRequire(require("lodash/array/flatten"));
-var util = _interopRequireWildcard(require("../../../util"));
-var map = _interopRequire(require("lodash/collection/map"));
-var t = _interopRequireWildcard(require("../../../types/index"));
+var reduceRight = _interopRequire(require('lodash/collection/reduceRight'));
+var messages = _interopRequireWildcard(require('../../../messages'));
+var flatten = _interopRequire(require('lodash/array/flatten'));
+var util = _interopRequireWildcard(require('../../../util'));
+var map = _interopRequire(require('lodash/collection/map'));
+var t = _interopRequireWildcard(require('../../../types/index'));
 exports.Function = function(node, parent, scope, file) {
   var tailCall = new TailCallTransformer(node, scope, file);
   tailCall.run();
@@ -66,10 +66,10 @@ var secondPass = {enter: function enter(node, parent, scope, state) {
   }};
 var thirdPass = {enter: function enter(node, parent, scope, state) {
     if (!this.isExpressionStatement())
-      return ;
+      return;
     var expr = node.expression;
     if (!t.isAssignmentExpression(expr))
-      return ;
+      return;
     if (!state.needsThis && expr.left === state.getThisId()) {
       this.remove();
     } else if (!state.needsArguments && expr.left === state.getArgumentsId() && t.isArrayExpression(expr.right)) {
@@ -134,13 +134,13 @@ var TailCallTransformer = (function() {
     var node = this.node;
     var ownerId = this.ownerId;
     if (!ownerId)
-      return ;
+      return;
     scope.traverse(node, firstPass, this);
     if (!this.hasTailRecursion)
-      return ;
+      return;
     if (this.hasDeopt()) {
       this.file.log.deopt(node, messages.get("tailCallReassignmentDeopt"));
-      return ;
+      return;
     }
     scope.traverse(node, secondPass, this);
     if (!this.needsThis || !this.needsArguments) {
@@ -189,7 +189,7 @@ var TailCallTransformer = (function() {
   };
   TailCallTransformer.prototype.subTransform = function subTransform(node) {
     if (!node)
-      return ;
+      return;
     var handler = this["subTransform" + node.type];
     if (handler)
       return handler.call(this, node);
@@ -198,7 +198,7 @@ var TailCallTransformer = (function() {
     var callConsequent = this.subTransform(node.consequent);
     var callAlternate = this.subTransform(node.alternate);
     if (!callConsequent && !callAlternate) {
-      return ;
+      return;
     }
     node.type = "IfStatement";
     node.consequent = callConsequent ? t.toBlock(callConsequent) : returnBlock(node.consequent);
@@ -212,7 +212,7 @@ var TailCallTransformer = (function() {
   TailCallTransformer.prototype.subTransformLogicalExpression = function subTransformLogicalExpression(node) {
     var callRight = this.subTransform(node.right);
     if (!callRight)
-      return ;
+      return;
     var leftId = this.getLeftId();
     var testExpr = t.assignmentExpression("=", leftId, node.left);
     if (node.operator === "&&") {
@@ -224,7 +224,7 @@ var TailCallTransformer = (function() {
     var seq = node.expressions;
     var lastCall = this.subTransform(seq[seq.length - 1]);
     if (!lastCall) {
-      return ;
+      return;
     }
     if (--seq.length === 1) {
       node = seq[0];
@@ -244,17 +244,17 @@ var TailCallTransformer = (function() {
           args = node.arguments[1] || t.identifier("undefined");
           break;
         default:
-          return ;
+          return;
       }
       thisBinding = node.arguments[0];
       callee = callee.object;
     }
     if (!t.isIdentifier(callee) || !this.scope.bindingIdentifierEquals(callee.name, this.ownerId)) {
-      return ;
+      return;
     }
     this.hasTailRecursion = true;
     if (this.hasDeopt())
-      return ;
+      return;
     var body = [];
     if (!t.isThisExpression(thisBinding)) {
       body.push(t.expressionStatement(t.assignmentExpression("=", this.getThisId(), thisBinding || t.identifier("undefined"))));

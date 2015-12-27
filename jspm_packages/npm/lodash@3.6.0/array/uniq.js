@@ -1,8 +1,8 @@
 /* */ 
-var baseCallback = require("../internal/baseCallback"),
-    baseUniq = require("../internal/baseUniq"),
-    isIterateeCall = require("../internal/isIterateeCall"),
-    sortedUniq = require("../internal/sortedUniq");
+var baseCallback = require('../internal/baseCallback'),
+    baseUniq = require('../internal/baseUniq'),
+    isIterateeCall = require('../internal/isIterateeCall'),
+    sortedUniq = require('../internal/sortedUniq');
 function uniq(array, isSorted, iteratee, thisArg) {
   var length = array ? array.length : 0;
   if (!length) {

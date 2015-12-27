@@ -10,8 +10,8 @@ exports.Program = Program;
 exports.FunctionExpression = FunctionExpression;
 exports.ThisExpression = ThisExpression;
 exports.CallExpression = CallExpression;
-var messages = _interopRequireWildcard(require("../../../messages"));
-var t = _interopRequire(require("../../../types/index"));
+var messages = _interopRequireWildcard(require('../../../messages'));
+var t = _interopRequire(require('../../../types/index'));
 function Program(program) {
   var first = program.body[0];
   if (t.isExpressionStatement(first) && t.isLiteral(first.expression, {value: "use strict"})) {

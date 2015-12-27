@@ -1,11 +1,11 @@
 /* */ 
 (function(Buffer) {
   'use strict';
-  var createHash = require("sha.js");
-  var md5 = require("./md5");
-  var rmd160 = require("ripemd160");
-  var Transform = require("stream").Transform;
-  var inherits = require("inherits");
+  var createHash = require('sha.js');
+  var md5 = require('./md5');
+  var rmd160 = require('ripemd160');
+  var Transform = require('stream').Transform;
+  var inherits = require('inherits');
   module.exports = function(alg) {
     if ('md5' === alg)
       return new HashNoConstructor(md5);
@@ -76,4 +76,4 @@
     }
     return outData;
   };
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

@@ -3,7 +3,7 @@
 var _interopRequireWildcard = function(obj) {
   return obj && obj.__esModule ? obj : {"default": obj};
 };
-var t = _interopRequireWildcard(require("../types/index"));
+var t = _interopRequireWildcard(require('../types/index'));
 module.exports = function(ast, comments, tokens) {
   if (ast && ast.type === "Program") {
     return t.file(ast, comments || [], tokens || []);

@@ -1,9 +1,9 @@
 /* */ 
 (function(Buffer) {
-  var assert = require("assert");
-  var compatNode = require("../../pbkdf2-compat@3.0.2");
-  var compatBrowser = require("../browser");
-  var fixtures = require("./fixtures.json!systemjs-json");
+  var assert = require('assert');
+  var compatNode = require('../index');
+  var compatBrowser = require('../browser');
+  var fixtures = require('./fixtures.json!systemjs-json');
   function runTests(compat, name) {
     describe(name, function() {
       var algos = ['sha1', 'sha224', 'sha256', 'sha384', 'sha512'];
@@ -74,4 +74,4 @@
   if (compatBrowser !== compatNode) {
     runTests(compatNode, 'node pbkdf2');
   }
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

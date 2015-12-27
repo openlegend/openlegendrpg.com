@@ -1,8 +1,8 @@
 /* */ 
 (function(Buffer) {
-  var assert = require("assert");
-  var asn1 = require("../lib/asn1");
-  var Buffer = require("buffer").Buffer;
+  var assert = require('assert');
+  var asn1 = require('../lib/asn1');
+  var Buffer = require('buffer').Buffer;
   describe('asn1.js ping/pong', function() {
     function test(name, model, input, expected) {
       it('should support ' + name, function() {
@@ -140,4 +140,4 @@
       });
     });
   });
-})(require("buffer").Buffer);
+})(require('buffer').Buffer);

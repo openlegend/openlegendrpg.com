@@ -11,30 +11,30 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var convertSourceMap = _interopRequire(require("convert-source-map"));
-var shebangRegex = _interopRequire(require("shebang-regex"));
-var isFunction = _interopRequire(require("lodash/lang/isFunction"));
-var sourceMap = _interopRequire(require("source-map"));
-var transform = _interopRequire(require("./index"));
-var generate = _interopRequire(require("../generation/index"));
-var defaults = _interopRequire(require("lodash/object/defaults"));
-var includes = _interopRequire(require("lodash/collection/includes"));
-var assign = _interopRequire(require("lodash/object/assign"));
-var Logger = _interopRequire(require("./logger"));
-var parse = _interopRequire(require("../helpers/parse"));
-var Scope = _interopRequire(require("../traversal/scope"));
-var slash = _interopRequire(require("slash"));
-var util = _interopRequireWildcard(require("../util"));
-var path = _interopRequire(require("path"));
-var each = _interopRequire(require("lodash/collection/each"));
-var t = _interopRequireWildcard(require("../types/index"));
+var convertSourceMap = _interopRequire(require('convert-source-map'));
+var shebangRegex = _interopRequire(require('shebang-regex'));
+var isFunction = _interopRequire(require('lodash/lang/isFunction'));
+var sourceMap = _interopRequire(require('source-map'));
+var transform = _interopRequire(require('./index'));
+var generate = _interopRequire(require('../generation/index'));
+var defaults = _interopRequire(require('lodash/object/defaults'));
+var includes = _interopRequire(require('lodash/collection/includes'));
+var assign = _interopRequire(require('lodash/object/assign'));
+var Logger = _interopRequire(require('./logger'));
+var parse = _interopRequire(require('../helpers/parse'));
+var Scope = _interopRequire(require('../traversal/scope'));
+var slash = _interopRequire(require('slash'));
+var util = _interopRequireWildcard(require('../util'));
+var path = _interopRequire(require('path'));
+var each = _interopRequire(require('lodash/collection/each'));
+var t = _interopRequireWildcard(require('../types/index'));
 var checkTransformerVisitor = {enter: function enter(node, parent, scope, state) {
     checkNode(state.stack, node, scope);
   }};
 function checkNode(stack, node, scope) {
   each(stack, function(pass) {
     if (pass.shouldRun || pass.ran)
-      return ;
+      return;
     pass.checkNode(node, scope);
   });
 }
@@ -340,7 +340,7 @@ var File = (function() {
       for (var i = 0; i < node.length; i++) {
         this.checkNode(node[i], scope);
       }
-      return ;
+      return;
     }
     var stack = this.transformerStack;
     if (!scope)

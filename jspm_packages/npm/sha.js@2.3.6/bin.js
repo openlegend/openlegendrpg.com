@@ -1,6 +1,6 @@
 /* */ 
 (function(process) {
-  var createHash = require("./browserify");
+  var createHash = require('./browserify');
   var argv = process.argv.slice(2);
   if (/--help|-h/.test(argv[0]))
     return usage();
@@ -20,7 +20,7 @@
   } else if (argv.length) {
     var filename = argv.pop();
     var alg = argv.pop();
-    stream(alg, require("fs").createReadStream(filename));
+    stream(alg, require('fs').createReadStream(filename));
   } else {
     usage();
   }
@@ -29,4 +29,4 @@
     console.error('input | sha.js [algorithm=sha1]    # hash stdin with algorithm');
     console.error('sha.js --help                      # display this message');
   }
-})(require("process"));
+})(require('process'));

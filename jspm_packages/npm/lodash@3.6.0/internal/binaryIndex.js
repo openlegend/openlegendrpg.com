@@ -1,6 +1,6 @@
 /* */ 
-var binaryIndexBy = require("./binaryIndexBy"),
-    identity = require("../utility/identity");
+var binaryIndexBy = require('./binaryIndexBy'),
+    identity = require('../utility/identity');
 var MAX_ARRAY_LENGTH = Math.pow(2, 32) - 1,
     HALF_MAX_ARRAY_LENGTH = MAX_ARRAY_LENGTH >>> 1;
 function binaryIndex(array, value, retHighest) {

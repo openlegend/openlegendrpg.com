@@ -1,8 +1,8 @@
 /* */ 
-var arrayCopy = require("./arrayCopy"),
-    composeArgs = require("./composeArgs"),
-    composeArgsRight = require("./composeArgsRight"),
-    replaceHolders = require("./replaceHolders");
+var arrayCopy = require('./arrayCopy'),
+    composeArgs = require('./composeArgs'),
+    composeArgsRight = require('./composeArgsRight'),
+    replaceHolders = require('./replaceHolders');
 var BIND_FLAG = 1,
     CURRY_BOUND_FLAG = 4,
     CURRY_FLAG = 8,

@@ -1,6 +1,6 @@
 /* */ 
-var baseToString = require("./baseToString"),
-    createPadding = require("./createPadding");
+var baseToString = require('./baseToString'),
+    createPadding = require('./createPadding');
 function createPadDir(fromRight) {
   return function(string, length, chars) {
     string = baseToString(string);

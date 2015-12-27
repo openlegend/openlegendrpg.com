@@ -1,13 +1,13 @@
 /* */ 
 (function(process) {
   'use strict';
-  var EventEmitter = require("events").EventEmitter;
-  var sysPath = require("path");
-  var each = require("async-each");
-  var NodeFsHandler = require("./nodefs-handler");
-  var FsEventsHandler = require("./fsevents-handler");
-  exports.isBinaryPath = require("./is-binary");
-  var platform = require("os").platform();
+  var EventEmitter = require('events').EventEmitter;
+  var sysPath = require('path');
+  var each = require('async-each');
+  var NodeFsHandler = require('./nodefs-handler');
+  var FsEventsHandler = require('./fsevents-handler');
+  exports.isBinaryPath = require('./is-binary');
+  var platform = require('os').platform();
   function FSWatcher(_opts) {
     var opts = {};
     if (_opts)
@@ -161,7 +161,7 @@
     var absolutePath = sysPath.resolve(fullPath);
     var isDirectory = this._watched[fullPath] || this._watched[absolutePath];
     if (!this._throttle('remove', fullPath, 100))
-      return ;
+      return;
     var watchedDirs = Object.keys(this._watched);
     if (!isDirectory && !this.options.useFsEvents && watchedDirs.length === 1) {
       this.add(directory, item);
@@ -201,7 +201,7 @@
       }.bind(this), function(error, results) {
         results.forEach(function(item) {
           if (!item)
-            return ;
+            return;
           this.add(sysPath.dirname(item), sysPath.basename(_origAdd || item));
         }, this);
       }.bind(this));
@@ -232,4 +232,4 @@
   exports.watch = function(files, options) {
     return new FSWatcher(options).add(files);
   };
-})(require("process"));
+})(require('process'));

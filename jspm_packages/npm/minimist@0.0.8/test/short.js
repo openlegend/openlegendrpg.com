@@ -1,6 +1,6 @@
 /* */ 
-var parse = require("../../minimist@0.0.8");
-var test = require("tape");
+var parse = require('../index');
+var test = require('tape');
 test('numeric short args', function(t) {
   t.plan(2);
   t.deepEqual(parse(['-n123']), {

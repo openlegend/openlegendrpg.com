@@ -4,7 +4,7 @@
   (function(root, factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
-      define(["exports"], factory);
+      define(['exports'], factory);
     } else if (typeof exports !== 'undefined') {
       factory(exports);
     } else {
@@ -350,7 +350,7 @@
       var comment;
       assert(typeof start === 'number', 'Comment must have valid position');
       if (state.lastCommentStart >= start) {
-        return ;
+        return;
       }
       state.lastCommentStart = start;
       comment = {
@@ -396,7 +396,7 @@
           }
           ++lineNumber;
           lineStart = index;
-          return ;
+          return;
         }
       }
       if (extra.comments) {
@@ -444,7 +444,7 @@
               };
               addComment('Block', comment, start, index, loc);
             }
-            return ;
+            return;
           }
           ++index;
         } else {
@@ -1489,7 +1489,7 @@
           last = bottomRight[bottomRight.length - 1];
       if (node.type === Syntax.Program) {
         if (node.body.length > 0) {
-          return ;
+          return;
         }
       }
       if (extra.trailingComments.length > 0) {
@@ -2361,7 +2361,7 @@
           throwError(token, Messages.UnexpectedReserved);
         } else if (strict && isStrictModeReservedWord(token.value)) {
           throwErrorTolerant(token, Messages.StrictReservedWord);
-          return ;
+          return;
         }
         throwError(token, Messages.UnexpectedToken, token.value);
       }
@@ -2427,7 +2427,7 @@
           oldLookahead = lookahead;
       if (source.charCodeAt(index) === 59) {
         lex();
-        return ;
+        return;
       }
       line = lineNumber;
       skipComment();
@@ -2436,11 +2436,11 @@
         lineNumber = oldLineNumber;
         lineStart = oldLineStart;
         lookahead = oldLookahead;
-        return ;
+        return;
       }
       if (match(';')) {
         lex();
-        return ;
+        return;
       }
       if (lookahead.type !== Token.EOF && !match('}')) {
         throwUnexpected(lookahead);
@@ -6188,4 +6188,4 @@
       return types;
     }());
   }));
-})(require("process"));
+})(require('process'));

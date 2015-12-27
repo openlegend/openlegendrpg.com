@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
-  var B = require("../index").Buffer;
-  var test = require("tape");
+  var B = require('../index').Buffer;
+  var test = require('tape');
   if (process.env.OBJECT_IMPL)
     B.TYPED_ARRAY_SUPPORT = false;
   test('utf8 buffer to base64', function(t) {
@@ -60,4 +60,4 @@
     t.equal(new B('öäüõÖÄÜÕ', 'utf8').toString('binary'), 'Ã¶Ã¤Ã¼ÃµÃÃÃÃ');
     t.end();
   });
-})(require("process"));
+})(require('process'));

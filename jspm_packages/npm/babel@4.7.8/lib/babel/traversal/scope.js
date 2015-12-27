@@ -11,16 +11,16 @@ var _classCallCheck = function(instance, Constructor) {
     throw new TypeError("Cannot call a class as a function");
   }
 };
-var includes = _interopRequire(require("lodash/collection/includes"));
-var traverse = _interopRequire(require("./index"));
-var defaults = _interopRequire(require("lodash/object/defaults"));
-var messages = _interopRequireWildcard(require("../messages"));
-var globals = _interopRequire(require("globals"));
-var flatten = _interopRequire(require("lodash/array/flatten"));
-var extend = _interopRequire(require("lodash/object/extend"));
-var object = _interopRequire(require("../helpers/object"));
-var each = _interopRequire(require("lodash/collection/each"));
-var t = _interopRequireWildcard(require("../types/index"));
+var includes = _interopRequire(require('lodash/collection/includes'));
+var traverse = _interopRequire(require('./index'));
+var defaults = _interopRequire(require('lodash/object/defaults'));
+var messages = _interopRequireWildcard(require('../messages'));
+var globals = _interopRequire(require('globals'));
+var flatten = _interopRequire(require('lodash/array/flatten'));
+var extend = _interopRequire(require('lodash/object/extend'));
+var object = _interopRequire(require('../helpers/object'));
+var each = _interopRequire(require('lodash/collection/each'));
+var t = _interopRequireWildcard(require('../types/index'));
 var functionVariableVisitor = {enter: function enter(node, parent, scope, state) {
     if (t.isFor(node)) {
       each(t.FOR_INIT_KEYS, function(key) {
@@ -32,11 +32,11 @@ var functionVariableVisitor = {enter: function enter(node, parent, scope, state)
     if (t.isFunction(node))
       return this.skip();
     if (state.blockId && node === state.blockId)
-      return ;
+      return;
     if (t.isBlockScoped(node))
-      return ;
+      return;
     if (t.isExportDeclaration(node) && t.isDeclaration(node.declaration))
-      return ;
+      return;
     if (t.isDeclaration(node))
       state.scope.registerDeclaration(node);
   }};
@@ -157,11 +157,11 @@ var Scope = (function() {
   Scope.prototype.checkBlockScopedCollisions = function checkBlockScopedCollisions(kind, name, id) {
     var local = this.getOwnBindingInfo(name);
     if (!local)
-      return ;
+      return;
     if (kind === "param")
-      return ;
+      return;
     if (kind === "hoisted" && local.kind === "let")
-      return ;
+      return;
     if (local.kind === "let" || local.kind === "const" || local.kind === "module") {
       throw this.file.errorWithNode(id, messages.get("scopeDuplicateDeclaration", name), TypeError);
     }
@@ -171,7 +171,7 @@ var Scope = (function() {
       newName = this.generateUidIdentifier(oldName).name;
     var info = this.getBindingInfo(oldName);
     if (!info)
-      return ;
+      return;
     var binding = info.identifier;
     var scope = info.scope;
     scope.traverse(scope.block, {enter: function enter(node, parent, scope) {
@@ -202,10 +202,10 @@ var Scope = (function() {
       return t.genericTypeAnnotation(t.identifier("Array"));
     }
     if (t.isObjectExpression(target)) {
-      return ;
+      return;
     }
     if (t.isLiteral(target)) {
-      return ;
+      return;
     }
     if (t.isCallExpression(target) && t.isIdentifier(target.callee)) {
       var funcInfo = this.getBindingInfo(target.callee.name);
@@ -215,7 +215,7 @@ var Scope = (function() {
       }
     }
     if (t.isIdentifier(target)) {
-      return ;
+      return;
     }
   };
   Scope.prototype.isTypeGeneric = function isTypeGeneric(name, genericName) {
@@ -231,7 +231,7 @@ var Scope = (function() {
   Scope.prototype.assignType = function assignType(name, type) {
     var info = this.getBindingInfo(name);
     if (!info)
-      return ;
+      return;
     info.typeAnnotation = type;
   };
   Scope.prototype.getTypeAnnotation = function getTypeAnnotation(id, node) {
@@ -351,7 +351,7 @@ var Scope = (function() {
     var info = block._scopeInfo;
     if (info) {
       extend(this, info);
-      return ;
+      return;
     }
     info = block._scopeInfo = {
       bindings: object(),
@@ -485,15 +485,15 @@ var Scope = (function() {
   };
   Scope.prototype._immutableBindingInfoToValue = function _immutableBindingInfoToValue(info) {
     if (!info)
-      return ;
+      return;
     if (info.reassigned)
-      return ;
+      return;
     var node = info.node;
     if (t.isVariableDeclarator(node)) {
       if (t.isIdentifier(node.id)) {
         node = node.init;
       } else {
-        return ;
+        return;
       }
     }
     if (t.isImmutable(node)) {
