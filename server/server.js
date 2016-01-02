@@ -1,7 +1,6 @@
 'use strict';
 
 var restify = require('restify');
-var ecstatic = require('ecstatic');
 var serveStatic = require('serve-static');
 
 var bunyan = require('bunyan');
@@ -34,7 +33,6 @@ function checkHtml5Route (req, res, next) {
 
   serve(req,res,next);
 };
-
 server.use(checkHtml5Route);
 server.use(serveStatic(config.root + '/client', {'index': ['index.html']}));
 
