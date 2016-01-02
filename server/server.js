@@ -1,6 +1,9 @@
 'use strict';
 
 var restify = require('restify');
+var ecstatic = require('ecstatic');
+var serveStatic = require('serve-static');
+
 var bunyan = require('bunyan');
 var config = require('./config/environment');
 
@@ -15,6 +18,25 @@ server.use(restify.acceptParser(server.acceptable));
 server.use(restify.queryParser());
 server.use(restify.jsonBodyParser());
 server.use(restify.CORS()); // CORS
+
+// custom middleware for apps that make requests to paths with no
+// file associated - allows angular to handle routing fallback
+function checkHtml5Route (req, res, next) {
+  // requesting a route rather than a file (has no `.` character)
+  if ( req.path().split('.').length <= 1 ) {
+    req.url = 'index.html';
+    req.path = function () { return req.url; };
+  }
+  var serve = serveStatic(
+    config.root+'/client',
+    {'index': ['index.html']}
+  );
+
+  serve(req,res,next);
+};
+
+server.use(checkHtml5Route);
+server.use(serveStatic(config.root + '/client', {'index': ['index.html']}));
 
 server.on('uncaughtException', function(req, res, route, err) {
   console.log(err.stack);

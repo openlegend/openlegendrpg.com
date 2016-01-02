@@ -27,16 +27,16 @@ module.exports = function(api) {
     api.get(/.*/, function (req, res, next) {
       // requesting a route rather than a file (has no `.` character)
       // allows angular to handle via html5 push state
-      if ( req.path().split('.').length <= 1 ) {
-        req.url = 'index.html';
-        req.path = function () { return req.url; };
-      }
-      var serve = restify.serveStatic({
-        'directory': config.root,
-        'default': 'index.html'
-      });
+      // if ( req.path().split('.').length <= 1 ) {
+      //   req.url = 'index.html';
+      //   req.path = function () { return req.url; };
+      // }
+      // var serve = restify.serveStatic({
+      //   'directory': config.root+'/client',
+      //   'default': 'index.html'
+      // });
 
-      serve(req,res,next);
+      // serve(req,res,next);
     });
 
   // }
