@@ -1,1 +1,0 @@
-module.exports = require("npm:oclazyload@0.6.3/dist/ocLazyLoad.min.js");

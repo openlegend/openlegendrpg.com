@@ -1,1 +1,0 @@
-module.exports = require("npm:has-ansi@1.0.3/index");

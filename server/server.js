@@ -21,24 +21,4 @@ server.on('uncaughtException', function(req, res, route, err) {
   res.send(500, err);
 });
 
-// var path     = require('path'),
-//     express  = require('express'),
-//     server      = express();
-
-// server.configure(function() {
-//     server.use(express.logger('dev'));
-//     server.use(express.compress());
-//     server.use(express.methodOverride());
-//     server.use(express.bodyParser());
-//     server.use(server.router);
-//     server.all('/*', function(req, res, next) {
-//         res.sendfile('index.html', { root: config.root });
-//     });
-//     server.use(express.errorHandler({
-//         dumpExceptions: true,
-//         showStack: true
-//     }));
-// });
-
 module.exports = server;
-

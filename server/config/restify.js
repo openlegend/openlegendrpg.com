@@ -22,24 +22,7 @@ module.exports = function(api) {
   //   store: new mongoStore({ mongoose_connection: mongoose.connection })
   // }));
 
-  // @TODO - add a favicon and uncomment this
-  // api.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
-  // if ('production' === env) {
-  //   // api.use(express.static(path.join(config.root, 'public')));
-  //   // api.set('appPath', path.join(config.root, 'public'));
-  //   api.get(/.*/, restify.serveStatic({
-  //     'directory': 'client',
-  //     'default': 'index.html'
-  //   }));
-
-  // }
-
   // if ('development' === env || 'test' === env) {
-
-    // api.get(/^\/?.*/, restify.serveStatic({
-    //   'directory': config.root,
-    //   'default': 'index.html'
-    // }));
 
     api.get(/.*/, function (req, res, next) {
       // requesting a route rather than a file (has no `.` character)
