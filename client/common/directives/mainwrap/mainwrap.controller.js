@@ -8,9 +8,11 @@ System.register([], function (_export) {
 
       _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
 
-      ContentCtrl = function ContentCtrl($scope, $mdSidenav, Auth) {
+      ContentCtrl = function ContentCtrl($scope, $state, $mdMedia, $mdSidenav, Auth, Config) {
         _classCallCheck(this, ContentCtrl);
 
+        this.$state = $state;
+        this.$mdMedia = $mdMedia;
         this.$mdSidenav = $mdSidenav;
 
         this.toggleSidenav = function (menuId) {
@@ -22,6 +24,8 @@ System.register([], function (_export) {
         };
 
         this.Auth = Auth;
+        this.Config = Config;
+        this.Date = Date;
 
         this.profileSubnavOpen = false;
       }

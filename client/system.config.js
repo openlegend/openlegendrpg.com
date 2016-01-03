@@ -30,6 +30,7 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.15",
     "json": "github:systemjs/plugin-json@0.1.0",
     "lodash": "github:lodash/lodash@3.6.0",
+    "moment": "github:moment/moment@2.11.0",
     "ngreact": "npm:ngreact@0.1.4",
     "oclazyload": "npm:oclazyload@0.6.3",
     "skeleton": "bower:skeleton@2.0.4",

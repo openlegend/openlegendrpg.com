@@ -40,9 +40,10 @@ System.register(["lodash", "angular", "angular-material", "angular-ui-router", "
           "hue-1": "300",
           "hue-2": "700",
           "hue-3": "50"
-        }).accentPalette("deep-purple", {
+        }).accentPalette("purple", {
+          "default": "700",
           "hue-1": "300",
-          "hue-2": "700",
+          "hue-2": "500",
           "hue-3": "50"
         });
 

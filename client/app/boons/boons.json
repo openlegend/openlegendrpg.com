@@ -64,7 +64,11 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8,
+      9
     ],
     "attribute": [
       "Entropy",
@@ -73,7 +77,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Sustain Persists",
     "description": "Illusory darkness or entropic energy, snuffs out all light.<br />",
-    "effect": "Choose a square or object within attribute range. Darkness emanates from the target to a radius equal to the power level of the boon (maximum of 5). The effect cancels the effect of all natural light within it’s radius of effect and creatures that depend on light for vision are BLINDED while in the area of effect. Creatures  that do not depend on light for their vision (if they have tremorsense, blindsight, etc) are unaffected. If the darkness area overlaps an area affected by the Light boon, then the one of greater power level supersedes the other.  If the power level of both is equal, then they cancel each other out.<br />"
+    "effect": "Choose a square or object within attribute range. Darkness emanates from the target to a radius equal to the power level of the boon. The effect cancels the effect of all natural light within it’s radius of effect and creatures that depend on light for vision are BLINDED while in the area of effect. Creatures  that do not depend on light for their vision (if they have tremorsense, blindsight, etc) are unaffected. If the darkness area overlaps an area affected by the Light boon, then the one of greater power level supersedes the other.  If the power level of both is equal, then they cancel each other out.<br />"
   },
   {
     "name": "Augury",
@@ -268,12 +272,13 @@
       1
     ],
     "attribute": [
-      "Divination"
+      "Abjuration",
+      "Energy"
     ],
     "invocationTime": "1 Normal Action",
     "duration": "Sustain Persists",
     "description": "The target becomes resistant to the effects of damage from a certain type of attack, thanks to protective supernatural energy that counters it.<br />",
-    "effect": "When the boon is invoked, the character granting the protection chooses one type of damage and the target gains resistance to that type. The types are finesse, forceful, energy, entropic. The resistance depends on the power level of the boon when it is bestowed:<br /><ul><li><strong>Power Level 3</strong> - Prevent the first 5 damage you would suffer each round from the chosen damage type. </li><li><strong>Power Level 5</strong> - Prevent the first 10 damage you would suffer each round from the chosen damage type. </li><li><strong>Power Level 7</strong> - Prevent the first 20 damage you would suffer each round from the chosen damage type. </li><li><strong>Power Level 7</strong> - Prevent all damage from the chosen damage type. </li></ul><br />"
+    "effect": "When the boon is invoked, the character granting the protection chooses one type of damage and the target gains resistance to that type. The types are finesse, forceful, fire, cold, lightning, acid, psychic, entropy. The resistance depends on the power level of the boon when it is bestowed:<br /><ul><br /><li><strong>Power Level 3</strong> - Prevent the first 5 damage you would suffer each round from the chosen damage type. </li><br /><li><strong>Power Level 5</strong> - All damage you would suffer from the chosen type is halved.</li><br /><li><strong>Power Level 7</strong> - Prevent all damage from the chosen damage type. </li></ul><br />"
   },
   {
     "name": "Restoration",
@@ -365,7 +370,7 @@
     "invocationTime": "1 Move Action",
     "duration": "Instantaneous",
     "description": "You are able to instantly move from one place to another, either by stepping into an intermediate realm, projecting yourself magically, or other similar means.<br />",
-    "effect": "<ul><li><strong>Power Level 3</strong> - You can teleport to any square as long as you can naturally see tha square and it is within a number of squares equal to or less than your Movement attribute score. </li><li><strong>Power Level 5</strong> - Your teleportation range is unchanged, but you can now teleport to squares that you can’t see.  If you choose a square already occupied you land in the nearest adjacent square (roll randomly to decide if there are multiple options) and you are stunned for 1 round (you don’t have to make a RESIST roll to end the effect). </li><li><strong>Power Level 7</strong> - You can opt to take longer in invoking the boon. If you choose to, for each minute of invocation (delay before making your action roll) you can teleport 1 mile. You cannot engage in any activity other than deep focus on the invocation during that time.</li><li><strong>Power Level 9</strong> - You can teleport to any location without range limit, provided you have personally seen (through magical or normal means) the target destination.</li></ul><br />"
+    "effect": "<ul><br /><li><strong>Power Level 3</strong> - You can teleport to any square as long as you can naturally see tha square and it is within a number of squares equal to or less than your Movement attribute score. </li><br /><li><strong>Power Level 5</strong> - Your teleportation range is unchanged, but you can now teleport to squares that you can’t see.  If you choose a square already occupied you land in the nearest adjacent square (roll randomly to decide if there are multiple options) and you are stunned for 1 round (you don’t have to make a RESIST roll to end the effect). </li><br /><li><strong>Power Level 7</strong> - You can opt to take longer in invoking the boon. If you choose to, for each minute of invocation (delay before making your action roll) you can teleport 1 mile. You cannot engage in any activity other than deep focus on the invocation during that time.</li><br /><li><strong>Power Level 9</strong> - Using the longer invocation time from Power Level 7, you can teleport to any location without range limit, provided you have personally seen (through magical or normal means) the target destination.</li><br /></ul><br />"
   },
   {
     "name": "Transmute",

@@ -12,34 +12,10 @@
     "src": "app/signup/signup"
   }
   ,{
-    "stateName": "content",
-    "urlPrefix": "/content",
-    "type": "load",
-    "src": "app/content/content"
-  }
-  ,{
-    "stateName": "dashboards",
-    "urlPrefix": "/dashboards",
-    "type": "load",
-    "src": "app/dashboard/dashboard"
-  }
-  ,{
     "stateName": "admin",
     "urlPrefix": "/admin",
     "type": "load",
     "src": "app/admin/admin"
-  }
-  ,{
-    "stateName": "forms",
-    "urlPrefix": "/forms",
-    "type": "load",
-    "src": "app/forms/forms"
-  }
-  ,{
-    "stateName": "cardkit",
-    "urlPrefix": "/cardkit",
-    "type": "load",
-    "src": "app/cardkit/cardkit"
   }
   ,{
     "stateName": "home",
@@ -58,5 +34,11 @@
     "urlPrefix": "/boons",
     "type": "load",
     "src": "app/boons/boons"
+  }
+  ,{
+    "stateName": "feats",
+    "urlPrefix": "/feats",
+    "type": "load",
+    "src": "app/feats/feats"
   }
 ]
