@@ -1,13 +1,1 @@
-'use strict';
-
-import angular from 'angular';
-
-const configServiceModule = angular.module('config.service.js', []);
-
-configServiceModule.factory('Config', function () {
-    return {
-      timestamp: 1451848570364
-    };
-  });
-
-export default configServiceModule;
+System.register(["angular"],function(_export){var angular,configServiceModule;return{setters:[function(_angular){angular=_angular["default"]}],execute:function(){"use strict";configServiceModule=angular.module("config.service.js",[]),configServiceModule.factory("Config",function(){return{timestamp:1451851635215}}),_export("default",configServiceModule)}}});
