@@ -117,7 +117,7 @@
       "angular": "github:angular/bower-angular@1.4.5",
       "angular-animate": "github:angular/bower-angular@1.4.5",
       "angular-cookies": "github:angular/bower-angular-cookies@1.4.5",
-      "angular-material": "github:angular/bower-material@0.10.1",
+      "angular-material": "github:angular/bower-material@1.0.1",
       "angular-messages": "github:angular/bower-angular-messages@^1.4.5",
       "angular-mocks": "npm:angular-mocks@^1.4.5",
       "angular-resource": "github:angular/bower-angular-resource@1.4.5",
