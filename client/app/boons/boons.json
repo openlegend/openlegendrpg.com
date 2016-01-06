@@ -80,7 +80,7 @@
     "effect": "Choose a square or object within attribute range. Darkness emanates from the target to a radius equal to the power level of the boon. The effect cancels the effect of all natural light within it’s radius of effect and creatures that depend on light for vision are BLINDED while in the area of effect. Creatures  that do not depend on light for their vision (if they have tremorsense, blindsight, etc) are unaffected. If the darkness area overlaps an area affected by the Light boon, then the one of greater power level supersedes the other.  If the power level of both is equal, then they cancel each other out.<br />"
   },
   {
-    "name": "Augury",
+    "name": "Detection",
     "tags": [
       "Supernatural"
     ],
