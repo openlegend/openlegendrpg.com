@@ -107,7 +107,7 @@
     "effect": "By default, an interrupt action can only be used defensively to prevent an incoming attack.  With this feat, if your action roll for a DEFEND interrupt is successful, it becomes a retributive attack targeting the attacker. You do not roll an additional action roll, you merely compare the target’s defense with the result of your action roll from DEFEND, if successful, it does damage as a normal attack would.<br />"
   },
   {
-    "name": "Battlefield Punisher (knockdown)",
+    "name": "Battlefield Punisher - Knockdown",
     "prerequisite": [
       "Battlefield Defender",
       "Might 5"
@@ -125,7 +125,7 @@
     "effect": "When you use an interrupt action to make a melee attack with a FORCEFUL weapon, if you hit the target’s defense, you can automatically trigger the KNOCKDOWN bane. If the attack hits the remainder of the target's movement is cancelled.<br />"
   },
   {
-    "name": "Battlefield Punisher (slowed)",
+    "name": "Battlefield Punisher - Slowed",
     "prerequisite": [
       "Battlefield Defender",
       "Might 5 OR Agility 5"
@@ -143,7 +143,7 @@
     "effect": "When you use an interrupt action to make a melee attack, if you hit the target’s defense, you can automatically trigger the SLOWED bane. If the attack hits and the target has already moved more than 2 squares, the remainder of their movement is cancelled.<br />"
   },
   {
-    "name": "Battlefield Punisher (stunned)",
+    "name": "Battlefield Punisher - Stunned",
     "prerequisite": [
       "Battlefield Defender",
       "Might 7 OR Agility 7"
