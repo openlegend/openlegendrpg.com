@@ -61,7 +61,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Resist ends (special) (Fail x 3 = 24 hours)",
     "description": "Charms are one of the great banes of legend, wielded by powerful enchantress's like Circe (in Homer's The Odyssey), Nymph's, and other enchanter's who control the will of others, not through total domination, but through a magical spell of love or friendship.<br />",
-    "effect": "At the option of the attacker, the charmed bane either causes the target to consider the attacker their best friend and one of the most trustworthy and noble people they have met in all their lives. Alternatively, this trust and admiration can manifest as romantic love. The attacker is unable to do anything to plot against the one who afflicted them, and will (at the earliest possible opportunity) tell their charmer of any rumored harm or danger coming their way. The afflicted character becomes immediately suspicious of anyone who speaks ill of their attacker. <ul><li><strong>Power Level 4</strong> - Charm creatures of animal level intelligence or lower</li><li><strong>Power Level 6</strong> - Charm creatures of human level intelligence</li><li><strong>Power Level 7</strong> - Charm nonhuman creatures and those of superhuman intelligence (extraplanar beings, dragons, vampires, etc.)</li></ul><br />",
+    "effect": "At the option of the attacker, the charmed bane either causes the target to consider the attacker their best friend and one of the most trustworthy and noble people they have met in all their lives. Alternatively, this trust and admiration can manifest as romantic love. The attacker is unable to do anything to plot against the one who afflicted them, and will (at the earliest possible opportunity) tell their charmer of any rumored harm or danger coming their way. The afflicted character becomes immediately suspicious of anyone who speaks ill of their attacker.<br />  <ul><br />  <li><strong>Power Level 4</strong> - Charm creatures of animal level intelligence or lower</li><br />  <li><strong>Power Level 6</strong> - Charm creatures of human level intelligence</li><br />  <li><strong>Power Level 7</strong> - Charm nonhuman creatures and those of superhuman intelligence (extraplanar beings, dragons, vampires, etc.)</li><br />  </ul><br />",
     "special": "While most banes last until the target actively attempts to resist it, this bane prevents the target from being aware of their affliction and thus prevents them from actively attempting to break free. However, the targets true mind is magically suppressed but fights to regain control.  As such, at the end of each of it’s turns, the target receives a Resist roll as a free action to break free from the effect. When your target succeeds at a resist roll against this bane, they become to immune to all subsequent attempts by you to inflict the bane for the next 24 hours.<br />"
   },
   {
@@ -161,7 +161,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Resist ends (Fail x 3 = 1 hour)",
     "description": "Though rare, domination is seen from time to time in legendary tales, often wielded by vampires, and sometimes wielded by the most powerful, mentalist sorcerers who command legions of mindless zombies, completely enslaved to their will.<br />",
-    "effect": "Dominated characters are under the complete control of the one who targeted them with the dominated bane. Unlike the charmed bane, characters under the effect of domination lose any control over their own actions but their minds are free to think anything, though they are effectively trapped in their own body like a prison. They cannot take action of any kind (except thought) unless it is ordered by the attacker. Every action which the attacker orders the afflicted character to perform which is in extreme violation of their nature gives the target a Resist roll as a free action to break free from the effect.  The attacker does not gain special access to the target’s mind and so can only order the character to perform actions that they think or know (from prior knowledge) that the character is capable of. Domination does not prevent other banes, like mind-reading, but each bane must be applied and resolved separately. Lastly, each mental order that the attacker gives to the target is a normal action, however the order can be a series of verbal commands like “Attack enemy X unless someone comes through the door, in which case flee.”. The dominated creature will continue to obey the last mental command they were given until you give a new command. Only one such command can be active at a given time, so giving a new command cancels all previous ones. <ul><li><strong>Power Level 5</strong> - This ability targets creatures of subhuman intelligence (animals, some elementals, etc.)</li><li><strong>Power Level 2</strong> - Sound</li><li><strong>Power Level 9</strong> - This ability targets creatures of human intelligence</li></ul><br />",
+    "effect": "Dominated characters are under the complete control of the one who targeted them with the dominated bane. Unlike the charmed bane, characters under the effect of domination lose any control over their own actions but their minds are free to think anything, though they are effectively trapped in their own body like a prison. They cannot take action of any kind (except thought) unless it is ordered by the attacker. Every action which the attacker orders the afflicted character to perform which is in extreme violation of their nature gives the target a Resist roll as a free action to break free from the effect.  The attacker does not gain special access to the target’s mind and so can only order the character to perform actions that they think or know (from prior knowledge) that the character is capable of. Domination does not prevent other banes, like mind-reading, but each bane must be applied and resolved separately. Lastly, each mental order that the attacker gives to the target is a normal action, however the order can be a series of verbal commands like “Attack enemy X unless someone comes through the door, in which case flee.”. The dominated creature will continue to obey the last mental command they were given until you give a new command. Only one such command can be active at a given time, so giving a new command cancels all previous ones. <ul><br />  <li><strong>Power Level 5</strong> - This ability targets creatures of subhuman intelligence (animals, some elementals, etc.)</li><br />  <li><strong>Power Level 9</strong> - This ability targets creatures of human intelligence</li><br />  </ul><br />",
     "special": "While most banes last until the target actively attempts to resist it, this bane prevents the target from being aware of their affliction and thus prevents them from actively attempting to break free. However, the targets true mind is magically suppressed but fights to regain control.  As such, at the end of each of it’s turns, the target receives a Resist roll as a free action to break free from the effect. When your target succeeds at a resist roll against this bane, they become to immune to all subsequent attempts by you to inflict the bane for the next 24 hours.<br />"
   },
   {
@@ -456,30 +456,6 @@
     "description": "Peering into a magic vessel, a hearth, a bubbling cauldron, or a crystal ball, you see can view the target if they are on the same plane<br />",
     "effect": "If your attack is successful, you can view the target from any distance, provided they are on the same plane of existence.<br />",
     "special": "You can attempt to scry the same target any number of times, but if your attack roll to target them fails, that target becomes immune to your scrying for 24 hours.<br />"
-  },
-  {
-    "name": "Silenced",
-    "tags": [
-      "Physical",
-      "Supernatural"
-    ],
-    "power": [
-      2
-    ],
-    "attackAttributes": [
-      "Agility",
-      "Entropy",
-      "Alteration"
-    ],
-    "attack": [
-      "Agility vs. Toughness",
-      "Entropy vs. Toughness",
-      "Alteration vs. Evasion"
-    ],
-    "invocationTime": "1 Normal Action",
-    "duration": "Resist ends (Fail x 3 = 1 minute)",
-    "description": "Silence overcomes the target (whether from magically warping sound around the target) or a physical effect like strangulation / suffocation<br />",
-    "effect": "If AGILITY or ENTROPY was used in the attack, then the character is suffering strangulation and unable to speak.  In addition to that, if ALTERATION was used in the attack, all sound within 5’ of the target is magically suppressed, making their footsteps and the usual “clank” of belongings they are carrying inaudible.<br />"
   },
   {
     "name": "Sickened",

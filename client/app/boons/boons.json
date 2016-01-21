@@ -143,7 +143,7 @@
       "Creation",
       "Spirit"
     ],
-    "invocationTime": "1 Move Action",
+    "invocationTime": "1 Normal Action",
     "duration": "Instantaneous",
     "description": "Healing is magical energy overflowing from a creative life force which heals wounds and mends broken bones.<br />",
     "effect": "Choose a target and make an action roll. You bestow healing to your target equal to your roll -10 in hit points.<br /><strong>Special</strong>: Multi-targeting with this boon can only be done with the Restorative Adept feat.<br />"

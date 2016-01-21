@@ -40,7 +40,7 @@
       2
     ],
     "description": "You are specially trained in the wearing of a particular armor type, making it more effective for you and<br />",
-    "effect": "Choose an armor type to specialize in. Your training allows you to sleep in that armor type without becoming fatigued. In addition, while wearing armor of that type, you gain the following benefits.<br /><ul><br /><li>Tier 1 - The Fortitude prerequisite for wearing the selected armor is reduced by 1.  While wearing this armor, the Armor Bonus is increased by 1</li><br /><li>Tier 2 - The Fortitude prerequisite for wearing the selected armor is reduced by 2.  While wearing this armor, the Armor Bonus is increased by 2</li><br /><li>Tier 3 - The Fortitude prerequisite for wearing the selected armor is reduced by 3.  While wearing this armor, the Armor Bonus is increased by 3</li><br /></ul><br />"
+    "effect": "Choose an armor type to specialize in. Your training allows you to sleep in that armor type without becoming fatigued. In addition, while wearing armor of that type, you gain the following benefits.<br /><ul><br /><li>Tier 1 - The Fortitude prerequisite for wearing the selected armor is reduced by 1. The Armor Bonus granted by the armor is increased by 1</li><br /><li>Tier 2 - The Fortitude prerequisite for wearing the selected armor is reduced by 2. The Armor Bonus granted by the armor is increased by 2. If the armor normally incurs a move penalty, that penalty is reduced by 1.</li><br /><li>Tier 3 - The Fortitude prerequisite for wearing the selected armor is reduced by 3. The Armor Bonus granted by the armor is increased by 3.If the armor normally incurs a move penalty, that penalty is reduced by 2.</li><br /></ul><br />"
   },
   {
     "name": "Attack Specialization (I - IX)",
@@ -363,7 +363,7 @@
     "effect": "While you are raging, in addition to dice exploding on any maximum die roll (as normal), all of the dice in your dice pool explode on the number 1 below maximum as well (though the total is still the number rolled). This means that d4’s explode on a 3 or 4, d6’s explode on a 5 or 6, d8’s explode on a 7 or 8, and so on.<br />"
   },
   {
-    "name": "Defensive Expert (I - X)",
+    "name": "Defensive Reflexes (I - X)",
     "prerequisite": [
       "None"
     ],
@@ -414,7 +414,7 @@
       "Supernatural"
     ],
     "cost": [
-      3
+      2
     ],
     "description": "A character with this power moves with extraordinary speed either due to agility or supernatural augmentation to their movement.<br />",
     "effect": "Your movement score is permanently increased by 1.<br /><br />"
@@ -463,7 +463,7 @@
       3
     ],
     "description": "A character with this power has access to a more potent and dangerous kind of illusion, enabling them to completely dominate the sensory perceptions of many victims.<br />",
-    "effect": "You can opt to use the Phantasm bane in a different way – the difficulty is still controlled by the number of senses you choose to effect (see the Phantasm bane) but instead of creating an illusion of a specific size, you can completely control the sensory perceptions of all the senses you target (removing the area size limitation). This effect can only affect a single target (unlike an illusion, which affects anyone who could nomrally perceive it).<br />"
+    "effect": "You can opt to use the Phantasm bane in a different way – the power level is still determined by the number of senses you choose to effect (see the Phantasm bane), but instead of creating an illusion of a specific size, you can completely control the sensory perceptions of all the senses you target (removing the area size limitation). This effect can only affect a single target (unlike an illusion, which affects anyone who could nomrally perceive it).<br />"
   },
   {
     "name": "Hallucination (Mass)",
@@ -654,7 +654,7 @@
       "Any Attribute"
     ],
     "cost": [
-      3
+      2
     ],
     "description": "You are a master of dealing damage to more than one target, whether through melee, projectile, or area attacks.  Examples include everything from master archers shooting two enemies at once to a fire mage feared for their ability to char enemies en masse.<br />",
     "effect": "Choose either area, projectile, or melee when you take this feat.  For each tier, you offset the disadvantage penalty associated with by 1.  So, when you would normally get disadvantage 2, you instead get disadvantage 1 and so on.<br />"
@@ -753,20 +753,6 @@
     "effect": "You gain the ability to enter a Rage (from the Berserker feat) when a trigger of your choice occurs. Even if it's not your turn, you can take a free action and enter a Rage. This rage takes effect before the triggering action. You can declare this action after an action / attack roll / damage roll and you gain the benefit of the rage against that roll.  You can enter a RAGE in response to any action, not just an attack or damage roll.<br />"
   },
   {
-    "name": "Protective Casting",
-    "prerequisite": [
-      "Abjuration 5"
-    ],
-    "tags": [
-      "Supernatural"
-    ],
-    "cost": [
-      2
-    ],
-    "description": "You are adept at wielding protective magic defensively, enabling you to prevent hostile attempts to end boons affecting you or your allies.<br />",
-    "effect": "Any time you or an ally in range has a boon disrupted by an enemy (through damage or through magical dispelling / countering), you may use an interrupt action to roll an Abjuration action roll.  If your action roll is higher than the attacking action roll, then the boon persists with no interruption (as normal for an interrupt action, your next action roll is spent).<br />"
-  },
-  {
     "name": "Master Tracker",
     "prerequisite": [
       "Perception 5"
@@ -809,8 +795,8 @@
     "cost": [
       2
     ],
-    "description": "You gain the power to supernaturally restore hit points to other creatures – there are many potential sources for this gift of healing: channeling the power of a patron deity, an inherent ability to heal (such as possessed by angels), calling on the healing forces of nature or the surroundings, or shouting words of encouragement on the battlefield.<br />",
-    "effect": "This feat enables the Heal boon to be used with multi-targeting (normally it can only affect one target).<br />You can also treat LETHAL damage that is normally difficult to heal naturally, at a rate of 1 HP per day per Restoration level for all characters that are in your company throughout the day.<br /><ul><br /><li><strong>Tier 1</strong> - Advantage 1 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 2</strong> - Advantage 2 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 3</strong> - Advantage 3 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 4</strong> - Advantage 4 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 5</strong> - Advantage 5 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 6</strong> - Advantage 6 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 7</strong> - Advantage 7 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 8</strong> - Advantage 8 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 9</strong> - Advantage 9 when rolling to invoke the Heal boon.</li><br /></ul><br />"
+    "description": "You gain the power to supernaturally restore hit points to other creatures – there are many potential sources for this gift of healing: channeling the power of a patron deity, an inherent ability to heal (such as possessed by angels), calling on the healing forces of nature, the surroundings, or shouting words of encouragement on the battlefield.<br />",
+    "effect": "You can invoke the heal boon as a move action (instead of a normal action).<br />You can also treat LETHAL damage that is normally difficult to heal naturally, at a rate of 1 HP per day per Restoration level for all characters that are in your company throughout the day.<br /><ul><br /><li><strong>Tier 1</strong> - Advantage 1 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 2</strong> - Advantage 2 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 3</strong> - You can invoke the heal boon as a minor action (instead of a normal action). Advantage 3 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 4</strong> - Advantage 4 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 5</strong> - Advantage 5 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 6</strong> - Advantage 6 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 7</strong> - Advantage 7 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 8</strong> - Advantage 8 when rolling to invoke the Heal boon.</li><br /><li><strong>Tier 9</strong> - Advantage 9 when rolling to invoke the Heal boon.</li><br /></ul><br />"
   },
   {
     "name": "Ritual Magic (I - III)",
