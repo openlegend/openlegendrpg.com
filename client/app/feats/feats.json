@@ -57,7 +57,7 @@
       3
     ],
     "description": "You have spent an extraordinary amount of time training with with a particular weapon or energy type, enabling you deal out more devastation with that weapon than is possible for the average wielder.<br />",
-    "effect": "When you take this power, select one weapon or energy type. You gain ADVANTAGE 1 per tier of this feat for any attack made with your choice.<br />Energy Types you can choose from include fire, cold, lightning, acid, poison, psychic, and force.<br /><strong>Special</strong>: You may take this feat multiple times, for the same weapon, your total advantage to attacks with the weapon is equal to how many times you’ve purchased the feat for that particular weapon.  You can also specialize in different weapons by purchasing the feat again.<br />"
+    "effect": "When you take this power, select one weapon or energy type. You gain ADVANTAGE 1 per tier of this feat for any damaging attack made with your choice; this bonus does not apply to bane attacks.<br />Energy Types you can choose from include fire, cold, lightning, acid, poison, psychic, and force.<br /><strong>Special</strong>: You may take this feat multiple times, for the same weapon, your total advantage to attacks with the weapon is equal to how many times you’ve purchased the feat for that particular weapon.  You can also specialize in different weapons by purchasing the feat again.<br />"
   },
   {
     "name": "Attribute Substitution",
