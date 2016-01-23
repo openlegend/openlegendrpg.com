@@ -482,21 +482,7 @@
     "effect": "This power augments the HALLUCINATION power, allowing you to affect more targets As you advance in (Su) Illusion attribute according to the list below.  Also, when inflicting HALLUCINATION as a multi-targeting attack, you are not required to invoke the bane as an area attack, you can choose any target within your max range up to a maximum number of targets as follows:<br /><ul><br /><li><strong>Illusion 7</strong> - 5 Target</li><br /><li><strong>Illusion 8</strong> - 10 Targets</li><br /><li><strong>Illusion 9</strong> - 50 Targets</li><br /></ul><br />"
   },
   {
-    "name": "Indomitable Endurance (I - II)",
-    "prerequisite": [
-      "Fortitude 5"
-    ],
-    "tags": [
-      "Physical"
-    ],
-    "cost": [
-      3
-    ],
-    "description": "Your endurance is legendary; when forced marching brings others to their knees, you pick them up and keep going.<br />",
-    "effect": "Once per 24 hour period, if you would be affected by the Fatigued bane, you shrug it off, completely ignoring it's effects. If you would be affected a second time before 24 hours, you receive one level of Fatigue. You can take this feat, multiple times, each time you do, you gain an additional use of this effect per 24 hour period.<br />"
-  },
-  {
-    "name": "Inspired Assistant",
+    "name": "Hospitaler",
     "prerequisite": [
       "Spirit 4 / Presence 4 / Abjuration 4"
     ],
@@ -509,7 +495,21 @@
       2
     ],
     "description": "You are exceptionally good at helping others shake off any banes afflicting them, either through Healing magic or through inspiring words.<br />",
-    "effect": "You can use a normal action to aid an ally. No action roll is required for success and the ally gains Advantage to the d20 roll (meaning roll 2 d20’s and keep the highest, contrary to normal action rolls) to overcome each bane they are afflicted with. Additionally you gain advantage 1 any time you attempt to invoke the Dispel boon.<br />"
+    "effect": "You can use a normal action to give an ally an immediate Resist roll (free action for the target) with Advantage (meaning roll 2 d20’s and keep the highest, contrary to normal action rolls). Additionally you gain advantage 1 any time you attempt to invoke the Dispel boon.<br />"
+  },
+  {
+    "name": "Indomitable Endurance (I - II)",
+    "prerequisite": [
+      "Fortitude 5"
+    ],
+    "tags": [
+      "Physical"
+    ],
+    "cost": [
+      3
+    ],
+    "description": "Your endurance is legendary; when forced marching brings others to their knees, you pick them up and keep going.<br />",
+    "effect": "Once per 24 hour period, if you would be affected by the Fatigued bane, you shrug it off, completely ignoring it's effects. If you would be affected a second time before 24 hours, you receive one level of Fatigue. You can take this feat, multiple times, each time you do, you gain an additional use of this effect per 24 hour period.<br />"
   },
   {
     "name": "Inspiring Champion (I - III)",
