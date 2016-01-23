@@ -392,6 +392,18 @@
     "effect": "Choose from the following energy types: fire, cold, lightning, acid, psychic, (or another at the GM’s discretion).  When you are attacked with that energy type, you gain resistance to the attack as follows:<br />  <ul><br />  <li><strong>Tier 1</strong> - Prevent the first 5 damage you would suffer each round from the chosen energy type. </li><br />  </ul><br />  <li><strong>Tier 2</strong> -All damage you would suffer from the chosen type is halved.</li><br />  <li><strong>Tier 3</strong> - You are immune to the chosen energy type</li><br />"
   },
   {
+    "name": "Evasive Footwork",
+    "prerequisite": [
+      "Agility 4"
+    ],
+    "tags": null,
+    "cost": [
+      2
+    ],
+    "description": "You are able to dodge and weave in combat, deftly sidestepping attacks that would target a clumsier combatant<br />",
+    "effect": "When you move from a square adjacent to an enemy to another square not adjacent to that enemy, the enemy does not get the usual opportunity attack.<br />"
+  },
+  {
     "name": "Ferocious Minions",
     "prerequisite": [
       "Enchantment 3 / 5 / 7"
