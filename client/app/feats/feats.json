@@ -191,7 +191,7 @@
       3
     ],
     "description": "Summary of effect<br />",
-    "effect": "You can choose to inflict the Fatigued bane on yourself and fly into a rage. This rage is actually the result of incredible focus and a heightened trance-like state that clears your mind for attack, and helps you transcend fear and pain. Entering the rage is a free action that you can take only on your turn. While raging, all of your defense scores are increased by 5 and you have Advantage 1 on all attacks. The rage is dependent upon a sense of momentum; when that momentum is disrupted, the rage ends. If you go three consecutive rounds without making an attack roll, the rage ends.<br />"
+    "effect": "You can fly into a rage via a surge of adrenaline. This rage is the result of incredible focus and a heightened trance-like state that sharpens your focus and helps you transcend fear and pain. Entering the rage is a free action that you can take only on your turn. While raging, you have Advantage 1 on all attacks.  If you are not wearing armor, all of your defense scores are increased by 5. The rage is dependent upon a sense of momentum; when that momentum is disrupted, the rage ends. If you go three consecutive rounds without making an attack roll, the rage ends. When the rage ends, you automatically suffer <a href=\"/banes/fatigued\">1 level of fatigue</a>.<br />"
   },
   {
     "name": "Boon Focus (I - III)",
