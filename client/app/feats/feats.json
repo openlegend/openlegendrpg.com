@@ -11,7 +11,7 @@
       2
     ],
     "description": "Alternate form is an ability possessed by lyncanthropes (werewolves, werebears, wererats) who can shapeshift into a specific animal form, some druids that can shapeshift into natural creatures, and even vampires are known to shapeshift into the form of a large bat.<br />",
-    "effect": "You gain the ability to shapeshift into a single form (you choose that form when purchasing this power and it cannot be changed) any time as a normal action. While in your alternate form, you can divide your Alteration attribute score amongst your physical attributes.  If your Alteration score is higher than a given physical score, you can raise the physical score to a maximum of your Alteration score. If the physical attribute is higher than your Alteration attribute, you can raise the physical attribute by 1 instead. This increase cannot be used to meet prerequisites for feats.<br /><ul><br /><li>Tier 1 – Your alternate form must be the same as your normal size.</li><br /><li>Tier 2 – Your alternate form can be one size different from your normal size</li><br /><li>Tier 3 – Your alternate form can be any size. In addition, you are able to use magical attacks (dragon’s breath, nymph’s charm, etc.) of your chosen form. When making magical attacks you substitute you ALTERATION score for the attribute that the creature would normally use for any magical abilities.</li><br /></ul><br />"
+    "effect": "You gain the ability to shapeshift into a single form (you choose that form when purchasing this feat and it cannot be changed) any time as a normal action. While in your alternate form, you can divide your Alteration attribute score amongst your physical attributes.  If your Alteration score is higher than a given physical score, you can raise the physical score to a maximum of your Alteration score. If the physical attribute is higher than your Alteration attribute, you can raise the physical attribute by 1 instead. This increase cannot be used to meet prerequisites for feats.<br /><ul><br /><li>Tier 1 – Your alternate form must be the same as your normal size.</li><br /><li>Tier 2 – Your alternate form can be one size different from your normal size</li><br /><li>Tier 3 – Your alternate form can be any size. In addition, you are able to use magical attacks (dragon’s breath, nymph’s charm, etc.) of your chosen form. When making magical attacks you substitute you ALTERATION score for the attribute that the creature would normally use for any magical abilities.</li><br /></ul><br />"
   },
   {
     "name": "Area Manipulation (I - V)",
@@ -57,7 +57,7 @@
       3
     ],
     "description": "You have spent an extraordinary amount of time training with with a particular weapon or energy type, enabling you deal out more devastation with that weapon than is possible for the average wielder.<br />",
-    "effect": "When you take this power, select one weapon or energy type. You gain ADVANTAGE 1 per tier of this feat for any damaging attack made with your choice; this bonus does not apply to bane attacks.<br />Energy Types you can choose from include fire, cold, lightning, acid, poison, psychic, and force.<br /><strong>Special</strong>: You may take this feat multiple times, for the same weapon, your total advantage to attacks with the weapon is equal to how many times you’ve purchased the feat for that particular weapon.  You can also specialize in different weapons by purchasing the feat again.<br />"
+    "effect": "When you take this feat, select one weapon or energy type. You gain ADVANTAGE 1 per tier of this feat for any damaging attack made with your choice; this bonus does not apply to bane attacks.<br />Energy Types you can choose from include fire, cold, lightning, acid, poison, psychic, and force.<br /><strong>Special</strong>: You may take this feat multiple times, for the same weapon, your total advantage to attacks with the weapon is equal to how many times you’ve purchased the feat for that particular weapon.  You can also specialize in different weapons by purchasing the feat again.<br />"
   },
   {
     "name": "Attribute Substitution",
@@ -71,7 +71,7 @@
       4
     ],
     "description": "Your prowess in one attribute empowers you in ways that it normally would not.  A good example would be a martial artist with no physical strength, but capable of using internal “chi” power to throw and disable enemies is one example of this feat at work. Or an anatomical genius who does damage by applying his knowledge via a high Learning attribute for attacks<br />",
-    "effect": "When you purchase this power, you create a permanent link between two attributes; one stronger (primary) and one weaker (dependent). Your attribute rolls with the dependent attribute can make attack rolls, and invoke banes / boons of the dependent attribute with the score of the primary attribute. This relationship is subject to case-by-case approval by the GM; it must be logical, and the GM should prevent players from creating illogical substitutions that are purely aimed at making their characters unreasonably powerful.  Some good example uses include “Psychic Warrior” that does battle with his mind, substituting Psychic => Might, “Holy Warrior” that draws on divine power in place of physical power, substituting Spirit => Might, a martial arts master that relies on logic to guide his strikes at enemies pressure points, replacing Logic => Agility.<br />For the purpose of meeting attribute prerequisites when purchasing feats, your dependent attribute is considered equal to that of your primary attribute score.<br /><strong>Special</strong>: This feat can only be purchased at 1st level, and therefore can never be purchased more than once by a given character. In addition, the primary attribute must be either Social, Mental, or Supernatural, while the substituted attribute must be Physical.<br />"
+    "effect": "When you purchase this feat, you create a permanent link between two attributes; one stronger (primary) and one weaker (dependent). Your attribute rolls with the dependent attribute can make attack rolls, and invoke banes / boons of the dependent attribute with the score of the primary attribute. This relationship is subject to case-by-case approval by the GM; it must be logical, and the GM should prevent players from creating illogical substitutions that are purely aimed at making their characters unreasonably powerful.  Some good example uses include “Psychic Warrior” that does battle with his mind, substituting Psychic => Might, “Holy Warrior” that draws on divine power in place of physical power, substituting Spirit => Might, a martial arts master that relies on logic to guide his strikes at enemies pressure points, replacing Logic => Agility.<br />For the purpose of meeting attribute prerequisites when purchasing feats, your dependent attribute is considered equal to that of your primary attribute score.<br /><strong>Special</strong>: This feat can only be purchased at 1st level, and therefore can never be purchased more than once by a given character. In addition, the primary attribute must be either Social, Mental, or Supernatural, while the substituted attribute must be Physical.<br />"
   },
   {
     "name": "Bane Focus (I - II)",
@@ -88,7 +88,7 @@
       3
     ],
     "description": "You are specialized in the use a particular bane that is iconic to your character.<br />",
-    "effect": "Normally, any time you deal 10 or more points of damage with an attack, you can choose to to inflict 1 bane on the target that is associated with the attacking attribute. When you purchase this power, that threshold is decreased. You choose a bane that you meet the prerequisites for. The damage to trigger that bane is reduced.<br /><ul><br /><li>Tier 1 - The chosen bane triggers any time you do 5 or more damage to a target. Additionally, when you make a bane attack (one that does not do damage) to invoke this bane, you get ADVANTAGE 1 on the attack.</li><br /><li>Tier 2 - The chosen bane triggers any time you do 1 or more damage to a target. Additionally, when you make a bane attack (one that does not do damage) to invoke this bane, you get ADVANTAGE 2 on the attack.</li><br /></ul><br />"
+    "effect": "Normally, any time you deal 10 or more points of damage with an attack, you can choose to to inflict 1 bane on the target that is associated with the attacking attribute. When you purchase this feat, that threshold is decreased. You choose a bane that you meet the prerequisites for. The damage to trigger that bane is reduced.<br /><ul><br /><li>Tier 1 - The chosen bane triggers any time you do 5 or more damage to a target. Additionally, when you make a bane attack (one that does not do damage) to invoke this bane, you get ADVANTAGE 1 on the attack.</li><br /><li>Tier 2 - The chosen bane triggers any time you do 1 or more damage to a target. Additionally, when you make a bane attack (one that does not do damage) to invoke this bane, you get ADVANTAGE 2 on the attack.</li><br /></ul><br />"
   },
   {
     "name": "Battlefield Defender",
@@ -183,7 +183,7 @@
   {
     "name": "Berserker",
     "prerequisite": [
-      "Power 5",
+      "Might 5",
       "Will 3"
     ],
     "tags": null,
@@ -359,7 +359,7 @@
       3
     ],
     "description": "Your battle fury is legendary, allowing you to fight on long after your body should give up.<br />",
-    "effect": "While you are raging cannot be knocked unconscious. All damage dealt to you should be recorded, possibly resulting in a negative hit point total. Despite any amount of damage, you remain conscious for as long as you can sustain the rage. When the rage ends, if your hit points are below zero, you collapse unconscious.  If you are not healed within 1 round, you die.<br />"
+    "effect": "While you are raging you cannot be knocked unconscious. All damage dealt to you should be recorded, possibly resulting in a negative hit point total. Despite any amount of damage, you remain conscious for as long as you can sustain the rage. When the rage ends, if your hit points are below zero, you collapse unconscious.  If you are not healed within 1 round, you die.<br />"
   },
   {
     "name": "Destructive Berserker",
@@ -404,6 +404,21 @@
     ],
     "description": "Your specialization in a particular type of energy or general protection causes you to be resistant to that type of energy<br />",
     "effect": "Choose from the following energy types: fire, cold, lightning, acid, psychic, (or another at the GM’s discretion).  When you are attacked with that energy type, you gain resistance to the attack as follows:<br />  <ul><br />  <li><strong>Tier 1</strong> - Prevent the first 5 damage you would suffer each round from the chosen energy type. </li><br />  </ul><br />  <li><strong>Tier 2</strong> -All damage you would suffer from the chosen type is halved.</li><br />  <li><strong>Tier 3</strong> - You are immune to the chosen energy type</li><br />"
+  },
+  {
+    "name": "Entranced Berserker",
+    "prerequisite": [
+      "Berserker",
+      "Will 7"
+    ],
+    "tags": [
+      "Combat"
+    ],
+    "cost": [
+      3
+    ],
+    "description": "While in a rage, you are able to shrug off mind-influencing impediments.<br />",
+    "effect": "While you are raging, certain banes that would otherwise affect you are suspended until you are no longer raging.  Banes suspended by this feat include: charmed, demoralized, dominated, incapacitated, intimidated, memory wipe, stupefied, truthfulness, and immobile (if invoked via Enchantment attribute).<br />"
   },
   {
     "name": "Evasive Footwork",
@@ -925,7 +940,7 @@
     "cost": [
       1
     ],
-    "description": "Something about you reveals your inherent supernatural nature through a visible manifestation. A few well-known examples of this power include: an icy chill that is felt by those who stand within 10’ of you, glowing eyes, a supernatural shimmer that can be seen emanating from you, a trail of withering plants that follows you, or pupil-less / strangely colored eyes.<br />",
+    "description": "Something about you reveals your inherent supernatural nature through a visible manifestation. A few well-known examples of this ability include: an icy chill that is felt by those who stand within 10’ of you, glowing eyes, a supernatural shimmer that can be seen emanating from you, a trail of withering plants that follows you, or pupil-less / strangely colored eyes.<br />",
     "effect": "At the discretion of the GM, your supernatural presence will have differing effects on different groups that you interact with – some will be cowed into fear or reverence, others will inherently trust or distrust you depending on the NPC’s beliefs about your power and it’s perceived source. The GM should allow you to occasionally use your supernatural presence to gain Advantage 1 to a Presence or Persuasion action roll. From time to time the GM should have that same bonus become a Disadvantage 1 instead, depending upon the beliefs and opinions of those you interact with.<br />"
   },
   {
@@ -988,7 +1003,7 @@
       2
     ],
     "description": "You have a remarkable ability to shrug off punishment that would take down lesser heroes.<br />",
-    "effect": "You permanently gain 10 extra HP.<br /><strong>Special</strong>: This power can be taken twice.<br />"
+    "effect": "You permanently gain 10 extra HP.<br /><strong>Special</strong>: This feat can be taken twice.<br />"
   },
   {
     "name": "Two Weapon Defense",
@@ -1003,7 +1018,7 @@
       2
     ],
     "description": "Your skill with two weapons is so great that you are able to use them to shield incoming attacks.<br />",
-    "effect": "Your get an additional ARMOR bonus 2 any time you wield two weapons simultaneously. Unlike armor bonuses that come from other armor bonuses, this bonus does not penalize your EVASION defense or your AGILITY-based action rolls.<br /><strong>Special</strong>: This power cannot be used in conjunction with a shield<br />"
+    "effect": "Your get an additional ARMOR bonus 2 any time you wield two weapons simultaneously. Unlike armor bonuses that come from other armor bonuses, this bonus does not penalize your EVASION defense or your AGILITY-based action rolls.<br /><strong>Special</strong>: This feat cannot be used in conjunction with a shield<br />"
   },
   {
     "name": "Two Weapon Brute",

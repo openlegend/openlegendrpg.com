@@ -60,8 +60,8 @@
     ],
     "invocationTime": "1 Normal Action",
     "duration": "Resist ends (special) (Fail x 3 = 24 hours)",
-    "description": "Charms are one of the great banes of legend, wielded by powerful enchantress's like Circe (in Homer's The Odyssey), Nymph's, and other enchanter's who control the will of others, not through total domination, but through a magical spell of love or friendship.<br />The Charmed bane manifests at two levels: minor and major.<br /><strong>Minor Charm</strong> - The target is mentally compelled to become more friendly, only changing their attitude toward you moderately.  If they are about to strike you with a piece of furniture, they will restrain themselves, still angry with you and hostile, but no longer violent.  If they want to help you and are leaning toward trusting you, but have some hesitation because you've just met, then that hesitation goes away.<br /><strong>Major Charm</strong> - At the option of the attacker, the charmed bane either causes the target to consider the attacker their best friend and one of the most trustworthy and noble people they have met in all their lives. Alternatively, this trust and admiration can manifest as romantic love. The attacker is unable to do anything to plot against the one who afflicted them, and will (at the earliest possible opportunity) tell their charmer of any rumored harm or danger coming their way. The afflicted character becomes immediately suspicious of anyone who speaks ill of their attacker.<br />",
-    "effect": "The target is mentally compelled to like and trust you more, depending on the power level of the bane when invoked.<br />  <ul><br />  <li><strong>Power Level 3</strong> - You can Minor Charm creatures of animal level intelligence or lower</li><br />  <li><strong>Power Level 4</strong> - You can Minor Charm, creatures of humanoid intelligence. You can Major Charm creatures of animal level intelligence or lower</li><br />  <li><strong>Power Level 6</strong> - You can Major Charm creatures of humanoid intelligence</li><br />  </ul><br />",
+    "description": "Charms are one of the great banes of legend, wielded by powerful enchantress's like Circe (in Homer's The Odyssey), Nymph's, and other enchanter's who control the will of others, not through total domination, but through a magical spell of love or friendship.<br />",
+    "effect": "The charmed bane can only be inflicted via a bane attack. Damaging attacks that trigger banes cannot trigger this bane. The Charmed bane manifests at two levels: minor and major.<br /><strong>Minor Charm</strong> - The target is mentally compelled to become more friendly, only changing their attitude toward you moderately.  If they are about to strike you with a piece of furniture, they will restrain themselves, still angry with you and hostile, but no longer violent.  If they want to help you and are leaning toward trusting you, but have some hesitation because you've just met, then that hesitation goes away.<br /><strong>Major Charm</strong> - At the option of the attacker, the charmed bane either causes the target to consider the attacker their best friend and one of the most trustworthy and noble people they have met in all their lives. Alternatively, this trust and admiration can manifest as romantic love. The attacker is unable to do anything to plot against the one who afflicted them, and will (at the earliest possible opportunity) tell their charmer of any rumored harm or danger coming their way. The afflicted character becomes immediately suspicious of anyone who speaks ill of their attacker.<br />The target is mentally compelled to like and trust you more, depending on the power level of the bane when invoked.<br />  <ul><br />  <li><strong>Power Level 3</strong> - You can Minor Charm creatures of animal level intelligence or lower</li><br />  <li><strong>Power Level 4</strong> - You can Minor Charm, creatures of humanoid intelligence. You can Major Charm creatures of animal level intelligence or lower</li><br />  <li><strong>Power Level 6</strong> - You can Major Charm creatures of humanoid intelligence</li><br />  </ul><br />",
     "special": "While most banes last until the target actively attempts to resist it, this bane prevents the target from being aware of their affliction and thus prevents them from actively attempting to break free. However, the targets true mind is magically suppressed but fights to regain control.  As such, at the end of each of it’s turns, the target receives a Resist roll as a free action to break free from the effect. When your target succeeds at a resist roll against this bane, they become to immune to all subsequent attempts by you to inflict the bane for the next 24 hours.<br />"
   },
   {
@@ -367,11 +367,12 @@
     "effect": "For each point of damage that the attack deals (over and above the target’s defense score), you regain 1 hit point.<br />"
   },
   {
-    "name": "Memory Wipe",
+    "name": "Memory Alteration",
     "tags": [
       "Supernatural"
     ],
     "power": [
+      5,
       6,
       8
     ],
@@ -384,8 +385,8 @@
     "invocationTime": "1 Normal Action",
     "duration": "Instantaneous",
     "description": "Warping or controlling the mind is one of the most dreaded powers of Enchanters, causing powerful heroes to forget their homes, families, and quests<br />",
-    "effect": "<ul><li><strong>Power Level 6</strong>: You permanently erase the last 5 minutes of the target’s memory.  The target does not know what happened during this time (including having seen you, if they did).  Multiple uses of this bane progressively erase consecutive 5 minute increments.</li><li><strong>Power Level 8</strong>: Instead of erasing the immediate past, the invoker of the bane can erase memories from any time in the past, but the invoker must be aware of the memory either from rumor, personal knowledge, or successfully divining it.</li></ul><br />",
-    "special": "When you target an enemy with this bane and your action roll fails to beat the target's RESOLVE, the target is immune to further attempts of this bane from you for the next 24 hours.<br />"
+    "effect": "The memory wipe bane can only be inflicted via a bane attack. Damaging attacks that trigger banes cannot trigger this bane.<br />This bane confers no special ability to know about a target's memory. The invoker must be aware of the memory either from rumor, personal knowledge, or successfully divining it<br /><ul><br /><li><strong>Power Level 5</strong> - You temporarily modify a target's memory about a minor aspect of some memory the target has. The target automatically regains the lost memory and realizes their confusion 1 hour later.</li><br /><li><strong>Power Level 6</strong> - You permanently erase the last 5 minutes of the target’s memory.  The target does not know what happened during this time (including having seen you, if they did).  Multiple uses of this bane progressively erase consecutive 5 minute increments.</li><br /><li><strong>Power Level 8</strong> - Instead of erasing the immediate past, the invoker of the bane can erase memories from any time in the past.</li><br /></ul><br />",
+    "special": "When you target an enemy with this bane and your action roll fails to beat the target's RESOLVE defense, the target is immune to further attempts of this bane from you for the next 24 hours.<br />"
   },
   {
     "name": "Mind Dredge",
@@ -408,7 +409,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Resist ends (Fail x 3 = 1)",
     "description": "Characters with the ability to read thoughts and otherwise dig through the minds of others through telepathy and similar powers are all great examples of MIND DREDGE.",
-    "effect": "<ul> <li>Power Level 2: This power may target creatures of animal intelligence or lower. You gain access to the target’s current thoughts.</li><li>Power Level 4 - This power may target creatures of at least animal intelligence. You gain access to the target’s current thoughts.</li>Power Level 6 - This power may target creatures of at least animal intelligence. You gain access to the target’s current thoughts as well as its recent memories. Initially, you may probe 1 day into the past. For every round that you sustain this effect, you gain access access to an additional day’s worth of memories.<li>Power Level 8 - This power may target creatures of at least animal intelligence. You gain access to the target’s current thoughts as well as its distant memories. Initially, you may probe 1 year into the past. For every round that you sustain this effect, you gain access access to an additional year’s worth of memories. Alternatively, you may choose to gain the memories associated with a particular place, object, or event.</li><li>Power Level 9 - This power may target creatures of at least animal intelligence. You gain access to the target’s current thoughts as well as all of its memories, without limitation by time. Alternatively, you may choose to gain the memories associated with a particular place, object, or event. </li> </ul><br />",
+    "effect": "<ul><br /><li><strong>Power Level 2</strong> - This power may target creatures of animal intelligence or lower. You gain access to the target’s current thoughts.</li><br /><li><strong>Power Level 4</strong> - This power may target creatures of at least animal intelligence. You gain access to the target’s current thoughts.</li><br /><li><strong>Power Level 6</strong> - This power may target creatures of at least animal intelligence. You gain access to the target’s current thoughts as well as its recent memories. Initially, you may probe 1 day into the past. For every round that you sustain this effect, you gain access access to an additional day’s worth of memories.</li><br /><li><strong>Power Level 8</strong> - This power may target creatures of at least animal intelligence. You gain access to the target’s current thoughts as well as its distant memories. Initially, you may probe 1 year into the past. For every round that you sustain this effect, you gain access access to an additional year’s worth of memories. Alternatively, you may choose to gain the memories associated with a particular place, object, or event.</li><br /><li><strong>Power Level 9</strong> - This power may target creatures of at least animal intelligence. You gain access to the target’s current thoughts as well as all of its memories, without limitation by time. Alternatively, you may choose to gain the memories associated with a particular place, object, or event. </li><br /></ul><br />",
     "special": "When your target succeeds at a resist roll against this bane, they become to immune to all subsequent attempts by you to inflict the bane for the next 24 hours.<br />"
   },
   {
@@ -435,7 +436,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
     "description": "Persistent damage comes in many different types, including, but not limited to: cold, fire, acid, electricity, entropic, poison, wounding, etc. Persistent damage can apply from environmental conditions (the 9th plane of Hell should have a persistent fire damage effect in most campaign worlds), or from an action roll that includes the bane. Some types of fireball attacks might produce an powerful explosion that does more damage initially, where another type of fireball might have a “continual burn” effect, causing all within the initial blast to take persistent fire damage.<br />",
-    "effect": "Persistent damage is automatically applied at the beginning of the afflicted character(s) turn(s) before they roll a resist roll against it. As noted in “power level” above, there are 3 tiers of persistent damage. This damage automatically bypasses the afflicted character’s defenses but it can be reduced by any resistance to damage of a certain type (see the RESISTANCE boon). Persistent damage comes in a number of different variations: Physical damage (bleeding damage from a vital strike), Energy damage (lightning, fire, cold, acid, etc.) and entropic damage (necromantic energy).  Each variation has a it’s own cure; when that cure is applied with a normal action (either by the afflicted character, or another), the target receives a Resist roll with advantage (as a free action) to end the effect.  Some cures for the respective energy types include: Bleeding => Knowledge (Medical) / Spirit / Profession: Healer, Lightning => discharge or grounding of the current / curcuit, Cold => warmth, heat, or fire, Acid => alkalizing agents (powder, milk, etc.) … The GM has the final word on whether a proposed cure can help a given type of persistent damage. <ul><li><strong>Power Level 2</strong> - 1d4 damage per round.</li><li><strong>Power Level 4</strong> - 1d8 damage per round</li><li><strong>Power Level 6</strong> - 2d6 damage per round</li></ul><br />"
+    "effect": "Persistent damage is automatically applied at the beginning of the afflicted character(s) turn(s) before they roll a resist roll against it. As noted in “power level” above, there are 3 tiers of persistent damage. This damage automatically bypasses the afflicted character’s defenses but it can be reduced by any resistance to damage of a certain type (see the RESISTANCE boon). Persistent damage comes in a number of different variations: Physical damage (bleeding damage from a vital strike), Energy damage (lightning, fire, cold, acid, etc.) and entropic damage (necromantic energy).  Each variation has a it’s own cure; when that cure is applied with a normal action (either by the afflicted character, or another), the target receives a Resist roll with advantage (as a free action) to end the effect.  Some cures for the respective energy types include: Bleeding => Knowledge (Medical) / Spirit / Profession: Healer, Lightning => discharge or grounding of the current / curcuit, Cold => warmth, heat, or fire, Acid => alkalizing agents (powder, milk, etc.) … The GM has the final word on whether a proposed cure can help a given type of persistent damage.<br /><ul><br />  <li><strong>Power Level 2</strong> - 1d4 damage per round.</li><br />  <li><strong>Power Level 4</strong> - 1d8 damage per round</li><li><strong>Power Level 6</strong> - 2d6 damage per round</li><br /></ul><br />"
   },
   {
     "name": "Scrying",
@@ -563,7 +564,6 @@
       "Supernatural"
     ],
     "power": [
-      5,
       7
     ],
     "attackAttributes": [
@@ -597,5 +597,25 @@
     "description": "Being surprised is being caught flat-footed and scrambling to react to an enemy that the character was either unaware of, or did not realize was an enemy.<br />",
     "effect": "All attackers gain ADVANTAGE 1 against surprised characters. Surprised characters cannot take any actions that are INTERRUPT actions<br />",
     "special": "Under certain conditions a character may be surprised against <strong>only one opponent</strong>. The most common example being an opponent that is disguised, hiding, invisible, or for some other reason <em>not perceived as a threat</em>.<br />"
+  },
+  {
+    "name": "Truthfulness",
+    "tags": [
+      "Supernatural"
+    ],
+    "power": [
+      5
+    ],
+    "attackAttributes": [
+      "Enchantment"
+    ],
+    "attack": [
+      "Enchantment vs. Resolve"
+    ],
+    "invocationTime": "10 Minutes",
+    "duration": "10 minutes (Concentration)",
+    "description": "With supernatural control of the mind, you compel the target to honesty, causing them to be unable to speak falsely<br />",
+    "effect": "The target answers any question asked with honesty, to the best of their knowledge. When compelled to reveal something they would not reveal outside of duress, the target makes a Will roll and you make an Enchantment roll. If the target's roll is higher than yours, then they resist the bane and the effect ends.<br />",
+    "special": "When a target resists the bane, you cannot target them with this bane again for 24 hours.<br />"
   }
 ]
