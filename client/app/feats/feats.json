@@ -809,6 +809,20 @@
     "effect": "Unless magically thwarted or unable to see, you always know the direction of true North. In addition, once you successfully locate the trail of a target, you automatically succeed all tracking attempts to continue following that trail for 7 days after the time you first picked it up.  Only magically concealed tracks or targets in flight can cause you to lose your mark.<br />"
   },
   {
+    "name": "Reckless Frenzy",
+    "prerequisite": [
+      "Berserker"
+    ],
+    "tags": [
+      "Combat"
+    ],
+    "cost": [
+      3
+    ],
+    "description": "By willingly punishing your body, your frenzy allows you to launch a relentless onslaught of attacks.<br />",
+    "effect": "While you are raging, you can inflict 5 HP of damage on yourself to make an additional attack as a minor action.  Effects that prevent or reduce damage cannot effect this self-inflicted HP cost.<br />"
+  },
+  {
     "name": "Resilient",
     "prerequisite": [
       "Presence 3 OR Fortitude 3 OR Will 3"
@@ -1082,5 +1096,19 @@
     ],
     "description": "Your charm is so potent that if it is not resisted initially, victims become permanently enthralled by you.<br />",
     "effect": "When using the Charmed bane, targets who do not make their Resist roll in the first 24 hours become permanently enthralled, and do not receive any more Resist rolls to shake themselves free of the effect. Other supernatural effects like a Dispel boon can end the effect (and other methods may work at the GM’s discretion).<br />"
+  },
+  {
+    "name": "Vicious Critical",
+    "prerequisite": [
+      "Agility 5 OR Might 5"
+    ],
+    "tags": [
+      "Combat"
+    ],
+    "cost": [
+      2
+    ],
+    "description": "Wheter through brute force or deadly precision, a deadly attack delivered by you is exceptionally vicious<br />",
+    "effect": "Any time you roll a 20 on the d20 action roll for an attack, you roll twice on the subsequent re-roll of the d20 and take the higher result.<br />"
   }
 ]
