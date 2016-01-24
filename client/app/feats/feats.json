@@ -222,6 +222,20 @@
     "effect": "Any falling damage (normally 1d10 damage per 10 foot drop) you would suffer is mitigated or negated entirely as follows:<br /><ul><br /><li>Tier 1: 10 ft</li><br /><li>Tier 2: 20 ft</li><br /><li>Tier 3: 30 ft</li><br /></ul><br />"
   },
   {
+    "name": "Brutal Intimidation",
+    "prerequisite": [
+      "Might 2"
+    ],
+    "tags": [
+      "Non-Combat"
+    ],
+    "cost": [
+      1
+    ],
+    "description": "Your powers of persuasion stem from application of brute force rather than your social grace.<br />",
+    "effect": "If you're able to make a show of physical force, you can use your Might attribute in place of Persuasion for the action roll.<br />"
+  },
+  {
     "name": "Combat Follow-through",
     "prerequisite": [
       "Combat Momentum",
