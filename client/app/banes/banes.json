@@ -131,12 +131,10 @@
       6
     ],
     "attackAttributes": [
-      "Abjuration",
-      "Spirit"
+      "Abjuration"
     ],
     "attack": [
-      "Abjuration vs. Resolve",
-      "Spirit vs. Resolve"
+      "Abjuration vs. Resolve"
     ],
     "invocationTime": "1 Normal Action",
     "duration": "Instantaneous",
@@ -198,14 +196,12 @@
     "attackAttributes": [
       "Might",
       "Movement",
-      "Energy",
-      "Spirit"
+      "Energy"
     ],
     "attack": [
       "Might vs. Toughness",
       "Movement vs. Toughness",
-      "Energy vs. Toughness",
-      "Spirit vs. Toughness"
+      "Energy vs. Toughness"
     ],
     "invocationTime": "1 Normal Action",
     "duration": "Instantaneous",
@@ -222,7 +218,6 @@
       0
     ],
     "attackAttributes": [
-      "Spirit",
       "Agility",
       "Enchantment",
       "Entropy",
@@ -231,7 +226,6 @@
       "Might"
     ],
     "attack": [
-      "Spirit vs. Toughness",
       "Agility vs. Evasion",
       "Enchantment vs. Resolve",
       "Entropy vs. Toughness",
@@ -436,7 +430,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
     "description": "Persistent damage comes in many different types, including, but not limited to: cold, fire, acid, electricity, entropic, poison, wounding, etc. Persistent damage can apply from environmental conditions (the 9th plane of Hell should have a persistent fire damage effect in most campaign worlds), or from an action roll that includes the bane. Some types of fireball attacks might produce an powerful explosion that does more damage initially, where another type of fireball might have a “continual burn” effect, causing all within the initial blast to take persistent fire damage.<br />",
-    "effect": "Persistent damage is automatically applied at the beginning of the afflicted character(s) turn(s) before they roll a resist roll against it. As noted in “power level” above, there are 3 tiers of persistent damage. This damage automatically bypasses the afflicted character’s defenses but it can be reduced by any resistance to damage of a certain type (see the RESISTANCE boon). Persistent damage comes in a number of different variations: Physical damage (bleeding damage from a vital strike), Energy damage (lightning, fire, cold, acid, etc.) and entropic damage (necromantic energy).  Each variation has a it’s own cure; when that cure is applied with a normal action (either by the afflicted character, or another), the target receives a Resist roll with advantage (as a free action) to end the effect.  Some cures for the respective energy types include: Bleeding => Knowledge (Medical) / Spirit / Profession: Healer, Lightning => discharge or grounding of the current / curcuit, Cold => warmth, heat, or fire, Acid => alkalizing agents (powder, milk, etc.) … The GM has the final word on whether a proposed cure can help a given type of persistent damage.<br /><ul><br />  <li><strong>Power Level 2</strong> - 1d4 damage per round.</li><br />  <li><strong>Power Level 4</strong> - 1d8 damage per round</li><li><strong>Power Level 6</strong> - 2d6 damage per round</li><br /></ul><br />"
+    "effect": "Persistent damage is automatically applied at the beginning of the afflicted character(s) turn(s) before they roll a resist roll against it. As noted in “power level” above, there are 3 tiers of persistent damage. This damage automatically bypasses the afflicted character’s defenses but it can be reduced by any resistance to damage of a certain type (see the RESISTANCE boon). Persistent damage comes in a number of different variations: Physical damage (bleeding damage from a vital strike), Energy damage (lightning, fire, cold, acid, etc.) and entropic damage (necromantic energy).  Each variation has a it’s own cure; when that cure is applied with a normal action (either by the afflicted character, or another), the target receives a Resist roll with advantage (as a free action) to end the effect.  Some cures for the respective energy types include: Bleeding => Knowledge (Medical) / Creation / Profession: Healer, Lightning => discharge or grounding of the current / curcuit, Cold => warmth, heat, or fire, Acid => alkalizing agents (powder, milk, etc.) … The GM has the final word on whether a proposed cure can help a given type of persistent damage.<br /><ul><br />  <li><strong>Power Level 2</strong> - 1d4 damage per round.</li><br />  <li><strong>Power Level 4</strong> - 1d8 damage per round</li><li><strong>Power Level 6</strong> - 2d6 damage per round</li><br /></ul><br />"
   },
   {
     "name": "Scrying",
@@ -543,15 +537,13 @@
       "Might",
       "Agility",
       "Entropy",
-      "Energy",
-      "Spirit"
+      "Energy"
     ],
     "attack": [
       "Might vs. Toughness",
       "Agility vs. Toughness",
       "Entropy vs. Toughness",
-      "Energy vs. Toughness",
-      "Spirit vs. Toughness"
+      "Energy vs. Toughness"
     ],
     "invocationTime": "1 Normal Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
