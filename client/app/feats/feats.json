@@ -1032,7 +1032,7 @@
       2
     ],
     "description": "Your skill with two weapons is so great that you are able to use them to shield incoming attacks.<br />",
-    "effect": "Your get an additional ARMOR bonus 2 any time you wield two weapons simultaneously. Unlike armor bonuses that come from other armor bonuses, this bonus does not penalize your EVASION defense or your AGILITY-based action rolls.<br /><strong>Special</strong>: This feat cannot be used in conjunction with a shield<br />"
+    "effect": "Your get an additional Armor bonus 2 any time you wield two weapons simultaneously. This bonus acts like a shield, and is combined with any non-shield Armor bonus.<br /><strong>Special</strong>: This feat cannot be used in conjunction with a shield<br />"
   },
   {
     "name": "Two Weapon Brute",
