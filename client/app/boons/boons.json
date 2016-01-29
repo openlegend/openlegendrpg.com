@@ -51,7 +51,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Sustain Persists",
     "description": "Even in the absence of light you are able to distinguish your surroundings, some examples include tremorsense, echolocation, ability to sense heat, a divine intuition, or psychically heightened senses.<br />",
-    "effect": "The BLINDED bane does not adversely affect you and you are able to see normally even in conditions of little light and no light.<br />"
+    "effect": "The BLINDED bane does not adversely affect you and you are able to see normally even in conditions of little light and no light.  Blindsight can also potentially counter invisibility, though the GM will have to decide if the source creating the blindsight is appropriate to counter the source creating the invisibility.<br />"
   },
   {
     "name": "Darkness",
