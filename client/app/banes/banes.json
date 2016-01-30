@@ -139,7 +139,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Instantaneous",
     "description": "You cancel boons affecting an enemy.<br />",
-    "effect": "You roll an Abjuration check as a challenge roll cancelling all non-permanent boons of Power Level equal to the Difficulty Level of your result or lower (see the Action Roll Difficulty Level Table).  If your roll is sufficient, you can dispel banes of a power level higher than your Abjuration score. <ul><li><strong>Power Level 1</strong> - You can cancel boons that must be actively invoked.  In addition, the target cannot invoke that boon again for 1 minute.</li><li><strong>Power Level 6</strong> - You can cancel boons that are permanent / passive / inherent to the target (e.g. the invisibility of a Will o’ Wisp).  Canceling this bane is a minor action for the target.</li></ul><br />"
+    "effect": "You roll an Abjuration check as a challenge roll cancelling all non-permanent, boons of Power Level equal to the Difficulty Level of your result or lower (see the Action Roll Difficulty Level Table).  If your roll is sufficient, you can dispel banes of a power level higher than your Abjuration score.<br /><ul><br />  <li><strong>Power Level 1</strong> - You can cancel boons that must be actively invoked.  In addition, the target cannot invoke that boon again for 1 minute.</li><br />  <li><strong>Power Level 6</strong> - You can cancel boons that are permanent / passive / inherent to the target (e.g. the invisibility of a Will o’ Wisp).  Canceling this bane is a minor action for the target.</li><br /></ul><br />"
   },
   {
     "name": "Dominated",
