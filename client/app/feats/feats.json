@@ -684,7 +684,7 @@
       2
     ],
     "description": "Mimics are powerful shapeshifters that are able to impersonate specific creatures, making them particularly dangerous assassins. Some of them have the innate ability in their blood, others train in deceptive magic to mask their true identity.<br />",
-    "effect": "While assuming an alternate form, you are able to mimic a specific creature of the same type. Unless you demonstrate incomplete knowledge, strange behavior, etc., the deception continues until they are reduced to 0 hit points or less. Suspicious characters can make a Perception roll with a difficulty level equal to your Alteration or Deception score, whichever is higher.<br />"
+    "effect": "While assuming an alternate form, you are able to mimic a specific creature of the same type. Unless you demonstrate incomplete knowledge, strange behavior, etc., the deception continues until you are reduced to 0 hit points. If given provocation to be suspicious, other characters can make a Perception roll with a difficulty level equal to your Alteration or Deception score, whichever is higher.<br />"
   },
   {
     "name": "Multi-Target Attack Specialist (I – V)",
