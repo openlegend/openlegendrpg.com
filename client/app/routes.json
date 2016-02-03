@@ -24,6 +24,12 @@
     "src": "app/home/home"
   }
   ,{
+    "stateName": "core",
+    "urlPrefix": "/core",
+    "type": "load",
+    "src": "app/core/core"
+  }
+  ,{
     "stateName": "banes",
     "urlPrefix": "/banes",
     "type": "load",
