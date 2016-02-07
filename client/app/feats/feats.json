@@ -1098,7 +1098,7 @@
     "effect": "When using the Charmed bane, targets who do not make their Resist roll in the first 24 hours become permanently enthralled, and do not receive any more Resist rolls to shake themselves free of the effect. Other supernatural effects like a Dispel boon can end the effect (and other methods may work at the GM’s discretion).<br />"
   },
   {
-    "name": "Vicious Critical",
+    "name": "Vicious Strike",
     "prerequisite": [
       "Agility 5 OR Might 5"
     ],
