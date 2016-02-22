@@ -39,7 +39,7 @@
     "cost": [
       2
     ],
-    "description": "You are specially trained in the wearing of a particular armor type, making it more effective for you and<br />",
+    "description": "You are specially trained in the wearing of a particular armor type, making it more effective for you and also less taxing.<br />",
     "effect": "Choose an armor type to specialize in. Your training allows you to sleep in that armor type without becoming fatigued. In addition, while wearing armor of that type, you gain the following benefits.<br /><ul><br /><li>Tier 1 - The Fortitude prerequisite for wearing the selected armor is reduced by 1. The Armor Bonus granted by the armor is increased by 1</li><br /><li>Tier 2 - The Fortitude prerequisite for wearing the selected armor is reduced by 2. The Armor Bonus granted by the armor is increased by 2. If the armor normally incurs a move penalty, that penalty is reduced by 1.</li><br /><li>Tier 3 - The Fortitude prerequisite for wearing the selected armor is reduced by 3. The Armor Bonus granted by the armor is increased by 3.If the armor normally incurs a move penalty, that penalty is reduced by 2.</li><br /></ul><br />"
   },
   {
@@ -190,7 +190,7 @@
     "cost": [
       3
     ],
-    "description": "Summary of effect<br />",
+    "description": "You can enter a rage-induced trance-like state where you transcend fear and pain and are strengthened by adrenaline<br />",
     "effect": "You can fly into a rage via a surge of adrenaline. This rage is the result of incredible focus and a heightened trance-like state that sharpens your focus and helps you transcend fear and pain. Entering the rage is a free action that you can take only on your turn. While raging, you have Advantage 1 on all attacks.  If you are not wearing armor, all of your defense scores are increased by 5. The rage is dependent upon a sense of momentum; when that momentum is disrupted, the rage ends. If you go three consecutive rounds without making an attack roll, the rage ends. When the rage ends, you automatically suffer <a href=\"/banes/fatigued\">1 level of fatigue</a>.<br />"
   },
   {
