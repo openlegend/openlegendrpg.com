@@ -135,7 +135,15 @@
       "Supernatural"
     ],
     "power": [
-      1
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
     ],
     "attribute": [
       "Creation"
@@ -143,7 +151,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Instantaneous",
     "description": "Healing is magical energy overflowing from a creative life force which heals wounds and mends broken bones.<br />",
-    "effect": "Choose a target and make an action roll. You bestow healing to your target equal to your roll -10 in hit points.<br /><strong>Special</strong>: Multi-targeting with this boon can only be done with the Restorative Adept feat.<br />"
+    "effect": "Roll dice according to the boon power level below. The target is healed that many hit points.<br /><strong>Special:</strong> Healing lethal damage requires an attribute score of 5 or greater.<br /><ul><br /><li><strong>Power Level 1</strong> - Heal 1d4 </li><br /><li><strong>Power Level 2</strong> - Heal 1d6 </li><br /><li><strong>Power Level 3</strong> - Heal 1d8 </li><br /><li><strong>Power Level 4</strong> - Heal 1d10 </li><br /><li><strong>Power Level 5</strong> - Heal 2d6 and </li><br /><li><strong>Power Level 6</strong> - Heal 2d8 </li><br /><li><strong>Power Level 7</strong> - Heal 2d10 </li><br /><li><strong>Power Level 8</strong> - Heal 3d8 </li><br /><li><strong>Power Level 9</strong> - Heal 3d10 </li><br /></ul><br />"
   },
   {
     "name": "Insubstantial",
