@@ -46,5 +46,17 @@
     "urlPrefix": "/feats",
     "type": "load",
     "src": "app/feats/feats"
+  },
+  ,{
+    "stateName": "commercialTerms",
+    "urlPrefix": "/commercial-terms",
+    "type": "load",
+    "src": "app/commercialTerms/commercialTerms"
+  },
+  ,{
+    "stateName": "noncommercialTerms",
+    "urlPrefix": "/noncommercial-terms",
+    "type": "load",
+    "src": "app/noncommercialTerms/noncommercialTerms"
   }
 ]
