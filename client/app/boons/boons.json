@@ -375,7 +375,7 @@
     "effect": "<ul><br /><li><strong>Power Level 3</strong> - You can teleport to any square as long as you can naturally see tha square and it is within a number of squares equal to or less than your Movement attribute score. </li><br /><li><strong>Power Level 5</strong> - Your teleportation range is unchanged, but you can now teleport to squares that you can’t see.  If you choose a square already occupied you land in the nearest adjacent square (roll randomly to decide if there are multiple options) and you are stunned for 1 round (you don’t have to make a RESIST roll to end the effect). </li><br /><li><strong>Power Level 7</strong> - You can opt to take longer in invoking the boon. If you choose to, for each minute of invocation (delay before making your action roll) you can teleport 1 mile. You cannot engage in any activity other than deep focus on the invocation during that time.</li><br /><li><strong>Power Level 9</strong> - Using the longer invocation time from Power Level 7, you can teleport to any location without range limit, provided you have personally seen (through magical or normal means) the target destination.</li><br /></ul><br />"
   },
   {
-    "name": "Transmute",
+    "name": "Transmutation",
     "tags": [
       "Supernatural"
     ],
@@ -387,7 +387,7 @@
       9
     ],
     "attribute": [
-      "Divination"
+      "Alteration"
     ],
     "invocationTime": "1 Minute",
     "duration": "Sustain Persists",
