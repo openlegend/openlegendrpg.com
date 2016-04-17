@@ -84,7 +84,7 @@
       "Supernatural"
     ],
     "power": [
-      3
+      1
     ],
     "attribute": [
       "Divination"
@@ -100,7 +100,8 @@
       "Supernatural"
     ],
     "power": [
-      7
+      6,
+      8
     ],
     "attribute": [
       "Alteration",
@@ -110,7 +111,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Sustain Persists",
     "description": "The target is propelled by magical force and moves at incredible speed and with perfect agility.<br />",
-    "effect": "The target gains a flight speed of 60’ and has perfect manueverability for the duration. If concentration is broken at any point, the target plummets immediately. Given that one round is 6 seconds, and the distance fallen in 6 seconds is extremely far, it is exceedingly rare for the target to have an opportunity to act before impact. On impact, the target takes 1d10 damage per 10 feet fallen. This can be averted via the protective casting feat.<br />"
+    "effect": "<ul><br /><li><strong>Power Level 6</strong> - The target gains a flight speed of 30’ and is highly manueverable.</li><br /><li><strong>Power Level 6</strong> - The granted flight speed increases to 60'.</li><br /></ul><br />"
   },
   {
     "name": "Haste",

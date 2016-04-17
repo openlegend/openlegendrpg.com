@@ -194,6 +194,46 @@
     "effect": "You can fly into a rage via a surge of adrenaline. This rage is the result of incredible focus and a heightened trance-like state that sharpens your focus and helps you transcend fear and pain. Entering the rage is a free action that you can take only on your turn. While raging, you have Advantage 1 on all attacks.  If you are not wearing armor, all of your defense scores are increased by 5. The rage is dependent upon a sense of momentum; when that momentum is disrupted, the rage ends. If you go three consecutive rounds without making an attack roll, the rage ends. When the rage ends, you automatically suffer <a href=\"/banes/fatigued\">1 level of fatigue</a>.<br />"
   },
   {
+    "name": "Blindsight",
+    "prerequisite": [
+      "Entropy 4",
+      "Psychic 4",
+      "Divination 4",
+      "Alteration 4",
+      "Perception 4"
+    ],
+    "tags": [
+      "Supernatural"
+    ],
+    "cost": [
+      1
+    ],
+    "description": "You can see perfectly in darkness, even if it's magical.<br />",
+    "effect": "Magical and natural darkness do not impede your ability to see, as you draw on the requisite attribute for alternate means of sight. At the GM's discretion, extraneous conditions may prevent you from using this feat (for example, a blind martial artist that sees with heightened Perception / hearing and is trapped in a zone of silence)<br />"
+  },
+  {
+    "name": "Boon Access",
+    "prerequisite": [
+      "None"
+    ],
+    "tags": [
+      "Supernatural"
+    ],
+    "cost": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "description": "You have a special gift: it might be the result of your heritage, a close encounter with magical energy, or the result of years of training with a master. In any case, although you do not necessarily possess the aptitude to work supernatural powers for yourself or create a desired effect with your physical capabilities alone, you are able to reliably replicate a single boon.<br />",
+    "effect": "This feat replaces an attribute for the purposes of using a single boon. It can be taken multiple times, each for a different boon. Each time you take this feat, you must pay a feat point cost equal to the Power Level of the boon. This feat bypasses the normal attribute score restrictions by character level, so a first level character can spend all 6 of their feat points to begin play with access to a Power Level 6 boon. For other feats that have this boon as a prerequisite, your attribute score is considered the same as the Power Level of the boon.<br />"
+  },
+  {
     "name": "Boon Focus (I - III)",
     "prerequisite": [
       "Ablility to invoke the boon"
