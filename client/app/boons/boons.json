@@ -46,7 +46,8 @@
     "attribute": [
       "Divination",
       "Psychic",
-      "Alteration"
+      "Alteration",
+      "Perception"
     ],
     "invocationTime": "1 Normal Action",
     "duration": "Sustain Persists",
@@ -119,7 +120,10 @@
       "Supernatural"
     ],
     "power": [
-      6
+      2,
+      4,
+      6,
+      8
     ],
     "attribute": [
       "Movement",
@@ -128,7 +132,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Sustain Persists",
     "description": "The target moves with supernatural speed and is able to do many actions in the same time they would normally do only a few.<br />",
-    "effect": "<ul><li><strong>Power Level 2</strong> - Your speed is increased by 1 square </li><li><strong>Power Level 4</strong> - Your speed is increased by 2 squares. Attacks against that target’s Evasion defense have disadvantage 1. </li><li><strong>Power Level 6</strong> - The target gains an extra normal action per round. This extra action can also be used for an attack (superseding the normal one attack per turn limitation). Attacks against that target’s Evasion defense have disadvantage 2. Your speed is increased by 3 squares. </li><li><strong>Power Level 8</strong> - Attacks against that target’s Evasion defense have disadvantage 3. Your speed is increased by 5 squares.</li></ul><br />"
+    "effect": "<ul><br /><li><strong>Power Level 2</strong> - Your speed is increased by 1 square </li><br /><li><strong>Power Level 4</strong> - Your speed is increased by 2 squares. Attacks against the target’s Evasion defense have disadvantage 1. </li><br /><li><strong>Power Level 6</strong> - The target gains an extra normal action per round. This extra action can also be used for an attack (superseding the normal one attack per turn limitation). Attacks against that target’s Evasion defense have disadvantage 2. Your speed is increased by 3 squares. </li><br /><li><strong>Power Level 8</strong> - Attacks against that target’s Evasion defense have disadvantage 3. Your speed is increased by 5 squares.</li><br /></ul><br />"
   },
   {
     "name": "Heal",
