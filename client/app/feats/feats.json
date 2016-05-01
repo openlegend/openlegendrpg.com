@@ -315,7 +315,6 @@
   {
     "name": "Craft Beneficial or Baleful Item (I - IV)",
     "prerequisite": [
-      "Ritual Magic OR Craft (Engineering) III",
       "Any Supernatural Attribute 5 / Learning 5 / Creation 5"
     ],
     "tags": [
