@@ -74,7 +74,7 @@
     "effect": "When you purchase this feat, you create a permanent link between two attributes; one stronger (primary) and one weaker (dependent). Your attribute rolls with the dependent attribute can make attack rolls, and invoke banes / boons of the dependent attribute with the score of the primary attribute. This relationship is subject to case-by-case approval by the GM; it must be logical, and the GM should prevent players from creating illogical substitutions that are purely aimed at making their characters unreasonably powerful.  Some good example uses include “Psychic Warrior” that does battle with his mind, substituting Psychic => Might, “Holy Warrior” that draws on divine power in place of physical power, substituting Presence => Might, a martial arts master that relies on logic to guide his strikes at enemies pressure points, replacing Logic => Agility.<br />For the purpose of meeting attribute prerequisites when purchasing feats, your dependent attribute is considered equal to that of your primary attribute score.<br /><strong>Special</strong>: This feat can only be purchased at 1st level, and therefore can never be purchased more than once by a given character. In addition, the primary attribute must be either Social, Mental, or Supernatural, while the substituted attribute must be Physical.<br />"
   },
   {
-    "name": "Bane Focus (I - II)",
+    "name": "Bane Focus",
     "prerequisite": [
       "Ability to invoke the bane"
     ],
@@ -88,7 +88,7 @@
       3
     ],
     "description": "You are specialized in the use a particular bane that is iconic to your character.<br />",
-    "effect": "Normally, any time you deal 10 or more points of damage with an attack, you can choose to to inflict 1 bane on the target that is associated with the attacking attribute. When you purchase this feat, that threshold is decreased. You choose a bane that you meet the prerequisites for. The damage to trigger that bane is reduced.<br /><ul><br /><li>Tier 1 - The chosen bane triggers any time you do 5 or more damage to a target. Additionally, when you make a bane attack (one that does not do damage) to invoke this bane, you get ADVANTAGE 1 on the attack.</li><br /><li>Tier 2 - The chosen bane triggers any time you do 1 or more damage to a target. Additionally, when you make a bane attack (one that does not do damage) to invoke this bane, you get ADVANTAGE 2 on the attack.</li><br /></ul><br />"
+    "effect": "Choose a bane when you take this feat. Any time you inflict 5 or more points of damage on a target, you can trigger the chosen bane. Without this feat, an attack must deal 10 or more points of damage to trigger a bane. Each attack is still only capable of inflicting a single bane.<br />"
   },
   {
     "name": "Battlefield Defender",
