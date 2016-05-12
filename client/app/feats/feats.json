@@ -1079,22 +1079,6 @@
       "Agility 4"
     ],
     "tags": [
-      "Combat",
-      "Feat Chain",
-      "Physical"
-    ],
-    "cost": [
-      3
-    ],
-    "description": "Due to your strength and training, you are able to wield exceptionally heavy weapons simultaneously.<br />",
-    "effect": "The two weapons you wield can be any melee weapon, either one-handed, versatile, or two-handed.<br />"
-  },
-  {
-    "name": "Two Weapon Style (I – III)",
-    "prerequisite": [
-      "Agility 4"
-    ],
-    "tags": [
       null
     ],
     "cost": [
