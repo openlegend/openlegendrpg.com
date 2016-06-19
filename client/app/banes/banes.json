@@ -29,11 +29,13 @@
     ],
     "attackAttributes": [
       "Agility",
+      "Creation",
       "Energy",
       "Entropy"
     ],
     "attack": [
       "Agility vs. Evasion",
+      "Creation vs. Evasion",
       "Energy vs. Evasion",
       "Entropy vs. Toughness"
     ],
@@ -48,9 +50,9 @@
       "Supernatural"
     ],
     "power": [
+      3,
       4,
-      6,
-      7
+      6
     ],
     "attackAttributes": [
       "Enchantment"
@@ -147,6 +149,7 @@
       "Supernatural"
     ],
     "power": [
+      3,
       5,
       9
     ],
@@ -159,7 +162,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Resist ends (Fail x 3 = 1 hour)",
     "description": "Though rare, domination is seen from time to time in legendary tales, often wielded by vampires, and sometimes wielded by the most powerful, mentalist sorcerers who command legions of mindless zombies, completely enslaved to their will.<br />",
-    "effect": "Dominated characters are under the complete control of the one who targeted them with the dominated bane. Unlike the charmed bane, characters under the effect of domination lose any control over their own actions but their minds are free to think anything, though they are effectively trapped in their own body like a prison. They cannot take action of any kind (except thought) unless it is ordered by the attacker. Every action which the attacker orders the afflicted character to perform which is in extreme violation of their nature gives the target a Resist roll as a free action to break free from the effect.  The attacker does not gain special access to the target’s mind and so can only order the character to perform actions that they think or know (from prior knowledge) that the character is capable of. Domination does not prevent other banes, like mind-reading, but each bane must be applied and resolved separately. Lastly, each mental order that the attacker gives to the target is a normal action, however the order can be a series of verbal commands like “Attack enemy X unless someone comes through the door, in which case flee.”. The dominated creature will continue to obey the last mental command they were given until you give a new command. Only one such command can be active at a given time, so giving a new command cancels all previous ones. <ul><br />  <li><strong>Power Level 5</strong> - This ability targets creatures of subhuman intelligence (animals, some elementals, etc.)</li><br />  <li><strong>Power Level 9</strong> - This ability targets creatures of human intelligence</li><br />  </ul><br />",
+    "effect": "<strong>Lesser Domination</strong> - the target obeys a one word command until the end of their next turn<br /><strong>Greater Domination</strong> - The target's every action and move is under your control. Unlike the charmed bane, characters under the effect of domination lose control of their actions but their minds are free to think anything, though they are effectively trapped in their own body. They cannot take action of any kind (except thought) unless it is ordered by you. Every action which the attacker orders the afflicted character to perform which is in extreme violation of their nature gives the target a Resist roll as a free action to break free from the effect.  The attacker does not gain special access to the target’s mind and so can only order the character to perform actions that they think or know (from prior knowledge) that the character is capable of. Lastly, each mental order that the attacker gives to the target is a normal action, however the order can be a series of verbal commands like “Attack enemy X unless someone comes through the door, in which case flee.”. The dominated creature will continue to obey the last mental command they were given until you give a new command. Only one such command can be active at a given time, so giving a new command cancels all previous ones.<br />  <ul><br />  <li><strong>Power Level 3</strong> - You can target creatures of subhuman intelligence (animals, some elementals, certain undead, etc.) with the Lesser Domination.</li><br />  <li><strong>Power Level 5</strong> - You can target creatures of human intelligence or better with Greater Domination. You can target creatures of subhuman intelligence (animals, some elementals, etc.) with Greater Domination.</li><br />  <li><strong>Power Level 9</strong> - You can target creatures of human intelligence or greater with Greater Domination</li><br />  </ul><br />",
     "special": "While most banes last until the target actively attempts to resist it, this bane prevents the target from being aware of their affliction and thus prevents them from actively attempting to break free. However, the targets true mind is magically suppressed but fights to regain control.  As such, at the end of each of it’s turns, the target receives a Resist roll as a free action to break free from the effect. When your target succeeds at a resist roll against this bane, they become to immune to all subsequent attempts by you to inflict the bane for the next 24 hours.<br />"
   },
   {
@@ -180,6 +183,33 @@
     "duration": "Special",
     "description": "Fatigue overcomes the target, causing their body to gradually cease normal function until they rest.<br />",
     "effect": "This bane has multiple tiers which are applied in succession; each time this bane is inflicted, if it is already in effect on the target, the severity escalates by one step.<br/><br /><strong>Special:</strong> unlike other banes, canceling this bane takes time and rest. Each 24 hour period of rest with little or no exertion, removes one level of fatigue. If the Restoration boon is invoked, the character invoking it can remove one level of Fatigue (in addition to that removed by natural rest) if their attribute used to invoke Restoration is between 1 and 6. A target cannot benefit from another invocation of the Restoration boon until 24 hours have passed. If the Restoration boon's invoker has an attribute score of 7 or greater, all levels of fatigue are removed instead of just one.<br /> <ul><br /> <li>Level 1 - The target has Disadvantage 1 on all non-attack action rolls. This </li><br /> <li>Level 2 - The target loses their attribute bonus to their defense score (Agility for Evasion, Fortitude for Toughness, Will and Presence for Resolve). They retain any armor, supernatural, or feat bonuses.</li><br /> <li>Level 3 - The target has Disadvantage 1 on all attack rolls.</li><br /> <li>Level 4 - The target is affected by the Slowed bane, reducing it's speed to 2 (though removing the condition can occur only via normal means to remove the Fatigued bane)</li><br /> <li>Level 5 - The target loses consciousness and is helpless. Being forced into a state of rest, one level of fatigue will be removed automatically after 24 hours, unless circumstances are preventing them from resting peacefully.</li><br /> <li>Level 6 - The target dies.</li><br /> </ul><br />"
+  },
+  {
+    "name": "Fear",
+    "tags": [
+      "Supernatural",
+      "Physical"
+    ],
+    "power": [
+      5
+    ],
+    "attackAttributes": [
+      "Creation",
+      "Entropy",
+      "Might",
+      "Enchantment"
+    ],
+    "attack": [
+      "Creation vs. Resolve",
+      "Entropy vs. Resolve",
+      "Might vs. Toughness",
+      "Enchantment vs. Resolve"
+    ],
+    "invocationTime": "1 Normal Action",
+    "duration": "Special",
+    "description": "You manifest an overwhelming force of physical might or supernatural power that strikes terror into the hearts of an enemies, causing them to flee from your presence<br />",
+    "effect": "THe afflicted target moves as far away from you as possible, though they do not abandon reason or leave themselves unreasonably vulnerable. On each turn they are afflicted by this bane they use their movement to increase the distance between you and them.<br />",
+    "special": "While most banes last until the target actively attempts to resist them, this bane prevents the target from thinking clearly. However, the targets logical mind fights to regain control. As such, at the end of each of it’s turns, the target receives a Resist roll as a free action to break free from this effect. When your target succeeds at a resist roll against this bane, they become to immune to all subsequent attempts by you to inflict the bane for the next hour.<br />"
   },
   {
     "name": "Forced Move",
@@ -236,7 +266,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
     "description": "Whether through grappling, wrestling, pinning, crushing, a precise nerve strike, magical summoning of vines, briars, etc., warping inanimate objects to immobilize a foe, or exerting mental control, or even a blast cold so extreme that it renders the victim immobile.<br />",
-    "effect": "You restrict another character's movement, preventing them from moving from their current square. If you invoked the bane with a MIGHT roll, then both you (the attacker) and the target are IMMOBILE in your current squares for the duration of the bane. In subsequent rounds, you can roll the attack again - if successful, you can move your movement and take the target with you.  If this attack fails, you can only move by first releasing the target and ending the bane.<br />If you invoked the bane with any attribute other than MIGHT, you can move freely while the target remains affected<br />You can choose to release the target at any time (a free action that immediately ends the bane).<br /><strong>Special</strong>: A resist roll for this bane alone is a Move action, it can be attempted once per round in addition to your normal action.<br />"
+    "effect": "You restrict another character's movement, preventing them from moving from their current square. If you invoked the bane with a Might roll, then both you (the attacker) and the target are Immobile in your current squares for the duration of the bane. In subsequent rounds, you can roll the attack again - if successful, you can move your movement and take the target with you.  If this attack fails, you can only move by first releasing the target and ending the bane.<br />If you invoked the bane with any attribute other than Might, you can move freely while the target remains affected<br />You can choose to release the target at any time (a free action that immediately ends the bane).<br /><strong>Special</strong>: When an affected target succeeds at a Resist roll to end this effect, they can move 15' as a minor action.<br />"
   },
   {
     "name": "Phantasm",
@@ -303,21 +333,27 @@
       9
     ],
     "attackAttributes": [
+      "Creation",
+      "Deception",
       "Enchantment",
+      "Energy",
       "Might",
       "Presence",
       "Persuasion"
     ],
     "attack": [
+      "Creation vs. Resolve",
+      "Deception vs. Resolve",
       "Enchantment vs. Resolve",
+      "Energy vs. Resolve",
       "Might vs. Resolve",
       "Presence vs. Resolve",
       "Persuasion vs. Resolve"
     ],
     "invocationTime": "1 Minor Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
-    "description": "Through a show of (physical or personality) force, you command attention as the greatest threat, causing others to fear to attack your allies.<br />",
-    "effect": "The target fears that not attacking you would be a grievous error.  As such, any attacks the target makes which do not include you as a target suffer disadvantage.  If the same target is affected by this bane from multiple sources, as long as their attack includes one of those who targeted them, they are not affected by the penalty. Unlike other banes, your damaging attack against one target can trigger this bane in a different target, provided your roll is equal or greater to their Resolve defense.<br /><ul><br /><li><strong>Power Level 4</strong> - A single target gets disadvantage 1.</li><br /><li><strong>Power Level 5</strong> - Up to 2 targets within 5 squares of the attack target get disadvantage 1.</li><br /><li><strong>Power Level 6</strong> - Up to 3 targets within 5 squares of the attack target get disadvantage 1.</li><br /><li><strong>Power Level 7</strong> - Up to 4 targets within 5 squares of the attack target get disadvantage 1.</li><br /><li><strong>Power Level 8</strong> - Up to 5 targets within 5 squares of the attack target get disadvantage 2.</li><br /><li><strong>Power Level 9</strong> - Any number of targets within 5 squares of the attack target get disadvantage 2.</li><br /></ul><br />"
+    "description": "Through a display of awe-inspiring force, you command attention as the greatest threat, causing others to fear to attack your allies.<br />",
+    "effect": "The target fears that not attacking you would be a grievous error.  As such, any attacks the target makes which do not include you as a target suffer disadvantage.  If the same target is affected by this bane from multiple sources, as long as their attack includes one of those who targeted them, they are not affected by the penalty. Unlike other banes, your damaging attack against one target can trigger this bane in a different target, provided your roll is equal or greater to their Resolve defense.<br /><ul><br /><li><strong>Power Level 4</strong> - A single target gets disadvantage 1 when not attacking you.</li><br /><li><strong>Power Level 5</strong> - Up to 2 targets within 5 squares of the attack target get disadvantage 1 when not attacking you.</li><br /><li><strong>Power Level 6</strong> - Up to 3 targets within 5 squares of the attack target get disadvantage 1 when not attacking you.</li><br /><li><strong>Power Level 7</strong> - Up to 4 targets within 5 squares of the attack target get disadvantage 1 when not attacking you.</li><br /><li><strong>Power Level 8</strong> - Up to 5 targets within 5 squares of the attack target get disadvantage 2 when not attacking you.</li><br /><li><strong>Power Level 9</strong> - Any number of targets within 5 squares of the attack target get disadvantage 2 when not attacking you.</li><br /></ul><br />"
   },
   {
     "name": "Knockdown",
@@ -433,6 +469,25 @@
     "effect": "Persistent damage is automatically applied at the beginning of the afflicted character(s) turn(s) before they roll a resist roll against it. As noted in “power level” above, there are 3 tiers of persistent damage. This damage automatically bypasses the afflicted character’s defenses but it can be reduced by any resistance to damage of a certain type (see the RESISTANCE boon). Persistent damage comes in a number of different variations: Physical damage (bleeding damage from a vital strike), Energy damage (lightning, fire, cold, acid, etc.) and entropic damage (necromantic energy).  Each variation has a it’s own cure; when that cure is applied with a normal action (either by the afflicted character, or another), the target receives a Resist roll with advantage (as a free action) to end the effect.  Some cures for the respective energy types include: Bleeding => Knowledge (Medical) / Creation / Profession: Healer, Lightning => discharge or grounding of the current / curcuit, Cold => warmth, heat, or fire, Acid => alkalizing agents (powder, milk, etc.) … The GM has the final word on whether a proposed cure can help a given type of persistent damage.<br /><ul><br />  <li><strong>Power Level 2</strong> - 1d4 damage per round.</li><br />  <li><strong>Power Level 4</strong> - 1d8 damage per round</li><li><strong>Power Level 6</strong> - 2d6 damage per round</li><br /></ul><br />"
   },
   {
+    "name": "Polymorph",
+    "tags": [
+      "Supernatural"
+    ],
+    "power": [
+      5,
+      7,
+      8,
+      9
+    ],
+    "attribute": [
+      "Alteration"
+    ],
+    "invocationTime": "1 Minute",
+    "duration": "Sustain Persists",
+    "description": "You are able to change size, shape, and composition of another creature that you touch. Make an enemy larger or smaller, turn them into a sheep, etc.<br />",
+    "effect": "<ul><br /><li><strong>Power Level 5</strong> - Polymorph a target creature into another creature of the same size and 50% greater OR lesser weight. The duration is 1 hour per (Su) Alteration attribute point. </li><br /><li><strong>Power Level 6</strong> - Polymorph a target creature into another creature double or half the size. The duration is 1 hour per (Su) Alteration attribute point. </li><br /><li><strong>Power Level 8</strong> - Polymorph a creature into another creature up to quadruple it's original size, or an object of the same size. The duration is 1 hour per (Su) Alteration attribute point.</li><br /><li><strong>Power Level 9</strong> - Polymorph a living creature into into another creature of any size or an object the same size. The duration is permanent.</li></ul><br />"
+  },
+  {
     "name": "Scrying",
     "tags": [
       "Supernatural"
@@ -447,10 +502,10 @@
       "Divination vs. Resolve"
     ],
     "invocationTime": "10 Minutes",
-    "duration": "10 minutes (Concentration)",
-    "description": "Peering into a magic vessel, a hearth, a bubbling cauldron, or a crystal ball, you see can view the target if they are on the same plane<br />",
-    "effect": "If your attack is successful, you can view the target from any distance, provided they are on the same plane of existence.<br />",
-    "special": "You can attempt to scry the same target any number of times, but if your attack roll to target them fails, that target becomes immune to your scrying for 24 hours.<br />"
+    "duration": "10 minutes (Special)",
+    "description": "Peering into a supernatural conduit sucy as a hearth, a bubbling cauldron, or a crystal ball, you see can view the target if they are on the same plane<br />",
+    "effect": "If your roll is successful, you can view a sentient target that you are familiar with from any distance, provided they are in the same dimension or plane of reality.<br />You may also scry on places that you are familiar with. If a non-ally with a higher Resolve defense is present in that place, then that individual's Resolve defense is used instead. Otherwise, the place being targeted gains a defense score as follows:<br /><ul><br /><li><strong>20</strong> - 1 mile or less</li><br /><li><strong>22</strong> - 100 miles or less</li><br /><li><strong>24</strong> - Same dimension or plane of reality</li><br /><li><strong>28</strong> - Any dimension or plane of reality. Peering into certain dimensions may expose you to other dangers at the GM's discretion.</li><br /></ul><br />",
+    "special": "When you successfully invoke this bane, at the end of it's duration, you can make a normal attack roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated.<br />You can attempt to scry the same target any number of times, but if your attack roll to target them fails, that target becomes immune to your scrying for 24 hours.<br />"
   },
   {
     "name": "Sickened",
@@ -605,9 +660,9 @@
       "Enchantment vs. Resolve"
     ],
     "invocationTime": "10 Minutes",
-    "duration": "10 minutes (Concentration)",
+    "duration": "10 minutes (Special)",
     "description": "With supernatural control of the mind, you compel the target to honesty, causing them to be unable to speak falsely<br />",
     "effect": "The target answers any question asked with honesty, to the best of their knowledge. When compelled to reveal something they would not reveal outside of duress, the target makes a Will roll and you make an Enchantment roll. If the target's roll is higher than yours, then they resist the bane and the effect ends.<br />",
-    "special": "When a target resists the bane, you cannot target them with this bane again for 24 hours.<br />"
+    "special": "When you successfully invoke this bane, at the end of it's duration, you can make a normal attack roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated.<br />When a target resists the bane, you cannot target them with this bane again for 24 hours.<br />"
   }
 ]
