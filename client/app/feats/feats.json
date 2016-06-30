@@ -132,7 +132,7 @@
       2
     ],
     "description": "Your prowess on the battlefield allows you to punish your enemies for every misplaced step.<br />",
-    "effect": "By default, an interrupt action can only be used defensively to prevent an incoming attack.  With this feat, if your action roll for a Defend interrupt action exceeds the attack roll, you deal damage equal to the amount by which your roll was higher.<br />"
+    "effect": "By default, a Defend interrupt action can only be used to prevent an incoming attack.  With this feat, if your action roll for a Defend interrupt action exceeds the attack roll, you deal damage equal to the amount by which your roll was higher.<br />"
   },
   {
     "name": "Battlefield Punisher - Knockdown",
@@ -150,7 +150,7 @@
       3
     ],
     "description": "Not only are your battle reflexes uncanny, but you can deal knockdown blows with your opportunity attacks.<br />",
-    "effect": "When you use an interrupt action to make a melee attack with a FORCEFUL weapon, if you hit the target’s defense, you can automatically trigger the KNOCKDOWN bane. If the attack hits the remainder of the target's movement is cancelled.<br />"
+    "effect": "If you deal damage with a Defend action via the Battlefield Defender feat, you can automatically trigger the Knockdown bane. If the attack hits, the remainder of the target's movement is cancelled.<br />"
   },
   {
     "name": "Battlefield Punisher - Slowed",
@@ -168,7 +168,7 @@
       3
     ],
     "description": "Not only are your battle reflexes uncanny, but you can deal slowing blows with your opportunity attacks.<br />",
-    "effect": "When you use an interrupt action to make a melee attack, if you hit the target’s defense, you can automatically trigger the SLOWED bane. If the attack hits and the target has already moved more than 2 squares, the remainder of their movement is cancelled.<br />"
+    "effect": "If you deal damage with a Defend action via the Battlefield Defender feat, you can automatically trigger the Slowed bane.  If the attack hits and the target has already moved more than 2 squares, the remainder of their movement is cancelled.<br />"
   },
   {
     "name": "Battlefield Punisher - Stunned",
@@ -187,7 +187,7 @@
       3
     ],
     "description": "Not only are your battle reflexes uncanny, but you can deal stunning blows with your opportunity attacks.<br />",
-    "effect": "When you use an interrupt action to make a melee attack, if you hit the target’s defense, you can automatically trigger the STUNNED bane. If the target has taken any action prior to this attack, any remaining actions are cancelled by the STUNNED bane.<br />"
+    "effect": "If you deal damage with a Defend action via the Battlefield Defender feat, you can automatically trigger the Stunned bane. If the target has taken any action prior to this attack, any remaining actions are cancelled by the Stunned bane.<br />"
   },
   {
     "name": "Battlefield Sentinel (I - V)",

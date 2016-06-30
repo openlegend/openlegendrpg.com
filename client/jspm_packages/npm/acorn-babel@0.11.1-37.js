@@ -1,1 +1,0 @@
-module.exports = require("npm:acorn-babel@0.11.1-37/acorn_csp.js");
