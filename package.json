@@ -126,7 +126,7 @@
       "babel": "npm:babel@^4.7.4",
       "css": "github:systemjs/plugin-css@^0.1.6",
       "json": "github:systemjs/plugin-json@^0.1.0",
-      "lodash": "github:lodash/lodash@^3.6.0",
+      "lodash": "npm:lodash@^4.13.1",
       "moment": "github:moment/moment@^2.11.0",
       "oclazyload": "npm:oclazyload@^0.6.3",
       "ui-router-extras": "npm:ui-router-extras@^0.0.13"

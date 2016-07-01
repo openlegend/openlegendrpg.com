@@ -1,0 +1,53 @@
+{
+  "name": "output-file-sync",
+  "version": "1.1.0",
+  "description": "Synchronously write a file and create its ancestor directories if needed",
+  "repository": "shinnn/output-file-sync",
+  "author": {
+    "name": "Shinnosuke Watanabe",
+    "url": "https://github.com/shinnn"
+  },
+  "scripts": {
+    "pretest": "eslint *.js & jscs *.js",
+    "test": "node test.js | tap-spec;",
+    "coverage": "istanbul cover test.js; ${npm_package_scripts_clean}",
+    "coveralls": "istanbul cover test.js && istanbul-coveralls"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shinnn/output-file-sync/blob/master/LICENSE"
+    }
+  ],
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
+  "keywords": [
+    "fs",
+    "write",
+    "sync",
+    "synchronous",
+    "output",
+    "file",
+    "mkdir",
+    "mkdirp"
+  ],
+  "dependencies": {
+    "mkdirp": "^0.5.0",
+    "xtend": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^0.10.0",
+    "istanbul": "^0.3.2",
+    "istanbul-coveralls": "^1.0.1",
+    "jscs": "^1.8.0",
+    "read-remove-file": "^1.0.0",
+    "tap-spec": "^2.1.0",
+    "tape": "^3.0.3"
+  },
+  "jscsConfig": {
+    "preset": "google",
+    "maximumLineLength": 98
+  }
+}

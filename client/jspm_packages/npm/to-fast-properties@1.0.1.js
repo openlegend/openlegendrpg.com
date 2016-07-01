@@ -1,0 +1,1 @@
+module.exports = require("npm:to-fast-properties@1.0.1/index");

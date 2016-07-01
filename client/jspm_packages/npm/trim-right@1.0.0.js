@@ -1,0 +1,1 @@
+module.exports = require("npm:trim-right@1.0.0/index");
