@@ -174,7 +174,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Instantaneous",
     "description": "You cancel boons affecting an enemy.<br />",
-    "effect": "Make an Abjuration roll. You can dispel boons affecting the target of a maximum Power Level equal to (Abjuration roll - 10) ÷ 2. The Power Level at which you invoke this bane determines the types of effects you can dispel, as follows: <br /><ul><br />  <li><strong>Power Level 1</strong> - You can cancel boons that must be actively invoked.  In addition, the target cannot invoke that boon again for 1 minute.</li><br />  <li><strong>Power Level 6</strong> - You can cancel boons that are permanent, passive, or inherent to the target (e.g. the invisibility of a Will o’ Wisp).  Resisting this bane is a minor action for the target.</li><br /></ul><br />"
+    "effect": "Make an Abjuration roll. You can dispel boons affecting the target of a maximum Power Level equal to (Abjuration roll - 10) ÷ 2. The Power Level at which you invoke this bane determines the types of effects you can dispel, as follows:<br /><ul><br />  <li><strong>Power Level 1</strong> - You can cancel boons that must be actively invoked.  In addition, the target cannot invoke that boon again for 1 minute.</li><br />  <li><strong>Power Level 6</strong> - You can cancel boons that are permanent, passive, or inherent to the target (e.g. the invisibility of a Will o’ Wisp).  Resisting this bane is a minor action for the target.</li><br /></ul><br />"
   },
   {
     "name": "Dominated",
@@ -241,8 +241,8 @@
     "invocationTime": "1 Normal Action",
     "duration": "Special",
     "description": "You manifest an overwhelming force of physical might or supernatural power that strikes terror into the hearts of enemies, causing them to flee from your presence.<br />",
-    "effect": "On its turn, the afflicted target must use its entire turn to get as far away as possible from you. It cannot use its actions to do anything other than retreat and it cannot willingly move closer to you while the bane persists.<br />",
-    "special": "While most banes last until the target actively attempts to resist them, this bane prevents the target from thinking clearly. However, the targets logical mind fights to regain control. As such, at the end of each of its turns, the target receives a Resist roll as a free action to break free from this effect. When your target succeeds at a resist roll against this bane, they become to immune to all subsequent attempts by you to inflict the bane for the next hour.<br />"
+    "effect": "On its turn, the afflicted target must use its entire turn to get as far away as possible from you. It cannot use its actions to do anything other than retreat, and it cannot willingly move closer to you while the bane persists.<br />",
+    "special": "While most banes last until the target actively attempts to resist them, this bane prevents the target from thinking clearly. However, the target's logical mind fights to regain control. As such, at the end of each of its turns, the target receives a Resist roll as a free action to break free from this effect. When your target succeeds at a resist roll against this bane, they become to immune to all subsequent attempts by you to inflict the bane for the next hour.<br />"
   },
   {
     "name": "Forced Move",
@@ -499,7 +499,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
     "description": "Whether by setting the target ablaze, covering them in acid, slicing an atery, or cursing them with a wasting disease, you inflict them with a lasting and recurring source of damage.<br />",
-    "effect": "At the beginning of the target's turn, before they take any actions, the target suffers damage determined by the power level of the bane. This damage automatically bypasses the afflicted character’s defenses but it can be reduced by any resistance to damage of a certain type (see the resistance boon).<br /><ul><br />  <li><strong>Power Level 2</strong> - 1d4 damage per round.</li><br />  <li><strong>Power Level 4</strong> - 1d8 damage per round</li><br />  <li><strong>Power Level 6</strong> - 2d6 damage per round</li><br /></ul><br />special: |<br />Persistent damage comes in a number of different variations: Physical damage (bleeding damage from a vital strike), Energy damage (lightning, fire, cold, acid, etc.) and entropic damage (necromantic energy).  Each variation has a its own cure. When that cure is applied with a normal action (either by the afflicted character or another), the target receives a resist roll with advantage 1 (as a free action) to end the effect. The GM has the final word on whether a proposed cure can help a given type of persistent damage, but the following examples can help with arbitration: <br /><ul><br />  <li>Bleeding damage is cured with a successful roll using Knowledge (Medical) or Creation.</li><br />  <li>Lightning damage is cured by a discharge or grounding of the current.</li><br />  <li>Cold damage is countered with warmth, heat, or fire.</li><br />  <li>Acid damage is neutralized with alkalizing agents (powder, milk, etc.).</li><br /></ul><br />"
+    "effect": "At the beginning of the target's turn, before they take any actions, the target suffers damage determined by the power level of the bane. This damage automatically bypasses the afflicted character’s defenses but it can be reduced by any resistance to damage of a certain type (see the Resistance boon). Like all dice rolls, these dice explode.<br /><ul><br />  <li><strong>Power Level 2</strong> - 1d4 damage per round.</li><br />  <li><strong>Power Level 4</strong> - 1d8 damage per round</li><br />  <li><strong>Power Level 6</strong> - 2d6 damage per round</li><br /></ul><br />special: |<br />Persistent damage comes in a number of different variations: Physical damage (bleeding damage from a vital strike), Energy damage (lightning, fire, cold, acid, etc.) and entropic damage (necromantic energy).  Each variation has a its own cure. When that cure is applied with a normal action (either by the afflicted character or another), the target receives a resist roll with advantage 1 (as a free action) to end the effect. The GM has the final word on whether a proposed cure can help a given type of persistent damage, but the following examples can help with arbitration:<br /><ul><br />  <li>Bleeding damage is cured with a successful roll using Knowledge (Medical) or Creation.</li><br />  <li>Lightning damage is cured by a discharge or grounding of the current.</li><br />  <li>Cold damage is countered with warmth, heat, or fire.</li><br />  <li>Acid damage is neutralized with alkalizing agents (powder, milk, etc.).</li><br /></ul><br />"
   },
   {
     "name": "Polymorph",
@@ -508,7 +508,7 @@
     ],
     "power": [
       5,
-      7,
+      6,
       8,
       9
     ],
@@ -532,13 +532,13 @@
       "Divination"
     ],
     "attack": [
-      "Divination vs. Resolve"
+      "Divination vs. Resolve (Special)"
     ],
     "invocationTime": "10 Minutes",
     "duration": "10 minutes (Special)",
     "description": "Peering into a supernatural conduit such as a hearth, a bubbling cauldron, or a crystal ball, you see can view the target from a distance.<br />",
-    "effect": "If your roll is successful, you can view a sentient target that you are familiar with from any distance, provided they are in the same dimension or plane of reality.<br />You may also scry on places that you are familiar with. If a non-ally with a higher Resolve defense is present in that place, then that individual's Resolve defense is used instead. Otherwise, the place being targeted gains a defense score determined by your distance from it, as follows:<br /><ul><br /><li><strong>20</strong> - 1 mile or less</li><br /><li><strong>22</strong> - 100 miles or less</li><br /><li><strong>24</strong> - Same dimension or plane of reality</li><br /><li><strong>28</strong> - Any dimension or plane of reality. Peering into certain dimensions may expose you to other dangers at the GM's discretion.</li><br /></ul><br />",
-    "special": "When you successfully invoke this bane, at the end of it's duration, you can make a Divination roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated.<br />You can attempt to scry the same target any number of times, but if your action roll fails, that target becomes immune to your scrying for 24 hours.<br />"
+    "effect": "You can scry on a person or area that you are familiar with. The Challenge Rating to succeed at this scrying is based on the distance between you and the target. If successful, you can see and hear everything that goes on within a 60' radius of your target. Anyone within the targeted area who has a Resolve defense score higher than your Divination action roll to invoke this bane becomes aware of an unseen presence in the area (regardless of whether or not you succeed at the roll). Certain creatures may be able to identify your scrying if they are familiar with such powers.<br /><ul><br /><li><strong>20</strong> - 1 mile or less</li><br /><li><strong>22</strong> - 100 miles or less</li><br /><li><strong>24</strong> - More than 100 miles, but on the same dimension or plane of reality</li><br /><li><strong>28</strong> - Any dimension or plane of reality. (Peering into certain dimensions may expose you to other dangers at the GM's discretion).</li><br /></ul><br />",
+    "special": "When you successfully invoke this bane, at the end of it's duration, you can make a Divination roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated. However, you must retest your new roll against the Resolve scores of those in the targeted area to determine whether or not they can sense your presence.<br />You can attempt to scry the same target any number of times, but if your action roll fails, that target becomes immune to your scrying for 24 hours.<br />"
   },
   {
     "name": "Sickened",
@@ -636,7 +636,7 @@
     "invocationTime": "1 Normal Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
     "description": "Stunning an enemy can be anything from the pommel of a dagger to the back of the head, to a kick in the groin, to a deafening thunderclap that disorients the target.<br />",
-    "effect": "Attacks against the target gain advantage 1, the target can take only a single action (either move, or normal, or minor), and it cannot concentrate to sustain existing boon or bane effects.<br />"
+    "effect": "Attacks against the target gain advantage 1. Furthermore, during its turn, the target is limited to either a single normal action, a single move action, or a single minor action. It cannot take all three, nor can it take a focus action.<br />"
   },
   {
     "name": "Stupefied",
@@ -676,7 +676,7 @@
     "duration": "1 Round",
     "description": "Being surprised is being caught flat-footed and scrambling to react to an enemy that the character was either unaware of or did not realize was an enemy.<br />",
     "effect": "All attackers gain advantage 1 against surprised characters. Surprised characters cannot take any actions that are interrupt actions.<br />",
-    "special": "Unlike other banes, surprised cannot by inflicted directly with an action roll. Instead, it is determined by situations resulting from the story, such as a party being ambused by a band of thieves hiding in the brush.<br />Under certain conditions a character may be surprised against <strong>only one opponent</strong>. The most common example being an opponent that is disguised, hiding, invisible, or for some other reason <em>not perceived as a threat</em>.<br />"
+    "special": "Unlike other banes, surprised cannot by inflicted directly with an action roll. Instead, it is determined by situations resulting from the story, such as a party being ambushed by a band of thieves hiding in the brush.<br />Under certain conditions a character may be surprised against <strong>only one opponent</strong>. The most common example being an opponent that is disguised, hiding, invisible, or for some other reason <em>not perceived as a threat</em>.<br />"
   },
   {
     "name": "Truthfulness",
