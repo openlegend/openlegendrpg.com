@@ -302,29 +302,6 @@
     "effect": "Your target cannot move from its current space. If you invoked the bane with a Might roll, then both you and the target are immobile in your current space for the duration of the bane (locked in a grapple). While grappling in this manner, you can attempt to inflict this bane again upon the target. If successful, you can move your movement and take the target with you.  If this attack fails, you can only move by first releasing the target and ending the bane.<br />If you invoked the bane with any attribute other than Might, you can move freely while the target remains affected.<br />You can choose to release the target at any time (a free action that immediately ends the bane).<br /><strong>Special</strong>: When an affected target succeeds at a Resist roll to end this effect, they can move 15' as a minor action.<br />"
   },
   {
-    "name": "Phantasm",
-    "tags": [
-      "Supernatural"
-    ],
-    "power": [
-      1,
-      2,
-      3,
-      6
-    ],
-    "attackAttributes": [
-      "Illusion"
-    ],
-    "attack": [
-      "Illusion vs. Resolve"
-    ],
-    "invocationTime": "1 Normal Action",
-    "duration": "Resist ends (Fail x 3 = 10 minutes)",
-    "description": "You create an illusory manifestation to deceive the senses of all within range. Some examples include making a meal taste rotten, creating the sound of a stampede of horses, hiding allies behind a false wall, and even manifesting an elven noble who can converse intelligibly.<br />",
-    "effect": "You create a phantasm of your choosing. The Power Level at which you invoke the bane determines which senses you can manifest. Until reaching Power Level 6, you can combine sensory illusions by adding the required Power Levels together (e.g., mimicking both sight and sound requires Power Level 5). While the phantasm persists, you can make logical changes to it freely. For example, an illusory person can speak naturally as you direct it and could be made to fall in response to an attack. However, substantial changes to the illusion (such as transforming a human into a goblin) require a new invocation of the illusion.<br /><ul><br /><li><strong>Power Level 1</strong> - Taste</li><br /><li><strong>Power Level 2</strong> - Sound</li><br /><li><strong>Power Level 2</strong> - Smell</li><br /><li><strong>Power Level 2</strong> - Touch</li><br /><li><strong>Power Level 3</strong> - Sight</li><br /><li><strong>Power Level 6</strong> - All Senses</li><br /></ul><br />Your Illusion attribute score determines the maximum area that your phantasm can cover as follows. The dimensions are depth, width, and height (all squares must touch but can be in any shape/pattern)<br /><ul><br /><li>Illusion 1 - 5' x 5' x 5'</li><br /><li>Illusion 3 - 10' x 10' x 10'</li><br /><li>Illusion 5 - 15' x 15' x 15'</li><br /><li>Illusion 7 - 20' x 20' x 20'</li><br /><li>Illusion 8 - 30' x 30' x 30'</li><br /><li>Illusion 9 - 40' x 40' x 40'</li><br /></ul><br />",
-    "special": "When you invoke the phantasm bane, your Illusion action roll determines who is convinced by the illusion. Any creatures with a Resolve defense score less than or equal to your roll will believe the phantasm to be real and will react accordingly. Those with a higher Resolve score will notice that their senses are being deceived somehow. Creatures who are convinced by the phantasm can use the resist action as normal in order to attempt to shake off the bane. If successful, they are no longer deceived by the illusion.<br />When your target succeeds at a resist roll against this bane, they become to immune to all subsequent attempts by you to inflict the bane for the next hour.<br />"
-  },
-  {
     "name": "Incapacitated",
     "tags": [
       "Supernatural",
@@ -500,6 +477,29 @@
     "duration": "Resist ends (Fail x 3 = 1 minute)",
     "description": "Whether by setting the target ablaze, covering them in acid, slicing an atery, or cursing them with a wasting disease, you inflict them with a lasting and recurring source of damage.<br />",
     "effect": "At the beginning of the target's turn, before they take any actions, the target suffers damage determined by the power level of the bane. This damage automatically bypasses the afflicted character’s defenses but it can be reduced by any resistance to damage of a certain type (see the Resistance boon). Like all dice rolls, these dice explode.<br /><ul><br />  <li><strong>Power Level 2</strong> - 1d4 damage per round.</li><br />  <li><strong>Power Level 4</strong> - 1d8 damage per round</li><br />  <li><strong>Power Level 6</strong> - 2d6 damage per round</li><br /></ul><br />special: |<br />Persistent damage comes in a number of different variations: Physical damage (bleeding damage from a vital strike), Energy damage (lightning, fire, cold, acid, etc.) and entropic damage (necromantic energy).  Each variation has a its own cure. When that cure is applied with a normal action (either by the afflicted character or another), the target receives a resist roll with advantage 1 (as a free action) to end the effect. The GM has the final word on whether a proposed cure can help a given type of persistent damage, but the following examples can help with arbitration:<br /><ul><br />  <li>Bleeding damage is cured with a successful roll using Knowledge (Medical) or Creation.</li><br />  <li>Lightning damage is cured by a discharge or grounding of the current.</li><br />  <li>Cold damage is countered with warmth, heat, or fire.</li><br />  <li>Acid damage is neutralized with alkalizing agents (powder, milk, etc.).</li><br /></ul><br />"
+  },
+  {
+    "name": "Phantasm",
+    "tags": [
+      "Supernatural"
+    ],
+    "power": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "attackAttributes": [
+      "Illusion"
+    ],
+    "attack": [
+      "Illusion vs. Resolve"
+    ],
+    "invocationTime": "1 Normal Action",
+    "duration": "Resist ends (Fail x 3 = 10 minutes)",
+    "description": "You create an illusory manifestation to deceive the senses of all within range. Some examples include making a meal taste rotten, creating the sound of a stampede of horses, hiding allies behind a false wall, and even manifesting an elven noble who can converse intelligibly.<br />",
+    "effect": "You create a phantasm of your choosing. The Power Level at which you invoke the bane determines which senses you can manifest. Until reaching Power Level 6, you can combine sensory illusions by adding the required Power Levels together (e.g., mimicking both sight and sound requires Power Level 5). While the phantasm persists, you can make logical changes to it freely. For example, an illusory person can speak naturally as you direct it and could be made to fall in response to an attack. However, substantial changes to the illusion (such as transforming a human into a goblin) require a new invocation of the illusion.<br /><ul><br /><li><strong>Power Level 1</strong> - Taste</li><br /><li><strong>Power Level 2</strong> - Sound</li><br /><li><strong>Power Level 2</strong> - Smell</li><br /><li><strong>Power Level 2</strong> - Touch</li><br /><li><strong>Power Level 3</strong> - Sight</li><br /><li><strong>Power Level 6</strong> - All Senses</li><br /></ul><br />Your Illusion attribute score determines the maximum area that your phantasm can cover as follows. The dimensions are depth, width, and height (all squares must touch but can be in any shape/pattern)<br /><ul><br /><li>Illusion 1 - 5' x 5' x 5'</li><br /><li>Illusion 3 - 10' x 10' x 10'</li><br /><li>Illusion 5 - 15' x 15' x 15'</li><br /><li>Illusion 7 - 20' x 20' x 20'</li><br /><li>Illusion 8 - 30' x 30' x 30'</li><br /><li>Illusion 9 - 40' x 40' x 40'</li><br /></ul><br />",
+    "special": "When you invoke the phantasm bane, your Illusion action roll determines who is convinced by the illusion. Any creatures with a Resolve defense score less than or equal to your roll will believe the phantasm to be real and will react accordingly. Those with a higher Resolve score will notice that their senses are being deceived somehow. Creatures who are convinced by the phantasm can use the resist action as normal in order to attempt to shake off the bane. If successful, they are no longer deceived by the illusion.<br />When your target succeeds at a resist roll against this bane, they become to immune to all subsequent attempts by you to inflict the bane for the next hour.<br />"
   },
   {
     "name": "Polymorph",
