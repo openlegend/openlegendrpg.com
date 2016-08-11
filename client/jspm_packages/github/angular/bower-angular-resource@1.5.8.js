@@ -1,0 +1,1 @@
+module.exports = require("github:angular/bower-angular-resource@1.5.8/angular-resource");
