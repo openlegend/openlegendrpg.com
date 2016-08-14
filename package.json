@@ -87,7 +87,6 @@
     "karma-script-launcher": "~0.1.0",
     "less-plugin-clean-css": "^1.5.0",
     "ng-annotate": "^0.14.1",
-    "node-v8-clone": "^0.6.2",
     "object.assign": "^1.1.1",
     "open": "~0.0.4",
     "requirejs": "~2.1.11",
