@@ -640,7 +640,7 @@
     "invocationTime": "1 Major Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
     "description": "Stunning an enemy can be anything from the pommel of a dagger to the back of the head, to a kick in the groin, to a deafening thunderclap that disorients the target.<br />",
-    "effect": "Attacks against the target gain advantage 1. Furthermore, during its turn, the target is limited to either a single major action, a single move action, or a single minor action. It cannot take all three, nor can it take a focus action.<br />"
+    "effect": "During its turn, the target is limited to either a single major action, a single move action, or a single minor action. It cannot take all three, nor can it take a focus action.<br /><br /><strong>Special</strong> - Boss actions are not affected by this bane, and can still be used to partially bypass this, though they must use one boss action per major, move, or minor action they wish to take.<br />"
   },
   {
     "name": "Stupefied",
