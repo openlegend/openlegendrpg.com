@@ -8,10 +8,10 @@
       6
     ],
     "attackAttributes": [
-      "Abjuration"
+      "Protection"
     ],
     "attack": [
-      "Abjuration vs. Resolve"
+      "Protection vs. Resolve"
     ],
     "invocationTime": "1 Minute",
     "duration": "Instantaneous (special)",
@@ -55,10 +55,10 @@
       6
     ],
     "attackAttributes": [
-      "Enchantment"
+      "Influence"
     ],
     "attack": [
-      "Enchantment vs. Resolve"
+      "Influence vs. Resolve"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Resist ends (special) (Fail x 3 = 24 hours)",
@@ -101,9 +101,8 @@
     "attackAttributes": [
       "Agility",
       "Energy",
-      "Enchantment",
       "Entropy",
-      "Illusion",
+      "Influence",
       "Might",
       "Presence",
       "Persuasion"
@@ -111,9 +110,8 @@
     "attack": [
       "Agility vs. Resolve",
       "Energy vs. Resolve",
-      "Enchantment vs. Resolve",
       "Entropy vs. Resolve",
-      "Illusion vs. Resolve",
+      "Influence vs. Resolve",
       "Might vs. Resolve",
       "Presence vs. Resolve",
       "Persuasion vs. Resolve"
@@ -135,7 +133,7 @@
     ],
     "attackAttributes": [
       "Agility",
-      "Enchantment",
+      "Influence",
       "Entropy",
       "Energy",
       "Alteration",
@@ -144,7 +142,7 @@
     ],
     "attack": [
       "Agility vs. Evasion",
-      "Enchantment vs. Resolve",
+      "Influence vs. Resolve",
       "Entropy vs. Toughness",
       "Energy vs. Toughness",
       "Alteration vs. Evasion",
@@ -166,15 +164,15 @@
       6
     ],
     "attackAttributes": [
-      "Abjuration"
+      "Protection"
     ],
     "attack": [
-      "Abjuration vs. Resolve"
+      "Protection vs. Resolve"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Instantaneous",
     "description": "You cancel boons affecting an enemy.<br />",
-    "effect": "Make an Abjuration roll. You can dispel boons affecting the target of a maximum Power Level equal to (Abjuration roll - 10) ÷ 2. The Power Level at which you invoke this bane determines the types of effects you can dispel, as follows:<br /><ul><br />  <li><strong>Power Level 1</strong> - You can cancel boons that must be actively invoked.  In addition, the target cannot invoke that boon again for 1 minute.</li><br />  <li><strong>Power Level 6</strong> - You can cancel boons that are permanent, passive, or inherent to the target (e.g. the invisibility of a Will o’ Wisp). In the absence of other rules, assume that the target can re-activate the boon as a major action.</li><br /></ul><br />"
+    "effect": "Make an Protection roll. You can dispel boons affecting the target of a maximum Power Level equal to (Protection roll - 10) ÷ 2. The Power Level at which you invoke this bane determines the types of effects you can dispel, as follows:<br /><ul><br />  <li><strong>Power Level 1</strong> - You can cancel boons that must be actively invoked.  In addition, the target cannot invoke that boon again for 1 minute.</li><br />  <li><strong>Power Level 6</strong> - You can cancel boons that are permanent, passive, or inherent to the target (e.g. the invisibility of a Will o’ Wisp). In the absence of other rules, assume that the target can re-activate the boon as a major action.</li><br /></ul><br />"
   },
   {
     "name": "Dominated",
@@ -187,10 +185,10 @@
       9
     ],
     "attackAttributes": [
-      "Enchantment"
+      "Influence"
     ],
     "attack": [
-      "Enchantment vs. Resolve"
+      "Influence vs. Resolve"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Resist ends (Fail x 3 = 1 hour)",
@@ -230,13 +228,13 @@
       "Creation",
       "Entropy",
       "Might",
-      "Enchantment"
+      "Influence"
     ],
     "attack": [
       "Creation vs. Resolve",
       "Entropy vs. Resolve",
       "Might vs. Toughness",
-      "Enchantment vs. Resolve"
+      "Influence vs. Resolve"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Special",
@@ -282,7 +280,7 @@
     ],
     "attackAttributes": [
       "Agility",
-      "Enchantment",
+      "Influence",
       "Entropy",
       "Energy",
       "Alteration",
@@ -290,7 +288,7 @@
     ],
     "attack": [
       "Agility vs. Evasion",
-      "Enchantment vs. Resolve",
+      "Influence vs. Resolve",
       "Entropy vs. Toughness",
       "Energy vs. Toughness",
       "Alteration vs. Evasion",
@@ -315,12 +313,12 @@
     "attackAttributes": [
       "Agility",
       "Entropy",
-      "Enchantment"
+      "Influence"
     ],
     "attack": [
       "Agility vs. Toughness",
       "Entropy vs. Toughness",
-      "Enchantment vs. Resolve"
+      "Influence vs. Resolve"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
@@ -345,7 +343,7 @@
     "attackAttributes": [
       "Creation",
       "Deception",
-      "Enchantment",
+      "Influence",
       "Energy",
       "Might",
       "Presence",
@@ -354,7 +352,7 @@
     "attack": [
       "Creation vs. Resolve",
       "Deception vs. Resolve",
-      "Enchantment vs. Resolve",
+      "Influence vs. Resolve",
       "Energy vs. Resolve",
       "Might vs. Resolve",
       "Presence vs. Resolve",
@@ -417,15 +415,15 @@
       8
     ],
     "attackAttributes": [
-      "Enchantment"
+      "Influence"
     ],
     "attack": [
-      "Enchantment vs. Resolve"
+      "Influence vs. Resolve"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Instantaneous",
     "description": "Warping or controlling the mind is one of the most dreaded powers of enchanters, causing powerful heroes to forget their homes, families, and quests.<br />",
-    "effect": "The memory alteration bane can only be inflicted via a bane attack. Damaging attacks that trigger banes cannot trigger this bane.<br />This bane confers no special ability to know about a target's memory. The invoker must be aware of the memory either from rumor, personal knowledge, divination, or other means.<br /><ul><br /><li><strong>Power Level 5</strong> - You temporarily modify a minor aspect of the target's memory. The target automatically regains the lost memory and realizes their confusion 1 hour later.</li><br /><li><strong>Power Level 6</strong> - You permanently erase or alter the last 5 minutes of the target’s memory.  The target does not know what happened during this time outside of the memories you feed them (including having seen you, if they did).  Multiple uses of this bane progressively erase consecutive 5 minute increments.</li><br /><li><strong>Power Level 8</strong> - Instead of the immediate past, you can erase or alter memories from any time.</li><br /></ul><br />",
+    "effect": "The memory alteration bane can only be inflicted via a bane attack. Damaging attacks that trigger banes cannot trigger this bane.<br />This bane confers no special ability to know about a target's memory. The invoker must be aware of the memory either from rumor, personal knowledge, prescience, or other means.<br /><ul><br /><li><strong>Power Level 5</strong> - You temporarily modify a minor aspect of the target's memory. The target automatically regains the lost memory and realizes their confusion 1 hour later.</li><br /><li><strong>Power Level 6</strong> - You permanently erase or alter the last 5 minutes of the target’s memory.  The target does not know what happened during this time outside of the memories you feed them (including having seen you, if they did).  Multiple uses of this bane progressively erase consecutive 5 minute increments.</li><br /><li><strong>Power Level 8</strong> - Instead of the immediate past, you can erase or alter memories from any time.</li><br /></ul><br />",
     "special": "When you target an enemy with this bane and your action roll fails to beat the target's resolve defense, the target is immune to further attempts of this bane from you for the next 24 hours.<br />"
   },
   {
@@ -441,10 +439,10 @@
       9
     ],
     "attackAttributes": [
-      "Divination"
+      "Prescience"
     ],
     "attack": [
-      "Divination vs. Resolve"
+      "Prescience vs. Resolve"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
@@ -491,16 +489,16 @@
       6
     ],
     "attackAttributes": [
-      "Illusion"
+      "Influence"
     ],
     "attack": [
-      "Illusion vs. Resolve"
+      "Influence vs. Resolve"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Resist ends (Fail x 3 = 10 minutes)",
     "description": "You create an illusory manifestation to deceive the senses of all within range. Some examples include making a meal taste rotten, creating the sound of a stampede of horses, hiding allies behind a false wall, and even manifesting an elven noble who can converse intelligibly.<br />",
-    "effect": "You create a phantasm of your choosing. The Power Level at which you invoke the bane determines which senses you can manifest. Until reaching Power Level 6, you can combine sensory illusions by adding the required Power Levels together (e.g., mimicking both sight and sound requires Power Level 5). While the phantasm persists, you can make logical changes to it freely. For example, an illusory person can speak naturally as you direct it and could be made to fall in response to an attack. However, substantial changes to the illusion (such as transforming a human into a goblin) require a new invocation of the illusion.<br /><ul><br /><li><strong>Power Level 1</strong> - Taste</li><br /><li><strong>Power Level 2</strong> - Sound</li><br /><li><strong>Power Level 2</strong> - Smell</li><br /><li><strong>Power Level 2</strong> - Touch</li><br /><li><strong>Power Level 3</strong> - Sight</li><br /><li><strong>Power Level 6</strong> - All Senses</li><br /></ul><br />Your Illusion attribute score determines the maximum area that your phantasm can cover as follows. The dimensions are depth, width, and height (all squares must touch but can be in any shape/pattern)<br /><ul><br /><li>Illusion 1 - 5' x 5' x 5'</li><br /><li>Illusion 3 - 10' x 10' x 10'</li><br /><li>Illusion 5 - 15' x 15' x 15'</li><br /><li>Illusion 7 - 20' x 20' x 20'</li><br /><li>Illusion 8 - 30' x 30' x 30'</li><br /><li>Illusion 9 - 40' x 40' x 40'</li><br /></ul><br />",
-    "special": "When you invoke the phantasm bane, your Illusion action roll determines who is convinced by the illusion. Any creatures with a Resolve defense score less than or equal to your roll will believe the phantasm to be real and will react accordingly. Those with a higher Resolve score will notice that their senses are being deceived somehow. Creatures who are convinced by the phantasm can use the resist action as normal in order to attempt to shake off the bane. If successful, they are no longer deceived by the illusion.<br />When your target succeeds at a resist roll against this bane, they become to immune to all subsequent attempts by you to inflict the bane for the next hour.<br />"
+    "effect": "You create a phantasm of your choosing. The Power Level at which you invoke the bane determines which senses you can manifest. Until reaching Power Level 6, you can combine sensory illusions by adding the required Power Levels together (e.g., mimicking both sight and sound requires Power Level 5). While the phantasm persists, you can make logical changes to it freely. For example, an illusory person can speak naturally as you direct it and could be made to fall in response to an attack. However, substantial changes to the illusion (such as transforming a human into a goblin) require a new invocation of the illusion.<br /><ul><br /><li><strong>Power Level 1</strong> - Taste</li><br /><li><strong>Power Level 2</strong> - Sound</li><br /><li><strong>Power Level 2</strong> - Smell</li><br /><li><strong>Power Level 2</strong> - Touch</li><br /><li><strong>Power Level 3</strong> - Sight</li><br /><li><strong>Power Level 6</strong> - All Senses</li><br /></ul><br />Your Influence attribute score determines the maximum area that your phantasm can cover as follows. The dimensions are depth, width, and height (all squares must touch but can be in any shape/pattern)<br /><ul><br /><li>Influence 1 - 5' x 5' x 5'</li><br /><li>Influence 3 - 10' x 10' x 10'</li><br /><li>Influence 5 - 15' x 15' x 15'</li><br /><li>Influence 7 - 20' x 20' x 20'</li><br /><li>Influence 8 - 30' x 30' x 30'</li><br /><li>Influence 9 - 40' x 40' x 40'</li><br /></ul><br />",
+    "special": "When you invoke the phantasm bane, your Influence action roll determines who is convinced by the illusion. Any creatures with a Resolve defense score less than or equal to your roll will believe the phantasm to be real and will react accordingly. Those with a higher Resolve score will notice that their senses are being deceived somehow. Creatures who are convinced by the phantasm can use the resist action as normal in order to attempt to shake off the bane. If successful, they are no longer deceived by the illusion.<br />When your target succeeds at a resist roll against this bane, they become to immune to all subsequent attempts by you to inflict the bane for the next hour.<br />"
   },
   {
     "name": "Polymorph",
@@ -533,16 +531,16 @@
       5
     ],
     "attackAttributes": [
-      "Divination"
+      "Prescience"
     ],
     "attack": [
-      "Divination vs. Resolve (Special)"
+      "Prescience vs. Resolve (Special)"
     ],
     "invocationTime": "10 Minutes",
     "duration": "10 minutes (Special)",
     "description": "Peering into a supernatural conduit such as a hearth, a bubbling cauldron, or a crystal ball, you see can view the target from a distance.<br />",
-    "effect": "You can scry on a person or area that you are familiar with. The Challenge Rating to succeed at this scrying is based on the distance between you and the target. If successful, you can see and hear everything that goes on within a 60' radius of your target. Anyone within the targeted area who has a Resolve defense score higher than your Divination action roll to invoke this bane becomes aware of an unseen presence in the area (regardless of whether or not you succeed at the roll). Certain creatures may be able to identify your scrying if they are familiar with such powers.<br /><ul><br /><li><strong>20</strong> - 1 mile or less</li><br /><li><strong>22</strong> - 100 miles or less</li><br /><li><strong>24</strong> - More than 100 miles, but on the same dimension or plane of reality</li><br /><li><strong>28</strong> - Any dimension or plane of reality. (Peering into certain dimensions may expose you to other dangers at the GM's discretion).</li><br /></ul><br />",
-    "special": "When you successfully invoke this bane, at the end of it's duration, you can make a Divination roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated. However, you must retest your new roll against the Resolve scores of those in the targeted area to determine whether or not they can sense your presence.<br />You can attempt to scry the same target any number of times, but if your action roll fails, that target becomes immune to your scrying for 24 hours.<br />"
+    "effect": "You can scry on a person or area that you are familiar with. The Challenge Rating to succeed at this scrying is based on the distance between you and the target. If successful, you can see and hear everything that goes on within a 60' radius of your target. Anyone within the targeted area who has a Resolve defense score higher than your Prescience action roll to invoke this bane becomes aware of an unseen presence in the area (regardless of whether or not you succeed at the roll). Certain creatures may be able to identify your scrying if they are familiar with such powers.<br /><ul><br /><li><strong>20</strong> - 1 mile or less</li><br /><li><strong>22</strong> - 100 miles or less</li><br /><li><strong>24</strong> - More than 100 miles, but on the same dimension or plane of reality</li><br /><li><strong>28</strong> - Any dimension or plane of reality. (Peering into certain dimensions may expose you to other dangers at the GM's discretion).</li><br /></ul><br />",
+    "special": "When you successfully invoke this bane, at the end of it's duration, you can make a Prescience roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated. However, you must retest your new roll against the Resolve scores of those in the targeted area to determine whether or not they can sense your presence.<br />You can attempt to scry the same target any number of times, but if your action roll fails, that target becomes immune to your scrying for 24 hours.<br />"
   },
   {
     "name": "Sickened",
@@ -651,10 +649,10 @@
       7
     ],
     "attackAttributes": [
-      "Enchantment"
+      "Influence"
     ],
     "attack": [
-      "Enchantment vs. Resolve"
+      "Influence vs. Resolve"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
@@ -691,15 +689,15 @@
       5
     ],
     "attackAttributes": [
-      "Enchantment"
+      "Influence"
     ],
     "attack": [
-      "Enchantment vs. Resolve"
+      "Influence vs. Resolve"
     ],
     "invocationTime": "10 Minutes",
     "duration": "10 minutes (Special)",
     "description": "With supernatural control of the mind, you compel the target to honesty, rendering them unable to speak falsely.<br />",
-    "effect": "The target answers any question asked with honesty, to the best of their knowledge. When compelled to reveal something they would not reveal outside of duress, the target makes a Will roll and you make an Enchantment roll. If the target's roll is higher than yours, then they resist the bane and the effect ends.<br />",
-    "special": "When you successfully invoke this bane, at the end of its duration, you can make another Enchantment roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated.<br />When a target resists the bane, you cannot target them with this bane again for 24 hours.<br />"
+    "effect": "The target answers any question asked with honesty, to the best of their knowledge. When compelled to reveal something they would not reveal outside of duress, the target makes a Will roll and you make an Influence roll. If the target's roll is higher than yours, then they resist the bane and the effect ends.<br />",
+    "special": "When you successfully invoke this bane, at the end of its duration, you can make another Influence roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated.<br />When a target resists the bane, you cannot target them with this bane again for 24 hours.<br />"
   }
 ]

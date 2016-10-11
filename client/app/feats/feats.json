@@ -2,7 +2,7 @@
   {
     "name": "Ageless",
     "prerequisite": [
-      "Abjuration, Creation, Alteration, or Entropy 9"
+      "Protection, Creation, Alteration, or Entropy 9"
     ],
     "tags": [
       "Supernatural"
@@ -121,12 +121,12 @@
   {
     "name": "Battlefield Defender",
     "prerequisite": [
-      "Might 4 OR Agility 4 OR Abjuration 4"
+      "Might 4 OR Agility 4 OR Protection 4"
     ],
     "tags": [
       "Might",
       "Agility",
-      "Abjuration",
+      "Protection",
       "Passive",
       "Combat"
     ],
@@ -444,7 +444,7 @@
     "name": "Disease Immunity",
     "prerequisite": [
       "Creation 5",
-      "Abjuration 5"
+      "Protection 5"
     ],
     "tags": [
       "Non-Combat"
@@ -518,11 +518,11 @@
   {
     "name": "Ferocious Minions",
     "prerequisite": [
-      "Enchantment 3 / 5 / 7"
+      "Influence 3 / 5 / 7"
     ],
     "tags": [
       "Supernatural",
-      "Enchantment"
+      "Influence"
     ],
     "cost": [
       2
@@ -584,12 +584,12 @@
   {
     "name": "Hallucination",
     "prerequisite": [
-      "Illusion 5"
+      "Influence 5"
     ],
     "tags": [
       "Supernatural",
       "Non-Combat",
-      "Illusion"
+      "Influence"
     ],
     "cost": [
       3
@@ -600,24 +600,24 @@
   {
     "name": "Hallucination (Mass)",
     "prerequisite": [
-      "Illusion 7",
+      "Influence 7",
       "Hallucination"
     ],
     "tags": [
       "Supernatural",
       "Non-Combat",
-      "Illusion"
+      "Influence"
     ],
     "cost": [
       3
     ],
     "description": "Your hallucinations become legendary in power, granting you the power to affect small groups or even crowds.<br />",
-    "effect": "When you invoke the hallucination form of Phantasm bane, you may target additional creatures within range as determined by your Illusion score. This does not count as a multi-attack and thus does not incur disadvantage on your action roll.<br /><ul><br /><li><strong>Illusion 7</strong> - 5 Target</li><br /><li><strong>Illusion 8</strong> - 10 Targets</li><br /><li><strong>Illusion 9</strong> - 50 Targets</li><br /></ul><br />"
+    "effect": "When you invoke the hallucination form of Phantasm bane, you may target additional creatures within range as determined by your Influence score. This does not count as a multi-attack and thus does not incur disadvantage on your action roll.<br /><ul><br /><li><strong>Influence 7</strong> - 5 Target</li><br /><li><strong>Influence 8</strong> - 10 Targets</li><br /><li><strong>Influence 9</strong> - 50 Targets</li><br /></ul><br />"
   },
   {
     "name": "Hospitaler",
     "prerequisite": [
-      "Creation 4 / Presence 4 / Abjuration 4"
+      "Creation 4 / Presence 4 / Protection 4"
     ],
     "tags": [
       "Non-Combat",
@@ -625,7 +625,7 @@
       "Social",
       "Creation",
       "Presence",
-      "Abjuration"
+      "Protection"
     ],
     "cost": [
       2
@@ -1000,7 +1000,7 @@
       2
     ],
     "description": "By channeling your supernatural powers through extensive rituals, such as meditation, fasting, blood letting, and sacrifices, you are able to increase the strength of your invocations.<br />",
-    "effect": "When invoking a bane or boon, you may choose to do so as a ritual. The invocation time for a ritual is one increment higher than usual as follows:<br /><ul><br /><li>1 action becomes 1 minute</li><br /><li>1 minute becomes 10 minutes</li><br /><li>10 minutes becomes 1 hour</li><br /><li>1 hour becomes 8 hours</li><br /><li>8 hours becomes 24 hours</li><br /></ul><br /><br /><strong>Tier 1</strong> - You may choose one of the following effects to empower your bane or boon:<br /><br /><ul><br /><li>Increase the range of the effect as follows:<br />  Attribute 5 = 500ft<br /><br />  Attribute 6 = 1/2 mile<br /><br />  Attribute 7 = 1 mile<br /><br />  Attribute 8 = 10 miles<br /><br />  Attribute 9 = 100 miles<br /></li><br /><li>Negate two levels of disadvantage caused by multi-targeting (e.g., Target 2 creatures or a 10' square for free instead of disadvantage 2).</li><br /><li>For your action roll, treat your attribute score as if it was one greater for purposes of determining attribute dice. Note that this doesn’t grant access to banes or boons you could not normally access. It only increases the dice used for the action roll.</li><br /></ul><br /><br /><strong>Tier 2</strong> - You gain the following abilities:<br /><ul><br />  <li>You can lead others to join you in ritual casting as long as they are also able to invoke the bane or boon at the same power level that your are invoking it at. At the conclusion of the ritual, each contributor may choose one of the effects granted by Tier 1 of this feat.</li><br />  <li>You gain the following additional option to choose from when empowering your invocations with ritual magic:</li><br />    <ul><br />    <li>Cause a boon to persist for 1 minute automatically without need to use a sustain action. Furthermore, enemies cannot disrupt the boon through use of a focus action (Though the dispel bane still works).</li><br />    <li>Targets may not make resist rolls against a bane for one minute after it is invokes.</li><br />    </ul><br /></ul><br /><br /><strong>Tier 3</strong> - You gain the ability to permanently bestow or dispel banes and boons. In order to bestow the bane or boon, you must rigorously attend to the ritual process for a number of days equal to the power level of the bane or boon to be invoked or dispelled. During that time you can eat, sleep, and act normally with two exceptions: 1) You must work actively on the ritual and with minimal interruption for 8 hours out of each day. 2) You can leave the area and move about freely during the down time each day, but for the 8 hours of active ritual invocation you must be in the same physical or geographic location where the ritual was initiated. When the invocation time is completed, make an action roll as follows:<br /><ul><br /><li><strong>Bestow Boon</strong> - Make an action roll to invoke the boon as usual. If successful, you cause a non-instantaneous & non-permanent boon to permanently affect the target. The target can thereafter invoke the boon at will, without requiring an action roll to do so. The target does not need to use a sustain action to persist the effect, and the effect can only be dispelled either temporarily with the Dispel bane, or permanently with the Ritual Magic feat (see the Remove Boon entry that follows).</li><br /><li><strong>Bestow Bane</strong> - Make an action roll to invoke the bane as usual. If successful, you cause a non-instantaneous & non-permanent bane to permanently affect the target. The bane persists indefinitely and does not allow resist rolls to end its effects. The effect can be dispelled either temporarily with the Dispel bane, or permanently with the Ritual Magic feat (see the Remove Bane entry that follows).</li><br /><li><strong>Dispel Boon</strong> - Make an Entropy roll with a Challenge Rating equal to 10 + twice the power level of the boon you are attempting to dispel. If successful, you cause a permanent boon to be forever stripped from the target, causing them to lose the ability to invoke the bane automatically.</li><br /><li><strong>Dispel Bane</strong> - Make an Abjuration roll with a Challenge Rating equal to 10 + twice the power level of the bane you are attempting to dispel. If successful, you break the curse of a permanent bane afflicting the target, though the bane can still be invoked by other means.</li><br /></ul><br />"
+    "effect": "When invoking a bane or boon, you may choose to do so as a ritual. The invocation time for a ritual is one increment higher than usual as follows:<br /><ul><br /><li>1 action becomes 1 minute</li><br /><li>1 minute becomes 10 minutes</li><br /><li>10 minutes becomes 1 hour</li><br /><li>1 hour becomes 8 hours</li><br /><li>8 hours becomes 24 hours</li><br /></ul><br /><br /><strong>Tier 1</strong> - You may choose one of the following effects to empower your bane or boon:<br /><br /><ul><br /><li>Increase the range of the effect as follows:<br />  Attribute 5 = 500ft<br /><br />  Attribute 6 = 1/2 mile<br /><br />  Attribute 7 = 1 mile<br /><br />  Attribute 8 = 10 miles<br /><br />  Attribute 9 = 100 miles<br /></li><br /><li>Negate two levels of disadvantage caused by multi-targeting (e.g., Target 2 creatures or a 10' square for free instead of disadvantage 2).</li><br /><li>For your action roll, treat your attribute score as if it was one greater for purposes of determining attribute dice. Note that this doesn’t grant access to banes or boons you could not normally access. It only increases the dice used for the action roll.</li><br /></ul><br /><br /><strong>Tier 2</strong> - You gain the following abilities:<br /><ul><br />  <li>You can lead others to join you in ritual casting as long as they are also able to invoke the bane or boon at the same power level that your are invoking it at. At the conclusion of the ritual, each contributor may choose one of the effects granted by Tier 1 of this feat.</li><br />  <li>You gain the following additional option to choose from when empowering your invocations with ritual magic:</li><br />    <ul><br />    <li>Cause a boon to persist for 1 minute automatically without need to use a sustain action. Furthermore, enemies cannot disrupt the boon through use of a focus action (Though the dispel bane still works).</li><br />    <li>Targets may not make resist rolls against a bane for one minute after it is invokes.</li><br />    </ul><br /></ul><br /><br /><strong>Tier 3</strong> - You gain the ability to permanently bestow or dispel banes and boons. In order to bestow the bane or boon, you must rigorously attend to the ritual process for a number of days equal to the power level of the bane or boon to be invoked or dispelled. During that time you can eat, sleep, and act normally with two exceptions: 1) You must work actively on the ritual and with minimal interruption for 8 hours out of each day. 2) You can leave the area and move about freely during the down time each day, but for the 8 hours of active ritual invocation you must be in the same physical or geographic location where the ritual was initiated. When the invocation time is completed, make an action roll as follows:<br /><ul><br /><li><strong>Bestow Boon</strong> - Make an action roll to invoke the boon as usual. If successful, you cause a non-instantaneous & non-permanent boon to permanently affect the target. The target can thereafter invoke the boon at will, without requiring an action roll to do so. The target does not need to use a sustain action to persist the effect, and the effect can only be dispelled either temporarily with the Dispel bane, or permanently with the Ritual Magic feat (see the Remove Boon entry that follows).</li><br /><li><strong>Bestow Bane</strong> - Make an action roll to invoke the bane as usual. If successful, you cause a non-instantaneous & non-permanent bane to permanently affect the target. The bane persists indefinitely and does not allow resist rolls to end its effects. The effect can be dispelled either temporarily with the Dispel bane, or permanently with the Ritual Magic feat (see the Remove Bane entry that follows).</li><br /><li><strong>Dispel Boon</strong> - Make an Entropy roll with a Challenge Rating equal to 10 + twice the power level of the boon you are attempting to dispel. If successful, you cause a permanent boon to be forever stripped from the target, causing them to lose the ability to invoke the bane automatically.</li><br /><li><strong>Dispel Bane</strong> - Make an Protection roll with a Challenge Rating equal to 10 + twice the power level of the bane you are attempting to dispel. If successful, you break the curse of a permanent bane afflicting the target, though the bane can still be invoked by other means.</li><br /></ul><br />"
   },
   {
     "name": "Skill Specialization (I - V)",
@@ -1048,7 +1048,7 @@
   {
     "name": "Supernatural Defense (I - V)",
     "prerequisite": [
-      "Abjuration OR Divination OR Movement 2 / 3 / 4 / 5 / 6"
+      "Protection OR Prescience OR Movement 2 / 3 / 4 / 5 / 6"
     ],
     "tags": [
       "Supernatural",
@@ -1158,12 +1158,12 @@
   {
     "name": "Unending Charm",
     "prerequisite": [
-      "Enchantment 4"
+      "Influence 4"
     ],
     "tags": [
       "Supernatural",
       "Non-Combat",
-      "Enchantment"
+      "Influence"
     ],
     "cost": [
       3
@@ -1174,13 +1174,13 @@
   {
     "name": "Untrackable",
     "prerequisite": [
-      "Abjuration 3 OR Alteration 3 OR Illusion 3"
+      "Protection 3 OR Alteration 3 OR Influence 3"
     ],
     "tags": [
       "Non-Combat",
-      "Abjuration",
+      "Protection",
       "Alteration",
-      "Illusion"
+      "Influence"
     ],
     "cost": [
       1
