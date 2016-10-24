@@ -300,7 +300,7 @@
       2
     ],
     "description": "You are able to decimate many enemies in quick succession, like a legendary Samurai warrior or matchless elven archer.<br />",
-    "effect": "Any time you reduce a foe to zero hit points or less, you can immediately make an extra attack as a free action. <br /><br /><strong>Requirement</strong> - The triggering attack must be a Might or Agility action roll.<br />"
+    "effect": "Any time you make an attack that reduces a foe to zero hit points or less, you can immediately make an extra attack as a free action. <br /><br /><strong>Requirement</strong> - The triggering attack must be a Might or Agility action roll.<br />"
   },
   {
     "name": "Combat Momentum",

@@ -151,8 +151,8 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Sustain Persists",
-    "description": "The target is propelled by magical force through the air, moving at incredible speed and with perfect agility.<br />",
-    "effect": "<ul><br /><li><strong>Power Level 6</strong> - The target gains a flight speed of 10’ with low manueverability.</li><br /><li><strong>Power Level 6</strong> - The target gains a flight speed of 30’ and is highly manueverable.</li><br /><li><strong>Power Level 8</strong> - The granted flight speed increases to 60'.</li><br /></ul><br />If the boon is dispelled while the target is still in flight, they plummet to the ground immediately.<br />"
+    "description": "The target is propelled by magical force through the air, with progressively improving speed and agility.<br />",
+    "effect": "<ul><br /><li><strong>Power Level 5</strong> - The target gains a flight speed of 10’ with low manueverability.</li><br /><li><strong>Power Level 6</strong> - The target gains a flight speed of 30’ and is highly manueverable.</li><br /><li><strong>Power Level 8</strong> - The granted flight speed increases to 60'.</li><br /></ul><br />If the boon is dispelled while the target is still in flight, they plummet to the ground immediately.<br />"
   },
   {
     "name": "Genesis",
