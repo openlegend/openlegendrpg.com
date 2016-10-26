@@ -10,7 +10,7 @@
     "cost": [
       1
     ],
-    "description": "Ageless and supernatural, you have either unlocked a mystical secret to immortality, become a legendary defender, transformed into an avatar of nature, or been granted immunity to the ravages time by some higher power.<br />",
+    "description": "Ageless and supernatural, you have either unlocked a mystical secret to immortality, become a legendary defender, transformed into an avatar of nature, or been granted immunity to the ravages of time by some higher power.<br />",
     "effect": "Rooted in a superantural means of your choice, you become immune to the passage of time and the effects of old age. You do not age and cannot be harmed by magic that causes aging. You can choose to age in appearance, if you wish, but you can also choose to continually appear the same age.<br />"
   },
   {
@@ -615,6 +615,24 @@
     "effect": "When you invoke the hallucination form of Phantasm bane, you may target additional creatures within range as determined by your Influence score. This does not count as a multi-attack and thus does not incur disadvantage on your action roll.<br /><ul><br /><li><strong>Influence 7</strong> - 5 Target</li><br /><li><strong>Influence 8</strong> - 10 Targets</li><br /><li><strong>Influence 9</strong> - 50 Targets</li><br /></ul><br />"
   },
   {
+    "name": "Heavy Weapon Master",
+    "prerequisite": [
+      "Agility 4",
+      "Might 5"
+    ],
+    "tags": [
+      "Combat",
+      "Physical",
+      "Agility",
+      "Might"
+    ],
+    "cost": [
+      3
+    ],
+    "description": "Due to your strength and training, you are able to wield exceptionally heavy weapons with ease.<br />",
+    "effect": "You can wield two-handed melee weapons in one hand. When you do, you still gain the usual advantage granted by two-handed weapons.<br />"
+  },
+  {
     "name": "Hospitaler",
     "prerequisite": [
       "Creation 4 / Presence 4 / Protection 4"
@@ -785,6 +803,22 @@
     "effect": "You do not need to use the sustain a boon action to sustain the Shapeshift boon <emphasis>when it is targeting yourself</emphasis>. It persists indefinitely and you can end the boon at any time. At the GM’s discretion there may be magical effects or circumstances that force you to revert to your original form (such as a lycanthrope being exposed to silver). Your tier in this feat determines the highest power level of the Shapeshift boon that you can sustain.<br /><br /><ul><br /><li><strong>Tier 1</strong> - You can sustain any Shapeshift boon of power level 2 or less.</li><br /><li><strong>Tier 2</strong> - You can sustain any Shapeshift boon of power level 4 or less.</li><br /><li><strong>Tier 3</strong> - You can sustain any Shapeshift boon of power level 6 or less.</li><br /><li><strong>Tier 4</strong> - You can sustain any Shapeshift boon of power level 8 or less.</li><br /><li><strong>Tier 5</strong> - You can sustain any Shapeshift boon of power level 9 or less.</li><br /></ul><br />"
   },
   {
+    "name": "Master Tracker",
+    "prerequisite": [
+      "Perception 5"
+    ],
+    "tags": [
+      "Non-Combat",
+      "Mental",
+      "Perception"
+    ],
+    "cost": [
+      1
+    ],
+    "description": "Your skill at tracking and hunting your quarry is unmatched, allowing you to follow trails long after others would have lost them.<br />",
+    "effect": "Unless magically thwarted or unable to see, you always know the direction of true north. In addition, once you successfully locate the trail of a target, you automatically succeed at all tracking attempts to continue following that trail for 7 days after the time you first picked it up.  Only magically concealed tracks, targets in flight, or similarly exceptional cases can cause you to lose your mark.<br />"
+  },
+  {
     "name": "Mimic",
     "prerequisite": [
       "Alteration 4",
@@ -940,22 +974,6 @@
     ],
     "description": "Your berserker nature is ever-present, waiting to be unleashed at a moment's notice.<br />",
     "effect": "You can enter a rage (as per the berserker feat) as a free action even when it is not your turn. You may choose to rage in reaction to another action, such as an enemy's attack, spell, or insult. You may even declare your intent to rage after the action has been resolved (such as after the attack has already been rolled). The benefits granted from your rage take place before the triggering action is resolved, potentially negating damage or harmful effects that you would have otherwise incurred.<br />"
-  },
-  {
-    "name": "Master Tracker",
-    "prerequisite": [
-      "Perception 5"
-    ],
-    "tags": [
-      "Non-Combat",
-      "Mental",
-      "Perception"
-    ],
-    "cost": [
-      1
-    ],
-    "description": "Your skill at tracking and hunting your quarry is unmatched, allowing you to follow trails long after others would have lost them.<br />",
-    "effect": "Unless magically thwarted or unable to see, you always know the direction of true north. In addition, once you successfully locate the trail of a target, you automatically succeed at all tracking attempts to continue following that trail for 7 days after the time you first picked it up.  Only magically concealed tracks, targets in flight, or similarly exceptional cases can cause you to lose your mark.<br />"
   },
   {
     "name": "Reckless Frenzy",
@@ -1121,24 +1139,6 @@
     ],
     "description": "Your mastery of two weapon fighting allows you not only to come at your foes with a flurry of attacks, but also shield yourself exceptionally well with your off-hand weapon.<br />",
     "effect": "When you have a weapon in each hand, you gain a +2 armor bonus. This feat cannot be used in conjunction with a shield.<br />"
-  },
-  {
-    "name": "Heavy Weapon Master",
-    "prerequisite": [
-      "Agility 4",
-      "Might 5"
-    ],
-    "tags": [
-      "Combat",
-      "Physical",
-      "Agility",
-      "Might"
-    ],
-    "cost": [
-      3
-    ],
-    "description": "Due to your strength and training, you are able to wield exceptionally heavy weapons with ease.<br />",
-    "effect": "You can wield two-handed melee weapons in one hand. When you do, you still gain the usual advantage granted by two-handed weapons.<br />"
   },
   {
     "name": "Unending Charm",
