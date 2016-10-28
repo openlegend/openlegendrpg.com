@@ -28,8 +28,8 @@
       8
     ],
     "attribute": [
-      "Creation",
       "Alteration",
+      "Creation",
       "Prescience",
       "Presence"
     ],
@@ -85,9 +85,9 @@
     ],
     "attribute": [
       "Alteration",
-      "Prescience",
       "Entropy",
-      "Perception"
+      "Perception",
+      "Prescience"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Sustain Persists",
@@ -184,8 +184,8 @@
       8
     ],
     "attribute": [
-      "Movement",
-      "Alteration"
+      "Alteration",
+      "Movement"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Sustain Persists",
@@ -331,10 +331,10 @@
       9
     ],
     "attribute": [
-      "Protection",
       "Alteration",
       "Energy",
-      "Movement"
+      "Movement",
+      "Protection"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Sustain Persists",
@@ -350,8 +350,8 @@
       1
     ],
     "attribute": [
-      "Protection",
-      "Creation"
+      "Creation",
+      "Protection"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Instantaneous",
