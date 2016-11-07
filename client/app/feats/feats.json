@@ -1,9 +1,24 @@
 [
   {
     "name": "Ageless",
-    "prerequisite": [
-      "Protection, Creation, Alteration, or Entropy 9"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Alteration": 9
+          },
+          {
+            "Creation": 9
+          },
+          {
+            "Entropy": 9
+          },
+          {
+            "Protection": 9
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural"
     ],
@@ -14,24 +29,57 @@
     "effect": "Rooted in a superantural means of your choice, you become immune to the passage of time and the effects of old age. You do not age and cannot be harmed by magic that causes aging. You can choose to age in appearance, if you wish, but you can also choose to continually appear the same age.<br />"
   },
   {
-    "name": "Alternate Form (I - III)",
-    "prerequisite": [
-      "Alteration 2 / 5 / 7"
-    ],
+    "name": "Alternate Form (I - II)",
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier2": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
     "tags": [
-      "Supernatural"
+      "No Prerequisite"
     ],
     "cost": [
       3
     ],
-    "description": "Alternate form is an ability possessed by lyncanthropes (werewolves, werebears, wererats), druids, vampires, and other creatures capable of assuming <emphasis>specific</emphasis> forms.<br />",
-    "effect": "You gain the ability to shapeshift into a single form (you choose that form when purchasing this feat and it cannot be changed). Assuming your new form is a major action. When you assume your new form, you gain a pool of points equal to your Alteration score, which you may immediately spend to temporarily increase your physical attributes. You cannot raise any physical attribute to be greater than your Alteration score, unless the physical attribute is already equal to your Alteration. In that case, you may increase it by a maximum of one point. This increase cannot be used to meet prerequisites for feats, but it can be used to give you access to banes and boons that you would otherwise not be able to use in your normal form. Until you purchase this feat at tier 3, you cannot use the supernatural attributes of the chosen form.<br /><br />You return to your normal form immediately if you are reduced to zero hit points. You can also choose to voluntarily return to your usual form as a major action. Upon returning to your original form, your physical attributes return to their previous values.<br /><ul><br /><li>Tier 1 – Your alternate form must be the same size as your normal form.</li><br /><li>Tier 2 – Your alternate form can be one size different from your normal size.</li><br /><li>Tier 3 – Your alternate form can be any size. In addition, you are able to use supernatural attributes for attacks (dragon’s breath, nymph’s charm, etc.) of your chosen form. Use your Alteration score for action rolls relating to these supernatural abilities.</li><br /></ul><br />"
+    "description": "Alternate form is an ability possessed by lycanthropes (werewolves, werebears, wererats), druids, vampires, and other creatures capable of assuming <emphasis>specific</emphasis> forms.<br />",
+    "effect": "You gain the ability to shapeshift into a single form (you choose that form when purchasing this feat and it cannot be changed). Assuming your new form is a Focus action.<br />When you take this feat, you build the stats for the alternate form that you can assume.<br />To build your alternate form, you gain a number of Feat and Attribute points, as outlined below. Your new form is otherwise treated as a different character. You retain none of your original feats or attributes, only what you gain for the new form from this feat. You do, however, retain the ability to cancel and revert to your base form.<br />You return to your normal form immediately if you are reduced to zero hit points. You can also choose to voluntarily return to your usual form as a major action. Upon returning to your original form, your physical attributes return to their previous values.<br /><ul><br /><li>Tier 1 – Half of your main character's attribute points (rounded up), and 3 feat points.</li><br /><li>Tier 2 – Same attribute points as your main character, and 3 feat points per level.</li><br /></ul><br />"
   },
   {
     "name": "Area Manipulation (I - V)",
-    "prerequisite": [
-      "None"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier2": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier3": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier4": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier5": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
     "tags": [
       "No Prerequisite",
       "Supernatural"
@@ -44,9 +92,23 @@
   },
   {
     "name": "Armor Mastery (I - III)",
-    "prerequisite": [
-      "None"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier2": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier3": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
     "tags": [
       "No Prerequisite"
     ],
@@ -58,9 +120,13 @@
   },
   {
     "name": "Attack Redirection",
-    "prerequisite": [
-      "Defensive Reflexes II"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Feat": [
+          "Defensive Reflexes II"
+        ]
+      }
+    },
     "tags": [
       "Supernatural"
     ],
@@ -72,9 +138,125 @@
   },
   {
     "name": "Attack Specialization (I - IX)",
-    "prerequisite": [
-      "Attribute 1 - 9"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 1
+          },
+          {
+            "Might": 1
+          },
+          {
+            "Any Supernatural": 1
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Agility": 2
+          },
+          {
+            "Might": 2
+          },
+          {
+            "Any Supernatural": 2
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Agility": 3
+          },
+          {
+            "Might": 3
+          },
+          {
+            "Any Supernatural": 3
+          }
+        ]
+      },
+      "tier4": {
+        "Attribute": [
+          {
+            "Agility": 4
+          },
+          {
+            "Might": 4
+          },
+          {
+            "Any Supernatural": 4
+          }
+        ]
+      },
+      "tier5": {
+        "Attribute": [
+          {
+            "Agility": 5
+          },
+          {
+            "Might": 5
+          },
+          {
+            "Any Supernatural": 5
+          }
+        ]
+      },
+      "tier6": {
+        "Attribute": [
+          {
+            "Agility": 6
+          },
+          {
+            "Might": 6
+          },
+          {
+            "Any Supernatural": 6
+          }
+        ]
+      },
+      "tier7": {
+        "Attribute": [
+          {
+            "Agility": 7
+          },
+          {
+            "Might": 7
+          },
+          {
+            "Any Supernatural": 7
+          }
+        ]
+      },
+      "tier8": {
+        "Attribute": [
+          {
+            "Agility": 8
+          },
+          {
+            "Might": 8
+          },
+          {
+            "Any Supernatural": 8
+          }
+        ]
+      },
+      "tier9": {
+        "Attribute": [
+          {
+            "Agility": 9
+          },
+          {
+            "Might": 9
+          },
+          {
+            "Any Supernatural": 9
+          }
+        ]
+      }
+    },
     "tags": [
       "Passive",
       "Weapon",
@@ -89,9 +271,21 @@
   },
   {
     "name": "Attribute Substitution",
-    "prerequisite": [
-      "Attribute Score of 4 in Primary Attribute (see description)"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Any Social": 4
+          },
+          {
+            "Any Mental": 4
+          },
+          {
+            "Any Supernatural": 4
+          }
+        ]
+      }
+    },
     "tags": [
       "Any Attribute"
     ],
@@ -99,13 +293,17 @@
       3
     ],
     "description": "Your prowess in a supernatural, mental, or social attribute empowers a physical aspect of your character, allowing you to use that attribute for tasks normally reserved for another attribute.  Examples of Attribute Substitution in play include a martial artist who is physically weak but capable of using internal chi to throw and disable opponents, as well as an anatomical genius who uses their intelligence to make vital strikes rather than their dexterity.<br />",
-    "effect": "When you purchase this feat, you create a permanent link between two attributes: one stronger (the primary attribute) and one weaker (the dependent attribute). When making action rolls with the dependent attribute, you may use your score in the primary attribute for damaging attacks, bane attacks, boon invocations, and other actions at the GM's discretion. This relationship is subject to case-by-case approval by the GM. It must be logical and consistent with the story you are trying to tell. Furthermore, the GM should prevent players from creating illogical substitutions that are purely aimed at making their characters unreasonably powerful. Two examples of proper uses of this feat include an analytical warrior or martial artist who analyzes angles, leverage, and physics to substitute Logic for Might, or a a gunslinger who channels dark energy, giving her deadshot accuracy and substituting Entropy for Agility.<br />For the purpose of meeting attribute prerequisites when purchasing feats, your dependent attribute is considered equal to that of your primary attribute score.<br /><strong>Special</strong>: This feat can only be purchased once. In addition, the primary attribute must be either social, mental, or supernatural, while the substituted attribute must be physical.<br />"
+    "effect": "When you purchase this feat, you create a permanent link between two attributes: one stronger (the primary attribute) and one weaker (the dependent attribute). You may use your score in the primary attribute in place of the dependent attribute for the following situations:<br /><ul><br /><li>Making action rolls</li><br /><li>Calculating hit points, defenses, and other secondary statistics</li><br /><li>Meeting feat, bane, and boon prerequisites</li><br /><li>Other situations at the GM's discretion</li><br /></il><br />The relationship formed by your two attributes is subject to case-by-case approval by the GM. It must be logical and consistent with the story you are trying to tell. For example, a bard who subsitutes her Presence for her Might to represent her dance-based melee fighting style would likely not get to use her Presence Score for determining her carrying capacity. Furthermore, the GM should prevent players from creating illogical substitutions that are purely aimed at making their characters unreasonably powerful. Two examples of proper uses of this feat include an analytical warrior or martial artist who analyzes angles, leverage, and physics to substitute Logic for Might, or a gunslinger who channels dark energy, giving her deadshot accuracy and substituting Entropy for Agility.<br /><strong>Special</strong>: This feat can only be purchased once. In addition, the primary attribute must be either social, mental, or supernatural, while the substituted attribute must be physical.<br />"
   },
   {
     "name": "Bane Focus",
-    "prerequisite": [
-      "Ability to invoke the chosen bane"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "Ability to invoke the chosen bane"
+        ]
+      }
+    },
     "tags": [
       "Might",
       "Passive",
@@ -120,9 +318,21 @@
   },
   {
     "name": "Battlefield Defender",
-    "prerequisite": [
-      "Might 4 OR Agility 4 OR Protection 4"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 4
+          },
+          {
+            "Might": 4
+          },
+          {
+            "Protection": 4
+          }
+        ]
+      }
+    },
     "tags": [
       "Might",
       "Agility",
@@ -138,10 +348,18 @@
   },
   {
     "name": "Battlefield Punisher - Knockdown",
-    "prerequisite": [
-      "Battlefield Defender",
-      "Might 5"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Might": 5
+          }
+        ],
+        "Feat": [
+          "Battlefield Defender"
+        ]
+      }
+    },
     "tags": [
       "Might",
       "Passive",
@@ -156,10 +374,21 @@
   },
   {
     "name": "Battlefield Punisher - Slowed",
-    "prerequisite": [
-      "Battlefield Defender",
-      "Might 5 OR Agility 5"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 5
+          },
+          {
+            "Might": 5
+          }
+        ],
+        "Feat": [
+          "Battlefield Defender"
+        ]
+      }
+    },
     "tags": [
       "Might",
       "Agility",
@@ -175,10 +404,21 @@
   },
   {
     "name": "Battlefield Punisher - Stunned",
-    "prerequisite": [
-      "Battlefield Defender",
-      "Might 7 OR Agility 7"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 7
+          },
+          {
+            "Might": 7
+          }
+        ],
+        "Feat": [
+          "Battlefield Defender"
+        ]
+      }
+    },
     "tags": [
       "Might",
       "Agility",
@@ -194,10 +434,73 @@
   },
   {
     "name": "Battlefield Sentinel (I - V)",
-    "prerequisite": [
-      "Battlefield Defender",
-      "Might 5 OR Agility 5"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 5
+          },
+          {
+            "Might": 5
+          }
+        ],
+        "Feat": [
+          "Battlefield Defender"
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Agility": 5
+          },
+          {
+            "Might": 5
+          }
+        ],
+        "Feat": [
+          "Battlefield Defender"
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Agility": 5
+          },
+          {
+            "Might": 5
+          }
+        ],
+        "Feat": [
+          "Battlefield Defender"
+        ]
+      },
+      "tier4": {
+        "Attribute": [
+          {
+            "Agility": 5
+          },
+          {
+            "Might": 5
+          }
+        ],
+        "Feat": [
+          "Battlefield Defender"
+        ]
+      },
+      "tier5": {
+        "Attribute": [
+          {
+            "Agility": 5
+          },
+          {
+            "Might": 5
+          }
+        ],
+        "Feat": [
+          "Battlefield Defender"
+        ]
+      }
+    },
     "tags": [
       "Might",
       "Agility",
@@ -213,9 +516,18 @@
   },
   {
     "name": "Berserker",
-    "prerequisite": [
-      "Will 3 OR Fortitude 3"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Fortitude": 3
+          },
+          {
+            "Will": 3
+          }
+        ]
+      }
+    },
     "tags": null,
     "cost": [
       3
@@ -225,9 +537,13 @@
   },
   {
     "name": "Boon Access",
-    "prerequisite": [
-      "None"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
     "tags": [
       "Supernatural"
     ],
@@ -243,13 +559,27 @@
       9
     ],
     "description": "You have a special gift: it might be the result of your heritage, a close encounter with magical energy, or the result of years of training with a master. In any case, although you do not necessarily possess the aptitude to work supernatural powers for yourself or create a desired effect with your physical capabilities alone, you are able to reliably replicate a single boon.<br />",
-    "effect": "When you choose this feat, choose one boon that you do not have the requisite attribute to invoke. The cost of this feat is equal to the Power Level of the chosen boon. You can invoke the chosen boon despite lacking the necessary attribute. For invocation rolls, treat your attribute score as the Power Level of the boon. Additonally, you count as having access to the chosen boon for the purpose of meeting feat prerequisites, and your attribute for meeting such prerequisites is equal to the Power Level of the boon. The Boon Access feat bypasses the normal attribute score restrictions based on character level, so a first level character could spend all 6 of their feat points to begin play with access to a Power Level 6 boon.<br />You may acquire this feat multiple times. Each time, select a new boon.<br /><strong>Special</strong>: If you ever meet the attribute prerequisite for the chosen boon, you may choose at that time to lose this feat and regain the feat points spent. Re-allocate them as you choose.<br />"
+    "effect": "When you choose this feat, choose one boon that you do not have the requisite attribute to invoke. The cost of this feat is equal to the Power Level of the chosen boon. You can invoke the chosen boon despite lacking the necessary attribute. For invocation rolls, treat your attribute score as the Power Level of the boon. Additionally, you count as having access to the chosen boon for the purpose of meeting feat prerequisites, and your attribute for meeting such prerequisites is equal to the Power Level of the boon. The Boon Access feat bypasses the normal attribute score restrictions based on character level, so a first level character could spend all 6 of their feat points to begin play with access to a Power Level 6 boon.<br />You may acquire this feat multiple times. Each time, select a new boon.<br /><strong>Special</strong>: If you ever meet the attribute prerequisite for the chosen boon, you may choose at that time to lose this feat and regain the feat points spent. Re-allocate them as you choose.<br />"
   },
   {
     "name": "Boon Focus (I - III)",
-    "prerequisite": [
-      "Ablility to invoke the chosen boon"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "Ability to invoke the chosen boon"
+        ]
+      },
+      "tier2": {
+        "Other": [
+          "Ability to invoke the chosen boon"
+        ]
+      },
+      "tier3": {
+        "Other": [
+          "Ability to invoke the chosen boon"
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Passive",
@@ -259,13 +589,75 @@
       3
     ],
     "description": "You are specialized in the use a particular boon that is iconic to your character.<br />",
-    "effect": "<ul><br /><li>Tier 1 - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. If the invocation has multiple targets, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.</li><br /><li>Tier 2 - When your invocation includes multiple targets, you gain advantage 3 on your action roll to invoke the boon. Additionally, invoking the boon is one time increment faster.  If the invocation time is a major action, it becomes a minor action.  If the invocation time is 1 minute, it becomes 1 major action.  If the invocation time is 10 minutes, it becomes 1 minute.  If the invocation time is 1 hour, it becomes 10 minutes.  If the invocation time is 8 hours, it becomes 1 hour.</li><br /><li>Tier 3 - The effect at tier 3 varies based on the duration of the boon:<br />  <br /><br />  <strong>If the chosen boon has a duration of \"sustain persists\"</strong>, you gain advantage 4 on your action roll to invoke it when multi-targeting. Addtionally, the boon is always active for your character and passively persists, without requiring you to use a minor action to sustain it. If the boon is somehow temporarily cancelled (such as by the dispel bane), it resumes automatically at the start of your next turn.<br />  <br /><br />  <strong>If the boon has a different duration</strong>, you gain advantage 5 on your action roll to invoke it when multi-targeting.<br /></li><br /></ul><br />"
+    "effect": "<ul><br /><li>Tier 1 - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. If the invocation has multiple targets, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.</li><br /><li>Tier 2 - When your invocation includes multiple targets, you gain advantage 3 on your action roll to invoke the boon. Additionally, invoking the boon is one time increment faster.  If the invocation time is a major action, it becomes a minor action.  If the invocation time is 1 minute, it becomes 1 major action.  If the invocation time is 10 minutes, it becomes 1 minute.  If the invocation time is 1 hour, it becomes 10 minutes.  If the invocation time is 8 hours, it becomes 1 hour.</li><br /><li>Tier 3 - The effect at tier 3 varies based on the duration of the boon:<br />  <br /><br />  <strong>If the chosen boon has a duration of \"sustain persists\"</strong>, you gain advantage 4 on your action roll to invoke it when multi-targeting. Additionally, the boon is always active for your character and passively persists, without requiring you to use a minor action to sustain it. If the boon is somehow temporarily cancelled (such as by the dispel bane), it resumes automatically at the start of your next turn.<br />  <br /><br />  <strong>If the boon has a different duration</strong>, you gain advantage 5 on your action roll to invoke it when multi-targeting.<br /></li><br /></ul><br />"
   },
   {
     "name": "Breakfall (I - IX)",
-    "prerequisite": [
-      "Agility 4"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      },
+      "tier4": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      },
+      "tier5": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      },
+      "tier6": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      },
+      "tier7": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      },
+      "tier8": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      },
+      "tier9": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      }
+    },
     "tags": null,
     "cost": [
       1
@@ -275,9 +667,15 @@
   },
   {
     "name": "Brutal Intimidation",
-    "prerequisite": [
-      "Might 2"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Might": 2
+          }
+        ]
+      }
+    },
     "tags": [
       "Non-Combat"
     ],
@@ -288,11 +686,40 @@
     "effect": "If you're able to make a show of physical force, you can use your Might attribute in place of Persuasion for the action roll.<br />"
   },
   {
-    "name": "Combat Follow-through",
-    "prerequisite": [
-      "Combat Momentum",
-      "Might 5 OR Agility 5"
+    "name": "Climbing",
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
+    "tags": [
+      "Non-Combat"
     ],
+    "cost": [
+      2
+    ],
+    "description": "You gain the ability to climb effortlessly, as is found in certain vampires, aberrant creatures, and insects.<br />",
+    "effect": "You gain a climb speed equal to your base speed and can scale horizontal and vertical surfaces, even climb upside-down, with no fear of falling.<br />"
+  },
+  {
+    "name": "Combat Follow-through",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 5
+          },
+          {
+            "Might": 5
+          }
+        ],
+        "Feat": [
+          "Combat Momentum"
+        ]
+      }
+    },
     "tags": [
       "Feat Chain"
     ],
@@ -304,9 +731,21 @@
   },
   {
     "name": "Combat Momentum",
-    "prerequisite": [
-      "Might 4 OR Agility 4 OR Movement 4"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 4
+          },
+          {
+            "Might": 4
+          },
+          {
+            "Movement": 4
+          }
+        ]
+      }
+    },
     "tags": [
       "Feat Chain"
     ],
@@ -318,9 +757,23 @@
   },
   {
     "name": "Companion (I - III)",
-    "prerequisite": [
-      "None"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier2": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier3": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
     "tags": [
       "Non-Combat"
     ],
@@ -328,13 +781,36 @@
       3
     ],
     "description": "Whether a hired bodyguard, a loyal animal sidekick, or a sibling that follows you everywhere, you have the constant and unflinching loyalty of one particular companion character.<br />",
-    "effect": "You gain a companion character that acts indepently from you. During combat, your companion acts on its own initiative count and gains the usual assortment of actions, which you may choose. You also get to assign your companion's attributes. The companion's highest attribute is determined by your level and your tier in this feat (see below). Your companion also possesses attributes at each number lower than its highest score. For example, if the companion's highest score is 6, then it also has attributes at scores 5, 4, 3, 2, and 1. The companion gains no feats or abilities, only attributes and the corresponding access to banes and boons.<br /><ul><br /><li><strong>Tier 1</strong> - Your companion's highest attribute equals your level minus 2 (minimum of 3).</li><br /><li><strong>Tier 2</strong> - Your companion's highest attribute equals your level minus 1 (minimum of 4).</li><br /><li><strong>Tier 3</strong> - Your companion's highest attribute equals your level (minimum of 5).</li><br /></ul><br />"
+    "effect": "You gain a companion character that acts independently from you. During combat, your companion acts on its own initiative count and gains the usual assortment of actions, which you may choose. You also get to assign your companion's attributes. The companion's highest attribute is determined by your level and your tier in this feat (see below). Your companion also possesses attributes at each number lower than its highest score. For example, if the companion's highest score is 6, then it also has attributes at scores 5, 4, 3, 2, and 1. The companion gains no feats or abilities, only attributes and the corresponding access to banes and boons. Whenever you gain a level or purchase a new tier in this feat, you may reassign your companion's attributes.<br /><ul><br /><li><strong>Tier 1</strong> - Your companion's highest attribute equals your level minus 2 (minimum of 3).</li><br /><li><strong>Tier 2</strong> - Your companion's highest attribute equals your level minus 1 (minimum of 4).</li><br /><li><strong>Tier 3</strong> - Your companion's highest attribute equals your level (minimum of 5).</li><br /></ul><br /><strong>Example</strong><br />Fezzy starts at level one with Companion (Tier II), choosing a wolf for his companion. Based on Fezzy's level and feat tier, his wolf's highest attribute is 4, so he can assign the wolf four attributes at scores 4, 3, 2, and 1. He assigns the following: Agility 4, Perception 3, Might 2, and Fortitude 1. Upon reaching level 2, Fezzy purchases Companion (Tier III), raising the wolf's highest attribute to 5, so Fezzy reassigns the attributes as follows: Perception 5, Agility 4, Might 3, Fortitude 2, Presence 1.<br />"
   },
   {
     "name": "Craft (I - II)",
-    "prerequisite": [
-      "Knowledge I (feat) OR Learning 3"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "FeatAttribute": {
+          "Attribute": [
+            {
+              "Learning": 3
+            }
+          ],
+          "Feat": [
+            "Knowledge I"
+          ]
+        }
+      },
+      "tier2": {
+        "FeatAttribute": {
+          "Attribute": [
+            {
+              "Learning": 3
+            }
+          ],
+          "Feat": [
+            "Knowledge I"
+          ]
+        }
+      }
+    },
     "tags": [
       "Non-Combat"
     ],
@@ -342,13 +818,42 @@
       2
     ],
     "description": "You have mastered a particular craft, and given proper time and materials, you can create items related to that craft.<br />",
-    "effect": "Choose a specific craft or profession. You can create items that are relevant to your chosen craft, and your GM will determine the speed at which you craft based on the nature of the item and the materials you have access to. Your tier in the Craft feat determines the maximum wealth level of the items you can craft. Unlike acquiring items by using your wealth (described in Chapter 4), crafting does not limit your ability to acquire additional goods.<br /><br /><ul><br /><li><strong>Tier 1</strong> - You can craft items equal to your wealth level.</li><br /><li><strong>Tier 2</strong> - You can craft items equal to your wealth level + 1.</li><br /></ul><br /><strong>Craft Examples</strong> (This list is not exhaustive, and you can work with your GM to come up with other suitable crafts).<br /><ul><br /><li>Alchemy - acid, chemicals, non-magical tinctures, incense, reagents</li><br /><li>Arcane - magical ingredients, inks, scrolls, exotic components</li><br /><li>Blacksmithing - Metal, leather, weapons, armor, wheels, horseshoes</li><br /><li>Chemistry - acid, explosives, narcotics</li><br /><li>Engineering - machines, wheels, gears, guns, vehicles</li><br /><li>Geography - maps, cartography, instruments of navigation</li><br /><li>Medicine - medical tools, tonics, tinctures, pain relievers, anti-toxins</li><br /><li>Herbalism - poultices, natural remedies, stimulants, brewing</li><br /></ul><br />"
+    "effect": "Choose a specific craft or profession. You can create items that are relevant to your chosen craft, and your GM will determine the speed at which you craft based on the nature of the item and the materials you have access to. Your tier in the Craft feat determines the maximum wealth level of the items you can craft. Unlike acquiring items by using your wealth (described in Chapter 4), crafting does not limit your ability to acquire additional goods.<br /><ul><br /><li><strong>Tier 1</strong> - You can craft items equal to your wealth level.</li><br /><li><strong>Tier 2</strong> - You can craft items equal to your wealth level + 1.</li><br /></ul><br /><strong>Craft Examples</strong> (This list is not exhaustive, and you can work with your GM to come up with other suitable crafts).<br /><ul><br /><li>Alchemy - acid, chemicals, non-magical tinctures, incense, reagents</li><br /><li>Arcane - magical ingredients, inks, scrolls, exotic components</li><br /><li>Blacksmithing - Metal, leather, weapons, armor, wheels, horseshoes</li><br /><li>Chemistry - acid, explosives, narcotics</li><br /><li>Engineering - machines, wheels, gears, guns, vehicles</li><br /><li>Geography - maps, cartography, instruments of navigation</li><br /><li>Medicine - medical tools, tonics, tinctures, pain relievers, anti-toxins</li><br /><li>Herbalism - poultices, natural remedies, stimulants, brewing</li><br /></ul><br />"
   },
   {
-    "name": "Craft Beneficial or Baleful Item (I - IV)",
-    "prerequisite": [
-      "Any Supernatural Attribute 5 / Learning 5 / Creation 5"
-    ],
+    "name": "Craft Beneficial or Baleful Item (I - III)",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Any Supernatural": 5
+          },
+          {
+            "Learning": 5
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Any Supernatural": 5
+          },
+          {
+            "Learning": 5
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Any Supernatural": 5
+          },
+          {
+            "Learning": 5
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Non-Combat"
@@ -356,15 +861,23 @@
     "cost": [
       3
     ],
-    "description": "You are studied in the ways of imbuing magical items, brewing potions, or building extraoridnary devices. Their power is permanent but varies depending on your skill.<br />",
-    "effect": "This feat allows you to create items that can invoke a given bane or boon either autonomously or by way of a wielder.<br /><ul><br /><li><strong>Tier 1</strong> - You can create an item with this feat. Choose a target attribute score for the item, less than or equal to 2 points below the attribute you use in the creation process (e.g. if you have an attribute score of 5, the maximum score of the item is 3). <br /><br />  Next, choose whether the item is permanent or expendable. A potion or scroll may be an expendable item that triggers the heal boon, for example, while a ring of invisibility may be a permanent item that triggers the invisibility boon when the wielder concetrates on using it.  <br /><br />  Creating an expendable item requires 1 full 8-hour day of uninterrupted work. Creating a permanent item, requires one such day of work per attribute score of the item. <br /><br />  At the end of this period, make an attribute roll with a prerequisite attribute. The CR of this roll equals 10 plus twice the attribute score of the item.<br />  <br /><br />  Next, choose a bane or boon of power level less than or equal to the item's attribute score from the previous step. This item is forever linked to that particular bane or boon.<br />  <br /><br />  An expendable item used to invoke a boon automatically succeeds at invocation. An expendable item used to invoke a bane grants advantage 1 to the attribute roll to invoke.<br /><br />  A permanent item can be invoked once per hour, after which it has to recharge before it can be used again. <br /><br />  The banes and boons available for imbuing depend on the attribute used to create the item, as follows:<br />  <ul><br />  <li><strong>Any Supernatural Attribute</strong> - The item can only be imbued with a bane or boon that is accessible to the creator via the attribute used. </li><br />  <li><strong>Learning</strong> - You can imbue an item with only Physical attributes (Might, Agility, Fortitude) and the corresponding banes and boons.</li><br />  <li><strong>Creation</strong> - Being capable of manifesting something from nothing via channeling otherworldly energy, you can imbue the item with any attribute, even if you do not have a score in that attribute.</li><br />  </ul><br /></li><br /><li><strong>Tier 2</strong> - Following the same rules above, you gain the following additional benefits: <br /><br />  <ul><br />  <li>The target attribute score for the item can now be equal to your attribute score or less. So, with a prerequisite attribute score of 5, you can imbue an item with an attribute score of 5.</li><br />  <li>For expendable items, bane attacks have advantage 2 instead of advantage 1.</li><br />  <li>You can imbue low-level sentience or autonomy into your crafted items. During creation, you work with the GM to define a set of conditions that cause the item to trigger. Some examples include magically guided fireballs triggered when someone enters a given area or a teleportation circle that activates when someone steps on a magical trigger. For those imbuing with non-magical means, this autonomy could be more mundane, for example: pressure plates surrounded by murder holes (arrow slits with self-reloading crossbows).</li><br />  <li>Permanent items you imbue not only possess the imbued attribute score for the purpose of invoking a particular bane or boon, but can make attacks with their attribute score. If the item's attribute is greater than the wielder's, then it supersedes the attribute for the wielder. For example - a Flaming Sword imbued in the 9th circle of Hell could have Energy 9, allowing a town guard with Might 3 to make attacks with Energy 9 instead of Might 3.  A non-supernatural example could be ballistae on a large embattlement that are imbued with Agility 4 and can be used to invoke the Forced Move bane.</li><br />  </ul><br /></li><br /><li><strong>Tier 3</strong> - You can imbue humanlike sentience into the item, it gains its own personality and intelligence. This epic feat should be worked out closely with your GM to specify a blueprint for what the item's personality, mission, preferences, and similar values will be, and the GM should elaborate and add unforeseen quirks or flaws that make sense given the item's purpose.</li><br /></ul><br />"
+    "description": "You are studied in the ways of imbuing magical items, brewing potions, or building extraordinary devices. Their power is permanent but varies depending on your skill.<br />",
+    "effect": "This feat allows you to create items that can invoke a given bane or boon either autonomously or by way of a wielder.<br /><ul><br /><li><strong>Tier 1</strong> - You can create an item with this feat. Choose a target attribute score for the item, less than or equal to 2 points below the attribute you use in the creation process (e.g. if you have an attribute score of 5, the maximum score of the item is 3). <br /><br />  Next, choose whether the item is permanent or expendable. A potion or scroll may be an expendable item that triggers the heal boon, for example, while a ring of invisibility may be a permanent item that triggers the invisibility boon when the wielder concentrates on using it.  <br /><br />  Creating an expendable item requires 1 full 8-hour day of uninterrupted work. Creating a permanent item, requires one such day of work per attribute score of the item. <br /><br />  At the end of this period, make an attribute roll with a prerequisite attribute. The CR of this roll equals 10 plus twice the attribute score of the item. <br /><br />  Next, choose a bane or boon of power level less than or equal to the item's attribute score from the previous step. This item is forever linked to that particular bane or boon. <br /><br />  An expendable item used to invoke a boon automatically succeeds at invocation. An expendable item used to invoke a bane grants advantage 1 to the attribute roll to invoke.<br /><br />  A permanent item can be invoked once per hour, after which it has to recharge before it can be used again. <br /><br />  The banes and boons available for imbuing depend on the attribute used to create the item, as follows:<br />  <ul><br />  <li><strong>Any Supernatural Attribute</strong> - The item can only be imbued with a bane or boon that is accessible to the creator via the attribute used. </li><br />  <li><strong>Learning</strong> - You can imbue an item with only Physical attributes (Might, Agility, Fortitude) and the corresponding banes and boons.</li><br />  <li><strong>Creation</strong> - Being capable of manifesting something from nothing via channeling otherworldly energy, you can imbue the item with any attribute, even if you do not have a score in that attribute.</li><br />  </ul><br /></li><br /><li><strong>Tier 2</strong> - Following the same rules above, you gain the following additional benefits: <br /><br />  <ul><br />  <li>The target attribute score for the item can now be equal to your attribute score or less. So, with a prerequisite attribute score of 5, you can imbue an item with an attribute score of 5.</li><br />  <li>For expendable items, bane attacks have advantage 2 instead of advantage 1.</li><br />  <li>You can imbue low-level sentience or autonomy into your crafted items. During creation, you work with the GM to define a set of conditions that cause the item to trigger. Some examples include magically guided fireballs triggered when someone enters a given area or a teleportation circle that activates when someone steps on a magical trigger. For those imbuing with non-magical means, this autonomy could be more mundane, for example: pressure plates surrounded by murder holes (arrow slits with self-reloading crossbows).</li><br />  <li>Permanent items you imbue not only possess the imbued attribute score for the purpose of invoking a particular bane or boon, but can make attacks with their attribute score. If the item's attribute is greater than the wielder's, then it supersedes the attribute for the wielder. For example - a Flaming Sword imbued in the 9th circle of Hell could have Energy 9, allowing a town guard with Might 3 to make attacks with Energy 9 instead of Might 3.  A non-supernatural example could be ballistae on a large battlement that are imbued with Agility 4 and can be used to invoke the Forced Move bane.</li><br />  </ul><br /></li><br /><li><strong>Tier 3</strong> - You can imbue human-like sentience into the item, it gains its own personality and intelligence. This epic feat should be worked out closely with your GM to specify a blueprint for what the item's personality, mission, preferences, and similar values will be, and the GM should elaborate and add unforeseen quirks or flaws that make sense given the item's purpose.</li><br /></ul><br />"
   },
   {
     "name": "Crushing Blow",
-    "prerequisite": [
-      "Overpowering Strike",
-      "Might 6"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Might": 6
+          }
+        ],
+        "Feat": [
+          "Overpowering Strike"
+        ]
+      }
+    },
     "tags": [
       "Physical",
       "Combat",
@@ -379,11 +892,38 @@
   },
   {
     "name": "Death Blow (I – III)",
-    "prerequisite": [
-      "Tier 1 - Agility 6 + Lethal Strike I",
-      "Tier 2 - Agility 7 + Lethal Strike III",
-      "Tier 3 - Agility 8 + Lethal Strike VI"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 6
+          }
+        ],
+        "Feat": [
+          "Lethal Strike I"
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Agility": 7
+          }
+        ],
+        "Feat": [
+          "Lethal Strike III"
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Agility": 8
+          }
+        ],
+        "Feat": [
+          "Lethal Strike VI"
+        ]
+      }
+    },
     "tags": [
       "Combat",
       "Physical"
@@ -396,10 +936,18 @@
   },
   {
     "name": "Deathless Berserker",
-    "prerequisite": [
-      "Berserker",
-      "Fortitude 7"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Fortitude": 7
+          }
+        ],
+        "Feat": [
+          "Berserker"
+        ]
+      }
+    },
     "tags": [
       "Supernatural"
     ],
@@ -411,10 +959,18 @@
   },
   {
     "name": "Destructive Berserker",
-    "prerequisite": [
-      "Berserker",
-      "Might 7"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Might": 7
+          }
+        ],
+        "Feat": [
+          "Berserker"
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Might"
@@ -427,9 +983,78 @@
   },
   {
     "name": "Defensive Reflexes (I - X)",
-    "prerequisite": [
-      "Agility 3"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 3
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Agility": 3
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Agility": 3
+          }
+        ]
+      },
+      "tier4": {
+        "Attribute": [
+          {
+            "Agility": 3
+          }
+        ]
+      },
+      "tier5": {
+        "Attribute": [
+          {
+            "Agility": 3
+          }
+        ]
+      },
+      "tier6": {
+        "Attribute": [
+          {
+            "Agility": 3
+          }
+        ]
+      },
+      "tier7": {
+        "Attribute": [
+          {
+            "Agility": 3
+          }
+        ]
+      },
+      "tier8": {
+        "Attribute": [
+          {
+            "Agility": 3
+          }
+        ]
+      },
+      "tier9": {
+        "Attribute": [
+          {
+            "Agility": 3
+          }
+        ]
+      },
+      "tier10": {
+        "Attribute": [
+          {
+            "Agility": 3
+          }
+        ]
+      }
+    },
     "tags": [
       "Agility",
       "Supernatural"
@@ -441,11 +1066,43 @@
     "effect": "Any time you use the Defend action, you gain advantage 1 on the action roll per tier you possess of this feat.<br />"
   },
   {
-    "name": "Disease Immunity",
-    "prerequisite": [
-      "Creation 5",
-      "Protection 5"
+    "name": "Diehard",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Presence": 3
+          },
+          {
+            "Fortitude": 3
+          }
+        ]
+      }
+    },
+    "tags": [
+      "Social",
+      "Combat"
     ],
+    "cost": [
+      2
+    ],
+    "description": "Whether luck shines upon you or you're just really hard to kill you have a knack for staying in the fight when others would suffer a much worse fate.<br />",
+    "effect": "Once per day, an attack that would reduce you to less than 1 HP, reduces you to 1 HP instead.<br />"
+  },
+  {
+    "name": "Disease Immunity",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Creation": 5
+          },
+          {
+            "Protection": 5
+          }
+        ]
+      }
+    },
     "tags": [
       "Non-Combat"
     ],
@@ -453,13 +1110,42 @@
       1
     ],
     "description": "Your inherent magical protection extends to make you immune to disease.<br />",
-    "effect": "You are immune to natural disease. This protection does not guard against magical curses such as lyncanthropy.<br />"
+    "effect": "You are immune to natural disease. This protection does not guard against magical curses such as lycanthropy.<br />"
   },
   {
     "name": "Energy Resistance (I - III)",
-    "prerequisite": [
-      "Energy OR 4 / 5 / 7"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Energy": 4
+          },
+          {
+            "Protection": 4
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Energy": 5
+          },
+          {
+            "Protection": 5
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Energy": 7
+          },
+          {
+            "Protection": 7
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural"
     ],
@@ -467,14 +1153,22 @@
       3
     ],
     "description": "Your specialization in a particular type of energy or general protection causes you to be resistant to that type of energy.<br />",
-    "effect": "Choose from the following energy types: fire, cold, lightning, acid, (or another at the GM’s discretion).  When you are attacked with that energy type, you gain resistance to the attack as follows:<br />  <ul><br />  <li><strong>Tier 1</strong> - Your defense scores are increased by 5 against the chosen attack type. </li><br />  <li><strong>Tier 2</strong> - Your defense scores are increased by 5 against the chosen attack type.</li><br />  <li><strong>Tier 3</strong> - You are immune to damage from the chosen attack type.</li><br />  </ul><br />"
+    "effect": "Choose from the following energy types: fire, cold, lightning, acid, (or another at the GM’s discretion).  When you are attacked with that energy type, you gain resistance to the attack as follows:<br />  <ul><br />  <li><strong>Tier 1</strong> - Your defense scores gain a total of +5 vs. attacks of the chosen energy type.</li><br />  <li><strong>Tier 2</strong> - Your defense scores gain a total of  +10 vs. attacks of the chosen energy type.</li><br />  <li><strong>Tier 3</strong> - You are immune to damage from attacks of the chosen energy type.</li><br />  </ul><br />"
   },
   {
     "name": "Entranced Berserker",
-    "prerequisite": [
-      "Berserker",
-      "Will 7"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Will": 7
+          }
+        ],
+        "Feat": [
+          "Berserker"
+        ]
+      }
+    },
     "tags": [
       "Combat"
     ],
@@ -486,9 +1180,15 @@
   },
   {
     "name": "Evasive Footwork",
-    "prerequisite": [
-      "Agility 4"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      }
+    },
     "tags": [
       "Agility"
     ],
@@ -500,10 +1200,15 @@
   },
   {
     "name": "Fast Tracker",
-    "prerequisite": [
-      "Agility 5",
-      "Perception 5"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Perception": 5
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Agility",
@@ -517,9 +1222,29 @@
   },
   {
     "name": "Ferocious Minions",
-    "prerequisite": [
-      "Influence 3 / 5 / 7"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Influence": 3
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Influence": 5
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Influence": 7
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Influence"
@@ -532,9 +1257,47 @@
   },
   {
     "name": "Fleet of Foot (I – III)",
-    "prerequisite": [
-      "Agility 4 / 5 / 7 OR Movement 2 / 4 / 6 OR Fortitude 4 / 5 / 7"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 4
+          },
+          {
+            "Fortitiude": 4
+          },
+          {
+            "Movement": 2
+          }
+        ]
+      }
+    },
+    "-tier2": {
+      "Attribute": [
+        {
+          "Agility": 5
+        },
+        {
+          "Fortitiude": 5
+        },
+        {
+          "Movement": 4
+        }
+      ]
+    },
+    "-tier3": {
+      "Attribute": [
+        {
+          "Agility": 7
+        },
+        {
+          "Fortitiude": 7
+        },
+        {
+          "Movement": 6
+        }
+      ]
+    },
     "tags": [
       "Supernatural",
       "Agility",
@@ -548,10 +1311,57 @@
     "effect": "Your speed is permanently increased by 5' per tier of this feat.<br /><br />"
   },
   {
-    "name": "Great Leap (I – III)",
-    "prerequisite": [
-      "Movement 2 / 4 / 6 OR Agility 2 / 4 / 6"
+    "name": "Flying",
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
+    "tags": [
+      "Non-Combat"
     ],
+    "cost": [
+      3
+    ],
+    "description": "Whether through a pair of celestial or infernal wings, an inherent telekinetic power, or something unexplainable that you're born with, you have an inherent ability to fly<br />",
+    "effect": "You gain a flight speed equal to your normal speed. At the GM's discretion, certain hostile actions may be capable of canceling your flight, sending you hurtling to your doom. If your flight is anatomical, an Immobile bane might render your wings immovable, if telekinetic, an application of the Dispel bane may cancel your flight.<br />"
+  },
+  {
+    "name": "Great Leap (I – III)",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Movement": 2
+          },
+          {
+            "Agility": 2
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Movement": 4
+          },
+          {
+            "Agility": 4
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Movement": 6
+          },
+          {
+            "Agility": 6
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Physical",
@@ -568,9 +1378,15 @@
   },
   {
     "name": "Fast Draw",
-    "prerequisite": [
-      "Agility 1"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 1
+          }
+        ]
+      }
+    },
     "tags": [
       "Combat",
       "Agility"
@@ -583,9 +1399,15 @@
   },
   {
     "name": "Hallucination",
-    "prerequisite": [
-      "Influence 5"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Influence": 5
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Non-Combat",
@@ -599,10 +1421,18 @@
   },
   {
     "name": "Hallucination (Mass)",
-    "prerequisite": [
-      "Influence 7",
-      "Hallucination"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Influence": 7
+          }
+        ],
+        "Feat": [
+          "Hallucination"
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Non-Combat",
@@ -616,10 +1446,15 @@
   },
   {
     "name": "Heavy Weapon Master",
-    "prerequisite": [
-      "Agility 4",
-      "Might 5"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Might": 5
+          }
+        ]
+      }
+    },
     "tags": [
       "Combat",
       "Physical",
@@ -634,9 +1469,21 @@
   },
   {
     "name": "Hospitaler",
-    "prerequisite": [
-      "Creation 4 / Presence 4 / Protection 4"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Creation": 4
+          },
+          {
+            "Presence": 4
+          },
+          {
+            "Protection": 4
+          }
+        ]
+      }
+    },
     "tags": [
       "Non-Combat",
       "Supernatural",
@@ -653,9 +1500,53 @@
   },
   {
     "name": "Hunter's Foe (I - IX)",
-    "prerequisite": [
-      "None"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier2": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier3": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier4": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier5": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier6": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier7": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier8": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier9": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
     "tags": [
       "Non-Combat",
       "Combat"
@@ -668,9 +1559,71 @@
   },
   {
     "name": "Indomitable Endurance (I - IX)",
-    "prerequisite": [
-      "Fortitude 5"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Fortitude": 5
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Fortitude": 5
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Fortitude": 5
+          }
+        ]
+      },
+      "tier4": {
+        "Attribute": [
+          {
+            "Fortitude": 5
+          }
+        ]
+      },
+      "tier5": {
+        "Attribute": [
+          {
+            "Fortitude": 5
+          }
+        ]
+      },
+      "tier6": {
+        "Attribute": [
+          {
+            "Fortitude": 5
+          }
+        ]
+      },
+      "tier7": {
+        "Attribute": [
+          {
+            "Fortitude": 5
+          }
+        ]
+      },
+      "tier8": {
+        "Attribute": [
+          {
+            "Fortitude": 5
+          }
+        ]
+      },
+      "tier9": {
+        "Attribute": [
+          {
+            "Fortitude": 5
+          }
+        ]
+      }
+    },
     "tags": [
       "Physical"
     ],
@@ -678,13 +1631,19 @@
       2
     ],
     "description": "Your endurance is legendary, allowing you to push on when others would keel over from exhaustion.<br />",
-    "effect": "You are immune to the fatigued bane when it is caused by regular, natural sources, such as a forced march, starvation, or swimming long distances. Supernatural sources of the fatigued bane (such as a necromancer's curse) or irregular sources (such as the Berserker feat) still affect you, but at a reduced effect. Treat your fatigue level as one lower than it actually is for the purposes of determinined the effects of the bane. You may take this feat multiple times. Each subsequent tier allows you to ignore an additional level of fatigue.<br />"
+    "effect": "You are immune to the fatigued bane when it is caused by regular, natural sources, such as a forced march, starvation, or swimming long distances. Supernatural sources of the fatigued bane (such as a necromancer's curse) or irregular sources (such as the Berserker feat) still affect you, but at a reduced effect. Treat your fatigue level as one lower than it actually is for the purposes of determining the effects of the bane. You may take this feat multiple times. Each subsequent tier allows you to ignore an additional level of fatigue.<br />"
   },
   {
     "name": "Inspiring Champion (I - III)",
-    "prerequisite": [
-      "Presence 4 / 5 / 6"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Presence": 6
+          }
+        ]
+      }
+    },
     "tags": [
       "Social",
       "Combat",
@@ -698,9 +1657,23 @@
   },
   {
     "name": "Knowledge",
-    "prerequisite": [
-      "None"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier2": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier3": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
     "tags": [
       "No Prerequisite",
       "Supernatural"
@@ -713,9 +1686,71 @@
   },
   {
     "name": "Lethal Strike (I – IX)",
-    "prerequisite": [
-      "Agility 1 / 2 / 3 / 4 / 5 / 6 / 7 / 8 / 9"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 1
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Agility": 2
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Agility": 3
+          }
+        ]
+      },
+      "tier4": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      },
+      "tier5": {
+        "Attribute": [
+          {
+            "Agility": 5
+          }
+        ]
+      },
+      "tier6": {
+        "Attribute": [
+          {
+            "Agility": 6
+          }
+        ]
+      },
+      "tier7": {
+        "Attribute": [
+          {
+            "Agility": 7
+          }
+        ]
+      },
+      "tier8": {
+        "Attribute": [
+          {
+            "Agility": 8
+          }
+        ]
+      },
+      "tier9": {
+        "Attribute": [
+          {
+            "Agility": 9
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Agility",
@@ -729,9 +1764,43 @@
   },
   {
     "name": "Lightning Reflexes (I - V)",
-    "prerequisite": [
-      "Agility 2 / 3 / 4 / 5 / 6"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 2
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Agility": 3
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      },
+      "tier4": {
+        "Attribute": [
+          {
+            "Agility": 5
+          }
+        ]
+      },
+      "tier5": {
+        "Attribute": [
+          {
+            "Agility": 6
+          }
+        ]
+      }
+    },
     "tags": [
       "Physical",
       "Agility"
@@ -743,25 +1812,30 @@
     "effect": "For each tier you possess in this feat, you gain advantage 1 on all initiative rolls.<br />"
   },
   {
-    "name": "Lucky",
-    "prerequisite": [
-      "Presence 3"
-    ],
-    "tags": [
-      "Social",
-      "Combat"
-    ],
-    "cost": [
-      2
-    ],
-    "description": "Luck shines upon you and keeps you in the fight when others would suffer a much worse fate.<br />",
-    "effect": "Once per day, an attack that would reduce you to less than 1 HP, reduces you to 1 HP instead.<br />"
-  },
-  {
     "name": "Marksman (I - III)",
-    "prerequisite": [
-      "Agility 5"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 5
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Agility": 5
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Agility": 5
+          }
+        ]
+      }
+    },
     "tags": [
       "Combat"
     ],
@@ -773,9 +1847,18 @@
   },
   {
     "name": "Martial Focus",
-    "prerequisite": [
-      "Agility 1 / Might 1"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 1
+          },
+          {
+            "Might": 1
+          }
+        ]
+      }
+    },
     "tags": [
       "Combat",
       "Physical"
@@ -788,9 +1871,43 @@
   },
   {
     "name": "Master Shifter (I – V)",
-    "prerequisite": [
-      "Alteration 2 / 4 / 6 / 8 / 9"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Alteration": 2
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Alteration": 4
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Alteration": 6
+          }
+        ]
+      },
+      "tier4": {
+        "Attribute": [
+          {
+            "Alteration": 8
+          }
+        ]
+      },
+      "tier5": {
+        "Attribute": [
+          {
+            "Alteration": 9
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Non-Combat",
@@ -804,9 +1921,15 @@
   },
   {
     "name": "Master Tracker",
-    "prerequisite": [
-      "Perception 5"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Perception": 5
+          }
+        ]
+      }
+    },
     "tags": [
       "Non-Combat",
       "Mental",
@@ -820,10 +1943,18 @@
   },
   {
     "name": "Mimic",
-    "prerequisite": [
-      "Alteration 4",
-      "Alternate Form feat"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Alteration": 4
+          }
+        ],
+        "Feat": [
+          "Alternate Form"
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Feat Chain",
@@ -837,9 +1968,38 @@
   },
   {
     "name": "Multi-Attack Specialist (I – VI)",
-    "prerequisite": [
-      "None"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier2": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier3": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier4": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier5": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier6": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
     "tags": [
       "Any Attribute"
     ],
@@ -847,13 +2007,37 @@
       3
     ],
     "description": "Whether your are delivering flurry of blows, wielding two weapons, or calling a chain of lightning bolts from the sky, you have mastered the art of delivering multiple attacks.<br />",
-    "effect": "Before attacking, you may declare that you are multi-attacking, and must state how many extra attacks you would like to make. ALL of your attacks this round suffer disadvantage equal to 3 times the number of attacks you declare (i.e., if you make 2 attacks, you suffer disadvantage 6; 3 attacks suffers disadvantage 9). For each tier of this feat that you possess, reduce the disadvantage penalty by 1.<br /><br />You may use your attacks to make any combination of bane or damaging attacks, but you may not invoke boons. Resolve each attack indidvidually, applying any other multi-targeting options as you wish. You can move between each of these attacks and they can be used to target the same creature more than once. There is no limit to the number of additional attacks you can make using this feat.<br /><br /><strong>EXAMPLE</strong><br />Vax the Deathbringer has Multi Attack Specialist (Tier VI). He declares that he will be making three attacks this round. Therefore, all of his attacks suffer disadvantage 3 (3 x 3 = 9, minus 6 for feat tier 6). His first attack is a necromantic burst targeting a 10'-square. Because of the area of effect, Vax suffers an additional disadvantage 2, making his total disadvantage for that attack 5. For his second attack, Vax casts a spell of blindess on a single foe, making an action roll at disadvantage 3. For his final attack, Vax moves in to melee and uses his touch of death on three foes. Targeting 3 foes incurs an additional disadvantage 3, making his final attack roll suffer a total of disadvantage 6.<br />"
+    "effect": "Before attacking, you may declare that you are multi-attacking, and must state how many extra attacks you would like to make. ALL of your attacks this round suffer disadvantage equal to 3 times the number of attacks you declare (i.e., if you make 2 attacks, you suffer disadvantage 6; 3 attacks suffers disadvantage 9). For each tier of this feat that you possess, reduce the disadvantage penalty by 1.<br /><br />You may use your attacks to make any combination of bane or damaging attacks, but you may not invoke boons. Resolve each attack individually, applying any other multi-targeting options as you wish. You can move between each of these attacks and they can be used to target the same creature more than once. There is no limit to the number of additional attacks you can make using this feat.<br /><br /><strong>EXAMPLE</strong><br />Vax the Deathbringer has Multi Attack Specialist (Tier VI). He declares that he will be making three attacks this round. Therefore, all of his attacks suffer disadvantage 3 (3 x 3 = 9, minus 6 for feat tier 6). His first attack is a necromantic burst targeting a 10'-square. Because of the area of effect, Vax suffers an additional disadvantage 2, making his total disadvantage for that attack 5. For his second attack, Vax casts a spell of blindness on a single foe, making an action roll at disadvantage 3. For his final attack, Vax moves in to melee and uses his touch of death on three foes. Targeting 3 foes incurs an additional disadvantage 3, making his final attack roll suffer a total of disadvantage 6.<br />"
   },
   {
     "name": "Multi-Target Attack Specialist (I – V)",
-    "prerequisite": [
-      "None"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier2": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier3": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier4": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier5": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
     "tags": [
       "Any Attribute"
     ],
@@ -865,9 +2049,43 @@
   },
   {
     "name": "Multi-Target Boon Specialist (I – V)",
-    "prerequisite": [
-      "Any Supernatural Attribute 3 / 5 / 7 / 8 / 9"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Any Supernatural": 3
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Any Supernatural": 5
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Any Supernatural": 7
+          }
+        ]
+      },
+      "tier4": {
+        "Attribute": [
+          {
+            "Any Supernatural": 8
+          }
+        ]
+      },
+      "tier5": {
+        "Attribute": [
+          {
+            "Any Supernatural": 9
+          }
+        ]
+      }
+    },
     "tags": [
       "Non-Combat",
       "Supernatural"
@@ -880,10 +2098,14 @@
   },
   {
     "name": "Multi-Target Boon Expert",
-    "prerequisite": [
-      "Multi-Target Boon Specialist II",
-      "Boon Focus"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Feat": [
+          "Boon Focus",
+          "Multi-Target Boon Specialist II"
+        ]
+      }
+    },
     "tags": [
       "Non-Combat",
       "Supernatural"
@@ -896,9 +2118,13 @@
   },
   {
     "name": "Multi-Bane Specialist",
-    "prerequisite": [
-      "Able to inflict both banes (see description)"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "Able to inflict both banes (see description)"
+        ]
+      }
+    },
     "tags": [
       "Bane",
       "Combat"
@@ -911,9 +2137,15 @@
   },
   {
     "name": "Overpowering Strike",
-    "prerequisite": [
-      "Might 4"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Might": 4
+          }
+        ]
+      }
+    },
     "tags": [
       "Physical",
       "Feat Chain",
@@ -927,9 +2159,29 @@
   },
   {
     "name": "Natural Defense (I - III)",
-    "prerequisite": [
-      "Fortitude 3 / 5 / 7"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Fortitude": 3
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Fortitude": 5
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Fortitude": 7
+          }
+        ]
+      }
+    },
     "tags": [
       "Combat",
       "Physical",
@@ -944,9 +2196,13 @@
   },
   {
     "name": "Potent Bane",
-    "prerequisite": [
-      "Ability to invoke the chosen bane"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "Ability to invoke the chosen bane"
+        ]
+      }
+    },
     "tags": [
       "Bane",
       "Combat"
@@ -959,10 +2215,18 @@
   },
   {
     "name": "Reactionary Berserker",
-    "prerequisite": [
-      "Berserker feat",
-      "Will 5"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Will": 5
+          }
+        ],
+        "Feat": [
+          "Berserker"
+        ]
+      }
+    },
     "tags": [
       "Combat",
       "Mental",
@@ -977,9 +2241,13 @@
   },
   {
     "name": "Reckless Frenzy",
-    "prerequisite": [
-      "Berserker"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Feat": [
+          "Berserker"
+        ]
+      }
+    },
     "tags": [
       "Combat"
     ],
@@ -991,9 +2259,21 @@
   },
   {
     "name": "Resilient",
-    "prerequisite": [
-      "Presence 3 OR Fortitude 3 OR Will 3"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Fortitude": 3
+          },
+          {
+            "Presence": 3
+          },
+          {
+            "Will": 3
+          }
+        ]
+      }
+    },
     "tags": [
       "Mental",
       "Physical",
@@ -1007,9 +2287,29 @@
   },
   {
     "name": "Ritual Magic (I - III)",
-    "prerequisite": [
-      "Any Supernatural Attribute 4 / 6 / 9"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Any Supernatural": 4
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Any Supernatural": 6
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Any Supernatural": 9
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Non-Combat"
@@ -1022,9 +2322,33 @@
   },
   {
     "name": "Skill Specialization (I - V)",
-    "prerequisite": [
-      "None"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier2": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier3": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier4": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier5": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
     "tags": [
       "No Prerequisite"
     ],
@@ -1036,9 +2360,15 @@
   },
   {
     "name": "Silencing Strike",
-    "prerequisite": [
-      "Agility 4"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      }
+    },
     "tags": [
       "Agility",
       "Physical"
@@ -1051,9 +2381,29 @@
   },
   {
     "name": "Superior Concentration (I - III)",
-    "prerequisite": [
-      "Any Supernatural Attribute 3"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Any Supernatural": 3
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Any Supernatural": 3
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Any Supernatural": 3
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural"
     ],
@@ -1065,9 +2415,73 @@
   },
   {
     "name": "Supernatural Defense (I - V)",
-    "prerequisite": [
-      "Protection OR Prescience OR Movement 2 / 3 / 4 / 5 / 6"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Movement": 2
+          },
+          {
+            "Prescience": 2
+          },
+          {
+            "Protection": 2
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Movement": 3
+          },
+          {
+            "Prescience": 3
+          },
+          {
+            "Protection": 3
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Movement": 4
+          },
+          {
+            "Prescience": 4
+          },
+          {
+            "Protection": 4
+          }
+        ]
+      },
+      "tier4": {
+        "Attribute": [
+          {
+            "Movement": 5
+          },
+          {
+            "Prescience": 5
+          },
+          {
+            "Protection": 5
+          }
+        ]
+      },
+      "tier5": {
+        "Attribute": [
+          {
+            "Movement": 6
+          },
+          {
+            "Prescience": 6
+          },
+          {
+            "Protection": 6
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Defense"
@@ -1080,9 +2494,15 @@
   },
   {
     "name": "Supernatural Healing",
-    "prerequisite": [
-      "Creation 5"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Creation": 5
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Creation"
@@ -1095,9 +2515,15 @@
   },
   {
     "name": "Supernatural Focus",
-    "prerequisite": [
-      "Any Supernatural Attribute 1"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Any Supernatural": 1
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural"
     ],
@@ -1108,10 +2534,41 @@
     "effect": "With the approval of your GM, choose a focus from which your power with a single supernatural attribute stems. Some possibilities include a wand, a crystal ball, a spell book, a holy symbol, a weapon, your voice, or an animal familiar. You cannot use the selected supernatural attribute without your focus. However, for the purposes of determining your attribute dice for action rolls, treat the chosen attribute as if it was one greater. For all purposes outside of attribute dice, your ability score remains unchanged (feats, banes, boons, etc.).<br />"
   },
   {
-    "name": "Tough as Nails (I - II)",
-    "prerequisite": [
-      "Fortitude 3 / 5"
+    "name": "Swimming",
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
+    "tags": [
+      "Non-Combat"
     ],
+    "cost": [
+      1
+    ],
+    "description": "You are made for the  water and can swim at surprising speeds, with the aptitude of a fish.<br />",
+    "effect": "You gain a swimming speed equal to your base speed and do not need to make any special action rolls to maintain this base speed.<br />"
+  },
+  {
+    "name": "Tough as Nails (I - II)",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Fortitude": 3
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Fortitude": 5
+          }
+        ]
+      }
+    },
     "tags": [
       "Defense",
       "Physical",
@@ -1125,10 +2582,18 @@
   },
   {
     "name": "Two Weapon Defense",
-    "prerequisite": [
-      "Agility 4",
-      "Multi-Attack Specialist"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ],
+        "Feat": [
+          "Multi-Attack Specialist"
+        ]
+      }
+    },
     "tags": [
       "Combat",
       "Physical",
@@ -1142,9 +2607,15 @@
   },
   {
     "name": "Unending Charm",
-    "prerequisite": [
-      "Influence 4"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Influence": 4
+          }
+        ]
+      }
+    },
     "tags": [
       "Supernatural",
       "Non-Combat",
@@ -1158,9 +2629,21 @@
   },
   {
     "name": "Untrackable",
-    "prerequisite": [
-      "Protection 3 OR Alteration 3 OR Influence 3"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Alteration": 3
+          },
+          {
+            "Influence": 3
+          },
+          {
+            "Protection": 3
+          }
+        ]
+      }
+    },
     "tags": [
       "Non-Combat",
       "Protection",
@@ -1175,9 +2658,13 @@
   },
   {
     "name": "Vicious Strike",
-    "prerequisite": [
-      "none"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
     "tags": [
       "Combat"
     ],
@@ -1189,9 +2676,13 @@
   },
   {
     "name": "Well-Rounded",
-    "prerequisite": [
-      "none"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
     "tags": [
       "Non-Combat"
     ],
@@ -1203,9 +2694,13 @@
   },
   {
     "name": "Wealthy",
-    "prerequisite": [
-      "none"
-    ],
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
     "tags": [
       "Non-Combat"
     ],

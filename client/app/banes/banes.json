@@ -104,8 +104,8 @@
       "Entropy",
       "Influence",
       "Might",
-      "Presence",
-      "Persuasion"
+      "Persuasion",
+      "Presence"
     ],
     "attack": [
       "Agility vs. Resolve",
@@ -113,8 +113,8 @@
       "Entropy vs. Resolve",
       "Influence vs. Resolve",
       "Might vs. Resolve",
-      "Presence vs. Resolve",
-      "Persuasion vs. Resolve"
+      "Persuasion vs. Resolve",
+      "Presence vs. Resolve"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Resist (minor) ends (Fail x 3 = 1 minute)",
@@ -133,19 +133,19 @@
     ],
     "attackAttributes": [
       "Agility",
-      "Influence",
-      "Entropy",
-      "Energy",
       "Alteration",
+      "Energy",
+      "Entropy",
+      "Influence",
       "Might",
       "Movement"
     ],
     "attack": [
       "Agility vs. Evasion",
-      "Influence vs. Resolve",
-      "Entropy vs. Toughness",
-      "Energy vs. Toughness",
       "Alteration vs. Evasion",
+      "Energy vs. Toughness",
+      "Entropy vs. Toughness",
+      "Influence vs. Resolve",
       "Might vs. Toughness",
       "Movement vs. Evasion"
     ],
@@ -227,14 +227,14 @@
     "attackAttributes": [
       "Creation",
       "Entropy",
-      "Might",
-      "Influence"
+      "Influence",
+      "Might"
     ],
     "attack": [
       "Creation vs. Resolve",
       "Entropy vs. Resolve",
-      "Might vs. Toughness",
-      "Influence vs. Resolve"
+      "Influence vs. Resolve",
+      "Might vs. Toughness"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Special",
@@ -255,14 +255,14 @@
       8
     ],
     "attackAttributes": [
+      "Energy",
       "Might",
-      "Movement",
-      "Energy"
+      "Movement"
     ],
     "attack": [
+      "Energy vs. Toughness",
       "Might vs. Toughness",
-      "Movement vs. Toughness",
-      "Energy vs. Toughness"
+      "Movement vs. Toughness"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Instantaneous",
@@ -276,22 +276,24 @@
       "Physical"
     ],
     "power": [
-      0
+      1
     ],
     "attackAttributes": [
       "Agility",
-      "Influence",
-      "Entropy",
-      "Energy",
       "Alteration",
+      "Creation",
+      "Energy",
+      "Entropy",
+      "Influence",
       "Might"
     ],
     "attack": [
       "Agility vs. Evasion",
-      "Influence vs. Resolve",
-      "Entropy vs. Toughness",
-      "Energy vs. Toughness",
       "Alteration vs. Evasion",
+      "Creation vs. Toughness",
+      "Energy vs. Toughness",
+      "Entropy vs. Toughness",
+      "Influence vs. Resolve",
       "Might vs. Toughness"
     ],
     "invocationTime": "1 Major Action",
@@ -343,24 +345,24 @@
     "attackAttributes": [
       "Creation",
       "Deception",
-      "Influence",
       "Energy",
+      "Influence",
       "Might",
-      "Presence",
-      "Persuasion"
+      "Persuasion",
+      "Presence"
     ],
     "attack": [
       "Creation vs. Resolve",
       "Deception vs. Resolve",
-      "Influence vs. Resolve",
       "Energy vs. Resolve",
+      "Influence vs. Resolve",
       "Might vs. Resolve",
-      "Presence vs. Resolve",
-      "Persuasion vs. Resolve"
+      "Persuasion vs. Resolve",
+      "Presence vs. Resolve"
     ],
     "invocationTime": "1 Minor Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
-    "description": "Through a display of awe-inspiring force, initimidation, or leadership, you command attention as the greatest threat, causing others to fear to attack your allies.<br />",
+    "description": "Through a display of awe-inspiring force, intimidation, or leadership, you command attention as the greatest threat, causing others to fear to attack your allies.<br />",
     "effect": "Any attacks made by the target that do not include you as a target suffer disadvantage. If the same target is affected by this bane from multiple sources, as long as their attack includes one of those who targeted them, they are not affected by the penalty. Unlike other banes, your damaging attack against one target can trigger this bane in a different target, provided your roll is equal or greater to their Resolve defense (that is, by striking one foe, you can intimidate another).<br /><ul><br /><li><strong>Power Level 4</strong> - The target suffers disadvantage 1 on attacks that do not include you.</li><br /><li><strong>Power Level 5</strong> - The target suffers disadvantage 2 on attacks that do not include you.</li><br /><li><strong>Power Level 6</strong> - The target suffers disadvantage 3 on attacks that do not include you.</li><br /><li><strong>Power Level 7</strong> - The target suffers disadvantage 4 on attacks that do not include you.</li><br /><li><strong>Power Level 8</strong> - The target suffers disadvantage 5 on attacks that do not include you.</li><br /><li><strong>Power Level 9</strong> - The target suffers disadvantage 6 on attacks that do not include you.</li><br /></ul><br />"
   },
   {
@@ -373,16 +375,16 @@
       2
     ],
     "attackAttributes": [
-      "Might",
-      "Energy"
+      "Energy",
+      "Might"
     ],
     "attack": [
-      "Might vs. Toughness",
-      "Energy vs. Toughness"
+      "Energy vs. Toughness",
+      "Might vs. Toughness"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Instantaneous",
-    "description": "Fights are called “knock down, drag out” for a reason. Knocking an opponent prone is a common way for one combatant to gain the upper hand. Knockdown can be caused by a thunderous blow from a great axe, an earth shattering rbolt of supernatural energy, or a well aimed shove in a direction where the enemy's balance is weak.<br />",
+    "description": "Fights are called “knock down, drag out” for a reason. Knocking an opponent prone is a common way for one combatant to gain the upper hand. Knockdown can be caused by a thunderous blow from a great axe, an earth shattering bolt of supernatural energy, or a well aimed shove in a direction where the enemy's balance is weak.<br />",
     "effect": "The target falls prone. Prone targets have disadvantage 1 on all attacks they make. Melee and area attacks against prone characters gain advantage 1. Projectile attacks against prone targets suffer disadvantage 1.<br />"
   },
   {
@@ -473,7 +475,7 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
-    "description": "Whether by setting the target ablaze, covering them in acid, slicing an atery, or cursing them with a wasting disease, you inflict them with a lasting and recurring source of damage.<br />",
+    "description": "Whether by setting the target ablaze, covering them in acid, slicing an artery, or cursing them with a wasting disease, you inflict them with a lasting and recurring source of damage.<br />",
     "effect": "At the beginning of the target's turn, before they take any actions, the target suffers damage determined by the power level of the bane. This damage automatically bypasses the afflicted character’s defenses but it can be reduced by any resistance to damage of a certain type (see the Resistance boon). Like all dice rolls, these dice explode.<br /><ul><br />  <li><strong>Power Level 2</strong> - 1d4 damage per round.</li><br />  <li><strong>Power Level 4</strong> - 1d8 damage per round</li><br />  <li><strong>Power Level 6</strong> - 2d6 damage per round</li><br /></ul><br />",
     "special": "Persistent damage comes in a number of different variations: Physical damage (bleeding damage from a vital strike), Energy damage (lightning, fire, cold, acid, etc.) and entropic damage (necromantic energy).  Each variation has a its own cure. When that cure is applied with a major action (either by the afflicted character or another), the target receives a resist roll with advantage 1 (as a free action) to end the effect. The GM has the final word on whether a proposed cure can help a given type of persistent damage, but the following examples can help with arbitration:<br /><ul><br />  <li>Bleeding damage is cured with a successful roll using Knowledge (Medical) or Creation.</li><br />  <li>Lightning damage is cured by a discharge or grounding of the current.</li><br />  <li>Cold damage is countered with warmth, heat, or fire.</li><br />  <li>Acid damage is neutralized with alkalizing agents (powder, milk, etc.).</li><br /></ul><br />"
   },
@@ -573,15 +575,15 @@
     ],
     "attackAttributes": [
       "Agility",
-      "Might",
+      "Alteration",
       "Entropy",
-      "Alteration"
+      "Might"
     ],
     "attack": [
       "Agility vs. Evasion",
-      "Might vs. Toughness",
+      "Alteration vs. Toughness",
       "Entropy vs. Toughness",
-      "Alteration vs. Toughness"
+      "Might vs. Toughness"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
@@ -598,16 +600,18 @@
       2
     ],
     "attackAttributes": [
-      "Energy",
-      "Might",
       "Agility",
-      "Entropy"
+      "Energy",
+      "Entropy",
+      "Might",
+      "Movement"
     ],
     "attack": [
-      "Energy vs. Toughness",
-      "Might vs. Toughness",
       "Agility vs. Evasion",
-      "Entropy vs. Toughness"
+      "Energy vs. Toughness",
+      "Entropy vs. Toughness",
+      "Might vs. Toughness",
+      "Movement vs. Toughness"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
@@ -624,16 +628,16 @@
       4
     ],
     "attackAttributes": [
-      "Might",
       "Agility",
+      "Energy",
       "Entropy",
-      "Energy"
+      "Might"
     ],
     "attack": [
-      "Might vs. Toughness",
       "Agility vs. Toughness",
+      "Energy vs. Toughness",
       "Entropy vs. Toughness",
-      "Energy vs. Toughness"
+      "Might vs. Toughness"
     ],
     "invocationTime": "1 Major Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
@@ -669,10 +673,10 @@
       0
     ],
     "attackAttributes": [
-      "n/a"
+      "N/A"
     ],
     "attack": [
-      "n/a"
+      "N/A"
     ],
     "invocationTime": "1 Major Action",
     "duration": "1 Round",
