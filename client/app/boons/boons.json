@@ -209,6 +209,7 @@
       9
     ],
     "attribute": [
+      "Alteration",
       "Creation",
       "Learning",
       "Logic",
@@ -216,7 +217,7 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Instantaneous",
-    "description": "Healing is magical energy overflowing from a creative life force which heals wounds and mends broken bones.<br />",
+    "description": "Healing can be one of two things: the actual mending of wounds and broken bones through various sources like medicine, surgery, or supernatural creative life force, OR the inspiration of an ally to carry on, even in the face of death.<br />",
     "effect": "Roll dice according to the boon power level below. These dice explode as normal. The target is healed a number of hit points equal to the total roll.<br /><strong>Special:</strong> This boon does not heal lethal damage.<br /><ul><br /><li><strong>Power Level 1</strong> - Heal 1d4 </li><br /><li><strong>Power Level 2</strong> - Heal 1d6 </li><br /><li><strong>Power Level 3</strong> - Heal 1d8 </li><br /><li><strong>Power Level 4</strong> - Heal 1d10 </li><br /><li><strong>Power Level 5</strong> - Heal 2d6 </li><br /><li><strong>Power Level 6</strong> - Heal 2d8 </li><br /><li><strong>Power Level 7</strong> - Heal 2d10 </li><br /><li><strong>Power Level 8</strong> - Heal 3d8 </li><br /><li><strong>Power Level 9</strong> - Heal 3d10 </li><br /></ul><br />"
   },
   {
@@ -252,6 +253,22 @@
     "duration": "Sustain Persists",
     "description": "You vanish from the visible spectrum, either through magical control of light, an illusion of you not being there, or stepping into an extradimensional space between the fabric of the planes.<br />",
     "effect": "<ul><br /><li><strong>Power Level 6</strong> - Light passes through the target, making them translucent, however their physical form distorts and refracts light in a way that only the keenest sight can perceive. The target gains advantage 3 on all Agility rolls to hide. If completely still, this bonus increases to advantage 5 instead. Attacks against the target have a 50% chance of missing completely, though area attacks still effect the target normally. The target has advantage 1 on attacks against all enemies that can’t see them. The target can not be the target of opportunity attacks unless the enemy can see them through non-visual means.</li><br /></ul><br />"
+  },
+  {
+    "name": "Life Drain",
+    "tags": [
+      "Supernatural"
+    ],
+    "power": [
+      5
+    ],
+    "attribute": [
+      "Entropy"
+    ],
+    "invocationTime": "1 Major Action",
+    "duration": "Sustain Persists",
+    "description": "Like the bite of a vampire or the soul draining touch of a black mage, you can steal the very lifeforce of your foes.<br />",
+    "effect": "While this boon persists, the target heals half (round up) of the damage he inflicts with each attack. If an attack damages multiple foes, the target of this boon heals based on the total damage inflicted against all foes.<br />"
   },
   {
     "name": "Light",

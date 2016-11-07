@@ -589,7 +589,7 @@
       3
     ],
     "description": "You are specialized in the use a particular boon that is iconic to your character.<br />",
-    "effect": "<ul><br /><li>Tier 1 - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. If the invocation has multiple targets, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.</li><br /><li>Tier 2 - When your invocation includes multiple targets, you gain advantage 3 on your action roll to invoke the boon. Additionally, invoking the boon is one time increment faster.  If the invocation time is a major action, it becomes a minor action.  If the invocation time is 1 minute, it becomes 1 major action.  If the invocation time is 10 minutes, it becomes 1 minute.  If the invocation time is 1 hour, it becomes 10 minutes.  If the invocation time is 8 hours, it becomes 1 hour.</li><br /><li>Tier 3 - The effect at tier 3 varies based on the duration of the boon:<br />  <br /><br />  <strong>If the chosen boon has a duration of \"sustain persists\"</strong>, you gain advantage 4 on your action roll to invoke it when multi-targeting. Additionally, the boon is always active for your character and passively persists, without requiring you to use a minor action to sustain it. If the boon is somehow temporarily cancelled (such as by the dispel bane), it resumes automatically at the start of your next turn.<br />  <br /><br />  <strong>If the boon has a different duration</strong>, you gain advantage 5 on your action roll to invoke it when multi-targeting.<br /></li><br /></ul><br />"
+    "effect": "<ul><br /><li>Tier 1 - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. If the invocation has multiple targets, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.</li><br /><li>Tier 2 - When your invocation includes multiple targets, you gain advantage 3 on your action roll to invoke the boon. Additionally, you may invoke the boon one time increment faster, as follows: If the invocation time is a major action, it becomes a minor action.  If the invocation time is 1 minute, it becomes 1 major action.  If the invocation time is 10 minutes, it becomes 1 minute.  If the invocation time is 1 hour, it becomes 10 minutes.  If the invocation time is 8 hours, it becomes 1 hour.</li><br /><li>Tier 3 - The effect at tier 3 varies based on the duration of the boon:<br />  <br /><br />  <strong>If the chosen boon has a duration of \"sustain persists\"</strong>, you gain advantage 4 on your action roll to invoke it when multi-targeting. Additionally, the boon is always active for your character and passively persists, without requiring you to use a minor action to sustain it. If the boon is somehow temporarily cancelled (such as by the dispel bane), it resumes automatically at the start of your next turn.<br />  <br /><br />  <strong>If the boon has a different duration</strong>, you gain advantage 5 on your action roll to invoke it when multi-targeting.<br /></li><br /></ul><br />"
   },
   {
     "name": "Breakfall (I - IX)",
@@ -781,7 +781,7 @@
       3
     ],
     "description": "Whether a hired bodyguard, a loyal animal sidekick, or a sibling that follows you everywhere, you have the constant and unflinching loyalty of one particular companion character.<br />",
-    "effect": "You gain a companion character that acts independently from you. During combat, your companion acts on its own initiative count and gains the usual assortment of actions, which you may choose. You also get to assign your companion's attributes. The companion's highest attribute is determined by your level and your tier in this feat (see below). Your companion also possesses attributes at each number lower than its highest score. For example, if the companion's highest score is 6, then it also has attributes at scores 5, 4, 3, 2, and 1. The companion gains no feats or abilities, only attributes and the corresponding access to banes and boons. Whenever you gain a level or purchase a new tier in this feat, you may reassign your companion's attributes.<br /><ul><br /><li><strong>Tier 1</strong> - Your companion's highest attribute equals your level minus 2 (minimum of 3).</li><br /><li><strong>Tier 2</strong> - Your companion's highest attribute equals your level minus 1 (minimum of 4).</li><br /><li><strong>Tier 3</strong> - Your companion's highest attribute equals your level (minimum of 5).</li><br /></ul><br /><strong>Example</strong><br />Fezzy starts at level one with Companion (Tier II), choosing a wolf for his companion. Based on Fezzy's level and feat tier, his wolf's highest attribute is 4, so he can assign the wolf four attributes at scores 4, 3, 2, and 1. He assigns the following: Agility 4, Perception 3, Might 2, and Fortitude 1. Upon reaching level 2, Fezzy purchases Companion (Tier III), raising the wolf's highest attribute to 5, so Fezzy reassigns the attributes as follows: Perception 5, Agility 4, Might 3, Fortitude 2, Presence 1.<br />"
+    "effect": "You gain a companion character that acts independently from you. During combat, your companion acts on its own initiative count and gains the usual assortment of actions, which you may choose. You also get to assign your companion's attributes. The companion's highest attribute is determined by your level and your tier in this feat (see below). Your companion also possesses attributes at each number lower than its highest score. For example, if the companion's highest score is 6, then it also has attributes at scores 5, 4, 3, 2, and 1. The companion gains no feats or abilities, only attributes and the corresponding access to banes and boons. Whenever you gain a level or purchase a new tier in this feat, you may reassign your companion's attributes.<br /><ul><br /><li><strong>Tier 1</strong> - Your companion's highest attribute equals your level minus 2 (minimum of 3).</li><br /><li><strong>Tier 2</strong> - Your companion's highest attribute equals your level minus 1 (minimum of 4).</li><br /><li><strong>Tier 3</strong> - Your companion's highest attribute equals your level (minimum of 5).</li><br /></ul><br /><strong>Special:</strong> If you ever lose your companion, voluntarily or involuntarily, you regain the feat points that you have spent on this feat and may spend them as usual.<br /><strong>Example</strong><br />Fezzy starts at level one with Companion (Tier II), choosing a wolf for his companion. Based on Fezzy's level and feat tier, his wolf's highest attribute is 4, so he can assign the wolf four attributes at scores 4, 3, 2, and 1. He assigns the following: Agility 4, Perception 3, Might 2, and Fortitude 1. Upon reaching level 2, Fezzy purchases Companion (Tier III), raising the wolf's highest attribute to 5, so Fezzy reassigns the attributes as follows: Perception 5, Agility 4, Might 3, Fortitude 2, Presence 1.<br />"
   },
   {
     "name": "Craft (I - II)",
@@ -1870,56 +1870,6 @@
     "effect": "Choose a single weapon (or choose unarmed combat), and specify the attribute that your martial focus relies upon: agility or might. When making attacks using your chosen weapon, your attribute is considered 1 greater for the purposes of determining attribute dice. Your attribute is not changed for purposes of feats, banes, boons, or similar items. Because of your intense focus on a single combat style, any attacks that you make which do not use your martial focus suffer disadvantage 1.<br />"
   },
   {
-    "name": "Master Shifter (I – V)",
-    "prerequisites": {
-      "tier1": {
-        "Attribute": [
-          {
-            "Alteration": 2
-          }
-        ]
-      },
-      "tier2": {
-        "Attribute": [
-          {
-            "Alteration": 4
-          }
-        ]
-      },
-      "tier3": {
-        "Attribute": [
-          {
-            "Alteration": 6
-          }
-        ]
-      },
-      "tier4": {
-        "Attribute": [
-          {
-            "Alteration": 8
-          }
-        ]
-      },
-      "tier5": {
-        "Attribute": [
-          {
-            "Alteration": 9
-          }
-        ]
-      }
-    },
-    "tags": [
-      "Supernatural",
-      "Non-Combat",
-      "Alteration"
-    ],
-    "cost": [
-      2
-    ],
-    "description": "Like werewolves, vampires, dopplegangers, druids, and other creatures of myth, you are a master of shapeshifting and can maintain your alternate forms indefinitely.<br />",
-    "effect": "You do not need to use the sustain a boon action to sustain the Shapeshift boon <emphasis>when it is targeting yourself</emphasis>. It persists indefinitely and you can end the boon at any time. At the GM’s discretion there may be magical effects or circumstances that force you to revert to your original form (such as a lycanthrope being exposed to silver). Your tier in this feat determines the highest power level of the Shapeshift boon that you can sustain.<br /><br /><ul><br /><li><strong>Tier 1</strong> - You can sustain any Shapeshift boon of power level 2 or less.</li><br /><li><strong>Tier 2</strong> - You can sustain any Shapeshift boon of power level 4 or less.</li><br /><li><strong>Tier 3</strong> - You can sustain any Shapeshift boon of power level 6 or less.</li><br /><li><strong>Tier 4</strong> - You can sustain any Shapeshift boon of power level 8 or less.</li><br /><li><strong>Tier 5</strong> - You can sustain any Shapeshift boon of power level 9 or less.</li><br /></ul><br />"
-  },
-  {
     "name": "Master Tracker",
     "prerequisites": {
       "tier1": {
@@ -2101,7 +2051,6 @@
     "prerequisites": {
       "tier1": {
         "Feat": [
-          "Boon Focus",
           "Multi-Target Boon Specialist II"
         ]
       }
@@ -2493,6 +2442,26 @@
     "effect": "You gain a +1 bonus to all defenses for each tier you have in this feat. This increases your Toughness, Evasion, and Resolve defenses.<br />"
   },
   {
+    "name": "Supernatural Focus",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Any Supernatural": 1
+          }
+        ]
+      }
+    },
+    "tags": [
+      "Supernatural"
+    ],
+    "cost": [
+      3
+    ],
+    "description": "Your supernatural power stems from your connection with a particular focus, such as a wand, holy symbol, or spellbook.<br />",
+    "effect": "With the approval of your GM, choose a focus from which your power with a single supernatural attribute stems. Some possibilities include a wand, a crystal ball, a spell book, a holy symbol, a weapon, your voice, or an animal familiar. You cannot use the selected supernatural attribute without your focus. However, for the purposes of determining your attribute dice for action rolls, treat the chosen attribute as if it was one greater. For all purposes outside of attribute dice, your ability score remains unchanged (feats, banes, boons, etc.).<br /><strong>Special:</strong> If you ever lose your supernatural focus, voluntarily or involuntarily, you regain the feat points that you have spent on this feat and may spend them as usual.<br />"
+  },
+  {
     "name": "Supernatural Healing",
     "prerequisites": {
       "tier1": {
@@ -2512,26 +2481,6 @@
     ],
     "description": "Your mastery of supernatural healing is such that you are able to cure mortal wounds that are beyond the power of the average healer.<br />",
     "effect": "When invoking the Heal boon, you can choose to take one hour instead of the usual invocation time. If you do, you heal an amount of lethal damage equal to the total healing from the successful boon invocation. This lethal damage is healed in addition to the normal hit point damage that your boon heals.<br />"
-  },
-  {
-    "name": "Supernatural Focus",
-    "prerequisites": {
-      "tier1": {
-        "Attribute": [
-          {
-            "Any Supernatural": 1
-          }
-        ]
-      }
-    },
-    "tags": [
-      "Supernatural"
-    ],
-    "cost": [
-      3
-    ],
-    "description": "Your supernatural power stems from your connection with a particular focus, such as a wand, holy symbol, or spellbook.<br />",
-    "effect": "With the approval of your GM, choose a focus from which your power with a single supernatural attribute stems. Some possibilities include a wand, a crystal ball, a spell book, a holy symbol, a weapon, your voice, or an animal familiar. You cannot use the selected supernatural attribute without your focus. However, for the purposes of determining your attribute dice for action rolls, treat the chosen attribute as if it was one greater. For all purposes outside of attribute dice, your ability score remains unchanged (feats, banes, boons, etc.).<br />"
   },
   {
     "name": "Swimming",
