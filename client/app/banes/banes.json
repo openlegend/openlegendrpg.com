@@ -96,7 +96,9 @@
       "Supernatural"
     ],
     "power": [
-      2
+      3,
+      6,
+      8
     ],
     "attackAttributes": [
       "Agility",
@@ -119,7 +121,8 @@
     "invocationTime": "1 Major Action",
     "duration": "Resist (minor) ends (Fail x 3 = 1 minute)",
     "description": "Using your quick wit, intimidating presence, or even a strong display of magical power, you cause your enemies to doubt themselves.<br />",
-    "effect": "The affected target has disadvantage 1 on all action rolls.<br /><strong>Special</strong>: Resisting this bane is a minor action.<br />"
+    "effect": "The affected target has disadvantage on all action rolls.<br /><ul><br /><li><strong>Power Level 3</strong> - Disadvantage 1</li><br /><li><strong>Power Level 6</strong> - Disadvantage 2</li><br /><li><strong>Power Level 8</strong> - Disadvantage 3</li><br /></ul><br />",
+    "special": "Resisting this bane is a minor action.<br />"
   },
   {
     "name": "Disarmed",
@@ -213,7 +216,8 @@
     "invocationTime": "1 Major Action",
     "duration": "Special",
     "description": "Fatigue overcomes the target, causing their body to gradually cease normal function until they rest.<br />",
-    "effect": "This bane has multiple tiers which are applied in succession. Each time this bane is inflicted, if it is already in effect on the target, the severity escalates by one level.<br/><br /><strong>Special:</strong> Unlike other banes, canceling this bane takes time and rest. Each 24 hour period of rest with little or no exertion, removes one level of fatigue. If the Restoration boon is invoked, the character invoking it can remove one level of Fatigue (in addition to that removed by natural rest) if their attribute used to invoke Restoration is between 1 and 6. A target cannot benefit from another invocation of the Restoration boon until 24 hours have passed. If the Restoration boon's invoker has an attribute score of 7 or greater, all levels of fatigue are removed instead of just one.<br /> <ul><br /> <li>Level 1 - The target has Disadvantage 1 on all non-attack action rolls.</li><br /> <li>Level 2 - The target loses their attribute bonus to their defense scores (Agility for Evasion, Fortitude for Toughness, Will and Presence for Resolve). They retain any armor, supernatural, or feat bonuses.</li><br /> <li>Level 3 - The target has Disadvantage 1 on all attack rolls.</li><br /> <li>Level 4 - The target is affected by the slowed bane, reducing it's speed to 2. This instance of the slowed bane cannot be resisted as normal. It persists until the fatigue is removed.</li><br /> <li>Level 5 - The target loses consciousness and is helpless. Being forced into a state of rest, one level of fatigue will be removed automatically after 24 hours, unless circumstances prevent the target from resting peacefully.</li><br /> <li>Level 6 - The target dies.</li><br /> </ul><br />"
+    "effect": "This bane has multiple tiers which are applied in succession. Each time this bane is inflicted, if it is already in effect on the target, the severity escalates by one level.<br/><br /><ul><br /><li>Level 1 - The target has Disadvantage 1 on all non-attack action rolls.</li><br /><li>Level 2 - The target loses their attribute bonus to their defense scores (Agility for Evasion, Fortitude for Toughness, Will and Presence for Resolve). They retain any armor, supernatural, or feat bonuses.</li><br /><li>Level 3 - The target has Disadvantage 1 on all attack rolls.</li><br /><li>Level 4 - The target is affected by the slowed bane, reducing it's speed to 2. This instance of the slowed bane cannot be resisted as normal. It persists until the fatigue is removed.</li><br /><li>Level 5 - The target loses consciousness and is helpless. Being forced into a state of rest, one level of fatigue will be removed automatically after 24 hours, unless circumstances prevent the target from resting peacefully.</li><br /><li>Level 6 - The target dies.</li><br /></ul><br />",
+    "special": "Unlike other banes, canceling this bane takes time and rest. Each 24 hour period of rest with little or no exertion, removes one level of fatigue. If the Restoration boon is invoked, the character invoking it can remove one level of Fatigue (in addition to that removed by natural rest) if their attribute used to invoke Restoration is between 1 and 6. A target cannot benefit from another invocation of the Restoration boon until 24 hours have passed. If the Restoration boon's invoker has an attribute score of 7 or greater, all levels of fatigue are removed instead of just one.<br />"
   },
   {
     "name": "Fear",
@@ -299,7 +303,8 @@
     "invocationTime": "1 Major Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
     "description": "Whether through grappling, a precise nerve strike, entangling vines, exerting mental control, or a bone-numbing blast of cold, you render your foe incapable of movement.<br />",
-    "effect": "Your target cannot move from its current space. If you invoked the bane with a Might roll, then both you and the target are immobile in your current space for the duration of the bane (locked in a grapple). While grappling in this manner, you can attempt to inflict this bane again upon the target. If successful, you can move your movement and take the target with you.  If this attack fails, you can only move by first releasing the target and ending the bane.<br />If you invoked the bane with any attribute other than Might, you can move freely while the target remains affected.<br />You can choose to release the target at any time (a free action that immediately ends the bane).<br /><strong>Special</strong>: When an affected target succeeds at a Resist roll to end this effect, they can move 15' as a minor action.<br />"
+    "effect": "Your target cannot move from its current space. If you invoked the bane with a Might roll, then both you and the target are immobile in your current space for the duration of the bane (locked in a grapple). While grappling in this manner, you can attempt to inflict this bane again upon the target. If successful, you can move your movement and take the target with you.  If this attack fails, you can only move by first releasing the target and ending the bane.<br />If you invoked the bane with any attribute other than Might, you can move freely while the target remains affected.<br />You can choose to release the target at any time (a free action that immediately ends the bane).<br />",
+    "special": "When an affected target succeeds at a Resist roll to end this effect, they can move 15' as a minor action.<br />"
   },
   {
     "name": "Incapacitated",
@@ -623,7 +628,8 @@
     "invocationTime": "1 Major Action",
     "duration": "Resist ends (Fail x 3 = 1 minute)",
     "description": "Stunning an enemy can be anything from the pommel of a dagger to the back of the head, to a kick in the groin, to a deafening thunderclap that disorients the target.<br />",
-    "effect": "During its turn, the target is limited to either a single major action, a single move action, or a single minor action. It cannot take all three, nor can it take a focus action.<br /><br /><strong>Special</strong> - Boss actions are not affected by this bane, and can still be used to partially bypass this, though they must use one boss action per major, move, or minor action they wish to take.<br />"
+    "effect": "During its turn, the target is limited to either a single major action, a single move action, or a single minor action. It cannot take all three, nor can it take a focus action. Note that a target expending it's move action to Resist this bane will receive the remainder of their usual actions if the Resist roll succeeds. Thus they will have their usual Major and Minor actions available this round.<br />",
+    "special": "Boss actions are not affected by this bane, and can still be used to partially bypass this, though they must use one boss action per major, move, or minor action they wish to take.<br />"
   },
   {
     "name": "Stupefied",
