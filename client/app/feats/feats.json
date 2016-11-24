@@ -592,7 +592,7 @@
       3
     ],
     "description": "You are specialized in the use a particular boon that is iconic to your character.<br />",
-    "effect": "<ul><br /><li>Tier 1 - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. If the invocation has multiple targets, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.</li><br /><li>Tier 2 - When your invocation includes multiple targets, you gain advantage 3 on your action roll to invoke the boon. Additionally, you may invoke the boon one time increment faster, as follows: If the invocation time is a major action, it becomes a minor action.  If the invocation time is 1 minute, it becomes 1 major action.  If the invocation time is 10 minutes, it becomes 1 minute.  If the invocation time is 1 hour, it becomes 10 minutes.  If the invocation time is 8 hours, it becomes 1 hour.</li><br /><li>Tier 3 - The effect at tier 3 varies based on the duration of the boon:<br />  <br /><br />  <strong>If the chosen boon has a duration of \"sustain persists\"</strong>, you gain advantage 4 on your action roll to invoke it when multi-targeting. Additionally, the boon is always active for your character and passively persists, without requiring you to use a minor action to sustain it. If the boon is somehow temporarily cancelled (such as by the dispel bane), it resumes automatically at the start of your next turn.<br />  <br /><br />  <strong>If the boon has a different duration</strong>, you gain advantage 5 on your action roll to invoke it when multi-targeting.<br /></li><br /></ul><br />"
+    "effect": "<ul><br /><li>Tier 1 - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. If the invocation has multiple targets, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.</li><br /><li>Tier 2 - When your invocation includes multiple targets, you gain advantage 3 on your action roll to invoke the boon. Additionally, you may invoke the boon one time increment faster, as follows: If the invocation time is a major action or move action, it becomes a minor action.  If the invocation time is 1 minute, it becomes 1 major action.  If the invocation time is 10 minutes, it becomes 1 minute.  If the invocation time is 1 hour, it becomes 10 minutes.  If the invocation time is 8 hours, it becomes 1 hour.</li><br /><li>Tier 3 - The effect at tier 3 varies based on the duration of the boon:<br />  <br /><br />  <strong>If the chosen boon has a duration of \"sustain persists\"</strong>, you gain advantage 4 on your action roll to invoke it when multi-targeting. Additionally, the boon is always active for your character and passively persists, without requiring you to use a minor action to sustain it. If the boon is somehow temporarily cancelled (such as by the dispel bane), it resumes automatically at the start of your next turn.<br />  <br /><br />  <strong>If the boon has a different duration</strong>, you gain advantage 5 on your action roll to invoke it when multi-targeting.<br /></li><br /></ul><br />"
   },
   {
     "name": "Breakfall (I - IX)",
@@ -1119,36 +1119,26 @@
     "effect": "You are immune to natural disease. This protection does not guard against magical curses such as lycanthropy.<br />"
   },
   {
-    "name": "Energy Resistance (I - III)",
+    "name": "Energy Resistance (I - IV)",
     "prerequisites": {
       "tier1": {
-        "Attribute": [
-          {
-            "Energy": 4
-          },
-          {
-            "Protection": 4
-          }
+        "Other": [
+          "None"
         ]
       },
       "tier2": {
-        "Attribute": [
-          {
-            "Energy": 5
-          },
-          {
-            "Protection": 5
-          }
+        "Other": [
+          "None"
         ]
       },
       "tier3": {
-        "Attribute": [
-          {
-            "Energy": 7
-          },
-          {
-            "Protection": 7
-          }
+        "Other": [
+          "None"
+        ]
+      },
+      "tier4": {
+        "Other": [
+          "None"
         ]
       }
     },
@@ -1156,10 +1146,10 @@
       "Supernatural"
     ],
     "cost": [
-      3
+      2
     ],
     "description": "Your specialization in a particular type of energy or general protection causes you to be resistant to that type of energy.<br />",
-    "effect": "Choose from the following energy types: fire, cold, lightning, acid, (or another at the GM’s discretion).  When you are attacked with that energy type, you gain resistance to the attack as follows:<br />  <ul><br />  <li><strong>Tier 1</strong> - Your defense scores gain a total of +5 vs. attacks of the chosen energy type.</li><br />  <li><strong>Tier 2</strong> - Your defense scores gain a total of  +10 vs. attacks of the chosen energy type.</li><br />  <li><strong>Tier 3</strong> - You are immune to damage from attacks of the chosen energy type.</li><br />  </ul><br />"
+    "effect": "Choose from the following energy types: fire, cold, lightning, acid, (or another at the GM’s discretion).  When you are attacked with that energy type, you gain resistance to the attack as follows:<br /><ul><br /><li><strong>Tier 1</strong> - Your defense scores are increased by 3 against the chosen energy type.</li><br /><li><strong>Tier 2</strong> - Your defense scores are increased by 6 against the chosen energy type.</li><br /><li><strong>Tier 3</strong> - Your defense scores are increased by 9 against the chosen energy type.</li><br /><li><strong>Tier 4</strong> - You are immune to damage and harmful effects from the chosen energy type.</li><br /></ul><br />"
   },
   {
     "name": "Entranced Berserker",
@@ -1997,7 +1987,7 @@
       3
     ],
     "description": "Whether your are delivering flurry of blows, wielding two weapons, or calling a chain of lightning bolts from the sky, you have mastered the art of delivering multiple attacks.<br />",
-    "effect": "Before attacking, you may declare that you are multi-attacking, and must state how many extra attacks you would like to make. ALL of your attacks this round suffer disadvantage equal to 3 times the number of **additional** attacks you declare (i.e., if you make 2 attacks, you suffer disadvantage 3; 3 attacks suffers disadvantage 6). For each tier of this feat that you possess, reduce the disadvantage penalty by 1.<br /><br />You may use your attacks to make any combination of bane or damaging attacks, but you may not invoke boons. Resolve each attack individually, applying any other multi-targeting options as you wish. You can move between each of these attacks and they can be used to target the same creature more than once. There is no limit to the number of additional attacks you can make using this feat.<br /><br /><strong>Example</strong> - Vax the Deathbringer has Multi Attack Specialist (Tier III). He declares that he will be making three attacks this round (two additional attacks). Therefore, all of his attacks suffer disadvantage 3 (3 x 2 = 6, minus 3 for feat tier 3). His first attack is a necromantic burst targeting a 10'-square. Because of the area of effect, Vax suffers an additional disadvantage 2, making his total disadvantage for that attack 5. For his second attack, Vax casts a spell of blindness on a single foe, making an action roll at disadvantage 3. For his final attack, Vax moves in to melee and uses his touch of death on three foes. Targeting 3 foes incurs an additional disadvantage 3, making his final attack roll suffer a total of disadvantage 6.<br />"
+    "effect": "Before attacking, you may declare that you are multi-attacking, and must state how many extra attacks you would like to make. ALL of your attacks this round suffer disadvantage equal to 3 times the number of <strong>additional</strong> attacks you declare (i.e., if you make 2 attacks, you suffer disadvantage 3; 3 attacks suffers disadvantage 6). For each tier of this feat that you possess, reduce the disadvantage penalty by 1.<br /><br />You may use your attacks to make any combination of bane or damaging attacks, but you may not invoke boons. Resolve each attack individually, applying any other multi-targeting options as you wish. You can move between each of these attacks and they can be used to target the same creature more than once. There is no limit to the number of additional attacks you can make using this feat.<br /><br />The number of additional attacks you can make with this feat is limited to 1 + half your level, rounded up. Thus, the limit is 2 additional attacks at 1st level, 3 additional attacks at 3rd level, and 6 additional attacks at 9th level.<br /><br /><strong>Example</strong> - Vax the Deathbringer has Multi Attack Specialist (Tier III). He declares that he will be making three attacks this round (two additional attacks). Therefore, all of his attacks suffer disadvantage 3 (3 x 2 = 6, minus 3 for feat tier 3). His first attack is a necromantic burst targeting a 10'-square. Because of the area of effect, Vax suffers an additional disadvantage 2, making his total disadvantage for that attack 5. For his second attack, Vax casts a spell of blindness on a single foe, making an action roll at disadvantage 3. For his final attack, Vax moves in to melee and uses his touch of death on three foes. Targeting 3 foes incurs an additional disadvantage 3, making his final attack roll suffer a total of disadvantage 6.<br />"
   },
   {
     "name": "Multi-Target Attack Specialist (I – V)",
@@ -2563,6 +2553,35 @@
     "effect": "You permanently gain 5 extra hit points per tier of this feat you possess.<br />"
   },
   {
+    "name": "Two Weapon Brute",
+    "prerequisites": {
+      "tier1": {
+        "MultiAttribute": [
+          {
+            "Agility": 4
+          },
+          {
+            "Might": 5
+          }
+        ],
+        "Feat": [
+          "Multi-Attack Specialist"
+        ]
+      }
+    },
+    "tags": [
+      "Combat",
+      "Physical",
+      "Agility",
+      "Might"
+    ],
+    "cost": [
+      3
+    ],
+    "description": "Being both physically powerful and incredibly agile, as such, you are able to wield a weapon in one-hand that requires two hands for others.<br />",
+    "effect": "You can wield weapons with the two-handed property in one hand and you gain the benefits of both the two-handed and one-handed property while doing so. This means that you gain a total of Advantage 2 when wielding a two-handed weapon in each hand, Advantage 1 from the power of a two-handed weapon + Advantage 1 from having one weapon in each hand.<br />"
+  },
+  {
     "name": "Two Weapon Defense",
     "prerequisites": {
       "tier1": {
@@ -2584,7 +2603,7 @@
     "cost": [
       2
     ],
-    "description": "Your mastery of two weapon fighting allows you not only to come at your foes with a flurry of attacks, but also shield yourself exceptionally well with your off-hand weapon.<br />",
+    "description": "Your mastery of two weapon fighting allows you not only to come at your foes with a flurry of attacks, but also shield yourself exceptionally well by deflecting incoming attacks with your weapons.<br />",
     "effect": "When you have a weapon in each hand, you gain a +2 armor bonus. This feat cannot be used in conjunction with a shield.<br />"
   },
   {
