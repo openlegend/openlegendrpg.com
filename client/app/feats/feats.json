@@ -48,7 +48,7 @@
     "cost": [
       3
     ],
-    "description": "Alternate form is an ability possessed by lycanthropes (werewolves, werebears, wererats), druids, vampires, and other creatures capable of assuming <emphasis>specific</emphasis> forms.<br />",
+    "description": "Alternate form is an ability possessed by lycanthropes (werewolves, werebears, wererats), druids, vampires, and other creatures capable of assuming <em>specific</em> forms.<br />",
     "effect": "You gain the ability to shapeshift into a single form (you choose that form when purchasing this feat and it cannot be changed). Assuming your new form is a Focus action.<br />When you take this feat, you build the stats for the alternate form that you can assume.<br />To build your alternate form, you gain a number of Feat and Attribute points, as outlined below. Your new form is otherwise treated as a different character. You retain none of your original feats or attributes, only what you gain for the new form from this feat. You do, however, retain the ability to cancel and revert to your base form.<br />You return to your normal form immediately if you are reduced to zero hit points. You can also choose to voluntarily return to your usual form as a major action. Upon returning to your original form, your physical attributes return to their previous values.<br /><ul><br /><li>Tier 1 – Half of your main character's attribute points (rounded up), and 3 feat points.</li><br /><li>Tier 2 – Same attribute points as your main character, and 3 feat points per level.</li><br /></ul><br />"
   },
   {
@@ -267,7 +267,7 @@
       3
     ],
     "description": "You are so well trained with a particular form of attack that you can devastate foes with much more skill than the average combatant.<br />",
-    "effect": "When you take this feat, select one weapon or energy type. You gain Advantage 1 per tier of this feat for any <emphasis>damaging</emphasis> attack made with your choice. This bonus does not apply to bane attacks or boon invocations.<br />Examples of energy types you can choose to specialize in include fire, cold, lightning, acid, poison, entropy, creation, and force - though this list is not exhaustive.<br />",
+    "effect": "When you take this feat, select one weapon or energy type. You gain Advantage 1 per tier of this feat for any <em>damaging</em> attack made with your choice. This bonus does not apply to bane attacks or boon invocations.<br />Examples of energy types you can choose to specialize in include fire, cold, lightning, acid, poison, entropy, creation, and force - though this list is not exhaustive.<br />",
     "special": "You may take this feat multiple times for the same type of attack. Your total advantage to attacks with the attack is equal to your tier for that particular attack mode.  You can also specialize in different attacks by purchasing the feat again. For example, a character might have Attack Specialization (Tier 2) for Fire attacks and Attack Specialization (Tier 4) for Long Sword.<br />"
   },
   {
@@ -592,7 +592,7 @@
       3
     ],
     "description": "You are specialized in the use a particular boon that is iconic to your character.<br />",
-    "effect": "<ul><br /><li>Tier 1 - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. If the invocation has multiple targets, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.</li><br /><li>Tier 2 - When your invocation includes multiple targets, you gain advantage 3 on your action roll to invoke the boon. Additionally, you may invoke the boon one time increment faster, as follows: If the invocation time is a major action or move action, it becomes a minor action.  If the invocation time is 1 minute, it becomes 1 major action.  If the invocation time is 10 minutes, it becomes 1 minute.  If the invocation time is 1 hour, it becomes 10 minutes.  If the invocation time is 8 hours, it becomes 1 hour.</li><br /><li>Tier 3 - The effect at tier 3 varies based on the duration of the boon:<br />  <br /><br />  <strong>If the chosen boon has a duration of \"sustain persists\"</strong>, you gain advantage 4 on your action roll to invoke it when multi-targeting. Additionally, the boon is always active for your character and passively persists, without requiring you to use a minor action to sustain it. If the boon is somehow temporarily cancelled (such as by the dispel bane), it resumes automatically at the start of your next turn.<br />  <br /><br />  <strong>If the boon has a different duration</strong>, you gain advantage 5 on your action roll to invoke it when multi-targeting.<br /></li><br /></ul><br />"
+    "effect": "<ul><br /><li><strong>Tier 1</strong> - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. If the invocation has multiple targets, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.</li><br /><li><strong>Tier 2</strong> - When your invocation includes multiple targets, you gain advantage 3 on your action roll to invoke the boon. Additionally, you may invoke the boon one time increment faster, as follows: If the invocation time is a major action or move action, it becomes a minor action.  If the invocation time is 1 minute, it becomes 1 major action.  If the invocation time is 10 minutes, it becomes 1 minute.  If the invocation time is 1 hour, it becomes 10 minutes.  If the invocation time is 8 hours, it becomes 1 hour.</li><br /><li><strong>Tier 3</strong> - The effect at tier 3 varies based on the duration of the boon:<br />  <br /><br />  <strong>If the chosen boon has a duration of \"sustain persists\"</strong>, you gain advantage 4 on your action roll to invoke it when multi-targeting. Additionally, the boon is always active for your character and passively persists, without requiring you to use a minor action to sustain it. If the boon is somehow temporarily cancelled (such as by the dispel bane), it resumes automatically at the start of your next turn.<br />  <br /><br />  <strong>If the boon has a different duration</strong>, you gain advantage 5 on your action roll to invoke it when multi-targeting.<br /></li><br /></ul><br />"
   },
   {
     "name": "Breakfall (I - IX)",
@@ -786,7 +786,7 @@
       3
     ],
     "description": "Whether a hired bodyguard, a loyal animal sidekick, or a sibling that follows you everywhere, you have the constant and unflinching loyalty of one particular companion character.<br />",
-    "effect": "You gain a companion character that acts independently from you. During combat, your companion acts on its own initiative count and gains the usual assortment of actions, which you may choose. You also get to assign your companion's attributes. The companion's highest attribute is determined by your level and your tier in this feat (see below). Your companion also possesses attributes at each number lower than its highest score. For example, if the companion's highest score is 6, then it also has attributes at scores 5, 4, 3, 2, and 1. The companion gains no feats or abilities, only attributes and the corresponding access to banes and boons. Whenever you gain a level or purchase a new tier in this feat, you may reassign your companion's attributes.<br /><ul><br /><li><strong>Tier 1</strong> - Your companion's highest attribute equals your level minus 2 (minimum of 3).</li><br /><li><strong>Tier 2</strong> - Your companion's highest attribute equals your level minus 1 (minimum of 4).</li><br /><li><strong>Tier 3</strong> - Your companion's highest attribute equals your level (minimum of 5).</li><br /></ul><br /><strong>Example</strong><br />Fezzy starts at level one with Companion (Tier II), choosing a wolf for his companion. Based on Fezzy's level and feat tier, his wolf's highest attribute is 4, so he can assign the wolf four attributes at scores 4, 3, 2, and 1. He assigns the following: Agility 4, Perception 3, Might 2, and Fortitude 1. Upon reaching level 2, Fezzy purchases Companion (Tier III), raising the wolf's highest attribute to 5, so Fezzy reassigns the attributes as follows: Perception 5, Agility 4, Might 3, Fortitude 2, Presence 1.<br />",
+    "effect": "You gain a companion character that acts independently from you. During combat, your companion acts on its own initiative count and gains the usual assortment of actions, which you may choose. You also get to assign your companion's attributes. The companion's highest attribute is determined by your level and your tier in this feat (see below). Your companion also possesses attributes at each number lower than its highest score. For example, if the companion's highest score is 6, then it also has attributes at scores 5, 4, 3, 2, and 1. The companion gains no feats or abilities, only attributes and the corresponding access to banes and boons. Whenever you gain a level or purchase a new tier in this feat, you may reassign your companion's attributes.<br /><ul><br /><li><strong>Tier 1</strong> - Your companion's highest attribute equals your level minus 2 (minimum of 3, maximum of 9).</li><br /><li><strong>Tier 2</strong> - Your companion's highest attribute equals your level minus 1 (minimum of 4, maximum of 9).</li><br /><li><strong>Tier 3</strong> - Your companion's highest attribute equals your level (minimum of 5, maximum of 9).</li><br /></ul><br /><strong>Example</strong><br />Fezzy starts at level one with Companion (Tier II), choosing a wolf for his companion. Based on Fezzy's level and feat tier, his wolf's highest attribute is 4, so he can assign the wolf four attributes at scores 4, 3, 2, and 1. He assigns the following: Agility 4, Perception 3, Might 2, and Fortitude 1. Upon reaching level 2, Fezzy purchases Companion (Tier III), raising the wolf's highest attribute to 5, so Fezzy reassigns the attributes as follows: Perception 5, Agility 4, Might 3, Fortitude 2, Presence 1.<br />",
     "special": "If you ever lose your companion, voluntarily or involuntarily, you regain the feat points that you have spent on this feat and may spend them as usual.<br />"
   },
   {
@@ -938,7 +938,7 @@
       3
     ],
     "description": "You are able to quickly finish off enemies that are near death and silence them before they cry out. This attack is one that is commonly seen used by assassins who can silently eliminate weaker enemies without being detected.<br />",
-    "effect": "<ul><br /><li><strong>Tier 1</strong> - If you damage an enemy with a Lethal Strike and their total HP is 5 or less after the attack, then you can choose to reduce them to zero HP instead. In addition, you can choose to silence any enemy reduced to zero hit points by a melee or projectile attack from you.</li><br /><li><strong>Tier 2</strong> – Your death blow HP threshold increases from 5 to 10. In addition, on a successful Lethal Strike, provided you have a hand free to cover their mouth or use a garrote (or similar strangling implement), the Silenced bane is automatically inflicted without counting against your usual 1 bane per attack limit.</li><br /><li><strong>Tier 3</strong> – Your death blow HP threshold increases from 10 to 15. In addition, on a successful Lethal Strike, the Stunned bane is automatically inflicted without counting against your usual 1 bane per attack limit.</li><br /></ul><br />"
+    "effect": "<ul><br /><li><strong>Tier 1</strong> - If you damage an enemy with a Lethal Strike and their total HP is 5 or less after the attack, then you can choose to reduce them to zero HP instead. In addition, you can choose to silence any enemy reduced to zero hit points by a melee or projectile attack from you.</li><br /><li><strong>Tier 2</strong> – Your death blow HP threshold increases from 5 to 10. In addition, on a successful melee Lethal Strike, provided you have a hand free to cover their mouth or use a garrote (or similar strangling implement), the Silenced bane is automatically inflicted without counting against your usual 1 bane per attack limit.</li><br /><li><strong>Tier 3</strong> – Your death blow HP threshold increases from 10 to 15. In addition, on a successful Lethal Strike, the Stunned bane is automatically inflicted without counting against your usual 1 bane per attack limit.</li><br /></ul><br />"
   },
   {
     "name": "Deathless Berserker",
@@ -1306,7 +1306,7 @@
     "cost": [
       2
     ],
-    "description": "Whether through cybernetic implants, telekinetic propulsion, or simply hardcore training, you are faster than the average joe.<br />",
+    "description": "Whether through cybernetic implants, telekinetic propulsion, or simply hardcore training, you are faster than most.<br />",
     "effect": "Your speed is permanently increased by 5' per tier of this feat.<br />"
   },
   {
@@ -1773,7 +1773,7 @@
       3
     ],
     "description": "Like a deadly assassin, a ninja of legend, or a feinting melee dervish, you can devastate your foes with an expertly placed attack when you catch them off guard.<br />",
-    "effect": "Your attacks are considered lethal strikes whenever you fulfill <emphasis>one</emphasis> of the following conditions:<br /><ul><br /><li>Your target is caught off guard or otherwise unaware of the attack, such as when you are hidden from them, disguised as a friend, or have successfully deceived them.</li><br /><li>Your target is within melee attack range of an ally.</li><br /></ul><br />You gain advantage on lethal strikes equal to your tier in this feat. Additionally, a certain portion of the damage (not to exceed the total damage dealt) is considered lethal damage, which is more difficult to heal from (see Chapter 6: Combat).<br /><ul><br /><li><strong>Tier 1</strong> - Advantage 1. Up to 5 lethal damage</li><br /><li><strong>Tier 2</strong> - Advantage 2. Up to 5 lethal damage</li><br /><li><strong>Tier 3</strong> - Advantage 3. Up to 10 lethal damage</li><br /><li><strong>Tier 4</strong> - Advantage 4. Up to 10 lethal damage</li><br /><li><strong>Tier 5</strong> - Advantage 5. Up to 15 lethal damage</li><br /><li><strong>Tier 6</strong> - Advantage 6. Up to 20 lethal damage</li><br /><li><strong>Tier 7</strong> - Advantage 7. Up to 20 lethal damage</li><br /><li><strong>Tier 8</strong> - Advantage 8. Up to 25 lethal damage</li><br /><li><strong>Tier 9</strong> - Advantage 9. Up to 25 lethal damage</li><br /></ul><br />"
+    "effect": "Your attacks are considered lethal strikes whenever you fulfill <em>one</em> of the following conditions:<br /><ul><br /><li>Your target is caught off guard or otherwise unaware of the attack, such as when you are hidden from them, disguised as a friend, or have successfully deceived them.</li><br /><li>Your target is within melee attack range of an ally.</li><br /></ul><br />You gain advantage on lethal strikes equal to your tier in this feat. Additionally, a certain portion of the damage (not to exceed the total damage dealt) is considered lethal damage, which is more difficult to heal from (see Chapter 6: Combat).<br /><ul><br /><li><strong>Tier 1</strong> - Advantage 1. Up to 5 lethal damage</li><br /><li><strong>Tier 2</strong> - Advantage 2. Up to 5 lethal damage</li><br /><li><strong>Tier 3</strong> - Advantage 3. Up to 10 lethal damage</li><br /><li><strong>Tier 4</strong> - Advantage 4. Up to 10 lethal damage</li><br /><li><strong>Tier 5</strong> - Advantage 5. Up to 15 lethal damage</li><br /><li><strong>Tier 6</strong> - Advantage 6. Up to 20 lethal damage</li><br /><li><strong>Tier 7</strong> - Advantage 7. Up to 20 lethal damage</li><br /><li><strong>Tier 8</strong> - Advantage 8. Up to 25 lethal damage</li><br /><li><strong>Tier 9</strong> - Advantage 9. Up to 25 lethal damage</li><br /></ul><br />"
   },
   {
     "name": "Lightning Reflexes (I - V)",
@@ -2354,24 +2354,18 @@
     "name": "Superior Concentration (I - III)",
     "prerequisites": {
       "tier1": {
-        "Attribute": [
-          {
-            "Any Supernatural": 3
-          }
+        "Other": [
+          "None"
         ]
       },
       "tier2": {
-        "Attribute": [
-          {
-            "Any Supernatural": 3
-          }
+        "Other": [
+          "None"
         ]
       },
       "tier3": {
-        "Attribute": [
-          {
-            "Any Supernatural": 3
-          }
+        "Other": [
+          "None"
         ]
       }
     },
@@ -2382,7 +2376,7 @@
       3
     ],
     "description": "Your powers of focus are exceptionally honed, allowing you to maintain concentration on multiple supernatural effects at once.<br />",
-    "effect": "When you take the <emphasis>sustain a boon</emphasis> minor action, you may sustain one additional boon per tier of this feat which you possess.<br />"
+    "effect": "When you take the <em>sustain a boon</em> minor action, you may sustain one additional boon per tier of this feat which you possess.<br />"
   },
   {
     "name": "Supernatural Defense (I - V)",
