@@ -2,7 +2,7 @@
   {
     "name": "Absorb Object",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       4
@@ -13,13 +13,13 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Instantaneous",
-    "description": "You are able to supernaturally absorb an object into your body through such means as the mutation or alteration of your body (moving muscles and ligaments aside to make room for it) or by creating an extradimensional space to hide it.<br />",
+    "description": "You are able to absorb an object into your body through such means as the mutation or alteration of your body (moving muscles and ligaments aside to make room for it) or by creating an extradimensional space to hide it.<br />",
     "effect": "The object remains in place, completely hidden from the perception of others, until you summon or recall it (automatically) as a minor action. If anything happens to cancel this boon (such as the Dispel bane), the object is immediately shunted out of your body as if you had withdrawn it to your hand.<br />"
   },
   {
     "name": "Aid",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -35,13 +35,13 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Instantaneous",
-    "description": "Your bolster an ally's chances of succes via inspiration, augmentation, divine blessing, or supernatural insight.<br />",
+    "description": "Your bolster a target's chances of succes via inspiration, augmentation, divine blessing, or supernatural insight.<br />",
     "effect": "Choose a physical, social, or mental attribute. The target gains advantage on their next action roll according to the Power Level of the boon. If the target does not make the roll before your next turn, the bonus is lost.<br /><ul><br /><li><strong>Power Level 3</strong> - Advantage 1</li><br /><li><strong>Power Level 6</strong> - Advantage 2</li><br /><li><strong>Power Level 8</strong> - Advantage 3</li><br /></ul><br />"
   },
   {
     "name": "Animation",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       6,
@@ -59,7 +59,7 @@
   {
     "name": "Aura",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       4,
@@ -74,7 +74,7 @@
       "Influence",
       "Movement",
       "Presence",
-      "Presience",
+      "Prescience",
       "Protection"
     ],
     "invocationTime": "1 Major Action",
@@ -86,7 +86,7 @@
   {
     "name": "Augury",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       1,
@@ -100,12 +100,12 @@
     "invocationTime": "1 Minute",
     "duration": "1 round",
     "description": "You peer into the future to gain insight into a course of action, an event, a person, or a place.<br />",
-    "effect": "<ul><br /><li><strong>Power Level 1</strong> - You ask a question about a course of action you plan to take within the next five minutes. The GM communicates your insight through vague symbols, impressions, or a single word such as “favorable” or “unfavorable”. </li><br /><li><strong>Power Level 3</strong> - You ask a question about a course of action you plan to take within the next hour. The GM communicates your insight through vague symbols, impressions, or a single word such as “favorable” or “unfavorable”. </li><br /><li><strong>Power Level 5</strong> - You ask a single question about a particular event, decision, person, place, etc. The GM provides a meaningful (not vague, but still brief) explanation (in one or two sentences) that is a direct response to the knowledge you seek.  You can only ask one question about a given target per week.</li><br /><li><strong>Power Level 7 </strong> - You can choose a particular event, decision, person, place, etc. After invoking this boon, you begin to have supernatural encounters (visions, trances, dreams, out-of-body experiences, etc.) through which the GM will provide you detailed information about the target of your prescience. You can only maintain one such target at a given time, however concentration is not required to maintain this state, it is perpetuated until you either choose to end it, or you choose to shift your focus.</li><br /></ul><br />"
+    "effect": "<ul><br /><li><strong>Power Level 1</strong> - You ask a question about a course of action you plan to take within the next five minutes. The GM communicates your insight through vague symbols, impressions, or a single word such as “favorable” or “unfavorable”. </li><br /><li><strong>Power Level 3</strong> - You ask a question about a course of action you plan to take within the next hour. The GM communicates your insight through vague symbols, impressions, or a single word such as “favorable” or “unfavorable”. </li><br /><li><strong>Power Level 5</strong> - You ask a single question about a particular event, decision, person, place, etc. The GM provides a meaningful (not vague, but still brief) explanation (in one or two sentences) that is a direct response to the knowledge you seek.  You can only ask one question about a given target per week.</li><br /><li><strong>Power Level 7 </strong> - You can choose a particular event, decision, person, place, etc. After invoking this boon, you begin to have extraordinary encounters (visions, trances, dreams, out-of-body experiences, etc.) through which the GM will provide you detailed information about the target of your prescience. You can only maintain one such target at a given time, however concentration is not required to maintain this state, it is perpetuated until you either choose to end it, or you choose to shift your focus.</li><br /></ul><br />"
   },
   {
     "name": "Barrier",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       3,
@@ -127,7 +127,7 @@
   {
     "name": "Blindsight",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -141,13 +141,13 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Sustain Persists",
-    "description": "Even in the absence of light you are able to distinguish your surroundings. Some examples of blindsight include tremorsense, echolocation, heat vision, divine insight, or supernaturally heightened senses.<br />",
+    "description": "Even in the absence of light you are able to distinguish your surroundings. Some examples of blindsight include tremorsense, echolocation, heat vision, divine insight, or extraordinarily heightened senses.<br />",
     "effect": "The Blinded bane does not adversely affect you and you are able to see normally even in conditions of little or no light.  Blindsight can also potentially counter invisibility, though the GM will have to decide if the source creating the blindsight is appropriate to counter the source creating the invisibility.<br />"
   },
   {
     "name": "Darkness",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       1,
@@ -172,7 +172,7 @@
   {
     "name": "Detection",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       1
@@ -182,14 +182,14 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Sustain Persists",
-    "description": "You gain supernatural vision that allows you to see colored auras which correlate to magical and spiritual forces.<br />",
-    "effect": "When calling on this boon, you must choose from the following: <strong>holy</strong>, <strong>unholy</strong>, <strong>life</strong>, <strong>death</strong>, and <strong>magic</strong>.  You can perceive invisible auras pertaining to the chosen type of force and have an approximate sense of their strength (from weak to overwhelming).  These auras are usually based on an action that is deliberate, so an otherwise kind shopkeeper would radiate an aura of death for a time after poisoning or killing someone.  Even a Paladin slaying an evil archmage will give off a radius of death for a time after the killing blow.<br /><ul><br /><li><strong>Holy</strong> - Holy energy surrounds extraplanar beings from the heavens or similar good-aligned dimensions where pure goodness is embodied. </li><br /><li><strong>Unholy</strong> - Unholy energy surrounds extraplanar beings from the hells or similar evil-aligned dimensions where pure evil is embodied.</li><br /><li><strong>Life</strong> - Beings from heavenly dimensions, clerics wielding the power of healing, resurrection, or protection radiate an aura of life for a time after wielding such powers.</li><br /><li><strong>Death</strong> - Necromancers, undead, and murderers all radiate an aura of death.  For undead, the aura is constant, since the power of death and magic is what animates them.</li><br /><li><strong>Magic</strong> - Magical auras surround objects or places imbued with magical effects. Supernatural creatures who are innately magical, such as a nymph, constantly radiate magic. Natural creatures who wield magic, such as a human wizard, give off an aura only following use of their power.</li><br /></ul><br />",
+    "description": "You gain extraordinary vision that allows you to see colored auras which correlate to magical and spiritual forces.<br />",
+    "effect": "When calling on this boon, you must choose from the following: <strong>holy</strong>, <strong>unholy</strong>, <strong>life</strong>, <strong>death</strong>, and <strong>magic</strong>.  You can perceive invisible auras pertaining to the chosen type of force and have an approximate sense of their strength (from weak to overwhelming).  These auras are usually based on an action that is deliberate, so an otherwise kind shopkeeper would radiate an aura of death for a time after poisoning or killing someone.  Even a Paladin slaying an evil archmage will give off a radius of death for a time after the killing blow.<br /><ul><br /><li><strong>Holy</strong> - Holy energy surrounds extraplanar beings from the heavens or similar good-aligned dimensions where pure goodness is embodied. </li><br /><li><strong>Unholy</strong> - Unholy energy surrounds extraplanar beings from the hells or similar evil-aligned dimensions where pure evil is embodied.</li><br /><li><strong>Life</strong> - Beings from heavenly dimensions, clerics wielding the power of healing, resurrection, or protection radiate an aura of life for a time after wielding such powers.</li><br /><li><strong>Death</strong> - Necromancers, undead, and murderers all radiate an aura of death.  For undead, the aura is constant, since the power of death and magic is what animates them.</li><br /><li><strong>Magic</strong> - Magical auras surround objects or places imbued with magical effects. Extraordinary creatures who are innately magical, such as a nymph, constantly radiate magic. Natural creatures who wield magic, such as a human wizard, give off an aura only following use of their power.</li><br /></ul><br />",
     "special": "Unlike other boons, this boon can not target another character. Only the character invoking the boon can see the auras.<br />"
   },
   {
     "name": "Flight",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       5,
@@ -208,7 +208,7 @@
   {
     "name": "Genesis",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       3,
@@ -226,7 +226,7 @@
   {
     "name": "Haste",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       2,
@@ -240,13 +240,13 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Sustain Persists",
-    "description": "The target moves with supernatural speed, dodging attacks more deftly and accomplishing actions at an uncanny rate.<br />",
-    "effect": "<ul><br /><li><strong>Power Level 2</strong> - The target's speed is increased by 5'. </li><br /><li><strong>Power Level 4</strong> - The target's speed is increased by 10'. Attacks against the target’s Evasion defense suffer disadvantage 1. </li><br /><li><strong>Power Level 6</strong> - The target's speed is increased by 15'. Attacks against the target's Evasion defense suffer disadvantage 2. The target gains an extra major action every round.</li><br /><li><strong>Power Level 8</strong> - The target's speed is increased by 25'. Attacks against the target's Evasion defense suffer disadvantage 3. The target gains an extra major action every round.</li><br /></ul><br />"
+    "description": "The target moves with extraordinary speed, dodging attacks more deftly and accomplishing actions at an uncanny rate.<br />",
+    "effect": "<ul><br /><li><strong>Power Level 2</strong> - The target's speed is increased by 10'. </li><br /><li><strong>Power Level 4</strong> - The target's speed is increased by 15', and it gains +2 to Evasion. </li><br /><li><strong>Power Level 6</strong> - The target's speed is increased by 20', and it gains +3 to Evasion. Additionally, the target can make one extra major action on each of its turns. If the action requires a roll, it suffers disadvantage 2.</li><br /><li><strong>Power Level 8</strong> - The target's speed is increased by 30', and it gains +4 to Evasion. Additionally, the target can make up to two extra major actions on each of its turns. If the target takes one extra action, it suffers disadvantage 2 if it requires a roll. If the target takes two extra actions, both of these actions suffer disadvantage 4 if they require a roll.</li><br /></ul><br />"
   },
   {
     "name": "Heal",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       1,
@@ -268,14 +268,14 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Instantaneous",
-    "description": "Healing can be one of two things: the actual mending of wounds and broken bones through various sources like medicine, surgery, or supernatural creative life force, OR the inspiration of an ally to carry on, even in the face of death.<br />",
+    "description": "Healing can be one of two things: the actual mending of wounds and broken bones through various sources like medicine, surgery, or supernatural creative life force, OR inspiring your target to carry on, even in the face of death.<br />",
     "effect": "Roll dice according to the boon power level below. These dice explode as normal. The target is healed a number of hit points equal to the total roll.<br /><ul><br /><li><strong>Power Level 1</strong> - Heal 1d4 </li><br /><li><strong>Power Level 2</strong> - Heal 1d6 </li><br /><li><strong>Power Level 3</strong> - Heal 1d8 </li><br /><li><strong>Power Level 4</strong> - Heal 1d10 </li><br /><li><strong>Power Level 5</strong> - Heal 2d6 </li><br /><li><strong>Power Level 6</strong> - Heal 2d8 </li><br /><li><strong>Power Level 7</strong> - Heal 2d10 </li><br /><li><strong>Power Level 8</strong> - Heal 3d8 </li><br /><li><strong>Power Level 9</strong> - Heal 3d10 </li><br /></ul><br />",
     "special": "This boon does not heal lethal damage.<br />"
   },
   {
     "name": "Insubstantial",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       7
@@ -292,7 +292,7 @@
   {
     "name": "Invisible",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       6
@@ -309,7 +309,7 @@
   {
     "name": "Life Drain",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       5
@@ -325,7 +325,7 @@
   {
     "name": "Light",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       1,
@@ -345,12 +345,12 @@
     "invocationTime": "1 Minor Action",
     "duration": "Sustain Persists",
     "description": "You light up an area with magical light from a point of your choice<br />",
-    "effect": "Choose a space or object within range. Supernatural light emanates from the target to a radius equal five feet per power level of the boon. If the light area overlaps an area affected by the Darkness boon, then the one of greater power level supersedes the other.  If the power level of both is equal, then they cancel each other out.<br />"
+    "effect": "Choose a space or object within range. Extraordinary light emanates from the target to a radius equal five feet per power level of the boon. If the light area overlaps an area affected by the Darkness boon, then the one of greater power level supersedes the other.  If the power level of both is equal, then they cancel each other out.<br />"
   },
   {
     "name": "Reading",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       5,
@@ -370,7 +370,7 @@
   {
     "name": "Regeneration",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       1,
@@ -385,14 +385,14 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Sustain Persists",
-    "description": "The target gains a supernatural ability to heal their wounds. Examples of this include the supernatural regeneration of a troll, or an ability to channel energy that results in healing. Regardless of the source, wounds close before the very eyes of an onlooker.<br />",
+    "description": "The target gains an extraordinary ability to heal their wounds. Examples of this include the supernatural regeneration of a troll, or an ability to channel energy that results in healing. Regardless of the source, wounds close before the very eyes of an onlooker.<br />",
     "effect": "While the regeneration boon is sustained, the target heals hit points at the beginning of each of the <em>boon invoker's</em> turns. The amount of healing is determined by the power level of the boon, and the dice rolled for healing explode as usual.<br /><ul><br /><li><strong>Power Level 1</strong> - 1d4 </li><br /><li><strong>Power Level 3</strong> - 1d6 </li><br /><li><strong>Power Level 5</strong> - 1d8 </li><br /><li><strong>Power Level 7</strong> - 1d10 </li><br /><li><strong>Power Level 9</strong> - 2d6 </li><br /></ul><br />",
     "special": "This boon does not heal lethal damage.<br />"
   },
   {
     "name": "Resistance",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       3,
@@ -414,7 +414,7 @@
   {
     "name": "Restoration",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       1,
@@ -433,14 +433,14 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Instantaneous",
-    "description": "Your protective magic cancels all harmful afflictions that are effecting an ally.<br />",
+    "description": "Your protective magic cancels all harmful afflictions that are effecting your target.<br />",
     "effect": "You can dispel all banes of a Power Level less than or equal to the level at which you invoke this boon.<br /><br /><ul><br /><li><strong>Power Level 1</strong> - Cancel banes of Power Level 1 or less </li><br /><li><strong>Power Level 2</strong> - Cancel banes of Power Level 2 or less </li><br /><li><strong>Power Level 3</strong> - Cancel banes of Power Level 3 or less </li><br /><li><strong>Power Level 4</strong> - Cancel banes of Power Level 4 or less </li><br /><li><strong>Power Level 5</strong> - Cancel banes of Power Level 5 or less </li><br /><li><strong>Power Level 6</strong> - Cancel banes of Power Level 6 or less </li><br /><li><strong>Power Level 7</strong> - Cancel banes of Power Level 7 or less </li><br /><li><strong>Power Level 8</strong> - Cancel banes of Power Level 8 or less </li><br /><li><strong>Power Level 9</strong> - Cancel banes of Power Level 9 or less </li><br /></ul><br />",
     "special": "You can dispel even higher level banes, but your roll total must be double the banes normal Power Level. So, a Power Level 9 bane can be dispelled on a roll of 46. This is only possible if the boon is invoked by a dice roll.<br />"
   },
   {
     "name": "Retributive Barrier",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       4,
@@ -462,7 +462,7 @@
   {
     "name": "Seeing",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       4,
@@ -481,13 +481,13 @@
   {
     "name": "Shapeshift",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       3,
       4,
+      5,
       6,
-      7,
       8,
       9
     ],
@@ -497,13 +497,13 @@
     "invocationTime": "1 Major Action",
     "duration": "Sustain Persists",
     "description": "A target's physical structure is temporarily altered, allowing it to change form to potentially any creature no matter how fantastic or exotic. Common examples of shapeshifting include lyncanthropes (such as werewolves), dryads, dopplegangers, and certain types of druids.<br />",
-    "effect": "You or a willing creature you touch transform into a creature whose highest attribute is less than or equal to your Alteration score. Your Alteration score for the purpose of this feat is limited to your level or 5, whichever is higher. All of the target's existing supernatural attribute scores drop to zero, and they acquire the Agility, Fortitude, Might, and Perception attributes of the new form.  The following limitations apply at Power Level 2, and are gradually removed at higher power levels:<br /><ul><br /><li>The new form cannot be a different size than that of the target.</li><br /><li>The new form must possess a typical humanoid or animal physiology. Animal-like creatures, such as dragons, are allowed, but plants, elementals, oozes, and similar forms are not.<br /><li>The target does not gain alternate forms of movement (flight, swimming, climbing, burrowing, etc.).</li><br /><li>The target does not gain supernatural attributes of the new form (hence, they cannot inflict banes that rely on the creature’s supernatural attributes).</li><br /></ul><br />These limitations are removed based on the Power Level of the boon.<br /><ul><br /><li><strong>Power Level 3</strong> - Shapeshift into a creature between half and double the target's original size. Gain any non-flight movement modes of the new form.</li><br /><li><strong>Power Level 4</strong> - Shapeshift into a creature between one quarter and quadruple the target's original size. </li><br /><li><strong>Power Level 5</strong> - Gain the flying movement mode of the new form, if applicable.</li><br /><li><strong>Power Level 6</strong> - Shapeshift into a living creature that lacks a typical physiology, such as an elemental, ooze, or a plant.</li><br /><li><strong>Power Level 8</strong> - Shapeshift into a creature of any size. </li><br /><li><strong>Power Level 9</strong> - Gain all supernatural attributes possessed by the target.</li><br /></ul><br />",
+    "effect": "You or a willing creature you touch transform into a creature whose highest attribute is less than or equal to your Alteration score. Your Alteration score for the purpose of this feat is limited to your level or 5, whichever is higher. All of the target's existing extraordinary attribute scores drop to zero, and they acquire the Agility, Fortitude, Might, and Perception attributes of the new form.  The following limitations apply at Power Level 2, and are gradually removed at higher power levels:<br /><ul><br /><li>The new form cannot be a different size than that of the target.</li><br /><li>The new form must possess a typical humanoid or animal physiology. Animal-like creatures, such as dragons, are allowed, but plants, elementals, oozes, and similar forms are not.<br /><li>The target does not gain alternate forms of movement (flight, swimming, climbing, burrowing, etc.).</li><br /><li>The target does not gain extraordinary attributes of the new form (hence, they cannot inflict banes that rely on the creature's extraordinary attributes).</li><br /></ul><br />These limitations are removed based on the Power Level of the boon.<br /><ul><br /><li><strong>Power Level 3</strong> - Shapeshift into a creature between half and double the target's original size. Gain any non-flight movement modes of the new form.</li><br /><li><strong>Power Level 4</strong> - Shapeshift into a creature between one quarter and quadruple the target's original size. </li><br /><li><strong>Power Level 5</strong> - Gain the flying movement mode of the new form, if applicable.</li><br /><li><strong>Power Level 6</strong> - Shapeshift into a living creature that lacks a typical physiology, such as an elemental, ooze, or a plant.</li><br /><li><strong>Power Level 8</strong> - Shapeshift into a creature of any size. </li><br /><li><strong>Power Level 9</strong> - Gain all extraordinary attributes possessed by the target.</li><br /></ul><br />",
     "special": "Shapeshifting into a specific creature (attempting to impersonate them) requires a Deception action roll which is opposed by Perception attribute of anyone who sees the shapeshifted creature. In addition, at power levels 4 and lower, the target does not gain mastery over any special movement modes granted by the new form. As such, the movement speed is cut in half for movement modes not native to the original form, and the GM may rule that certain actions, such as swimming in combat, suffer disadvantage on relevant action rolls.<br />"
   },
   {
     "name": "Telekinesis",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       4,
@@ -515,13 +515,13 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Sustain Persists",
-    "description": "You reach out and supernaturally control an unattended inanimate object.<br />",
+    "description": "You reach out and extraordinarily control an unattended inanimate object.<br />",
     "effect": "Immediately upon invoking the boon, and again each round when you sustain the boon, you may move the target object up to 30'. As part of moving an object, you may also manipulate it (for example, turning a door knob or opening a coin purse). A new invocation of this boon must be attempted whenever you wish to target a different object. The Power Level of the boon determines the size and weight of the objects you may target:<br /><ul><li><strong>Power Level 4</strong> - The object must be smaller or lighter than a fist-sized rock.</li><br /><li><strong>Power Level 6</strong> - The object must be smaller or lighter than a large humanoid creature.</li><br /><li><strong>Power Level 8</strong> - The object must be smaller or lighter than a small building, such as a hut or shed.</li><br /></ul><br />"
   },
   {
     "name": "Telepathy",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       3,
@@ -540,7 +540,7 @@
   {
     "name": "Teleport",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       3,
@@ -559,7 +559,7 @@
   {
     "name": "Tongues",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       5,
@@ -576,7 +576,7 @@
   {
     "name": "Transmutation",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       3,
@@ -596,7 +596,7 @@
   {
     "name": "Truesight",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       5,
@@ -608,7 +608,7 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Sustain Persists",
-    "description": "You are able to supernaturally perceive things through impediments that would block or deceive normal sight, including darkness, illusions, and even the barrier between alternate planes of reality.<br />",
-    "effect": "<ul><br /><li><strong>Power Level 5</strong> -  You can see normally in natural or magical darkness. This supernatural sight extends to 30'.</li><br /><li><strong>Power Level 7</strong> - Your supernatural sight pierces through all illusory effects, allowing you to see the illusion for what it is. This supernatural sight extends to 60'.</li><br /><li><strong>Power Level 9</strong> - Your supernatural sight enables you to peer into alternate planes or dimensions. You can see into dimensional pockets and other planes that overlap with the one you're currently on. This supernatural sight extends to 100'.</li><br /></ul><br />"
+    "description": "You are able to extraordinarily perceive things through impediments that would block or deceive normal sight, including darkness, illusions, and even the barrier between alternate planes of reality.<br />",
+    "effect": "<ul><br /><li><strong>Power Level 5</strong> -  You can see normally in natural or magical darkness. This extraordinary sight extends to 30'.</li><br /><li><strong>Power Level 7</strong> - Your extraordinary sight pierces through all illusory effects, allowing you to see the illusion for what it is. This extraordinary sight extends to 60'.</li><br /><li><strong>Power Level 9</strong> - Your extraordinary sight enables you to peer into alternate planes or dimensions. You can see into dimensional pockets and other planes that overlap with the one you're currently on. This extraordinary sight extends to 100'.</li><br /></ul><br />"
   }
 ]

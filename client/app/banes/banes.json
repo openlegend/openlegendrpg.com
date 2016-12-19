@@ -2,7 +2,7 @@
   {
     "name": "Banished",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       6
@@ -21,7 +21,7 @@
   {
     "name": "Blinded",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -47,7 +47,7 @@
   {
     "name": "Charmed",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       3,
@@ -69,7 +69,7 @@
   {
     "name": "Death",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -93,7 +93,7 @@
     "name": "Demoralized",
     "tags": [
       "Physical",
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       3,
@@ -127,7 +127,7 @@
   {
     "name": "Disarmed",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -160,7 +160,7 @@
   {
     "name": "Dispel",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       1,
@@ -180,7 +180,7 @@
   {
     "name": "Dominated",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       3,
@@ -202,7 +202,7 @@
   {
     "name": "Fatigued",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       5
@@ -216,13 +216,13 @@
     "invocationTime": "1 Major Action",
     "duration": "Special",
     "description": "Fatigue overcomes the target, causing their body to gradually cease normal function until they rest.<br />",
-    "effect": "This bane has multiple tiers which are applied in succession. Each time this bane is inflicted, if it is already in effect on the target, the severity escalates by one level.<br/><br /><ul><br /><li>Level 1 - The target has Disadvantage 1 on all non-attack action rolls.</li><br /><li>Level 2 - The target loses their attribute bonus to their defense scores (Agility for Evasion, Fortitude for Toughness, Will and Presence for Resolve). They retain any armor, supernatural, or feat bonuses.</li><br /><li>Level 3 - The target has Disadvantage 1 on all attack rolls.</li><br /><li>Level 4 - The target is affected by the slowed bane, reducing it's speed to 2. This instance of the slowed bane cannot be resisted as normal. It persists until the fatigue is removed.</li><br /><li>Level 5 - The target loses consciousness and is helpless. Being forced into a state of rest, one level of fatigue will be removed automatically after 24 hours, unless circumstances prevent the target from resting peacefully.</li><br /><li>Level 6 - The target dies.</li><br /></ul><br />",
+    "effect": "This bane has multiple tiers which are applied in succession. Each time this bane is inflicted, if it is already in effect on the target, the severity escalates by one level.<br/><br /><ul><br /><li>Level 1 - The target has Disadvantage 1 on all non-attack action rolls.</li><br /><li>Level 2 - The target loses their attribute bonus to their defense scores (Agility for Evasion, Fortitude for Toughness, Will and Presence for Resolve). They retain any armor, extraordinary, or feat bonuses.</li><br /><li>Level 3 - The target has Disadvantage 1 on all attack rolls.</li><br /><li>Level 4 - The target is affected by the slowed bane, reducing it's speed to 2. This instance of the slowed bane cannot be resisted as normal. It persists until the fatigue is removed.</li><br /><li>Level 5 - The target loses consciousness and is helpless. Being forced into a state of rest, one level of fatigue will be removed automatically after 24 hours, unless circumstances prevent the target from resting peacefully.</li><br /><li>Level 6 - The target dies.</li><br /></ul><br />",
     "special": "Unlike other banes, canceling this bane takes time and rest. Each 24 hour period of rest with little or no exertion, removes one level of fatigue. If the Restoration boon is invoked, the character invoking it can remove one level of Fatigue (in addition to that removed by natural rest) if their attribute used to invoke Restoration is between 1 and 6. A target cannot benefit from another invocation of the Restoration boon until 24 hours have passed. If the Restoration boon's invoker has an attribute score of 7 or greater, all levels of fatigue are removed instead of just one.<br />"
   },
   {
     "name": "Fear",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -242,14 +242,14 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Special",
-    "description": "You manifest an overwhelming force of physical might or supernatural power that strikes terror into the hearts of enemies, causing them to flee from your presence.<br />",
+    "description": "You manifest an overwhelming force of physical might or manifest power that strikes terror into the hearts of enemies, causing them to flee from your presence.<br />",
     "effect": "On its turn, the afflicted target must use its entire turn to get as far away as possible from you. It cannot use its actions to do anything other than retreat, and it cannot willingly move closer to you while the bane persists.<br />",
     "special": "While most banes last until the target actively attempts to resist them, this bane prevents the target from thinking clearly. However, the target's logical mind fights to regain control. As such, at the end of each of its turns, the target receives a Resist roll as a free action to break free from this effect. When your target succeeds at a resist roll against this bane, they become to immune to all subsequent attempts by you to inflict the bane for the next hour.<br />"
   },
   {
     "name": "Forced Move",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -276,7 +276,7 @@
   {
     "name": "Immobile",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -309,7 +309,7 @@
   {
     "name": "Incapacitated",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -336,7 +336,7 @@
   {
     "name": "Intimidated",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -373,7 +373,7 @@
   {
     "name": "Knockdown",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -389,13 +389,13 @@
     ],
     "invocationTime": "1 Major Action",
     "duration": "Instantaneous",
-    "description": "Fights are called “knock down, drag out” for a reason. Knocking an opponent prone is a common way for one combatant to gain the upper hand. Knockdown can be caused by a thunderous blow from a great axe, an earth shattering bolt of supernatural energy, or a well aimed shove in a direction where the enemy's balance is weak.<br />",
+    "description": "Fights are called “knock down, drag out” for a reason. Knocking an opponent prone is a common way for one combatant to gain the upper hand. Knockdown can be caused by a thunderous blow from a great axe, an earth shattering bolt of extraordinary energy, or a well aimed shove in a direction where the enemy's balance is weak.<br />",
     "effect": "The target falls prone. Prone targets have disadvantage 1 on all attacks they make. Melee and area attacks against prone characters gain advantage 1. Projectile attacks against prone targets suffer disadvantage 1.<br />"
   },
   {
     "name": "Memory Alteration",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       5,
@@ -417,7 +417,7 @@
   {
     "name": "Mind Dredge",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       2,
@@ -441,7 +441,7 @@
   {
     "name": "Persistent Damage",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -468,7 +468,7 @@
   {
     "name": "Phantasm",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       1,
@@ -491,7 +491,7 @@
   {
     "name": "Polymorph",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       5,
@@ -513,7 +513,7 @@
   {
     "name": "Scrying",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       5
@@ -526,14 +526,14 @@
     ],
     "invocationTime": "10 Minutes",
     "duration": "10 minutes (Special)",
-    "description": "Peering into a supernatural conduit such as a hearth, a bubbling cauldron, or a crystal ball, you see can view the target from a distance.<br />",
+    "description": "Either through innate extrasensory perception or a special conduit such as a computer terminal, bubbling cauldron, or a crystal ball, you see can view the target from a distance.<br />",
     "effect": "You can scry on a person or area that you are familiar with. The Challenge Rating to succeed at this scrying is based on the distance between you and the target. If successful, you can see and hear everything that goes on within a 60' radius of your target. Anyone within the targeted area who has a Resolve defense score higher than your Prescience action roll to invoke this bane becomes aware of an unseen presence in the area (regardless of whether or not you succeed at the roll). Certain creatures may be able to identify your scrying if they are familiar with such powers.<br /><ul><br /><li><strong>20</strong> - 1 mile or less</li><br /><li><strong>22</strong> - 100 miles or less</li><br /><li><strong>24</strong> - More than 100 miles, but on the same dimension or plane of reality</li><br /><li><strong>28</strong> - Any dimension or plane of reality. (Peering into certain dimensions may expose you to other dangers at the GM's discretion).</li><br /></ul><br />",
     "special": "When you successfully invoke this bane, at the end of it's duration, you can make a Prescience roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated. However, you must retest your new roll against the Resolve scores of those in the targeted area to determine whether or not they can sense your presence.<br />You can attempt to scry the same target any number of times, but if your action roll fails, that target becomes immune to your scrying for 24 hours.<br />"
   },
   {
     "name": "Sickened",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -553,7 +553,7 @@
   {
     "name": "Silenced",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -579,7 +579,7 @@
   {
     "name": "Slowed",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -607,7 +607,7 @@
   {
     "name": "Stunned",
     "tags": [
-      "Supernatural",
+      "Extraordinary",
       "Physical"
     ],
     "power": [
@@ -634,7 +634,7 @@
   {
     "name": "Stupefied",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       7
@@ -674,7 +674,7 @@
   {
     "name": "Truthfulness",
     "tags": [
-      "Supernatural"
+      "Extraordinary"
     ],
     "power": [
       5
@@ -687,7 +687,7 @@
     ],
     "invocationTime": "10 Minutes",
     "duration": "10 minutes (Special)",
-    "description": "With supernatural control of the mind, you compel the target to honesty, rendering them unable to speak falsely.<br />",
+    "description": "Via control of the target's mind, you compel them to honesty, rendering them unable to deliberately lie.<br />",
     "effect": "The target answers any question asked with honesty, to the best of their knowledge. When compelled to reveal something they would not reveal outside of duress, the target makes a Will roll and you make an Influence roll. If the target's roll is higher than yours, then they resist the bane and the effect ends.<br />",
     "special": "When you successfully invoke this bane, at the end of its duration, you can make another Influence roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated.<br />When a target resists the bane, you cannot target them with this bane again for 24 hours.<br />"
   }
