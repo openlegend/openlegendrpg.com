@@ -1151,6 +1151,148 @@
     "effect": "When you move from a space adjacent to an enemy to another space not adjacent to that enemy, the enemy does not get the usual opportunity attack.<br />"
   },
   {
+    "name": "Extraordinary Defense (I - V)",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Movement": 2
+          },
+          {
+            "Prescience": 2
+          },
+          {
+            "Protection": 2
+          }
+        ]
+      },
+      "tier2": {
+        "Attribute": [
+          {
+            "Movement": 3
+          },
+          {
+            "Prescience": 3
+          },
+          {
+            "Protection": 3
+          }
+        ]
+      },
+      "tier3": {
+        "Attribute": [
+          {
+            "Movement": 4
+          },
+          {
+            "Prescience": 4
+          },
+          {
+            "Protection": 4
+          }
+        ]
+      },
+      "tier4": {
+        "Attribute": [
+          {
+            "Movement": 5
+          },
+          {
+            "Prescience": 5
+          },
+          {
+            "Protection": 5
+          }
+        ]
+      },
+      "tier5": {
+        "Attribute": [
+          {
+            "Movement": 6
+          },
+          {
+            "Prescience": 6
+          },
+          {
+            "Protection": 6
+          }
+        ]
+      }
+    },
+    "tags": [
+      "Extraordinary",
+      "Defense"
+    ],
+    "cost": [
+      2
+    ],
+    "description": "Whether by a magical barrier of force, foresight into the future, or preternatural speed, you are gifted with extraordinary protection from harm.<br />",
+    "effect": "You gain a +1 bonus to all defenses for each tier you have in this feat. This increases your Toughness, Evasion, and Resolve defenses.<br />"
+  },
+  {
+    "name": "Extraordinary Focus",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Any Extraordinary": 1
+          }
+        ]
+      }
+    },
+    "tags": [
+      "Extraordinary"
+    ],
+    "cost": [
+      3
+    ],
+    "description": "Your extraordinary power stems from your connection with a particular focus, such as a wand, holy symbol, or spellbook.<br />",
+    "effect": "With the approval of your GM, choose a focus from which your power with a single extraordinary attribute stems. Some possibilities include a wand, a crystal ball, a spell book, a holy symbol, a weapon, your voice, or an animal familiar. You cannot use the selected extraordinary attribute without your focus. However, for the purposes of determining your attribute dice for action rolls, treat the chosen attribute as if it was one greater. For all purposes outside of attribute dice, your ability score remains unchanged (feats, banes, boons, etc.).<br />",
+    "special": "If you ever lose your extraordinary focus, voluntarily or involuntarily, you regain the feat points that you have spent on this feat and may spend them as usual.<br />"
+  },
+  {
+    "name": "Extraordinary Healing",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Creation": 5
+          }
+        ]
+      }
+    },
+    "tags": [
+      "Extraordinary",
+      "Creation"
+    ],
+    "cost": [
+      3
+    ],
+    "description": "Your mastery of extraordinary healing is such that you are able to cure mortal wounds that are beyond the power of the average healer.<br />",
+    "effect": "When invoking the Heal boon, you can choose to take one hour instead of the usual invocation time. If you do, you heal an amount of lethal damage equal to the total healing from the successful boon invocation. This lethal damage is healed in addition to the normal hit point damage that your boon heals.<br />"
+  },
+  {
+    "name": "Fast Draw",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 1
+          }
+        ]
+      }
+    },
+    "tags": [
+      "Combat",
+      "Agility"
+    ],
+    "cost": [
+      2
+    ],
+    "description": "Whether you're a samurai warrior, the fastest draw in the West, or a flawlessly trained interstellar soldier, you can get to your weapon faster than your opponent can blink.<br />",
+    "effect": "Once per round, you can draw one additional weapon and sheathe another as a free action. Alternately, you could do the same with any small sized object in your possession.<br />"
+  },
+  {
     "name": "Fast Tracker",
     "prerequisites": {
       "tier1": {
@@ -1330,27 +1472,6 @@
     ],
     "description": "Through extraordinary power or exceptional agility, you can jump exceptionally far.<br />",
     "effect": "You can use your Movement or Agility score instead of your Might score when determining how far you can jump. In addition, you gain advantage 1 per tier on action rolls to jump.<br />"
-  },
-  {
-    "name": "Fast Draw",
-    "prerequisites": {
-      "tier1": {
-        "Attribute": [
-          {
-            "Agility": 1
-          }
-        ]
-      }
-    },
-    "tags": [
-      "Combat",
-      "Agility"
-    ],
-    "cost": [
-      2
-    ],
-    "description": "Whether you're a samurai warrior, the fastest draw in the West, or a flawlessly trained interstellar soldier, you can get to your weapon faster than your opponent can blink.<br />",
-    "effect": "Once per round, you can draw one additional weapon and sheathe another as a free action. Alternately, you could do the same with any small sized object in your possession.<br />"
   },
   {
     "name": "Hallucination",
@@ -1943,7 +2064,7 @@
       3
     ],
     "description": "Whether your are delivering flurry of blows, wielding two weapons, or calling a chain of lightning bolts from the sky, you have mastered the art of delivering multiple attacks.<br />",
-    "effect": "Before attacking, you may declare that you are multi-attacking, and must state how many extra attacks you would like to make. ALL of your attacks this round suffer disadvantage equal to 3 times the number of <strong>additional</strong> attacks you declare (i.e., if you make 2 attacks, you suffer disadvantage 3; 3 attacks suffers disadvantage 6). For each tier of this feat that you possess, reduce the disadvantage penalty by 1.<br /><br />You may use your attacks to make any combination of bane or damaging attacks, but you may not invoke boons. Resolve each attack individually, applying any other multi-targeting options as you wish. You can move between each of these attacks and they can be used to target the same creature more than once. There is no limit to the number of additional attacks you can make using this feat.<br /><br />The number of additional attacks you can make with this feat is limited to 1 + half your level, rounded up. Thus, the limit is 2 additional attacks at 1st level, 3 additional attacks at 3rd level, and 6 additional attacks at 9th level.<br /><br /><strong>Example</strong> - Vax the Deathbringer has Multi Attack Specialist (Tier III). He declares that he will be making three attacks this round (two additional attacks). Therefore, all of his attacks suffer disadvantage 3 (3 x 2 = 6, minus 3 for feat tier 3). His first attack is a necromantic burst targeting a 10'-square. Because of the area of effect, Vax suffers an additional disadvantage 2, making his total disadvantage for that attack 5. For his second attack, Vax casts a spell of blindness on a single foe, making an action roll at disadvantage 3. For his final attack, Vax moves in to melee and uses his touch of death on three foes. Targeting 3 foes incurs an additional disadvantage 3, making his final attack roll suffer a total of disadvantage 6.<br />"
+    "effect": "Before attacking, you may declare that you are multi-attacking, and must state how many extra attacks you would like to make. ALL of your attacks this round suffer disadvantage equal to 3 times the number of <strong>additional</strong> attacks you declare (i.e., if you make 2 attacks, you suffer disadvantage 3; 3 attacks suffers disadvantage 6). For each tier of this feat that you possess, reduce the disadvantage penalty by 1.<br /><br />You may use your attacks to make any combination of bane or damaging attacks, but you may not invoke boons. Resolve each attack individually, applying any other multi-targeting options as you wish. You can move between each of these attacks and they can be used to target the same creature more than once.<br /><br />The number of additional attacks you can make with this feat is limited to 1 + half your level, rounded up. Thus, the limit is 2 additional attacks at 1st level, 3 additional attacks at 3rd level, and 6 additional attacks at 9th level.<br /><br /><strong>Example</strong> - Vax the Deathbringer has Multi Attack Specialist (Tier III). He declares that he will be making three attacks this round (two additional attacks). Therefore, all of his attacks suffer disadvantage 3 (3 x 2 = 6, minus 3 for feat tier 3). His first attack is a necromantic burst targeting a 10'-square. Because of the area of effect, Vax suffers an additional disadvantage 2, making his total disadvantage for that attack 5. For his second attack, Vax casts a spell of blindness on a single foe, making an action roll at disadvantage 3. For his final attack, Vax moves in to melee and uses his touch of death on three foes. Targeting 3 foes incurs an additional disadvantage 3, making his final attack roll suffer a total of disadvantage 6.<br />"
   },
   {
     "name": "Multi-Target Attack Specialist (I – V)",
@@ -2333,127 +2454,6 @@
     ],
     "description": "Your powers of focus are exceptionally honed, allowing you to maintain concentration on multiple extraordinary effects at once.<br />",
     "effect": "When you take the <em>sustain a boon</em> minor action, you may sustain one additional boon per tier of this feat which you possess.<br />"
-  },
-  {
-    "name": "Extraordinary Defense (I - V)",
-    "prerequisites": {
-      "tier1": {
-        "Attribute": [
-          {
-            "Movement": 2
-          },
-          {
-            "Prescience": 2
-          },
-          {
-            "Protection": 2
-          }
-        ]
-      },
-      "tier2": {
-        "Attribute": [
-          {
-            "Movement": 3
-          },
-          {
-            "Prescience": 3
-          },
-          {
-            "Protection": 3
-          }
-        ]
-      },
-      "tier3": {
-        "Attribute": [
-          {
-            "Movement": 4
-          },
-          {
-            "Prescience": 4
-          },
-          {
-            "Protection": 4
-          }
-        ]
-      },
-      "tier4": {
-        "Attribute": [
-          {
-            "Movement": 5
-          },
-          {
-            "Prescience": 5
-          },
-          {
-            "Protection": 5
-          }
-        ]
-      },
-      "tier5": {
-        "Attribute": [
-          {
-            "Movement": 6
-          },
-          {
-            "Prescience": 6
-          },
-          {
-            "Protection": 6
-          }
-        ]
-      }
-    },
-    "tags": [
-      "Extraordinary",
-      "Defense"
-    ],
-    "cost": [
-      2
-    ],
-    "description": "Whether by a magical barrier of force, foresight into the future, or preternatural speed, you are gifted with extraordinary protection from harm.<br />",
-    "effect": "You gain a +1 bonus to all defenses for each tier you have in this feat. This increases your Toughness, Evasion, and Resolve defenses.<br />"
-  },
-  {
-    "name": "Extraordinary Focus",
-    "prerequisites": {
-      "tier1": {
-        "Attribute": [
-          {
-            "Any Extraordinary": 1
-          }
-        ]
-      }
-    },
-    "tags": [
-      "Extraordinary"
-    ],
-    "cost": [
-      3
-    ],
-    "description": "Your extraordinary power stems from your connection with a particular focus, such as a wand, holy symbol, or spellbook.<br />",
-    "effect": "With the approval of your GM, choose a focus from which your power with a single extraordinary attribute stems. Some possibilities include a wand, a crystal ball, a spell book, a holy symbol, a weapon, your voice, or an animal familiar. You cannot use the selected extraordinary attribute without your focus. However, for the purposes of determining your attribute dice for action rolls, treat the chosen attribute as if it was one greater. For all purposes outside of attribute dice, your ability score remains unchanged (feats, banes, boons, etc.).<br />",
-    "special": "If you ever lose your extraordinary focus, voluntarily or involuntarily, you regain the feat points that you have spent on this feat and may spend them as usual.<br />"
-  },
-  {
-    "name": "Extraordinary Healing",
-    "prerequisites": {
-      "tier1": {
-        "Attribute": [
-          {
-            "Creation": 5
-          }
-        ]
-      }
-    },
-    "tags": [
-      "Extraordinary",
-      "Creation"
-    ],
-    "cost": [
-      3
-    ],
-    "description": "Your mastery of extraordinary healing is such that you are able to cure mortal wounds that are beyond the power of the average healer.<br />",
-    "effect": "When invoking the Heal boon, you can choose to take one hour instead of the usual invocation time. If you do, you heal an amount of lethal damage equal to the total healing from the successful boon invocation. This lethal damage is healed in addition to the normal hit point damage that your boon heals.<br />"
   },
   {
     "name": "Swimming",
