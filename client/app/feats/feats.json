@@ -920,30 +920,6 @@
     "effect": "While you are raging you cannot be knocked unconscious. All damage dealt to you should be recorded, possibly resulting in a negative hit point total. Despite any amount of damage, you remain conscious for as long as you can sustain the rage. When the rage ends, if your hit points are below zero, you collapse unconscious.  If you are not healed to zero or more hit points within 1 round of your rage ending, you die.<br />"
   },
   {
-    "name": "Destructive Berserker",
-    "prerequisites": {
-      "tier1": {
-        "Attribute": [
-          {
-            "Might": 7
-          }
-        ],
-        "Feat": [
-          "Berserker"
-        ]
-      }
-    },
-    "tags": [
-      "Extraordinary",
-      "Might"
-    ],
-    "cost": [
-      3
-    ],
-    "description": "Your rage not only puts you into a fearless trance, but enables you to strike down your enemies with ferocious blows.<br />",
-    "effect": "While you are raging, in addition to dice exploding on any maximum die roll (as normal), all of the dice in your dice pool explode on the number 1 below maximum as well (though the total is still the number rolled). This means that d4s explode on a 3 or 4, d6s explode on a 5 or 6, d8s explode on a 7 or 8, and so on.<br />"
-  },
-  {
     "name": "Defensive Reflexes (I - X)",
     "prerequisites": {
       "tier1": {
@@ -1026,6 +1002,30 @@
     ],
     "description": "You are a master of defense, able to predict exactly where your opponent will strike and thwart their attack.<br />",
     "effect": "Any time you use the Defend action, you gain advantage 1 on the action roll per tier you possess of this feat.<br />"
+  },
+  {
+    "name": "Destructive Berserker",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Might": 7
+          }
+        ],
+        "Feat": [
+          "Berserker"
+        ]
+      }
+    },
+    "tags": [
+      "Extraordinary",
+      "Might"
+    ],
+    "cost": [
+      3
+    ],
+    "description": "Your rage not only puts you into a fearless trance, but enables you to strike down your enemies with ferocious blows.<br />",
+    "effect": "While you are raging, in addition to dice exploding on any maximum die roll (as normal), all of the dice in your dice pool explode on the number 1 below maximum as well (though the total is still the number rolled). This means that d4s explode on a 3 or 4, d6s explode on a 5 or 6, d8s explode on a 7 or 8, and so on.<br />"
   },
   {
     "name": "Diehard",
@@ -2067,6 +2067,26 @@
     "effect": "Before attacking, you may declare that you are multi-attacking, and must state how many extra attacks you would like to make. ALL of your attacks this round suffer disadvantage equal to 3 times the number of <strong>additional</strong> attacks you declare (i.e., if you make 2 attacks, you suffer disadvantage 3; 3 attacks suffers disadvantage 6). For each tier of this feat that you possess, reduce the disadvantage penalty by 1.<br /><br />You may use your attacks to make any combination of bane or damaging attacks, but you may not invoke boons. Resolve each attack individually, applying any other multi-targeting options as you wish. You can move between each of these attacks and they can be used to target the same creature more than once.<br /><br />The number of additional attacks you can make with this feat is limited to 1 + half your level, rounded up. Thus, the limit is 2 additional attacks at 1st level, 3 additional attacks at 3rd level, and 6 additional attacks at 9th level.<br /><br /><strong>Example</strong> - Vax the Deathbringer has Multi Attack Specialist (Tier III). He declares that he will be making three attacks this round (two additional attacks). Therefore, all of his attacks suffer disadvantage 3 (3 x 2 = 6, minus 3 for feat tier 3). His first attack is a necromantic burst targeting a 10'-square. Because of the area of effect, Vax suffers an additional disadvantage 2, making his total disadvantage for that attack 5. For his second attack, Vax casts a spell of blindness on a single foe, making an action roll at disadvantage 3. For his final attack, Vax moves in to melee and uses his touch of death on three foes. Targeting 3 foes incurs an additional disadvantage 3, making his final attack roll suffer a total of disadvantage 6.<br />"
   },
   {
+    "name": "Multi-Bane Specialist",
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "Able to inflict both banes (see description)"
+        ]
+      }
+    },
+    "tags": [
+      "Bane",
+      "Combat"
+    ],
+    "cost": [
+      3
+    ],
+    "description": "You have mastered a signature attack that allows you to invoke two banes at once. A blast of ice that blinds and slows your enemy, a thunderous shotgun blast that hurls foes back and knocks them to the ground, and a wormtongue song that puts targets to sleep and alters their memory are all examples of a signature attack that could be created with this feat.<br />",
+    "effect": "Choose two banes that you are able to inflict and that share a common prerequisite attribute. You are able to inflict both banes with a single attack. The required attribute score for combining the banes is equal to the sum of their power levels (e.g., combining knockdown and slowed, both power level 2, would require an attribute score of 4). If the banes target different defenses, you choose which defense your attack targets. On a successful attack roll, the target is inflicted with both banes. They each persist independently of one another and must be resisted separately.<br />",
+    "special": "In order to benefit from the bane focus feat when using a multi-bane attack, you must possess bane focus for both banes.<br />"
+  },
+  {
     "name": "Multi-Target Attack Specialist (I – V)",
     "prerequisites": {
       "tier1": {
@@ -2103,6 +2123,25 @@
     ],
     "description": "You are a master of felling multiple foes at a time, whether it be with a whirlwind of your blade, a hail of arrows, or a ball of flame.<br />",
     "effect": "When you choose this feat, you must decide to focus in area, projectile, or melee attacks.  For each tier, you reduce the disadvantage penalty associated with multi-attacks for your chosen attack type by 1. Whenever you take this feat, you must specify which type of attack you are focusing on, and you may take the feat multiple times to specialize in multiple types of attack.<br />"
+  },
+  {
+    "name": "Multi-Target Boon Expert",
+    "prerequisites": {
+      "tier1": {
+        "Feat": [
+          "Multi-Target Boon Specialist II"
+        ]
+      }
+    },
+    "tags": [
+      "Non-Combat",
+      "Any Attribute"
+    ],
+    "cost": [
+      3
+    ],
+    "description": "You have so mastered the art of aiding groups of allies that you can invoke certain boons effortlessly.<br />",
+    "effect": "When multi-targeting a boon for which you have the Boon Focus feat, you do not need to make an action roll if the disadvantage normally incurred from multi-targeting is completely negated by your Multi-Target Boon Specialist feat. Your invocation automatically succeeds.<br />"
   },
   {
     "name": "Multi-Target Boon Specialist (I – V)",
@@ -2144,67 +2183,6 @@
     "effect": "For each tier of this feat, you reduce the disadvantage penalty associated with invoking boons for multiple targets by 1.<br />"
   },
   {
-    "name": "Multi-Target Boon Expert",
-    "prerequisites": {
-      "tier1": {
-        "Feat": [
-          "Multi-Target Boon Specialist II"
-        ]
-      }
-    },
-    "tags": [
-      "Non-Combat",
-      "Any Attribute"
-    ],
-    "cost": [
-      3
-    ],
-    "description": "You have so mastered the art of aiding groups of allies that you can invoke certain boons effortlessly.<br />",
-    "effect": "When multi-targeting a boon for which you have the Boon Focus feat, you do not need to make an action roll if the disadvantage normally incurred from multi-targeting is completely negated by your Multi-Target Boon Specialist feat. Your invocation automatically succeeds.<br />"
-  },
-  {
-    "name": "Multi-Bane Specialist",
-    "prerequisites": {
-      "tier1": {
-        "Other": [
-          "Able to inflict both banes (see description)"
-        ]
-      }
-    },
-    "tags": [
-      "Bane",
-      "Combat"
-    ],
-    "cost": [
-      3
-    ],
-    "description": "You have mastered a signature attack that allows you to invoke two banes at once. A blast of ice that blinds and slows your enemy, a thunderous shotgun blast that hurls foes back and knocks them to the ground, and a wormtongue song that puts targets to sleep and alters their memory are all examples of a signature attack that could be created with this feat.<br />",
-    "effect": "Choose two banes that you are able to inflict and that share a common prerequisite attribute. You are able to inflict both banes with a single attack. The required attribute score for combining the banes is equal to the sum of their power levels (e.g., combining knockdown and slowed, both power level 2, would require an attribute score of 4). If the banes target different defenses, you choose which defense your attack targets. On a successful attack roll, the target is inflicted with both banes. They each persist independently of one another and must be resisted separately.<br />",
-    "special": "In order to benefit from the bane focus feat when using a multi-bane attack, you must possess bane focus for both banes.<br />"
-  },
-  {
-    "name": "Overpowering Strike",
-    "prerequisites": {
-      "tier1": {
-        "Attribute": [
-          {
-            "Might": 4
-          }
-        ]
-      }
-    },
-    "tags": [
-      "Physical",
-      "Feat Chain",
-      "Might"
-    ],
-    "cost": [
-      2
-    ],
-    "description": "The sheer force of your attacks is so great that you send opponents flying.<br />",
-    "effect": "Each time you deal damage using a weapon with the forceful property, you can choose to push the target five feet away from you.<br />"
-  },
-  {
     "name": "Natural Defense (I - III)",
     "prerequisites": {
       "tier1": {
@@ -2240,6 +2218,28 @@
     ],
     "description": "Whether through draconic heritage, a cyborg exoskeleton, or just a lifetime of conditioning, your skin is tough as nails, allowing your body to deflect blows that would cripple others.<br />",
     "effect": "When you are not wearing armor, you gain an armor bonus to your Toughness and Evasion defenses. You may still gain this bonus when wielding a shield. Your armor bonus is determined by your tier in this feat:<br /><ul><br /><li><strong>Tier 1</strong> - +3 armor bonus</li><br /><li><strong>Tier 2</strong> - +5 armor bonus</li><br /><li><strong>Tier 3</strong> - +7 armor bonus</li><br /></ul><br />"
+  },
+  {
+    "name": "Overpowering Strike",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Might": 4
+          }
+        ]
+      }
+    },
+    "tags": [
+      "Physical",
+      "Feat Chain",
+      "Might"
+    ],
+    "cost": [
+      2
+    ],
+    "description": "The sheer force of your attacks is so great that you send opponents flying.<br />",
+    "effect": "Each time you deal damage using a weapon with the forceful property, you can choose to push the target five feet away from you.<br />"
   },
   {
     "name": "Potent Bane",
@@ -2368,6 +2368,27 @@
     "effect": "When invoking a bane or boon, you may choose to do so as a ritual. The invocation time for a ritual is one increment higher than usual as follows:<br /><ul><br /><li>1 action becomes 1 minute</li><br /><li>1 minute becomes 10 minutes</li><br /><li>10 minutes becomes 1 hour</li><br /><li>1 hour becomes 8 hours</li><br /><li>8 hours becomes 24 hours</li><br /></ul><br /><br /><strong>Tier 1</strong> - You may choose one of the following effects to empower your bane or boon:<br /><br /><ul><br /><li>Increase the range of the effect as follows:<br />  Attribute 5 = 500ft<br /><br />  Attribute 6 = 1/2 mile<br /><br />  Attribute 7 = 1 mile<br /><br />  Attribute 8 = 10 miles<br /><br />  Attribute 9 = 100 miles<br /></li><br /><li>Negate two levels of disadvantage caused by multi-targeting (e.g., Target 2 creatures or a 10' square for free instead of disadvantage 2).</li><br /><li>For your action roll, treat your attribute score as if it was one greater for purposes of determining attribute dice. Note that this doesn’t grant access to banes or boons you could not normally access. It only increases the dice used for the action roll.</li><br /></ul><br /><br /><strong>Tier 2</strong> - You gain the following abilities:<br /><ul><br />  <li>You can lead others to join you in ritual casting as long as they are also able to invoke the bane or boon at the same power level that your are invoking it at. At the conclusion of the ritual, each contributor may choose one of the effects granted by Tier 1 of this feat.</li><br />  <li>You gain the following additional option to choose from when empowering your invocations with ritual magic:</li><br />    <ul><br />    <li>Cause a boon to persist for 1 minute automatically without need to use a sustain action. Furthermore, enemies cannot disrupt the boon through use of a focus action (Though the dispel bane still works).</li><br />    <li>Targets may not make resist rolls against a bane for one minute after it is invokes.</li><br />    </ul><br /></ul><br /><br /><strong>Tier 3</strong> - You gain the ability to permanently bestow or dispel banes and boons. In order to bestow the bane or boon, you must rigorously attend to the ritual process for a number of days equal to the power level of the bane or boon to be invoked or dispelled. During that time you can eat, sleep, and act normally with two exceptions: 1) You must work actively on the ritual and with minimal interruption for 8 hours out of each day. 2) You can leave the area and move about freely during the down time each day, but for the 8 hours of active ritual invocation you must be in the same physical or geographic location where the ritual was initiated. When the invocation time is completed, make an action roll as follows:<br /><ul><br /><li><strong>Bestow Boon</strong> - Make an action roll to invoke the boon as usual. If successful, you cause a non-instantaneous & non-permanent boon to permanently affect the target. The target can thereafter invoke the boon at will, without requiring an action roll to do so. The target does not need to use a sustain action to persist the effect, and the effect can only be dispelled either temporarily with the Dispel bane, or permanently with the Ritual Magic feat (see the Remove Boon entry that follows).</li><br /><li><strong>Bestow Bane</strong> - Make an action roll to invoke the bane as usual. If successful, you cause a non-instantaneous & non-permanent bane to permanently affect the target. The bane persists indefinitely and does not allow resist rolls to end its effects. The effect can be dispelled either temporarily with the Dispel bane, or permanently with the Ritual Magic feat (see the Dispel Bane entry that follows).</li><br /><li><strong>Dispel Boon</strong> - Make an Entropy roll with a Challenge Rating equal to 10 + twice the power level of the boon you are attempting to dispel. If successful, you cause a permanent boon to be forever stripped from the target, causing them to lose the ability to invoke the bane automatically.</li><br /><li><strong>Dispel Bane</strong> - Make an Protection roll with a Challenge Rating equal to 10 + twice the power level of the bane you are attempting to dispel. If successful, you break the curse of a permanent bane afflicting the target, though your target gains no special immunity to it.</li><br /></ul><br />"
   },
   {
+    "name": "Silencing Strike",
+    "prerequisites": {
+      "tier1": {
+        "Attribute": [
+          {
+            "Agility": 4
+          }
+        ]
+      }
+    },
+    "tags": [
+      "Agility",
+      "Physical"
+    ],
+    "cost": [
+      3
+    ],
+    "description": "Like an expert assassin or ninja, you can render your foes completely unable to alert others of your presence.<br />",
+    "effect": "Whenever you successfully hit a target that you have advantage against, that target is afflicted by the silenced bane.<br />"
+  },
+  {
     "name": "Skill Specialization (I - V)",
     "prerequisites": {
       "tier1": {
@@ -2405,27 +2426,6 @@
     "description": "You have the eyes of an eagle, the endurance of an ox, the guile of a fox, or some similar exceptional non-combat talent.<br />",
     "effect": "Choose one attribute. Any time you make a non-attack action roll with the chosen attribute, you gain advantage 1 on the roll per tier of this feat you possess for that attribute.<br />",
     "special": "You can take this feat multiple times. Each time, you can either apply it to a different attribute or increase the feat tier for an attribute you’ve already purchased.<br />"
-  },
-  {
-    "name": "Silencing Strike",
-    "prerequisites": {
-      "tier1": {
-        "Attribute": [
-          {
-            "Agility": 4
-          }
-        ]
-      }
-    },
-    "tags": [
-      "Agility",
-      "Physical"
-    ],
-    "cost": [
-      3
-    ],
-    "description": "Like an expert assassin or ninja, you can render your foes completely unable to alert others of your presence.<br />",
-    "effect": "Whenever you successfully hit a target that you have advantage against, that target is afflicted by the silenced bane.<br />"
   },
   {
     "name": "Superior Concentration (I - III)",
@@ -2626,24 +2626,6 @@
     "effect": "Any time you roll a natural 20 on the d20 for an attack action roll, you roll twice on the subsequent re-roll of the d20 and take the higher result.<br />"
   },
   {
-    "name": "Well-Rounded",
-    "prerequisites": {
-      "tier1": {
-        "Other": [
-          "None"
-        ]
-      }
-    },
-    "tags": [
-      "Non-Combat"
-    ],
-    "cost": [
-      2
-    ],
-    "description": "You have a versatile education, a wide range of experiences, or just plain old good luck. The result is that you're pretty good at things you're not specialized in.<br />",
-    "effect": "Any time you use an attribute with a score of 2 or less to make an action roll outside of combat that is not a bane or boon invocation, you gain advantage 1 to the roll.<br />"
-  },
-  {
     "name": "Wealthy",
     "prerequisites": {
       "tier1": {
@@ -2660,5 +2642,23 @@
     ],
     "description": "Whether you were born into nobility, heir to a great treasure, or simply a well-established merchant, you are wealthier than the average adventurer.<br />",
     "effect": "Your wealth score is increased by 1.<br />"
+  },
+  {
+    "name": "Well-Rounded",
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
+    "tags": [
+      "Non-Combat"
+    ],
+    "cost": [
+      2
+    ],
+    "description": "You have a versatile education, a wide range of experiences, or just plain old good luck. The result is that you're pretty good at things you're not specialized in.<br />",
+    "effect": "Any time you use an attribute with a score of 2 or less to make an action roll outside of combat that is not a bane or boon invocation, you gain advantage 1 to the roll.<br />"
   }
 ]
