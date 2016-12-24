@@ -58,5 +58,10 @@
     "urlPrefix": "/noncommercial-terms",
     "type": "load",
     "src": "app/noncommercialTerms/noncommercialTerms"
+  },{
+    "stateName": "license",
+    "urlPrefix": "/community-license",
+    "type": "load",
+    "src": "app/license/license"
   }
 ]

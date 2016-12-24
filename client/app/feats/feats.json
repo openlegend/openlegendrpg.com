@@ -534,7 +534,7 @@
     ],
     "description": "You have a special gift: it might be the result of your heritage, a close encounter with magical energy, or the result of years of training with a master. In any case, although you do not necessarily possess the aptitude to work extraordinary powers for yourself or create a desired effect with your physical capabilities alone, you are able to reliably replicate a single boon.<br />",
     "effect": "When you choose this feat, choose one boon that you do not have the requisite attribute to invoke. The cost of this feat is equal to the Power Level of the chosen boon. You can invoke the chosen boon despite lacking the necessary attribute. For invocation rolls, treat your attribute score as the Power Level of the boon. If the boons has multiple attribute prerequisite options, you choose one attribute when you take this feat. Additionally, you count as having access to the chosen boon for the purpose of meeting feat prerequisites, and your attribute for meeting such prerequisites is equal to the Power Level of the boon. The Boon Access feat bypasses the normal attribute score restrictions based on character level, so a first level character could spend all 6 of their feat points to begin play with access to a Power Level 6 boon.<br />You may acquire this feat multiple times. Each time, select a new boon.<br />",
-    "special": "If you ever meet the attribute prerequisite for the chosen boon, you may choose at that time to lose this feat and regain the feat points spent. Re-allocate them as you choose.<br />"
+    "special": "Note that this feat can give access to high-powered boons with a potential for very dramatic impact on the storyline of a game. As such, using this feat to access a boon of Power Level 6 or higher should be approved by the GM before using it in a game.<br />If you ever meet the attribute prerequisite for the chosen boon, you may choose at that time to lose this feat and regain the feat points spent. Re-allocate them as you choose.<br />"
   },
   {
     "name": "Boon Focus (I - III)",
@@ -564,7 +564,7 @@
       3
     ],
     "description": "You are specialized in the use a particular boon that is iconic to your character.<br />",
-    "effect": "<ul><br /><li><strong>Tier 1</strong> - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. If the invocation has multiple targets, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.</li><br /><li><strong>Tier 2</strong> - When your invocation includes multiple targets, you gain advantage 3 on your action roll to invoke the boon. Additionally, you may invoke the boon one time increment faster, as follows: If the invocation time is a major action or move action, it becomes a minor action.  If the invocation time is 1 focus action, it becomes 1 major action. If the invocation time is 1 minute, it becomes 1 focus action.  If the invocation time is 10 minutes, it becomes 1 minute.  If the invocation time is 1 hour, it becomes 10 minutes.  If the invocation time is 8 hours, it becomes 1 hour.</li><br /><li><strong>Tier 3</strong> - The effect at tier 3 varies based on the duration of the boon:<br />  <br /><br />  <strong>If the chosen boon has a duration of \"sustain persists\"</strong>, you gain advantage 4 on your action roll to invoke it when multi-targeting. Additionally, the boon is always active for your character and passively persists, without requiring you to use a minor action to sustain it. If the boon is somehow temporarily cancelled (such as by the dispel bane), it resumes automatically at the start of your next turn.<br />  <br /><br />  <strong>If the boon has a different duration</strong>, you gain advantage 5 on your action roll to invoke it when multi-targeting.<br /></li><br /></ul><br />"
+    "effect": "<ul><br /><li><strong>Tier 1</strong> - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. You can invoke the boon at any of the power levels you could access via your other means. If the invocation is not a single target, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.</li><br /><li><strong>Tier 2</strong> - You gain advantage 3 on your action roll to invoke the boon if you are not single-targeting. Additionally, you may invoke the boon one time increment faster, as follows: If the invocation time is a major action or move action, it becomes a minor action.  If the invocation time is 1 focus action, it becomes 1 major action. If the invocation time is 1 minute, it becomes 1 focus action.  If the invocation time is 10 minutes, it becomes 1 minute.  If the invocation time is 1 hour, it becomes 10 minutes.  If the invocation time is 8 hours, it becomes 1 hour.</li><br /><li><strong>Tier 3</strong> - The effect at tier 3 varies based on the duration of the boon:<br />  <br /><br />  <strong>If the chosen boon has a duration of \"sustain persists\"</strong>, you gain advantage 4 on your action roll to invoke if you are not single-targeting. Additionally, the boon is always active for your character and passively persists, without requiring you to use a minor action to sustain it. If the boon is somehow temporarily cancelled (such as by the dispel bane), it resumes automatically at the start of your next turn.<br />  <br /><br />  <strong>If the boon has a different duration</strong>, you gain advantage 5 on your action roll to invoke if you are not single-targeting.<br /></li><br /></ul><br />"
   },
   {
     "name": "Breakfall (I - IX)",
@@ -1521,29 +1521,6 @@
     "effect": "When you invoke the hallucination form of Phantasm bane, you may target additional creatures within range as determined by your Influence score. This does not count as a multi-target attack and thus does not incur disadvantage on your action roll.<br /><ul><br /><li><strong>Influence 7</strong> - 5 Target</li><br /><li><strong>Influence 8</strong> - 10 Targets</li><br /><li><strong>Influence 9</strong> - 50 Targets</li><br /></ul><br />"
   },
   {
-    "name": "Heavy Weapon Master",
-    "prerequisites": {
-      "tier1": {
-        "Attribute": [
-          {
-            "Might": 5
-          }
-        ]
-      }
-    },
-    "tags": [
-      "Combat",
-      "Physical",
-      "Agility",
-      "Might"
-    ],
-    "cost": [
-      3
-    ],
-    "description": "Due to your strength and training, you are able to wield exceptionally heavy weapons with ease.<br />",
-    "effect": "You can wield two-handed melee weapons in one hand. When you do, you still gain the usual advantage granted by two-handed weapons.<br />"
-  },
-  {
     "name": "Hospitaler",
     "prerequisites": {
       "tier1": {
@@ -1631,7 +1608,7 @@
       1
     ],
     "description": "You are expertly focused on dealing with a particular species, race, or faction.<br />",
-    "effect": "Choose a species, race, or faction (e.g., dragons, gnolls, or the Red Knights). You learn the primary conversational language of that species, and at the GM's discretion, you may have some level of access to other special forms of communication (such as thieves' cant or secret hand signals). Furthermore, You gain advantage 1 per tier of this feat to all Mental attribute rolls (Learning, Logic, Perception, and Will) pertaining to your chosen group.<br />"
+    "effect": "Choose a species, race, or faction (e.g., dragons, gnolls, or the Red Knights). You learn the primary conversational language of that species, and at the GM's discretion, you may have some level of access to other special forms of communication (such as thieves' cant or secret hand signals). Furthermore, you gain advantage 1 per tier of this feat to all Mental attribute rolls (Learning, Logic, Perception, and Will) pertaining to your chosen group.<br />"
   },
   {
     "name": "Indomitable Endurance (I - IX)",
@@ -1743,7 +1720,7 @@
       2
     ],
     "description": "You fight with such bravery, heroism, or bravado that your allies are ispired to fight beyond their usual mettle.<br />",
-    "effect": "<ul><br /><li>Once per round, when you deal 10 or more points of damage to an enemy, you can grant healing to your allies as outlined below. In order to gain this healing, allies must be within a range of 5' times your Presence score.</li><br /><li><strong>Tier 1</strong> - A single ally that can see the attack heals 1d4 HP.</li><br /><li><strong>Tier 2</strong> - A number of allies equal to your Presence score who can see the attack heal 1d4 HP.</li><br /><li><strong>Tier 3</strong> - All allies who can see the attack heal 2d4 HP.</li><br /></ul><br />"
+    "effect": "Once per round, when your damaging roll exceeds an enemy's defense by 10 or more, you can grant healing to your allies as outlined below. In order to gain this healing, allies must be within a range of 5' times your Presence score.<br /><ul><br /><li><strong>Tier 1</strong> - A single ally that can see the attack heals 1d4 HP.</li><br /><li><strong>Tier 2</strong> - A number of allies equal to your Presence score who can see the attack heal 1d4 HP.</li><br /><li><strong>Tier 3</strong> - All allies who can see the attack heal 2d4 HP.</li><br /></ul><br />"
   },
   {
     "name": "Knowledge (I - III)",
@@ -2258,7 +2235,7 @@
       3
     ],
     "description": "You are so adept at a particular form of attack that your foes struggle to shake off the effects. Perhaps the flames of your fireballs burn hotter. Or maybe you've developed a special chemical to mix in with your blinding powder. Whatever the source and whatever the effect, your enemies cower before your legendary attack.<br />",
-    "effect": "Choose one bane that you can invoke and that has a duration of \"resist ends\". When a target makes a resist roll to shake off your invocation of the chosen bane, they roll two d20s and use the lower die.<br />"
+    "effect": "Choose one bane that you can invoke and that has a duration of \"resist ends\". When a target uses the Resist action to shake off your invocation of the chosen bane, they roll two d20s and use the lower die.<br />"
   },
   {
     "name": "Reactionary Berserker",
@@ -2330,7 +2307,7 @@
       3
     ],
     "description": "Whether through luck, extraordinary will, or exceptional courage, you are able to shake off banes quicker than others.<br />",
-    "effect": "Any time you make a Resist roll, you have Advantage on the d20 roll (roll 2 d20 and keep the higher, contrary to major action rolls)<br />"
+    "effect": "Any time you take the Resist action, you roll the d20 twice and keep the higher result.<br />"
   },
   {
     "name": "Ritual Magic (I - III)",
@@ -2365,7 +2342,7 @@
       2
     ],
     "description": "By channeling your extraordinary powers through extensive rituals, such as meditation, fasting, blood letting, and sacrifices, you are able to increase the strength of your invocations.<br />",
-    "effect": "When invoking a bane or boon, you may choose to do so as a ritual. The invocation time for a ritual is one increment higher than usual as follows:<br /><ul><br /><li>1 action becomes 1 minute</li><br /><li>1 minute becomes 10 minutes</li><br /><li>10 minutes becomes 1 hour</li><br /><li>1 hour becomes 8 hours</li><br /><li>8 hours becomes 24 hours</li><br /></ul><br /><br /><strong>Tier 1</strong> - You may choose one of the following effects to empower your bane or boon:<br /><br /><ul><br /><li>Increase the range of the effect as follows:<br />  Attribute 5 = 500ft<br /><br />  Attribute 6 = 1/2 mile<br /><br />  Attribute 7 = 1 mile<br /><br />  Attribute 8 = 10 miles<br /><br />  Attribute 9 = 100 miles<br /></li><br /><li>Negate two levels of disadvantage caused by multi-targeting (e.g., Target 2 creatures or a 10' square for free instead of disadvantage 2).</li><br /><li>For your action roll, treat your attribute score as if it was one greater for purposes of determining attribute dice. Note that this doesn’t grant access to banes or boons you could not normally access. It only increases the dice used for the action roll.</li><br /></ul><br /><br /><strong>Tier 2</strong> - You gain the following abilities:<br /><ul><br />  <li>You can lead others to join you in ritual casting as long as they are also able to invoke the bane or boon at the same power level that your are invoking it at. At the conclusion of the ritual, each contributor may choose one of the effects granted by Tier 1 of this feat.</li><br />  <li>You gain the following additional option to choose from when empowering your invocations with ritual magic:</li><br />    <ul><br />    <li>Cause a boon to persist for 1 minute automatically without need to use a sustain action. Furthermore, enemies cannot disrupt the boon through use of a focus action (Though the dispel bane still works).</li><br />    <li>Targets may not make resist rolls against a bane for one minute after it is invokes.</li><br />    </ul><br /></ul><br /><br /><strong>Tier 3</strong> - You gain the ability to permanently bestow or dispel banes and boons. In order to bestow the bane or boon, you must rigorously attend to the ritual process for a number of days equal to the power level of the bane or boon to be invoked or dispelled. During that time you can eat, sleep, and act normally with two exceptions: 1) You must work actively on the ritual and with minimal interruption for 8 hours out of each day. 2) You can leave the area and move about freely during the down time each day, but for the 8 hours of active ritual invocation you must be in the same physical or geographic location where the ritual was initiated. When the invocation time is completed, make an action roll as follows:<br /><ul><br /><li><strong>Bestow Boon</strong> - Make an action roll to invoke the boon as usual. If successful, you cause a non-instantaneous & non-permanent boon to permanently affect the target. The target can thereafter invoke the boon at will, without requiring an action roll to do so. The target does not need to use a sustain action to persist the effect, and the effect can only be dispelled either temporarily with the Dispel bane, or permanently with the Ritual Magic feat (see the Remove Boon entry that follows).</li><br /><li><strong>Bestow Bane</strong> - Make an action roll to invoke the bane as usual. If successful, you cause a non-instantaneous & non-permanent bane to permanently affect the target. The bane persists indefinitely and does not allow resist rolls to end its effects. The effect can be dispelled either temporarily with the Dispel bane, or permanently with the Ritual Magic feat (see the Dispel Bane entry that follows).</li><br /><li><strong>Dispel Boon</strong> - Make an Entropy roll with a Challenge Rating equal to 10 + twice the power level of the boon you are attempting to dispel. If successful, you cause a permanent boon to be forever stripped from the target, causing them to lose the ability to invoke the bane automatically.</li><br /><li><strong>Dispel Bane</strong> - Make an Protection roll with a Challenge Rating equal to 10 + twice the power level of the bane you are attempting to dispel. If successful, you break the curse of a permanent bane afflicting the target, though your target gains no special immunity to it.</li><br /></ul><br />"
+    "effect": "When invoking a bane or boon, you may choose to do so as a ritual. The invocation time for a ritual is one increment higher than usual as follows:<br /><ul><br /><li>1 action becomes 1 minute</li><br /><li>1 minute becomes 10 minutes</li><br /><li>10 minutes becomes 1 hour</li><br /><li>1 hour becomes 8 hours</li><br /><li>8 hours becomes 24 hours</li><br /></ul><br /><br /><strong>Tier 1</strong> - You may choose one of the following effects to empower your bane or boon:<br /><br /><ul><br /><li>Increase the range of the effect as follows:<br />  Attribute 5 = 500ft<br /><br />  Attribute 6 = 1/2 mile<br /><br />  Attribute 7 = 1 mile<br /><br />  Attribute 8 = 10 miles<br /><br />  Attribute 9 = 100 miles<br /></li><br /><li>Negate two levels of disadvantage caused by multi-targeting (e.g., Target 2 creatures or a 10' square for free instead of disadvantage 2).</li><br /><li>For your action roll, treat your attribute score as if it was one greater for purposes of determining attribute dice. Note that this doesn’t grant access to banes or boons you could not normally access. It only increases the dice used for the action roll.</li><br /></ul><br /><br /><strong>Tier 2</strong> - You gain the following abilities:<br /><ul><br />  <li>You can lead others to join you in ritual casting as long as they are also able to invoke the bane or boon at the same power level that your are invoking it at. At the conclusion of the ritual, each contributor may choose one of the effects granted by Tier 1 of this feat.</li><br />  <li>You gain the following additional option to choose from when empowering your invocations with ritual magic:</li><br />    <ul><br />    <li>Cause a boon to persist for 1 minute automatically without need to use a sustain action. Furthermore, enemies cannot end the boon through use of a disrupting attack (Though the dispel bane still works).</li><br />    <li>Targets may not make resist rolls against a bane for one minute after it is invokes.</li><br />    </ul><br /></ul><br /><br /><strong>Tier 3</strong> - You gain the ability to permanently bestow or dispel banes and boons. In order to bestow the bane or boon, you must rigorously attend to the ritual process for a number of days equal to the power level of the bane or boon to be invoked or dispelled. During that time you can eat, sleep, and act normally with two exceptions: 1) You must work actively on the ritual and with minimal interruption for 8 hours out of each day. 2) You can leave the area and move about freely during the down time each day, but for the 8 hours of active ritual invocation you must be in the same physical or geographic location where the ritual was initiated. When the invocation time is completed, make an action roll as follows:<br /><ul><br /><li><strong>Bestow Boon</strong> - Make an action roll to invoke the boon as usual. If successful, you cause a non-instantaneous & non-permanent boon to permanently affect the target. The target can thereafter invoke the boon at will, without requiring an action roll to do so. The target does not need to use a sustain action to persist the effect, and the effect can only be dispelled either temporarily with the Dispel bane, or permanently with the Ritual Magic feat (see the Remove Boon entry that follows).</li><br /><li><strong>Bestow Bane</strong> - Make an action roll to invoke the bane as usual. If successful, you cause a non-instantaneous & non-permanent bane to permanently affect the target. The bane persists indefinitely and does not allow resist rolls to end its effects. The effect can be dispelled either temporarily with the Dispel bane, or permanently with the Ritual Magic feat (see the Dispel Bane entry that follows).</li><br /><li><strong>Dispel Boon</strong> - Make an Entropy roll with a Challenge Rating equal to 10 + twice the power level of the boon you are attempting to dispel. If successful, you cause a permanent boon to be forever stripped from the target, causing them to lose the ability to invoke the bane automatically.</li><br /><li><strong>Dispel Bane</strong> - Make an Protection roll with a Challenge Rating equal to 10 + twice the power level of the bane you are attempting to dispel. If successful, you break the curse of a permanent bane afflicting the target, though your target gains no special immunity to it.</li><br /></ul><br />"
   },
   {
     "name": "Silencing Strike",
@@ -2604,8 +2581,8 @@
     "cost": [
       1
     ],
-    "description": "Whether this power manifests itself as vines that grow in your wake, a magical ward against detection, or an illusory veil, the effect is the same: you are extraordinarily protected from being tracked.<br />",
-    "effect": "Your travel is veiled by magic that conceals your tracks and any evidence of your passage even after you are far away. It is impossible to follow your tracks except by extraordinary means.<br />"
+    "description": "Whether this power manifests itself as vines that grow in your wake, a magical ward against detection, or an illusory veil, the effect is the same: you are protected from being tracked.<br />",
+    "effect": "Your travel is veiled by special means that conceal your tracks and any evidence of your passage even after you are far away. It is impossible to follow your tracks except by extraordinary means.<br />"
   },
   {
     "name": "Vicious Strike",
@@ -2623,7 +2600,7 @@
       2
     ],
     "description": "Whether through brute force, lethal precision, or volatile magic, a deadly attack delivered by you is exceptionally vicious.<br />",
-    "effect": "Any time you roll a natural 20 on the d20 for an attack action roll, you roll twice on the subsequent re-roll of the d20 and take the higher result.<br />"
+    "effect": "Any time you roll a natural 20 on the d20 for an attack action roll, you roll twice on all subsequent d20 re-rolls and take the higher result.<br />"
   },
   {
     "name": "Wealthy",
