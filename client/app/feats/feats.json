@@ -20,7 +20,7 @@
       3
     ],
     "description": "You have the ability to transform from one persona to another, whether that be through bodily transformation like a werewolf or through exterior mechinisms, such as a cybernetically enhanced soldier who can call forth a symbiotic mech suit.<br />",
-    "effect": "Upon taking this feat, you build a single alternate form using the normal character creation rules, though your attribute and feat points are determined by your tier in this feat:<br /><ul><br /><li>Tier 1 – Half of your primary form's attribute points (rounded up), and 3 feat points.</li><br /><li>Tier 2 – Same attribute points as your primary form, and 3 feat points per level.</li><br /></ul><br />Whenever your primary form gains new attribute points or levels up, your alternate form also gains points according to the above formulas.<br />You may transform from one form to another as a focus action. Each form is treated as a completely different character for mechanical purposes - possessing different attributes, feats, perks, flaws, and other defining characteristics. Your alternate form does, however, retain the ability to transform back into your primary form.<br />In order to keep track of hit points, you should always record the total damage that your character has suffered. When transforming, your damage remains with you even if your maximum hit points change. For example, Dr. Jekyll has a max HP of 15 and Mr. Hyde has a max HP of 30. During combat, Mr. Hyde suffers 10 damage. When he later transforms back into Dr. Jekyll, the 10 damage remains and is subtracted from his new maximum, leaving the doctor with 5 out of 15 hit points.<br />",
+    "effect": "Upon taking this feat, you build a single alternate form using the normal character creation rules, though your attribute and feat points are determined by your tier in this feat:<br /><ul><br /><li>Tier 1 - Half of your primary form's attribute points (rounded up), and 3 feat points.</li><br /><li>Tier 2 - Same attribute points as your primary form, and 3 feat points per level.</li><br /></ul><br />Whenever your primary form gains new attribute points or levels up, your alternate form also gains points according to the above formulas.<br />You may transform from one form to another as a focus action. Each form is treated as a completely different character for mechanical purposes - possessing different attributes, feats, perks, flaws, and other defining characteristics. Your alternate form does, however, retain the ability to transform back into your primary form.<br />In order to keep track of hit points, you should always record the total damage that your character has suffered. When transforming, your damage remains with you even if your maximum hit points change. For example, Dr. Jekyll has a max HP of 15 and Mr. Hyde has a max HP of 30. During combat, Mr. Hyde suffers 10 damage. When he later transforms back into Dr. Jekyll, the 10 damage remains and is subtracted from his new maximum, leaving the doctor with 5 out of 15 hit points.<br />",
     "special": "When selecting feats for your alternate form, you may not select the <strong>Alternate Form</strong> feat.<br />You may take this feat multiple times. Each time grants you access to an additional form.<br />"
   },
   {
@@ -243,19 +243,16 @@
     "special": "You may take this feat multiple times for the same type of attack. Your total advantage to attacks with the attack is equal to your tier for that particular attack mode.  You can also specialize in different attacks by purchasing the feat again. For example, a character might have Attack Specialization (Tier 2) for Fire attacks and Attack Specialization (Tier 4) for Long Sword.<br />"
   },
   {
-    "name": "Attribute Substitution",
+    "name": "Attribute Substitution (I - II)",
     "prerequisites": {
       "tier1": {
-        "Attribute": [
-          {
-            "Any Social": 4
-          },
-          {
-            "Any Mental": 4
-          },
-          {
-            "Any Extraordinary": 4
-          }
+        "Other": [
+          "None"
+        ]
+      },
+      "tier2": {
+        "Other": [
+          "None"
         ]
       }
     },
@@ -263,11 +260,11 @@
       "Any Attribute"
     ],
     "cost": [
-      3
+      2
     ],
-    "description": "Your prowess in an extraordinary, mental, or social attribute empowers a physical aspect of your character, allowing you to use that attribute for tasks normally reserved for another attribute.  Examples of Attribute Substitution in play include a martial artist who is physically weak but capable of using internal chi to throw and disable opponents, as well as an anatomical genius who uses their intelligence to make vital strikes rather than their dexterity.<br />",
-    "effect": "When you purchase this feat, you create a permanent link between two attributes: one stronger (the primary attribute) and one weaker (the dependent attribute). You may use your score in the primary attribute in place of the dependent attribute for the following situations:<br /><ul><br /><li>Making action rolls</li><br /><li>Calculating hit points, defenses, and other secondary statistics</li><br /><li>Meeting feat, bane, and boon prerequisites</li><br /><li>Other situations at the GM's discretion</li><br /></ul><br />The relationship formed by your two attributes is subject to case-by-case approval by the GM. It must be logical and consistent with the story you are trying to tell. For example, a bard who subsitutes her Presence for her Might to represent her dance-based melee fighting style would likely not get to use her Presence Score for determining her carrying capacity. Furthermore, the GM should prevent players from creating illogical substitutions that are purely aimed at making their characters unreasonably powerful. Two examples of proper uses of this feat include an analytical warrior or martial artist who analyzes angles, leverage, and physics to substitute Logic for Might, or a gunslinger who channels dark energy, giving her deadshot accuracy and substituting Entropy for Agility.<br />",
-    "special": "This feat can only be purchased once. In addition, the primary attribute must be either social, mental, or extraordinary, while the substituted attribute must be physical.<br />"
+    "description": "Your prowess in an extraordinary, mental, or social attribute is linked in a way that empowers another attribute of your character, allowing you to use that attribute for tasks normally reserved for another.  Examples of Attribute Substitution in play include a martial artist who is physically weak but capable of using internal chi to throw and disable opponents, an anatomical genius who uses their intelligence to make vital strikes rather than their dexterity, or a gunman who's deadshot aim is the result of a dark pact.<br />",
+    "effect": "When you purchase this feat, you create a permanent link between two attributes: one stronger (the primary attribute) and one weaker (the dependent attribute). You may use your score in the primary attribute in place of the dependent attribute for different purposes depending on which tier of the feat you have:<br /><ul><br /><li><strong>Tier 1</strong><br />  <ul><br />  <li>Making non-attack action rolls</li><br />  <li>Calculating hit points, defenses, and other secondary statistics</li><br />  <li>Meeting feat, bane, and boon prerequisites</li><br />  <li>Other situations at the GM's discretion</li><br />  </ul><br /></li><br /><li><strong>Tier 2</strong><br />  <ul><br />  <li>Making attack action rolls</li><br />  </ul><br /></ul><br />The relationship formed by your two attributes is subject to case-by-case approval by the GM and must be cleared with them first. The link must be logical and consistent with the story you are trying to tell. For example, a bard who subsitutes her Presence for her Might to represent her dance-based melee fighting style would likely not get to use her Presence Score for determining her carrying capacity. Furthermore, the GM should prevent players from creating illogical substitutions that are purely aimed at making their characters unreasonably powerful. Two examples of proper uses of this feat include an analytical warrior or martial artist who analyzes angles, leverage, and physics to substitute Logic for Might, or a gunslinger who channels dark energy, giving her deadshot accuracy and substituting Entropy for Agility.<br />",
+    "special": "This feat cannot be purchased to link attributes beyond the initial two (primary and secondary).<br />"
   },
   {
     "name": "Bane Focus",
@@ -374,7 +371,7 @@
       3
     ],
     "description": "Not only are your battle reflexes uncanny, but you can deal slowing blows with your defensive strikes.<br />",
-    "effect": "If you deal damage with a Defend action via the Battlefield Defender feat, you can automatically trigger the Slowed bane.  If the attack hits and the target has already moved more than 2 squares, the remainder of their movement is cancelled until the start of their next turn.<br />"
+    "effect": "If you deal damage with a Defend action via the Battlefield Defender feat, you can automatically trigger the Slowed bane. If the attack hits and the target has already moved more than 10', the remainder of their movement is cancelled until the start of their next turn.<br />"
   },
   {
     "name": "Battlefield Punisher - Stunned",
@@ -486,7 +483,7 @@
       2
     ],
     "description": "Your battlefield prowess allows you to capitalize on windows of opportunity that others don't notice, making you far more deadly in melee combat.<br />",
-    "effect": "You may make an additional opportunity attack per round for each tier of this feat your possess. You can only make one opportunity attack per triggering action (e.g., you cannot make multiple attacks against the same foe when they leave your threatened square).<br />"
+    "effect": "You may make an additional opportunity attack per round for each tier of this feat your possess. You can only make one opportunity attack per triggering action (e.g., you cannot make multiple attacks against the same foe when they leave your threatened space).<br />"
   },
   {
     "name": "Berserker",
@@ -850,10 +847,10 @@
       3
     ],
     "description": "Your relentless blows not only knock your opponents back, but also knock them off their feet completely.<br />",
-    "effect": "Any time that you deal damage to an enemy, in addition to pushing them 5 feet (if you choose) from the Overpowering Strike feat, you can also knock them down in the square where the forced move ends; the target suffers the effects of the knockdown bane.<br />"
+    "effect": "Any time that you deal damage to an enemy, in addition to pushing them 5 feet (if you choose) from the Overpowering Strike feat, you can also knock them down in the space where the forced move ends; the target suffers the effects of the knockdown bane.<br />"
   },
   {
-    "name": "Death Blow (I – III)",
+    "name": "Death Blow (I - III)",
     "prerequisites": {
       "tier1": {
         "Attribute": [
@@ -894,7 +891,7 @@
       3
     ],
     "description": "You are able to quickly finish off enemies that are near death and silence them before they cry out. This attack is one that is commonly seen used by assassins who can silently eliminate weaker enemies without being detected.<br />",
-    "effect": "<ul><br /><li><strong>Tier 1</strong> - If you damage an enemy with a Lethal Strike and their total HP is 5 or less after the attack, then you can choose to reduce them to zero HP instead. In addition, you can choose to silence any enemy reduced to zero hit points by a melee or projectile attack from you.</li><br /><li><strong>Tier 2</strong> – Your death blow HP threshold increases from 5 to 10. In addition, on a successful melee Lethal Strike, provided you have a hand free to cover their mouth or use a garrote (or similar strangling implement), the Silenced bane is automatically inflicted without counting against your usual 1 bane per attack limit.</li><br /><li><strong>Tier 3</strong> – Your death blow HP threshold increases from 10 to 15. In addition, on a successful Lethal Strike, the Stunned bane is automatically inflicted without counting against your usual 1 bane per attack limit.</li><br /></ul><br />"
+    "effect": "<ul><br /><li><strong>Tier 1</strong> - If you damage an enemy with a Lethal Strike and their total HP is 5 or less after the attack, then you can choose to reduce them to zero HP instead. In addition, you can choose to silence any enemy reduced to zero hit points by a melee or projectile attack from you.</li><br /><li><strong>Tier 2</strong> - Your death blow HP threshold increases from 5 to 10. In addition, on a successful melee Lethal Strike, provided you have a hand free to cover their mouth or use a garrote (or similar strangling implement), the Silenced bane is automatically inflicted without counting against your usual 1 bane per attack limit.</li><br /><li><strong>Tier 3</strong> - Your death blow HP threshold increases from 10 to 15. In addition, on a successful Lethal Strike, the Stunned bane is automatically inflicted without counting against your usual 1 bane per attack limit.</li><br /></ul><br />"
   },
   {
     "name": "Deathless Berserker",
@@ -1318,7 +1315,7 @@
     "effect": "You can move at your full speed while tracking your quarry rather than the reduced speed typically incurred at the GM's discretion.<br />"
   },
   {
-    "name": "Ferocious Minions",
+    "name": "Ferocious Minions (I - III)",
     "prerequisites": {
       "tier1": {
         "Attribute": [
@@ -1353,7 +1350,7 @@
     "effect": "Creatures under the effects of your Charmed or Dominated bane gain advantage 1 on all attack rolls to defend or help you for each tier of this feat you possess.<br />"
   },
   {
-    "name": "Fleet of Foot (I – III)",
+    "name": "Fleet of Foot (I - III)",
     "prerequisites": {
       "tier1": {
         "Attribute": [
@@ -1426,7 +1423,7 @@
     "effect": "You gain a flight speed equal to your normal speed. At the GM's discretion, certain hostile actions may be capable of canceling your flight, sending you hurtling to your doom. If your flight is anatomical, an Immobile bane might render your wings immovable, if telekinetic, an application of the Dispel bane may cancel your flight.<br />"
   },
   {
-    "name": "Great Leap (I – III)",
+    "name": "Great Leap (I - III)",
     "prerequisites": {
       "tier1": {
         "Attribute": [
@@ -1752,7 +1749,7 @@
     "effect": "When you purchase this feat, choose a sphere of knowledge from the list below or, with the GM’s approval, create a new one. <br /><br />Example Spheres of knowledge include alchemy, arcane, supernatural, engineering, geography, history, location (must specify), anatomy, medicine, explosives, computers, herbalism, and wilderness.<br /><br />Your tier in this feat determines how knowledgeable you are within your chosen sphere.<br /><ul><br /><li><strong>Tier 1</strong> - You automatically succeed on any Learning check related to your chosen sphere of knowledge with a CR of 16 or lower. For higher CRs, your Learning attribute is considered to be 3 for the action roll unless your Learning score is already 3 or higher, in which case you gain advantage 1 on the roll.</li><br /><li><strong>Tier 2</strong> -  You automatically succeed on any Learning check related to your chosen sphere of knowledge with a CR of 22 or lower. For higher CRs, your Learning attribute is considered to be 6 for the action roll unless your Learning score is already 6 or higher, in which case you gain advantage 1 on the roll.</li><br /><li><strong>Tier 3</strong> -  You automatically succeed on any Learning check related to your chosen sphere of knowledge with a CR of 26 or lower. For higher CRs, your Learning attribute is considered to be 8 for the action roll unless your Learning score is already 8 or higher, in which case you gain advantage 1 on the roll.</li><br /></ul><br />"
   },
   {
-    "name": "Lethal Strike (I – IX)",
+    "name": "Lethal Strike (I - IX)",
     "prerequisites": {
       "tier1": {
         "Attribute": [
@@ -2001,7 +1998,7 @@
     "effect": "When you use the Shapeshift boon, you may take on the features of a specific creature. For example, instead of merely transforming into an elf, you can assume the guise of Galdion the elven king. The disguise is near perfect for those examining you visually. If your behavior or other signs provide reasonable suspicion, an onlooker can attempt a Perception check with a Challenge Rating equal to 10 +  triple your Alteration or Deception score, whichever is higher. If they succeed, they will recognize your disguise.<br />"
   },
   {
-    "name": "Multi-Attack Specialist (I – VI)",
+    "name": "Multi-Attack Specialist (I - VI)",
     "prerequisites": {
       "tier1": {
         "Other": [
@@ -2064,7 +2061,7 @@
     "special": "In order to benefit from the bane focus feat when using a multi-bane attack, you must possess bane focus for both banes.<br />"
   },
   {
-    "name": "Multi-Target Attack Specialist (I – V)",
+    "name": "Multi-Target Attack Specialist (I - V)",
     "prerequisites": {
       "tier1": {
         "Other": [
@@ -2121,7 +2118,7 @@
     "effect": "When multi-targeting a boon for which you have the Boon Focus feat, you do not need to make an action roll if the disadvantage normally incurred from multi-targeting is completely negated by your Multi-Target Boon Specialist feat. Your invocation automatically succeeds.<br />"
   },
   {
-    "name": "Multi-Target Boon Specialist (I – V)",
+    "name": "Multi-Target Boon Specialist (I - V)",
     "prerequisites": {
       "tier1": {
         "Other": [

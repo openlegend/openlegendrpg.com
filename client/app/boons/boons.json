@@ -438,28 +438,6 @@
     "special": "You can dispel even higher level banes, but your roll total must be double the banes normal Power Level. So, a Power Level 9 bane can be dispelled on a roll of 46. This is only possible if the boon is invoked by a dice roll.<br />"
   },
   {
-    "name": "Retributive Barrier",
-    "tags": [
-      "Extraordinary"
-    ],
-    "power": [
-      4,
-      5,
-      6,
-      7,
-      8
-    ],
-    "attribute": [
-      "Creation",
-      "Energy",
-      "Protection"
-    ],
-    "invocationTime": "1 Major Action",
-    "duration": "Sustain Persists",
-    "description": "You summon a warding barrier of flames, blades, thorns, or similar material to damage enemies that dare to approach.<br />",
-    "effect": "Designate a willing target or a 5' square that is not occupied by an enemy. While this boon is active, any enemy that passes within 5' of the target takes damage according to the boon's Power Level. Each time this boon deals damage, roll a d20. On a 10 or better, the boon persists, on a lower roll the power of the boon is expended by the retributive attack.<br /><ul><br /><li><strong>Power Level 4</strong> - d4 damage </li><br /><li><strong>Power Level 5</strong> - d6 damage </li><br /><li><strong>Power Level 6</strong> - d8 damage </li><br /><li><strong>Power Level 7</strong> - d10 damage </li><br /><li><strong>Power Level 8</strong> - 2d6 damage </li><br /></ul><br />"
-  },
-  {
     "name": "Seeing",
     "tags": [
       "Extraordinary"
@@ -579,7 +557,7 @@
     "invocationTime": "1 Move Action",
     "duration": "Instantaneous",
     "description": "You are able to instantly move from one place to another, either by stepping into an intermediate realm, projecting yourself magically, or other similar means.<br />",
-    "effect": "<ul><br /><li><strong>Power Level 3</strong> - You can teleport to any unoccupied space within 5 feet per Movement attribute score as long as you can naturally see it. </li><br /><li><strong>Power Level 5</strong> - Your teleportation range is unchanged, but you can now teleport to spaces that you can’t see.  If you choose an occupied space, you land in the nearest adjacent space (roll randomly to decide if there are multiple options) and you are stunned for 1 round (you don’t have to make a resist roll to end the effect). </li><br /><li><strong>Power Level 7</strong> - You can opt to take longer in invoking the boon. If you choose to, for each minute of invocation (delay before making your action roll) you can teleport 1 mile, up to a maximum number of miles equal to your Movement attribute score. While the distance is greater, this mode is also dangerous, as a misunderstanding of direction or geography can put you many miles in an unfavorable direction. You simply choose a direction to travel in (relative to your starting location) and you teleoport a number of miles equal to your Movement score. During invocation, you must spend a Focus action each turn until the invocation time passes.</li><br /><li><strong>Power Level 9</strong> - Using the same longer invocation time from Power Level 7, you can now teleport to any location without range limit, provided you have personally seen (through magical or normal means) the target destination.</li><br /></ul><br />"
+    "effect": "<ul><br /><li><strong>Power Level 3</strong> - You can teleport to any unoccupied space within 5 feet per Movement attribute score as long as you can naturally see it. </li><br /><li><strong>Power Level 5</strong> - Your teleportation range is unchanged, but you can now teleport to spaces that you can’t see.  If you choose an occupied space, you land in the nearest adjacent space (roll randomly to decide if there are multiple options) and you are stunned for 1 round (you don’t have to make a resist roll to end the effect). </li><br /><li><strong>Power Level 7</strong> - You can opt to take longer in invoking the boon. If you choose to, for each minute of invocation (delay before making your action roll) you can teleport 1 mile, up to a maximum number of miles equal to your Movement attribute score. While the distance is greater, this mode is also dangerous, as a misunderstanding of direction or geography can put you many miles in an unfavorable direction. You simply choose a direction to travel in (relative to your starting location) and you teleport a number of miles equal to your Movement score. During invocation, you must spend a Focus action each turn until the invocation time passes.</li><br /><li><strong>Power Level 9</strong> - Using the same longer invocation time from Power Level 7, you can now teleport to any location without range limit, provided you have personally seen (through magical or normal means) the target destination.</li><br /></ul><br />"
   },
   {
     "name": "Tongues",
