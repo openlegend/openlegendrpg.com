@@ -20,7 +20,7 @@
       3
     ],
     "description": "You have the ability to transform from one persona to another, whether that be through bodily transformation like a werewolf or through exterior mechinisms, such as a cybernetically enhanced soldier who can call forth a symbiotic mech suit.<br />",
-    "effect": "Upon taking this feat, you build a single alternate form using the normal character creation rules, though your attribute and feat points are determined by your tier in this feat:<br /><ul><br /><li>Tier 1 - Half of your primary form's attribute points (rounded up), and 3 feat points.</li><br /><li>Tier 2 - Same attribute points as your primary form, and 3 feat points per level.</li><br /></ul><br />Whenever your primary form gains new attribute points or levels up, your alternate form also gains points according to the above formulas.<br />You may transform from one form to another as a focus action. Each form is treated as a completely different character for mechanical purposes - possessing different attributes, feats, perks, flaws, and other defining characteristics. Your alternate form does, however, retain the ability to transform back into your primary form.<br />In order to keep track of hit points, you should always record the total damage that your character has suffered. When transforming, your damage remains with you even if your maximum hit points change. For example, Dr. Jekyll has a max HP of 15 and Mr. Hyde has a max HP of 30. During combat, Mr. Hyde suffers 10 damage. When he later transforms back into Dr. Jekyll, the 10 damage remains and is subtracted from his new maximum, leaving the doctor with 5 out of 15 hit points.<br />",
+    "effect": "Upon taking this feat, you build a single alternate form using the normal character creation rules, though your attribute and feat points are determined by your tier in this feat:<br /><ul><br /><li>Tier 1 - Half of your primary form's attribute points (rounded up), and 3 feat points.</li><br /><li>Tier 2 - Same attribute points as your primary form, and 3 feat points per level.</li><br /></ul><br />Whenever your primary form gains new attribute points or levels up, your alternate form also gains points according to the above formulas.<br />As a focus action, you may change between any two forms (including your primary form or any alternate form). You maintain this capability in all of your forms.<br />Each form is treated as a completely different character for mechanical purposes - possessing different attributes, feats, perks, flaws, and other defining characteristics. Your alternate form does, however, retain the ability to transform back into your primary form.<br />In order to keep track of hit points, you should always record the total damage that your character has suffered. When transforming, your damage remains with you even if your maximum hit points change. For example, Dr. Jekyll has a max HP of 15 and Mr. Hyde has a max HP of 30. During combat, Mr. Hyde suffers 10 damage. When he later transforms back into Dr. Jekyll, the 10 damage remains and is subtracted from his new maximum, leaving the doctor with 5 out of 15 hit points.<br />",
     "special": "When selecting feats for your alternate form, you may not select the <strong>Alternate Form</strong> feat.<br />You may take this feat multiple times. Each time grants you access to an additional form.<br />"
   },
   {
@@ -63,7 +63,7 @@
     "effect": "For each tier of this feat you possess, you can omit a single 5-foot square from being targeted as part of an area attack.<br />"
   },
   {
-    "name": "Armor Mastery (I - III)",
+    "name": "Armor Mastery (I - II)",
     "prerequisites": {
       "tier1": {
         "Other": [
@@ -74,21 +74,16 @@
         "Other": [
           "None"
         ]
-      },
-      "tier3": {
-        "Other": [
-          "None"
-        ]
       }
     },
     "tags": [
       "No Prerequisite"
     ],
     "cost": [
-      2
+      3
     ],
-    "description": "You are specially trained with particular armor type, allowing you to maximize its protection and minimize its drawbacks.<br />",
-    "effect": "Choose an armor type to specialize in. Your training allows you to sleep in that armor type without becoming fatigued. In addition, while wearing armor of that type, you gain the following benefits.<br /><ul><br /><li>Tier 1 - The Might prerequisite for wearing the selected armor is reduced by 1. The Armor Bonus granted by the armor is increased by 1.</li><br /><li>Tier 2 - The Might prerequisite for wearing the selected armor is reduced by 2. The Armor Bonus granted by the armor is increased by 2. Any movement penalty is reduced by 5 feet.</li><br /><li>Tier 3 - The Might prerequisite for wearing the selected armor is reduced by 3. The Armor Bonus granted by the armor is increased by 3. Any movement penalty is reduced by 10 feet.</li><br /></ul><br />"
+    "description": "You are specially trained to wear armor into battle, allowing you to maximize its protection and minimize its drawbacks.<br />",
+    "effect": "Your training allows you to sleep in armor without gaining one level of the Fatigued bane. In addition, while wearing armor, you gain the following benefits.<br /><ul><br /><li><strong>Tier 1</strong> - The Might prerequisite for wearing armor is reduced by 1. The Armor Bonus granted by the armor is increased by 1.</li><br /><li><strong>Tier 2</strong> - The Might prerequisite for wearing armor is reduced by 2. The Armor Bonus granted by the armor is increased by 2. Any movement penalty is reduced by 5 feet.</li><br /></ul><br />"
   },
   {
     "name": "Attack Redirection",
@@ -306,7 +301,7 @@
       3
     ],
     "description": "You can enter a heightend mental state of combat readiness, in which your body is strengthened and your mind transcends fear and pain. Examples include a raging barbarian, or an unstoppable samurai with laser focus in the heat of battle.<br />",
-    "effect": "As a free action on your turn, you may enter a battle trance. While entranced, you have advantage 1 on all attacks. Additionally, if you are not wearing armor, all of your defense scores are increased by 5. If you take three consecutive turns without making an attack roll against a creature, the battle trance ends. When the battle trance ends, you automatically suffer 1 level of the <a href=\"/banes/fatigued\">fatigue bane</a>.<br />"
+    "effect": "As a free action on your turn, you may enter a battle trance. While entranced, you have advantage 1 on all attacks. Additionally, your Toughness and Resolve defenses are increased by 3. If you are not wearing armor, your Resilience defense is also increased by 3. If you take three consecutive turns without  making an attack roll against an enemy creature, the battle trance ends. When the battle trance ends, you automatically suffer 1 level of the <a href=\"/banes/fatigued\">fatigue bane</a>.<br />"
   },
   {
     "name": "Battlefield Defender",
@@ -917,7 +912,25 @@
     "effect": "While in a battle trance you cannot be knocked unconscious. All damage dealt to you should be recorded, possibly resulting in a negative hit point total. Despite any amount of damage, you remain conscious for as long as you can sustain the battle trance. When the battle trance ends, if your hit points are below zero, you collapse unconscious. If you are not healed to zero or more hit points within 1 round of your battle trance ending, you die.<br />"
   },
   {
-    "name": "Defensive Reflexes (I - X)",
+    "name": "Defensive Mastery",
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
+    "tags": [
+      "Combat"
+    ],
+    "cost": [
+      3
+    ],
+    "description": "You are specially trained in the use of defensive implements and can get more protective use out of them. Examples include a martial artist's defensive kata or a soldier with a riot shield.<br />",
+    "effect": "When wielding a weapon or implement with the Defensive property, you gain a +1 armor bonus. In addition, the Defensive value of the item is increased by 1 when you wield it. So Defensive 1 becomes Defensive 2 and Defensive 2 becomes Defensive 3.<br />"
+  },
+  {
+    "name": "Defensive Reflexes (I - IX)",
     "prerequisites": {
       "tier1": {
         "Attribute": [
@@ -976,13 +989,6 @@
         ]
       },
       "tier9": {
-        "Attribute": [
-          {
-            "Agility": 3
-          }
-        ]
-      },
-      "tier10": {
         "Attribute": [
           {
             "Agility": 3
@@ -1201,7 +1207,7 @@
       2
     ],
     "description": "Whether by a magical barrier of force, foresight into the future, or preternatural speed, you are gifted with extraordinary protection from harm.<br />",
-    "effect": "You gain a +1 bonus to all defenses for each tier you have in this feat. This increases your Toughness, Evasion, and Resolve defenses.<br />"
+    "effect": "You gain a +1 bonus to all defenses for each tier you have in this feat. This increases your Toughness, Resilience, and Resolve defenses.<br />"
   },
   {
     "name": "Extraordinary Focus",
@@ -1943,7 +1949,7 @@
       "tier1": {
         "Attribute": [
           {
-            "Perception": 5
+            "Perception": 4
           }
         ]
       }
@@ -2149,21 +2155,21 @@
       "tier1": {
         "Attribute": [
           {
-            "Fortitude": 3
+            "Fortitude": 2
           }
         ]
       },
       "tier2": {
         "Attribute": [
           {
-            "Fortitude": 5
+            "Fortitude": 3
           }
         ]
       },
       "tier3": {
         "Attribute": [
           {
-            "Fortitude": 7
+            "Fortitude": 5
           }
         ]
       }
@@ -2175,10 +2181,10 @@
       "Fortitude"
     ],
     "cost": [
-      2
+      3
     ],
     "description": "Whether through draconic heritage, a cyborg exoskeleton, or just a lifetime of conditioning, your skin is tough as nails, allowing your body to deflect blows that would cripple others.<br />",
-    "effect": "When you are not wearing armor, you gain an armor bonus to your Toughness and Evasion defenses. You may still gain this bonus when wielding a shield. Your armor bonus is determined by your tier in this feat:<br /><ul><br /><li><strong>Tier 1</strong> - +3 armor bonus</li><br /><li><strong>Tier 2</strong> - +5 armor bonus</li><br /><li><strong>Tier 3</strong> - +7 armor bonus</li><br /></ul><br />"
+    "effect": "When you are not wearing armor, you gain an armor bonus to your Toughness and Resilience defenses. Your armor bonus is determined by your tier in this feat:<br /><ul><br /><li><strong>Tier 1</strong> - +1 armor bonus</li><br /><li><strong>Tier 2</strong> - +2 armor bonus</li><br /><li><strong>Tier 3</strong> - +3 armor bonus</li><br /></ul><br />"
   },
   {
     "name": "Overpowering Strike",
@@ -2512,10 +2518,10 @@
       "Agility"
     ],
     "cost": [
-      2
+      3
     ],
     "description": "Your mastery of two weapon fighting allows you not only to come at your foes with a flurry of attacks, but also shield yourself exceptionally well by deflecting incoming attacks with your weapons.<br />",
-    "effect": "When you have a weapon in each hand, you gain a +2 armor bonus. This feat cannot be used in conjunction with a shield.<br />"
+    "effect": "When you have a weapon in each hand, you gain a +1 armor bonus.<br />"
   },
   {
     "name": "Unending Charm",
