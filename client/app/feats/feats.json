@@ -301,7 +301,7 @@
       3
     ],
     "description": "You can enter a heightend mental state of combat readiness, in which your body is strengthened and your mind transcends fear and pain. Examples include a raging barbarian, or an unstoppable samurai with laser focus in the heat of battle.<br />",
-    "effect": "As a free action on your turn, you may enter a battle trance. While entranced, you have advantage 1 on all attacks. Additionally, your Toughness and Resolve defenses are increased by 3. If you are not wearing armor, your Resilience defense is also increased by 3. If you take three consecutive turns without  making an attack roll against an enemy creature, the battle trance ends. When the battle trance ends, you automatically suffer 1 level of the <a href=\"/banes/fatigued\">fatigue bane</a>.<br />"
+    "effect": "As a free action on your turn, you may enter a battle trance. While entranced, you have advantage 1 on all attacks. Additionally, your Toughness and Resolve defenses are increased by 3. If you are not wearing armor, your Guard defense is also increased by 3. If you take three consecutive turns without  making an attack roll against an enemy creature, the battle trance ends. When the battle trance ends, you automatically suffer 1 level of the <a href=\"/banes/fatigued\">fatigue bane</a>.<br />"
   },
   {
     "name": "Battlefield Defender",
@@ -1207,7 +1207,7 @@
       2
     ],
     "description": "Whether by a magical barrier of force, foresight into the future, or preternatural speed, you are gifted with extraordinary protection from harm.<br />",
-    "effect": "You gain a +1 bonus to all defenses for each tier you have in this feat. This increases your Toughness, Resilience, and Resolve defenses.<br />"
+    "effect": "You gain a +1 bonus to all defenses for each tier you have in this feat. This increases your Toughness, Guard, and Resolve defenses.<br />"
   },
   {
     "name": "Extraordinary Focus",
@@ -2184,7 +2184,7 @@
       3
     ],
     "description": "Whether through draconic heritage, a cyborg exoskeleton, or just a lifetime of conditioning, your skin is tough as nails, allowing your body to deflect blows that would cripple others.<br />",
-    "effect": "When you are not wearing armor, you gain an armor bonus to your Toughness and Resilience defenses. Your armor bonus is determined by your tier in this feat:<br /><ul><br /><li><strong>Tier 1</strong> - +1 armor bonus</li><br /><li><strong>Tier 2</strong> - +2 armor bonus</li><br /><li><strong>Tier 3</strong> - +3 armor bonus</li><br /></ul><br />"
+    "effect": "When you are not wearing armor, you gain an armor bonus to your Toughness and Guard defenses. Your armor bonus is determined by your tier in this feat:<br /><ul><br /><li><strong>Tier 1</strong> - +1 armor bonus</li><br /><li><strong>Tier 2</strong> - +2 armor bonus</li><br /><li><strong>Tier 3</strong> - +3 armor bonus</li><br /></ul><br />"
   },
   {
     "name": "Overpowering Strike",
