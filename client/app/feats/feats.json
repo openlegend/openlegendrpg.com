@@ -1131,7 +1131,7 @@
     "effect": "When you move from a space adjacent to an enemy to another space not adjacent to that enemy, the enemy does not get the usual opportunity attack.<br />"
   },
   {
-    "name": "Extraordinary Defense (I - V)",
+    "name": "Extraordinary Defense (I - III)",
     "prerequisites": {
       "tier1": {
         "Attribute": [
@@ -1171,32 +1171,6 @@
             "Protection": 4
           }
         ]
-      },
-      "tier4": {
-        "Attribute": [
-          {
-            "Movement": 5
-          },
-          {
-            "Prescience": 5
-          },
-          {
-            "Protection": 5
-          }
-        ]
-      },
-      "tier5": {
-        "Attribute": [
-          {
-            "Movement": 6
-          },
-          {
-            "Prescience": 6
-          },
-          {
-            "Protection": 6
-          }
-        ]
       }
     },
     "tags": [
@@ -1204,7 +1178,7 @@
       "Defense"
     ],
     "cost": [
-      2
+      3
     ],
     "description": "Whether by a magical barrier of force, foresight into the future, or preternatural speed, you are gifted with extraordinary protection from harm.<br />",
     "effect": "You gain a +1 bonus to all defenses for each tier you have in this feat. This increases your Toughness, Guard, and Resolve defenses.<br />"
@@ -2181,10 +2155,10 @@
       "Fortitude"
     ],
     "cost": [
-      3
+      2
     ],
     "description": "Whether through draconic heritage, a cyborg exoskeleton, or just a lifetime of conditioning, your skin is tough as nails, allowing your body to deflect blows that would cripple others.<br />",
-    "effect": "When you are not wearing armor, you gain an armor bonus to your Toughness and Guard defenses. Your armor bonus is determined by your tier in this feat:<br /><ul><br /><li><strong>Tier 1</strong> - +1 armor bonus</li><br /><li><strong>Tier 2</strong> - +2 armor bonus</li><br /><li><strong>Tier 3</strong> - +3 armor bonus</li><br /></ul><br />"
+    "effect": "When you are not wearing armor, you gain an armor bonus to your Guard defense. Your armor bonus is determined by your tier in this feat:<br /><ul><br /><li><strong>Tier 1</strong> - +1 armor bonus</li><br /><li><strong>Tier 2</strong> - +2 armor bonus</li><br /><li><strong>Tier 3</strong> - +3 armor bonus</li><br /></ul><br />"
   },
   {
     "name": "Overpowering Strike",
