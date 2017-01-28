@@ -83,7 +83,7 @@
       3
     ],
     "description": "You are specially trained to wear armor into battle, allowing you to maximize its protection and minimize its drawbacks.<br />",
-    "effect": "Your training allows you to sleep in armor without gaining one level of the Fatigued bane. In addition, while wearing armor, you gain the following benefits.<br /><ul><br /><li><strong>Tier 1</strong> - The Might prerequisite for wearing armor is reduced by 1. The Armor Bonus granted by the armor is increased by 1.</li><br /><li><strong>Tier 2</strong> - The Might prerequisite for wearing armor is reduced by 2. The Armor Bonus granted by the armor is increased by 2. Any movement penalty is reduced by 5 feet.</li><br /></ul><br />"
+    "effect": "Your training allows you to sleep in armor without gaining one level of the Fatigued bane. In addition, while wearing armor, you gain the following benefits.<br /><ul><br /><li><strong>Tier 1</strong> - The Fortitude prerequisite for wearing armor is reduced by 1. The Armor Bonus granted by the armor is increased by 1.</li><br /><li><strong>Tier 2</strong> - The Fortitude prerequisite for wearing armor is reduced by 2. The Armor Bonus granted by the armor is increased by 2. Any movement penalty is reduced by 5 feet.</li><br /></ul><br />"
   },
   {
     "name": "Attack Redirection",
@@ -559,7 +559,7 @@
     "effect": "<ul><br /><li><strong>Tier 1</strong> - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. You can invoke the boon at any of the power levels you could access via your other means. If the invocation is not a single target, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.</li><br /><li><strong>Tier 2</strong> - You gain advantage 3 on your action roll to invoke the boon if you are not single-targeting. Additionally, you may invoke the boon one time increment faster, as follows: If the invocation time is a major action or move action, it becomes a minor action. If the invocation time is 1 focus action, it becomes 1 major action. If the invocation time is 1 minute, it becomes 1 focus action. If the invocation time is 10 minutes, it becomes 1 minute. If the invocation time is 1 hour, it becomes 10 minutes. If the invocation time is 8 hours, it becomes 1 hour.</li><br /><li><strong>Tier 3</strong> - The effect at tier 3 varies based on the duration of the boon:<br />  <br /><br />  <strong>If the chosen boon has a duration of \"sustain persists\"</strong>, you gain advantage 4 on your action roll to invoke if you are not single-targeting. Additionally, the boon is always active for your character and passively persists, without requiring you to use a minor action to sustain it. If the boon is somehow temporarily cancelled (such as by the dispel bane), it resumes automatically at the start of your next turn.<br />  <br /><br />  <strong>If the boon has a different duration</strong>, you gain advantage 5 on your action roll to invoke if you are not single-targeting.<br /></li><br /></ul><br />"
   },
   {
-    "name": "Breakfall (I - IX)",
+    "name": "Breakfall (I - II)",
     "prerequisites": {
       "tier1": {
         "Attribute": [
@@ -574,63 +574,14 @@
             "Agility": 4
           }
         ]
-      },
-      "tier3": {
-        "Attribute": [
-          {
-            "Agility": 4
-          }
-        ]
-      },
-      "tier4": {
-        "Attribute": [
-          {
-            "Agility": 4
-          }
-        ]
-      },
-      "tier5": {
-        "Attribute": [
-          {
-            "Agility": 4
-          }
-        ]
-      },
-      "tier6": {
-        "Attribute": [
-          {
-            "Agility": 4
-          }
-        ]
-      },
-      "tier7": {
-        "Attribute": [
-          {
-            "Agility": 4
-          }
-        ]
-      },
-      "tier8": {
-        "Attribute": [
-          {
-            "Agility": 4
-          }
-        ]
-      },
-      "tier9": {
-        "Attribute": [
-          {
-            "Agility": 4
-          }
-        ]
       }
     },
     "tags": null,
     "cost": [
-      1
+      2
     ],
     "description": "Your agility enables you to fall from deadly heights unharmed.<br />",
-    "effect": "When calculating falling damage, reduce the falling distance by 10 feet per tier of this feat that you possess. Once you reach tier 9, you can fall any distance without taking damage.<br />"
+    "effect": "<ul><br /><li><strong>Tier 1</strong> - As long as you are conscious and able to act, reduce all falling damage by half.</li><br /><li><strong>Tier 2</strong> - As long as you are conscious and able to act, you do not suffer falling damage.</li><br /></ul><br />"
   },
   {
     "name": "Brutal Intimidation",
@@ -927,7 +878,7 @@
       3
     ],
     "description": "You are specially trained in the use of defensive implements and can get more protective use out of them. Examples include a martial artist's defensive kata or a soldier with a riot shield.<br />",
-    "effect": "When wielding a weapon or implement with the Defensive property, you gain a +1 armor bonus. In addition, the Defensive value of the item is increased by 1 when you wield it. So Defensive 1 becomes Defensive 2 and Defensive 2 becomes Defensive 3.<br />"
+    "effect": "When wielding a weapon or implement with the Defensive property, you gain an additional +1 armor bonus. In addition, the Defensive value of the item is increased by 1 when you wield it. So Defensive 1 becomes Defensive 2 and Defensive 2 becomes Defensive 3.<br />"
   },
   {
     "name": "Defensive Reflexes (I - IX)",
@@ -2063,13 +2014,14 @@
       2
     ],
     "description": "You are a master of felling multiple foes at a time, whether it be with a whirlwind of your blade, a hail of arrows, or a ball of flame.<br />",
-    "effect": "When you choose this feat, you must decide to focus in area, projectile, or melee attacks. For each tier, you reduce the disadvantage penalty associated with multi-attacks for your chosen attack type by 1. Whenever you take this feat, you must specify which type of attack you are focusing on, and you may take the feat multiple times to specialize in multiple types of attack.<br />"
+    "effect": "When you choose this feat, you must decide to focus in area, projectile, or melee attacks. For each tier, you reduce the disadvantage penalty associated with multi-targeting for your chosen attack type by 1. Whenever you take this feat, you must specify which type of attack you are focusing on, and you may take the feat multiple times to specialize in multiple types of attack.<br />"
   },
   {
     "name": "Multi-Target Boon Expert",
     "prerequisites": {
       "tier1": {
-        "Feat": [
+        "MultiFeat": [
+          "Boon Focus",
           "Multi-Target Boon Specialist II"
         ]
       }
@@ -2127,23 +2079,21 @@
     "name": "Natural Defense (I - III)",
     "prerequisites": {
       "tier1": {
-        "Attribute": [
-          {
-            "Fortitude": 2
-          }
+        "Other": [
+          "None"
         ]
       },
       "tier2": {
         "Attribute": [
           {
-            "Fortitude": 3
+            "Fortitude": 1
           }
         ]
       },
       "tier3": {
         "Attribute": [
           {
-            "Fortitude": 5
+            "Fortitude": 2
           }
         ]
       }
@@ -2199,7 +2149,7 @@
       3
     ],
     "description": "You are so adept at a particular form of attack that your foes struggle to shake off the effects. Perhaps the flames of your fireballs burn hotter. Or maybe you've developed a special chemical to mix in with your blinding powder. Whatever the source and whatever the effect, your enemies cower before your legendary attack.<br />",
-    "effect": "Choose one bane that you can invoke that has a duration of \"resist ends\". When a target uses the Resist action to shake off your invocation of the chosen bane, they have disadvantage 1.<br />"
+    "effect": "Choose one bane that you can invoke that has a duration of \"resist ends\". a target rolls Resist to shake off your invocation of the chosen bane, they have disadvantage 1.<br />"
   },
   {
     "name": "Reactionary Trance",
@@ -2271,7 +2221,7 @@
       3
     ],
     "description": "Whether through luck, extraordinary will, or exceptional courage, you are able to shake off banes quicker than others.<br />",
-    "effect": "Any time you take the Resist action, you have advantage 1 on the roll.<br />"
+    "effect": "Any time you make a Resist roll, you have advantage 1 on the roll.<br />"
   },
   {
     "name": "Ritual Magic (I - III)",
@@ -2495,7 +2445,7 @@
       3
     ],
     "description": "Your mastery of two weapon fighting allows you not only to come at your foes with a flurry of attacks, but also shield yourself exceptionally well by deflecting incoming attacks with your weapons.<br />",
-    "effect": "When you have a weapon in each hand, you gain a +1 armor bonus.<br />"
+    "effect": "When you have a weapon in each hand, you gain a +1 armor bonus to your Guard defense.<br />"
   },
   {
     "name": "Unending Charm",

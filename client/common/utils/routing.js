@@ -43,4 +43,4 @@ System.register(["app/routes.json!", "ui-router-extras"], function (_export) {
     }
   };
 });
-//# sourceMappingURL=../../common/utils/routing.js.map
+//# sourceMappingURL=routing.js.map

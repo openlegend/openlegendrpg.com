@@ -37,6 +37,8 @@
   "devDependencies": {
     "browser-sync": "^2.0.1",
     "chai": "^1.1.0",
+    "connect": "^3.3.4",
+    "connect-history-api-fallback": "0.0.5",
     "del": "^1.1.1",
     "fs-extra": "^0.13.0",
     "gulp": "^3.8.10",
