@@ -253,7 +253,7 @@
     ],
     "description": "You are so well trained with a particular form of attack that you can devastate foes with much more skill than the average combatant.<br />",
     "effect": "When you take this feat, select one weapon or energy type. You gain Advantage 1 per tier of this feat for any <em>damaging</em> attack made with your choice. This bonus does not apply to bane attacks or boon invocations.<br />Examples of energy types you can choose to specialize in include fire, cold, lightning, acid, poison, entropy, creation, and force - though this list is not exhaustive.<br />",
-    "special": "You may take this feat multiple times for the same type of attack. Your total advantage to attacks with the attack is equal to your tier for that particular attack mode. You can also specialize in different attacks by purchasing the feat again. For example, a character might have Attack Specialization (Tier 2) for Fire attacks and Attack Specialization (Tier 4) for Long Sword.<br />"
+    "special": "In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new weapon or energy type each time. Your total advantage to an attack is equal to your tier for that particular weapon or energy type. For example, a character might have Attack Specialization II (Fire) for Fire attacks and Attack Specialization IV (Long Sword) for Long Sword attacks.<br />"
   },
   {
     "name": "Attribute Substitution (I - II)",
@@ -276,7 +276,7 @@
       2
     ],
     "description": "Your prowess in an extraordinary, mental, or social attribute is linked in a way that empowers another attribute of your character, allowing you to use that attribute for tasks normally reserved for another. Examples of Attribute Substitution in play include a martial artist who is physically weak but capable of using internal chi to throw and disable opponents, an anatomical genius who uses their intelligence to make vital strikes rather than their dexterity, or a gunman who's deadshot aim is the result of a dark pact.<br />",
-    "effect": "When you purchase this feat, you create a permanent link between two attributes: one stronger (the primary attribute) and one weaker (the dependent attribute). You may use your score in the primary attribute in place of the dependent attribute for different purposes depending on which tier of the feat you have:<br /><ul><br /><li><strong>Tier 1</strong><br />  <ul><br />  <li>Making non-attack, non-invocation action rolls</li><br />  <li>Calculating hit points, defenses, and other secondary statistics</li><br />  <li>Meeting feat prerequisites</li><br />  <li>Other situations at the GM's discretion</li><br />  </ul><br /></li><br /><li><strong>Tier 2</strong><br />  <ul><br />  <li>Making attack action rolls</li><br />  <li>Invoking banes and boons</li><br />  </ul><br /></ul><br />The relationship formed by your two attributes is subject to case-by-case approval and must be approved by the GM first. The link must be logical and consistent with the story you are trying to tell. For example, a bard who subsitutes her Presence for her Might to represent her dance-based melee fighting style would likely not get to use her Presence Score for determining her carrying capacity. Furthermore, the GM should prevent players from creating illogical substitutions that are purely aimed at making their characters unreasonably powerful. Two examples of proper uses of this feat include an analytical warrior or martial artist who analyzes angles, leverage, and physics to substitute Logic for Might, or a gunslinger who channels dark energy, giving her deadshot accuracy and substituting Entropy for Agility.<br />"
+    "effect": "When you take this feat, you create a permanent link between two attributes: one stronger (the primary attribute) and one weaker (the dependent attribute). You may use your score in the primary attribute in place of the dependent attribute for different purposes depending on which tier of the feat you have:<br /><ul><br /><li><strong>Tier 1</strong><br />  <ul><br />  <li>Making non-attack, non-invocation action rolls</li><br />  <li>Calculating hit points, defenses, and other secondary statistics</li><br />  <li>Meeting feat prerequisites</li><br />  <li>Other situations at the GM's discretion</li><br />  </ul><br /></li><br /><li><strong>Tier 2</strong><br />  <ul><br />  <li>Making attack action rolls</li><br />  <li>Invoking banes and boons</li><br />  </ul><br /></ul><br />The relationship formed by your two attributes is subject to case-by-case approval and must be approved by the GM first. The link must be logical and consistent with the story you are trying to tell. For example, a bard who subsitutes her Presence for her Might to represent her dance-based melee fighting style would likely not get to use her Presence Score for determining her carrying capacity. Furthermore, the GM should prevent players from creating illogical substitutions that are purely aimed at making their characters unreasonably powerful. Two examples of proper uses of this feat include an calculating warrior who studies angles, leverage, and physics to substitute Logic for Might, or a gunslinger who channels dark energy, giving her deadshot accuracy and substituting Entropy for Agility.<br />"
   },
   {
     "name": "Bane Focus",
@@ -297,7 +297,8 @@
       3
     ],
     "description": "You are specialized in the use of a particular bane that is iconic to your character.<br />",
-    "effect": "Choose a bane that you can invoke. When your roll on a damaging attack exceeds the target's defense by 5 or more (as opposed to the usual 10), you can inflict this bane for free. Each attack is still only capable of inflicting a single bane. When making a bane attack, you get Advantage 2 on the bane attack roll.<br />"
+    "effect": "Choose a bane that you can invoke. When your roll on a damaging attack exceeds the target's defense by 5 or more (as opposed to the usual 10), you can inflict this bane for free. Each attack is still only capable of inflicting a single bane. When making a bane attack, you get Advantage 2 on the bane attack roll.<br />",
+    "special": "You may take this feat multiple times. Each time you do, choose a different bane.<br />"
   },
   {
     "name": "Battle Trance",
@@ -561,7 +562,7 @@
     ],
     "description": "You have a special gift: it might be the result of your heritage, a close encounter with magical energy, or the result of years of training with a master. In any case, although you do not necessarily possess the aptitude to work extraordinary powers for yourself or create a desired effect with your physical capabilities alone, you are able to reliably replicate a single boon.<br />",
     "effect": "When you choose this feat, choose one boon that you do not have the requisite attribute to invoke. The cost of this feat is equal to the Power Level of the chosen boon. You can invoke the chosen boon despite lacking the necessary attribute. For invocation rolls, treat your attribute score as the Power Level of the boon. If the boons has multiple attribute prerequisite options, you choose one attribute when you take this feat. Additionally, you count as having access to the chosen boon for the purpose of meeting feat prerequisites, and your attribute for meeting such prerequisites is equal to the Power Level of the boon. The Boon Access feat bypasses the normal attribute score restrictions based on character level, so a first level character could spend all 6 of their feat points to begin play with access to a Power Level 6 boon.<br />You may acquire this feat multiple times. Each time, select a new boon.<br />",
-    "special": "Note that this feat can give access to high-powered boons with a potential for very dramatic impact on the storyline of a game. As such, using this feat to access a boon of Power Level 6 or higher should be approved by the GM before using it in a game.<br />If you ever meet the attribute prerequisite for the chosen boon, you may choose at that time to lose this feat and regain the feat points spent. Re-allocate them as you choose.<br />"
+    "special": "You may take this feat multiple times. Each time you do, choose a new boon to gain access to.<br />Note that this feat can give access to high-powered boons with a potential for very dramatic impact on the storyline of a game. As such, using this feat to access a boon of Power Level 6 or higher should be approved by the GM before using it in a game.<br />If you ever meet the attribute prerequisite for the chosen boon, you may choose at that time to lose this feat and regain the feat points spent. Re-allocate them as you choose.<br />"
   },
   {
     "name": "Boon Focus (I - III)",
@@ -591,7 +592,8 @@
       3
     ],
     "description": "You are specialized in the use a particular boon that is iconic to your character.<br />",
-    "effect": "<ul><br /><li><strong>Tier 1</strong> - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. You can invoke the boon at any of the power levels you could access via your other means. If the invocation is not a single target, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.</li><br /><li><strong>Tier 2</strong> - You gain advantage 3 on your action roll to invoke the boon if you are not single-targeting. Additionally, you may invoke the boon one time increment faster, as follows: If the invocation time is a major action or move action, it becomes a minor action. If the invocation time is 1 focus action, it becomes 1 major action. If the invocation time is 1 minute, it becomes 1 focus action. If the invocation time is 10 minutes, it becomes 1 minute. If the invocation time is 1 hour, it becomes 10 minutes. If the invocation time is 8 hours, it becomes 1 hour. If the invocation time for a boon is 1 minor action, it can be invoked only once as a minor action, beyond that it can be invoked by expending a move or major action.</li><br /><li><strong>Tier 3</strong> - The effect at tier 3 varies based on the duration of the boon:<br />  <br /><br />  <strong>If the chosen boon has a duration of \"sustain persists\"</strong>, you gain advantage 4 on your action roll to invoke if you are not single-targeting. Additionally, the boon is always active for your character and persists each round as a free action, rather than a minor action. If the boon is somehow temporarily cancelled, in the absence of other rules, you can invoke it again as a free action. If targeted by the Nullify bane, this effect can only be canceled by a power level 6 or greater invocation of that bane.<br />  <br /><br />  <strong>If the boon has a different duration</strong>, you gain advantage 5 on your action roll to invoke if you are not single-targeting.<br /></li><br /></ul><br />"
+    "effect": "<ul><br /><li><strong>Tier 1</strong> - When you invoke the chosen boon on a single target, you succeed automatically and do not need to make an action roll. You can invoke the boon at any of the power levels you could access via your other means. If the invocation is not a single target, success is not automatic, but you get advantage 2 on the action roll to invoke the boon.</li><br /><li><strong>Tier 2</strong> - You gain advantage 3 on your action roll to invoke the boon if you are not single-targeting. Additionally, you may invoke the boon one time increment faster, as follows: If the invocation time is a major action or move action, it becomes a minor action. If the invocation time is 1 focus action, it becomes 1 major action. If the invocation time is 1 minute, it becomes 1 focus action. If the invocation time is 10 minutes, it becomes 1 minute. If the invocation time is 1 hour, it becomes 10 minutes. If the invocation time is 8 hours, it becomes 1 hour. If the invocation time for a boon is 1 minor action, it can be invoked only once as a minor action, beyond that it can be invoked by expending a move or major action.</li><br /><li><strong>Tier 3</strong> - The effect at tier 3 varies based on the duration of the boon:<br />  <br /><br />  <strong>If the chosen boon has a duration of \"sustain persists\"</strong>, you gain advantage 4 on your action roll to invoke if you are not single-targeting. Additionally, the boon is always active for your character and persists each round as a free action, rather than a minor action. If the boon is somehow temporarily cancelled, in the absence of other rules, you can invoke it again as a free action. If targeted by the Nullify bane, this effect can only be canceled by a power level 6 or greater invocation of that bane.<br />  <br /><br />  <strong>If the boon has a different duration</strong>, you gain advantage 5 on your action roll to invoke if you are not single-targeting.<br /></li><br /></ul><br />",
+    "special": "In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new boon each time. Your tier of this feat is independent for each boon.<br />"
   },
   {
     "name": "Breakfall (I - II)",
@@ -721,7 +723,7 @@
     ],
     "description": "Whether a hired bodyguard, a loyal animal sidekick, or a sibling that follows you everywhere, you have the constant and unflinching loyalty of one particular companion character.<br />",
     "effect": "You gain a companion character that acts independently from you. During combat, your companion acts on its own initiative count and gains the usual assortment of actions, which you may choose. You also get to assign your companion's attributes. The companion's highest attribute is determined by your level and your tier in this feat (see below). Your companion also possesses attributes at each number lower than its highest score. For example, if the companion's highest score is 6, then it also has attributes at scores 5, 4, 3, 2, and 1. The companion gains no special abilities beyond the feat granted per tier. Whenever you gain a level or purchase a new tier in this feat, you may reassign your companion's attributes and feats.<br /><ul><br /><li><strong>Tier 1</strong> - Your companion's highest attribute equals your level minus 2 (minimum of 3, maximum of 9). Your companion gains 1 feat, selected from the \"Simple Build\" NPC feat list in Chapter 7: Running the Game.</li><br /><li><strong>Tier 2</strong> - Your companion's highest attribute equals your level minus 1 (minimum of 4, maximum of 9). Your companion gains a 2nd feat from the same list.</li><br /><li><strong>Tier 3</strong> - Your companion's highest attribute equals your level (minimum of 5, maximum of 9). Your companion gains a 3rd feat from the same list.</li><br /></ul><br /><strong>Example</strong><br />Fezzy starts at level one with Companion (Tier II), choosing a wolf for his companion. Based on Fezzy's level and feat tier, his wolf's highest attribute is 4, so he can assign the wolf four attributes at scores 4, 3, 2, and 1. He assigns the following: Agility 4, Perception 3, Might 2, and Fortitude 1. Upon reaching level 2, Fezzy purchases Companion (Tier III), raising the wolf's highest attribute to 5, so Fezzy reassigns the attributes as follows: Perception 5, Agility 4, Might 3, Fortitude 2, Presence 1.<br />",
-    "special": "If you ever lose your companion, voluntarily or involuntarily, you regain the feat points that you have spent on this feat and may spend them as usual.<br />"
+    "special": "If you ever lose your companion, voluntarily or involuntarily, you regain the feat points that you have spent on this feat and may spend them as usual.<br />In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new companion each time.<br />"
   },
   {
     "name": "Craft Mundane Item (I - II)",
@@ -758,7 +760,8 @@
       2
     ],
     "description": "You have mastered a particular craft, and given proper time and materials, you can create items related to that craft.<br />",
-    "effect": "Choose a specific craft or profession. You can create items that are relevant to your chosen craft, and your GM will determine the speed at which you craft based on the nature of the item and the materials you have access to. Your tier in the Craft Mundane Item feat determines the maximum wealth level of the items you can craft. Unlike acquiring items by using your wealth (described in Chapter 4), crafting does not limit your ability to acquire additional goods.<br /><ul><br /><li><strong>Tier 1</strong> - You can craft items equal to your wealth level.</li><br /><li><strong>Tier 2</strong> - You can craft items equal to your wealth level + 1.</li><br /></ul><br /><strong>Craft Examples</strong> (This list is not exhaustive, and you can work with your GM to come up with other suitable crafts).<br /><ul><br /><li>Alchemy - acid, chemicals, non-magical tinctures, incense, reagents</li><br /><li>Arcane - magical ingredients, inks, scrolls, exotic components</li><br /><li>Blacksmithing - Metal, leather, weapons, armor, wheels, horseshoes</li><br /><li>Chemistry - acid, explosives, narcotics</li><br /><li>Engineering - machines, wheels, gears, guns, vehicles</li><br /><li>Geography - maps, cartography, instruments of navigation</li><br /><li>Medicine - medical tools, tonics, tinctures, pain relievers, anti-toxins</li><br /><li>Herbalism - poultices, natural remedies, stimulants, brewing</li><br /></ul><br />"
+    "effect": "Choose a specific craft or profession. You can create items that are relevant to your chosen craft, and your GM will determine the speed at which you craft based on the nature of the item and the materials you have access to. Your tier in the Craft Mundane Item feat determines the maximum wealth level of the items you can craft. Unlike acquiring items by using your wealth (described in Chapter 4), crafting does not limit your ability to acquire additional goods.<br /><ul><br /><li><strong>Tier 1</strong> - You can craft items equal to your wealth level.</li><br /><li><strong>Tier 2</strong> - You can craft items equal to your wealth level + 1.</li><br /></ul><br /><strong>Craft Examples</strong> (This list is not exhaustive, and you can work with your GM to come up with other suitable crafts).<br /><ul><br /><li>Alchemy - acid, chemicals, non-magical tinctures, incense, reagents</li><br /><li>Arcane - magical ingredients, inks, scrolls, exotic components</li><br /><li>Blacksmithing - Metal, leather, weapons, armor, wheels, horseshoes</li><br /><li>Chemistry - acid, explosives, narcotics</li><br /><li>Engineering - machines, wheels, gears, guns, vehicles</li><br /><li>Geography - maps, cartography, instruments of navigation</li><br /><li>Medicine - medical tools, tonics, tinctures, pain relievers, anti-toxins</li><br /><li>Herbalism - poultices, natural remedies, stimulants, brewing</li><br /></ul><br />",
+    "perfect": "In addition to taking multiple tiers of this feat, you may take this feat multiple times and select a new craft or profession each time.<br />"
   },
   {
     "name": "Craft Extraordinary Item (I - III)",
@@ -1077,8 +1080,9 @@
     "cost": [
       2
     ],
-    "description": "Your specialization in a particular type of energy or general protection causes you to be resistant to that type of energy.<br />",
-    "effect": "Choose from the following energy types: fire, cold, lightning, acid, (or another at the GM's discretion). When you are attacked with that energy type, you gain resistance to the attack as follows:<br /><ul><br /><li><strong>Tier 1</strong> - Your defense scores are increased by 3 against the chosen energy type.</li><br /><li><strong>Tier 2</strong> - Your defense scores are increased by 6 against the chosen energy type.</li><br /><li><strong>Tier 3</strong> - Your defense scores are increased by 9 against the chosen energy type.</li><br /><li><strong>Tier 4</strong> - You are immune to damage and harmful effects from the chosen energy type.</li><br /></ul><br />"
+    "description": "Your specialization in a particular type of energy, racial, or extraordinary protection cause you to be resistant to that type of energy. A fiery sorceress immune to the hottest blaze, or a biologically anomolous alien race that is immune to poison are some examples.<br />",
+    "effect": "Choose from the following energy types: fire, cold, lightning, acid, or another at the GM's discretion. When you are attacked with that energy type, you gain resistance to the attack as follows:<br /><ul><br /><li><strong>Tier 1</strong> - Your defense scores are increased by 3 against the chosen energy type.</li><br /><li><strong>Tier 2</strong> - Your defense scores are increased by 6 against the chosen energy type.</li><br /><li><strong>Tier 3</strong> - Your defense scores are increased by 9 against the chosen energy type.</li><br /><li><strong>Tier 4</strong> - You are immune to damage and harmful effects from the chosen energy type.</li><br /></ul><br />",
+    "special": "In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new weapon or energy type each time.<br />"
   },
   {
     "name": "Evasive Footwork",
@@ -1176,9 +1180,9 @@
     "cost": [
       3
     ],
-    "description": "Your extraordinary power stems from your connection with a particular focus, such as a wand, holy symbol, or spellbook.<br />",
-    "effect": "With the approval of your GM, choose a focus from which your power with a single extraordinary attribute stems. Some possibilities include a wand, a crystal ball, a spell book, a holy symbol, a weapon, your voice, or an animal familiar. You cannot use the selected extraordinary attribute without your focus. However, for the purposes of determining your attribute dice for action rolls, treat the chosen attribute as if it was one greater. For all purposes outside of attribute dice, your ability score remains unchanged (feats, banes, boons, etc.).<br />",
-    "special": "If you ever lose your extraordinary focus, voluntarily or involuntarily, you regain the feat points that you have spent on this feat and may spend them as usual.<br />"
+    "description": "Your extraordinary power stems from your connection with a particular focus, such as a wand, a digital psi amplifier, holy symbol, or spellbook.<br />",
+    "effect": "With the approval of your GM, choose a focus from which your power with a single extraordinary attribute stems. Some possibilities include a wand, a digital psi amplifier, a crystal ball, a spell book, a holy symbol, a weapon, your voice, or an animal familiar. You cannot use the selected extraordinary attribute without your focus. The focus heightens your power and for the purposes of determining your attribute dice for action rolls, you treat the chosen attribute as if it was one greater. For all purposes outside of attribute dice, your ability score remains unchanged (feats, banes, boons, etc.).<br />",
+    "special": "If you ever lose your extraordinary focus, voluntarily or involuntarily, you regain the feat points that you have spent on this feat and may spend them as usual.<br />You may take this feat multiple times. If you do, select a new attribute not chosen previously. You may choose an existing focus from this feat as a focus for both instances of this feat or select a new one.<br />"
   },
   {
     "name": "Extraordinary Healing",
@@ -1280,7 +1284,7 @@
       2
     ],
     "description": "Creatures that you've magically compelled become even stronger when fighting in your defense or under your command.<br />",
-    "effect": "Creatures under the effects of your Charmed or Dominated bane gain advantage 1 on all attack rolls to defend or help you for each tier of this feat you possess.<br />"
+    "effect": "Creatures under the effects of your Charmed or Dominated bane gain advantage 1 on all attack rolls to defend or act in your favor you for each tier of this feat you possess.<br />"
   },
   {
     "name": "Fleet of Foot (I - III)",
@@ -1435,7 +1439,7 @@
       3
     ],
     "description": "You are able to use your powers of illusion to not only create phantasmal figments, but to completely dominate the sensory perceptions of individual targets.<br />",
-    "effect": "When you invoke the Phantasm bane, you may choose to create a hallucination within a target's mind instead of an illusion that is perceptible to everyone. You gain complete control over the target's senses (as granted by the Power Level of your bane), and are thus the hallucination is not restricted by size or area. Your hallucination may only target a single creature, and thus is not eligible for multi-targeting attacks.<br />"
+    "effect": "When you invoke the Phantasm bane, you may choose to create a hallucination within a single target's mind instead of an illusion that is perceptible to everyone. You gain complete control over the target's senses (as granted by the Power Level of your bane), and are thus the hallucination is not restricted by size or area. Your hallucination may only target a single creature, and thus is not eligible for multi-targeting attacks.<br />"
   },
   {
     "name": "Hallucination - Mass",
@@ -1460,7 +1464,7 @@
       3
     ],
     "description": "Your hallucinations become legendary in power, granting you the power to affect small groups or even crowds.<br />",
-    "effect": "When you invoke the hallucination form of Phantasm bane, you may target additional creatures within range as determined by your Influence score. This does not count as a multi-target attack and thus does not incur disadvantage on your action roll.<br /><ul><br /><li><strong>Influence 7</strong> - 5 Target</li><br /><li><strong>Influence 8</strong> - 10 Targets</li><br /><li><strong>Influence 9</strong> - 50 Targets</li><br /></ul><br />"
+    "effect": "When you invoke the hallucination form of Phantasm bane, you may target additional creatures within range as determined by your Influence score. This does not count as a multi-target attack and thus does not incur disadvantage on your action roll.<br /><ul><li><strong>Influence 7</strong> - 5 Target</li><li><strong>Influence 8</strong> - 10 Targets</li><li><strong>Influence 9</strong> - 50 Targets</li></ul><br />"
   },
   {
     "name": "Heightened Invocation (I - III)",
@@ -1494,7 +1498,7 @@
     "cost": [
       2
     ],
-    "description": "By channeling your extraordinary powers through extensive rituals, such as meditation, fasting, blood letting, and sacrifices, you are able to increase the strength of your invocations.<br />",
+    "description": "By channeling your extraordinary powers through extended research or extensive rituals, such as meditation, fasting, blood letting, and sacrifices, you are able to increase the strength of your invocations.<br />",
     "effect": "When invoking a bane or boon, you may choose to do so as a ritual. The invocation time for a ritual is one increment higher than usual as follows:<br /><ul><br /><li>1 action becomes 1 minute</li><br /><li>1 minute becomes 10 minutes</li><br /><li>10 minutes becomes 1 hour</li><br /><li>1 hour becomes 8 hours</li><br /><li>8 hours becomes 24 hours</li><br /></ul><br /><br /><strong>Tier 1</strong> - You may choose one of the following effects to empower your bane or boon:<br /><br /><ul><br /><li>Increase the range of the effect as follows:<br />  Attribute 5 = 500ft<br /><br />  Attribute 6 = 1/2 mile<br /><br />  Attribute 7 = 1 mile<br /><br />  Attribute 8 = 10 miles<br /><br />  Attribute 9 = 100 miles<br /></li><br /><li>Negate two levels of disadvantage caused by multi-targeting (e.g., target 2 creatures or a 10' square for free instead of disadvantage 2).</li><br /><li>For your action roll, treat your attribute score as if it was one greater for purposes of determining attribute dice. Note that this doesn't grant access to banes or boons you could not normally access. It only increases the dice used for the action roll.</li><br /></ul><br /><br /><strong>Tier 2</strong> - You gain the following abilities:<br /><ul><br />  <li>You can lead others to join you in ritual casting as long as they are also able to invoke the bane or boon at the same power level that your are invoking it at. At the conclusion of the ritual, each contributor may choose one of the effects granted by Tier 1 of this feat.</li><br />  <li>You gain the following additional option to choose from when empowering your invocations with ritual magic:</li><br />    <ul><br />    <li>Cause a boon to persist for 1 minute automatically without needing to use a sustain action. Furthermore, enemies cannot end the boon through use of a disrupting attack (though the Nullify bane still works).</li><br />    <li>Targets may not make resist rolls against a bane for one minute after it is invoked.</li><br />    </ul><br /></ul><br /><br /><strong>Tier 3</strong> - You gain the ability to permanently bestow or dispel banes and boons. In order to bestow the bane or boon, you must rigorously attend to the ritual process for a number of days equal to the power level of the bane or boon to be invoked or nullified. During that time you can eat, sleep, and act normally with two exceptions: 1) You must work actively on the ritual and with minimal interruption for 8 hours out of each day. 2) You can leave the area and move about freely during the down time each day, but for the 8 hours of active ritual invocation you must be in the same physical or geographic location where the ritual was initiated. When the invocation time is completed, make an action roll as follows:<br /><ul><br /><li><strong>Bestow Boon</strong> - Make an action roll to invoke the boon as usual. If successful, you cause a non-instantaneous & non-permanent boon to permanently affect the target. The target can thereafter invoke the boon at will, without requiring an action roll to do so. The target does not need to use a sustain action to persist the effect, and the effect can only be nullified either temporarily with the Nullify bane, or permanently with the Heightened Invocation feat (see the Dispel Boon entry that follows).</li><br /><li><strong>Bestow Bane</strong> - Make an action roll to invoke the bane as usual. If successful, you cause a non-instantaneous & non-permanent bane to permanently affect the target. The bane persists indefinitely and does not allow resist rolls to end its effects. The effect can be nullified either temporarily with the Dispel bane, or permanently with the Heightened Invocation feat (see the Dispel Bane entry that follows).</li><br /><li><strong>Dispel Boon</strong> - Make an Entropy roll with a Challenge Rating equal to 10 + twice the power level of the boon you are attempting to dispel. If successful, you cause a permanent boon to be forever stripped from the target, causing them to lose the ability to invoke the bane automatically.</li><br /><li><strong>Dispel Bane</strong> - Make a Protection roll with a Challenge Rating equal to 10 + twice the power level of the bane you are attempting to dispel. If successful, you break the curse of a permanent bane afflicting the target, though your target gains no special immunity to it.</li><br /></ul><br />"
   },
   {
@@ -1531,65 +1535,6 @@
     "effect": "You can use a major action to give an ally an immediate Resist roll (a free action for the ally) with advantage 1. Additionally, you gain advantage 1 any time you attempt to invoke the Restoration boon.<br />"
   },
   {
-    "name": "Hunter's Foe (I - IX)",
-    "prerequisites": {
-      "tier1": {
-        "Other": [
-          "None"
-        ]
-      },
-      "tier2": {
-        "Other": [
-          "None"
-        ]
-      },
-      "tier3": {
-        "Other": [
-          "None"
-        ]
-      },
-      "tier4": {
-        "Other": [
-          "None"
-        ]
-      },
-      "tier5": {
-        "Other": [
-          "None"
-        ]
-      },
-      "tier6": {
-        "Other": [
-          "None"
-        ]
-      },
-      "tier7": {
-        "Other": [
-          "None"
-        ]
-      },
-      "tier8": {
-        "Other": [
-          "None"
-        ]
-      },
-      "tier9": {
-        "Other": [
-          "None"
-        ]
-      }
-    },
-    "tags": [
-      "Non-Combat",
-      "Combat"
-    ],
-    "cost": [
-      1
-    ],
-    "description": "You are expertly focused on dealing with a particular species, race, or faction.<br />",
-    "effect": "Choose a species, race, or faction (e.g., dragons, gnolls, or the Red Knights). You learn the primary conversational language of that species, and at the GM's discretion, you may have some level of access to other special forms of communication (such as thieves' cant or secret hand signals). Furthermore, you gain advantage 1 per tier of this feat to all Mental attribute rolls (Learning, Logic, Perception, and Will) pertaining to your chosen group.<br />"
-  },
-  {
     "name": "Impervious Trance",
     "prerequisites": {
       "tier1": {
@@ -1609,7 +1554,7 @@
     "cost": [
       3
     ],
-    "description": "In the heat of combat, your will becomes indomitable.<br />",
+    "description": "In the heightened focus of battle, your will becomes indomitable. Examples include a monk or barbarian's ability to resist fear via unflinching mental focus.<br />",
     "effect": "While you are in a battle trance, you are immune to banes that target your Resolve. If you were already under the affect of such a bane, it is negated for the duration of your battle trance and returns when your battle trance ends.<br />"
   },
   {
@@ -1682,7 +1627,7 @@
     "cost": [
       2
     ],
-    "description": "Your endurance and willpower are legendary, allowing you to push on when others would keel over from exhaustion.<br />",
+    "description": "Your endurance and willpower are legendary, allowing you to push on when others would keel over from exhaustion. A barbarian able to recover their wind after a mighty frenzy, or a computer hacker capable of routinely going for days without sleep while focused on a singular objective are good examples.<br />",
     "effect": "You are able to shrug off the effects of the Fatigued bane. Treat your fatigue level (per the Fatigued bane description) as one lower than it actually is for the purposes of determining the bane's effects. You may take this feat multiple times. Each subsequent tier allows you to ignore an additional level of fatigue.<br />"
   },
   {
@@ -1799,7 +1744,8 @@
       2
     ],
     "description": "You have knowledge of a particular area of study which far surpasses your general intelligence.<br />",
-    "effect": "When you purchase this feat, choose a sphere of knowledge from the list below or, with the GM's approval, create a new one. <br /><br />Example spheres of knowledge include alchemy, arcane, supernatural, engineering, geography, history, location (must specify), anatomy, medicine, explosives, computers, herbalism, and wilderness.<br /><br />Your tier in this feat determines how knowledgeable you are within your chosen sphere.<br /><ul><br /><li><strong>Tier 1</strong> - You automatically succeed on any Learning check related to your chosen sphere of knowledge with a CR of 16 or lower. For higher CRs, your Learning attribute is considered to be 3 for the action roll unless your Learning score is already 3 or higher, in which case you gain advantage 1 on the roll.</li><br /><li><strong>Tier 2</strong> - You automatically succeed on any Learning check related to your chosen sphere of knowledge with a CR of 22 or lower. For higher CRs, your Learning attribute is considered to be 6 for the action roll unless your Learning score is already 6 or higher, in which case you gain advantage 1 on the roll.</li><br /><li><strong>Tier 3</strong> - You automatically succeed on any Learning check related to your chosen sphere of knowledge with a CR of 26 or lower. For higher CRs, your Learning attribute is considered to be 8 for the action roll unless your Learning score is already 8 or higher, in which case you gain advantage 1 on the roll.</li><br /></ul><br />"
+    "effect": "When you take this feat, choose a sphere of knowledge from the list below or, with the GM's approval, create a new one. <br /><br />Example spheres of knowledge include alchemy, arcane, supernatural, engineering, geography, history, location (must specify), anatomy, medicine, explosives, computers, herbalism, and wilderness.<br /><br />Your tier in this feat determines how knowledgeable you are within your chosen sphere.<br /><ul><br /><li><strong>Tier 1</strong> - You automatically succeed on any Learning check related to your chosen sphere of knowledge with a CR of 16 or lower. For higher CRs, your Learning attribute is considered to be 3 for the action roll unless your Learning score is already 3 or higher, in which case you gain advantage 1 on the roll.</li><br /><li><strong>Tier 2</strong> - You automatically succeed on any Learning check related to your chosen sphere of knowledge with a CR of 22 or lower. For higher CRs, your Learning attribute is considered to be 6 for the action roll unless your Learning score is already 6 or higher, in which case you gain advantage 1 on the roll.</li><br /><li><strong>Tier 3</strong> - You automatically succeed on any Learning check related to your chosen sphere of knowledge with a CR of 26 or lower. For higher CRs, your Learning attribute is considered to be 8 for the action roll unless your Learning score is already 8 or higher, in which case you gain advantage 1 on the roll.</li><br /></ul><br />",
+    "special": "In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new sphere of knowledge each time. Purchasing this feat in this way confers no benefit on other spheres of knowledge.<br />"
   },
   {
     "name": "Lethal Strike (I - IX)",
@@ -1876,7 +1822,7 @@
     "cost": [
       3
     ],
-    "description": "Like a deadly assassin, a ninja of legend, or a feinting melee dervish, you can devastate your foes with an expertly placed attack when you catch them off guard.<br />",
+    "description": "Like a highly trained sniper, a ninja of legend, or a feinting melee dervish, you can devastate your foes with an expertly placed attack when you catch them off guard.<br />",
     "effect": "Your attacks are considered lethal strikes whenever you fulfill <em>one</em> of the following conditions:<br /><ul><br /><li>Your target is caught off guard or otherwise unaware of the attack, such as when you are hidden from them, disguised as a friend, or have successfully deceived them.</li><br /><li>Your target is within melee attack range of an ally.</li><br /></ul><br />You gain advantage on lethal strikes equal to your tier in this feat. Additionally, a certain portion of the damage (not to exceed the total damage dealt) is considered lethal damage, which is more difficult to heal from (see Chapter 6: Combat).<br /><ul><br /><li><strong>Tier 1</strong> - Advantage 1. Up to 5 lethal damage</li><br /><li><strong>Tier 2</strong> - Advantage 2. Up to 5 lethal damage</li><br /><li><strong>Tier 3</strong> - Advantage 3. Up to 10 lethal damage</li><br /><li><strong>Tier 4</strong> - Advantage 4. Up to 10 lethal damage</li><br /><li><strong>Tier 5</strong> - Advantage 5. Up to 15 lethal damage</li><br /><li><strong>Tier 6</strong> - Advantage 6. Up to 20 lethal damage</li><br /><li><strong>Tier 7</strong> - Advantage 7. Up to 20 lethal damage</li><br /><li><strong>Tier 8</strong> - Advantage 8. Up to 25 lethal damage</li><br /><li><strong>Tier 9</strong> - Advantage 9. Up to 25 lethal damage</li><br /></ul><br />"
   },
   {
@@ -1952,27 +1898,13 @@
     "cost": [
       1
     ],
-    "description": "You are always ready for danger, allowing you to easily get the drop on your foes.<br />",
+    "description": "You are always ready for danger, allowing you to easily get the drop on your foes. A highly trained gunfighter with a vigilant trigger finger and a covert operative always prepared for ambush are good examples.<br />",
     "effect": "For each tier you possess in this feat, you gain advantage 1 on all initiative rolls.<br />"
   },
   {
-    "name": "Marksman (I - III)",
+    "name": "Marksman",
     "prerequisites": {
       "tier1": {
-        "Attribute": [
-          {
-            "Agility": 5
-          }
-        ]
-      },
-      "tier2": {
-        "Attribute": [
-          {
-            "Agility": 5
-          }
-        ]
-      },
-      "tier3": {
         "Attribute": [
           {
             "Agility": 5
@@ -1987,7 +1919,8 @@
       1
     ],
     "description": "You are an expert at using a specific ranged weapon, your familiarity makes you deadlier at longer ranges.<br />",
-    "effect": "Choose a ranged weapon. In your hands, the range of that weapon is increased by 25 feet.<br />"
+    "effect": "Choose a ranged weapon. In your hands, the weapon's range is increased to the next greater range increment. Close Ranged becomes Short, Short becomes Medium, Medium becomes Long, and Long becomes Extreme.<br />",
+    "special": "You may take this feat multiple times. If you do, select a new weapon each time.<br />"
   },
   {
     "name": "Martial Focus",
@@ -2012,8 +1945,8 @@
     "cost": [
       3
     ],
-    "description": "Like a kensai warrior devoted to mastery of her katana or an assassin who exclusively wields his favored pistols, your training is hyper-focused on a single style of combat to the exclusion of all others.<br />",
-    "effect": "Choose a single weapon (or choose unarmed combat), and specify the attribute that your martial focus relies upon: agility or might. When making attacks using your chosen weapon, your attribute is considered 1 greater for the purposes of determining attribute dice. Your attribute is not changed for purposes of feats, banes, boons, or similar items. Because of your intense focus on a single combat style, any attacks that you make which do not use your martial focus suffer disadvantage 1.<br />"
+    "description": "Like a kensai warrior devoted to mastery of her katana or an assassin who exclusively wields their favored pistols, your training is hyper-focused on a single style of combat to the exclusion of all others.<br />",
+    "effect": "Choose a single weapon (or choose unarmed combat), and specify the attribute that your martial focus relies upon: agility or might. When making attacks using your chosen weapon, your attribute is considered 1 greater for the purposes of determining attribute dice. Your attribute is not changed for purposes of feats, banes, boons, or similar items. Because of your intense focus on a single combat style, any damaging attacks that you make which do not use your martial focus suffer disadvantage 1.<br />"
   },
   {
     "name": "Master Tracker",
@@ -2103,7 +2036,7 @@
       3
     ],
     "description": "Whether your are delivering flurry of blows, wielding two weapons, or calling a chain of lightning bolts from the sky, you have mastered the art of delivering multiple attacks.<br />",
-    "effect": "Before attacking, you may declare that you are multi-attacking, and must state how many extra attacks you would like to make. ALL of your attacks this round suffer disadvantage equal to 3 times the number of <strong>additional</strong> attacks you declare (i.e., if you make 2 attacks, you suffer disadvantage 3; 3 attacks suffers disadvantage 6). For each tier of this feat that you possess, reduce the disadvantage penalty by 1.<br /><br />You may use your attacks to make any combination of bane or damaging attacks, but you may not invoke boons. Resolve each attack individually, applying any other multi-targeting options as you wish. You can move between each of these attacks and they can be used to target the same creature more than once.<br /><br />The number of additional attacks you can make with this feat is limited to 1 + half your level, rounded up. Thus, the limit is 2 additional attacks at 1st level, 3 additional attacks at 3rd level, and 6 additional attacks at 9th level.<br /><br /><strong>Example</strong> - Vax the Deathbringer has Multi Attack Specialist (Tier III). He declares that he will be making three attacks this round (two additional attacks). Therefore, all of his attacks suffer disadvantage 3 (3 x 2 = 6, minus 3 for feat tier 3). His first attack is a necromantic burst targeting a 10'-square. Because of the area of effect, Vax suffers an additional disadvantage 2, making his total disadvantage for that attack 5. For his second attack, Vax casts a spell of blindness on a single foe, making an action roll at disadvantage 3. For his final attack, Vax moves in to melee and uses his touch of death on three foes. Targeting 3 foes incurs an additional disadvantage 3, making his final attack roll suffer a total of disadvantage 6.<br />"
+    "effect": "Before attacking, you may declare that you are multi-attacking, and must state how many extra attacks you would like to make. ALL of your attacks this round suffer disadvantage equal to 3 times the number of <strong>additional</strong> attacks you declare (i.e., if you make 2 attacks, you suffer disadvantage 3; 3 attacks suffers disadvantage 6). For each tier of this feat that you possess, reduce the disadvantage penalty by 1.<br />You may use your attacks to make any combination of bane or damaging attacks, but you may not invoke boons. Resolve each attack individually, applying any other multi-targeting options as you wish. You can move between each of these attacks and they can be used to target the same creature more than once.<br />The number of additional attacks you can make with this feat is limited to 1 + half your level, rounded up. Thus, the limit is 2 additional attacks at 1st level, 3 additional attacks at 3rd level, and 6 additional attacks at 9th level.<br /><strong>Example</strong> - Vax the Deathbringer has Multi Attack Specialist (Tier III). He declares that he will be making three attacks this round (two additional attacks). Therefore, all of his attacks suffer disadvantage 3 (3 x 2 = 6, minus 3 for feat tier 3). His first attack is a necromantic burst targeting a 10'-square. Because of the area of effect, Vax suffers an additional disadvantage 2, making his total disadvantage for that attack 5. For his second attack, Vax casts a spell of blindness on a single foe, making an action roll at disadvantage 3. For his final attack, Vax moves in to melee and uses his touch of death on three foes. Targeting 3 foes incurs an additional disadvantage 3, making his final attack roll suffer a total of disadvantage 6.<br />"
   },
   {
     "name": "Multi-Bane Specialist",
@@ -2123,7 +2056,7 @@
     ],
     "description": "You have mastered a signature attack that allows you to invoke two banes at once. A blast of ice that blinds and slows your enemy, a thunderous shotgun blast that hurls foes back and knocks them to the ground, and a wormtongue song that puts targets to sleep and alters their memory are all examples of a signature attack that could be created with this feat.<br />",
     "effect": "Choose two banes that you are able to inflict and that share a common prerequisite attribute. You are able to inflict both banes with a single attack. The required attribute score for combining the banes is equal to the sum of their power levels (e.g., combining knockdown and slowed, both power level 2, would require an attribute score of 4). If the banes target different defenses, you choose which defense your attack targets. On a successful attack roll, the target is inflicted with both banes. They each persist independently of one another and must be resisted separately.<br />",
-    "special": "In order to benefit from the bane focus feat when using a multi-bane attack, you must possess bane focus for both banes.<br />"
+    "special": "In order to benefit from the bane focus feat when using a multi-bane attack, you must possess bane focus for both banes.<br />You may take this feat more than once. If you do, you must choose a different pair of banes for the new instance of the feat.<br />"
   },
   {
     "name": "Multi-Target Attack Specialist (I - V)",
@@ -2160,8 +2093,9 @@
     "cost": [
       2
     ],
-    "description": "You are a master of felling multiple foes at a time, whether it be with a whirlwind of your blade, a hail of arrows, or a ball of flame.<br />",
-    "effect": "When you choose this feat, you must decide to focus in area, projectile, or melee attacks. For each tier, you reduce the disadvantage penalty associated with multi-targeting for your chosen attack type by 1. Whenever you take this feat, you must specify which type of attack you are focusing on, and you may take the feat multiple times to specialize in multiple types of attack.<br />"
+    "description": "You are a master of wreaking havoc on many foes at once, whether it be with a whirlwind of your twin blades, a hail of arrows, a massive wave of psionic energy, or a devastating rain of fire.<br />",
+    "effect": "When you choose this feat, you must decide to focus in area, projectile, or melee attacks. For each tier, you reduce the disadvantage penalty associated with multi-targeting for your chosen attack type by 1.<br />",
+    "special": "In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new multi-target mode (area, projectile, or melee) each time. Purchasing this feat for a new multi-target attack mode confers no benefit on the others.<br />"
   },
   {
     "name": "Multi-Target Boon Expert",
@@ -2169,7 +2103,7 @@
       "tier1": {
         "Feat": [
           "Boon Focus",
-          "Multi-Target Boon Specialist I"
+          "Multi-Target Boon Specialist II"
         ]
       }
     },
@@ -2180,7 +2114,7 @@
     "cost": [
       3
     ],
-    "description": "You have so mastered the art of aiding groups of allies that you can invoke certain boons effortlessly.<br />",
+    "description": "You have so mastered the art of aiding groups of allies that you can invoke certain boons effortlessly. A healing nova, a supernatural wind that gives flight to a group, and a time dilation that affects a group of allies faster than their foes are all examples.<br />",
     "effect": "When multi-targeting a boon for which you have the Boon Focus feat, you do not need to make an action roll if the disadvantage normally incurred from multi-targeting is completely negated by your Multi-Target Boon Specialist feat. Your invocation automatically succeeds.<br />"
   },
   {
@@ -2219,7 +2153,7 @@
     "cost": [
       2
     ],
-    "description": "You are a master of invoking boons for more than one target.<br />",
+    "description": "You are a master of invoking boons for more than one target. A mass dimensional shift to an intermediary plane and a mass manifestation of entropic life draining are some examples.<br />",
     "effect": "For each tier of this feat, you reduce the disadvantage penalty associated with invoking boons for multiple targets by 1.<br />"
   },
   {
@@ -2295,7 +2229,7 @@
     "cost": [
       3
     ],
-    "description": "You are so adept at a particular form of attack that your foes struggle to shake off the effects. Perhaps the flames of your fireballs burn hotter. Or maybe you've developed a special chemical to mix in with your blinding powder. Whatever the source and whatever the effect, your enemies cower before your legendary attack.<br />",
+    "description": "You are so adept at a particular form of attack that your foes struggle to shake off the effects. Perhaps the flames of your fireballs burn hotter. Or maybe you've developed a special chemical to mix in with your blinding powder. Whatever the source and whatever the effect, most enemies are incapable of recovering from your legendary attack.<br />",
     "effect": "Choose one bane that you can invoke that has a duration of \"resist ends\". When a target rolls Resist to shake off your invocation of the chosen bane, they have disadvantage 1.<br />"
   },
   {
@@ -2321,7 +2255,7 @@
     "cost": [
       2
     ],
-    "description": "Your battle trance lies dormant just below the surface, waiting to be unleashed at a moment's notice.<br />",
+    "description": "Your intense focus never lapses and you can tap into your heightened battle trance at a moment's notice.<br />",
     "effect": "You can enter a battle trance (as per the Battle Trance feat) as a free action even when it is not your turn. You may choose to do so in reaction to another action, such as an enemy's attack, spell, or insult. You may even declare your intent to enter a battle trance after the action has been resolved (such as after the attack has already been rolled). The benefits granted from your battle trance take place before the triggering action is resolved, potentially negating damage or harmful effects that you would have otherwise incurred.<br />"
   },
   {
@@ -2391,7 +2325,7 @@
       3
     ],
     "description": "Like an expert assassin or ninja, you can render your foes completely unable to alert others of your presence.<br />",
-    "effect": "Whenever you successfully hit a target that you have advantage against, that target is afflicted by the silenced bane.<br />"
+    "effect": "Whenever your damaging attack exceeds a target's defense and they are caught off guard or otherwise unaware of the attack, such as when you are hidden from them, disguised as a friend, or have successfully deceived them, the target is afflicted with the silenced bane.<br />"
   },
   {
     "name": "Skill Specialization (I - V)",
@@ -2430,7 +2364,7 @@
     ],
     "description": "You have the eyes of an eagle, the endurance of an ox, the guile of a fox, or some similar exceptional non-combat talent.<br />",
     "effect": "Choose one attribute. Any time you make a non-attack action roll with the chosen attribute, you gain advantage 1 on the roll per tier of this feat you possess for that attribute.<br />",
-    "special": "You can take this feat multiple times. Each time, you can either apply it to a different attribute or increase the feat tier for an attribute you've already purchased.<br />"
+    "special": "In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new attribute each time. Purchasing this feat for a new attribute confers no benefit on the others.<br />"
   },
   {
     "name": "Superior Concentration (I - III)",
@@ -2477,6 +2411,66 @@
     ],
     "description": "You are made for the water and can swim at surprising speeds, with the aptitude of a fish.<br />",
     "effect": "You gain a swimming speed equal to your base speed and do not need to make any special action rolls to maintain this base speed.<br />"
+  },
+  {
+    "name": "Sworn Enemy (I - IX)",
+    "prerequisites": {
+      "tier1": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier2": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier3": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier4": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier5": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier6": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier7": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier8": {
+        "Other": [
+          "None"
+        ]
+      },
+      "tier9": {
+        "Other": [
+          "None"
+        ]
+      }
+    },
+    "tags": [
+      "Non-Combat",
+      "Combat"
+    ],
+    "cost": [
+      1
+    ],
+    "description": "You are expertly focused on dealing with a particular species, race, or faction.<br />",
+    "effect": "Choose a species, race, or faction (e.g., dragons, Void Templars, gnolls, or vampires). You learn the primary conversational language of that species, and at the GM's discretion, you may have some level of access to other special forms of communication (such as thieves' cant or secret hand signals). Furthermore, you gain advantage 1 per tier of this feat to all Mental attribute rolls (Learning, Logic, Perception, and Will) pertaining to your chosen group.<br />",
+    "special": "In addition to purchasing multiple tiers of this feat, you may take this feat multiple times and select a new group each time. Your total advantage on Mental attribute rolls is equal to your tier for that particular group. For example, a character might have Sworn Enemey II (Void Templars) and Sworn Enemey IV (Werewolves).<br />"
   },
   {
     "name": "Tough as Nails (I - II)",
@@ -2545,9 +2539,12 @@
             "Agility": 4
           }
         ],
-        "Feat": [
-          "Attack Specialization (Any one-handed weapon)"
-        ]
+        "any": {
+          "Feat": [
+            "Attack Specialization",
+            "Defensive Mastery"
+          ]
+        }
       }
     },
     "tags": [
@@ -2559,7 +2556,7 @@
       2
     ],
     "description": "Your mastery of two weapon fighting allows you not only to come at your foes with a flurry of attacks, but also shield yourself exceptionally well by deflecting incoming attacks with your weapons.<br />",
-    "effect": "When you have a weapon in each hand, you gain a +1 armor bonus to your Guard defense.<br />"
+    "effect": "When you have a weapon you've taken the Attack Specialization feat for in each hand, you gain a +1 armor bonus to your Guard defense.<br />"
   },
   {
     "name": "Unending Charm",
@@ -2647,7 +2644,7 @@
     "cost": [
       3
     ],
-    "description": "Whether you were born into nobility, heir to a great treasure, or simply a well-established merchant, you are wealthier than the average adventurer.<br />",
+    "description": "Whether you were born into nobility, come from old money, are heir to a great treasure, or simply a well-established merchant, you are wealthier than the average adventurer.<br />",
     "effect": "Your wealth score is increased by 1.<br />"
   },
   {
