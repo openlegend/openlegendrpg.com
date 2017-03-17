@@ -2539,12 +2539,9 @@
             "Agility": 4
           }
         ],
-        "any": {
-          "Feat": [
-            "Attack Specialization",
-            "Defensive Mastery"
-          ]
-        }
+        "Feat": [
+          "Attack Specialization"
+        ]
       }
     },
     "tags": [
