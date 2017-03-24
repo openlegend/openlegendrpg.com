@@ -656,7 +656,7 @@
     "duration": "Resist ends (Fail x 3 = 1 minute)",
     "description": "Stunning an enemy can be caused by anything from the pommel of a dagger to the back of the head, to a kick in the groin, to a deafening thunderclap that disorients the target.<br />",
     "effect": "During the target's turn, they are limited to either a single major action, a single move action, or a single minor action. Effects that grant additional actions do not circumvent this unless they grant a free action. Note that a target expending its move action to resist this bane will receive the remainder of their usual actions if the resist roll succeeds.<br />",
-    "special": "This bane has special rules for boss monsters and NPCs (See Chapter 8: Running the Game). A boss is only affected by the stunned bane during its normal initative turn. It may still take all of its boss actions as usual.<br />"
+    "special": "This bane has special rules for boss NPCs (See Chapter 8: Running the Game). A boss is only affected by the stunned bane during its normal initative turn. It may still take all of its boss actions as usual.<br />"
   },
   {
     "name": "Stupefied",
@@ -696,6 +696,6 @@
     "duration": "10 minutes (special)",
     "description": "Via control of the target's mind, you compel them to honesty, rendering them unable to deliberately lie.<br />",
     "effect": "The target answers any question asked with honesty, to the best of their knowledge. When compelled to reveal something they would not reveal outside of duress, the target makes a Will roll and you make an Influence roll. If the target's roll is higher than yours, then they resist the bane and the effect ends.<br />",
-    "special": "When you successfully invoke this bane, at the end of its duration, you can make another Influence roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated.<br />When a target resists the bane, you cannot target them with this bane again for 24 hours.<br />"
+    "special": "When you successfully invoke this bane, at the end of its duration, you can make another Influence roll to attempt to persist the bane. If successful, the bane persists without requiring the invocation time to be repeated.<br />When a target wins the contested Will vs. Influence roll, you cannot target them with this bane again for 24 hours.<br />"
   }
 ]
