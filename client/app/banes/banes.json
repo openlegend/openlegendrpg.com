@@ -124,7 +124,7 @@
       "Presence vs. Resolve"
     ],
     "invocationTime": "1 Major Action",
-    "duration": "Resist (minor) ends (Fail x 3 = 1 minute)",
+    "duration": "Resist ends (Fail x 3 = 1 minute)",
     "description": "Using your quick wit, intimidating presence, or even a strong display of magical power, you cause your enemies to doubt themselves.<br />",
     "effect": "The affected target has disadvantage on all action rolls.<br /><ul><br /><li><strong>Power Level 3</strong> - Disadvantage 1</li><br /><li><strong>Power Level 6</strong> - Disadvantage 2</li><br /><li><strong>Power Level 8</strong> - Disadvantage 3</li><br /></ul><br />",
     "special": "Resisting this bane is a minor action.<br />"
