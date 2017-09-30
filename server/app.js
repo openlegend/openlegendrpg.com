@@ -6,18 +6,18 @@
 global.__base = __dirname + '/';
 
 // Set default node environment to localhost
-process.env.NODE_ENV = process.env.NODE_ENV || 'localhost';
+// process.env.NODE_ENV = process.env.NODE_ENV || 'localhost';
 
-var mongoose = require('mongoose');
+// var mongoose = require('mongoose');
 var config = require('./config/environment');
 var server = require(__base + '/server');
 
 // Connect to database
-mongoose.connect(config.mongo.uri, config.mongo.options);
+// mongoose.connect(config.mongo.uri, config.mongo.options);
 // server.log.warn('FIXME: Handle mongo failures.');
 
 // Populate DB with sample data
-if(config.seedDB) { require('./config/seed'); }
+// if(config.seedDB) { require('./config/seed'); }
 
 // var socketio = require('socket.io')(server, {
 //   serveClient: config.env !== 'production',
