@@ -107,7 +107,7 @@
     "unsafe-perm": true
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": "0.12.7"
   },
   "private": true,
   "jspm": {
@@ -140,7 +140,7 @@
     }
   },
   "scripts": {
-    "start": "nvm exec 0.12.18 forever server/app.js",
+    "start": "nvm exec 0.12.7 forever server/app.js",
     "test": "gulp test",
     "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
   }
