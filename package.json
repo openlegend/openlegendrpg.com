@@ -140,8 +140,9 @@
     }
   },
   "scripts": {
-    "start": "npm install -g forever@0.12.0 && nvm exec 0.12.7 forever server/app.js",
+    "start": "forever server/app.js",
     "test": "gulp test",
-    "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
+    "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update",
+    "postinstall": "npm install -g forever@0.12.0"
   }
 }
