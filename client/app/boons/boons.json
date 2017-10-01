@@ -124,7 +124,7 @@
     "invocationTime": "1 Major Action",
     "duration": "Sustain Persists",
     "description": "You bolster your target's chances of success via inspiration, augmentation, divine blessing, or supernatural insight. Your target becomes more competent than they normally are. You might grant the sight of an eagle, the problem solving skills of an elite computer hacker, or the social grace of a trained courtier.<br />",
-    "effect": "Choose a single attribute. The target gains advantage on their action rolls with that attribute according to the power level of the boon.<br /><ul><br /><li><strong>Power Level 3</strong> - Advantage 1</li><br /><li><strong>Power Level 6</strong> - Advantage 2</li><br /><li><strong>Power Level 8</strong> - Advantage 3</li><br /></ul><br />"
+    "effect": "Choose a single attribute. The target gains advantage on their action rolls with that attribute according to the power level of the boon.<br /><ul><br /><li><strong>Power Level 3</strong> - Advantage 1.</li><br /><li><strong>Power Level 6</strong> - Advantage 2.</li><br /><li><strong>Power Level 8</strong> - Advantage 3.</li><br /></ul><br />"
   },
   {
     "name": "Darkness",
@@ -252,7 +252,7 @@
     "invocationTime": "1 Major Action",
     "duration": "Instantaneous",
     "description": "Healing can be one of two things: the actual mending of wounds and broken bones through sources like medicine, surgery, or supernatural creative life force, or the inspiration of your target to carry on fighting, even in the face of death. This boon is common among clerics, medics, bards, and combat leaders.<br />",
-    "effect": "Roll dice according to the boon power level below. These dice explode as normal. The target is healed a number of hit points equal to the total roll.<br /><ul><br /><li><strong>Power Level 1</strong> - Heal 1d4 </li><br /><li><strong>Power Level 2</strong> - Heal 1d6 </li><br /><li><strong>Power Level 3</strong> - Heal 1d8 </li><br /><li><strong>Power Level 4</strong> - Heal 1d10 </li><br /><li><strong>Power Level 5</strong> - Heal 2d6 </li><br /><li><strong>Power Level 6</strong> - Heal 2d8 </li><br /><li><strong>Power Level 7</strong> - Heal 2d10 </li><br /><li><strong>Power Level 8</strong> - Heal 3d8 </li><br /><li><strong>Power Level 9</strong> - Heal 3d10 </li><br /></ul><br />",
+    "effect": "Roll dice according to the boon power level below. These dice explode as normal. The target is healed a number of hit points equal to the total roll.<br /><ul><br /><li><strong>Power Level 1</strong> - Heal 1d4.</li><br /><li><strong>Power Level 2</strong> - Heal 1d6.</li><br /><li><strong>Power Level 3</strong> - Heal 1d8.</li><br /><li><strong>Power Level 4</strong> - Heal 1d10.</li><br /><li><strong>Power Level 5</strong> - Heal 2d6.</li><br /><li><strong>Power Level 6</strong> - Heal 2d8.</li><br /><li><strong>Power Level 7</strong> - Heal 2d10.</li><br /><li><strong>Power Level 8</strong> - Heal 3d8.</li><br /><li><strong>Power Level 9</strong> - Heal 3d10.</li><br /></ul><br />",
     "special": "This boon does not heal lethal damage.<br />"
   },
   {
