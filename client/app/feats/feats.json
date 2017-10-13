@@ -276,7 +276,7 @@
       2
     ],
     "description": "Your prowess in an extraordinary, mental, or social attribute is linked in a way that empowers another attribute of your character, allowing you to use that attribute for tasks normally reserved for another. Examples of Attribute Substitution in play include a martial artist who is physically weak but capable of using internal chi to throw and disable opponents, an anatomical genius who uses logic to make vital strikes rather than their agility, or a gunslinger whose deadshot aim is the result of a dark pact.<br />",
-    "effect": "When you take this feat, you create a permanent link between two attributes: one stronger (the primary attribute) and one weaker (the dependent attribute). You may use your primary attribute in place of the dependent attribute for different purposes depending on which tier of the feat you have:<br /><ul><br /><li><strong>Tier 1</strong><br />  <ul><br />  <li>Making non-attack, non-defend, non-invocation action rolls</li><br />  <li>Calculating hit points, defenses, and other secondary statistics</li><br />  <li>Meeting feat prerequisites</li><br />  <li>Other situations at the GM's discretion</li><br />  </ul><br /></li><br /><li><strong>Tier 2</strong><br />  <ul><br />  <li>>Making attack and defend action rolls</li><br />  <li>Invoking banes and boons</li><br />  </ul><br /></ul><br />The relationship formed by your two attributes is subject to case-by-case approval and must be approved by the GM first. The link must be logical and consistent with the story you are trying to tell. For example, a brawler who substitutes their Logic for their Might to represent their ability to use leverage in grappling rather than strength would likely not get to use their Logic score for an attempt to bend the bars on a prison cell. Furthermore, the GM should prevent players from creating illogical substitutions that are purely aimed at making their characters unreasonably powerful. Two examples of proper uses of this feat include a calculating warrior who studies angles, leverage, and physics to substitute Logic for Might, or a gunslinger who channels dark energy, giving her deadshot accuracy and substituting Entropy for Agility.<br />"
+    "effect": "When you take this feat, you create a permanent link between two attributes: one stronger (the primary attribute) and one weaker (the dependent attribute). You may use your primary attribute in place of the dependent attribute for different purposes depending on which tier of the feat you have:<br /><ul><br /><li><strong>Tier 1</strong><br />  <ul><br />  <li>Making non-attack, non-defend, non-invocation action rolls</li><br />  <li>Calculating hit points, defenses, and other secondary statistics</li><br />  <li>Meeting feat prerequisites</li><br />  <li>Other situations at the GM's discretion</li><br />  </ul><br /></li><br /><li><strong>Tier 2</strong><br />  <ul><br />  <li>Making attack and defend action rolls</li><br />  <li>Invoking banes and boons</li><br />  </ul><br /></ul><br />The relationship formed by your two attributes is subject to case-by-case approval and must be approved by the GM first. The link must be logical and consistent with the story you are trying to tell. For example, a brawler who substitutes their Logic for their Might to represent their ability to use leverage in grappling rather than strength would likely not get to use their Logic score for an attempt to bend the bars on a prison cell. Furthermore, the GM should prevent players from creating illogical substitutions that are purely aimed at making their characters unreasonably powerful. Two examples of proper uses of this feat include a calculating warrior who studies angles, leverage, and physics to substitute Logic for Might, or a gunslinger who channels dark energy, giving her deadshot accuracy and substituting Entropy for Agility.<br />"
   },
   {
     "name": "Bane Focus",
@@ -1203,16 +1203,19 @@
         "any": {
           "Attribute": [
             {
+              "Alteration": 4
+            },
+            {
               "Creation": 4
             },
             {
               "Entropy": 4
             },
             {
-              "Influence": 4
+              "Energy": 4
             },
             {
-              "Logic": 4
+              "Influence": 4
             }
           ]
         }
@@ -1221,16 +1224,19 @@
         "any": {
           "Attribute": [
             {
+              "Alteration": 5
+            },
+            {
               "Creation": 5
             },
             {
               "Entropy": 5
             },
             {
-              "Influence": 5
+              "Energy": 5
             },
             {
-              "Logic": 5
+              "Influence": 5
             }
           ]
         }
@@ -1239,16 +1245,19 @@
         "any": {
           "Attribute": [
             {
+              "Alteration": 7
+            },
+            {
               "Creation": 7
             },
             {
               "Entropy": 7
             },
             {
-              "Influence": 7
+              "Energy": 7
             },
             {
-              "Logic": 7
+              "Influence": 7
             }
           ]
         }
