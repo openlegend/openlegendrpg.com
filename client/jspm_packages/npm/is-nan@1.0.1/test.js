@@ -1,7 +1,7 @@
 /* */ 
 "use strict";
 var test = require('tape');
-var isNaN = require('../is-nan@1.0.1');
+var isNaN = require('./index');
 test('not NaN', function(t) {
   t.notOk(isNaN(), 'undefined is not NaN');
   t.notOk(isNaN(null), 'null is not NaN');

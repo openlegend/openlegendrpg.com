@@ -2,7 +2,7 @@
 (function(process) {
   'use strict';
   var meow = require('meow');
-  var repeating = require('../repeating@1.1.2');
+  var repeating = require('./index');
   var cli = meow({help: ['Usage', '  repeating <string> <count>', '', 'Example', '  repeating unicorn 2', '  unicornunicorn'].join('\n')});
   if (typeof cli.input[1] !== 'number') {
     console.error('You have to define how many times to repeat the string.');

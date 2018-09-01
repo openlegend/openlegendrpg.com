@@ -5,7 +5,7 @@
   var stdin = require('get-stdin');
   var argv = require('minimist')(process.argv.slice(2));
   var pkg = require('./package.json!systemjs-json');
-  var detectIndent = require('../detect-indent@3.0.1');
+  var detectIndent = require('./index');
   var input = argv._[0];
   function help() {
     console.log(['', '  ' + pkg.description, '', '  Usage', '    detect-indent <file>', '    echo <string> | detect-indent', '', '  Example', '    echo \'  foo\\n  bar\' | detect-indent | wc --chars', '    2'].join('\n'));

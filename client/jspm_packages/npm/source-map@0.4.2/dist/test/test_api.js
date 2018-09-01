@@ -4,7 +4,7 @@ Components.utils.import('resource://test/Utils.jsm');
 define("test/source-map/test-api", ["require", "exports", "module"], function(require, exports, module) {
   var sourceMap;
   try {
-    sourceMap = require('../../../source-map@0.4.2');
+    sourceMap = require('../../lib/source-map');
   } catch (e) {
     sourceMap = {};
     Components.utils.import('resource:///modules/devtools/SourceMap.jsm', sourceMap);

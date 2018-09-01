@@ -1,7 +1,7 @@
 /* */ 
 (function(process) {
   var test = require('tape');
-  var randomBytes = require('../randombytes@2.0.1');
+  var randomBytes = require('./index');
   test('sync', function(t) {
     t.plan(3);
     t.equals(randomBytes(3).length, 3, 'len: ' + 3);

@@ -4,7 +4,7 @@
   var stdin = require('get-stdin');
   var argv = require('minimist')(process.argv.slice(2));
   var pkg = require('./package.json!systemjs-json');
-  var indentString = require('../indent-string@1.2.1');
+  var indentString = require('./index');
   var input = argv._;
   function help() {
     console.log(['', '  ' + pkg.description, '', '  Usage', '    indent-string <string> [--indent <string>] [--count <number>]', '    cat file.txt | indent-string > indented-file.txt', '', '  Example', '    indent-string "$(printf \'Unicorns\\nRainbows\\n\')" --indent ♥ --count 4', '    ♥♥♥♥Unicorns', '    ♥♥♥♥Rainbows'].join('\n'));

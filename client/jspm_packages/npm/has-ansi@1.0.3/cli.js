@@ -3,7 +3,7 @@
   'use strict';
   var stdin = require('get-stdin');
   var pkg = require('./package.json!systemjs-json');
-  var hasAnsi = require('../has-ansi@1.0.3');
+  var hasAnsi = require('./index');
   var argv = process.argv.slice(2);
   var input = argv[0];
   function help() {

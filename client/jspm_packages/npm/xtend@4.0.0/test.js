@@ -1,6 +1,6 @@
 /* */ 
 var test = require('tape');
-var extend = require('../xtend@4.0.0');
+var extend = require('./immutable');
 var mutableExtend = require('./mutable');
 test("merge", function(assert) {
   var a = {a: "foo"};

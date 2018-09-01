@@ -1,7 +1,7 @@
 /* */ 
 (function(Buffer, process) {
   var test = require('tape');
-  var nodeCrypto = require('../diffie-hellman@3.0.1');
+  var nodeCrypto = require('./index');
   var myCrypto = require('./browser');
   var mods = ['modp1', 'modp2', 'modp5', 'modp14', 'modp15', 'modp16', 'modp17', 'modp18'];
   function isNode10() {

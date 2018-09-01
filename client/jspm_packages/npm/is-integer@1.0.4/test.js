@@ -1,7 +1,7 @@
 /* */ 
 "use strict";
 var test = require('tape'),
-    isInteger = require('../is-integer@1.0.4');
+    isInteger = require('./index');
 test("should be truthy on integers", function(t) {
   [5295, -5295, -9007199254740991, 9007199254740991, 0, -0].map(isInteger).forEach(function(val) {
     t.ok(val);

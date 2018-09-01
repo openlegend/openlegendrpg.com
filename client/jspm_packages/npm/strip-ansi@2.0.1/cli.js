@@ -3,7 +3,7 @@
   'use strict';
   var fs = require('fs');
   var pkg = require('./package.json!systemjs-json');
-  var stripAnsi = require('../strip-ansi@2.0.1');
+  var stripAnsi = require('./index');
   var argv = process.argv.slice(2);
   var input = argv[0];
   function help() {
