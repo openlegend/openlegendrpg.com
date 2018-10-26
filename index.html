@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" data-framework="angularjs" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <meta charset=" utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-title" content="Demo App">
+    <meta property="og:image" content="http://www.openlegendrpg.com/assets/img/open_legend_saryth_navigator_night_in_forest.jpg" />
+    <meta name="description" content="Open-source (FREE) RPG (Roleplaying Game) for any genre. Create heroes your system said you couldn't. Exploding dice drive epic stories. Freeform storytelling with strategic fun.">
+    <title>Open Legend RPG</title>
+    <base href="/">
+
+    <!-- various favicons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/assets/manifest.json">
+    <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <meta name="msapplication-config" content="/assets/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafrex/spa-github-pages
+      // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+      // ----------------------------------------------------------------------
+      // This script checks to see if a redirect is present in the query string
+      // and converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function(l) {
+        if (l.search) {
+          var q = {};
+          l.search.slice(1).split('&').forEach(function(v) {
+            var a = v.split('=');
+            q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+          });
+          if (q.p !== undefined) {
+            window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + (q.p || '') +
+              (q.q ? ('?' + q.q) : '') +
+              l.hash
+            );
+          }
+        }
+      }(window.location))
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+</head>
+<body layout="column" class="olrpg">
+
+    <noscript>
+        <div class="deprecation-warning">
+          <h1>Please enable Javascript</h1>
+          <p>This site requires your browser to have Javascript enabled.
+          <a href="http://enable-javascript.com" target="_blank">Learn more</a></p>
+        </div>
+    </noscript>
+
+    <div ui-view="" layout="column" flex layout-fill></div>
+
+    <script src="jspm_packages/system.js"></script>
+    <script src="system.config.js"></script>
+
+    <!--PROD
+    <script>
+      var systemLocate = System.locate;
+      System.locate = function(load) {
+        var System = this;
+        return Promise.resolve(systemLocate.call(this, load)).then(function(address) {
+          if(address.indexOf('bust') > -1 ||
+            address.indexOf('css') > -1 ||
+            address.indexOf('json') > -1) return address;
+          return address + System.cacheBust;
+        });
+      }
+      System.cacheBust = '?bust=' + {{hash}};
+    </script>
+    END-->
+
+    <script>
+      System.import('app/app');
+    </script>
+
+    <!-- google analytics -->
+    <script>
+      if ( !window.location.host.match('localhost') ) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71918318-1', 'auto');
+        ga('send', 'pageview');
+
+      }
+    </script>
+
+</body>
+</html>
