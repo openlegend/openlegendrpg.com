@@ -12,7 +12,7 @@ System.register(["angular"], function (_export, _context) {
       configServiceModule = angular.module('config.js', []);
       configServiceModule.factory('Config', function () {
         return {
-          timestamp: DATE_TO_REPLACE,
+          timestamp: 1540521626313,
           urlBase: "".concat(window.location.protocol, "//").concat(window.location.host, "/")
         };
       });
@@ -21,4 +21,3 @@ System.register(["angular"], function (_export, _context) {
     }
   };
 });
-//# sourceMappingURL=config.js.map
