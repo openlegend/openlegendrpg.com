@@ -8,7 +8,7 @@ System.register(["lodash"], function (_export, _context) {
     var uniquePrereqs = [];
     var suppressIteration = false;
 
-    function processAttrPrereq(val, key, parentKey, parentIndex, parentLength, allPrereqs) {
+    function processAttrPrereq(val, key, parentKey, parentIndex, parentLength) {
       var string = '';
 
       if (key === 'Feat' || key === 'Other') {
@@ -25,9 +25,7 @@ System.register(["lodash"], function (_export, _context) {
         if (key === 'Attribute') {
           var attrKey = Object.keys(attr)[0];
 
-          if ( x === val.length - 1 && allPrereqs.length === 1 ) {
-            string += " ".concat(val.length > 1 ? ', ' : '').concat(attrKey, " ").concat(attr[attrKey]);
-          } else if (x === val.length - 1) {
+          if (x === val.length - 1) {
             string += " ".concat(val.length > 1 ? ' or ' : '').concat(attrKey, " ").concat(attr[attrKey]);
           } else {
             string += "".concat(attrKey, " ").concat(attr[attrKey]);
@@ -48,10 +46,10 @@ System.register(["lodash"], function (_export, _context) {
 
       if (key === 'any') {
         Object.keys(prereqs[prereq][key]).forEach(function (subKey, subKeyIndex) {
-          prereqTiers += processAttrPrereq(prereqs[prereq][key][subKey], subKey, key, index, prereqs[prereq][key][subKey].length, prereqs);
+          prereqTiers += processAttrPrereq(prereqs[prereq][key][subKey], subKey, key, index, prereqs[prereq][key][subKey].length);
         });
       } else {
-        prereqTiers += processAttrPrereq(prereqs[prereq][key], key, index, prereqs[prereq][key].length, prereqs);
+        prereqTiers += processAttrPrereq(prereqs[prereq][key], key, index, prereqs[prereq][key].length);
       }
 
       return prereqTiers;
