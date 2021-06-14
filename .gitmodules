@@ -1,0 +1,3 @@
+[submodule "src/core-rules"]
+	path = src/core-rules
+	url = git@github.com:openlegend/core-rules.git

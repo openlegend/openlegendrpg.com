@@ -1,1 +1,0 @@
-module.exports = require("npm:detect-indent@3.0.1/index");

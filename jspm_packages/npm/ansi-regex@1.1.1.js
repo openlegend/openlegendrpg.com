@@ -1,1 +1,0 @@
-module.exports = require("npm:ansi-regex@1.1.1/index");

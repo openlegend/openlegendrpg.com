@@ -1,0 +1,1316 @@
+FUNCTION  coc#client#get_channel()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/client.vim:147
+Called 132 times
+Total time:   0.000583
+ Self time:   0.000583
+
+count  total (s)   self (s)
+  132              0.000192   if s:is_vim
+  132              0.000287     return a:client['channel']
+                              endif
+                              return a:client['chan_id']
+
+FUNCTION  <SNR>34_request()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/client.vim:154
+Called 1 time
+Total time:   0.001444
+ Self time:   0.001063
+
+count  total (s)   self (s)
+    1   0.000011   0.000007   let channel = coc#client#get_channel(self)
+    1              0.000004   if empty(channel) | return '' | endif
+    1              0.000001   try
+    1              0.000001     if s:is_vim
+    1   0.001371   0.000994       let res = ch_evalexpr(channel, [a:method, a:args], {'timeout': 60 * 1000})
+    1              0.000008       if type(res) == 1 && res ==# ''
+                                    throw 'request '.a:method. ' '.string(a:args).' timeout after 60s'
+    1              0.000001       endif
+    1              0.000003       let [l:errmsg, res] =  res
+    1              0.000002       if !empty(l:errmsg)
+                                    throw l:errmsg
+    1              0.000000       else
+    1              0.000001         return res
+                                  endif
+                                else
+                                  return call('rpcrequest', [channel, a:method] + a:args)
+                                endif
+                              catch /.*/
+                                if v:exception =~# 'E475'
+                                  if get(g:, 'coc_vim_leaving', 0) | return | endif
+                                  echohl Error | echom '['.self.name.'] server connection lost' | echohl None
+                                  let name = self.name
+                                  call s:on_exit(name, 0)
+                                  execute 'silent do User ConnectionLost'.toupper(name[0]).name[1:]
+                                elseif v:exception =~# 'E12'
+                                  " neovim's bug, ignore it
+                                else
+                                  echohl Error | echo 'Error on request ('.a:method.'): '.v:exception | echohl None
+                                endif
+    1              0.000001   endtry
+
+FUNCTION  GetJsxIndent()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/after/indent/jsx.vim:24
+Called 1 time
+Total time:   0.006167
+ Self time:   0.000027
+
+count  total (s)   self (s)
+    1   0.006166   0.000026   return jsx_pretty#indent#get(function('GetJavascriptIndent'))
+
+FUNCTION  coc#util#get_format_opts()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/util.vim:923
+Called 6 times
+Total time:   0.000156
+ Self time:   0.000156
+
+count  total (s)   self (s)
+    6              0.000045   if a:bufnr && bufloaded(a:bufnr)
+    6              0.000038     let tabsize = getbufvar(a:bufnr, '&shiftwidth')
+    6              0.000011     if tabsize == 0
+                                  let tabsize = getbufvar(a:bufnr, '&tabstop')
+    6              0.000007     endif
+    6              0.000030     return [tabsize, getbufvar(a:bufnr, '&expandtab')]
+                              endif
+                              let tabsize = &shiftwidth == 0 ? &tabstop : &shiftwidth
+                              return [tabsize, &expandtab]
+
+FUNCTION  9()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/api.vim:76
+Called 5 times
+Total time:   0.001062
+ Self time:   0.000436
+
+count  total (s)   self (s)
+    5              0.000021   let res = []
+   24              0.000045   for [key, arglist] in a:calls
+   19              0.000066     let name = key[5:]
+   19              0.000013     try
+   19   0.000769   0.000143       call add(res, call(s:funcs[name], arglist))
+                                catch /.*/
+                                  return [res, v:exception]
+   19              0.000016     endtry
+   24              0.000019   endfor
+    5              0.000011   return [res, v:null]
+
+FUNCTION  <SNR>76_is_jsx_comment()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:82
+Called 1 time
+Total time:   0.000005
+ Self time:   0.000005
+
+count  total (s)   self (s)
+    1              0.000004   return a:syntax =~? 'jsxComment'
+
+FUNCTION  <SNR>76_is_jsx_expression()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:72
+Called 1 time
+Total time:   0.000009
+ Self time:   0.000009
+
+count  total (s)   self (s)
+    1              0.000008   return a:syntax =~? 'jsxExpressionBlock'
+
+FUNCTION  <SNR>76_jsx_indent_element()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:122
+Called 1 time
+Total time:   0.005738
+ Self time:   0.000830
+
+count  total (s)   self (s)
+    1   0.000043   0.000011   let syntax_stack = s:syntax_stack_at(a:lnum, s:start_col(a:lnum))
+    1              0.000003   let syntax_name = syntax_stack[-1]
+    1              0.000005   let element_count = count(syntax_stack, 'jsxElement')
+                            
+    1   0.000018   0.000009   if s:trim(getline(a:lnum)) =~ '^>'
+                                return s:jsx_indent_trail_punct(a:lnum)
+    1              0.000001   endif
+                            
+                              " If current tag is closing tag
+    1   0.000011   0.000007   if s:is_closing_tag(syntax_name)
+                                return s:jsx_indent_closing_tag(a:lnum)
+    1              0.000000   endif
+                            
+                              " Normalize the jsxElement count for opening tag
+    1   0.000011   0.000006   if s:is_opening_tag(syntax_name)
+                                " <div>
+                                "   <div></div> <-- jsxRegion->jsxElement->jsxElement->jsxTag->jsxOpenTag->jsxOpenPunct
+                                " </div>
+                                if s:is_jsx_element(syntax_stack[-4]) && s:is_jsx_element(syntax_stack[-5])
+                                  let element_count = element_count - 1
+                                endif
+    1              0.000000   endif
+                            
+    1              0.000003   let start_time = localtime()
+    1              0.000024   let pos = searchpos(s:start_tag, 'bW')
+                            
+   23   0.005080   0.000225   while !s:is_parent_element(pos, element_count)
+   22              0.000070     if localtime() - start_time >= 0.5
+                                  return -1
+   22              0.000036     endif
+   22              0.000344     let pos = searchpos(s:start_tag, 'bW')
+   23              0.000019   endwhile
+                            
+    1   0.000012   0.000009   return indent(pos[0]) + s:sw()
+
+FUNCTION  <SNR>76_is_jsx_backticks()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:92
+Called 1 time
+Total time:   0.000006
+ Self time:   0.000006
+
+count  total (s)   self (s)
+    1              0.000006   return a:syntax =~? 'jsxBackticks'
+
+FUNCTION  <SNR>76_syntax_context()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:194
+Called 1 time
+Total time:   0.000172
+ Self time:   0.000103
+
+count  total (s)   self (s)
+    1   0.000015   0.000007   let start_col = s:start_col(a:lnum)
+    1   0.000042   0.000008   let syntax_stack = s:syntax_stack_at(a:lnum, start_col)
+    1              0.000005   let start_syntax = syntax_stack[-1]
+    1              0.000004   let reversed = reverse(syntax_stack)
+    1              0.000002   let i = 0
+                            
+    1              0.000003   for syntax_name in reversed
+                                " If the current line is jsxExpressionBlock and not starts with jsxBraces
+    1   0.000024   0.000015     if s:is_jsx_expression(syntax_name)
+                                  return 'jsxExpressionBlock'
+    1              0.000001     endif
+                            
+    1   0.000012   0.000007     if s:is_jsx_region(syntax_name)
+                                  return 'jsxRegion'
+    1              0.000001     endif
+                            
+    1   0.000012   0.000008     if s:is_jsx_element(syntax_name)
+                                  " If current line starts with the opening tag
+    1   0.000021   0.000012       if s:is_opening_tag(start_syntax) || s:is_closing_tag(start_syntax)
+                                    " And the next syntax is jsxRegion
+                                    if s:is_jsx_region(reversed[i+1])
+                                      return 'jsxRegion'
+                                    elseif reversed[i+1] =~ 'jsxTaggedRegion'
+                                      return 'jsxTaggedRegion'
+                                    else
+                                      return 'jsxElement'
+                                    endif
+    1              0.000005       elseif reversed[i+1] =~ 'jsxTaggedRegion'
+                                    return 'jsxTaggedRegion'
+    1              0.000000       else
+    1              0.000001         return 'jsxElement'
+                                  endif
+                                endif
+                            
+                                let i = i + 1
+                              endfor
+                              
+                              return 'Other'
+
+FUNCTION  coc#util#get_buf_lines()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/util.vim:605
+Called 29 times
+Total time:   0.001696
+ Self time:   0.001696
+
+count  total (s)   self (s)
+   29              0.000269   if !bufloaded(a:bufnr) | return '' | endif
+   29              0.000140   let changedtick = getbufvar(a:bufnr, 'changedtick')
+   29              0.000061   if changedtick == a:changedtick
+   10              0.000013     return v:null
+   19              0.000011   endif
+   19              0.001108   return { 'lines': getbufline(a:bufnr, 1, '$'), 'changedtick': getbufvar(a:bufnr, 'changedtick') }
+
+FUNCTION  jsx_pretty#indent#get()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:236
+Called 1 time
+Total time:   0.006140
+ Self time:   0.000161
+
+count  total (s)   self (s)
+    1   0.000037   0.000020   let line = s:trim(getline(v:lnum))
+    1   0.000041   0.000012   let start_syntax = s:start_syntax(v:lnum)
+                            
+    1   0.000014   0.000008   if s:is_jsx_backticks(start_syntax)
+                                return s:jsx_indent_backticks(v:lnum)
+    1              0.000001   endif
+                            
+    1   0.000011   0.000007   if s:is_jsx_brace(start_syntax)
+                                return s:jsx_indent_element(v:lnum)
+    1              0.000001   endif
+                            
+    1   0.000012   0.000008   if s:is_opening_tag(start_syntax) && line =~ '^>'
+                                return s:jsx_indent_trail_punct(v:lnum)
+    1              0.000000   endif
+                            
+    1   0.000183   0.000011   let syntax_context = s:syntax_context(v:lnum)
+                            
+    1              0.000002   if syntax_context == 'jsxRegion'
+                                if s:is_closing_tag(start_syntax)
+                                  return s:jsx_indent_closing_tag(v:lnum)
+                                endif
+                            
+                                let prev_lnum = s:prev_lnum(v:lnum)
+                                let prev_line = s:trim(getline(prev_lnum))
+                            
+                                if prev_line =~ '[([{=?]$'
+                                  return indent(prev_lnum) + s:sw()
+                                elseif prev_line =~ '[:|&<>]$' && s:trim(getline(s:prev_lnum(prev_lnum))) !~ '[?:|&<>]$'
+                                  return indent(prev_lnum) + s:sw()
+                                else
+                                  return indent(prev_lnum)
+                                endif
+    1              0.000002   elseif syntax_context == 'jsxTaggedRegion'
+                                if s:is_closing_tag(start_syntax)
+                                  return s:jsx_indent_closing_tag(v:lnum)
+                                elseif s:is_jsx_comment(start_syntax)
+                                  return s:jsx_indent_comment(v:lnum)
+                                else
+                                  return indent(s:prev_lnum(v:lnum)) + s:sw()
+                                endif
+    1              0.000002   elseif syntax_context == 'jsxElement'
+    1   0.000011   0.000006     if s:is_jsx_comment(start_syntax)
+                                  return s:jsx_indent_comment(v:lnum)
+    1              0.000000     endif
+                            
+    1   0.000010   0.000006     if s:is_comment(start_syntax)
+                                  return s:jsx_indent_comment(v:lnum)
+    1              0.000001     endif
+                            
+    1   0.005749   0.000011     return s:jsx_indent_element(v:lnum)
+                              elseif syntax_context == 'jsxExpressionBlock'
+                                let prev_lnum = s:prev_lnum(v:lnum)
+                                let prev_line = s:trim(getline(prev_lnum))
+                            
+                                if line =~ '^?'
+                                  return indent(prev_lnum) + s:sw()
+                                elseif line =~ '^:'
+                                  return indent(prev_lnum)
+                                else
+                                  return a:js_indent()
+                                endif
+                              endif
+                            
+                              return a:js_indent()
+
+FUNCTION  <SNR>76_syntax_stack_at()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:21
+Called 25 times
+Total time:   0.004349
+ Self time:   0.004349
+
+count  total (s)   self (s)
+   25              0.004334   return map(synstack(a:lnum, a:col), 'synIDattr(v:val, "name")')
+
+FUNCTION  coc#util#cursor()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/util.vim:36
+Called 14 times
+Total time:   0.000294
+ Self time:   0.000294
+
+count  total (s)   self (s)
+   14              0.000277   return [line('.') - 1, strchars(strpart(getline('.'), 0, col('.') - 1))]
+
+FUNCTION  <SNR>25_dopopd()
+    Defined: ~/.vim/plugged/fzf/plugin/fzf.vim:574
+Called 2 times
+Total time:   0.000016
+ Self time:   0.000016
+
+count  total (s)   self (s)
+    2              0.000011   if !exists('w:fzf_pushd')
+    2              0.000002     return
+                              endif
+                            
+                              " FIXME: We temporarily change the working directory to 'dir' entry
+                              " of options dictionary (set to the current working directory if not given)
+                              " before running fzf.
+                              "
+                              " e.g. call fzf#run({'dir': '/tmp', 'source': 'ls', 'sink': 'e'})
+                              "
+                              " After processing the sink function, we have to restore the current working
+                              " directory. But doing so may not be desirable if the function changed the
+                              " working directory on purpose.
+                              "
+                              " So how can we tell if we should do it or not? A simple heuristic we use
+                              " here is that we change directory only if the current working directory
+                              " matches 'dir' entry. However, it is possible that the sink function did
+                              " change the directory to 'dir'. In that case, the user will have an
+                              " unexpected result.
+                              if s:fzf_getcwd() ==# w:fzf_pushd.dir && (!&autochdir || w:fzf_pushd.bufname ==# bufname(''))
+                                execute w:fzf_pushd.command s:escape(w:fzf_pushd.origin)
+                              endif
+                              unlet! w:fzf_pushd
+
+FUNCTION  coc#rpc#request()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/rpc.vim:89
+Called 1 time
+Total time:   0.001469
+ Self time:   0.000017
+
+count  total (s)   self (s)
+    1   0.000014   0.000006   if !coc#rpc#ready()
+                                return ''
+    1              0.000000   endif
+    1   0.001454   0.000010   return s:client['request'](a:method, a:args)
+
+FUNCTION  coc#_hide()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc.vim:91
+Called 4 times
+Total time:   0.000033
+ Self time:   0.000033
+
+count  total (s)   self (s)
+    4              0.000017   if !pumvisible() | return | endif
+    2              0.000012   call feedkeys("\<C-e>", 'in')
+
+FUNCTION  peekaboo#on()
+    Defined: ~/.vim/plugged/vim-peekaboo/plugin/peekaboo.vim:27
+Called 2 times
+Total time:   0.000012
+ Self time:   0.000012
+
+count  total (s)   self (s)
+    2              0.000009   if get(b:, 'peekaboo_on', 0)
+    2              0.000002     return
+                              endif
+                            
+                              let prefix = get(g:, 'peekaboo_prefix', '')
+                              let ins_prefix = get(g:, 'peekaboo_ins_prefix', '')
+                              execute 'nmap <buffer> <expr> '.prefix.    '"     peekaboo#peek(v:count1, ''"'',  0)'
+                              execute 'xmap <buffer> <expr> '.prefix.    '"     peekaboo#peek(v:count1, ''"'',  1)'
+                              execute 'nmap <buffer> <expr> '.prefix.    '@     peekaboo#peek(v:count1, ''@'', 0)'
+                              execute 'imap <buffer> <expr> '.ins_prefix.'<c-r> peekaboo#peek(1, "\<c-r>",  0)'
+                              let b:peekaboo_on = 1
+                              return ''
+
+FUNCTION  <SNR>29_VimNavigate()
+    Defined: ~/.vim/plugged/vim-tmux-navigator/plugin/tmux_navigator.vim:10
+Called 2 times
+Total time:   0.019029
+ Self time:   0.000204
+
+count  total (s)   self (s)
+    2              0.000003   try
+    2   0.019015   0.000190     execute 'wincmd ' . a:direction
+                              catch
+                                echohl ErrorMsg | echo 'E11: Invalid in command-line window; <CR> executes, CTRL-C quits: wincmd k' | echohl None
+    2              0.000002   endtry
+
+FUNCTION  <SNR>34_notify()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/client.vim:187
+Called 131 times
+Total time:   0.009057
+ Self time:   0.008478
+
+count  total (s)   self (s)
+  131   0.001853   0.001274   let channel = coc#client#get_channel(self)
+  131              0.000318   if empty(channel)
+                                return ''
+  131              0.000074   endif
+  131              0.000129   try
+  131              0.000130     if s:is_vim
+  131              0.002278       call ch_sendraw(channel, json_encode([0, [a:method, a:args]])."\n")
+                                else
+                                  call call('rpcnotify', [channel, a:method] + a:args)
+  131              0.000098     endif
+                              catch /.*/
+                                if v:exception =~# 'E475'
+                                  if get(g:, 'coc_vim_leaving', 0)
+                                    return
+                                  endif
+                                  echohl Error | echom '['.self.name.'] server connection lost' | echohl None
+                                  let name = self.name
+                                  call s:on_exit(name, 0)
+                                  execute 'silent do User ConnectionLost'.toupper(name[0]).name[1:]
+                                elseif v:exception =~# 'E12'
+                                  " neovim's bug, ignore it
+                                else
+                                  echohl Error | echo 'Error on notify ('.a:method.'): '.v:exception | echohl None
+                                endif
+  131              0.000122   endtry
+
+FUNCTION  13()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/api.vim:98
+Called 56 times
+Total time:   0.003088
+ Self time:   0.000562
+
+count  total (s)   self (s)
+   56   0.003059   0.000533   return call(a:method, a:args)
+
+FUNCTION  15()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/api.vim:106
+Called 16 times
+Total time:   0.000566
+ Self time:   0.000566
+
+count  total (s)   self (s)
+                              " command that could cause cursor vanish
+   16              0.000188   if a:command =~# '^echo' || a:command =~# '^redraw' || a:command =~# '^sign place'
+                                call timer_start(0, {-> s:execute(a:command)})
+   16              0.000013   else
+   16              0.000238     execute a:command
+   16              0.000013   endif
+
+FUNCTION  16()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/api.vim:115
+Called 20 times
+Total time:   0.001847
+ Self time:   0.000470
+
+count  total (s)   self (s)
+   20   0.001828   0.000451   return eval(a:expr)
+
+FUNCTION  28()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/api.vim:164
+Called 4 times
+Total time:   0.000021
+ Self time:   0.000021
+
+count  total (s)   self (s)
+    4              0.000017   return bufnr('%')
+
+FUNCTION  <SNR>76_is_parent_element()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:103
+Called 23 times
+Total time:   0.004855
+ Self time:   0.000450
+
+count  total (s)   self (s)
+   23   0.004475   0.000183   let syntax_stack = s:syntax_stack_at(a:pos[0], a:pos[1])
+   23   0.000367   0.000254   return s:is_opening_tag(syntax_stack[-1]) && count(syntax_stack, 'jsxElement') <= a:element_count
+
+FUNCTION  39()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/api.vim:227
+Called 1 time
+Total time:   0.000008
+ Self time:   0.000008
+
+count  total (s)   self (s)
+    1              0.000007   return getbufvar(a:bufnr, 'changedtick')
+
+FUNCTION  coc#util#get_complete_option()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/util.vim:338
+Called 6 times
+Total time:   0.001083
+ Self time:   0.001083
+
+count  total (s)   self (s)
+    6              0.000021   let pos = getcurpos()
+    6              0.000050   let line = getline(pos[1])
+    6              0.000084   let input = matchstr(strpart(line, 0, pos[2] - 1), '\k*$')
+    6              0.000023   let col = pos[2] - strlen(input)
+    6              0.000115   let synname = synIDattr(synID(pos[1], col, 1), 'name')
+    6              0.000777   return { 'word': matchstr(strpart(line, col - 1), '^\k\+'), 'input': empty(input) ? '' : input, 'line': line, 'filetype': &filetype, 'filepath': expand('%:p'), 'bufnr': bufnr('%'), 'linenr': pos[1], 'colnr' : pos[2], 'col': col - 1, 'synname': synname, 'changedtick': b:changedtick, 'blacklist': get(b:, 'coc_suggest_blacklist', []),}
+
+FUNCTION  <SNR>76_sw()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:2
+Called 1 time
+Total time:   0.000003
+ Self time:   0.000003
+
+count  total (s)   self (s)
+    1              0.000003     return shiftwidth()
+
+FUNCTION  47()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/api.vim:317
+Called 1 time
+Total time:   0.000109
+ Self time:   0.000109
+
+count  total (s)   self (s)
+    1              0.000049   let lines = getbufline(a:bufnr, 1, '$')
+    1              0.000003   let start = a:start < 0 ? a:start + 1 : a:start
+    1              0.000002   let end = a:end < 0 ? a:end + 1 : a:end
+    1              0.000004   if a:strict && end > len(lines)
+                                throw 'line number out of range: '. end
+    1              0.000001   endif
+    1              0.000046   return lines[start : end - 1]
+
+FUNCTION  indent_guides#highlight_colors()
+    Defined: ~/.vim/plugged/vim-indent-guides/autoload/indent_guides.vim:94
+Called 4 times
+Total time:   0.000410
+ Self time:   0.000090
+
+count  total (s)   self (s)
+    4              0.000005   if s:auto_colors
+    4              0.000028     if has('gui_running') || has('nvim')
+                                  call indent_guides#gui_highlight_colors()
+    4              0.000004     else
+    4   0.000352   0.000032       call indent_guides#basic_highlight_colors()
+    4              0.000005     endif
+    4              0.000002   endif
+
+FUNCTION  <SNR>31_SyncAutocmd()
+    Defined: ~/.vim/plugged/coc.nvim/plugin/coc.vim:239
+Called 1 time
+Total time:   0.001488
+ Self time:   0.000019
+
+count  total (s)   self (s)
+    1              0.000003   if !g:coc_workspace_initialized
+                                return
+    1              0.000001   endif
+    1              0.000001   if g:coc_service_initialized
+    1   0.001476   0.000007     call coc#rpc#request('CocAutocmd', a:000)
+                              else
+                                call coc#rpc#notify('CocAutocmd', a:000)
+    1              0.000001   endif
+
+FUNCTION  coc#api#call()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/api.vim:573
+Called 63 times
+Total time:   0.006886
+ Self time:   0.002650
+
+count  total (s)   self (s)
+   63              0.000744   let err = v:null
+   63              0.000105   let res = v:null
+   63              0.000106   try
+   63   0.005276   0.001040     let res = call(s:funcs[a:method], a:args)
+                              catch /.*/
+                                let err = v:exception
+   63              0.000075   endtry
+   63              0.000140   return [err, res]
+
+FUNCTION  <SNR>76_is_jsx_region()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:62
+Called 1 time
+Total time:   0.000005
+ Self time:   0.000005
+
+count  total (s)   self (s)
+    1              0.000004   return a:syntax =~? 'jsxRegion'
+
+FUNCTION  <SNR>29_ShouldForwardNavigationBackToTmux()
+    Defined: ~/.vim/plugged/vim-tmux-navigator/plugin/tmux_navigator.vim:86
+Called 2 times
+Total time:   0.000017
+ Self time:   0.000017
+
+count  total (s)   self (s)
+    2              0.000008   if g:tmux_navigator_disable_when_zoomed && s:TmuxVimPaneIsZoomed()
+                                return 0
+    2              0.000002   endif
+    2              0.000004   return a:tmux_last_pane || a:at_tab_page_edge
+
+FUNCTION  coc#_cancel()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc.vim:96
+Called 5 times
+Total time:   0.000226
+ Self time:   0.000074
+
+count  total (s)   self (s)
+                              " hack for close pum
+    5              0.000009   if pumvisible()
+    2              0.000011     let g:coc#_context = {'start': 0, 'preselect': -1,'candidates': []}
+    2              0.000008     call feedkeys("\<Plug>CocRefresh", 'i')
+    2   0.000163   0.000011     call coc#rpc#notify('stopCompletion', [])
+    5              0.000003   endif
+
+FUNCTION  <SNR>29_TmuxAwareNavigate()
+    Defined: ~/.vim/plugged/vim-tmux-navigator/plugin/tmux_navigator.vim:93
+Called 2 times
+Total time:   0.019197
+ Self time:   0.000151
+
+count  total (s)   self (s)
+    2              0.000014   let nr = winnr()
+    2              0.000008   let tmux_last_pane = (a:direction == 'p' && s:tmux_is_last_pane)
+    2              0.000004   if !tmux_last_pane
+    2   0.019045   0.000016     call s:VimNavigate(a:direction)
+    2              0.000002   endif
+    2              0.000010   let at_tab_page_edge = (nr == winnr())
+                              " Forward the switch panes command to tmux if:
+                              " a) we're toggling between the last tmux pane;
+                              " b) we tried switching windows in vim but it didn't have effect.
+    2   0.000048   0.000031   if s:ShouldForwardNavigationBackToTmux(tmux_last_pane, at_tab_page_edge)
+                                if g:tmux_navigator_save_on_switch == 1
+                                  try
+                                    update " save the active buffer. See :help update
+                                  catch /^Vim\%((\a\+)\)\=:E32/ " catches the no file name error
+                                  endtry
+                                elseif g:tmux_navigator_save_on_switch == 2
+                                  try
+                                    wall " save all the buffers. See :help wall
+                                  catch /^Vim\%((\a\+)\)\=:E141/ " catches the no file name error
+                                  endtry
+                                endif
+                                let args = 'select-pane -t ' . shellescape($TMUX_PANE) . ' -' . tr(a:direction, 'phjkl', 'lLDUR')
+                                silent call s:TmuxCommand(args)
+                                if s:NeedsVitalityRedraw()
+                                  redraw!
+                                endif
+                                let s:tmux_is_last_pane = 1
+    2              0.000001   else
+    2              0.000005     let s:tmux_is_last_pane = 0
+    2              0.000001   endif
+
+FUNCTION  <SNR>39_Highlight_Matching_Pair()
+    Defined: /usr/local/Cellar/vim/8.2.2825/share/vim/vim82/plugin/matchparen.vim:40
+Called 58 times
+Total time:   0.015906
+ Self time:   0.015205
+
+count  total (s)   self (s)
+                              " Remove any previous match.
+   58   0.001112   0.000411   call s:Remove_Matches()
+                            
+                              " Avoid that we remove the popup menu.
+                              " Return when there are no colors (looks like the cursor jumps).
+   58              0.000397   if pumvisible() || (&t_Co < 8 && !has("gui_running"))
+                                return
+   58              0.000040   endif
+                            
+                              " Get the character under the cursor and check if it's in 'matchpairs'.
+   58              0.000197   let c_lnum = line('.')
+   58              0.000175   let c_col = col('.')
+   58              0.000081   let before = 0
+                            
+   58              0.000229   let text = getline(c_lnum)
+   58              0.001036   let matches = matchlist(text, '\(.\)\=\%'.c_col.'c\(.\=\)')
+   58              0.000162   if empty(matches)
+                                let [c_before, c] = ['', '']
+   58              0.000068   else
+   58              0.000318     let [c_before, c] = matches[1:2]
+   58              0.000051   endif
+   58              0.000787   let plist = split(&matchpairs, '.\zs[:,]')
+   58              0.000238   let i = index(plist, c)
+   58              0.000089   if i < 0
+                                " not found, in Insert mode try character before the cursor
+   52              0.000264     if c_col > 1 && (mode() == 'i' || mode() == 'R')
+   32              0.000118       let before = strlen(c_before)
+   32              0.000050       let c = c_before
+   32              0.000101       let i = index(plist, c)
+   52              0.000061     endif
+   52              0.000077     if i < 0
+                                  " not found, nothing to do
+   52              0.000057       return
+                                endif
+    6              0.000004   endif
+                            
+                              " Figure out the arguments for searchpairpos().
+    6              0.000014   if i % 2 == 0
+    2              0.000003     let s_flags = 'nW'
+    2              0.000008     let c2 = plist[i + 1]
+    4              0.000003   else
+    4              0.000009     let s_flags = 'nbW'
+    4              0.000008     let c2 = c
+    4              0.000013     let c = plist[i - 1]
+    6              0.000006   endif
+    6              0.000011   if c == '['
+                                let c = '\['
+                                let c2 = '\]'
+    6              0.000005   endif
+                            
+                              " Find the match.  When it was just before the cursor move it there for a
+                              " moment.
+    6              0.000010   if before > 0
+                                let has_getcurpos = exists("*getcurpos")
+                                if has_getcurpos
+                                  " getcurpos() is more efficient but doesn't exist before 7.4.313.
+                                  let save_cursor = getcurpos()
+                                else
+                                  let save_cursor = winsaveview()
+                                endif
+                                call cursor(c_lnum, c_col - before)
+    6              0.000005   endif
+                            
+    6              0.000044   if !has("syntax") || !exists("g:syntax_on")
+                                let s_skip = "0"
+    6              0.000004   else
+                                " Build an expression that detects whether the current cursor position is
+                                " in certain syntax types (string, comment, etc.), for use as
+                                " searchpairpos()'s skip argument.
+                                " We match "escape" for special items, such as lispEscapeSpecial, and
+                                " match "symbol" for lispBarSymbol.
+    6              0.000029     let s_skip = '!empty(filter(map(synstack(line("."), col(".")), ''synIDattr(v:val, "name")''), ' . '''v:val =~? "string\\|character\\|singlequote\\|escape\\|symbol\\|comment"''))'
+                                " If executing the expression determines that the cursor is currently in
+                                " one of the syntax types, then we want searchpairpos() to find the pair
+                                " within those syntax types (i.e., not skip).  Otherwise, the cursor is
+                                " outside of the syntax types and s_skip should keep its value so we skip
+                                " any matching pair inside the syntax types.
+                                " Catch if this throws E363: pattern uses more memory than 'maxmempattern'.
+    6              0.000007     try
+    6              0.000810       execute 'if ' . s_skip . ' | let s_skip = "0" | endif'
+                                catch /^Vim\%((\a\+)\)\=:E363/
+                                  " We won't find anything, so skip searching, should keep Vim responsive.
+                                  return
+    6              0.000008     endtry
+    6              0.000005   endif
+                            
+                              " Limit the search to lines visible in the window.
+    6              0.000039   let stoplinebottom = line('w$')
+    6              0.000020   let stoplinetop = line('w0')
+    6              0.000011   if i % 2 == 0
+    2              0.000004     let stopline = stoplinebottom
+    4              0.000003   else
+    4              0.000009     let stopline = stoplinetop
+    6              0.000005   endif
+                            
+                              " Limit the search time to 300 msec to avoid a hang on very long lines.
+                              " This fails when a timeout is not supported.
+    6              0.000025   if mode() == 'i' || mode() == 'R'
+    4              0.000024     let timeout = exists("b:matchparen_insert_timeout") ? b:matchparen_insert_timeout : g:matchparen_insert_timeout
+    2              0.000002   else
+    2              0.000009     let timeout = exists("b:matchparen_timeout") ? b:matchparen_timeout : g:matchparen_timeout
+    6              0.000005   endif
+    6              0.000006   try
+    6              0.007208     let [m_lnum, m_col] = searchpairpos(c, '', c2, s_flags, s_skip, stopline, timeout)
+                              catch /E118/
+                                " Can't use the timeout, restrict the stopline a bit more to avoid taking
+                                " a long time on closed folds and long lines.
+                                " The "viewable" variables give a range in which we can scroll while
+                                " keeping the cursor at the same position.
+                                " adjustedScrolloff accounts for very large numbers of scrolloff.
+                                let adjustedScrolloff = min([&scrolloff, (line('w$') - line('w0')) / 2])
+                                let bottom_viewable = min([line('$'), c_lnum + &lines - adjustedScrolloff - 2])
+                                let top_viewable = max([1, c_lnum-&lines+adjustedScrolloff + 2])
+                                " one of these stoplines will be adjusted below, but the current values are
+                                " minimal boundaries within the current window
+                                if i % 2 == 0
+                                  if has("byte_offset") && has("syntax_items") && &smc > 0
+                            	let stopbyte = min([line2byte("$"), line2byte(".") + col(".") + &smc * 2])
+                            	let stopline = min([bottom_viewable, byte2line(stopbyte)])
+                                  else
+                            	let stopline = min([bottom_viewable, c_lnum + 100])
+                                  endif
+                                  let stoplinebottom = stopline
+                                else
+                                  if has("byte_offset") && has("syntax_items") && &smc > 0
+                            	let stopbyte = max([1, line2byte(".") + col(".") - &smc * 2])
+                            	let stopline = max([top_viewable, byte2line(stopbyte)])
+                                  else
+                            	let stopline = max([top_viewable, c_lnum - 100])
+                                  endif
+                                  let stoplinetop = stopline
+                                endif
+                                let [m_lnum, m_col] = searchpairpos(c, '', c2, s_flags, s_skip, stopline)
+    6              0.000008   endtry
+                            
+    6              0.000011   if before > 0
+                                if has_getcurpos
+                                  call setpos('.', save_cursor)
+                                else
+                                  call winrestview(save_cursor)
+                                endif
+    6              0.000003   endif
+                            
+                              " If a match is found setup match highlighting.
+    6              0.000017   if m_lnum > 0 && m_lnum >= stoplinetop && m_lnum <= stoplinebottom 
+    4              0.000014     if exists('*matchaddpos')
+    4              0.000172       call matchaddpos('MatchParen', [[c_lnum, c_col - before], [m_lnum, m_col]], 10, 3)
+                                else
+                                  exe '3match MatchParen /\(\%' . c_lnum . 'l\%' . (c_col - before) . 'c\)\|\(\%' . m_lnum . 'l\%' . m_col . 'c\)/'
+    4              0.000003     endif
+    4              0.000011     let w:paren_hl_on = 1
+    6              0.000005   endif
+
+FUNCTION  <SNR>76_start_col()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:31
+Called 3 times
+Total time:   0.000028
+ Self time:   0.000028
+
+count  total (s)   self (s)
+    3              0.000027   return len(matchstr(getline(a:lnum), '^\s*')) + 1
+
+FUNCTION  <SNR>76_trim()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:16
+Called 2 times
+Total time:   0.000026
+ Self time:   0.000026
+
+count  total (s)   self (s)
+    2              0.000025   return substitute(a:line, '^\s*\|\s*$', '', 'g')
+
+FUNCTION  <SNR>40_LocalBrowse()
+    Defined: /usr/local/Cellar/vim/8.2.2825/share/vim/vim82/plugin/netrwPlugin.vim:102
+Called 2 times
+Total time:   0.000132
+ Self time:   0.000132
+
+count  total (s)   self (s)
+                              " Unfortunate interaction -- only DechoMsg debugging calls can be safely used here.
+                              " Otherwise, the BufEnter event gets triggered when attempts to write to
+                              " the DBG buffer are made.
+                            
+    2              0.000007   if !exists("s:vimentered")
+                               " If s:vimentered doesn't exist, then the VimEnter event hasn't fired.  It will,
+                               " and so s:VimEnter() will then be calling this routine, but this time with s:vimentered defined.
+                            "   call Dfunc("s:LocalBrowse(dirname<".a:dirname.">)  (s:vimentered doesn't exist)")
+                            "   call Dret("s:LocalBrowse")
+                               return
+    2              0.000000   endif
+                            
+                            "  call Dfunc("s:LocalBrowse(dirname<".a:dirname.">)  (s:vimentered=".s:vimentered.")")
+                            
+    2              0.000006   if has("amiga")
+                               " The check against '' is made for the Amiga, where the empty
+                               " string is the current directory and not checking would break
+                               " things such as the help command.
+                            "   call Decho("(LocalBrowse) dirname<".a:dirname.">  (isdirectory, amiga)")
+                               if a:dirname != '' && isdirectory(a:dirname)
+                                sil! call netrw#LocalBrowseCheck(a:dirname)
+                                if exists("w:netrw_bannercnt") && line('.') < w:netrw_bannercnt
+                                 exe w:netrw_bannercnt
+                                endif
+                               endif
+                            
+    2              0.000054   elseif isdirectory(a:dirname)
+                            "   call Decho("(LocalBrowse) dirname<".a:dirname."> ft=".&ft."  (isdirectory, not amiga)")
+                            "   call Dredir("LocalBrowse ft last set: ","verbose set ft")
+                               sil! call netrw#LocalBrowseCheck(a:dirname)
+                               if exists("w:netrw_bannercnt") && line('.') < w:netrw_bannercnt
+                                exe w:netrw_bannercnt
+                               endif
+                            
+    2              0.000002   else
+                               " not a directory, ignore it
+                            "   call Decho("(LocalBrowse) dirname<".a:dirname."> not a directory, ignoring...")
+    2              0.000001   endif
+                            
+                            "  call Dret("s:LocalBrowse")
+
+FUNCTION  coc#rpc#ready()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/rpc.vim:32
+Called 132 times
+Total time:   0.001198
+ Self time:   0.001198
+
+count  total (s)   self (s)
+  132              0.000691   if empty(s:client) || s:client['running'] == 0
+                                return 0
+  132              0.000079   endif
+  132              0.000123   return 1
+
+FUNCTION  indent_guides#exclude_filetype()
+    Defined: ~/.vim/plugged/vim-indent-guides/autoload/indent_guides.vim:279
+Called 4 times
+Total time:   0.000125
+ Self time:   0.000125
+
+count  total (s)   self (s)
+    8              0.000057   for ft in split(&ft, '\.')
+    4              0.000021     if index(g:indent_guides_exclude_filetypes, ft) > -1
+                                  return 1
+    4              0.000004     end
+    8              0.000009   endfor
+    4              0.000005   return 0
+
+FUNCTION  coc#rpc#notify()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/rpc.vim:96
+Called 131 times
+Total time:   0.012543
+ Self time:   0.002296
+
+count  total (s)   self (s)
+  131   0.001906   0.000716   if !coc#rpc#ready()
+                                return ''
+  131              0.000063   endif
+  131   0.010151   0.001094   call s:client['notify'](a:method, a:args)
+  131              0.000152   return ''
+
+FUNCTION  <SNR>31_Autocmd()
+    Defined: ~/.vim/plugged/coc.nvim/plugin/coc.vim:232
+Called 125 times
+Total time:   0.013958
+ Self time:   0.001858
+
+count  total (s)   self (s)
+  125              0.000386   if !g:coc_workspace_initialized
+                                return
+  125              0.000140   endif
+  125   0.013035   0.000935   call coc#rpc#notify('CocAutocmd', a:000)
+
+FUNCTION  indent_guides#init_script_vars()
+    Defined: ~/.vim/plugged/vim-indent-guides/autoload/indent_guides.vim:184
+Called 4 times
+Total time:   0.000653
+ Self time:   0.000424
+
+count  total (s)   self (s)
+    4              0.000009   if &l:shiftwidth > 0 && &l:expandtab
+    4              0.000009     let s:indent_size = &l:shiftwidth
+                              else
+                                let s:indent_size = &l:tabstop
+    4              0.000003   endif
+    4   0.000070   0.000030   let s:guide_size  = indent_guides#calculate_guide_size()
+    4   0.000231   0.000042   let s:hi_normal   = indent_guides#capture_highlight('Normal')
+                            
+                              " remove 'font=<value>' from the s:hi_normal string (only seems to happen on Vim startup in Windows)
+    4              0.000064   let s:hi_normal = substitute(s:hi_normal, ' font=[A-Za-z0-9:]\+', "", "")
+                            
+                              " shortcuts to the global variables - this makes the code easier to read
+    4              0.000009   let s:debug             = g:indent_guides_debug
+    4              0.000009   let s:indent_levels     = g:indent_guides_indent_levels
+    4              0.000008   let s:auto_colors       = g:indent_guides_auto_colors
+    4              0.000047   let s:color_hex_pat     = g:indent_guides_color_hex_pattern
+    4              0.000015   let s:color_hex_bg_pat  = g:indent_guides_color_hex_guibg_pattern
+    4              0.000011   let s:color_name_bg_pat = g:indent_guides_color_name_guibg_pattern
+    4              0.000010   let s:start_level       = g:indent_guides_start_level
+                            
+                              " str2float not available in vim versions <= 7.1
+    4              0.000015   if has('float')
+    4              0.000022     let s:change_percent = g:indent_guides_color_change_percent / str2float('100.0')
+                              else
+                                let s:change_percent = g:indent_guides_color_change_percent / 100.0
+    4              0.000004   endif
+                            
+    4              0.000005   if s:debug
+                                echo 's:indent_size = '       . s:indent_size
+                                echo 's:guide_size = '        . s:guide_size
+                                echo 's:hi_normal = '         . s:hi_normal
+                                echo 's:indent_levels = '     . s:indent_levels
+                                echo 's:auto_colors = '       . s:auto_colors
+                                echo 's:change_percent = '    . string(s:change_percent)
+                                echo 's:color_hex_pat = '     . s:color_hex_pat
+                                echo 's:color_hex_bg_pat = '  . s:color_hex_bg_pat
+                                echo 's:color_name_bg_pat = ' . s:color_name_bg_pat
+                                echo 's:start_level = '       . s:start_level
+    4              0.000003   endif
+
+FUNCTION  coc#api#notify()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc/api.vim:584
+Called 21 times
+Total time:   0.002221
+ Self time:   0.000382
+
+count  total (s)   self (s)
+   21   0.002197   0.000358   call call(s:funcs[a:method], a:args)
+
+FUNCTION  indent_guides#init_matches()
+    Defined: ~/.vim/plugged/vim-indent-guides/autoload/indent_guides.vim:176
+Called 4 times
+Total time:   0.000029
+ Self time:   0.000029
+
+count  total (s)   self (s)
+    4              0.000028   let w:indent_guides_matches = exists('w:indent_guides_matches') ? w:indent_guides_matches : []
+
+FUNCTION  <SNR>72_syn_contains()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/comment.vim:33
+Called 18 times
+Total time:   0.001305
+ Self time:   0.001305
+
+count  total (s)   self (s)
+   18              0.000856   let stack = synstack(a:lnum, a:cnum)
+   18              0.000352   let syn_names = map(stack, 'synIDattr(v:val, "name")')
+   18              0.000082   return index(syn_names, a:syn_name) >= 0
+
+FUNCTION  indent_guides#basic_highlight_colors()
+    Defined: ~/.vim/plugged/vim-indent-guides/autoload/indent_guides.vim:108
+Called 4 times
+Total time:   0.000320
+ Self time:   0.000320
+
+count  total (s)   self (s)
+    4              0.000025   let l:cterm_colors = (&g:background == 'dark') ? ['darkgrey', 'black'] : ['lightgrey', 'white']
+    4              0.000019   let l:gui_colors   = (&g:background == 'dark') ? ['grey15', 'grey30']  : ['grey70', 'grey85']
+                            
+    4              0.000143   exe 'hi IndentGuidesEven guibg=' . l:gui_colors[0] . ' guifg=' . l:gui_colors[1] . ' ctermbg=' . l:cterm_colors[0] . ' ctermfg=' . l:cterm_colors[1]
+    4              0.000127   exe 'hi IndentGuidesOdd  guibg=' . l:gui_colors[1] . ' guifg=' . l:gui_colors[0] . ' ctermbg=' . l:cterm_colors[1] . ' ctermfg=' . l:cterm_colors[0]
+
+FUNCTION  jsx_pretty#comment#update_commentstring()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/comment.vim:1
+Called 19 times
+Total time:   0.004509
+ Self time:   0.001804
+
+count  total (s)   self (s)
+   19              0.000082   let line = getline(".")
+   19              0.000053   let col = col('.')
+   19              0.000241   if line !~# '^\s*$' && line[: col - 1] =~# '^\s*$'    " skip indent
+                                let col = indent('.') + 1
+   19              0.000014   endif
+   19   0.001626   0.000226   let syn_start = s:syn_name(line('.'), col)
+   19              0.000071   let save_cursor = getcurpos()
+                            
+   19              0.000113   if syn_start =~? '^jsx'
+   18              0.000096     if line =~ '^\s*//'
+                                  let &l:commentstring = '// %s'
+   18   0.001530   0.000225     elseif s:syn_contains(line('.'), col, 'jsxTaggedRegion')
+                                  let &l:commentstring = '<!-- %s -->'
+   18              0.000102     elseif syn_start =~? '^jsxAttrib'
+                                  let &l:commentstring = '// %s'
+   18              0.000015     else
+   18              0.000151       let &l:commentstring = '{/* %s */}'
+   18              0.000019     endif
+    1              0.000001   else
+    1              0.000009     let &l:commentstring = a:original
+   19              0.000016   endif
+                            
+                              " Restore the cursor position
+   19              0.000086   call setpos('.', save_cursor)
+
+FUNCTION  indent_guides#indent_highlight_pattern()
+    Defined: ~/.vim/plugged/vim-indent-guides/autoload/indent_guides.vim:269
+Called 240 times
+Total time:   0.003448
+ Self time:   0.003448
+
+count  total (s)   self (s)
+  240              0.001193   let l:pattern  = '^' . a:indent_pattern . '*\%' . a:column_start . 'v\zs'
+  240              0.001171   let l:pattern .= a:indent_pattern . '*\%' . (a:column_start + a:indent_size) . 'v'
+  240              0.000537   let l:pattern .= '\ze'
+  240              0.000324   return l:pattern
+
+FUNCTION  coc#_complete()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc.vim:50
+Called 12 times
+Total time:   0.305892
+ Self time:   0.303383
+
+count  total (s)   self (s)
+   12              0.000071   let items = get(g:coc#_context, 'candidates', [])
+   12              0.000045   let preselect = get(g:coc#_context, 'preselect', -1)
+   12   0.305622   0.303113   call complete( g:coc#_context.start + 1, items)
+   12              0.000049   if s:select_api && len(items) && preselect != -1
+                                call nvim_select_popupmenu_item(preselect, v:false, v:false, {})
+   12              0.000010   endif
+   12              0.000016   return ''
+
+FUNCTION  <SNR>39_Remove_Matches()
+    Defined: /usr/local/Cellar/vim/8.2.2825/share/vim/vim82/plugin/matchparen.vim:197
+Called 60 times
+Total time:   0.000727
+ Self time:   0.000727
+
+count  total (s)   self (s)
+   60              0.000314   if exists('w:paren_hl_on') && w:paren_hl_on
+    4              0.000065     silent! call matchdelete(3)
+    4              0.000012     let w:paren_hl_on = 0
+   60              0.000050   endif
+
+FUNCTION  <SNR>76_is_jsx_element()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:67
+Called 1 time
+Total time:   0.000004
+ Self time:   0.000004
+
+count  total (s)   self (s)
+    1              0.000004   return a:syntax =~? 'jsxElement'
+
+FUNCTION  indent_guides#clear_matches()
+    Defined: ~/.vim/plugged/vim-indent-guides/autoload/indent_guides.vim:75
+Called 4 times
+Total time:   0.003481
+ Self time:   0.003452
+
+count  total (s)   self (s)
+    4   0.000052   0.000023   call indent_guides#init_matches()
+    4              0.000011   if !empty(w:indent_guides_matches)
+    4              0.000008     let l:index = 0
+  244              0.000222     for l:match_id in w:indent_guides_matches
+  240              0.000145       try
+  240              0.001215         call matchdelete(l:match_id)
+   60              0.000188       catch /E803:/
+                                    " Do nothing
+  240              0.000177       endtry
+  240              0.000590       call remove(w:indent_guides_matches, l:index)
+  240              0.000360       let l:index += l:index
+  244              0.000154     endfor
+    4              0.000004   endif
+
+FUNCTION  <SNR>76_syntax_at()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:26
+Called 1 time
+Total time:   0.000006
+ Self time:   0.000006
+
+count  total (s)   self (s)
+    1              0.000005   return synIDattr(synID(a:lnum, a:col, 1), 'name')
+
+FUNCTION  <SNR>72_syn_name()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/comment.vim:28
+Called 19 times
+Total time:   0.001400
+ Self time:   0.001400
+
+count  total (s)   self (s)
+   19              0.001297   let syn_id = get(synstack(a:lnum, a:cnum), -1)
+   19              0.000084   return synIDattr(syn_id, "name")
+
+FUNCTION  <SNR>76_is_closing_tag()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:57
+Called 2 times
+Total time:   0.000008
+ Self time:   0.000008
+
+count  total (s)   self (s)
+    2              0.000008   return a:syntax =~? 'jsxClose'
+
+FUNCTION  indent_guides#calculate_guide_size()
+    Defined: ~/.vim/plugged/vim-indent-guides/autoload/indent_guides.vim:232
+Called 4 times
+Total time:   0.000040
+ Self time:   0.000040
+
+count  total (s)   self (s)
+    4              0.000011   let l:guide_size = g:indent_guides_guide_size
+                            
+    4              0.000010   if l:guide_size == 0 || l:guide_size > s:indent_size
+    4              0.000007     let l:guide_size = s:indent_size
+    4              0.000002   endif
+                            
+    4              0.000005   return l:guide_size
+
+FUNCTION  indent_guides#capture_highlight()
+    Defined: ~/.vim/plugged/vim-indent-guides/autoload/indent_guides.vim:248
+Called 4 times
+Total time:   0.000189
+ Self time:   0.000189
+
+count  total (s)   self (s)
+    4              0.000015   redir => l:output
+    4              0.000107   exe "silent hi " . a:group_name
+    4              0.000014   redir END
+                            
+    4              0.000038   let l:output = substitute(l:output, "\n", "", "")
+    4              0.000007   return l:output
+
+FUNCTION  indent_guides#enable()
+    Defined: ~/.vim/plugged/vim-indent-guides/autoload/indent_guides.vim:33
+Called 4 times
+Total time:   0.016554
+ Self time:   0.008437
+
+count  total (s)   self (s)
+    4              0.000010   let g:indent_guides_autocmds_enabled = 1
+                            
+    4   0.000188   0.000063   if &diff || indent_guides#exclude_filetype()
+                                call indent_guides#clear_matches()
+                                return
+    4              0.000002   end
+                            
+    4   0.000680   0.000027   call indent_guides#init_script_vars()
+    4   0.000440   0.000030   call indent_guides#highlight_colors()
+    4   0.003514   0.000033   call indent_guides#clear_matches()
+                            
+                              " loop through each indent level and define a highlight pattern
+                              " will automagically figure out whether to use tabs or spaces
+  124              0.000197   for l:level in range(s:start_level, s:indent_levels)
+  120              0.000484     let l:group = 'IndentGuides' . ((l:level % 2 == 0) ? 'Even' : 'Odd')
+  120              0.000316     let l:column_start = (l:level - 1) * s:indent_size + 1
+                            
+                                " define the higlight patterns and add to matches list
+  120              0.000162     if g:indent_guides_space_guides
+  120   0.003118   0.001331       let l:soft_pattern = indent_guides#indent_highlight_pattern(g:indent_guides_soft_pattern, l:column_start, s:guide_size)
+  120              0.001932       call add(w:indent_guides_matches, matchadd(l:group, l:soft_pattern))
+  120              0.000099     end
+  120              0.000169     if g:indent_guides_tab_guides
+  120   0.002897   0.001236       let l:hard_pattern = indent_guides#indent_highlight_pattern('\t', l:column_start, s:indent_size)
+  120              0.001831       call add(w:indent_guides_matches, matchadd(l:group, l:hard_pattern))
+  120              0.000108     end
+  124              0.000107   endfor
+
+FUNCTION  <SNR>76_is_comment()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:87
+Called 1 time
+Total time:   0.000004
+ Self time:   0.000004
+
+count  total (s)   self (s)
+    1              0.000003   return a:syntax =~? 'comment'
+
+FUNCTION  indent_guides#process_autocmds()
+    Defined: ~/.vim/plugged/vim-indent-guides/autoload/indent_guides.vim:21
+Called 4 times
+Total time:   0.016633
+ Self time:   0.000079
+
+count  total (s)   self (s)
+    4              0.000012   if g:indent_guides_autocmds_enabled
+    4   0.016599   0.000045     call indent_guides#enable()
+                              else
+                                call indent_guides#disable()
+    4              0.000004   end
+
+FUNCTION  coc#_do_complete()
+    Defined: ~/.vim/plugged/coc.nvim/autoload/coc.vim:62
+Called 10 times
+Total time:   0.000415
+ Self time:   0.000415
+
+count  total (s)   self (s)
+   10              0.000196   let g:coc#_context = { 'start': a:start, 'candidates': a:items, 'preselect': a:preselect}
+   10              0.000116   if mode() =~# 'i' && &paste != 1
+   10              0.000078     call feedkeys("\<Plug>CocRefresh", 'i')
+   10              0.000011   endif
+
+FUNCTION  <SNR>76_is_opening_tag()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:52
+Called 26 times
+Total time:   0.000127
+ Self time:   0.000127
+
+count  total (s)   self (s)
+   26              0.000114   return a:syntax =~? 'jsxOpenPunct'
+
+FUNCTION  <SNR>76_is_jsx_brace()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:77
+Called 1 time
+Total time:   0.000004
+ Self time:   0.000004
+
+count  total (s)   self (s)
+    1              0.000003   return a:syntax =~? 'jsxBraces'
+
+FUNCTION  <SNR>76_start_syntax()
+    Defined: ~/.vim/plugged/vim-jsx-pretty/autoload/jsx_pretty/indent.vim:36
+Called 1 time
+Total time:   0.000029
+ Self time:   0.000012
+
+count  total (s)   self (s)
+    1   0.000029   0.000012   return s:syntax_at(a:lnum, s:start_col(a:lnum))
+
+FUNCTIONS SORTED ON TOTAL TIME
+count  total (s)   self (s)  function
+   12   0.305892   0.303383  coc#_complete()
+    2   0.019197   0.000151  <SNR>29_TmuxAwareNavigate()
+    2   0.019029   0.000204  <SNR>29_VimNavigate()
+    4   0.016633   0.000079  indent_guides#process_autocmds()
+    4   0.016554   0.008437  indent_guides#enable()
+   58   0.015906   0.015205  <SNR>39_Highlight_Matching_Pair()
+  125   0.013958   0.001858  <SNR>31_Autocmd()
+  131   0.012543   0.002296  coc#rpc#notify()
+  131   0.009057   0.008478  <SNR>34_notify()
+   63   0.006886   0.002650  coc#api#call()
+    1   0.006167   0.000027  GetJsxIndent()
+    1   0.006140   0.000161  jsx_pretty#indent#get()
+    1   0.005738   0.000830  <SNR>76_jsx_indent_element()
+   23   0.004855   0.000450  <SNR>76_is_parent_element()
+   19   0.004509   0.001804  jsx_pretty#comment#update_commentstring()
+   25   0.004349             <SNR>76_syntax_stack_at()
+    4   0.003481   0.003452  indent_guides#clear_matches()
+  240   0.003448             indent_guides#indent_highlight_pattern()
+   56   0.003088   0.000562  13()
+   21   0.002221   0.000382  coc#api#notify()
+
+FUNCTIONS SORTED ON SELF TIME
+count  total (s)   self (s)  function
+   12   0.305892   0.303383  coc#_complete()
+   58   0.015906   0.015205  <SNR>39_Highlight_Matching_Pair()
+  131   0.009057   0.008478  <SNR>34_notify()
+    4   0.016554   0.008437  indent_guides#enable()
+   25              0.004349  <SNR>76_syntax_stack_at()
+    4   0.003481   0.003452  indent_guides#clear_matches()
+  240              0.003448  indent_guides#indent_highlight_pattern()
+   63   0.006886   0.002650  coc#api#call()
+  131   0.012543   0.002296  coc#rpc#notify()
+  125   0.013958   0.001858  <SNR>31_Autocmd()
+   19   0.004509   0.001804  jsx_pretty#comment#update_commentstring()
+   29              0.001696  coc#util#get_buf_lines()
+   19              0.001400  <SNR>72_syn_name()
+   18              0.001305  <SNR>72_syn_contains()
+  132              0.001198  coc#rpc#ready()
+    6              0.001083  coc#util#get_complete_option()
+    1   0.001444   0.001063  <SNR>34_request()
+    1   0.005738   0.000830  <SNR>76_jsx_indent_element()
+   60              0.000727  <SNR>39_Remove_Matches()
+  132              0.000583  coc#client#get_channel()
+
