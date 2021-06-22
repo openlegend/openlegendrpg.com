@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
   innerWrap: {
     backgroundColor: '#fbf9ff',
     postion: 'relative',
+    overflow: 'hidden',
     width: '100%',
     height: '100%',
     marginTop: '8px',
@@ -57,6 +58,7 @@ const useStyles = makeStyles((theme) => ({
   },
   innerWrap_expanded: {
     maxHeight: '2200px',
+    marginTop: '8px',
     backgroundColor: '#fbf9ff',
     postion: 'relative',
     width: '100%',
