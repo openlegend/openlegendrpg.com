@@ -12,7 +12,8 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 const useStyles = makeStyles(({
   featSection: {
     fontSize: '16px',
-    margin: '24px'
+    margin: '24px',
+    paddingBottom: '24px'
   },
   toolbar: {
     backgroundColor: 'rgba(81,45,168, 0.9)',
