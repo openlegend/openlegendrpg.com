@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: '/open-legend',
   siteMetadata: {
     title: `Open Legend RPG`,
     description: `The Open Legend RPG website`,
