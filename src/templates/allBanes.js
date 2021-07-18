@@ -40,15 +40,14 @@ const baneAttributes = [
 const useStyles = makeStyles((theme) => ({
   baneSection: {
     fontSize: '16px',
-    '& li': {
-      marginBottom: '16px'
+    '& p strong': {
+      lineHeight: '200%',
     }
   },
   baneContainer: {
-    backgroundImage: `url(${Image})`,
     margin: '0 24px',
   },
-  baneAccordion: {
+  banesAccordion: {
     paddingTop: '16px',
     paddingBottom: '16px',
     fontSize: '16px',
@@ -60,7 +59,6 @@ const useStyles = makeStyles((theme) => ({
   accordBtnContainer: {
     display: 'inline-block',
     margin: '8px 0',
-    fontSize: '16px'
   },
   accordionBtn: {
     justifyContent: 'start',

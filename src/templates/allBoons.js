@@ -44,10 +44,9 @@ const useStyles = makeStyles({
     }
   },
   boonsContainer: {
-    backgroundImage: `url(${Image})`,
     margin: '0 24px'
   },
-  banesAccordion: {
+  boonsAccordian: {
     paddingTop: '16px',
     paddingBottom: '16px',
     fontSize: '16px',
@@ -150,7 +149,7 @@ const BoonsPage = ({ location }) => {
             {visibility ? 'HIDE EXPLANATION' : 'SHOW EXPLANATION'}
           </ButtonBase>
         </div>
-        <div className={`${visibility ? classes.banesAccordion : classes.accordionExpanded}`}>
+        <div className={`${visibility ? classes.boonsAccordian : classes.accordionExpanded}`}>
           <h1>BOONS</h1>
           <h2>Reading a Boon Description</h2>
           <p>Below, each boon description includes the following elements.</p>
