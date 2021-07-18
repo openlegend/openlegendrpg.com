@@ -2,6 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
+import DarkModeToggle from './dark-mode-toggle';
 import useWindowSize from '../utils/useWindowSize';
 import AppMenuItem from './app-menu-item';
 import SocialMedia from './social-media';
@@ -124,12 +125,27 @@ const useStyles = makeStyles((theme) => {
       width: '90%',
       zIndex: 1200
     },
+    darkModeContainer: {
+      width: '50%',
+    },
+    divider: {
+      backgroundColor: 'rgba(255, 255, 255, 0.4)',
+      color: 'white',
+      height: '2px',
+      width: '100%',
+      margin: '16px 24px',
+      display: 'block',
+    }
   })
 });
 
-const AppMenu = () => {
+const AppMenu = (props) => {
   const classes = useStyles()
   const size = useWindowSize()
+
+  const setDarkMode = props.setDarkMode
+  const darkMode = props.darkMode
+
   const [openStatusCore, setOpenStatusCore] = React.useState(false);
   const [openStatusRes, setOpenStatusRes] = React.useState(false);
 
@@ -185,9 +201,14 @@ const AppMenu = () => {
           ))}
         </List>
       </Grid>
+      <Grid item className={classes.darkModeContainer}>
+      <div className={classes.divider} />
+        <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} /> 
+      </Grid>
       <Grid container item direction='column' 
         className={classes.socialMedia} 
-        style={{ padding: '8px', bottom: 0, position: 'fixed', width: '316px', visibility: `${footerVisibility}`, transition: `${footerTransition}`, opacity: `${footerOpacity}`  }} >
+        style={{ padding: '8px', bottom: 0, position: 'fixed', width: '316px', visibility: `${footerVisibility}`, transition: `${footerTransition}`, opacity: `${footerOpacity}`  }}
+      >
         <Grid item>
           <SocialMedia />
         </Grid>
