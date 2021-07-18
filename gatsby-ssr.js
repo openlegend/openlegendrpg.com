@@ -1,7 +1,7 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
- */
+import React from 'react';
 
-// You can delete this file if you're not using it
+import { DarkModeState } from './src/components/UI/ThemeHandler';
+
+export function wrapRootElement({ element, props }) {
+  return <DarkModeState {...props}>{element}</DarkModeState>
+}
