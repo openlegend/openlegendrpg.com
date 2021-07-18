@@ -1,21 +1,25 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import PropTypes from 'prop-types';
 
 import AppMenu from '../components/app-menu';
 import Image from '../img/paper_bg.png';
 import OpenLegendFooter from '../components/open-legend-footer';
+import { darkTheme, lightTheme } from '../components/UI/Theme';
+import { darkModeContext } from '../components/UI/ThemeHandler';
+
 
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
+import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
-import MenuIcon from '@material-ui/icons/Menu';
 
 const drawerWidthSm = 316;
 
@@ -70,6 +74,15 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '56px',
     },
   },
+  contentDarkMode: {
+    flexGrow: 1,
+    display: 'block',
+    minHeight: '100%',
+    position: 'relative',
+    [theme.breakpoints.down('md')]: {
+      marginTop: '56px',
+    },
+  },
   appMenu: {
     height: 'auto'
   }
@@ -79,12 +92,30 @@ function ResponsiveNavBar(props) {
   const { window } = props;
   const footerForIndex = props.footerForIndex;
   const classes = useStyles();
-  const theme = useTheme();
+
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+  
+  const DarkModeContext = useContext(darkModeContext);
+  const { darkMode, setDarkMode } = DarkModeContext;
+
+  useEffect(() => {
+    const theme = localStorage.getItem('preferred-theme');
+    if (theme) {
+      const themePreference = localStorage.getItem('preferred-theme');
+      if (themePreference === 'dark') {
+        setDarkMode(true);
+      } else {
+        setDarkMode(false);
+      }
+    } else {
+      localStorage.setItem('preferred-theme', 'light');
+      setDarkMode(true);
+    }
+  }, [])
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
@@ -111,7 +142,7 @@ function ResponsiveNavBar(props) {
           <Drawer
             container={container}
             variant="temporary"
-            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+            // anchor={theme.direction === 'rtl' ? 'right' : 'left'}
             open={mobileOpen}
             onClose={handleDrawerToggle}
             classes={{
@@ -132,14 +163,17 @@ function ResponsiveNavBar(props) {
             variant="permanent"
             open
           >
-            <AppMenu className={classes.appMenu}  />  
+            <AppMenu className={classes.appMenu} />  
           </Drawer>
         </Hidden>
       </nav>
-      <main className={classes.content}>
-        {props.children}
-        {!footerForIndex ? <OpenLegendFooter /> : null}
-      </main>
+      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+        <CssBaseline />
+        <main className={ darkMode ? classes.contentDarkMode : classes.content}>
+          {props.children}
+          {!footerForIndex ? <OpenLegendFooter /> : null}
+        </main>
+      </ThemeProvider>
     </div>
   );
 }
