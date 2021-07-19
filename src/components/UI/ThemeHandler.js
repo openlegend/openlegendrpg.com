@@ -1,4 +1,5 @@
 import React, { createContext, useReducer } from 'react';
+import { darkTheme, lightTheme } from './Theme';
 
 let SET_THEME
 
@@ -29,11 +30,14 @@ export const DarkModeState = props => {
     })
   }
 
+  const theme = state.darkMode ? darkTheme : lightTheme;
+
   return (
     <darkModeContext.Provider
       value={{
         darkMode: state.darkMode,
-        setDarkMode
+        setDarkMode,
+        theme: theme
       }}
     >
       {props.children}
