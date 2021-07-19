@@ -13,7 +13,6 @@ module.exports = {
         }
       }
     },
-    `gatsby-theme-material-ui`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-yaml-full`,
     {
