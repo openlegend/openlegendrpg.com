@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { graphql } from "gatsby";
 import { Link } from 'gatsby';
 
@@ -10,19 +10,27 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import NavLayout from '../layouts/nav-layout';
+import { darkTheme, lightTheme } from '../components/UI/Theme';
+import { darkModeContext } from '../components/UI/ThemeHandler';
 
 import { makeStyles } from '@material-ui/core/styles';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 
 const useStyles = makeStyles(({
   content: {
     fontSize: '16px', 
     paddingBottom: '16px',
+    '& p': {
+      '& a': {
+        color: theme => theme.palette.info.dark,
+      }
+    },
     '& h2': {
-      background: 'rgba(50,39,176,.15)',
+      background: theme => theme.palette.type === 'light' ? fade(theme.palette.secondary.main, .15) : theme.palette.secondary.main,
       padding: '8px'
     },
     '& blockquote': {
-      backgroundColor: '#fbf9ff',
+      backgroundColor: theme => theme.palette.background.paper,
       margin: '8px',
       padding: '15px',
     },
@@ -42,7 +50,7 @@ const useStyles = makeStyles(({
       width: '43%',
       padding: '12px',
       margin: '0 0 0 16px',
-      background: 'white',
+      background: theme => theme.palette.background.paper,
     },
     '& table': {
       width: '100%!important',
@@ -93,11 +101,12 @@ const useStyles = makeStyles(({
       verticalAlign: 'middle',
       borderSpacing: '0',
       '& tr:nth-child(odd)': {
-        background: '#fbf9ff',
+        // background: theme => theme.palette.background.paper,
+        background: theme => theme.palette.warning.light,
         textAlign: 'center',
       },
       '& tr:nth-child(even)': {
-        background: '#ffe6cc',
+        background: theme => theme.palette.warning.main, 
         textAlign: 'center',
       }
     },
@@ -106,9 +115,9 @@ const useStyles = makeStyles(({
       textAlign: 'center',
     },
     '& .table-even-header': {
-        textTransform: 'uppercase',
-        background: '#f9cb9c',
-        padding: '4px 0',
+      textTransform: 'uppercase',
+      background: theme => theme.palette.warning.dark,
+      padding: '4px 0',
     },
   },
   'navDiv': {
@@ -117,6 +126,7 @@ const useStyles = makeStyles(({
     justifyContent: 'center',
     '& > a': {
       margin: '0 8px',
+      color: theme => theme.palette.info.dark,
     }
   }
 }))
@@ -124,9 +134,14 @@ const useStyles = makeStyles(({
 
 export default function Template({
   data,
-  pageContext
+  pageContext,
 }) {
-  const classes = useStyles();
+  
+  const DarkModeContext = useContext(darkModeContext);
+  const { darkMode } = DarkModeContext;
+  
+  const theme = darkMode ? darkTheme : lightTheme;
+  const classes = useStyles(theme);
 
   const prev = pageContext.prev 
     ? {
@@ -148,7 +163,7 @@ export default function Template({
     <NavLayout>
       <Container maxWidth='xl' className={classes.content}>
         <MDXProvider>
-          <MDXRenderer  headings={headings}>{body}</MDXRenderer>
+          <MDXRenderer headings={headings}>{body}</MDXRenderer>
         </MDXProvider>
         <div className={classes.navDiv}>
           {prev && (
