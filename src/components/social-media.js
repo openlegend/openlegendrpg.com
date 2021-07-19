@@ -3,7 +3,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import SvgIcon from '@material-ui/core/SvgIcon';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -47,7 +46,6 @@ export default function SocialMedia() {
 
   return (
     <Grid container direction='column' alignItems='flex-start' justify='center' className={classes.socialMediaContainer}>
-      <Typography variant='body1' className={classes.title}>Follow Us</Typography>
       <Grid container direction='row' justify='space-around' alignItems='center' className={classes.iconContainer}>
         <IconButton href='https://facebook.com/openlegendrpg' aria-label='Facebook' className={classes.iconButton} >
           <FacebookIcon />
