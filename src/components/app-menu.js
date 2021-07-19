@@ -179,9 +179,9 @@ const AppMenu = (props) => {
 
   appMenuItems[5].items = coreRulesTitles
 
-  let footerVisibility = (openStatusCore || openStatusRes || size.height < 670) ? 'hidden' : 'visible'  
-  let footerOpacity = (openStatusCore || openStatusRes || size.height < 670) ? 0 : 1  
-  let footerTransition = (openStatusCore || openStatusRes || size.height < 670) ? 'opacity 0ms, visibility 0ms' : 'opacity 1000ms'  
+  let footerVisibility = (openStatusCore || openStatusRes || size.height < 650) ? 'hidden' : 'visible'  
+  let footerOpacity = (openStatusCore || openStatusRes || size.height < 650) ? 0 : 1  
+  let footerTransition = (openStatusCore || openStatusRes || size.height < 650) ? 'opacity 0ms, visibility 0ms' : 'opacity 1000ms'  
 
 
   return (
