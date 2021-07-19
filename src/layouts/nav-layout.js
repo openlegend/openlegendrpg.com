@@ -8,7 +8,6 @@ import OpenLegendFooter from '../components/open-legend-footer';
 import { darkTheme, lightTheme } from '../components/UI/Theme';
 import { darkModeContext } from '../components/UI/ThemeHandler';
 
-
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
@@ -121,6 +120,8 @@ function ResponsiveNavBar(props) {
 
   return (
     <div className={classes.root} >
+      <ThemeProvider theme={ darkMode ? darkTheme : lightTheme}>
+      <CssBaseline />
       <AppBar className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -167,13 +168,11 @@ function ResponsiveNavBar(props) {
           </Drawer>
         </Hidden>
       </nav>
-      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-        <CssBaseline />
         <main className={ darkMode ? classes.contentDarkMode : classes.content}>
           {props.children}
           {!footerForIndex ? <OpenLegendFooter /> : null}
         </main>
-      </ThemeProvider>
+    </ThemeProvider>
     </div>
   );
 }
