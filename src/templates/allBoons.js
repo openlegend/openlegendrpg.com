@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import {default as parseStrToHtml} from 'html-react-parser';
 import * as queryString from 'query-string';
 
-import Image from '../img/paper_bg.png';
 import YMLBoons from '../core-rules/boons/boons.yml';
 import SearchBarBanesBoons from '../components/searchbar-banes-boons';
 import CoreTOC from '../components/core-toc';

@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import {default as parseStrToHtml} from 'html-react-parser';
 import * as queryString from 'query-string';
 
-import Image from '../img/paper_bg.png';
 import SearchBarBanesBoons from '../components/searchbar-banes-boons';
 import CoreTOC from '../components/core-toc';
 import NavLayout from '../layouts/nav-layout';
@@ -85,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'hidden',
   },
   individualBaneLink: {
-    backgroundColor: 'rgba(89,65,160,0.7)',
+    backgroundColor: 'rgba(100,69,190,0.9)',
     position: 'relative',
     marginLeft: '16px',
     height: '30px',
