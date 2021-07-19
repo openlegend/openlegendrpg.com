@@ -3,13 +3,12 @@ import React, { useContext } from 'react';
 import { darkModeContext } from '../components/UI/ThemeHandler';
 
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import { purple } from '@material-ui/core/colors';
 import FormContolLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Brightness2Icon from '@material-ui/icons/Brightness2';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(({
   container: {
     display: 'flex',
     flexDirection: 'row',
@@ -26,12 +25,12 @@ const useStyles = makeStyles((theme) => ({
 
 const PurpleSwitch = withStyles({
   switchBase: {
-    color: purple[300],
+    color: '#5941a0',
     '&$checked': {
-      color: purple[300],
+      color: '#5941a0',
     },
     '&$checked + $track': {
-      backgroundColor: purple[500]
+      backgroundColor: '#8a6dd2',
     },
   },
   checked: {},
@@ -54,7 +53,7 @@ export default function DarkModeToggle() {
       setDarkMode(true);
     }
   }
-  
+
   return (
     <div className={classes.container}>
       <Brightness7Icon className={classes.icons} /> 
@@ -70,7 +69,7 @@ export default function DarkModeToggle() {
           />
         }
       />
-      <Brightness2Icon className={classes.icons} style={{ color: `${darkMode ? purple[300] : 'white'}` }}  /> 
+      <Brightness2Icon className={classes.icons} style={{ color: `${darkMode ? '#6b4ec1' : 'white'}` }}  /> 
     </div>
   )
 }
