@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   innerWrap: {
-    backgroundColor: '#fbf9ff',
+    backgroundColor: theme.palette.background.paper,
     postion: 'relative',
     width: '100%',
     height: '100%',
@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   innerWrap_expanded: {
     maxHeight: '2500px',
-    backgroundColor: '#fbf9ff',
+    backgroundColor: theme.palette.background.paper,
     postion: 'relative',
     width: '100%',
     height: '100%',
@@ -57,10 +57,10 @@ const useStyles = makeStyles((theme) => ({
   },
   iconButton: {
     '&:hover': {
-      backgroundColor: 'rgb(81,45,168)',
+      backgroundColor: theme.palette.primary.dark,
     },
-    backgroundColor: 'rgb(81,45,168)',
-    color: 'rgba(255,255,255,0.87)',
+    backgroundColor: theme.palette.primary.dark,
+    color: theme.palette.primary.contrastText,
     margin: '4px',
     height: '40px',
     width: '40px',
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
   }, 
   listContainer: {
     '& a': {
-      color: '#5941a0',
+      color: theme.palette.primary.dark,
       textDecoration: 'none'
     },
     fontWeight: 700,
