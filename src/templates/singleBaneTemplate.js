@@ -7,9 +7,7 @@ export default function SingleBaneTemplate({ data }) {
   const bane = data.allBanesBanesYaml.edges[0].node
   return (
     <div>
-      <NavLayout>
-        <SingleItemBane bane={bane} />
-      </NavLayout>
+      <SingleItemBane bane={bane} />
     </div>
   )
 }

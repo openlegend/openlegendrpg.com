@@ -8,9 +8,7 @@ export default function SingleFeatTemplate({ data }) {
 
   return (
     <div>
-      <NavLayout>
-        <SingleItemFeat  feat={feat}/>
-      </NavLayout>
+      <SingleItemFeat  feat={feat}/>
     </div>
   )
 }

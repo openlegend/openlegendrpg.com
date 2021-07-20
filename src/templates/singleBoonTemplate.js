@@ -7,9 +7,7 @@ export default function SingleBaneTemplate({ data }) {
   const boon = data.allBoonsBoonsYaml.edges[0].node
   return (
     <div>
-      <NavLayout>
-        <SingleItemBoon boon={boon} />
-      </NavLayout>
+      <SingleItemBoon boon={boon} />
     </div>
   )
 }

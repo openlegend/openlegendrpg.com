@@ -79,9 +79,8 @@ const useStyles = makeStyles({
   },
 })
 
-const FeatsPage = ({ location }) => {
+const FeatsPage = ({ location }, props) => {
   const classes = useStyles();
-
   const [searchParams, setSearchParams] = useState(queryString.parse(location.search));
   const [textSearchVal, setTextSearchVal] = useState('');
   const [visibility, setVisibility] = useState(true);
@@ -113,7 +112,6 @@ const FeatsPage = ({ location }) => {
 
   return (
     <div>
-      <NavLayout>
       <SearchBarFeats
         textSearchVal={textSearchVal}
         updateTextSearch={updateTextSearch}
@@ -279,7 +277,6 @@ const FeatsPage = ({ location }) => {
         })
         }
       </div>
-      </NavLayout>
     </div>
   )
 }

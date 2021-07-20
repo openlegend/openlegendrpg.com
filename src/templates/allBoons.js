@@ -132,7 +132,6 @@ const BoonsPage = ({ location }) => {
 
   return (
     <div>
-      <NavLayout>
       <SearchBarBanesBoons 
         attributeList={boonAttributes} 
         textSearchVal={textSearchVal} 
@@ -227,7 +226,6 @@ const BoonsPage = ({ location }) => {
           )
         })}
       </div>
-      </NavLayout>
     </div>
   );
 }

@@ -26,7 +26,6 @@ export default function Template({
   const { mdx } = data;
   const { body } = mdx;
   return (
-    <NavLayout>
       <Container maxWidth='xl' className={classes.content}>
         <h1>Open Legend Community License</h1>
         <h2>Our Goal</h2>
@@ -90,7 +89,6 @@ export default function Template({
           <MDXRenderer>{body}</MDXRenderer>
         </MDXProvider>
       </Container>
-    </NavLayout>
   )
 }
 

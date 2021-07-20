@@ -133,7 +133,6 @@ const BanesPageContent = ({ location, data }) => {
   return (
 
     <div>
-      <NavLayout>
       <SearchBarBanesBoons 
         attributeList={baneAttributes} 
         textSearchVal={textSearchVal} 
@@ -241,7 +240,6 @@ const BanesPageContent = ({ location, data }) => {
         })
         }
       </div>
-    </NavLayout>
     </div>
   ) 
 }

@@ -12,6 +12,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import NavLayout from '../layouts/nav-layout';
 import { darkTheme, lightTheme } from '../components/UI/Theme';
 import { darkModeContext } from '../components/UI/ThemeHandler';
+import { DarkModeContextInner } from '../layouts/nav-layout';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { fade } from '@material-ui/core/styles/colorManipulator';
@@ -136,11 +137,10 @@ export default function Template({
   data,
   pageContext,
 }) {
-  
   const DarkModeContext = useContext(darkModeContext);
   const { darkMode } = DarkModeContext;
-  
-  const theme = darkMode ? darkTheme : lightTheme;
+
+  const theme = darkMode ? darkTheme : lightTheme
   const classes = useStyles(theme);
 
   const prev = pageContext.prev 
@@ -160,7 +160,6 @@ export default function Template({
   const { mdx } = data;
   const { body, headings } = mdx;
   return (
-    <NavLayout>
       <Container maxWidth='xl' className={classes.content}>
         <MDXProvider>
           <MDXRenderer headings={headings}>{body}</MDXRenderer>
@@ -178,7 +177,6 @@ export default function Template({
           )}
         </div>
       </Container>
-    </NavLayout>
   )
 }
 
