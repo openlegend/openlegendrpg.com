@@ -55,7 +55,6 @@ const IndexPage = (props) => {
   const classes = useStyles();
 
   return (
-      <NavLayout footerForIndex={true} >
         <BackgroundSection>
           <Grid container direction='row' justify='flex-start' alignItems='flex-start' className={classes.pageContainer}> 
             <Grid item xs={12}>
@@ -162,8 +161,6 @@ const IndexPage = (props) => {
             <OpenLegendFooter isIndexPage={true} />
           </Grid>
         </BackgroundSection>
-      </NavLayout>
-        
   )
 }
 
