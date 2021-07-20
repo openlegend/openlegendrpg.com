@@ -16,10 +16,9 @@ export const darkModeReducer = (state, action) => {
       return state
   }
 }
-
 export const DarkModeState = props => {
   const initialState = {
-    darkMode: 'false'
+    darkMode: false
   }
   const [state, dispatch] = useReducer(darkModeReducer, initialState);
 
@@ -40,7 +39,7 @@ export const DarkModeState = props => {
         theme: theme
       }}
     >
-      {props.children}
+      { props.children}
     </darkModeContext.Provider>
   )
 }
