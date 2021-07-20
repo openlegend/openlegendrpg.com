@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, createContext } from 'react';
 
 import PropTypes from 'prop-types';
 
@@ -87,6 +87,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+export const DarkModeContextInner = createContext(false)
+
 function ResponsiveNavBar(props) {
   const { window } = props;
   const footerForIndex = props.footerForIndex;
@@ -112,7 +114,7 @@ function ResponsiveNavBar(props) {
       }
     } else {
       localStorage.setItem('preferred-theme', 'light');
-      setDarkMode(true);
+      setDarkMode(false);
     }
   }, [])
 
@@ -120,8 +122,6 @@ function ResponsiveNavBar(props) {
 
   return (
     <div className={classes.root} >
-      <ThemeProvider theme={ darkMode ? darkTheme : lightTheme}>
-      <CssBaseline />
       <AppBar className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -168,6 +168,8 @@ function ResponsiveNavBar(props) {
           </Drawer>
         </Hidden>
       </nav>
+    <ThemeProvider theme={ darkMode ? darkTheme : lightTheme}>
+    <CssBaseline />
         <main className={ darkMode ? classes.contentDarkMode : classes.content}>
           {props.children}
           {!footerForIndex ? <OpenLegendFooter /> : null}
