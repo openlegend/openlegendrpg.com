@@ -95,10 +95,10 @@ const useStyles = makeStyles((theme) => ({
     '& ul': {
       textTransform: 'none',
       paddingInlineStart: '8px',
-      color: theme.palette.primary.dark,
+      color: theme.palette.success.main,
     },
     '& a': {
-      color: theme.palette.primary.dark,
+      color: theme.palette.success.main,
       textDecoration: 'none'
     },
     fontWeight: 700,

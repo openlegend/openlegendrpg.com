@@ -13,11 +13,15 @@ const darkTheme = createMuiTheme({
     },
     info: {
       main: '#ee98fb',
+      dark: '#8a6dd2'
     },
     warning: {
       light: '#757575',
       main: '#ffb74d',
       dark: '#ffb74d'
+    },
+    success: {
+      main: '#b388ff',
     }
   }
 })
@@ -46,6 +50,10 @@ const lightTheme = createMuiTheme({
     info: {
       //Color for the page links in core rules
       main: '#9e7bf4',
+    },
+      // Color for table of contents links
+    success: {
+      main: '#522da8',
     }
   },
 })

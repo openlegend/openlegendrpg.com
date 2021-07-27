@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: theme.palette.primary.dark,
     },
     backgroundColor: theme.palette.primary.dark,
-    color: theme.palette.primary.contrastText,
+    // color: theme.palette.primary.contrastText,
     margin: '4px',
     height: '40px',
     width: '40px',
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
   }, 
   listContainer: {
     '& a': {
-      color: theme.palette.primary.dark,
+      color: theme.palette.success.main,
       textDecoration: 'none'
     },
     fontWeight: 700,
