@@ -3,7 +3,6 @@ import React, { useState } from "react"
 import {default as parseStrToHtml} from 'html-react-parser';
 import * as queryString from 'query-string';
 
-import NavLayout from '../layouts/nav-layout';
 import SearchBarFeats from '../components/feats/searchbar-feats';
 import YMLFeats from '../core-rules/feats/feats.yml';
 import CoreTOC from '../components/core-toc';

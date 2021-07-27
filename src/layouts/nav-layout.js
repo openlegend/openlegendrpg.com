@@ -116,7 +116,7 @@ function ResponsiveNavBar(props) {
       localStorage.setItem('preferred-theme', 'light');
       setDarkMode(false);
     }
-  }, [])
+  }, []);
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
@@ -164,7 +164,7 @@ function ResponsiveNavBar(props) {
             variant="permanent"
             open
           >
-            <AppMenu className={classes.appMenu} />  
+            <AppMenu  className={classes.appMenu} />  
           </Drawer>
         </Hidden>
       </nav>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import SingleItemFeat from '../components/feats/single-item-feat';
-import NavLayout from '../layouts/nav-layout';
 
 export default function SingleFeatTemplate({ data }) {
   const feat = data.allFeatsFeatsYaml.edges[0].node

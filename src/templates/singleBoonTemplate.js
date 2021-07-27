@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import SingleItemBoon from '../components/boons/single-item-boon';
-import NavLayout from '../layouts/nav-layout';
 
 export default function SingleBaneTemplate({ data }) {
   const boon = data.allBoonsBoonsYaml.edges[0].node

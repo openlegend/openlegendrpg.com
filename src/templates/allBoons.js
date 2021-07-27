@@ -6,7 +6,6 @@ import * as queryString from 'query-string';
 import YMLBoons from '../core-rules/boons/boons.yml';
 import SearchBarBanesBoons from '../components/searchbar-banes-boons';
 import CoreTOC from '../components/core-toc';
-import NavLayout from '../layouts/nav-layout';
 
 import Divider from '@material-ui/core/Divider';
 import Tooltip from '@material-ui/core/Tooltip';

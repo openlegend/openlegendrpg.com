@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
 
-import NavLayout from "../layouts/nav-layout"
 import Seo from "../components/seo"
 import { navigate } from 'gatsby-link'
 

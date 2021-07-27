@@ -9,10 +9,8 @@ import {
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import NavLayout from '../layouts/nav-layout';
 import { darkTheme, lightTheme } from '../components/UI/Theme';
 import { darkModeContext } from '../components/UI/ThemeHandler';
-import { DarkModeContextInner } from '../layouts/nav-layout';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { fade } from '@material-ui/core/styles/colorManipulator';

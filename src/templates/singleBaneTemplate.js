@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import SingleItemBane from '../components/banes/single-item-bane';
-import NavLayout from '../layouts/nav-layout';
 
 export default function SingleBaneTemplate({ data }) {
   const bane = data.allBanesBanesYaml.edges[0].node
