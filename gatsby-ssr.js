@@ -3,14 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { DarkModeState } from './src/components/UI/ThemeHandler';
 import NavLayout from './src/layouts/nav-layout';
 
-// export function wrapRootElement({element, props}) {
-//   return(
-//     <DarkModeState {...props}>
-//       {element}
-//     </DarkModeState>
-//   )
-// }
-
 const DarkModeWrapper = () => {
   const [hasMounted, setHasMounted] = React.useState(false);
   
