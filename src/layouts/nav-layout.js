@@ -90,9 +90,9 @@ const useStyles = makeStyles((theme) => ({
 export const DarkModeContextInner = createContext(false)
 
 function ResponsiveNavBar(props) {
-  const { window } = props;
-  const footerForIndex = props.footerForIndex;
+  const { window, isIndexPage } = props;
   const classes = useStyles();
+
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -172,7 +172,7 @@ function ResponsiveNavBar(props) {
     <CssBaseline />
         <main className={ darkMode ? classes.contentDarkMode : classes.content}>
           {props.children}
-          {!footerForIndex ? <OpenLegendFooter /> : null}
+          {!isIndexPage ? <OpenLegendFooter /> : null}
         </main>
     </ThemeProvider>
     </div>

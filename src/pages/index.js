@@ -3,6 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 
 import BackgroundSection from '../components/background-section';
+import NavLayout from '../layouts/nav-layout';
 import VideoComponent from '../components/video-component';
 
 import OpenLegendFooter from '../components/open-legend-footer';
