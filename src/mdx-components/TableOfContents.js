@@ -53,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '273px',
     [theme.breakpoints.down('sm')]: {
       width: 'calc(100% - 25px)',
+      maxHeight: '271px',
     }
   },
   innerWrap_expanded: {
@@ -98,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.success.main,
     },
     '& a': {
-      color: theme.palette.success.main,
+      color: theme.palette.success.dark,
       textDecoration: 'none'
     },
     fontWeight: 700,
