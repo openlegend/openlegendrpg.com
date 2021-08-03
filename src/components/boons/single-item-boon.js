@@ -59,6 +59,12 @@ const classes = useStyles();
           <p>{boon.description}</p>
           <p><strong>Effect</strong></p>
           <div>{parseStrToHtml(boon.effect)}</div>
+          {boon.special ? 
+              <div>
+                <p><strong>Special</strong></p> 
+                {parseStrToHtml(boon.special)} 
+              </div>
+            : null}
           <p></p> 
         </div>
       </div>
