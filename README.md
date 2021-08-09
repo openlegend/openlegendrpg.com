@@ -41,3 +41,7 @@
 
     ```shell
     npm run deploy
+    
+5. **Check Custom Domain** 
+
+    Make sure to check the Pages tab under Settings to make sure the custom domain is properly set. On some deploys it will remove the custom domain.
