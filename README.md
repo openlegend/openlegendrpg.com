@@ -6,7 +6,7 @@
 
     ```shell
     # Run command 
-    git clone git@github.com:openlegend/openlegendrpg.com.git
+    git clone --recursive git@github.com:openlegend/openlegendrpg.com.git
     ```
 
 2.  **Update the core rules submodule**
