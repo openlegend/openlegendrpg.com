@@ -219,6 +219,12 @@ const BoonsPage = ({ location }) => {
               <p>{data.description}</p>
               <p><strong>Effect</strong></p>
               {parseStrToHtml(data.effect)}
+              {data.special ? 
+                <div>
+                  <p><strong>Special</strong></p> 
+                  {parseStrToHtml(data.special)} 
+                </div>
+              : null}
               <p></p>
               <Divider /> 
             </div>

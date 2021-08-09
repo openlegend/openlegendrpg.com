@@ -46,6 +46,7 @@ function SingleItemPageBane({ bane }) {
             {bane.name}
           </h2>
           <p><strong>Duration: </strong>{bane.duration}</p>
+          <p><strong>Invocation Time: </strong>{bane.invocationTime}</p>
           <p><strong>Power Level: </strong>{bane.power.map((item, index) => {
               if (index < bane.power.length - 1) return `${item}/ `;
               return item;
@@ -69,6 +70,12 @@ function SingleItemPageBane({ bane }) {
           <p>{bane.description}</p>
           <p><strong>Effect</strong></p>
           <div>{parseStrToHtml(bane.effect)}</div>
+          {bane.special ? 
+              <div>
+                <p><strong>Special</strong></p> 
+                {parseStrToHtml(bane.special)} 
+              </div>
+            : null}
           <p></p> 
         </div>
       </div>

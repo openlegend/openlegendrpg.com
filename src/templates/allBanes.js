@@ -209,6 +209,7 @@ const BanesPageContent = ({ location, data }) => {
               <p></p>
               <p></p>
               <p><strong>Duration: </strong>{data.duration}</p>
+              <p><strong>Invocation Time: </strong>{data.invocationTime}</p>
               <p><strong>Power Level: </strong>{data.power.map((item, index) => {
                   if (index < data.power.length - 1) return `${item}/ `;
                   return item;
@@ -232,6 +233,12 @@ const BanesPageContent = ({ location, data }) => {
               <p>{data.description}</p>
               <p><strong>Effect</strong></p>
               <div className={classes.effect}>{parseStrToHtml(data.effect)}</div>
+              {data.special ? 
+                <div>
+                  <p><strong>Special</strong></p> 
+                  {parseStrToHtml(data.special)} 
+                </div>
+              : null}
               <p></p> 
               <Divider />
             </div>
