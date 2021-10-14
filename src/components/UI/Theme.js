@@ -17,8 +17,9 @@ const darkTheme = createMuiTheme({
     },
     warning: {
       light: '#757575',
-      main: '#ffb74d',
-      dark: '#ffb74d'
+      // was #ffb74d, changed to 70% transparant
+      main: 'rgba(255,183,77,0.70)',
+      dark: 'rgba(255,183,77,0.70)'
     },
     success: {
       main: '#b388ff',
