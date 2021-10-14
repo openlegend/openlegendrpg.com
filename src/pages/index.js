@@ -69,18 +69,18 @@ const IndexPage = (props) => {
               <Grid container item justify='space-between' direction='column' xs={12} sm={8} className={classes.mainColumn} >
                 <Typography variant='body1' className={classes.infoItem}>
                   <WarningIcon style={{ color: yellow[500] }} /> 
-                  <strong>New! Open Legend Store is Online</strong>
+                  <strong>Open Legend Store is Online</strong>
                   <br />
-                  'Tis the end of a very long era where we were allowing people to back the Kickstarter late via BackerKit. Welcome to the bright new future with the <strong>official</strong> Open Legend Store. 
+                  Welcome to the bright new future with the <strong>official</strong> Open Legend Store. 
                   <strong>  <a href="https://store.openlegendrpg.com">Get in there!</a>  </strong>
                   You can purchase physical books, bane and boon decks, our beautiful maps, and more.
                 </Typography>
 
                 <Typography variant='body1' className={classes.infoItem}>
                   <PeopleIcon style={{ color: green[500] }} />
-                  <strong>New! Open Legend Store is Online</strong>
+                  <strong>Community Forums</strong>
                   <br />
-                  Many community members have expressed a wish for a more easy-to-navigate place to discuss Open Legend. We've heard your desperate pleas and we've replaced MightyBell with a new forum. It's ready and waiting for your enthusiastic participation, 
+                  The community forums are ready and waiting for your enthusiastic participation, 
                   <strong> <a href="http://community.openlegendrpg.com/">go join the conversation</a>!</strong>
                 </Typography>
 
