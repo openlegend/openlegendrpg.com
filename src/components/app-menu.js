@@ -19,6 +19,8 @@ import CreateIcon from '@material-ui/icons/Create';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
+import ControlPointIcon from '@material-ui/icons/ControlPoint';
+import DoNotDisturbOnIcon from '@material-ui/icons/DoNotDisturbOn';
 
 
 
@@ -65,7 +67,7 @@ const appMenuItems = [
       },
       {
         'name': 'EXAMPLE CHARACTERS',
-        'link': 'https://drive.google.com/drive/u/0/folders/0Bx_UrXHMi3wmUlJjbDZiaGtIX00',
+        'link': 'https://drive.google.com/drive/folders/0Bx_UrXHMi3wmUlJjbDZiaGtIX00?resourcekey=0-xjZXrB5pSASVlYDvxvQR9A&usp=sharing',
         'linkType': 'external'
       },
       {
@@ -75,7 +77,7 @@ const appMenuItems = [
       },
       {
         'name': 'DISCORD SERVER',
-        'link': 'https://discord.gg/3kMr4bh',
+        'link': 'https://discord.gg/J27ZbYP',
         'linkType': 'external'
       },
       {
@@ -93,13 +95,13 @@ const appMenuItems = [
   },
   {
     'name': 'Banes',
-    'Icon': HomeIcon,
+    'Icon': DoNotDisturbOnIcon,
     'link': '/banes',
     'linkType': 'internal'
   },
   {
     'name': 'Boons',
-    'Icon': ShoppingCartIcon,
+    'Icon': ControlPointIcon,
     'link': '/boons',
     'linkType': 'internal'
   },
