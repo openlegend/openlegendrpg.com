@@ -19,8 +19,8 @@ import CreateIcon from '@material-ui/icons/Create';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
-import ControlPointIcon from '@material-ui/icons/ControlPoint';
-import DoNotDisturbOnIcon from '@material-ui/icons/DoNotDisturbOn';
+// import ControlPointIcon from '@material-ui/icons/ControlPoint';
+// import DoNotDisturbOnIcon from '@material-ui/icons/DoNotDisturbOn';
 
 
 
@@ -95,13 +95,15 @@ const appMenuItems = [
   },
   {
     'name': 'Banes',
-    'Icon': DoNotDisturbOnIcon,
+    // 'Icon': ControlPointIcon,
+    'Icon': TrendingUpIcon,
     'link': '/banes',
     'linkType': 'internal'
   },
   {
     'name': 'Boons',
-    'Icon': ControlPointIcon,
+    // 'Icon': ControlPointIcon,
+    'Icon': TrendingUpIcon,
     'link': '/boons',
     'linkType': 'internal'
   },
