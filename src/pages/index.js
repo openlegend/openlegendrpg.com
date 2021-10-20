@@ -87,7 +87,7 @@ const IndexPage = (props) => {
                 <VideoComponent 
                   name='Open Legend: Open-source RPG' 
                   type='video/mp4'
-                  videoSrc='https://v.kickstarter.com/1618577432_0fbcce345ce12f0badc585e2fabab4091e5067ee/projects/2577729/video-717401-h264_base.mp4' 
+                  videoSrc='https://www.youtube.com/watch?v=AvjZNbhVx4s' 
                   imgSrc='https://ksr-ugc.imgix.net/assets/014/074/537/2964d8990fd4fa90599c80bd90b32bf7_original.png?ixlib=rb-2.1.0&crop=faces&w=1024&h=576&fit=crop&v=1476922327&auto=format&frame=1&q=92&s=70bc941146d3400c1eb50e67cbed22f6'
                 />
 
