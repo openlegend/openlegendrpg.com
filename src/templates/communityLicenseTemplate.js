@@ -5,6 +5,9 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
+import { darkTheme, lightTheme } from '../components/UI/Theme';
+import { darkModeContext } from '../components/UI/ThemeHandler';
+
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles';
