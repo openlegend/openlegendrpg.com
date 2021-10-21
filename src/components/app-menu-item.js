@@ -25,7 +25,8 @@ const useStyles = makeStyles(theme =>
     linkWrapper: {
       backgroundColor: 'rgb(66,66,66)',
       textDecoration: 'inherit',
-      color: 'inherit',
+//      color: 'inherit', maybe this will fix ToC colors
+      color: theme.palette.success.main,
       display: 'flex',
     },
   }),
