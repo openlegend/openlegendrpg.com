@@ -21,7 +21,8 @@ const useStyles = makeStyles(({
     paddingBottom: '16px',
     '& p': {
       '& a': {
-        color: theme => theme.palette.info.dark,
+//        color: theme => theme.palette.info.dark, Was this, changing to below, seeing if this fixes ToC colors in dark mode
+        color: theme => theme.palette.success.main,
       }
     },
     '& h2': {
@@ -125,7 +126,8 @@ const useStyles = makeStyles(({
     justifyContent: 'center',
     '& > a': {
       margin: '0 8px',
-      color: theme => theme.palette.info.dark,
+//        color: theme => theme.palette.info.dark, Was this, changing to below, seeing if this fixes ToC colors in dark mode
+      color: theme => theme.palette.success.main,
     }
   }
 }))
