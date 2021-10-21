@@ -12,7 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(({
   content: {
     fontSize: '16px',
-    listStyleType: 'decimal',
+    listStyleType: 'decimal'
   }
 }))
 
