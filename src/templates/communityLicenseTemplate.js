@@ -13,9 +13,6 @@ const useStyles = makeStyles(({
   content: {
     fontSize: '16px',
     listStyleType: 'decimal',
-    '& a': {
-      color: theme.palette.success.main,
-    }
   }
 }))
 
