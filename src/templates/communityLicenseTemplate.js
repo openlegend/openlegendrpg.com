@@ -12,7 +12,10 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(({
   content: {
     fontSize: '16px',
-    listStyleType: 'decimal'
+    listStyleType: 'decimal',
+    '& a': {
+      color: theme.palette.success.main,
+    }
   }
 }))
 
@@ -55,7 +58,6 @@ export default function Template({
         </ol>
         <h2>The Open Legend SRC</h2>
         <p>To view the full extent of Open Legend content you can include via the Open Legend Community License, &nbsp; (coming soon).
-         <!-- <a target='blank' href={`Open_Legend_SRD_-_Pre-Alpa_0.1.pdf`}>view the current Open Legend SRD</a> -->
         </p>
         <h2>Logos for the Open Legend Community License</h2>
         <p>The following logos are made available under the Open Legend Community License:</p>
