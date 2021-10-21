@@ -40,10 +40,6 @@ const useStyles = makeStyles(({
       },
       '& p': {
         margin: '0',
-        // adding this in to see if fix ToC color dark mode
-        '& a': {
-          color: theme => theme.palette.success.main,
-         }
       },
       '& blockquote': {
         background: 'inherit',
