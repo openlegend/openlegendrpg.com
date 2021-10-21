@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.success.main,
     },
     '& a': {
-      color: theme.palette.success.dark,
+      color: theme.palette.success.main,
       textDecoration: 'none'
     },
     fontWeight: 700,
