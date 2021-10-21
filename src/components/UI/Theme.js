@@ -6,7 +6,8 @@ const darkTheme = createMuiTheme({
     primary: {
       light: '#8a6dd2',
       main: '#5941a0',
-      dark: '#6b4ec1',
+//      dark: '#6b4ec1', was this, changed to below to try and fix ToC of the Core Rules to be liek Banes/Boons/Feats
+      dark: '#b388ff',
     },
     secondary: {
       main: '#8a6dd2'
