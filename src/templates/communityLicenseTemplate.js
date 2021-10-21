@@ -12,7 +12,10 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(({
   content: {
     fontSize: '16px',
-    listStyleType: 'decimal'
+    listStyleType: 'decimal',
+    '& a': {
+      color: theme.palette.success.main,
+    }
   }
 }))
 
@@ -46,7 +49,7 @@ export default function Template({
             <br/>
             <em>
               "The full-text Open Legend Community License can be found at &nbsp;  
-              <a href="http://www.openlegendrpg.com/community-license">http://www.openlegendrpg.com/community-license</a>
+              <a href="http://openlegendrpg.com/community-license">http://openlegendrpg.com/community-license</a>
               ."
             </em>
           </li>
@@ -54,8 +57,8 @@ export default function Template({
           <li>If you publish something you shouldn’t, for example, a plagiarized work or something that violates the rules in #4 above, your license is automatically terminated.</li>
         </ol>
         <h2>The Open Legend SRC</h2>
-        <p>To view the full extent of Open Legend content you can include via the Open Legend Community License, &nbsp;
-          <a target='blank' href={`Open_Legend_SRD_-_Pre-Alpa_0.1.pdf`}>view the current Open Legend SRD</a>
+        <p>To view the full extent of Open Legend content you can include via the Open Legend Community License, &nbsp; (coming soon).
+         <!-- <a target='blank' href={`Open_Legend_SRD_-_Pre-Alpa_0.1.pdf`}>view the current Open Legend SRD</a> -->
         </p>
         <h2>Logos for the Open Legend Community License</h2>
         <p>The following logos are made available under the Open Legend Community License:</p>
