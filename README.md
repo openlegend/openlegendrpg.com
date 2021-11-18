@@ -8,6 +8,12 @@
     # Run command 
     git clone --recursive git@github.com:openlegend/openlegendrpg.com.git
     ```
+    
+    Run command to install packages:
+    
+    ```shell
+    npm install
+    ```
 
 2.  **Update the core rules submodule**
 
