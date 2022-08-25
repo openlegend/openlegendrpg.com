@@ -19,11 +19,12 @@ const useStyles = makeStyles({
 
 export default function CompanyInfoFooter() {
   const classes = useStyles();
+  const copyrightEndDate = new Date().getFullYear();
 
   return (
     <Card className={classes.root}>
       <Typography variant='caption'>
-        Copyright © 2012 - 2021 <br/>
+        Copyright © 2012 - {copyrightEndDate} <br/>
         Seventh Sphere Entertainment.<br/>
         <a href="/community-license">Open Legend Community License.</a> 
         <br/>
