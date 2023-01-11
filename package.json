@@ -23,7 +23,7 @@
     "gatsby-source-filesystem": "^3.7.0",
     "gatsby-starter-default": "^1.0.0",
     "gatsby-theme-material-ui": "^2.0.1",
-    "gatsby-transformer-remark": "^4.4.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^3.7.0",
     "gatsby-transformer-yaml-full": "^0.4.2",
     "gbimage-bridge": "^0.1.1",
